@@ -1,0 +1,5 @@
+2023-05-04T16:30:53.942468286Z 2023-05-04T16:30:53+00:00 INFO: ovn-node-metrics-certs mounted, starting kube-rbac-proxy
+2023-05-04T16:30:53.961727875Z I0504 16:30:53.961666    8240 main.go:187] Valid token audiences: 
+2023-05-04T16:30:53.961752752Z I0504 16:30:53.961732    8240 main.go:337] Reading certificate files
+2023-05-04T16:30:53.961887304Z I0504 16:30:53.961872    8240 main.go:371] Starting TCP socket on :9105
+2023-05-04T16:30:53.962159154Z I0504 16:30:53.962142    8240 main.go:378] Listening securely on :9105

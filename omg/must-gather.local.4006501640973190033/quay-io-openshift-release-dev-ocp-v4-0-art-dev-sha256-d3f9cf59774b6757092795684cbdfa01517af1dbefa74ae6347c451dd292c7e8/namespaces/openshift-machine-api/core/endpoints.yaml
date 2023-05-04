@@ -1,0 +1,260 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:31:31Z"
+    creationTimestamp: "2023-05-02T12:37:27Z"
+    labels:
+      k8s-app: cluster-autoscaler-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:31:32Z"
+    name: cluster-autoscaler-operator
+    namespace: openshift-machine-api
+    resourceVersion: "630382"
+    uid: dadcba72-9dcb-4461-abb0-f82f61994572
+  subsets:
+  - addresses:
+    - ip: 10.128.0.51
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: cluster-autoscaler-operator-56b65b888d-dkfhq
+        namespace: openshift-machine-api
+        uid: 1e2538c7-83fc-41ec-ba0e-5509fd5c2b93
+    ports:
+    - name: metrics
+      port: 9192
+      protocol: TCP
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:32:23Z"
+    creationTimestamp: "2023-05-02T12:37:19Z"
+    labels:
+      k8s-app: cluster-baremetal-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:32:23Z"
+    name: cluster-baremetal-operator-service
+    namespace: openshift-machine-api
+    resourceVersion: "630848"
+    uid: 0f700db3-820f-482b-b447-5662767b630d
+  subsets:
+  - addresses:
+    - ip: 10.128.0.50
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: cluster-baremetal-operator-8bd65644d-jnfwt
+        namespace: openshift-machine-api
+        uid: 1b817945-bb61-47ed-9938-eb02df045640
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:32:23Z"
+    creationTimestamp: "2023-05-02T12:37:22Z"
+    labels:
+      k8s-app: cluster-baremetal-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:32:23Z"
+    name: cluster-baremetal-webhook-service
+    namespace: openshift-machine-api
+    resourceVersion: "630850"
+    uid: ea21a323-8082-4f1d-aa39-63de45adcc9a
+  subsets:
+  - addresses:
+    - ip: 10.128.0.50
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: cluster-baremetal-operator-8bd65644d-jnfwt
+        namespace: openshift-machine-api
+        uid: 1b817945-bb61-47ed-9938-eb02df045640
+    ports:
+    - port: 9443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:33:15Z"
+    creationTimestamp: "2023-05-02T12:37:17Z"
+    labels:
+      k8s-app: control-plane-machine-set-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:33:15Z"
+    name: control-plane-machine-set-operator
+    namespace: openshift-machine-api
+    resourceVersion: "631398"
+    uid: ee4fcd16-80b7-4a0e-89d3-2f2915212af1
+  subsets:
+  - addresses:
+    - ip: 10.128.0.46
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: control-plane-machine-set-operator-749d766b67-qq96k
+        namespace: openshift-machine-api
+        uid: 0f6cf5f5-6a5e-4ff6-a347-ce159156533a
+    ports:
+    - name: https
+      port: 9443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-02T12:37:38Z"
+    creationTimestamp: "2023-05-02T12:37:38Z"
+    labels:
+      k8s-app: controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-02T12:37:38Z"
+    name: machine-api-controllers
+    namespace: openshift-machine-api
+    resourceVersion: "8643"
+    uid: e4d0144c-ba3c-415b-b9dc-4cf393480377
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:33:15Z"
+    creationTimestamp: "2023-05-02T12:37:38Z"
+    labels:
+      k8s-app: machine-api-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:33:15Z"
+    name: machine-api-operator
+    namespace: openshift-machine-api
+    resourceVersion: "631405"
+    uid: f4e33d15-798b-4e75-9780-1d59eca96778
+  subsets:
+  - addresses:
+    - ip: 10.128.0.60
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: machine-api-operator-df4db9c9b-4fbsv
+        namespace: openshift-machine-api
+        uid: 1a0ff64f-164d-46a2-8700-328a87b4ed5b
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-02T12:18:38Z"
+    creationTimestamp: "2023-05-02T12:18:38Z"
+    labels:
+      k8s-app: machine-api-operator-webhook
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-02T12:18:38Z"
+    name: machine-api-operator-webhook
+    namespace: openshift-machine-api
+    resourceVersion: "1974"
+    uid: 307c56de-a93d-4fbe-a5ce-6509fc487a38
+kind: EndpointsList
+metadata:
+  resourceVersion: "684597"

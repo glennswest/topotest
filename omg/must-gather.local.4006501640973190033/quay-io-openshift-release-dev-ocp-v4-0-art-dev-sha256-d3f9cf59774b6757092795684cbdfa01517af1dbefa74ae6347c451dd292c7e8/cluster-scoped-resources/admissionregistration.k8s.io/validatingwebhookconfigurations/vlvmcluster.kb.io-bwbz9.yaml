@@ -1,0 +1,84 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  creationTimestamp: "2023-05-04T14:35:14Z"
+  generateName: vlvmcluster.kb.io-
+  generation: 1
+  labels:
+    olm.owner: lvms-operator.v4.12.1
+    olm.owner.kind: ClusterServiceVersion
+    olm.owner.namespace: openshift-storage
+    olm.webhook-description-generate-name: vlvmcluster.kb.io
+    olm.webhook-description-hash: 6dcf4c78fd
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:olm.owner: {}
+          f:olm.owner.kind: {}
+          f:olm.owner.namespace: {}
+          f:olm.webhook-description-generate-name: {}
+          f:olm.webhook-description-hash: {}
+      f:webhooks:
+        .: {}
+        k:{"name":"vlvmcluster.kb.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            .: {}
+            f:caBundle: {}
+            f:service:
+              .: {}
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+              f:port: {}
+          f:failurePolicy: {}
+          f:matchPolicy: {}
+          f:name: {}
+          f:namespaceSelector: {}
+          f:objectSelector: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: olm
+    operation: Update
+    time: "2023-05-04T14:35:14Z"
+  name: vlvmcluster.kb.io-bwbz9
+  resourceVersion: "598915"
+  uid: 1dfe5e64-f5c8-4857-9cbd-501e2964bee4
+webhooks:
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUJ1ekNDQVdLZ0F3SUJBZ0lJTllacHpBaUhRL2d3Q2dZSUtvWkl6ajBFQXdJd1FqRVdNQlFHQTFVRUNoTU4KVW1Wa0lFaGhkQ3dnU1c1akxqRW9NQ1lHQTFVRUF4TWZiMnh0TFhObGJHWnphV2R1WldRdE16VTROalk1WTJNdwpPRGczTkRObU9EQWVGdzB5TXpBMU1EUXhORE0xTVROYUZ3MHlOVEExTURNeE5ETTFNVE5hTUVJeEZqQVVCZ05WCkJBb1REVkpsWkNCSVlYUXNJRWx1WXk0eEtEQW1CZ05WQkFNVEgyOXNiUzF6Wld4bWMybG5ibVZrTFRNMU9EWTIKT1dOak1EZzROelF6Wmpnd1dUQVRCZ2NxaGtqT1BRSUJCZ2dxaGtqT1BRTUJCd05DQUFUTEI0clRUUFlkeC9HUgpVWUdaZ0piSnVIVkZxSmVPU0JUREpGV0FqaVdJazl1YSsvNjJXWGNtdGx2cG5QRngvVWU5RXIvUGhxT00rK1lXCkh3Q012OWFJbzBJd1FEQU9CZ05WSFE4QkFmOEVCQU1DQWdRd0R3WURWUjBUQVFIL0JBVXdBd0VCL3pBZEJnTlYKSFE0RUZnUVUvV0JtZnVLMUtKN1pFRkdVK21zeXJZTEh4d3d3Q2dZSUtvWkl6ajBFQXdJRFJ3QXdSQUlnZlB5UQp3RjREWk43ZE4xZEtUMWdyd2t3WWZXL0VVNFB6Y0dxbmVhRE1DSDBDSUZSMlh5cGluUnN5WUN6WjFMVUZxRnBBCmdoVTJtcTdZS3NtV3Y0YVp0bnNGCi0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: lvms-operator-service
+      namespace: openshift-storage
+      path: /validate-lvm-topolvm-io-v1alpha1-lvmcluster
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: vlvmcluster.kb.io
+  namespaceSelector:
+    matchLabels:
+      olm.operatorgroup.uid/5a30032d-7a62-4eff-843e-654f945a863e: ""
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - lvm.topolvm.io
+    apiVersions:
+    - v1alpha1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - lvmclusters
+    scope: '*'
+  sideEffects: None
+  timeoutSeconds: 10

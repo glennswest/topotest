@@ -1,0 +1,35 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2023-05-02T12:17:23Z"
+    labels:
+      endpointslice.kubernetes.io/skip-mirror: "true"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/skip-mirror: {}
+        f:subsets: {}
+      manager: kube-apiserver
+      operation: Update
+      time: "2023-05-02T12:17:23Z"
+    name: kubernetes
+    namespace: default
+    resourceVersion: "248"
+    uid: 03a72968-2c49-44ba-b959-1ca85c856c9b
+  subsets:
+  - addresses:
+    - ip: 192.168.1.126
+    ports:
+    - name: https
+      port: 6443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "684564"

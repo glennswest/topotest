@@ -1,0 +1,416 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cloud-credential-operator-fd47f96b9-8ks4f
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "6217"
+    uid: 33f90f0e-7f4d-42d1-88a2-8ddebfb9df4b
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:05Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_cloud-credential-operator-fd47f96b9-8ks4f_openshift-cloud-credential-operator_33f90f0e-7f4d-42d1-88a2-8ddebfb9df4b_0(685402d2ac15256606202032fa85da6d2475e56e3b4fdfc025e84e0708910012):
+    error adding pod openshift-cloud-credential-operator_cloud-credential-operator-fd47f96b9-8ks4f
+    to CNI network "multus-cni-network": plugin type="multus" name="multus-cni-network"
+    failed (add): Multus: [openshift-cloud-credential-operator/cloud-credential-operator-fd47f96b9-8ks4f/33f90f0e-7f4d-42d1-88a2-8ddebfb9df4b]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:16Z"
+    name: cloud-credential-operator-fd47f96b9-8ks4f.175bfdbb017eccb1
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "631418"
+    uid: fd28b8f4-4b2e-43a9-b0b3-e65b900e9a97
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:26Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: cloud-credential-operator-fd47f96b9-8ks4f
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "629157"
+    uid: 33f90f0e-7f4d-42d1-88a2-8ddebfb9df4b
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:26Z"
+  message: Add eth0 [10.128.0.10/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:26Z"
+    name: cloud-credential-operator-fd47f96b9-8ks4f.175bfdbfe51b8d74
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "630253"
+    uid: 83b9a328-abb7-4fb6-8638-b71ba8bac92c
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: cloud-credential-operator-fd47f96b9-8ks4f
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "6217"
+    uid: 33f90f0e-7f4d-42d1-88a2-8ddebfb9df4b
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:28Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:49Z"
+    name: cloud-credential-operator-fd47f96b9-8ks4f.175bfdc04e994d8b
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "631937"
+    uid: af78038c-be9b-461c-b9c8-8cc1b6df49e8
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: cloud-credential-operator-fd47f96b9-8ks4f
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "6217"
+    uid: 33f90f0e-7f4d-42d1-88a2-8ddebfb9df4b
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:29Z"
+  message: Created container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:57Z"
+    name: cloud-credential-operator-fd47f96b9-8ks4f.175bfdc0adfa8dc8
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "632012"
+    uid: 4d8fe1cc-dd87-4896-8360-06b6d89863ed
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: cloud-credential-operator-fd47f96b9-8ks4f
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "6217"
+    uid: 33f90f0e-7f4d-42d1-88a2-8ddebfb9df4b
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:30Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:59Z"
+    name: cloud-credential-operator-fd47f96b9-8ks4f.175bfdc0c25fb1fc
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "632026"
+    uid: 5933d0aa-5ca3-4635-a36c-dc97d65fa46a
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cloud-credential-operator}
+    kind: Pod
+    name: cloud-credential-operator-fd47f96b9-8ks4f
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "6217"
+    uid: 33f90f0e-7f4d-42d1-88a2-8ddebfb9df4b
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:30Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e2981cdba6d1e6787c1b5b048bba246cc307650a53ef680dc44593e6227333f1"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:59Z"
+    name: cloud-credential-operator-fd47f96b9-8ks4f.175bfdc0c904f81e
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "632029"
+    uid: b41288d6-a67e-4bef-a539-0a7e8fea8234
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cloud-credential-operator}
+    kind: Pod
+    name: cloud-credential-operator-fd47f96b9-8ks4f
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "6217"
+    uid: 33f90f0e-7f4d-42d1-88a2-8ddebfb9df4b
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:32Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e2981cdba6d1e6787c1b5b048bba246cc307650a53ef680dc44593e6227333f1"
+    in 1m1.883589921s
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:51Z"
+    name: cloud-credential-operator-fd47f96b9-8ks4f.175bfdcf3191d5c1
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "632472"
+    uid: 7f208dbd-4a5d-4247-8820-1e6700649c85
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cloud-credential-operator}
+    kind: Pod
+    name: cloud-credential-operator-fd47f96b9-8ks4f
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "6217"
+    uid: 33f90f0e-7f4d-42d1-88a2-8ddebfb9df4b
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:10Z"
+  message: Created container cloud-credential-operator
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:05Z"
+    name: cloud-credential-operator-fd47f96b9-8ks4f.175bfdd818e096ec
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "632596"
+    uid: 5195ca0e-5c8f-4ba4-9976-15b6b6ac6ad2
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{cloud-credential-operator}
+    kind: Pod
+    name: cloud-credential-operator-fd47f96b9-8ks4f
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "6217"
+    uid: 33f90f0e-7f4d-42d1-88a2-8ddebfb9df4b
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:10Z"
+  message: Started container cloud-credential-operator
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:06Z"
+    name: cloud-credential-operator-fd47f96b9-8ks4f.175bfdd824acc32d
+    namespace: openshift-cloud-credential-operator
+    resourceVersion: "632606"
+    uid: 5bd68453-2236-4f9f-939a-8750bfe09877
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "684614"

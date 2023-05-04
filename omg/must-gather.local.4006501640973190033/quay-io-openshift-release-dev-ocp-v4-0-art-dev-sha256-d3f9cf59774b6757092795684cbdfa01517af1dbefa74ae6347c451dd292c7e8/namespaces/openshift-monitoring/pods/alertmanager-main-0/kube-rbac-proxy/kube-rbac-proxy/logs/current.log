@@ -1,0 +1,5 @@
+2023-05-04T16:31:38.791685910Z I0504 16:31:38.791500       1 main.go:151] Reading config file: /etc/kube-rbac-proxy/config.yaml
+2023-05-04T16:31:38.792165771Z I0504 16:31:38.792143       1 main.go:187] Valid token audiences: 
+2023-05-04T16:31:38.792196478Z I0504 16:31:38.792182       1 main.go:337] Reading certificate files
+2023-05-04T16:31:38.792347351Z I0504 16:31:38.792335       1 main.go:371] Starting TCP socket on 0.0.0.0:9092
+2023-05-04T16:31:38.792665108Z I0504 16:31:38.792652       1 main.go:378] Listening securely on 0.0.0.0:9092

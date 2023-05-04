@@ -1,0 +1,35 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  creationTimestamp: "2023-05-02T12:26:10Z"
+  managedFields:
+  - apiVersion: rbac.authorization.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"a74973fc-c074-41e2-8215-81c3454addea"}: {}
+      f:roleRef: {}
+      f:subjects: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-05-02T12:26:10Z"
+  name: openshift-ovn-kubernetes-controller
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: a74973fc-c074-41e2-8215-81c3454addea
+  resourceVersion: "2779"
+  uid: c3f50817-415d-433b-8073-4f5dc38b0e9e
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: openshift-ovn-kubernetes-controller
+subjects:
+- kind: ServiceAccount
+  name: ovn-kubernetes-controller
+  namespace: openshift-ovn-kubernetes

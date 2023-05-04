@@ -1,0 +1,29 @@
+2023-05-04T16:31:30.250088197Z I0504 16:31:30.249187       1 start.go:57] Version: v4.12.0-202301262025.p0.ge3dc943.assembly.stream-dirty (e3dc9430ac753ac0440f55910370da22c65637f1)
+2023-05-04T16:31:30.267167222Z I0504 16:31:30.266521       1 leaderelection.go:248] attempting to acquire leader lease openshift-machine-config-operator/machine-config-controller...
+2023-05-04T16:36:37.725513433Z I0504 16:36:37.725475       1 leaderelection.go:258] successfully acquired lease openshift-machine-config-operator/machine-config-controller
+2023-05-04T16:36:37.726492368Z I0504 16:36:37.726394       1 metrics.go:55] Registering Prometheus metrics
+2023-05-04T16:36:37.726492368Z I0504 16:36:37.726421       1 metrics.go:62] Starting metrics listener on 127.0.0.1:8797
+2023-05-04T16:36:37.752405582Z E0504 16:36:37.746110       1 template_controller.go:189] couldn't get ControllerConfig on dependency callback controllerconfig.machineconfiguration.openshift.io "machine-config-controller" not found
+2023-05-04T16:36:37.764406602Z I0504 16:36:37.763903       1 template_controller.go:137] Re-syncing ControllerConfig due to secret pull-secret change
+2023-05-04T16:36:37.829256515Z I0504 16:36:37.829211       1 render_controller.go:124] Starting MachineConfigController-RenderController
+2023-05-04T16:36:37.829292723Z I0504 16:36:37.829260       1 kubelet_config_controller.go:188] Starting MachineConfigController-KubeletConfigController
+2023-05-04T16:36:37.829324693Z I0504 16:36:37.829314       1 kubelet_config_nodes.go:82] empty Node resource found
+2023-05-04T16:36:37.829332267Z I0504 16:36:37.829327       1 drain_controller.go:126] Starting MachineConfigController-DrainController
+2023-05-04T16:36:37.829349570Z I0504 16:36:37.829339       1 node_controller.go:168] Starting MachineConfigController-NodeController
+2023-05-04T16:36:37.830586689Z I0504 16:36:37.829588       1 container_runtime_config_controller.go:184] Starting MachineConfigController-ContainerRuntimeConfigController
+2023-05-04T16:36:37.832227876Z I0504 16:36:37.832105       1 template_controller.go:238] Starting MachineConfigController-TemplateController
+2023-05-04T16:36:42.762320852Z I0504 16:36:42.762277       1 render_controller.go:569] BaseOSContainerImage=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee
+2023-05-04T16:36:42.769218103Z I0504 16:36:42.769169       1 render_controller.go:569] BaseOSContainerImage=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee
+2023-05-04T16:59:30.567096015Z I0504 16:59:30.565293       1 render_controller.go:569] BaseOSContainerImage=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee
+2023-05-04T16:59:30.567096015Z I0504 16:59:30.566230       1 render_controller.go:569] BaseOSContainerImage=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee
+2023-05-04T17:12:10.044940788Z I0504 17:12:10.041611       1 template_controller.go:137] Re-syncing ControllerConfig due to secret pull-secret change
+2023-05-04T17:22:18.335009332Z I0504 17:22:18.334945       1 render_controller.go:569] BaseOSContainerImage=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee
+2023-05-04T17:22:18.335065818Z I0504 17:22:18.334945       1 render_controller.go:569] BaseOSContainerImage=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee
+2023-05-04T17:45:06.122322433Z I0504 17:45:06.122279       1 render_controller.go:569] BaseOSContainerImage=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee
+2023-05-04T17:45:06.122412542Z I0504 17:45:06.122397       1 render_controller.go:569] BaseOSContainerImage=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee
+2023-05-04T17:47:42.322078718Z I0504 17:47:42.319098       1 template_controller.go:137] Re-syncing ControllerConfig due to secret pull-secret change
+2023-05-04T18:07:53.909228598Z I0504 18:07:53.909178       1 render_controller.go:569] BaseOSContainerImage=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee
+2023-05-04T18:07:53.909276227Z I0504 18:07:53.909249       1 render_controller.go:569] BaseOSContainerImage=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee
+2023-05-04T18:23:14.594990924Z I0504 18:23:14.594932       1 template_controller.go:137] Re-syncing ControllerConfig due to secret pull-secret change
+2023-05-04T18:30:41.696396502Z I0504 18:30:41.696346       1 render_controller.go:569] BaseOSContainerImage=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee
+2023-05-04T18:30:41.698036920Z I0504 18:30:41.698019       1 render_controller.go:569] BaseOSContainerImage=quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee

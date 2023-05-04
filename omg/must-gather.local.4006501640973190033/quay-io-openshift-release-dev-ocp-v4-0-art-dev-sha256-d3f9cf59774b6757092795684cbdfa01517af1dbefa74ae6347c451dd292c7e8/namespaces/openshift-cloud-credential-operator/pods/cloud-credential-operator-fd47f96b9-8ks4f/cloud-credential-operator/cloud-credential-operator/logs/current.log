@@ -1,0 +1,324 @@
+2023-05-04T16:33:10.359298320Z Copying system trust bundle
+2023-05-04T16:33:10.417022348Z time="2023-05-04T16:33:10Z" level=info msg="setting up client for manager"
+2023-05-04T16:33:10.424016552Z time="2023-05-04T16:33:10Z" level=info msg="running file observer" file=/var/run/configmaps/trusted-ca-bundle/tls-ca-bundle.pem
+2023-05-04T16:33:10.424016552Z I0504 16:33:10.418375       1 observer_polling.go:159] Starting file observer
+2023-05-04T16:33:10.424016552Z time="2023-05-04T16:33:10Z" level=info msg="generated leader election ID" id=9fc14688-7acb-412e-86ea-5b8d9adca103
+2023-05-04T16:33:10.424016552Z I0504 16:33:10.419310       1 leaderelection.go:248] attempting to acquire leader lease openshift-cloud-credential-operator/cloud-credential-operator-leader...
+2023-05-04T16:33:10.675103881Z time="2023-05-04T16:33:10Z" level=info msg="current leader: 91eebd8e-0d6b-481b-941a-9689ef413408"
+2023-05-04T16:39:37.594616555Z I0504 16:39:37.594576       1 leaderelection.go:258] successfully acquired lease openshift-cloud-credential-operator/cloud-credential-operator-leader
+2023-05-04T16:39:37.594896330Z time="2023-05-04T16:39:37Z" level=info msg="became leader" id=9fc14688-7acb-412e-86ea-5b8d9adca103
+2023-05-04T16:39:37.594943128Z time="2023-05-04T16:39:37Z" level=info msg="setting up manager"
+2023-05-04T16:39:38.645538450Z I0504 16:39:38.645508       1 request.go:682] Waited for 1.04215389s due to client-side throttling, not priority and fairness, request: GET:https://172.30.0.1:443/apis/monitoring.coreos.com/v1?timeout=32s
+2023-05-04T16:39:39.952433788Z time="2023-05-04T16:39:39Z" level=info msg="registering components"
+2023-05-04T16:39:39.952433788Z time="2023-05-04T16:39:39Z" level=info msg="setting up scheme"
+2023-05-04T16:39:39.952774026Z time="2023-05-04T16:39:39Z" level=info msg="setting up controller"
+2023-05-04T16:39:39.970424410Z time="2023-05-04T16:39:39Z" level=info msg="Setting up secret annotator. Platform Type is None"
+2023-05-04T16:39:40.047382286Z time="2023-05-04T16:39:40Z" level=info msg="initializing no-op actuator (unsupported platform)"
+2023-05-04T16:39:40.047410900Z time="2023-05-04T16:39:40Z" level=info msg="starting the cmd"
+2023-05-04T16:39:40.047514654Z time="2023-05-04T16:39:40Z" level=info msg="started metrics calculator goroutine" controller=metrics
+2023-05-04T16:39:40.047514654Z time="2023-05-04T16:39:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T16:39:40.148937515Z time="2023-05-04T16:39:40Z" level=info msg="requeueing all CredentialsRequests"
+2023-05-04T16:39:40.151260412Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro-creds namespace=openshift-cloud-credential-operator
+2023-05-04T16:39:40.151260412Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds namespace=openshift-cloud-credential-operator
+2023-05-04T16:39:40.160301599Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-network-config-controller/cloud-credentials namespace=openshift-cloud-network-config-controller
+2023-05-04T16:39:40.160301599Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-network-config-controller/cloud-credentials namespace=openshift-cloud-network-config-controller
+2023-05-04T16:39:40.160345742Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-network-config-controller/cloud-credentials namespace=openshift-cloud-network-config-controller
+2023-05-04T16:39:40.160345742Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-network-config-controller/cloud-credentials namespace=openshift-cloud-network-config-controller
+2023-05-04T16:39:40.166080116Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2023-05-04T16:39:40.166080116Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2023-05-04T16:39:40.166080116Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2023-05-04T16:39:40.166080116Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2023-05-04T16:39:40.166080116Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2023-05-04T16:39:40.166080116Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-image-registry/installer-cloud-credentials namespace=openshift-image-registry
+2023-05-04T16:39:40.166080116Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-storage-operator/vsphere-cloud-credentials namespace=openshift-cluster-storage-operator
+2023-05-04T16:39:40.175137654Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/gcp-cloud-credentials namespace=openshift-machine-api
+2023-05-04T16:39:40.175198007Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/aws-cloud-credentials namespace=openshift-machine-api
+2023-05-04T16:39:40.175220489Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/powervs-credentials namespace=openshift-machine-api
+2023-05-04T16:39:40.175240687Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/ibmcloud-credentials namespace=openshift-machine-api
+2023-05-04T16:39:40.177041354Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/nutanix-credentials namespace=openshift-machine-api
+2023-05-04T16:39:40.177084796Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/ovirt-credentials namespace=openshift-machine-api
+2023-05-04T16:39:40.177108019Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/vsphere-cloud-credentials namespace=openshift-machine-api
+2023-05-04T16:39:40.177127746Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/azure-cloud-credentials namespace=openshift-machine-api
+2023-05-04T16:39:40.177148866Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-machine-api/openstack-cloud-credentials namespace=openshift-machine-api
+2023-05-04T16:39:40.177899334Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/gcp-ccm-cloud-credentials namespace=openshift-cloud-controller-manager
+2023-05-04T16:39:40.177923379Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/openstack-cloud-credentials namespace=openshift-cloud-controller-manager
+2023-05-04T16:39:40.177953315Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/ibm-cloud-credentials namespace=openshift-cloud-controller-manager
+2023-05-04T16:39:40.177986357Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/azure-cloud-credentials namespace=openshift-cloud-controller-manager
+2023-05-04T16:39:40.178010482Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/ibm-cloud-credentials namespace=openshift-cloud-controller-manager
+2023-05-04T16:39:40.178029378Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cloud-controller-manager/vsphere-cloud-credentials namespace=openshift-cloud-controller-manager
+2023-05-04T16:39:40.184325185Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/ebs-cloud-credentials namespace=openshift-cluster-csi-drivers
+2023-05-04T16:39:40.184383855Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/gcp-pd-cloud-credentials namespace=openshift-cluster-csi-drivers
+2023-05-04T16:39:40.184417579Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/ibm-powervs-cloud-credentials namespace=openshift-cluster-csi-drivers
+2023-05-04T16:39:40.184438037Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/azure-disk-credentials namespace=openshift-cluster-csi-drivers
+2023-05-04T16:39:40.184457504Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/manila-cloud-credentials namespace=openshift-cluster-csi-drivers
+2023-05-04T16:39:40.184479535Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/ovirt-credentials namespace=openshift-cluster-csi-drivers
+2023-05-04T16:39:40.184498170Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/ibm-cloud-credentials namespace=openshift-cluster-csi-drivers
+2023-05-04T16:39:40.184521524Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/vmware-vsphere-cloud-credentials namespace=openshift-cluster-csi-drivers
+2023-05-04T16:39:40.184542964Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/openstack-cloud-credentials namespace=openshift-cluster-csi-drivers
+2023-05-04T16:39:40.184562370Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/azure-file-credentials namespace=openshift-cluster-csi-drivers
+2023-05-04T16:39:40.184580855Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-cluster-csi-drivers/alibaba-disk-credentials namespace=openshift-cluster-csi-drivers
+2023-05-04T16:39:40.194415821Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-network-operator/installer-cloud-credentials namespace=openshift-network-operator
+2023-05-04T16:39:40.194762370Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-ingress-operator/cloud-credentials namespace=openshift-ingress-operator
+2023-05-04T16:39:40.194787908Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-ingress-operator/cloud-credentials namespace=openshift-ingress-operator
+2023-05-04T16:39:40.194820269Z time="2023-05-04T16:39:40Z" level=info msg="found credentials request for namespace" cr=openshift-ingress-operator/cloud-credentials namespace=openshift-ingress-operator
+2023-05-04T16:39:40.356928847Z time="2023-05-04T16:39:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T16:39:40.362562082Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/alibaba-disk-csi-driver-operator
+2023-05-04T16:39:40.362562082Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-azure
+2023-05-04T16:39:40.362638836Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-ibmcos
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-vsphere
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-ccm
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-azure
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/aws-ebs-csi-driver-operator
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress-gcp
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-openstack-cloud-controller-manager
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-openstack
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-azure-cloud-controller-manager
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-gcp
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-powervs-cloud-controller-manager
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-iam-ro
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-network
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-aws
+2023-05-04T16:39:40.364208340Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-gcp-pd-csi-driver-operator
+2023-05-04T16:39:40.364428422Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-azure
+2023-05-04T16:39:40.364428422Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry
+2023-05-04T16:39:40.364492332Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-powervs
+2023-05-04T16:39:40.364682960Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ibm-cloud-controller-manager
+2023-05-04T16:39:40.364725920Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-nutanix
+2023-05-04T16:39:40.364849192Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-disk-csi-driver-operator
+2023-05-04T16:39:40.365036263Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/manila-csi-driver-operator
+2023-05-04T16:39:40.365048536Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-openstack
+2023-05-04T16:39:40.365163431Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ibmcloud
+2023-05-04T16:39:40.365274499Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-ingress
+2023-05-04T16:39:40.365395947Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-problem-detector
+2023-05-04T16:39:40.365869205Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-powervs-block-csi-driver-operator
+2023-05-04T16:39:40.365869205Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ovirt-csi-driver-operator
+2023-05-04T16:39:40.365869205Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-openstack
+2023-05-04T16:39:40.365869205Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-gcp
+2023-05-04T16:39:40.365914960Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vmware-vsphere-csi-driver-operator
+2023-05-04T16:39:40.366040085Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-machine-api-ovirt
+2023-05-04T16:39:40.366084799Z time="2023-05-04T16:39:40Z" level=info msg="parent credential secret does not exist" controller=secretannotator
+2023-05-04T16:39:40.366386866Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-vsphere-cloud-controller-manager
+2023-05-04T16:39:40.367983109Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-alibaba
+2023-05-04T16:39:40.367983109Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/ibm-vpc-block-csi-driver-operator
+2023-05-04T16:39:40.367983109Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/azure-file-csi-driver-operator
+2023-05-04T16:39:40.367983109Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-image-registry-gcs
+2023-05-04T16:39:40.367983109Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-aws
+2023-05-04T16:39:40.367983109Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cloud-network-config-controller-azure
+2023-05-04T16:39:40.367983109Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/openshift-cluster-csi-drivers
+2023-05-04T16:39:40.368127079Z time="2023-05-04T16:39:40Z" level=info msg="syncing credentials request" controller=credreq cr=openshift-cloud-credential-operator/cloud-credential-operator-gcp-ro-creds
+2023-05-04T16:39:40.456298968Z time="2023-05-04T16:39:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T16:39:40.456337430Z time="2023-05-04T16:39:40Z" level=info msg="reconcile complete" controller=metrics elapsed=408.78255ms
+2023-05-04T16:41:40.456833068Z time="2023-05-04T16:41:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T16:41:40.461202452Z time="2023-05-04T16:41:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T16:41:40.461202452Z time="2023-05-04T16:41:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.683124ms
+2023-05-04T16:43:40.462208015Z time="2023-05-04T16:43:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T16:43:40.466354393Z time="2023-05-04T16:43:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T16:43:40.466354393Z time="2023-05-04T16:43:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.229063ms
+2023-05-04T16:44:40.463372950Z time="2023-05-04T16:44:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T16:45:40.468296666Z time="2023-05-04T16:45:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T16:45:40.472611400Z time="2023-05-04T16:45:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T16:45:40.472611400Z time="2023-05-04T16:45:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.208895ms
+2023-05-04T16:47:40.472400166Z time="2023-05-04T16:47:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T16:47:40.479196449Z time="2023-05-04T16:47:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T16:47:40.479280887Z time="2023-05-04T16:47:40Z" level=info msg="reconcile complete" controller=metrics elapsed=7.050771ms
+2023-05-04T16:49:40.468065980Z time="2023-05-04T16:49:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T16:49:40.479420315Z time="2023-05-04T16:49:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T16:49:40.483316405Z time="2023-05-04T16:49:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T16:49:40.483316405Z time="2023-05-04T16:49:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.929263ms
+2023-05-04T16:51:40.484237906Z time="2023-05-04T16:51:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T16:51:40.487905768Z time="2023-05-04T16:51:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T16:51:40.487917109Z time="2023-05-04T16:51:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.748023ms
+2023-05-04T16:53:40.488820204Z time="2023-05-04T16:53:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T16:53:40.492992360Z time="2023-05-04T16:53:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T16:53:40.493013370Z time="2023-05-04T16:53:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.249181ms
+2023-05-04T16:54:40.473058679Z time="2023-05-04T16:54:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T16:55:40.493248550Z time="2023-05-04T16:55:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T16:55:40.497446756Z time="2023-05-04T16:55:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T16:55:40.497519803Z time="2023-05-04T16:55:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.335413ms
+2023-05-04T16:57:40.498785604Z time="2023-05-04T16:57:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T16:57:40.502613025Z time="2023-05-04T16:57:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T16:57:40.502626610Z time="2023-05-04T16:57:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.607705ms
+2023-05-04T16:59:40.477275385Z time="2023-05-04T16:59:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T16:59:40.503383078Z time="2023-05-04T16:59:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T16:59:40.507650335Z time="2023-05-04T16:59:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T16:59:40.507669871Z time="2023-05-04T16:59:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.33864ms
+2023-05-04T17:01:40.510929652Z time="2023-05-04T17:01:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:01:40.512685436Z time="2023-05-04T17:01:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:01:40.512685436Z time="2023-05-04T17:01:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.650645ms
+2023-05-04T17:03:40.513032749Z time="2023-05-04T17:03:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:03:40.516987980Z time="2023-05-04T17:03:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:03:40.516987980Z time="2023-05-04T17:03:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.027216ms
+2023-05-04T17:04:40.481995984Z time="2023-05-04T17:04:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T17:05:40.520024990Z time="2023-05-04T17:05:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:05:40.521521829Z time="2023-05-04T17:05:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:05:40.521551595Z time="2023-05-04T17:05:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.165245ms
+2023-05-04T17:07:40.522149599Z time="2023-05-04T17:07:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:07:40.526446650Z time="2023-05-04T17:07:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:07:40.526501002Z time="2023-05-04T17:07:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.415453ms
+2023-05-04T17:09:40.486256716Z time="2023-05-04T17:09:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T17:09:40.527391900Z time="2023-05-04T17:09:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:09:40.531249507Z time="2023-05-04T17:09:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:09:40.531272751Z time="2023-05-04T17:09:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.934171ms
+2023-05-04T17:11:40.532526475Z time="2023-05-04T17:11:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:11:40.536769314Z time="2023-05-04T17:11:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:11:40.536769314Z time="2023-05-04T17:11:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.702643ms
+2023-05-04T17:13:40.537137758Z time="2023-05-04T17:13:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:13:40.541563331Z time="2023-05-04T17:13:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:13:40.541563331Z time="2023-05-04T17:13:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.50399ms
+2023-05-04T17:14:40.491180589Z time="2023-05-04T17:14:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T17:15:40.542343780Z time="2023-05-04T17:15:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:15:40.547281263Z time="2023-05-04T17:15:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:15:40.547281263Z time="2023-05-04T17:15:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.993188ms
+2023-05-04T17:17:40.548310100Z time="2023-05-04T17:17:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:17:40.552292562Z time="2023-05-04T17:17:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:17:40.552292562Z time="2023-05-04T17:17:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.047173ms
+2023-05-04T17:19:40.497172370Z time="2023-05-04T17:19:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T17:19:40.552428957Z time="2023-05-04T17:19:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:19:40.560189136Z time="2023-05-04T17:19:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:19:40.560189136Z time="2023-05-04T17:19:40Z" level=info msg="reconcile complete" controller=metrics elapsed=7.6755ms
+2023-05-04T17:21:40.560865984Z time="2023-05-04T17:21:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:21:40.564635236Z time="2023-05-04T17:21:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:21:40.564635236Z time="2023-05-04T17:21:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.869099ms
+2023-05-04T17:23:40.565575759Z time="2023-05-04T17:23:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:23:40.569410614Z time="2023-05-04T17:23:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:23:40.569410614Z time="2023-05-04T17:23:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.918882ms
+2023-05-04T17:24:40.502148511Z time="2023-05-04T17:24:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T17:25:40.570056299Z time="2023-05-04T17:25:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:25:40.574099124Z time="2023-05-04T17:25:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:25:40.574160629Z time="2023-05-04T17:25:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.156568ms
+2023-05-04T17:27:40.575360875Z time="2023-05-04T17:27:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:27:40.579306938Z time="2023-05-04T17:27:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:27:40.579325803Z time="2023-05-04T17:27:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.022206ms
+2023-05-04T17:29:40.506790632Z time="2023-05-04T17:29:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T17:29:40.580021853Z time="2023-05-04T17:29:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:29:40.583938933Z time="2023-05-04T17:29:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:29:40.583938933Z time="2023-05-04T17:29:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.000156ms
+2023-05-04T17:31:40.586070387Z time="2023-05-04T17:31:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:31:40.588916627Z time="2023-05-04T17:31:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:31:40.588916627Z time="2023-05-04T17:31:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.549596ms
+2023-05-04T17:33:40.589721530Z time="2023-05-04T17:33:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:33:40.593576022Z time="2023-05-04T17:33:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:33:40.593607542Z time="2023-05-04T17:33:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.919935ms
+2023-05-04T17:34:40.512288197Z time="2023-05-04T17:34:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T17:35:40.595316562Z time="2023-05-04T17:35:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:35:40.599404562Z time="2023-05-04T17:35:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:35:40.599718521Z time="2023-05-04T17:35:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.455179ms
+2023-05-04T17:37:40.600869988Z time="2023-05-04T17:37:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:37:40.606203906Z time="2023-05-04T17:37:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:37:40.606203906Z time="2023-05-04T17:37:40Z" level=info msg="reconcile complete" controller=metrics elapsed=5.398038ms
+2023-05-04T17:39:40.517285640Z time="2023-05-04T17:39:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T17:39:40.606632130Z time="2023-05-04T17:39:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:39:40.611306951Z time="2023-05-04T17:39:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:39:40.611306951Z time="2023-05-04T17:39:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.737639ms
+2023-05-04T17:41:40.612299059Z time="2023-05-04T17:41:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:41:40.616256224Z time="2023-05-04T17:41:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:41:40.616256224Z time="2023-05-04T17:41:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.171898ms
+2023-05-04T17:43:40.617305825Z time="2023-05-04T17:43:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:43:40.621547874Z time="2023-05-04T17:43:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:43:40.621634857Z time="2023-05-04T17:43:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.394164ms
+2023-05-04T17:44:40.522195507Z time="2023-05-04T17:44:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T17:45:40.622361433Z time="2023-05-04T17:45:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:45:40.626917292Z time="2023-05-04T17:45:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:45:40.626930977Z time="2023-05-04T17:45:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.654012ms
+2023-05-04T17:47:40.627293324Z time="2023-05-04T17:47:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:47:40.631073196Z time="2023-05-04T17:47:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:47:40.631073196Z time="2023-05-04T17:47:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.848941ms
+2023-05-04T17:49:40.527069728Z time="2023-05-04T17:49:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T17:49:40.632059109Z time="2023-05-04T17:49:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:49:40.636186162Z time="2023-05-04T17:49:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:49:40.636186162Z time="2023-05-04T17:49:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.201794ms
+2023-05-04T17:51:40.636850984Z time="2023-05-04T17:51:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:51:40.640806936Z time="2023-05-04T17:51:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:51:40.640806936Z time="2023-05-04T17:51:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.035902ms
+2023-05-04T17:53:40.641770521Z time="2023-05-04T17:53:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:53:40.646625470Z time="2023-05-04T17:53:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:53:40.646708667Z time="2023-05-04T17:53:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.997486ms
+2023-05-04T17:54:40.531137266Z time="2023-05-04T17:54:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T17:55:40.647296806Z time="2023-05-04T17:55:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:55:40.651104450Z time="2023-05-04T17:55:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:55:40.651104450Z time="2023-05-04T17:55:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.883196ms
+2023-05-04T17:57:40.651885334Z time="2023-05-04T17:57:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:57:40.655818483Z time="2023-05-04T17:57:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:57:40.655818483Z time="2023-05-04T17:57:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.002259ms
+2023-05-04T17:59:40.536257307Z time="2023-05-04T17:59:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T17:59:40.656670257Z time="2023-05-04T17:59:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T17:59:40.660807159Z time="2023-05-04T17:59:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T17:59:40.660807159Z time="2023-05-04T17:59:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.19452ms
+2023-05-04T18:01:40.661471620Z time="2023-05-04T18:01:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:01:40.667572608Z time="2023-05-04T18:01:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:01:40.667648841Z time="2023-05-04T18:01:40Z" level=info msg="reconcile complete" controller=metrics elapsed=6.270054ms
+2023-05-04T18:03:40.668393774Z time="2023-05-04T18:03:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:03:40.672683593Z time="2023-05-04T18:03:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:03:40.672683593Z time="2023-05-04T18:03:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.363166ms
+2023-05-04T18:04:40.541383437Z time="2023-05-04T18:04:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T18:05:40.673685187Z time="2023-05-04T18:05:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:05:40.677519982Z time="2023-05-04T18:05:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:05:40.677519982Z time="2023-05-04T18:05:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.326277ms
+2023-05-04T18:07:40.678265205Z time="2023-05-04T18:07:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:07:40.682269598Z time="2023-05-04T18:07:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:07:40.682326925Z time="2023-05-04T18:07:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.121913ms
+2023-05-04T18:09:40.546719646Z time="2023-05-04T18:09:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T18:09:40.683022264Z time="2023-05-04T18:09:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:09:40.687030645Z time="2023-05-04T18:09:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:09:40.687109814Z time="2023-05-04T18:09:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.148994ms
+2023-05-04T18:11:40.687376020Z time="2023-05-04T18:11:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:11:40.691596498Z time="2023-05-04T18:11:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:11:40.691648706Z time="2023-05-04T18:11:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.335575ms
+2023-05-04T18:13:40.694000733Z time="2023-05-04T18:13:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:13:40.697996760Z time="2023-05-04T18:13:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:13:40.697996760Z time="2023-05-04T18:13:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.860964ms
+2023-05-04T18:14:40.552252434Z time="2023-05-04T18:14:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T18:15:40.697339086Z time="2023-05-04T18:15:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:15:40.701789766Z time="2023-05-04T18:15:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:15:40.701808852Z time="2023-05-04T18:15:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.521384ms
+2023-05-04T18:17:40.702340283Z time="2023-05-04T18:17:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:17:40.706246101Z time="2023-05-04T18:17:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:17:40.706300173Z time="2023-05-04T18:17:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.024661ms
+2023-05-04T18:19:40.557486573Z time="2023-05-04T18:19:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T18:19:40.706943371Z time="2023-05-04T18:19:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:19:40.711629985Z time="2023-05-04T18:19:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:19:40.711629985Z time="2023-05-04T18:19:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.762997ms
+2023-05-04T18:21:40.712444111Z time="2023-05-04T18:21:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:21:40.716392138Z time="2023-05-04T18:21:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:21:40.716403369Z time="2023-05-04T18:21:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.038667ms
+2023-05-04T18:23:40.717137268Z time="2023-05-04T18:23:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:23:40.721213736Z time="2023-05-04T18:23:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:23:40.721274470Z time="2023-05-04T18:23:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.213696ms
+2023-05-04T18:24:40.563146792Z time="2023-05-04T18:24:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T18:25:40.721730746Z time="2023-05-04T18:25:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:25:40.726740184Z time="2023-05-04T18:25:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:25:40.726761484Z time="2023-05-04T18:25:40Z" level=info msg="reconcile complete" controller=metrics elapsed=5.092134ms
+2023-05-04T18:27:40.726908615Z time="2023-05-04T18:27:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:27:40.731095500Z time="2023-05-04T18:27:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:27:40.731156956Z time="2023-05-04T18:27:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.310738ms
+2023-05-04T18:29:40.568406014Z time="2023-05-04T18:29:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T18:29:40.731596527Z time="2023-05-04T18:29:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:29:40.740549304Z time="2023-05-04T18:29:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:29:40.740549304Z time="2023-05-04T18:29:40Z" level=info msg="reconcile complete" controller=metrics elapsed=8.55973ms
+2023-05-04T18:31:40.740580407Z time="2023-05-04T18:31:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:31:40.745936776Z time="2023-05-04T18:31:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:31:40.745936776Z time="2023-05-04T18:31:40Z" level=info msg="reconcile complete" controller=metrics elapsed=5.458712ms
+2023-05-04T18:33:40.746268698Z time="2023-05-04T18:33:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:33:40.750208860Z time="2023-05-04T18:33:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:33:40.750208860Z time="2023-05-04T18:33:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.013199ms
+2023-05-04T18:34:40.575033328Z time="2023-05-04T18:34:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T18:35:40.751153241Z time="2023-05-04T18:35:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:35:40.755178563Z time="2023-05-04T18:35:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:35:40.755235901Z time="2023-05-04T18:35:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.143784ms
+2023-05-04T18:37:40.755411752Z time="2023-05-04T18:37:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:37:40.759266775Z time="2023-05-04T18:37:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:37:40.759288125Z time="2023-05-04T18:37:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.931587ms
+2023-05-04T18:39:40.581000517Z time="2023-05-04T18:39:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T18:39:40.759447083Z time="2023-05-04T18:39:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:39:40.763177612Z time="2023-05-04T18:39:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:39:40.763196748Z time="2023-05-04T18:39:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.806422ms
+2023-05-04T18:41:40.763704660Z time="2023-05-04T18:41:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:41:40.767644132Z time="2023-05-04T18:41:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:41:40.767682995Z time="2023-05-04T18:41:40Z" level=info msg="reconcile complete" controller=metrics elapsed=4.015113ms
+2023-05-04T18:43:40.768149354Z time="2023-05-04T18:43:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:43:40.773007088Z time="2023-05-04T18:43:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:43:40.773007088Z time="2023-05-04T18:43:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.806902ms
+2023-05-04T18:44:40.582904638Z time="2023-05-04T18:44:40Z" level=info msg="reconciling clusteroperator status"
+2023-05-04T18:45:40.772143167Z time="2023-05-04T18:45:40Z" level=info msg="calculating metrics for all CredentialsRequests" controller=metrics
+2023-05-04T18:45:40.775918670Z time="2023-05-04T18:45:40Z" level=info msg="unsupported cloud for determing CCO mode" cloud=None controller=metrics
+2023-05-04T18:45:40.775932827Z time="2023-05-04T18:45:40Z" level=info msg="reconcile complete" controller=metrics elapsed=3.860613ms

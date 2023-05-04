@@ -1,0 +1,24 @@
+-- Logs begin at Tue 2023-05-02 12:21:27 UTC, end at Thu 2023-05-04 18:47:25 UTC. --
+May 02 12:24:24.465488 localhost systemd[1]: Starting Open vSwitch Database Unit...
+May 02 12:24:24.529787 localhost chown[1106]: /usr/bin/chown: cannot access '/run/openvswitch': No such file or directory
+May 02 12:24:25.728002 localhost ovs-ctl[1159]: Starting ovsdb-server.
+May 02 12:24:25.805212 localhost ovs-vsctl[1234]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --no-wait -- init -- set Open_vSwitch . db-version=8.3.0
+May 02 12:24:26.056454 localhost ovs-vsctl[1244]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --no-wait set Open_vSwitch . ovs-version=2.17.4 "external-ids:system-id=\"2458f434-f339-4a13-8a98-d40d554d965c\"" "external-ids:rundir=\"/var/run/openvswitch\"" "system-type=\"rhcos\"" "system-version=\"4.12\""
+May 02 12:24:26.058248 localhost ovs-ctl[1159]: Configuring Open vSwitch system IDs.
+May 02 12:24:26.079400 localhost ovs-vsctl[1250]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --no-wait add Open_vSwitch . external-ids hostname=localhost
+May 02 12:24:26.153320 localhost ovs-ctl[1159]: Enabling remote OVSDB managers.
+May 02 12:24:26.153996 localhost systemd[1]: Started Open vSwitch Database Unit.
+May 02 12:27:02.371456 node ovsdb-server[1233]: ovs|00024|stream_ssl|ERR|SSL_use_certificate_file: error:02001002:system library:fopen:No such file or directory
+May 02 12:27:02.371479 node ovsdb-server[1233]: ovs|00025|stream_ssl|ERR|SSL_use_PrivateKey_file: error:20074002:BIO routines:file_ctrl:system lib
+-- Logs begin at Tue 2023-05-02 12:21:27 UTC, end at Thu 2023-05-04 18:47:25 UTC. --
+May 04 16:27:34.555896 localhost systemd[1]: Starting Open vSwitch Database Unit...
+May 04 16:27:35.092062 localhost chown[1629]: /usr/bin/chown: cannot access '/run/openvswitch': No such file or directory
+May 04 16:27:36.580123 localhost ovsdb-server[1758]: ovs|00002|stream_ssl|ERR|SSL_use_certificate_file: error:02001002:system library:fopen:No such file or directory
+May 04 16:27:36.580151 localhost ovsdb-server[1758]: ovs|00003|stream_ssl|ERR|SSL_use_PrivateKey_file: error:20074002:BIO routines:file_ctrl:system lib
+May 04 16:27:36.581158 localhost ovs-ctl[1656]: Starting ovsdb-server.
+May 04 16:27:36.761368 localhost ovs-vsctl[1765]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --no-wait -- init -- set Open_vSwitch . db-version=8.3.0
+May 04 16:27:37.122862 localhost ovs-vsctl[1799]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --no-wait set Open_vSwitch . ovs-version=2.17.4 "external-ids:system-id=\"2458f434-f339-4a13-8a98-d40d554d965c\"" "external-ids:rundir=\"/var/run/openvswitch\"" "system-type=\"rhcos\"" "system-version=\"4.12\""
+May 04 16:27:37.124958 localhost ovs-ctl[1656]: Configuring Open vSwitch system IDs.
+May 04 16:27:37.136024 localhost ovs-vsctl[1806]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --no-wait add Open_vSwitch . external-ids hostname=localhost
+May 04 16:27:37.259027 localhost ovs-ctl[1656]: Enabling remote OVSDB managers.
+May 04 16:27:37.259584 localhost systemd[1]: Started Open vSwitch Database Unit.

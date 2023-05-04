@@ -1,0 +1,504 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    cluster-autoscaler.kubernetes.io/safe-to-evict: "true"
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.1.248/23"],"mac_address":"0a:58:0a:80:01:f8","gateway_ips":["10.128.0.1"],"ip_address":"10.128.1.248/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.1.248"
+          ],
+          "mac": "0a:58:0a:80:01:f8",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.1.248"
+          ],
+          "mac": "0a:58:0a:80:01:f8",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    operatorframework.io/managed-by: marketplace-operator
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-05-04T15:51:56Z"
+  generateName: redhat-operators-
+  labels:
+    catalogsource.operators.coreos.com/update: ""
+    olm.catalogSource: redhat-operators
+    olm.pod-spec-hash: 6bd6db49b7
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:cluster-autoscaler.kubernetes.io/safe-to-evict: {}
+          f:k8s.ovn.org/pod-networks: {}
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+          f:openshift.io/scc: {}
+          f:operatorframework.io/managed-by: {}
+          f:seccomp.security.alpha.kubernetes.io/pod: {}
+        f:generateName: {}
+        f:labels:
+          f:catalogsource.operators.coreos.com/update: {}
+          f:olm.catalogSource: {}
+          f:olm.pod-spec-hash: {}
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"PodScheduled"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:type: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:qosClass: {}
+        f:startTime: {}
+    manager: olm.registry
+    operation: Apply
+    subresource: status
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:cluster-autoscaler.kubernetes.io/safe-to-evict: {}
+          f:k8s.ovn.org/pod-networks: {}
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+          f:openshift.io/scc: {}
+          f:operatorframework.io/managed-by: {}
+          f:seccomp.security.alpha.kubernetes.io/pod: {}
+        f:generateName: {}
+        f:labels:
+          f:catalogsource.operators.coreos.com/update: {}
+          f:olm.catalogSource: {}
+          f:olm.pod-spec-hash: {}
+        f:ownerReferences:
+          k:{"uid":"3c017b17-7408-431c-8d34-889b6292d22a"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"registry-server"}:
+            .: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              f:exec:
+                f:command: {}
+              f:failureThreshold: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              k:{"containerPort":50051,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              f:exec:
+                f:command: {}
+              f:failureThreshold: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              f:requests:
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+              f:runAsNonRoot: {}
+              f:runAsUser: {}
+            f:startupProbe:
+              f:exec:
+                f:command: {}
+              f:failureThreshold: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              k:{"mountPath":"/var/run/secrets/kubernetes.io/serviceaccount"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:imagePullSecrets:
+          k:{"name":"redhat-operators-dockercfg-kqtvd"}: {}
+        f:nodeName: {}
+        f:nodeSelector: {}
+        f:preemptionPolicy: {}
+        f:priority: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          f:fsGroup: {}
+          f:seLinuxOptions:
+            f:level: {}
+          f:seccompProfile:
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          k:{"name":"kube-api-access-b4mlm"}:
+            .: {}
+            f:name: {}
+            f:projected:
+              f:defaultMode: {}
+              f:sources: {}
+    manager: olm.registry
+    operation: Apply
+    time: "2023-05-04T15:52:18Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:cluster-autoscaler.kubernetes.io/safe-to-evict: {}
+          f:operatorframework.io/managed-by: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:olm.pod-spec-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"3c017b17-7408-431c-8d34-889b6292d22a"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"registry-server"}:
+            .: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":50051,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+            f:startupProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:seccompProfile:
+            .: {}
+            f:type: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+    manager: catalog
+    operation: Update
+    time: "2023-05-04T15:51:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: node
+    operation: Update
+    time: "2023-05-04T15:51:56Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-05-04T15:51:57Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.1.248"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:33:21Z"
+  name: redhat-operators-x54c6
+  namespace: openshift-marketplace
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: false
+    kind: CatalogSource
+    name: redhat-operators
+    uid: 3c017b17-7408-431c-8d34-889b6292d22a
+  resourceVersion: "631515"
+  uid: 01f5704f-95ed-40ae-bf76-a4c18bffa844
+spec:
+  containers:
+  - image: registry.redhat.io/redhat/redhat-operator-index:v4.12
+    imagePullPolicy: Always
+    livenessProbe:
+      exec:
+        command:
+        - grpc_health_probe
+        - -addr=:50051
+      failureThreshold: 3
+      initialDelaySeconds: 10
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    name: registry-server
+    ports:
+    - containerPort: 50051
+      name: grpc
+      protocol: TCP
+    readinessProbe:
+      exec:
+        command:
+        - grpc_health_probe
+        - -addr=:50051
+      failureThreshold: 3
+      initialDelaySeconds: 5
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 5
+    resources:
+      requests:
+        cpu: 10m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      readOnlyRootFilesystem: false
+      runAsNonRoot: true
+      runAsUser: 1000210000
+    startupProbe:
+      exec:
+        command:
+        - grpc_health_probe
+        - -addr=:50051
+      failureThreshold: 15
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-b4mlm
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: redhat-operators-dockercfg-kqtvd
+  nodeName: node
+  nodeSelector:
+    kubernetes.io/os: linux
+    node-role.kubernetes.io/master: ""
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000210000
+    seLinuxOptions:
+      level: s0:c15,c0
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: redhat-operators
+  serviceAccountName: redhat-operators
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoSchedule
+    key: node-role.kubernetes.io/master
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 120
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: kube-api-access-b4mlm
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T15:51:56Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T16:33:21Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T16:33:21Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T15:51:56Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://7ee5120869905e81d798d96cb4ae8266a01d568652db49fd0e2ef4b983e3140d
+    image: registry.redhat.io/redhat/redhat-operator-index:v4.12
+    imageID: registry.redhat.io/redhat/redhat-operator-index@sha256:777b0946ce768f68f06adb5c0bd6b447f6b4c95c4493dad9682c33e98e2e4199
+    lastState: {}
+    name: registry-server
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:16Z"
+  hostIP: 192.168.1.126
+  phase: Running
+  podIP: 10.128.1.248
+  podIPs:
+  - ip: 10.128.1.248
+  qosClass: Burstable
+  startTime: "2023-05-04T15:51:56Z"

@@ -1,0 +1,134 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.35
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: machine-config-controller-59786d68b6-z67fx
+      namespace: openshift-machine-config-operator
+      uid: 83f98e4e-1ddd-4e80-940a-8ab98e854030
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:31:31Z"
+    creationTimestamp: "2023-05-02T12:18:17Z"
+    generateName: machine-config-controller-
+    generation: 4
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: machine-config-controller
+      kubernetes.io/service-name: machine-config-controller
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"3d323879-cfdf-4375-b8aa-f656a0a22216"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:31:31Z"
+    name: machine-config-controller-f22ms
+    namespace: openshift-machine-config-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: machine-config-controller
+      uid: 3d323879-cfdf-4375-b8aa-f656a0a22216
+    resourceVersion: "630369"
+    uid: aef2643a-0cb4-4e82-a738-2eab0cebf888
+  ports:
+  - name: metrics
+    port: 9001
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 192.168.1.126
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: machine-config-daemon-6gh52
+      namespace: openshift-machine-config-operator
+      uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:30:53Z"
+    creationTimestamp: "2023-05-02T12:18:19Z"
+    generateName: machine-config-daemon-
+    generation: 5
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      k8s-app: machine-config-daemon
+      kubernetes.io/service-name: machine-config-daemon
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:k8s-app: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"9e45a88f-414b-438c-af22-3e79bb882613"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:30:53Z"
+    name: machine-config-daemon-f9hqb
+    namespace: openshift-machine-config-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: machine-config-daemon
+      uid: 9e45a88f-414b-438c-af22-3e79bb882613
+    resourceVersion: "629940"
+    uid: 7829a37e-8116-4545-aa24-6ffee4eaf9f6
+  ports:
+  - name: metrics
+    port: 9001
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "684696"

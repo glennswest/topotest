@@ -1,0 +1,463 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: router-default-757b9d4d79-snzvp
+    namespace: openshift-ingress
+    resourceVersion: "13772"
+    uid: ab5d2f9c-8bfa-4bc6-82b7-d44d9239778e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:46Z"
+  message: 'MountVolume.SetUp failed for volume "service-ca-bundle" : failed to sync
+    configmap cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:30:01Z"
+    name: router-default-757b9d4d79-snzvp.175bfda8399a9cdd
+    namespace: openshift-ingress
+    resourceVersion: "629182"
+    uid: e9dd4964-a640-47c5-9ad4-42d7d70665fa
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: router-default-757b9d4d79-snzvp
+    namespace: openshift-ingress
+    resourceVersion: "13772"
+    uid: ab5d2f9c-8bfa-4bc6-82b7-d44d9239778e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "default-certificate" : failed to
+    sync secret cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:51Z"
+    name: router-default-757b9d4d79-snzvp.175bfda842ff9d4d
+    namespace: openshift-ingress
+    resourceVersion: "629048"
+    uid: 1bca4c11-47f0-4db9-b8d9-582da8759344
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: router-default-757b9d4d79-snzvp
+    namespace: openshift-ingress
+    resourceVersion: "13772"
+    uid: ab5d2f9c-8bfa-4bc6-82b7-d44d9239778e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "metrics-certs" : failed to sync secret
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:59Z"
+    name: router-default-757b9d4d79-snzvp.175bfda84325efde
+    namespace: openshift-ingress
+    resourceVersion: "629132"
+    uid: ee7329ba-fc9e-4ff1-aec4-6f86c418f4ea
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: router-default-757b9d4d79-snzvp
+    namespace: openshift-ingress
+    resourceVersion: "13772"
+    uid: ab5d2f9c-8bfa-4bc6-82b7-d44d9239778e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "stats-auth" : failed to sync secret
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:30:00Z"
+    name: router-default-757b9d4d79-snzvp.175bfda8435f515c
+    namespace: openshift-ingress
+    resourceVersion: "629176"
+    uid: cdf59877-7334-40fd-826d-721990ffdbea
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{router}
+    kind: Pod
+    name: router-default-757b9d4d79-snzvp
+    namespace: openshift-ingress
+    resourceVersion: "13772"
+    uid: ab5d2f9c-8bfa-4bc6-82b7-d44d9239778e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fa1ff52055ededc0386ee6b334ffe0cd9252f5878fcccf1396aee30adf6de046"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:05Z"
+    name: router-default-757b9d4d79-snzvp.175bfdab93c69e0a
+    namespace: openshift-ingress
+    resourceVersion: "630043"
+    uid: b6f086ff-345b-4d1d-be08-1f21b5d4e63a
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{router}
+    kind: Pod
+    name: router-default-757b9d4d79-snzvp
+    namespace: openshift-ingress
+    resourceVersion: "13772"
+    uid: ab5d2f9c-8bfa-4bc6-82b7-d44d9239778e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:05Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fa1ff52055ededc0386ee6b334ffe0cd9252f5878fcccf1396aee30adf6de046"
+    in 6.652619976s
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:50Z"
+    name: router-default-757b9d4d79-snzvp.175bfdad204dbb5a
+    namespace: openshift-ingress
+    resourceVersion: "630554"
+    uid: 93d4a612-c9f5-46d3-8c8d-e1d9478b7b72
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{router}
+    kind: Pod
+    name: router-default-757b9d4d79-snzvp
+    namespace: openshift-ingress
+    resourceVersion: "13772"
+    uid: ab5d2f9c-8bfa-4bc6-82b7-d44d9239778e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:40Z"
+  message: Created container router
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:53Z"
+    name: router-default-757b9d4d79-snzvp.175bfdad27a711f7
+    namespace: openshift-ingress
+    resourceVersion: "632492"
+    uid: aa7925d8-4eef-4814-be4f-16df0e601eca
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:05Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{router}
+    kind: Pod
+    name: router-default-757b9d4d79-snzvp
+    namespace: openshift-ingress
+    resourceVersion: "13772"
+    uid: ab5d2f9c-8bfa-4bc6-82b7-d44d9239778e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:05Z"
+  message: Started container router
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:51Z"
+    name: router-default-757b9d4d79-snzvp.175bfdad2a238d19
+    namespace: openshift-ingress
+    resourceVersion: "630559"
+    uid: b0b00303-6dc2-4136-b78a-77953e4e127e
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 8
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{router}
+    kind: Pod
+    name: router-default-757b9d4d79-snzvp
+    namespace: openshift-ingress
+    resourceVersion: "13772"
+    uid: ab5d2f9c-8bfa-4bc6-82b7-d44d9239778e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:13Z"
+  message: |+
+    Startup probe error: HTTP probe failed with statuscode: 500
+    body: [-]backend-http failed: reason withheld
+    [-]has-synced failed: reason withheld
+    [+]process-running ok
+    healthz check failed
+
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:15Z"
+    name: router-default-757b9d4d79-snzvp.175bfdad31e21181
+    namespace: openshift-ingress
+    resourceVersion: "630754"
+    uid: ffcd9b3b-5d71-4187-a355-3caa9e971184
+  reason: ProbeError
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 8
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{router}
+    kind: Pod
+    name: router-default-757b9d4d79-snzvp
+    namespace: openshift-ingress
+    resourceVersion: "13772"
+    uid: ab5d2f9c-8bfa-4bc6-82b7-d44d9239778e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:13Z"
+  message: 'Startup probe failed: HTTP probe failed with statuscode: 500'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:15Z"
+    name: router-default-757b9d4d79-snzvp.175bfdad31e265e1
+    namespace: openshift-ingress
+    resourceVersion: "630759"
+    uid: 36c34682-3aca-49bc-a519-c3975dc18e9f
+  reason: Unhealthy
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+kind: EventList
+metadata:
+  resourceVersion: "684589"

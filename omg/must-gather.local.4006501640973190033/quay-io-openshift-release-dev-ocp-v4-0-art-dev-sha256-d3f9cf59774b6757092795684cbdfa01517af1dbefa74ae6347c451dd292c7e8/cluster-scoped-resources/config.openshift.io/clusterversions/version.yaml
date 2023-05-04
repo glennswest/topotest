@@ -1,0 +1,376 @@
+apiVersion: config.openshift.io/v1
+kind: ClusterVersion
+metadata:
+  creationTimestamp: "2023-05-02T12:17:54Z"
+  generation: 2
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:channel: {}
+        f:clusterID: {}
+    manager: cluster-bootstrap
+    operation: Update
+    time: "2023-05-02T12:17:54Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:availableUpdates: {}
+        f:capabilities:
+          .: {}
+          f:enabledCapabilities: {}
+          f:knownCapabilities: {}
+        f:conditionalUpdates: {}
+        f:conditions: {}
+        f:desired:
+          .: {}
+          f:channels: {}
+          f:image: {}
+          f:url: {}
+          f:version: {}
+        f:history: {}
+        f:observedGeneration: {}
+        f:versionHash: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-04T18:43:30Z"
+  name: version
+  resourceVersion: "683711"
+  uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+spec:
+  channel: stable-4.12
+  clusterID: 91e347a3-3761-416f-abcc-9282fb097dea
+status:
+  availableUpdates:
+  - channels:
+    - candidate-4.12
+    - candidate-4.13
+    - eus-4.12
+    - fast-4.12
+    - stable-4.12
+    image: quay.io/openshift-release-dev/ocp-release@sha256:157cc02d63bfe67988429fd803da632e495e230d811759b1aed1e6ffa7a3f31a
+    url: https://access.redhat.com/errata/RHBA-2023:1858
+    version: 4.12.14
+  - channels:
+    - candidate-4.12
+    - candidate-4.13
+    - eus-4.12
+    - fast-4.12
+    - stable-4.12
+    image: quay.io/openshift-release-dev/ocp-release@sha256:af5e923e8e1c1e67e22c8d037a247b678ae6da220de4a5191729a9bed00be041
+    url: https://access.redhat.com/errata/RHBA-2023:1750
+    version: 4.12.13
+  - channels:
+    - candidate-4.12
+    - candidate-4.13
+    - eus-4.12
+    - fast-4.12
+    - stable-4.12
+    image: quay.io/openshift-release-dev/ocp-release@sha256:0398462b1c54758fe83619022a98bbe65f6deed71663b6665224d3ba36e43f03
+    url: https://access.redhat.com/errata/RHBA-2023:1645
+    version: 4.12.11
+  - channels:
+    - candidate-4.12
+    - candidate-4.13
+    - eus-4.12
+    - fast-4.12
+    - stable-4.12
+    image: quay.io/openshift-release-dev/ocp-release@sha256:db976910d909373b1136261a5479ed18ec08c93971285ff760ce75c6217d3943
+    url: https://access.redhat.com/errata/RHBA-2023:1508
+    version: 4.12.10
+  - channels:
+    - candidate-4.12
+    - candidate-4.13
+    - eus-4.12
+    - fast-4.12
+    - stable-4.12
+    image: quay.io/openshift-release-dev/ocp-release@sha256:96bf74ce789ccb22391deea98e0c5050c41b67cc17defbb38089d32226dba0b8
+    url: https://access.redhat.com/errata/RHSA-2023:1409
+    version: 4.12.9
+  - channels:
+    - candidate-4.12
+    - candidate-4.13
+    - eus-4.12
+    - fast-4.12
+    - stable-4.12
+    image: quay.io/openshift-release-dev/ocp-release@sha256:28358de024c01a449b28f27fb4c122f15eb292a2becdf7c651511785c867884a
+    url: https://access.redhat.com/errata/RHBA-2023:1269
+    version: 4.12.8
+  - channels:
+    - candidate-4.12
+    - candidate-4.13
+    - eus-4.12
+    - fast-4.12
+    - stable-4.12
+    image: quay.io/openshift-release-dev/ocp-release@sha256:bd712a7aa5c1763870e721f92e19104c3c1b930d1a7d550a122c0ebbe2513aee
+    url: https://access.redhat.com/errata/RHBA-2023:1163
+    version: 4.12.7
+  - channels:
+    - candidate-4.12
+    - candidate-4.13
+    - eus-4.12
+    - fast-4.12
+    - stable-4.12
+    image: quay.io/openshift-release-dev/ocp-release@sha256:800d1e39d145664975a3bb7cbc6e674fbf78e3c45b5dde9ff2c5a11a8690c87b
+    url: https://access.redhat.com/errata/RHBA-2023:1034
+    version: 4.12.6
+  - channels:
+    - candidate-4.12
+    - candidate-4.13
+    - eus-4.12
+    - fast-4.12
+    - stable-4.12
+    image: quay.io/openshift-release-dev/ocp-release@sha256:fd65cebce150bac3c622e30e7f762d3173575ae3541b3a7648819cb63e9b63a4
+    url: https://access.redhat.com/errata/RHSA-2023:0890
+    version: 4.12.5
+  - channels:
+    - candidate-4.12
+    - candidate-4.13
+    - eus-4.12
+    - fast-4.12
+    - stable-4.12
+    image: quay.io/openshift-release-dev/ocp-release@sha256:bbf1f27e5942a2f7a0f298606029d10600ba0462a09ab654f006ce14d314cb2c
+    url: https://access.redhat.com/errata/RHSA-2023:0769
+    version: 4.12.4
+  - channels:
+    - candidate-4.12
+    - candidate-4.13
+    - eus-4.12
+    - fast-4.12
+    - stable-4.12
+    image: quay.io/openshift-release-dev/ocp-release@sha256:382f271581b9b907484d552bd145e9a5678e9366330059d31b007f4445d99e36
+    url: https://access.redhat.com/errata/RHSA-2023:0728
+    version: 4.12.3
+  capabilities:
+    enabledCapabilities:
+    - CSISnapshot
+    - Console
+    - Insights
+    - Storage
+    - baremetal
+    - marketplace
+    - openshift-samples
+    knownCapabilities:
+    - CSISnapshot
+    - Console
+    - Insights
+    - Storage
+    - baremetal
+    - marketplace
+    - openshift-samples
+  conditionalUpdates:
+  - conditions:
+    - lastTransitionTime: "2023-05-04T18:43:30Z"
+      message: The 4.12.12 release only resolves an installation issue https://issues.redhat.com//browse/OCPBUGS-11662
+        , which does not affect already running clusters. 4.12.12 does not include
+        fixes delivered in recent 4.11.z and 4.12.z releases and therefore upgrading
+        from these versions would cause fixed bugs to reappear. Red Hat does not recommend
+        upgrading clusters to 4.12.12 version for this reason. https://access.redhat.com/solutions/7007136
+      reason: PatchesOlderRelease
+      status: "False"
+      type: Recommended
+    release:
+      channels:
+      - candidate-4.12
+      - candidate-4.13
+      - eus-4.12
+      - fast-4.12
+      - stable-4.12
+      image: quay.io/openshift-release-dev/ocp-release@sha256:b9d6ccb5ba5a878141e468e56fa62912ad7c04864acfec0c0056d2b41e3259cc
+      url: https://access.redhat.com/errata/RHBA-2023:1734
+      version: 4.12.12
+    risks:
+    - matchingRules:
+      - type: Always
+      message: The 4.12.12 release only resolves an installation issue https://issues.redhat.com//browse/OCPBUGS-11662
+        , which does not affect already running clusters. 4.12.12 does not include
+        fixes delivered in recent 4.11.z and 4.12.z releases and therefore upgrading
+        from these versions would cause fixed bugs to reappear. Red Hat does not recommend
+        upgrading clusters to 4.12.12 version for this reason.
+      name: PatchesOlderRelease
+      url: https://access.redhat.com/solutions/7007136
+  - conditions:
+    - lastTransitionTime: "2023-05-04T18:43:30Z"
+      message: The update is recommended, because none of the conditional update risks
+        apply to this cluster.
+      reason: AsExpected
+      status: "True"
+      type: Recommended
+    release:
+      channels:
+      - candidate-4.12
+      - candidate-4.13
+      - eus-4.12
+      - fast-4.12
+      - stable-4.12
+      image: quay.io/openshift-release-dev/ocp-release@sha256:bd712a7aa5c1763870e721f92e19104c3c1b930d1a7d550a122c0ebbe2513aee
+      url: https://access.redhat.com/errata/RHBA-2023:1163
+      version: 4.12.7
+    risks:
+    - matchingRules:
+      - promql:
+          promql: group(cluster:usage:resources:sum{resource=~"(containerruntimeconfigs|kubeletconfigs)[.]machineconfiguration[.]openshift[.]io"}
+            > 0) or 0 * group(cluster:usage:resources:sum)
+        type: PromQL
+      message: Machine Config Operator stalls when encountering orphaned KubeletConfig
+        or ContainerRuntimeConfig resources.
+      name: LeakedMachineConfigBlocksMCO
+      url: https://issues.redhat.com/browse/OCPNODE-1502
+  - conditions:
+    - lastTransitionTime: "2023-05-04T18:43:30Z"
+      message: The update is recommended, because none of the conditional update risks
+        apply to this cluster.
+      reason: AsExpected
+      status: "True"
+      type: Recommended
+    release:
+      channels:
+      - candidate-4.12
+      - candidate-4.13
+      - eus-4.12
+      - fast-4.12
+      - stable-4.12
+      image: quay.io/openshift-release-dev/ocp-release@sha256:800d1e39d145664975a3bb7cbc6e674fbf78e3c45b5dde9ff2c5a11a8690c87b
+      url: https://access.redhat.com/errata/RHBA-2023:1034
+      version: 4.12.6
+    risks:
+    - matchingRules:
+      - promql:
+          promql: group(cluster:usage:resources:sum{resource=~"(containerruntimeconfigs|kubeletconfigs)[.]machineconfiguration[.]openshift[.]io"}
+            > 0) or 0 * group(cluster:usage:resources:sum)
+        type: PromQL
+      message: Machine Config Operator stalls when encountering orphaned KubeletConfig
+        or ContainerRuntimeConfig resources.
+      name: LeakedMachineConfigBlocksMCO
+      url: https://issues.redhat.com/browse/OCPNODE-1502
+  - conditions:
+    - lastTransitionTime: "2023-05-04T18:43:30Z"
+      message: The update is recommended, because none of the conditional update risks
+        apply to this cluster.
+      reason: AsExpected
+      status: "True"
+      type: Recommended
+    release:
+      channels:
+      - candidate-4.12
+      - candidate-4.13
+      - eus-4.12
+      - fast-4.12
+      - stable-4.12
+      image: quay.io/openshift-release-dev/ocp-release@sha256:fd65cebce150bac3c622e30e7f762d3173575ae3541b3a7648819cb63e9b63a4
+      url: https://access.redhat.com/errata/RHSA-2023:0890
+      version: 4.12.5
+    risks:
+    - matchingRules:
+      - promql:
+          promql: group(cluster:usage:resources:sum{resource=~"(containerruntimeconfigs|kubeletconfigs)[.]machineconfiguration[.]openshift[.]io"}
+            > 0) or 0 * group(cluster:usage:resources:sum)
+        type: PromQL
+      message: Machine Config Operator stalls when encountering orphaned KubeletConfig
+        or ContainerRuntimeConfig resources.
+      name: LeakedMachineConfigBlocksMCO
+      url: https://issues.redhat.com/browse/OCPNODE-1502
+  - conditions:
+    - lastTransitionTime: "2023-05-04T18:43:30Z"
+      message: The update is recommended, because none of the conditional update risks
+        apply to this cluster.
+      reason: AsExpected
+      status: "True"
+      type: Recommended
+    release:
+      channels:
+      - candidate-4.12
+      - candidate-4.13
+      - eus-4.12
+      - fast-4.12
+      - stable-4.12
+      image: quay.io/openshift-release-dev/ocp-release@sha256:bbf1f27e5942a2f7a0f298606029d10600ba0462a09ab654f006ce14d314cb2c
+      url: https://access.redhat.com/errata/RHSA-2023:0769
+      version: 4.12.4
+    risks:
+    - matchingRules:
+      - promql:
+          promql: group(cluster:usage:resources:sum{resource=~"(containerruntimeconfigs|kubeletconfigs)[.]machineconfiguration[.]openshift[.]io"}
+            > 0) or 0 * group(cluster:usage:resources:sum)
+        type: PromQL
+      message: Machine Config Operator stalls when encountering orphaned KubeletConfig
+        or ContainerRuntimeConfig resources.
+      name: LeakedMachineConfigBlocksMCO
+      url: https://issues.redhat.com/browse/OCPNODE-1502
+  - conditions:
+    - lastTransitionTime: "2023-05-04T18:43:30Z"
+      message: The update is recommended, because none of the conditional update risks
+        apply to this cluster.
+      reason: AsExpected
+      status: "True"
+      type: Recommended
+    release:
+      channels:
+      - candidate-4.12
+      - candidate-4.13
+      - eus-4.12
+      - fast-4.12
+      - stable-4.12
+      image: quay.io/openshift-release-dev/ocp-release@sha256:382f271581b9b907484d552bd145e9a5678e9366330059d31b007f4445d99e36
+      url: https://access.redhat.com/errata/RHSA-2023:0728
+      version: 4.12.3
+    risks:
+    - matchingRules:
+      - promql:
+          promql: group(cluster:usage:resources:sum{resource=~"(containerruntimeconfigs|kubeletconfigs)[.]machineconfiguration[.]openshift[.]io"}
+            > 0) or 0 * group(cluster:usage:resources:sum)
+        type: PromQL
+      message: Machine Config Operator stalls when encountering orphaned KubeletConfig
+        or ContainerRuntimeConfig resources.
+      name: LeakedMachineConfigBlocksMCO
+      url: https://issues.redhat.com/browse/OCPNODE-1502
+  conditions:
+  - lastTransitionTime: "2023-05-02T12:17:58Z"
+    message: Capabilities match configured spec
+    reason: AsExpected
+    status: "False"
+    type: ImplicitlyEnabledCapabilities
+  - lastTransitionTime: "2023-05-02T12:17:58Z"
+    message: Payload loaded version="4.12.2" image="quay.io/openshift-release-dev/ocp-release@sha256:31c7741fc7bb73ff752ba43f5acf014b8fadd69196fc522241302de918066cb1"
+      architecture="amd64"
+    reason: PayloadLoaded
+    status: "True"
+    type: ReleaseAccepted
+  - lastTransitionTime: "2023-05-02T12:50:26Z"
+    message: Done applying 4.12.2
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-05-02T12:50:26Z"
+    status: "False"
+    type: Failing
+  - lastTransitionTime: "2023-05-02T12:50:26Z"
+    message: Cluster version is 4.12.2
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-05-02T12:17:58Z"
+    status: "True"
+    type: RetrievedUpdates
+  desired:
+    channels:
+    - candidate-4.12
+    - candidate-4.13
+    - eus-4.12
+    - fast-4.12
+    - stable-4.12
+    image: quay.io/openshift-release-dev/ocp-release@sha256:31c7741fc7bb73ff752ba43f5acf014b8fadd69196fc522241302de918066cb1
+    url: https://access.redhat.com/errata/RHSA-2023:0569
+    version: 4.12.2
+  history:
+  - completionTime: "2023-05-02T12:50:26Z"
+    image: quay.io/openshift-release-dev/ocp-release@sha256:31c7741fc7bb73ff752ba43f5acf014b8fadd69196fc522241302de918066cb1
+    startedTime: "2023-05-02T12:17:58Z"
+    state: Completed
+    verified: false
+    version: 4.12.2
+  observedGeneration: 2
+  versionHash: PJfiYIGqHtc=

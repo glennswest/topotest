@@ -1,0 +1,2641 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-05-02T12:49:22Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-05-02T12:49:22Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-05-04T18:39:38Z"
+  name: pods.v1
+  resourceVersion: "682705"
+  uid: db9e6af2-5ce9-4055-99d8-266b71f9c549
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 85
+          verb: delete
+        - requestCount: 319
+          verb: get
+        - requestCount: 153
+          verb: patch
+        - requestCount: 6
+          verb: watch
+        requestCount: 563
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 431
+          verb: get
+        - requestCount: 51
+          verb: list
+        - requestCount: 5
+          verb: watch
+        requestCount: 487
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 71
+          verb: delete
+        - requestCount: 71
+          verb: get
+        - requestCount: 77
+          verb: list
+        - requestCount: 71
+          verb: watch
+        requestCount: 290
+        userAgent: oc/4.12.0
+        username: system:admin
+      - byVerb:
+        - requestCount: 227
+          verb: get
+        - requestCount: 17
+          verb: update
+        requestCount: 244
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 234
+          verb: watch
+        requestCount: 234
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 62
+          verb: get
+        - requestCount: 44
+          verb: list
+        - requestCount: 6
+          verb: watch
+        requestCount: 112
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        - requestCount: 44
+          verb: list
+        - requestCount: 6
+          verb: watch
+        requestCount: 110
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        - requestCount: 44
+          verb: list
+        - requestCount: 5
+          verb: watch
+        requestCount: 109
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 78
+          verb: list
+        requestCount: 78
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 30
+          verb: get
+        - requestCount: 11
+          verb: list
+        - requestCount: 13
+          verb: watch
+        requestCount: 54
+        userAgent: Mozilla/5.0
+        username: kube:admin
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        - requestCount: 29
+          verb: delete
+        - requestCount: 11
+          verb: watch
+        requestCount: 54
+        userAgent: catalog/v0.0.0
+        username: system:serviceaccount:openshift-operator-lifecycle-manager:olm-operator-serviceaccount
+      - byVerb:
+        - requestCount: 49
+          verb: list
+        requestCount: 49
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:serviceaccount:kube-system:pvc-protection-controller
+      - byVerb:
+        - requestCount: 39
+          verb: list
+        requestCount: 39
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 26
+          verb: get
+        - requestCount: 10
+          verb: watch
+        requestCount: 36
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 29
+          verb: watch
+        requestCount: 29
+        userAgent: ingress-operator/v0.0.0
+        username: system:serviceaccount:openshift-ingress-operator:ingress-operator
+      - byVerb:
+        - requestCount: 17
+          verb: patch
+        - requestCount: 6
+          verb: watch
+        requestCount: 23
+        userAgent: node/ovnkube@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 17
+          verb: create
+        - requestCount: 4
+          verb: watch
+        requestCount: 21
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 9
+          verb: get
+        - requestCount: 8
+          verb: list
+        requestCount: 17
+        userAgent: insights-operator/v0.0.0
+        username: system:serviceaccount:openshift-insights:gather
+      - byVerb:
+        - requestCount: 2
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 10
+        userAgent: webhook/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus-ac
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: cluster-openshift-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver-operator:openshift-apiserver-operator
+      - byVerb:
+        - requestCount: 3
+          verb: create
+        - requestCount: 3
+          verb: patch
+        requestCount: 6
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:serviceaccount:kube-system:job-controller
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: csi-resizer/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-controller
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: network-metrics/v0.0.0
+        username: system:serviceaccount:openshift-multus:metrics-daemon-sa
+      - byVerb:
+        - requestCount: 3
+          verb: delete
+        - requestCount: 3
+          verb: get
+        requestCount: 6
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:serviceaccount:kube-system:generic-garbage-collector
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-storage:lvms-operator
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: node/ovnkube@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: openshift-apiserver/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: kube-apiserver/v1.25.4+a34b9e9
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 2
+          verb: watch
+        requestCount: 2
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 2630
+    requestCount: 2630
+  last24h:
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 422
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 513
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 343
+          verb: watch
+        requestCount: 343
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 21
+          verb: delete
+        - requestCount: 167
+          verb: get
+        - requestCount: 125
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 321
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 99
+          verb: get
+        - requestCount: 71
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 179
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 98
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 178
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 92
+          verb: get
+        - requestCount: 66
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 166
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 130
+          verb: get
+        - requestCount: 26
+          verb: update
+        requestCount: 156
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 84
+          verb: list
+        requestCount: 84
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 64
+          verb: get
+        - requestCount: 15
+          verb: watch
+        requestCount: 79
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      nodeName: 192.168.1.126
+      requestCount: 2139
+    requestCount: 2139
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 435
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 528
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 351
+          verb: watch
+        requestCount: 351
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 20
+          verb: delete
+        - requestCount: 156
+          verb: get
+        - requestCount: 116
+          verb: patch
+        - requestCount: 7
+          verb: watch
+        requestCount: 299
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 70
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 174
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 70
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 174
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 90
+          verb: get
+        - requestCount: 66
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 164
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 120
+          verb: get
+        - requestCount: 24
+          verb: update
+        requestCount: 144
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 90
+          verb: list
+        requestCount: 90
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 20
+          verb: create
+        - requestCount: 39
+          verb: delete
+        - requestCount: 2
+          verb: get
+        - requestCount: 2
+          verb: patch
+        - requestCount: 16
+          verb: watch
+        requestCount: 79
+        userAgent: catalog/v0.0.0
+        username: system:serviceaccount:openshift-operator-lifecycle-manager:olm-operator-serviceaccount
+      nodeName: 192.168.1.126
+      requestCount: 2123
+    requestCount: 2123
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 438
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 530
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 351
+          verb: watch
+        requestCount: 351
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 21
+          verb: delete
+        - requestCount: 161
+          verb: get
+        - requestCount: 120
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 310
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 174
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 94
+          verb: get
+        - requestCount: 69
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 170
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 90
+          verb: get
+        - requestCount: 66
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 164
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 125
+          verb: get
+        - requestCount: 25
+          verb: update
+        requestCount: 150
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 90
+          verb: list
+        requestCount: 90
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 21
+          verb: create
+        - requestCount: 44
+          verb: delete
+        - requestCount: 17
+          verb: watch
+        requestCount: 82
+        userAgent: catalog/v0.0.0
+        username: system:serviceaccount:openshift-operator-lifecycle-manager:olm-operator-serviceaccount
+      nodeName: 192.168.1.126
+      requestCount: 2141
+    requestCount: 2141
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 435
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 527
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 341
+          verb: watch
+        requestCount: 341
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 21
+          verb: delete
+        - requestCount: 163
+          verb: get
+        - requestCount: 121
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 313
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 71
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 175
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 93
+          verb: get
+        - requestCount: 68
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 169
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 90
+          verb: get
+        - requestCount: 66
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 163
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 125
+          verb: get
+        - requestCount: 25
+          verb: update
+        requestCount: 150
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 84
+          verb: list
+        requestCount: 84
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 21
+          verb: create
+        - requestCount: 42
+          verb: delete
+        - requestCount: 17
+          verb: watch
+        requestCount: 80
+        userAgent: catalog/v0.0.0
+        username: system:serviceaccount:openshift-operator-lifecycle-manager:olm-operator-serviceaccount
+      nodeName: 192.168.1.126
+      requestCount: 2122
+    requestCount: 2122
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 415
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 508
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 350
+          verb: watch
+        requestCount: 350
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 21
+          verb: delete
+        - requestCount: 164
+          verb: get
+        - requestCount: 121
+          verb: patch
+        - requestCount: 9
+          verb: watch
+        requestCount: 315
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 176
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 69
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 172
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 94
+          verb: get
+        - requestCount: 67
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 170
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 125
+          verb: get
+        - requestCount: 25
+          verb: update
+        requestCount: 150
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 90
+          verb: list
+        requestCount: 90
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 64
+          verb: get
+        - requestCount: 16
+          verb: watch
+        requestCount: 80
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      nodeName: 192.168.1.126
+      requestCount: 2131
+    requestCount: 2131
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 433
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 525
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 342
+          verb: watch
+        requestCount: 342
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 22
+          verb: delete
+        - requestCount: 171
+          verb: get
+        - requestCount: 126
+          verb: patch
+        - requestCount: 7
+          verb: watch
+        requestCount: 326
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 177
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 68
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 171
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 93
+          verb: get
+        - requestCount: 69
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 170
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 130
+          verb: get
+        - requestCount: 26
+          verb: update
+        requestCount: 156
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 90
+          verb: list
+        requestCount: 90
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 22
+          verb: create
+        - requestCount: 44
+          verb: delete
+        - requestCount: 16
+          verb: watch
+        requestCount: 82
+        userAgent: catalog/v0.0.0
+        username: system:serviceaccount:openshift-operator-lifecycle-manager:olm-operator-serviceaccount
+      nodeName: 192.168.1.126
+      requestCount: 2159
+    requestCount: 2159
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 438
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 530
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 353
+          verb: watch
+        requestCount: 353
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 21
+          verb: delete
+        - requestCount: 163
+          verb: get
+        - requestCount: 120
+          verb: patch
+        - requestCount: 7
+          verb: watch
+        requestCount: 311
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 92
+          verb: get
+        - requestCount: 71
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 172
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 69
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 172
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 91
+          verb: get
+        - requestCount: 68
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 168
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 125
+          verb: get
+        - requestCount: 25
+          verb: update
+        requestCount: 150
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 87
+          verb: list
+        requestCount: 87
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 63
+          verb: get
+        - requestCount: 15
+          verb: watch
+        requestCount: 78
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      nodeName: 192.168.1.126
+      requestCount: 2141
+    requestCount: 2141
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 425
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 518
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 338
+          verb: watch
+        requestCount: 338
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 21
+          verb: delete
+        - requestCount: 165
+          verb: get
+        - requestCount: 121
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 315
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 71
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 175
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 70
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 173
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 94
+          verb: get
+        - requestCount: 67
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 169
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 125
+          verb: get
+        - requestCount: 25
+          verb: update
+        requestCount: 150
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 87
+          verb: list
+        requestCount: 87
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 63
+          verb: get
+        - requestCount: 17
+          verb: watch
+        requestCount: 80
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      nodeName: 192.168.1.126
+      requestCount: 2125
+    requestCount: 2125
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 426
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 518
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 340
+          verb: watch
+        requestCount: 340
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 21
+          verb: delete
+        - requestCount: 164
+          verb: get
+        - requestCount: 121
+          verb: patch
+        - requestCount: 9
+          verb: watch
+        requestCount: 315
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 71
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 176
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 68
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 172
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 92
+          verb: get
+        - requestCount: 70
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 170
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 125
+          verb: get
+        - requestCount: 25
+          verb: update
+        requestCount: 150
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 87
+          verb: list
+        requestCount: 87
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 64
+          verb: get
+        - requestCount: 15
+          verb: watch
+        requestCount: 79
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      nodeName: 192.168.1.126
+      requestCount: 2127
+    requestCount: 2127
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 428
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 520
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 335
+          verb: watch
+        requestCount: 335
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 21
+          verb: delete
+        - requestCount: 165
+          verb: get
+        - requestCount: 121
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 315
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 176
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 71
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 173
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 69
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 172
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 125
+          verb: get
+        - requestCount: 25
+          verb: update
+        requestCount: 150
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 87
+          verb: list
+        requestCount: 87
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 21
+          verb: create
+        - requestCount: 42
+          verb: delete
+        - requestCount: 18
+          verb: watch
+        requestCount: 81
+        userAgent: catalog/v0.0.0
+        username: system:serviceaccount:openshift-operator-lifecycle-manager:olm-operator-serviceaccount
+      nodeName: 192.168.1.126
+      requestCount: 2129
+    requestCount: 2129
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 428
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 520
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 351
+          verb: watch
+        requestCount: 351
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 21
+          verb: delete
+        - requestCount: 163
+          verb: get
+        - requestCount: 121
+          verb: patch
+        - requestCount: 9
+          verb: watch
+        requestCount: 314
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 175
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 94
+          verb: get
+        - requestCount: 71
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 173
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 69
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 173
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 125
+          verb: get
+        - requestCount: 25
+          verb: update
+        requestCount: 150
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 87
+          verb: list
+        requestCount: 87
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 21
+          verb: create
+        - requestCount: 42
+          verb: delete
+        - requestCount: 17
+          verb: watch
+        requestCount: 80
+        userAgent: catalog/v0.0.0
+        username: system:serviceaccount:openshift-operator-lifecycle-manager:olm-operator-serviceaccount
+      nodeName: 192.168.1.126
+      requestCount: 2143
+    requestCount: 2143
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 415
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 508
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 339
+          verb: watch
+        requestCount: 339
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 20
+          verb: delete
+        - requestCount: 157
+          verb: get
+        - requestCount: 116
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 301
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 175
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 68
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 172
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 92
+          verb: get
+        - requestCount: 71
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 171
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 120
+          verb: get
+        - requestCount: 24
+          verb: update
+        requestCount: 144
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 90
+          verb: list
+        requestCount: 90
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 63
+          verb: get
+        - requestCount: 17
+          verb: watch
+        requestCount: 80
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      nodeName: 192.168.1.126
+      requestCount: 2100
+    requestCount: 2100
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 431
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 522
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 342
+          verb: watch
+        requestCount: 342
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 21
+          verb: delete
+        - requestCount: 163
+          verb: get
+        - requestCount: 121
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 313
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 99
+          verb: get
+        - requestCount: 70
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 177
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 97
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 176
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 97
+          verb: get
+        - requestCount: 71
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 175
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 125
+          verb: get
+        - requestCount: 25
+          verb: update
+        requestCount: 150
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 87
+          verb: list
+        requestCount: 87
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 64
+          verb: get
+        - requestCount: 16
+          verb: watch
+        requestCount: 80
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      nodeName: 192.168.1.126
+      requestCount: 2142
+    requestCount: 2142
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 413
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 505
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 340
+          verb: watch
+        requestCount: 340
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 20
+          verb: delete
+        - requestCount: 157
+          verb: get
+        - requestCount: 116
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 301
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 71
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 175
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 69
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 173
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 70
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 172
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 120
+          verb: get
+        - requestCount: 24
+          verb: update
+        requestCount: 144
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 84
+          verb: list
+        requestCount: 84
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 63
+          verb: get
+        - requestCount: 17
+          verb: watch
+        requestCount: 80
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      nodeName: 192.168.1.126
+      requestCount: 2094
+    requestCount: 2094
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 428
+          verb: get
+        - requestCount: 82
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 518
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 44
+          verb: list
+        - requestCount: 370
+          verb: watch
+        requestCount: 414
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 19
+          verb: delete
+        - requestCount: 174
+          verb: get
+        - requestCount: 133
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 334
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 93
+          verb: get
+        - requestCount: 70
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 171
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 93
+          verb: get
+        - requestCount: 69
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 169
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 92
+          verb: get
+        - requestCount: 67
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 168
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 132
+          verb: get
+        - requestCount: 28
+          verb: update
+        requestCount: 160
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 114
+          verb: list
+        requestCount: 114
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 84
+          verb: list
+        requestCount: 84
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 61
+          verb: get
+        - requestCount: 16
+          verb: watch
+        requestCount: 77
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      nodeName: 192.168.1.126
+      requestCount: 2209
+    requestCount: 2209
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 415
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 507
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 24
+          verb: delete
+        - requestCount: 185
+          verb: get
+        - requestCount: 137
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 354
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 347
+          verb: watch
+        requestCount: 347
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 71
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 176
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 176
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 175
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 143
+          verb: get
+        - requestCount: 29
+          verb: update
+        requestCount: 172
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 23
+          verb: create
+        - requestCount: 44
+          verb: delete
+        - requestCount: 4
+          verb: get
+        - requestCount: 4
+          verb: patch
+        - requestCount: 15
+          verb: watch
+        requestCount: 90
+        userAgent: catalog/v0.0.0
+        username: system:serviceaccount:openshift-operator-lifecycle-manager:olm-operator-serviceaccount
+      - byVerb:
+        - requestCount: 78
+          verb: get
+        - requestCount: 5
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 90
+        userAgent: Mozilla/5.0
+        username: kube:admin
+      nodeName: 192.168.1.126
+      requestCount: 2207
+    requestCount: 2207
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 118
+          verb: delete
+        - requestCount: 925
+          verb: get
+        - requestCount: 1
+          verb: list
+        - requestCount: 660
+          verb: patch
+        - requestCount: 6
+          verb: watch
+        requestCount: 1710
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 962
+          verb: get
+        - requestCount: 195
+          verb: update
+        requestCount: 1157
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 103
+          verb: delete
+        - requestCount: 102
+          verb: get
+        - requestCount: 112
+          verb: list
+        - requestCount: 102
+          verb: watch
+        requestCount: 419
+        userAgent: oc/4.12.0
+        username: system:admin
+      - byVerb:
+        - requestCount: 349
+          verb: get
+        - requestCount: 47
+          verb: list
+        - requestCount: 6
+          verb: watch
+        requestCount: 402
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 88
+          verb: list
+        - requestCount: 293
+          verb: watch
+        requestCount: 381
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 64
+          verb: get
+        - requestCount: 41
+          verb: list
+        - requestCount: 5
+          verb: watch
+        requestCount: 110
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 59
+          verb: get
+        - requestCount: 41
+          verb: list
+        - requestCount: 5
+          verb: watch
+        requestCount: 105
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 58
+          verb: get
+        - requestCount: 40
+          verb: list
+        - requestCount: 5
+          verb: watch
+        requestCount: 103
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 102
+          verb: list
+        requestCount: 102
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:serviceaccount:kube-system:pvc-protection-controller
+      - byVerb:
+        - requestCount: 100
+          verb: create
+        requestCount: 100
+        userAgent: kubectl/4.12.0
+        username: system:admin
+      - byVerb:
+        - requestCount: 82
+          verb: list
+        requestCount: 82
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 13
+          verb: create
+        - requestCount: 31
+          verb: delete
+        - requestCount: 2
+          verb: list
+        - requestCount: 11
+          verb: watch
+        requestCount: 57
+        userAgent: catalog/v0.0.0
+        username: system:serviceaccount:openshift-operator-lifecycle-manager:olm-operator-serviceaccount
+      nodeName: 192.168.1.126
+      requestCount: 4728
+    requestCount: 4728
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 222
+          verb: delete
+        - requestCount: 1346
+          verb: get
+        - requestCount: 906
+          verb: patch
+        - requestCount: 7
+          verb: watch
+        requestCount: 2481
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 1402
+          verb: get
+        - requestCount: 317
+          verb: update
+        requestCount: 1719
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 200
+          verb: delete
+        - requestCount: 200
+          verb: get
+        - requestCount: 244
+          verb: list
+        - requestCount: 200
+          verb: watch
+        requestCount: 844
+        userAgent: oc/4.12.0
+        username: system:admin
+      - byVerb:
+        - requestCount: 597
+          verb: get
+        - requestCount: 78
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 683
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 351
+          verb: watch
+        requestCount: 351
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 313
+          verb: create
+        - requestCount: 8
+          verb: watch
+        requestCount: 321
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 313
+          verb: patch
+        - requestCount: 7
+          verb: watch
+        requestCount: 320
+        userAgent: node/ovnkube@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 200
+          verb: list
+        requestCount: 200
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:serviceaccount:kube-system:pvc-protection-controller
+      - byVerb:
+        - requestCount: 200
+          verb: create
+        requestCount: 200
+        userAgent: kubectl/4.12.0
+        username: system:admin
+      - byVerb:
+        - requestCount: 91
+          verb: get
+        - requestCount: 67
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 167
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 90
+          verb: get
+        - requestCount: 66
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 164
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 90
+          verb: get
+        - requestCount: 66
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 164
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      nodeName: 192.168.1.126
+      requestCount: 7818
+    requestCount: 7818
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 85
+          verb: delete
+        - requestCount: 319
+          verb: get
+        - requestCount: 153
+          verb: patch
+        - requestCount: 6
+          verb: watch
+        requestCount: 563
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 431
+          verb: get
+        - requestCount: 51
+          verb: list
+        - requestCount: 5
+          verb: watch
+        requestCount: 487
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 71
+          verb: delete
+        - requestCount: 71
+          verb: get
+        - requestCount: 77
+          verb: list
+        - requestCount: 71
+          verb: watch
+        requestCount: 290
+        userAgent: oc/4.12.0
+        username: system:admin
+      - byVerb:
+        - requestCount: 227
+          verb: get
+        - requestCount: 17
+          verb: update
+        requestCount: 244
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 234
+          verb: watch
+        requestCount: 234
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 62
+          verb: get
+        - requestCount: 44
+          verb: list
+        - requestCount: 6
+          verb: watch
+        requestCount: 112
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        - requestCount: 44
+          verb: list
+        - requestCount: 6
+          verb: watch
+        requestCount: 110
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 60
+          verb: get
+        - requestCount: 44
+          verb: list
+        - requestCount: 5
+          verb: watch
+        requestCount: 109
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 78
+          verb: list
+        requestCount: 78
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 30
+          verb: get
+        - requestCount: 11
+          verb: list
+        - requestCount: 13
+          verb: watch
+        requestCount: 54
+        userAgent: Mozilla/5.0
+        username: kube:admin
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        - requestCount: 29
+          verb: delete
+        - requestCount: 11
+          verb: watch
+        requestCount: 54
+        userAgent: catalog/v0.0.0
+        username: system:serviceaccount:openshift-operator-lifecycle-manager:olm-operator-serviceaccount
+      - byVerb:
+        - requestCount: 49
+          verb: list
+        requestCount: 49
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:serviceaccount:kube-system:pvc-protection-controller
+      - byVerb:
+        - requestCount: 39
+          verb: list
+        requestCount: 39
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 26
+          verb: get
+        - requestCount: 10
+          verb: watch
+        requestCount: 36
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 29
+          verb: watch
+        requestCount: 29
+        userAgent: ingress-operator/v0.0.0
+        username: system:serviceaccount:openshift-ingress-operator:ingress-operator
+      - byVerb:
+        - requestCount: 17
+          verb: patch
+        - requestCount: 6
+          verb: watch
+        requestCount: 23
+        userAgent: node/ovnkube@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 17
+          verb: create
+        - requestCount: 4
+          verb: watch
+        requestCount: 21
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 9
+          verb: get
+        - requestCount: 8
+          verb: list
+        requestCount: 17
+        userAgent: insights-operator/v0.0.0
+        username: system:serviceaccount:openshift-insights:gather
+      - byVerb:
+        - requestCount: 2
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 10
+        userAgent: webhook/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus-ac
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: cluster-openshift-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver-operator:openshift-apiserver-operator
+      - byVerb:
+        - requestCount: 3
+          verb: create
+        - requestCount: 3
+          verb: patch
+        requestCount: 6
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:serviceaccount:kube-system:job-controller
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: csi-resizer/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-controller
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: network-metrics/v0.0.0
+        username: system:serviceaccount:openshift-multus:metrics-daemon-sa
+      - byVerb:
+        - requestCount: 3
+          verb: delete
+        - requestCount: 3
+          verb: get
+        requestCount: 6
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:serviceaccount:kube-system:generic-garbage-collector
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-storage:lvms-operator
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: node/ovnkube@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: cluster-policy-controller/v0.0.0
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: openshift-apiserver/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: kube-apiserver/v1.25.4+a34b9e9
+        username: system:apiserver
+      - byVerb:
+        - requestCount: 2
+          verb: watch
+        requestCount: 2
+        userAgent: v2.6.0
+        username: system:serviceaccount:openshift-monitoring:kube-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 2630
+    requestCount: 2630
+  - requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 421
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 513
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 343
+          verb: watch
+        requestCount: 343
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 20
+          verb: delete
+        - requestCount: 158
+          verb: get
+        - requestCount: 116
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 302
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 176
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 71
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 174
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 90
+          verb: get
+        - requestCount: 66
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 164
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 120
+          verb: get
+        - requestCount: 24
+          verb: update
+        requestCount: 144
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 87
+          verb: list
+        requestCount: 87
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 64
+          verb: get
+        - requestCount: 16
+          verb: watch
+        requestCount: 80
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      nodeName: 192.168.1.126
+      requestCount: 2103
+    requestCount: 2103
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 423
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 515
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 339
+          verb: watch
+        requestCount: 339
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 23
+          verb: delete
+        - requestCount: 178
+          verb: get
+        - requestCount: 130
+          verb: patch
+        - requestCount: 8
+          verb: watch
+        requestCount: 339
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 70
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 174
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 69
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 173
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 90
+          verb: get
+        - requestCount: 66
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 164
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 135
+          verb: get
+        - requestCount: 27
+          verb: update
+        requestCount: 162
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 87
+          verb: list
+        requestCount: 87
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 22
+          verb: create
+        - requestCount: 44
+          verb: delete
+        - requestCount: 17
+          verb: watch
+        requestCount: 83
+        userAgent: catalog/v0.0.0
+        username: system:serviceaccount:openshift-operator-lifecycle-manager:olm-operator-serviceaccount
+      nodeName: 192.168.1.126
+      requestCount: 2156
+    requestCount: 2156
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 428
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 520
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 353
+          verb: watch
+        requestCount: 353
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 21
+          verb: delete
+        - requestCount: 161
+          verb: get
+        - requestCount: 120
+          verb: patch
+        - requestCount: 9
+          verb: watch
+        requestCount: 311
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 177
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 95
+          verb: get
+        - requestCount: 70
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 173
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 90
+          verb: get
+        - requestCount: 66
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 164
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 125
+          verb: get
+        - requestCount: 25
+          verb: update
+        requestCount: 150
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 90
+          verb: list
+        requestCount: 90
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 21
+          verb: create
+        - requestCount: 41
+          verb: delete
+        - requestCount: 2
+          verb: get
+        - requestCount: 2
+          verb: patch
+        - requestCount: 17
+          verb: watch
+        requestCount: 83
+        userAgent: catalog/v0.0.0
+        username: system:serviceaccount:openshift-operator-lifecycle-manager:olm-operator-serviceaccount
+      nodeName: 192.168.1.126
+      requestCount: 2141
+    requestCount: 2141
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 428
+          verb: get
+        - requestCount: 84
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 519
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-apiserver-operator:kube-apiserver-operator
+      - byVerb:
+        - requestCount: 339
+          verb: watch
+        requestCount: 339
+        userAgent: Prometheus/2.39.1
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 19
+          verb: delete
+        - requestCount: 149
+          verb: get
+        - requestCount: 111
+          verb: patch
+        - requestCount: 7
+          verb: watch
+        requestCount: 286
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 96
+          verb: get
+        - requestCount: 72
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 177
+        userAgent: cluster-etcd-operator/v0.0.0
+        username: system:serviceaccount:openshift-etcd-operator:etcd-operator
+      - byVerb:
+        - requestCount: 93
+          verb: get
+        - requestCount: 70
+          verb: list
+        - requestCount: 9
+          verb: watch
+        requestCount: 172
+        userAgent: cluster-kube-scheduler-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-scheduler-operator:openshift-kube-scheduler-operator
+      - byVerb:
+        - requestCount: 90
+          verb: get
+        - requestCount: 66
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 163
+        userAgent: cluster-kube-controller-manager-operator/v0.0.0
+        username: system:serviceaccount:openshift-kube-controller-manager-operator:kube-controller-manager-operator
+      - byVerb:
+        - requestCount: 115
+          verb: get
+        - requestCount: 23
+          verb: update
+        requestCount: 138
+        userAgent: multus/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus
+      - byVerb:
+        - requestCount: 120
+          verb: list
+        requestCount: 120
+        userAgent: node/ovndbchecker@28f65637d212
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 90
+          verb: list
+        requestCount: 90
+        userAgent: operator/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 63
+          verb: get
+        - requestCount: 17
+          verb: watch
+        requestCount: 80
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      nodeName: 192.168.1.126
+      requestCount: 2084
+    requestCount: 2084
+  requestCount: 57892

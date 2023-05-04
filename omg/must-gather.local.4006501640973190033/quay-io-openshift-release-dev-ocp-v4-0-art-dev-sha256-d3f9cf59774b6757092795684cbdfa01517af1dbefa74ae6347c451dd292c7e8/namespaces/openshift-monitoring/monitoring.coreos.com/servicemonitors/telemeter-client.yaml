@@ -1,0 +1,49 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  creationTimestamp: "2023-05-02T12:41:50Z"
+  generation: 1
+  labels:
+    k8s-app: telemeter-client
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:jobLabel: {}
+        f:namespaceSelector: {}
+        f:selector: {}
+    manager: operator
+    operation: Update
+    time: "2023-05-02T12:41:50Z"
+  name: telemeter-client
+  namespace: openshift-monitoring
+  resourceVersion: "14610"
+  uid: 7ac23e01-af4d-452a-981e-f2243f42e9db
+spec:
+  endpoints:
+  - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+    bearerTokenSecret:
+      key: ""
+    interval: 1m0s
+    port: https
+    scheme: https
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+      cert: {}
+      certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+      keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+      serverName: telemeter-client.openshift-monitoring.svc
+  jobLabel: k8s-app
+  namespaceSelector: {}
+  selector:
+    matchLabels:
+      k8s-app: telemeter-client

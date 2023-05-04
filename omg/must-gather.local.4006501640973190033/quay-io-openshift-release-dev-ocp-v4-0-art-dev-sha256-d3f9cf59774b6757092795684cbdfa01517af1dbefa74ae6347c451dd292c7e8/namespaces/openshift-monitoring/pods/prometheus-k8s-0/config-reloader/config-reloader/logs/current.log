@@ -1,0 +1,5 @@
+2023-05-04T16:33:04.183434410Z level=info ts=2023-05-04T16:33:04.183356393Z caller=main.go:111 msg="Starting prometheus-config-reloader" version="(version=0.60.1, branch=rhaos-4.12-rhel-8, revision=0b07c0f)"
+2023-05-04T16:33:04.183434410Z level=info ts=2023-05-04T16:33:04.183400546Z caller=main.go:112 build_context="(go=go1.19.4, user=root, date=20230105-01:21:51)"
+2023-05-04T16:33:04.183586084Z level=info ts=2023-05-04T16:33:04.18355732Z caller=main.go:149 msg="Starting web server for metrics" listen=localhost:8080
+2023-05-04T16:33:04.839459951Z level=info ts=2023-05-04T16:33:04.839411239Z caller=reloader.go:374 msg="Reload triggered" cfg_in=/etc/prometheus/config/prometheus.yaml.gz cfg_out=/etc/prometheus/config_out/prometheus.env.yaml watched_dirs=/etc/prometheus/rules/prometheus-k8s-rulefiles-0
+2023-05-04T16:33:04.839493774Z level=info ts=2023-05-04T16:33:04.839478235Z caller=reloader.go:235 msg="started watching config file and directories for changes" cfg=/etc/prometheus/config/prometheus.yaml.gz out=/etc/prometheus/config_out/prometheus.env.yaml dirs=/etc/prometheus/rules/prometheus-k8s-rulefiles-0

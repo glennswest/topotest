@@ -1,0 +1,43 @@
+2023-05-04T16:33:15.024666239Z I0504 16:33:15.018801       1 start.go:63] Version: 4.12.0-202301100735.p0.ga99a63b.assembly.stream-dirty
+2023-05-04T16:33:15.089871352Z I0504 16:33:15.089833       1 leaderelection.go:248] attempting to acquire leader lease openshift-machine-api/machine-api-operator...
+2023-05-04T16:38:11.939289483Z I0504 16:38:11.939050       1 leaderelection.go:258] successfully acquired lease openshift-machine-api/machine-api-operator
+2023-05-04T16:38:11.940578030Z I0504 16:38:11.940547       1 operator.go:164] Starting Machine API Operator
+2023-05-04T16:38:11.940770371Z I0504 16:38:11.940753       1 reflector.go:221] Starting reflector *v1.FeatureGate (18m53.984111181s) from github.com/openshift/client-go/config/informers/externalversions/factory.go:101
+2023-05-04T16:38:11.940793044Z I0504 16:38:11.940785       1 reflector.go:257] Listing and watching *v1.FeatureGate from github.com/openshift/client-go/config/informers/externalversions/factory.go:101
+2023-05-04T16:38:11.940846875Z I0504 16:38:11.940831       1 reflector.go:221] Starting reflector *v1beta1.Machine (18m39.099942605s) from github.com/openshift/client-go/machine/informers/externalversions/factory.go:101
+2023-05-04T16:38:11.940846875Z I0504 16:38:11.940838       1 reflector.go:257] Listing and watching *v1beta1.Machine from github.com/openshift/client-go/machine/informers/externalversions/factory.go:101
+2023-05-04T16:38:11.941046780Z I0504 16:38:11.941034       1 reflector.go:221] Starting reflector *v1.Deployment (10m17.670998513s) from k8s.io/client-go/informers/factory.go:134
+2023-05-04T16:38:11.941070594Z I0504 16:38:11.941064       1 reflector.go:257] Listing and watching *v1.Deployment from k8s.io/client-go/informers/factory.go:134
+2023-05-04T16:38:11.941115238Z I0504 16:38:11.941102       1 reflector.go:221] Starting reflector *v1beta1.MachineSet (18m39.099942605s) from github.com/openshift/client-go/machine/informers/externalversions/factory.go:101
+2023-05-04T16:38:11.941115238Z I0504 16:38:11.941109       1 reflector.go:257] Listing and watching *v1beta1.MachineSet from github.com/openshift/client-go/machine/informers/externalversions/factory.go:101
+2023-05-04T16:38:11.941246364Z I0504 16:38:11.940754       1 reflector.go:221] Starting reflector *v1.Proxy (18m53.984111181s) from github.com/openshift/client-go/config/informers/externalversions/factory.go:101
+2023-05-04T16:38:11.941246364Z I0504 16:38:11.941239       1 reflector.go:257] Listing and watching *v1.Proxy from github.com/openshift/client-go/config/informers/externalversions/factory.go:101
+2023-05-04T16:38:11.941285558Z I0504 16:38:11.941276       1 reflector.go:221] Starting reflector *v1.DaemonSet (10m17.670998513s) from k8s.io/client-go/informers/factory.go:134
+2023-05-04T16:38:11.941302960Z I0504 16:38:11.941297       1 reflector.go:257] Listing and watching *v1.DaemonSet from k8s.io/client-go/informers/factory.go:134
+2023-05-04T16:38:11.942455613Z I0504 16:38:11.941554       1 reflector.go:221] Starting reflector *v1.ValidatingWebhookConfiguration (10m17.670998513s) from k8s.io/client-go/informers/factory.go:134
+2023-05-04T16:38:11.942455613Z I0504 16:38:11.941561       1 reflector.go:257] Listing and watching *v1.ValidatingWebhookConfiguration from k8s.io/client-go/informers/factory.go:134
+2023-05-04T16:38:11.942586117Z I0504 16:38:11.942572       1 reflector.go:221] Starting reflector *v1.MutatingWebhookConfiguration (10m17.670998513s) from k8s.io/client-go/informers/factory.go:134
+2023-05-04T16:38:11.942606616Z I0504 16:38:11.942600       1 reflector.go:257] Listing and watching *v1.MutatingWebhookConfiguration from k8s.io/client-go/informers/factory.go:134
+2023-05-04T16:38:12.040709993Z I0504 16:38:12.040663       1 start.go:112] Synced up machine api informer caches
+2023-05-04T16:38:12.040709993Z I0504 16:38:12.040669       1 operator.go:177] Synced up caches
+2023-05-04T16:38:12.048213850Z I0504 16:38:12.048176       1 status.go:69] Syncing status: re-syncing
+2023-05-04T16:38:12.052088599Z I0504 16:38:12.052056       1 sync.go:68] Provider is NoOp, skipping synchronisation
+2023-05-04T16:38:12.056293347Z I0504 16:38:12.053969       1 status.go:99] Syncing status: available
+2023-05-04T16:57:05.936857775Z I0504 16:57:05.936817       1 status.go:69] Syncing status: re-syncing
+2023-05-04T16:57:05.943124072Z I0504 16:57:05.942645       1 sync.go:68] Provider is NoOp, skipping synchronisation
+2023-05-04T16:57:05.944957842Z I0504 16:57:05.944918       1 status.go:99] Syncing status: available
+2023-05-04T17:15:59.924308890Z I0504 17:15:59.924267       1 status.go:69] Syncing status: re-syncing
+2023-05-04T17:15:59.929032932Z I0504 17:15:59.928996       1 sync.go:68] Provider is NoOp, skipping synchronisation
+2023-05-04T17:15:59.932141434Z I0504 17:15:59.931162       1 status.go:99] Syncing status: available
+2023-05-04T17:34:53.906830374Z I0504 17:34:53.906777       1 status.go:69] Syncing status: re-syncing
+2023-05-04T17:34:53.910931449Z I0504 17:34:53.910887       1 sync.go:68] Provider is NoOp, skipping synchronisation
+2023-05-04T17:34:53.913181100Z I0504 17:34:53.913146       1 status.go:99] Syncing status: available
+2023-05-04T17:53:47.894114314Z I0504 17:53:47.894068       1 status.go:69] Syncing status: re-syncing
+2023-05-04T17:53:47.898375099Z I0504 17:53:47.898333       1 sync.go:68] Provider is NoOp, skipping synchronisation
+2023-05-04T17:53:47.900467344Z I0504 17:53:47.900387       1 status.go:99] Syncing status: available
+2023-05-04T18:12:41.881699752Z I0504 18:12:41.881625       1 status.go:69] Syncing status: re-syncing
+2023-05-04T18:12:41.893034299Z I0504 18:12:41.892595       1 sync.go:68] Provider is NoOp, skipping synchronisation
+2023-05-04T18:12:41.895687957Z I0504 18:12:41.895360       1 status.go:99] Syncing status: available
+2023-05-04T18:31:35.862266893Z I0504 18:31:35.862212       1 status.go:69] Syncing status: re-syncing
+2023-05-04T18:31:35.866852226Z I0504 18:31:35.866795       1 sync.go:68] Provider is NoOp, skipping synchronisation
+2023-05-04T18:31:35.868910608Z I0504 18:31:35.868880       1 status.go:99] Syncing status: available

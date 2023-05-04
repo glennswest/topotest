@@ -1,0 +1,177 @@
+---
+apiVersion: apps/v1
+items:
+- apiVersion: apps/v1
+  kind: ReplicaSet
+  metadata:
+    annotations:
+      deployment.kubernetes.io/desired-replicas: "1"
+      deployment.kubernetes.io/max-replicas: "2"
+      deployment.kubernetes.io/revision: "1"
+      operator.openshift.io/spec-hash: b78822847eafcd5d856d856766d22f7f83756dde9d8b6069e0e87362fdf8c239
+    creationTimestamp: "2023-05-02T12:28:37Z"
+    generation: 1
+    labels:
+      app: migrator
+      pod-template-hash: 5c54d8d69d
+    managedFields:
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:deployment.kubernetes.io/desired-replicas: {}
+            f:deployment.kubernetes.io/max-replicas: {}
+            f:deployment.kubernetes.io/revision: {}
+            f:operator.openshift.io/spec-hash: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"36dd811a-4cfb-422e-83c0-d694377df23f"}: {}
+        f:spec:
+          f:replicas: {}
+          f:selector: {}
+          f:template:
+            f:metadata:
+              f:annotations:
+                .: {}
+                f:target.workload.openshift.io/management: {}
+              f:labels:
+                .: {}
+                f:app: {}
+                f:pod-template-hash: {}
+            f:spec:
+              f:containers:
+                k:{"name":"migrator"}:
+                  .: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:securityContext:
+                    .: {}
+                    f:allowPrivilegeEscalation: {}
+                    f:capabilities:
+                      .: {}
+                      f:drop: {}
+                    f:runAsUser: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+              f:dnsPolicy: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext:
+                .: {}
+                f:runAsNonRoot: {}
+                f:seccompProfile:
+                  .: {}
+                  f:type: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:tolerations: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-02T12:28:37Z"
+    - apiVersion: apps/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:availableReplicas: {}
+          f:fullyLabeledReplicas: {}
+          f:observedGeneration: {}
+          f:readyReplicas: {}
+          f:replicas: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2023-05-04T16:33:12Z"
+    name: migrator-5c54d8d69d
+    namespace: openshift-kube-storage-version-migrator
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Deployment
+      name: migrator
+      uid: 36dd811a-4cfb-422e-83c0-d694377df23f
+    resourceVersion: "631323"
+    uid: 65f42054-eaea-4d92-aec8-4d5552950cb6
+  spec:
+    replicas: 1
+    selector:
+      matchLabels:
+        app: migrator
+        pod-template-hash: 5c54d8d69d
+    template:
+      metadata:
+        annotations:
+          target.workload.openshift.io/management: '{"effect": "PreferredDuringScheduling"}'
+        creationTimestamp: null
+        labels:
+          app: migrator
+          pod-template-hash: 5c54d8d69d
+      spec:
+        containers:
+        - command:
+          - migrator
+          - --alsologtostderr
+          - --v=2
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e36c1c4e383fd252168aa2cb465236aa642062446aa3a026f06ea4a4afb52d7f
+          imagePullPolicy: IfNotPresent
+          name: migrator
+          resources:
+            requests:
+              cpu: 10m
+              memory: 200Mi
+          securityContext:
+            allowPrivilegeEscalation: false
+            capabilities:
+              drop:
+              - ALL
+            runAsUser: 1001
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: FallbackToLogsOnError
+        dnsPolicy: ClusterFirst
+        priorityClassName: system-cluster-critical
+        restartPolicy: Always
+        schedulerName: default-scheduler
+        securityContext:
+          runAsNonRoot: true
+          seccompProfile:
+            type: RuntimeDefault
+        serviceAccount: kube-storage-version-migrator-sa
+        serviceAccountName: kube-storage-version-migrator-sa
+        terminationGracePeriodSeconds: 30
+        tolerations:
+        - effect: NoSchedule
+          key: node-role.kubernetes.io/master
+          operator: Exists
+        - effect: NoExecute
+          key: node.kubernetes.io/unreachable
+          operator: Exists
+          tolerationSeconds: 120
+        - effect: NoExecute
+          key: node.kubernetes.io/not-ready
+          operator: Exists
+          tolerationSeconds: 120
+  status:
+    availableReplicas: 1
+    fullyLabeledReplicas: 1
+    observedGeneration: 1
+    readyReplicas: 1
+    replicas: 1
+kind: ReplicaSetList
+metadata:
+  resourceVersion: "684689"

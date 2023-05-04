@@ -1,0 +1,58 @@
+---
+apiVersion: machineconfiguration.openshift.io/v1
+kind: MachineConfig
+metadata:
+  annotations:
+    machineconfiguration.openshift.io/generated-by-controller-version: e3dc9430ac753ac0440f55910370da22c65637f1
+  creationTimestamp: "2023-05-02T12:35:16Z"
+  generation: 1
+  labels:
+    machineconfiguration.openshift.io/role: master
+  managedFields:
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machineconfiguration.openshift.io/generated-by-controller-version: {}
+        f:labels:
+          .: {}
+          f:machineconfiguration.openshift.io/role: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"36034c56-ad85-4115-a865-1a00e02791b0"}: {}
+      f:spec:
+        .: {}
+        f:baseOSExtensionsContainerImage: {}
+        f:config:
+          .: {}
+          f:ignition:
+            .: {}
+            f:version: {}
+        f:extensions: {}
+        f:fips: {}
+        f:kernelArguments: {}
+        f:kernelType: {}
+        f:osImageURL: {}
+    manager: machine-config-controller
+    operation: Update
+    time: "2023-05-02T12:35:16Z"
+  name: 99-master-generated-registries
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: Image
+    name: cluster
+    uid: 36034c56-ad85-4115-a865-1a00e02791b0
+  resourceVersion: "6868"
+  uid: 3e0da2eb-7573-4699-89b7-d66ea0b5fcc3
+spec:
+  baseOSExtensionsContainerImage: ""
+  config:
+    ignition:
+      version: 3.2.0
+  extensions: null
+  fips: false
+  kernelArguments: null
+  kernelType: ""
+  osImageURL: ""

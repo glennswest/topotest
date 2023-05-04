@@ -1,0 +1,36 @@
+---
+apiVersion: config.openshift.io/v1
+items:
+- apiVersion: config.openshift.io/v1
+  kind: DNS
+  metadata:
+    creationTimestamp: "2023-05-02T12:17:48Z"
+    generation: 1
+    managedFields:
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:spec:
+          .: {}
+          f:baseDomain: {}
+      manager: cluster-bootstrap
+      operation: Update
+      time: "2023-05-02T12:17:48Z"
+    - apiVersion: config.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status: {}
+      manager: cluster-bootstrap
+      operation: Update
+      subresource: status
+      time: "2023-05-02T12:17:48Z"
+    name: cluster
+    resourceVersion: "491"
+    uid: 2cb45e47-4770-4f90-963d-e70d2d69084a
+  spec:
+    baseDomain: sno.gw.lo
+  status: {}
+kind: DNSList
+metadata:
+  continue: ""
+  resourceVersion: "684578"

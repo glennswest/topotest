@@ -1,0 +1,74 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    openshift.io/image.dockerRepositoryCheck: "2023-05-02T12:42:05Z"
+  creationTimestamp: "2023-05-02T12:42:04Z"
+  generation: 2
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+              f:scheduled: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:42:04Z"
+  name: tools
+  namespace: openshift
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "14934"
+  uid: 7a938495-2586-4c0c-a4b1-0f1964862127
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9e5930a75f895b97e39cc1f58f5c5eb014ba14bcc45d8b06fe3ca719ef35b92f
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+      scheduled: true
+    name: latest
+    referencePolicy:
+      type: Source
+status:
+  dockerImageRepository: ""
+  tags:
+  - items:
+    - created: "2023-05-02T12:42:05Z"
+      dockerImageReference: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9e5930a75f895b97e39cc1f58f5c5eb014ba14bcc45d8b06fe3ca719ef35b92f
+      generation: 2
+      image: sha256:9e5930a75f895b97e39cc1f58f5c5eb014ba14bcc45d8b06fe3ca719ef35b92f
+    tag: latest

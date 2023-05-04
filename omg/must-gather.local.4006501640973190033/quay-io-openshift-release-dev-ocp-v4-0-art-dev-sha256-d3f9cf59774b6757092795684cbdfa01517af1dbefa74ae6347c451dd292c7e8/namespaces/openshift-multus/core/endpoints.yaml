@@ -1,0 +1,86 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    creationTimestamp: "2023-05-02T12:26:05Z"
+    labels:
+      app: multus-admission-controller
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:36:01Z"
+    name: multus-admission-controller
+    namespace: openshift-multus
+    resourceVersion: "633106"
+    uid: f822d8ab-8625-42d9-92bc-6ab940606351
+  subsets:
+  - addresses:
+    - ip: 10.128.0.41
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: multus-admission-controller-65b957fdcb-cc6cn
+        namespace: openshift-multus
+        uid: a93ab16f-209d-4e96-a5a5-bf2ba8b8e77d
+    ports:
+    - name: metrics
+      port: 8443
+      protocol: TCP
+    - name: webhook
+      port: 6443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:32:23Z"
+    creationTimestamp: "2023-05-02T12:26:05Z"
+    labels:
+      service: network-metrics-service
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:service: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:32:23Z"
+    name: network-metrics-service
+    namespace: openshift-multus
+    resourceVersion: "630856"
+    uid: 8c39a2c5-ef7e-4b87-89d1-5c007f3e2e00
+  subsets:
+  - addresses:
+    - ip: 10.128.0.3
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: network-metrics-daemon-sszvp
+        namespace: openshift-multus
+        uid: bac24414-6747-412a-b382-85eb356383ef
+    ports:
+    - name: metrics
+      port: 8443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "684663"

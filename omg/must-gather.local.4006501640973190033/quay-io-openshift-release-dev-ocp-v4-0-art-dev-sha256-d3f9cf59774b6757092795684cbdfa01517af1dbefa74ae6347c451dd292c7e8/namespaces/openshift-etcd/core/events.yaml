@@ -1,0 +1,1025 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:28:54Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{setup}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:28:54Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2d1371d52c5233f6daf04aa0b0c12f29799155c15b49031bd9581d78529742b2"
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:33Z"
+    name: etcd-node.175bfd9ca3bba357
+    namespace: openshift-etcd
+    resourceVersion: "628919"
+    uid: 59dad498-cbc5-4d2d-b905-ac2a3ddc2071
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:03Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{setup}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:03Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2d1371d52c5233f6daf04aa0b0c12f29799155c15b49031bd9581d78529742b2"
+    in 8.28187271s
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:34Z"
+    name: etcd-node.175bfd9e915f3892
+    namespace: openshift-etcd
+    resourceVersion: "628923"
+    uid: 1d373ee9-7ac3-4617-823c-90c5949140c3
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:03Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{setup}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:03Z"
+  message: Created container setup
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:34Z"
+    name: etcd-node.175bfd9e998903c9
+    namespace: openshift-etcd
+    resourceVersion: "628924"
+    uid: 342528de-c135-488d-af33-7fbf71968830
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:03Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{setup}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:03Z"
+  message: Started container setup
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:34Z"
+    name: etcd-node.175bfd9e9bb004a7
+    namespace: openshift-etcd
+    resourceVersion: "628925"
+    uid: 7eea90f1-437e-4092-971a-ae245b6fc893
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:03Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{etcd-ensure-env-vars}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:03Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2d1371d52c5233f6daf04aa0b0c12f29799155c15b49031bd9581d78529742b2"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:34Z"
+    name: etcd-node.175bfd9ea7cb27ae
+    namespace: openshift-etcd
+    resourceVersion: "628926"
+    uid: d7a1f155-7f21-420e-a90e-d40ebf6bc333
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{etcd-ensure-env-vars}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:06Z"
+  message: Created container etcd-ensure-env-vars
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:34Z"
+    name: etcd-node.175bfd9f3cf42848
+    namespace: openshift-etcd
+    resourceVersion: "628927"
+    uid: 21f9e593-b21b-4951-aa08-958ad6554e46
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{etcd-ensure-env-vars}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:06Z"
+  message: Started container etcd-ensure-env-vars
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:35Z"
+    name: etcd-node.175bfd9f404a20f7
+    namespace: openshift-etcd
+    resourceVersion: "628928"
+    uid: 522308bb-d9f0-4267-a703-c8b0e3f00f07
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{etcd-resources-copy}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:07Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2d1371d52c5233f6daf04aa0b0c12f29799155c15b49031bd9581d78529742b2"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:35Z"
+    name: etcd-node.175bfd9f76aa9bbd
+    namespace: openshift-etcd
+    resourceVersion: "628930"
+    uid: 556405cf-dfcd-4be7-9257-148663ed9f2d
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{etcd-resources-copy}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:07Z"
+  message: Created container etcd-resources-copy
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:36Z"
+    name: etcd-node.175bfd9f9b94ad88
+    namespace: openshift-etcd
+    resourceVersion: "628933"
+    uid: f0eeb948-9536-4d29-aaaf-4cf3a53622b5
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{etcd-resources-copy}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:07Z"
+  message: Started container etcd-resources-copy
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:36Z"
+    name: etcd-node.175bfd9f9e650dac
+    namespace: openshift-etcd
+    resourceVersion: "628935"
+    uid: 3abe1d99-260c-4934-b321-546f2c07d5ee
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcdctl}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:08Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2d1371d52c5233f6daf04aa0b0c12f29799155c15b49031bd9581d78529742b2"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:37Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:37Z"
+    name: etcd-node.175bfd9fd27f611e
+    namespace: openshift-etcd
+    resourceVersion: "628944"
+    uid: 33dfc9de-fe8d-439a-a386-45ad6c9a79c3
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcdctl}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:08Z"
+  message: Created container etcdctl
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:39Z"
+    name: etcd-node.175bfd9fdd017ada
+    namespace: openshift-etcd
+    resourceVersion: "628953"
+    uid: 5d6c3f9d-547c-49a2-b2cf-ae529af3e390
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcdctl}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:08Z"
+  message: Started container etcdctl
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:39Z"
+    name: etcd-node.175bfd9fde20b302
+    namespace: openshift-etcd
+    resourceVersion: "628956"
+    uid: fe976ee1-1745-420d-b264-c18549a8bdaa
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:08Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2d1371d52c5233f6daf04aa0b0c12f29799155c15b49031bd9581d78529742b2"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:40Z"
+    name: etcd-node.175bfd9fde369014
+    namespace: openshift-etcd
+    resourceVersion: "628957"
+    uid: fdd36a41-367b-46d1-a357-62aa353382b6
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:08Z"
+  message: Created container etcd
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:40Z"
+    name: etcd-node.175bfd9fe6dabb74
+    namespace: openshift-etcd
+    resourceVersion: "628958"
+    uid: a856cbd1-ec1c-4670-95c7-a351c8194dfa
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:08Z"
+  message: Started container etcd
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:40Z"
+    name: etcd-node.175bfd9fe7b52b8e
+    namespace: openshift-etcd
+    resourceVersion: "628959"
+    uid: 565b743c-705b-43b5-b9cb-bad9a3fe1a73
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd-metrics}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:08Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:2d1371d52c5233f6daf04aa0b0c12f29799155c15b49031bd9581d78529742b2"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:40Z"
+    name: etcd-node.175bfd9fe7caf0f2
+    namespace: openshift-etcd
+    resourceVersion: "628961"
+    uid: ef020c45-2ca7-4412-8304-52bbcce0003e
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd-metrics}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:09Z"
+  message: Created container etcd-metrics
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:40Z"
+    name: etcd-node.175bfd9fefb82e23
+    namespace: openshift-etcd
+    resourceVersion: "628962"
+    uid: 3e270192-10a5-4396-b796-2ade74789dfa
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd-metrics}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:09Z"
+  message: Started container etcd-metrics
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:41Z"
+    name: etcd-node.175bfd9ff1117333
+    namespace: openshift-etcd
+    resourceVersion: "628963"
+    uid: 81cf6bf4-d922-4ffb-90bb-860c908059be
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:09Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd-readyz}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:09Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8090f9dd771f4f292e508b5ffca3aca3b4e6226aed25e131e49a9b6596b0b451"
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:41Z"
+    name: etcd-node.175bfd9ff119458e
+    namespace: openshift-etcd
+    resourceVersion: "628964"
+    uid: fa1fc22f-4d8b-42d1-85e7-9131e8cec6ab
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:15Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd-readyz}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:15Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:8090f9dd771f4f292e508b5ffca3aca3b4e6226aed25e131e49a9b6596b0b451"
+    in 6.354906368s
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:43Z"
+    name: etcd-node.175bfda16be19e1c
+    namespace: openshift-etcd
+    resourceVersion: "628982"
+    uid: 3dede1ab-3785-4fd9-8ce6-15cae8178edf
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:15Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd-readyz}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:15Z"
+  message: Created container etcd-readyz
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:43Z"
+    name: etcd-node.175bfda172fddfeb
+    namespace: openshift-etcd
+    resourceVersion: "628985"
+    uid: e853b132-f477-4823-b496-68165ca6cc63
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:15Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{etcd-readyz}
+    kind: Pod
+    name: etcd-node
+    namespace: openshift-etcd
+    uid: 0fe76030a9ef0a9d068429fa0d56667f
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:15Z"
+  message: Started container etcd-readyz
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:44Z"
+    name: etcd-node.175bfda174050c6a
+    namespace: openshift-etcd
+    resourceVersion: "628987"
+    uid: 4ef7f724-cfda-4e31-8a2a-7fa30af82d53
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "684629"

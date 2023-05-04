@@ -1,0 +1,883 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf
+    namespace: openshift-apiserver-operator
+    resourceVersion: "5497"
+    uid: 5c11dcab-5f8c-4c61-89ba-53345fe1606d
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:05Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_openshift-apiserver-operator-5c6c84d584-b4vpf_openshift-apiserver-operator_5c11dcab-5f8c-4c61-89ba-53345fe1606d_0(68adad42c4a7c9d01860e028f5986a1173adebadf82d352602c854e7bfe23f12):
+    error adding pod openshift-apiserver-operator_openshift-apiserver-operator-5c6c84d584-b4vpf
+    to CNI network "multus-cni-network": plugin type="multus" name="multus-cni-network"
+    failed (add): Multus: [openshift-apiserver-operator/openshift-apiserver-operator-5c6c84d584-b4vpf/5c11dcab-5f8c-4c61-89ba-53345fe1606d]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:16Z"
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf.175bfdbafecd9ed4
+    namespace: openshift-apiserver-operator
+    resourceVersion: "631414"
+    uid: c50ed22f-052d-4317-ac2d-64c3bc9f5046
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:26Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf
+    namespace: openshift-apiserver-operator
+    resourceVersion: "629028"
+    uid: 5c11dcab-5f8c-4c61-89ba-53345fe1606d
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:26Z"
+  message: Add eth0 [10.128.0.21/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:26Z"
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf.175bfdbfe23a6b32
+    namespace: openshift-apiserver-operator
+    resourceVersion: "630251"
+    uid: 85a7d598-673b-4578-a01d-e9d2c5da41b9
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver-operator}
+    kind: Pod
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf
+    namespace: openshift-apiserver-operator
+    resourceVersion: "5497"
+    uid: 5c11dcab-5f8c-4c61-89ba-53345fe1606d
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:41Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:87666cc451e16c135276f6405cd7d0c2ce76fd5f19f02a9654c23bb9651c54b3"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:13Z"
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf.175bfdc0471234fe
+    namespace: openshift-apiserver-operator
+    resourceVersion: "632150"
+    uid: 74fa83e5-120f-45c1-b040-45fbf6c39e50
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver-operator}
+    kind: Pod
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf
+    namespace: openshift-apiserver-operator
+    resourceVersion: "5497"
+    uid: 5c11dcab-5f8c-4c61-89ba-53345fe1606d
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:28Z"
+  message: 'Failed to pull image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:87666cc451e16c135276f6405cd7d0c2ce76fd5f19f02a9654c23bb9651c54b3":
+    pull QPS exceeded'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:43Z"
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf.175bfdc047127356
+    namespace: openshift-apiserver-operator
+    resourceVersion: "631883"
+    uid: 96f0851b-0ed6-489c-8cd3-19d1f94cda1d
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver-operator}
+    kind: Pod
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf
+    namespace: openshift-apiserver-operator
+    resourceVersion: "5497"
+    uid: 5c11dcab-5f8c-4c61-89ba-53345fe1606d
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:28Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:44Z"
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf.175bfdc04712e88c
+    namespace: openshift-apiserver-operator
+    resourceVersion: "631884"
+    uid: 5dd05748-ee3f-4d88-a39f-ce0a97223321
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver-operator}
+    kind: Pod
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf
+    namespace: openshift-apiserver-operator
+    resourceVersion: "5497"
+    uid: 5c11dcab-5f8c-4c61-89ba-53345fe1606d
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:28Z"
+  message: Back-off pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:87666cc451e16c135276f6405cd7d0c2ce76fd5f19f02a9654c23bb9651c54b3"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:53Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:53Z"
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf.175bfdc07cf14afd
+    namespace: openshift-apiserver-operator
+    resourceVersion: "631977"
+    uid: d433e465-2f55-40ad-8309-cd65c66edce1
+  reason: BackOff
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver-operator}
+    kind: Pod
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf
+    namespace: openshift-apiserver-operator
+    resourceVersion: "5497"
+    uid: 5c11dcab-5f8c-4c61-89ba-53345fe1606d
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:28Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:54Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:54Z"
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf.175bfdc07cf18bc3
+    namespace: openshift-apiserver-operator
+    resourceVersion: "631980"
+    uid: 872737b7-aad7-4636-90f7-2dcd441bdba3
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:35Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver-operator}
+    kind: Pod
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf
+    namespace: openshift-apiserver-operator
+    resourceVersion: "5497"
+    uid: 5c11dcab-5f8c-4c61-89ba-53345fe1606d
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:35Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:87666cc451e16c135276f6405cd7d0c2ce76fd5f19f02a9654c23bb9651c54b3"
+    in 53.786677838s
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:52Z"
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf.175bfdcff6a3a6ef
+    namespace: openshift-apiserver-operator
+    resourceVersion: "632483"
+    uid: 0b2e1ce0-2e58-44b1-863f-9fce7e351c68
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver-operator}
+    kind: Pod
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf
+    namespace: openshift-apiserver-operator
+    resourceVersion: "5497"
+    uid: 5c11dcab-5f8c-4c61-89ba-53345fe1606d
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:10Z"
+  message: Created container openshift-apiserver-operator
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:07Z"
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf.175bfdd83a036e33
+    namespace: openshift-apiserver-operator
+    resourceVersion: "632618"
+    uid: e9667a53-89a0-4d46-aee6-f0d9cb5f3c86
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver-operator}
+    kind: Pod
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf
+    namespace: openshift-apiserver-operator
+    resourceVersion: "5497"
+    uid: 5c11dcab-5f8c-4c61-89ba-53345fe1606d
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:10Z"
+  message: Started container openshift-apiserver-operator
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:07Z"
+    name: openshift-apiserver-operator-5c6c84d584-b4vpf.175bfdd83ee59ff8
+    namespace: openshift-apiserver-operator
+    resourceVersion: "632621"
+    uid: b00c9fd7-637c-4294-8c78-e474167a6cb2
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:38:23Z"
+  involvedObject:
+    apiVersion: v1
+    kind: ConfigMap
+    name: openshift-apiserver-operator-lock
+    namespace: openshift-apiserver-operator
+    resourceVersion: "634585"
+    uid: b7615353-cca4-4cdf-86df-d403a6f56117
+  kind: Event
+  lastTimestamp: "2023-05-04T16:38:23Z"
+  message: openshift-apiserver-operator-5c6c84d584-b4vpf_ce41e0ab-71e6-42f9-8e1b-c6f473a38668
+    became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:38:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-openshift-apiserver-operator
+      operation: Update
+      time: "2023-05-04T16:38:23Z"
+    name: openshift-apiserver-operator-lock.175bfe20f5f9c1bb
+    namespace: openshift-apiserver-operator
+    resourceVersion: "634587"
+    uid: ecf2f30f-9a81-462a-8585-5c133a340e75
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-apiserver-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:38:23Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: openshift-apiserver-operator-lock
+    namespace: openshift-apiserver-operator
+    resourceVersion: "634586"
+    uid: 1c8a7aaf-d0a1-4128-bc4e-3c13fcde30ba
+  kind: Event
+  lastTimestamp: "2023-05-04T16:38:23Z"
+  message: openshift-apiserver-operator-5c6c84d584-b4vpf_ce41e0ab-71e6-42f9-8e1b-c6f473a38668
+    became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:38:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-openshift-apiserver-operator
+      operation: Update
+      time: "2023-05-04T16:38:23Z"
+    name: openshift-apiserver-operator-lock.175bfe20f5f9eabf
+    namespace: openshift-apiserver-operator
+    resourceVersion: "634588"
+    uid: 6505aa70-e553-4d2e-b10b-2d6fe166e961
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-apiserver-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:38:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-apiserver-operator
+    namespace: openshift-apiserver-operator
+    uid: aef6ce0a-b448-4163-a6dc-80272a797022
+  kind: Event
+  lastTimestamp: "2023-05-04T16:38:23Z"
+  message: Controller "APIServiceController_openshift-apiserver" resync interval is
+    set to 10s which might lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:38:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-openshift-apiserver-operator
+      operation: Update
+      time: "2023-05-04T16:38:23Z"
+    name: openshift-apiserver-operator.175bfe20f66c0e68
+    namespace: openshift-apiserver-operator
+    resourceVersion: "634591"
+    uid: acd5fc35-9cca-4ff4-b176-da1eb1d98a2b
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-apiserver-operator-apiservice-openshift-apiserver-controller-apiservicecontroller_openshift-apiserver
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:38:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-apiserver-operator
+    namespace: openshift-apiserver-operator
+    uid: aef6ce0a-b448-4163-a6dc-80272a797022
+  kind: Event
+  lastTimestamp: "2023-05-04T16:38:23Z"
+  message: Controller "OpenShiftAPIServerWorkloadController" resync interval is set
+    to 0s which might lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:38:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-openshift-apiserver-operator
+      operation: Update
+      time: "2023-05-04T16:38:23Z"
+    name: openshift-apiserver-operator.175bfe20f66fcc42
+    namespace: openshift-apiserver-operator
+    resourceVersion: "634590"
+    uid: a5134e3f-3ba1-4878-9fa7-85a475563155
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-apiserver-operator-openshiftapiserverworkloadcontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:38:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-apiserver-operator
+    namespace: openshift-apiserver-operator
+    uid: aef6ce0a-b448-4163-a6dc-80272a797022
+  kind: Event
+  lastTimestamp: "2023-05-04T16:38:23Z"
+  message: Controller "RevisionController" resync interval is set to 0s which might
+    lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:38:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-openshift-apiserver-operator
+      operation: Update
+      time: "2023-05-04T16:38:23Z"
+    name: openshift-apiserver-operator.175bfe20f69f3209
+    namespace: openshift-apiserver-operator
+    resourceVersion: "634593"
+    uid: 584e819f-8b16-456c-a515-d3cf7b31f792
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-apiserver-operator-revisioncontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:38:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-apiserver-operator
+    namespace: openshift-apiserver-operator
+    uid: aef6ce0a-b448-4163-a6dc-80272a797022
+  kind: Event
+  lastTimestamp: "2023-05-04T16:38:23Z"
+  message: Controller "SecretRevisionPruneController" resync interval is set to 0s
+    which might lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:38:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-openshift-apiserver-operator
+      operation: Update
+      time: "2023-05-04T16:38:23Z"
+    name: openshift-apiserver-operator.175bfe20f6a0795e
+    namespace: openshift-apiserver-operator
+    resourceVersion: "634592"
+    uid: f1feb5eb-40f2-4318-800c-d5c994aa3868
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-apiserver-operator-secret-revision-prune-controller-secretrevisionprunecontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:38:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-apiserver-operator
+    namespace: openshift-apiserver-operator
+    uid: aef6ce0a-b448-4163-a6dc-80272a797022
+  kind: Event
+  lastTimestamp: "2023-05-04T16:38:23Z"
+  message: Controller "auditPolicyController" resync interval is set to 10s which
+    might lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:38:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-openshift-apiserver-operator
+      operation: Update
+      time: "2023-05-04T16:38:23Z"
+    name: openshift-apiserver-operator.175bfe20f6a1952e
+    namespace: openshift-apiserver-operator
+    resourceVersion: "634595"
+    uid: e2261fd5-d3e6-4007-84ec-0f107016852f
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-apiserver-operator-audit-policy-controller-auditpolicycontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:38:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-apiserver-operator
+    namespace: openshift-apiserver-operator
+    uid: aef6ce0a-b448-4163-a6dc-80272a797022
+  kind: Event
+  lastTimestamp: "2023-05-04T16:38:23Z"
+  message: Controller "UnsupportedConfigOverridesController" resync interval is set
+    to 0s which might lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:38:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-openshift-apiserver-operator
+      operation: Update
+      time: "2023-05-04T16:38:23Z"
+    name: openshift-apiserver-operator.175bfe20f6a36b02
+    namespace: openshift-apiserver-operator
+    resourceVersion: "634596"
+    uid: 8ea91c39-6c02-45ce-b869-874a28d37050
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-apiserver-operator-unsupportedconfigoverridescontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:38:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-apiserver-operator
+    namespace: openshift-apiserver-operator
+    uid: aef6ce0a-b448-4163-a6dc-80272a797022
+  kind: Event
+  lastTimestamp: "2023-05-04T16:38:23Z"
+  message: Controller "LoggingSyncer" resync interval is set to 0s which might lead
+    to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:38:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-openshift-apiserver-operator
+      operation: Update
+      time: "2023-05-04T16:38:23Z"
+    name: openshift-apiserver-operator.175bfe20f6a434f3
+    namespace: openshift-apiserver-operator
+    resourceVersion: "634594"
+    uid: feb84608-0738-46dc-9981-f27411b39341
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-apiserver-operator-loggingsyncer
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:38:23Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-apiserver-operator
+    namespace: openshift-apiserver-operator
+    uid: aef6ce0a-b448-4163-a6dc-80272a797022
+  kind: Event
+  lastTimestamp: "2023-05-04T16:38:23Z"
+  message: Controller "ConnectivityCheckController" resync interval is set to 0s which
+    might lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:38:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-openshift-apiserver-operator
+      operation: Update
+      time: "2023-05-04T16:38:23Z"
+    name: openshift-apiserver-operator.175bfe20f73abecb
+    namespace: openshift-apiserver-operator
+    resourceVersion: "634597"
+    uid: ba1e0e20-3f5a-40f7-8d34-d8261b2d1201
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-apiserver-operator-connectivity-check-controller-connectivitycheckcontroller
+  type: Warning
+kind: EventList
+metadata:
+  resourceVersion: "684738"

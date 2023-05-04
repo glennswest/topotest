@@ -1,0 +1,370 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:06Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-canary-bh4jc
+    namespace: openshift-ingress-canary
+    resourceVersion: "7448"
+    uid: 055a9032-1504-440b-b2e1-2314989db97e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:06Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_ingress-canary-bh4jc_openshift-ingress-canary_055a9032-1504-440b-b2e1-2314989db97e_0(c4ac1dd62b8e0038b7fb1ee1e59fbb7c0511b9219115d13a1e0cb25c8f1643f9):
+    error adding pod openshift-ingress-canary_ingress-canary-bh4jc to CNI network
+    "multus-cni-network": plugin type="multus" name="multus-cni-network" failed (add):
+    Multus: [openshift-ingress-canary/ingress-canary-bh4jc/055a9032-1504-440b-b2e1-2314989db97e]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:28Z"
+    name: ingress-canary-bh4jc.175bfdbb2bdba5c9
+    namespace: openshift-ingress-canary
+    resourceVersion: "631648"
+    uid: 55f69eec-7558-4b0b-95b7-069bd3a47c60
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:26Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-canary-bh4jc
+    namespace: openshift-ingress-canary
+    resourceVersion: "629267"
+    uid: 055a9032-1504-440b-b2e1-2314989db97e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:26Z"
+  message: Add eth0 [10.128.0.42/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:26Z"
+    name: ingress-canary-bh4jc.175bfdc006fe8946
+    namespace: openshift-ingress-canary
+    resourceVersion: "630257"
+    uid: 5ed9ba3d-fa80-4326-8a87-df1165fd345c
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{serve-healthcheck-canary}
+    kind: Pod
+    name: ingress-canary-bh4jc
+    namespace: openshift-ingress-canary
+    resourceVersion: "7448"
+    uid: 055a9032-1504-440b-b2e1-2314989db97e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:40Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6275a171f6d5a523627963860415ed0e43f1728f2dd897c49412600bf64bc9c3"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:13Z"
+    name: ingress-canary-bh4jc.175bfdc04e8a999b
+    namespace: openshift-ingress-canary
+    resourceVersion: "632147"
+    uid: 08c8c7a7-fd5f-4d98-8b71-ccf47a43ce43
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{serve-healthcheck-canary}
+    kind: Pod
+    name: ingress-canary-bh4jc
+    namespace: openshift-ingress-canary
+    resourceVersion: "7448"
+    uid: 055a9032-1504-440b-b2e1-2314989db97e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:28Z"
+  message: 'Failed to pull image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6275a171f6d5a523627963860415ed0e43f1728f2dd897c49412600bf64bc9c3":
+    pull QPS exceeded'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:47Z"
+    name: ingress-canary-bh4jc.175bfdc04e8aca4b
+    namespace: openshift-ingress-canary
+    resourceVersion: "631918"
+    uid: e8189fa7-4780-4ea0-b55e-6cf789b3f764
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{serve-healthcheck-canary}
+    kind: Pod
+    name: ingress-canary-bh4jc
+    namespace: openshift-ingress-canary
+    resourceVersion: "7448"
+    uid: 055a9032-1504-440b-b2e1-2314989db97e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:28Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:47Z"
+    name: ingress-canary-bh4jc.175bfdc04e8b03a0
+    namespace: openshift-ingress-canary
+    resourceVersion: "631922"
+    uid: d84c9890-9fa3-4f32-a629-c4395942424e
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{serve-healthcheck-canary}
+    kind: Pod
+    name: ingress-canary-bh4jc
+    namespace: openshift-ingress-canary
+    resourceVersion: "7448"
+    uid: 055a9032-1504-440b-b2e1-2314989db97e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:29Z"
+  message: Back-off pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6275a171f6d5a523627963860415ed0e43f1728f2dd897c49412600bf64bc9c3"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:55Z"
+    name: ingress-canary-bh4jc.175bfdc082860caa
+    namespace: openshift-ingress-canary
+    resourceVersion: "632000"
+    uid: 42bfd48b-0540-4337-b37f-ec496024737e
+  reason: BackOff
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{serve-healthcheck-canary}
+    kind: Pod
+    name: ingress-canary-bh4jc
+    namespace: openshift-ingress-canary
+    resourceVersion: "7448"
+    uid: 055a9032-1504-440b-b2e1-2314989db97e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:29Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:56Z"
+    name: ingress-canary-bh4jc.175bfdc0828632b4
+    namespace: openshift-ingress-canary
+    resourceVersion: "632001"
+    uid: ab2af3ad-c65b-43ea-8845-72e7ad60b702
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:07Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{serve-healthcheck-canary}
+    kind: Pod
+    name: ingress-canary-bh4jc
+    namespace: openshift-ingress-canary
+    resourceVersion: "7448"
+    uid: 055a9032-1504-440b-b2e1-2314989db97e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:07Z"
+  message: Started container serve-healthcheck-canary
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:38Z"
+    name: ingress-canary-bh4jc.175bfdc992da006f
+    namespace: openshift-ingress-canary
+    resourceVersion: "632373"
+    uid: 95d3e843-f4bd-407a-a9aa-38dee38f42ab
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "684637"

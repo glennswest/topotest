@@ -1,0 +1,38 @@
+---
+allowVolumeExpansion: true
+apiVersion: storage.k8s.io/v1
+kind: StorageClass
+metadata:
+  annotations:
+    description: Provides RWO and RWOP Filesystem & Block volumes
+    storageclass.kubernetes.io/is-default-class: "true"
+  creationTimestamp: "2023-05-04T14:46:25Z"
+  managedFields:
+  - apiVersion: storage.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:allowVolumeExpansion: {}
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:description: {}
+          f:storageclass.kubernetes.io/is-default-class: {}
+      f:parameters:
+        .: {}
+        f:csi.storage.k8s.io/fstype: {}
+        f:topolvm.io/device-class: {}
+      f:provisioner: {}
+      f:reclaimPolicy: {}
+      f:volumeBindingMode: {}
+    manager: manager
+    operation: Update
+    time: "2023-05-04T14:46:25Z"
+  name: lvms-vg1
+  resourceVersion: "601706"
+  uid: dbc08332-0f75-45b4-aaa7-43bb862537c9
+parameters:
+  csi.storage.k8s.io/fstype: xfs
+  topolvm.io/device-class: vg1
+provisioner: topolvm.io
+reclaimPolicy: Delete
+volumeBindingMode: WaitForFirstConsumer

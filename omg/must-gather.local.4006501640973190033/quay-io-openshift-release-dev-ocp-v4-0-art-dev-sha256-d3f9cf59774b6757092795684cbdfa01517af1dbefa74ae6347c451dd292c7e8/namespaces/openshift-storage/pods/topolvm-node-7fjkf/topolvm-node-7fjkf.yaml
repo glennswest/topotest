@@ -1,0 +1,687 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.1.217/23"],"mac_address":"0a:58:0a:80:01:d9","gateway_ips":["10.128.0.1"],"ip_address":"10.128.1.217/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.1.217"
+          ],
+          "mac": "0a:58:0a:80:01:d9",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.1.217"
+          ],
+          "mac": "0a:58:0a:80:01:d9",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: lvms-topolvm-node
+  creationTimestamp: "2023-05-04T14:46:25Z"
+  generateName: topolvm-node-
+  labels:
+    app.kubernetes.io/component: topolvm-node
+    app.kubernetes.io/managed-by: lvms-operator
+    app.kubernetes.io/name: topolvm-csi-driver
+    app.kubernetes.io/part-of: lvms-provisioner
+    controller-revision-hash: 6b965784cf
+    pod-template-generation: "1"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:controller-revision-hash: {}
+          f:pod-template-generation: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"911fce66-767c-40c3-8bed-1f853cca3056"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"csi-registrar"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:lifecycle:
+              .: {}
+              f:preStop:
+                .: {}
+                f:exec:
+                  .: {}
+                  f:command: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/registration"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/run/topolvm"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"liveness-probe"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/run/topolvm"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"lvmd"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+              f:runAsUser: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/topolvm"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/run/lvmd"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"topolvm-node"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"NODE_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9808,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+              f:runAsUser: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/run/lvmd"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/run/topolvm"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet/plugins/kubernetes.io/csi"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/var/lib/kubelet/pods"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostPID: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"file-checker"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/topolvm"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"csi-plugin-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"lvmd-config-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"lvmd-socket-dir"}:
+            .: {}
+            f:emptyDir:
+              .: {}
+              f:medium: {}
+            f:name: {}
+          k:{"name":"node-plugin-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"pod-volumes-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"registration-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-05-04T14:46:25Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: node
+    operation: Update
+    time: "2023-05-04T14:46:25Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-05-04T14:46:27Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.1.217"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:33:53Z"
+  name: topolvm-node-7fjkf
+  namespace: openshift-storage
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: topolvm-node
+    uid: 911fce66-767c-40c3-8bed-1f853cca3056
+  resourceVersion: "631964"
+  uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - node
+  containers:
+  - command:
+    - /lvmd
+    - --config=/etc/topolvm/lvmd.yaml
+    - --container=true
+    image: registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59
+    imagePullPolicy: IfNotPresent
+    name: lvmd
+    resources:
+      limits:
+        cpu: 200m
+        memory: 150Mi
+      requests:
+        cpu: 150m
+        memory: 100Mi
+    securityContext:
+      privileged: true
+      runAsUser: 0
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /run/lvmd
+      name: lvmd-socket-dir
+    - mountPath: /etc/topolvm
+      name: lvmd-config-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-dt792
+      readOnly: true
+  - command:
+    - /topolvm-node
+    - --lvmd-socket=/run/lvmd/lvmd.sock
+    env:
+    - name: NODE_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    image: registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: healthz
+        scheme: HTTP
+      initialDelaySeconds: 10
+      periodSeconds: 60
+      successThreshold: 1
+      timeoutSeconds: 3
+    name: topolvm-node
+    ports:
+    - containerPort: 9808
+      name: healthz
+      protocol: TCP
+    resources:
+      limits:
+        cpu: 100m
+        memory: 200Mi
+      requests:
+        cpu: 50m
+        memory: 150Mi
+    securityContext:
+      privileged: true
+      runAsUser: 0
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /run/topolvm
+      name: node-plugin-dir
+    - mountPath: /run/lvmd
+      name: lvmd-socket-dir
+    - mountPath: /var/lib/kubelet/pods
+      mountPropagation: Bidirectional
+      name: pod-volumes-dir
+    - mountPath: /var/lib/kubelet/plugins/kubernetes.io/csi
+      mountPropagation: Bidirectional
+      name: csi-plugin-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-dt792
+      readOnly: true
+  - args:
+    - --csi-address=/run/topolvm/csi-topolvm.sock
+    - --kubelet-registration-path=/var/lib/kubelet/plugins/topolvm.io/node/csi-topolvm.sock
+    image: registry.redhat.io/openshift4/ose-csi-node-driver-registrar@sha256:eeed76c41bf3d2262a4d177241a315bc476421b8471cbba1555991aac8ef83b0
+    imagePullPolicy: IfNotPresent
+    lifecycle:
+      preStop:
+        exec:
+          command:
+          - /bin/sh
+          - -c
+          - rm -rf /registration/topolvm.io /registration/topolvm.io-reg.sock
+    name: csi-registrar
+    resources:
+      limits:
+        cpu: 30m
+        memory: 50Mi
+      requests:
+        cpu: 20m
+        memory: 30Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /run/topolvm
+      name: node-plugin-dir
+    - mountPath: /registration
+      name: registration-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-dt792
+      readOnly: true
+  - args:
+    - --csi-address=/run/topolvm/csi-topolvm.sock
+    image: registry.redhat.io/openshift4/ose-csi-livenessprobe@sha256:d4228c6e797ec6b2d37e599c19c715b02f6cb955b2a7fb493c56844f4c75e687
+    imagePullPolicy: IfNotPresent
+    name: liveness-probe
+    resources:
+      limits:
+        cpu: 50m
+        memory: 50Mi
+      requests:
+        cpu: 30m
+        memory: 30Mi
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /run/topolvm
+      name: node-plugin-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-dt792
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostPID: true
+  imagePullSecrets:
+  - name: topolvm-node-dockercfg-gt78q
+  initContainers:
+  - command:
+    - /usr/bin/bash
+    - -c
+    - until [ -f /etc/topolvm/lvmd.yaml ]; do echo waiting for lvmd config file; sleep
+      5; done
+    image: registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f
+    imagePullPolicy: IfNotPresent
+    name: file-checker
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/topolvm
+      name: lvmd-config-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-dt792
+      readOnly: true
+  nodeName: node
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: topolvm-node
+  serviceAccountName: topolvm-node
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/disk-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/pid-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/unschedulable
+    operator: Exists
+  volumes:
+  - hostPath:
+      path: /var/lib/kubelet/plugins_registry/
+      type: Directory
+    name: registration-dir
+  - hostPath:
+      path: /var/lib/kubelet/plugins/topolvm.io/node
+      type: DirectoryOrCreate
+    name: node-plugin-dir
+  - hostPath:
+      path: /var/lib/kubelet/plugins/kubernetes.io/csi
+      type: DirectoryOrCreate
+    name: csi-plugin-dir
+  - hostPath:
+      path: /var/lib/kubelet/pods/
+      type: DirectoryOrCreate
+    name: pod-volumes-dir
+  - hostPath:
+      path: /etc/topolvm
+      type: Directory
+    name: lvmd-config-dir
+  - emptyDir:
+      medium: Memory
+    name: lvmd-socket-dir
+  - name: kube-api-access-dt792
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T14:47:23Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T16:33:53Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T16:33:53Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T14:46:25Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://518f392fe3edc74d98b652dd1ea7261ab0a9dfe9c00cce37f961247adcb903d0
+    image: registry.redhat.io/openshift4/ose-csi-node-driver-registrar@sha256:eeed76c41bf3d2262a4d177241a315bc476421b8471cbba1555991aac8ef83b0
+    imageID: registry.redhat.io/openshift4/ose-csi-node-driver-registrar@sha256:2609f5c0c8b106482b4876f59067252f352ea4aa1e590b7080a410fb581fd001
+    lastState: {}
+    name: csi-registrar
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:43Z"
+  - containerID: cri-o://94cf5188632bfffee370c57eeac5eaedd3210eb3a309eb62ff25ef4762259d8a
+    image: registry.redhat.io/openshift4/ose-csi-livenessprobe@sha256:d4228c6e797ec6b2d37e599c19c715b02f6cb955b2a7fb493c56844f4c75e687
+    imageID: registry.redhat.io/openshift4/ose-csi-livenessprobe@sha256:20fb28ec66f85711821ebfff9ed883b27b866541a1c4eb12aa864f29cbf28047
+    lastState: {}
+    name: liveness-probe
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:52Z"
+  - containerID: cri-o://bc5b5e1b9f0226ecee7a115c027b454e9e38c92f8847a05c6b3663e061757637
+    image: registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59
+    imageID: registry.redhat.io/lvms4/topolvm-rhel8@sha256:282aa91d125481977972d34d733c11a61830172847b7bf081c78d400c751c0e1
+    lastState: {}
+    name: lvmd
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:31Z"
+  - containerID: cri-o://f156d3eafa8bca4af2bb808515dee2b09a74462dd4c76c9e67d52babae8e3117
+    image: registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59
+    imageID: registry.redhat.io/lvms4/topolvm-rhel8@sha256:282aa91d125481977972d34d733c11a61830172847b7bf081c78d400c751c0e1
+    lastState: {}
+    name: topolvm-node
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:32Z"
+  hostIP: 192.168.1.126
+  initContainerStatuses:
+  - containerID: cri-o://9e336c59c52719b862e5ffa70e60623e2383ed71ddb98ea88cced7d25c9606bf
+    image: registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f
+    imageID: registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f
+    lastState: {}
+    name: file-checker
+    ready: true
+    restartCount: 1
+    state:
+      terminated:
+        containerID: cri-o://9e336c59c52719b862e5ffa70e60623e2383ed71ddb98ea88cced7d25c9606bf
+        exitCode: 0
+        finishedAt: "2023-05-04T16:33:02Z"
+        reason: Completed
+        startedAt: "2023-05-04T16:33:02Z"
+  phase: Running
+  podIP: 10.128.1.217
+  podIPs:
+  - ip: 10.128.1.217
+  qosClass: Burstable
+  startTime: "2023-05-04T14:46:25Z"

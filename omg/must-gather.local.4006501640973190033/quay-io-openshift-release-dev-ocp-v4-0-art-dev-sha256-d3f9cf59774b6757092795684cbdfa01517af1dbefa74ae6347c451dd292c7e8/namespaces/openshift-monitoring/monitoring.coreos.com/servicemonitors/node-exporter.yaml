@@ -1,0 +1,64 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  creationTimestamp: "2023-05-02T12:35:38Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: exporter
+    app.kubernetes.io/name: node-exporter
+    app.kubernetes.io/part-of: openshift-monitoring
+    app.kubernetes.io/version: 1.4.0
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:jobLabel: {}
+        f:namespaceSelector: {}
+        f:selector: {}
+    manager: operator
+    operation: Update
+    time: "2023-05-02T12:35:38Z"
+  name: node-exporter
+  namespace: openshift-monitoring
+  resourceVersion: "7278"
+  uid: 7c35b377-64af-4ed8-9177-743c640d6c5b
+spec:
+  endpoints:
+  - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+    bearerTokenSecret:
+      key: ""
+    interval: 30s
+    port: https
+    relabelings:
+    - action: replace
+      regex: (.*)
+      replacement: $1
+      sourceLabels:
+      - __meta_kubernetes_pod_node_name
+      targetLabel: instance
+    scheme: https
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+      cert: {}
+      certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+      keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+      serverName: node-exporter.openshift-monitoring.svc
+  jobLabel: app.kubernetes.io/name
+  namespaceSelector: {}
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/name: node-exporter
+      app.kubernetes.io/part-of: openshift-monitoring

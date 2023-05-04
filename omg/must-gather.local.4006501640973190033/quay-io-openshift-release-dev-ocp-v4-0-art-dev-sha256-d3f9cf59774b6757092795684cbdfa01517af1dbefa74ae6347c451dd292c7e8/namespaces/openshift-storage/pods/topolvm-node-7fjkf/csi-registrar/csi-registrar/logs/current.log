@@ -1,0 +1,8 @@
+2023-05-04T16:33:43.258240815Z I0504 16:33:43.258025   22978 main.go:166] Version: v4.12.0-202304070941.p0.g805d5ac.assembly.stream-0-gdb541e7-dirty
+2023-05-04T16:33:43.258240815Z I0504 16:33:43.258200   22978 main.go:167] Running node-driver-registrar in mode=registration
+2023-05-04T16:33:43.260142289Z I0504 16:33:43.260115   22978 node_register.go:53] Starting Registration Server at: /registration/topolvm.io-reg.sock
+2023-05-04T16:33:43.260234733Z I0504 16:33:43.260222   22978 node_register.go:62] Registration Server started at: /registration/topolvm.io-reg.sock
+2023-05-04T16:33:43.355138184Z I0504 16:33:43.355078   22978 node_register.go:92] Skipping HTTP server because endpoint is set to: ""
+2023-05-04T16:34:31.797178737Z I0504 16:34:31.797128   22978 main.go:102] Received GetInfo call: &InfoRequest{}
+2023-05-04T16:34:31.797411685Z I0504 16:34:31.797393   22978 main.go:109] "Kubelet registration probe created" path="/var/lib/kubelet/plugins/topolvm.io/node/registration"
+2023-05-04T16:34:31.829062398Z I0504 16:34:31.829010   22978 main.go:120] Received NotifyRegistrationStatus call: &RegistrationStatus{PluginRegistered:true,Error:,}

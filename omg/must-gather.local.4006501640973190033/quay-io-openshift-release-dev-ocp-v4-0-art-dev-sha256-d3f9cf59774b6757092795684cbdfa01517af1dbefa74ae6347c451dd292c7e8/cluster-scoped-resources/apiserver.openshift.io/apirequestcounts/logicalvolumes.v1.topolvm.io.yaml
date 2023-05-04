@@ -1,0 +1,309 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-05-04T14:39:32Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-05-04T14:39:32Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-05-04T18:45:24Z"
+  name: logicalvolumes.v1.topolvm.io
+  resourceVersion: "684206"
+  uid: 4f2d6b05-86ae-4263-b008-a677ed9fab76
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 75
+          verb: delete
+        - requestCount: 44
+          verb: get
+        - requestCount: 5
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 131
+        userAgent: topolvm-controller/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-controller
+      - byVerb:
+        - requestCount: 49
+          verb: patch
+        - requestCount: 6
+          verb: watch
+        requestCount: 55
+        userAgent: topolvm-node/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-node
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 192
+    requestCount: 192
+  last24h:
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 5
+          verb: watch
+        requestCount: 6
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: topolvm-controller/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-controller
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: topolvm-node/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-node
+      nodeName: 192.168.1.126
+      requestCount: 14
+    requestCount: 14
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 2
+          verb: patch
+        - requestCount: 1
+          verb: update
+        - requestCount: 9
+          verb: watch
+        requestCount: 12
+        userAgent: topolvm-node/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-node
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 1
+          verb: get
+        - requestCount: 9
+          verb: watch
+        requestCount: 11
+        userAgent: topolvm-controller/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-controller
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 31
+    requestCount: 31
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 17
+          verb: create
+        - requestCount: 102
+          verb: delete
+        - requestCount: 119
+          verb: get
+        - requestCount: 1
+          verb: list
+        - requestCount: 6
+          verb: watch
+        requestCount: 245
+        userAgent: topolvm-controller/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-controller
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 138
+          verb: patch
+        - requestCount: 21
+          verb: update
+        - requestCount: 5
+          verb: watch
+        requestCount: 165
+        userAgent: topolvm-node/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-node
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 5
+          verb: watch
+        requestCount: 6
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 416
+    requestCount: 416
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 286
+          verb: create
+        - requestCount: 316
+          verb: delete
+        - requestCount: 484
+          verb: get
+        - requestCount: 19
+          verb: list
+        - requestCount: 8
+          verb: watch
+        requestCount: 1113
+        userAgent: topolvm-controller/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-controller
+      - byVerb:
+        - requestCount: 772
+          verb: patch
+        - requestCount: 291
+          verb: update
+        - requestCount: 8
+          verb: watch
+        requestCount: 1071
+        userAgent: topolvm-node/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-node
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 2192
+    requestCount: 2192
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 75
+          verb: delete
+        - requestCount: 44
+          verb: get
+        - requestCount: 5
+          verb: list
+        - requestCount: 7
+          verb: watch
+        requestCount: 131
+        userAgent: topolvm-controller/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-controller
+      - byVerb:
+        - requestCount: 49
+          verb: patch
+        - requestCount: 6
+          verb: watch
+        requestCount: 55
+        userAgent: topolvm-node/v0.0.0
+        username: system:serviceaccount:openshift-storage:topolvm-node
+      - byVerb:
+        - requestCount: 6
+          verb: watch
+        requestCount: 6
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 192
+    requestCount: 192
+  - requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  requestCount: 2845

@@ -1,0 +1,276 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:18Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: openshift-route-controllers
+    namespace: openshift-route-controller-manager
+    resourceVersion: "630788"
+    uid: fe75a3a4-801e-4508-b03d-e7385051d4ef
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:18Z"
+  message: route-controller-manager-58899bb596-srzpd became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: route-controller-manager
+      operation: Update
+      time: "2023-05-04T16:32:18Z"
+    name: openshift-route-controllers.175bfdcc24bf217f
+    namespace: openshift-route-controller-manager
+    resourceVersion: "630790"
+    uid: c0e47097-6bc0-4a08-892c-e7bc2e38b0bc
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: route-controller-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: route-controller-manager-58899bb596-srzpd
+    namespace: openshift-route-controller-manager
+    resourceVersion: "291409"
+    uid: f8b6b495-840b-41dd-bf33-97e859403f93
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:05Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_route-controller-manager-58899bb596-srzpd_openshift-route-controller-manager_f8b6b495-840b-41dd-bf33-97e859403f93_0(b0a645f623f7fefe3233eadff9ca79160ed49c9af8bbec8e587c4166e944c335):
+    error adding pod openshift-route-controller-manager_route-controller-manager-58899bb596-srzpd
+    to CNI network "multus-cni-network": plugin type="multus" name="multus-cni-network"
+    failed (add): Multus: [openshift-route-controller-manager/route-controller-manager-58899bb596-srzpd/f8b6b495-840b-41dd-bf33-97e859403f93]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:24Z"
+    name: route-controller-manager-58899bb596-srzpd.175bfdbb23b639c1
+    namespace: openshift-route-controller-manager
+    resourceVersion: "631556"
+    uid: 8b303fa8-b334-447e-b51d-5abca77d76c6
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:18Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: route-controller-manager-58899bb596-srzpd
+    namespace: openshift-route-controller-manager
+    resourceVersion: "629134"
+    uid: f8b6b495-840b-41dd-bf33-97e859403f93
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:18Z"
+  message: Add eth0 [10.128.0.255/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:18Z"
+    name: route-controller-manager-58899bb596-srzpd.175bfdbe106012cb
+    namespace: openshift-route-controller-manager
+    resourceVersion: "630142"
+    uid: f0c229f4-38a5-4c5f-ad1c-a5eee4bf8315
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:19Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{route-controller-manager}
+    kind: Pod
+    name: route-controller-manager-58899bb596-srzpd
+    namespace: openshift-route-controller-manager
+    resourceVersion: "291409"
+    uid: f8b6b495-840b-41dd-bf33-97e859403f93
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:19Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:7c23b71619bd88c1bfa093cfa1a72db148937e8f1637c99ff164bf566eaf78b8"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:33Z"
+    name: route-controller-manager-58899bb596-srzpd.175bfdbe31aa1625
+    namespace: openshift-route-controller-manager
+    resourceVersion: "631737"
+    uid: 2b185ac8-4c84-42c7-9913-7927d289febc
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{route-controller-manager}
+    kind: Pod
+    name: route-controller-manager-58899bb596-srzpd
+    namespace: openshift-route-controller-manager
+    resourceVersion: "291409"
+    uid: f8b6b495-840b-41dd-bf33-97e859403f93
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:18Z"
+  message: Created container route-controller-manager
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:44Z"
+    name: route-controller-manager-58899bb596-srzpd.175bfdcc1ae5ae64
+    namespace: openshift-route-controller-manager
+    resourceVersion: "632423"
+    uid: 3efc0c83-599b-427c-9b63-a3a0044be654
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:19Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{route-controller-manager}
+    kind: Pod
+    name: route-controller-manager-58899bb596-srzpd
+    namespace: openshift-route-controller-manager
+    resourceVersion: "291409"
+    uid: f8b6b495-840b-41dd-bf33-97e859403f93
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:19Z"
+  message: Started container route-controller-manager
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:45Z"
+    name: route-controller-manager-58899bb596-srzpd.175bfdcc2ce999d7
+    namespace: openshift-route-controller-manager
+    resourceVersion: "632426"
+    uid: 51c0d0a5-0bfd-4741-9f83-dd211d38bcd7
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "684746"

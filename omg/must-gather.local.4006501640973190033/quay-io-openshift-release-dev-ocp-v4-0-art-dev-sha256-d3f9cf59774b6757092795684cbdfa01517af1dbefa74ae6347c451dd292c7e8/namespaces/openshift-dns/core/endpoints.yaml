@@ -1,0 +1,52 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:32:41Z"
+    creationTimestamp: "2023-05-02T12:35:13Z"
+    labels:
+      dns.operator.openshift.io/owning-dns: default
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:dns.operator.openshift.io/owning-dns: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:32:42Z"
+    name: dns-default
+    namespace: openshift-dns
+    resourceVersion: "631020"
+    uid: d5ba150f-04a3-4840-bfbb-4f7689a59121
+  subsets:
+  - addresses:
+    - ip: 10.128.0.34
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: dns-default-trxrz
+        namespace: openshift-dns
+        uid: 74fbc14a-6966-40d1-b510-b3907fea0db7
+    ports:
+    - name: dns
+      port: 5353
+      protocol: UDP
+    - name: metrics
+      port: 9154
+      protocol: TCP
+    - name: dns-tcp
+      port: 5353
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "684627"

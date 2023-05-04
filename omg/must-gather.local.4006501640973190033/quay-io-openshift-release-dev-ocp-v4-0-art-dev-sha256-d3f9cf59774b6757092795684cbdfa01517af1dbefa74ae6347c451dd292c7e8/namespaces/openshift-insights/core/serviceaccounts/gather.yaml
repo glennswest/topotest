@@ -1,0 +1,50 @@
+---
+apiVersion: v1
+imagePullSecrets:
+- name: gather-dockercfg-544z8
+kind: ServiceAccount
+metadata:
+  annotations:
+    capability.openshift.io/name: Insights
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-05-02T12:37:28Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:37:28Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:imagePullSecrets: {}
+      f:secrets:
+        .: {}
+        k:{"name":"gather-dockercfg-544z8"}: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2023-05-02T12:40:04Z"
+  name: gather
+  namespace: openshift-insights
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "12295"
+  uid: 5ad17dad-75be-4a26-83df-8548f1414403
+secrets:
+- name: gather-dockercfg-544z8

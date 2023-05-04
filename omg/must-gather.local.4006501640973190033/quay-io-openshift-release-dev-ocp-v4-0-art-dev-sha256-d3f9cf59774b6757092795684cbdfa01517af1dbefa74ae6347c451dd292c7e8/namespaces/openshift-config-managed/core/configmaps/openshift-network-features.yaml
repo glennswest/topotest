@@ -1,0 +1,38 @@
+---
+apiVersion: v1
+data:
+  policy_egress: "true"
+  policy_peer_ipblock_exceptions: "true"
+kind: ConfigMap
+metadata:
+  annotations:
+    openshift.io/description: |
+      Exposes available network features as required by the Console in order to show or hide some form fields.
+      If the map or a given property is undefined, the Console won't throw error and will take a default action (show, hide, show with a warning message...).
+  creationTimestamp: "2023-05-02T12:26:12Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:data:
+        f:policy_egress: {}
+        f:policy_peer_ipblock_exceptions: {}
+      f:metadata:
+        f:annotations:
+          f:openshift.io/description: {}
+        f:ownerReferences:
+          k:{"uid":"a74973fc-c074-41e2-8215-81c3454addea"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-05-02T12:26:12Z"
+  name: openshift-network-features
+  namespace: openshift-config-managed
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: a74973fc-c074-41e2-8215-81c3454addea
+  resourceVersion: "2802"
+  uid: 05e88ce4-112d-4dc0-b4be-dded6a3ac52f

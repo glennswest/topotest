@@ -1,0 +1,747 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-05-02T12:48:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-05-02T12:48:58Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-05-04T18:40:41Z"
+  name: oauthclients.v1.oauth.openshift.io
+  resourceVersion: "682964"
+  uid: 18968763-78d9-4aca-b09d-4972896bdb47
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 210
+          verb: get
+        - requestCount: 5
+          verb: watch
+        requestCount: 215
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 52
+          verb: create
+        - requestCount: 52
+          verb: get
+        - requestCount: 5
+          verb: watch
+        requestCount: 109
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 13
+          verb: get
+        requestCount: 13
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 337
+    requestCount: 337
+  last24h:
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 336
+          verb: get
+        - requestCount: 7
+          verb: watch
+        requestCount: 343
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 102
+          verb: create
+        - requestCount: 102
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 212
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 571
+    requestCount: 571
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 345
+          verb: get
+        - requestCount: 9
+          verb: watch
+        requestCount: 354
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 98
+          verb: create
+        - requestCount: 98
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 204
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 574
+    requestCount: 574
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 342
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 350
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 102
+          verb: create
+        - requestCount: 102
+          verb: get
+        - requestCount: 9
+          verb: watch
+        requestCount: 213
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 17
+          verb: get
+        requestCount: 17
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 580
+    requestCount: 580
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 336
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 344
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 102
+          verb: create
+        - requestCount: 102
+          verb: get
+        - requestCount: 9
+          verb: watch
+        requestCount: 213
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 573
+    requestCount: 573
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 342
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 350
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 102
+          verb: create
+        - requestCount: 102
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 212
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 578
+    requestCount: 578
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 342
+          verb: get
+        - requestCount: 7
+          verb: watch
+        requestCount: 349
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 98
+          verb: create
+        - requestCount: 98
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 204
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 569
+    requestCount: 569
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 342
+          verb: get
+        - requestCount: 9
+          verb: watch
+        requestCount: 351
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 98
+          verb: create
+        - requestCount: 98
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 204
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 571
+    requestCount: 571
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 336
+          verb: get
+        - requestCount: 9
+          verb: watch
+        requestCount: 345
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 102
+          verb: create
+        - requestCount: 102
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 212
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 573
+    requestCount: 573
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 342
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 350
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 102
+          verb: create
+        - requestCount: 102
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 212
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 578
+    requestCount: 578
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 342
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 350
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 100
+          verb: create
+        - requestCount: 100
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 208
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 574
+    requestCount: 574
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 345
+          verb: get
+        - requestCount: 7
+          verb: watch
+        requestCount: 352
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 102
+          verb: create
+        - requestCount: 102
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 212
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 580
+    requestCount: 580
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 336
+          verb: get
+        - requestCount: 9
+          verb: watch
+        requestCount: 345
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 102
+          verb: create
+        - requestCount: 102
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 212
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 573
+    requestCount: 573
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 342
+          verb: get
+        - requestCount: 7
+          verb: watch
+        requestCount: 349
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 100
+          verb: create
+        - requestCount: 100
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 208
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 573
+    requestCount: 573
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 342
+          verb: get
+        - requestCount: 9
+          verb: watch
+        requestCount: 351
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 100
+          verb: create
+        - requestCount: 100
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 208
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 575
+    requestCount: 575
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 336
+          verb: get
+        - requestCount: 7
+          verb: watch
+        requestCount: 343
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 100
+          verb: create
+        - requestCount: 100
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 208
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      - byVerb:
+        - requestCount: 4
+          verb: get
+        requestCount: 4
+        userAgent: oauth-server/v0.0.0
+        username: system:serviceaccount:openshift-authentication:oauth-openshift
+      nodeName: 192.168.1.126
+      requestCount: 571
+    requestCount: 571
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 348
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 356
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 98
+          verb: create
+        - requestCount: 98
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 204
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 576
+    requestCount: 576
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 349
+          verb: get
+        - requestCount: 1
+          verb: list
+        - requestCount: 6
+          verb: watch
+        requestCount: 356
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 56
+          verb: create
+        - requestCount: 56
+          verb: get
+        - requestCount: 1
+          verb: list
+        - requestCount: 5
+          verb: watch
+        requestCount: 118
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 12
+          verb: get
+        requestCount: 12
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 486
+    requestCount: 486
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 701
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 709
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 86
+          verb: create
+        - requestCount: 86
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 180
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 20
+          verb: get
+        requestCount: 20
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 909
+    requestCount: 909
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 210
+          verb: get
+        - requestCount: 5
+          verb: watch
+        requestCount: 215
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 52
+          verb: create
+        - requestCount: 52
+          verb: get
+        - requestCount: 5
+          verb: watch
+        requestCount: 109
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 13
+          verb: get
+        requestCount: 13
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 337
+    requestCount: 337
+  - requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 342
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 350
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 102
+          verb: create
+        - requestCount: 102
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 212
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 578
+    requestCount: 578
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 345
+          verb: get
+        - requestCount: 7
+          verb: watch
+        requestCount: 352
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 102
+          verb: create
+        - requestCount: 102
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 212
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 580
+    requestCount: 580
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 342
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 350
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 100
+          verb: create
+        - requestCount: 100
+          verb: get
+        - requestCount: 9
+          verb: watch
+        requestCount: 209
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 575
+    requestCount: 575
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 342
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 350
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 102
+          verb: create
+        - requestCount: 102
+          verb: get
+        - requestCount: 8
+          verb: watch
+        requestCount: 212
+        userAgent: authentication-operator/v0.0.0
+        username: system:serviceaccount:openshift-authentication-operator:authentication-operator
+      - byVerb:
+        - requestCount: 16
+          verb: get
+        requestCount: 16
+        userAgent: cluster-version-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-version:default
+      nodeName: 192.168.1.126
+      requestCount: 578
+    requestCount: 578
+  requestCount: 13232

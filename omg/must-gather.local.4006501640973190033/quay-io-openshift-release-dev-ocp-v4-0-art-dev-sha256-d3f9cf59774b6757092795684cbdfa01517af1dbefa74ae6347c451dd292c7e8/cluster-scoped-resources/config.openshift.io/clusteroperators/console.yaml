@@ -1,0 +1,114 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: Console
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-05-02T12:17:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: console
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:37:15Z"
+  name: console
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "634128"
+  uid: 4bee97b6-482a-46e8-8140-b6d4758fe542
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-04T16:37:14Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-05-02T12:46:52Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-05-04T16:37:14Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-05-02T12:41:47Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: consoles
+  - group: config.openshift.io
+    name: cluster
+    resource: consoles
+  - group: config.openshift.io
+    name: cluster
+    resource: infrastructures
+  - group: config.openshift.io
+    name: cluster
+    resource: proxies
+  - group: config.openshift.io
+    name: cluster
+    resource: oauths
+  - group: oauth.openshift.io
+    name: console
+    resource: oauthclients
+  - group: ""
+    name: openshift-console-operator
+    resource: namespaces
+  - group: ""
+    name: openshift-console
+    resource: namespaces
+  - group: ""
+    name: console-public
+    namespace: openshift-config-managed
+    resource: configmaps
+  versions:
+  - name: operator
+    version: 4.12.2

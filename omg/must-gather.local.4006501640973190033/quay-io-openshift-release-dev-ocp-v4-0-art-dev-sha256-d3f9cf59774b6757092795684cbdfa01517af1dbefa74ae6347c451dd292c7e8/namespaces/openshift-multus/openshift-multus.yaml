@@ -1,0 +1,77 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/description: Multus network plugin components
+    openshift.io/node-selector: ""
+    openshift.io/sa.scc.mcs: s0:c24,c9
+    openshift.io/sa.scc.supplemental-groups: 1000570000/10000
+    openshift.io/sa.scc.uid-range: 1000570000/10000
+    workload.openshift.io/allowed: management
+  creationTimestamp: "2023-05-02T12:26:02Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-multus
+    name: openshift-multus
+    olm.operatorgroup.uid/2be20301-defd-436c-a36a-997f9082f588: ""
+    openshift.io/cluster-monitoring: "true"
+    openshift.io/run-level: "0"
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/enforce: privileged
+    pod-security.kubernetes.io/warn: privileged
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/description: {}
+          f:openshift.io/node-selector: {}
+          f:workload.openshift.io/allowed: {}
+        f:labels:
+          f:name: {}
+          f:openshift.io/cluster-monitoring: {}
+          f:openshift.io/run-level: {}
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/enforce: {}
+          f:pod-security.kubernetes.io/warn: {}
+        f:ownerReferences:
+          k:{"uid":"a74973fc-c074-41e2-8215-81c3454addea"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-05-02T12:26:02Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-05-02T12:29:55Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/2be20301-defd-436c-a36a-997f9082f588: {}
+    manager: olm
+    operation: Update
+    time: "2023-05-02T12:37:41Z"
+  name: openshift-multus
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: a74973fc-c074-41e2-8215-81c3454addea
+  resourceVersion: "8790"
+  uid: c7458fb6-4428-4c47-8bcf-c676f1879ec7
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

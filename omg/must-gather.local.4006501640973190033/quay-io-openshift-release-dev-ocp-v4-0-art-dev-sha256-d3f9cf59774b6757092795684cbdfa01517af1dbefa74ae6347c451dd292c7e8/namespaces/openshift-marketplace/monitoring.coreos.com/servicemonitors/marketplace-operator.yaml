@@ -1,0 +1,69 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  annotations:
+    capability.openshift.io/name: marketplace
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-05-02T12:37:19Z"
+  generation: 1
+  labels:
+    name: marketplace-operator
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:labels:
+          .: {}
+          f:name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:namespaceSelector:
+          .: {}
+          f:matchNames: {}
+        f:selector: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:37:19Z"
+  name: marketplace-operator
+  namespace: openshift-marketplace
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "8092"
+  uid: e1f7a7e8-74ca-4772-ba63-eafe7c4dcb33
+spec:
+  endpoints:
+  - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+    interval: 30s
+    metricRelabelings:
+    - action: drop
+      regex: etcd_(debugging|disk|request|server).*
+      sourceLabels:
+      - __name__
+    port: https-metrics
+    scheme: https
+    tlsConfig:
+      caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+      serverName: marketplace-operator-metrics.openshift-marketplace.svc
+  namespaceSelector:
+    matchNames:
+    - openshift-marketplace
+  selector:
+    matchLabels:
+      name: marketplace-operator

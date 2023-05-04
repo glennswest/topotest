@@ -1,0 +1,55 @@
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+  creationTimestamp: "2023-05-02T12:37:36Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec:
+        .: {}
+        f:upgradeStrategy: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:37:36Z"
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:lastUpdated: {}
+        f:namespaces:
+          .: {}
+          v:"": {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:37:41Z"
+  name: global-operators
+  namespace: openshift-operators
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "8747"
+  uid: 7e50cf4b-b8ae-44d6-936a-8dcf344b2b1a
+spec:
+  upgradeStrategy: Default
+status:
+  lastUpdated: "2023-05-02T12:37:41Z"
+  namespaces:
+  - ""

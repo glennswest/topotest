@@ -1,0 +1,1718 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:58Z"
+  involvedObject:
+    apiVersion: v1
+    kind: ConfigMap
+    name: ovn-kubernetes-master
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "629979"
+    uid: 95405368-a5ac-4d36-9edf-882b7455858a
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:58Z"
+  message: node became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:30:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: node
+      operation: Update
+      time: "2023-05-04T16:30:58Z"
+    name: ovn-kubernetes-master.175bfdb95a42ea17
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "629981"
+    uid: 65fd12bf-c3ae-453d-a048-d074f260edf7
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: controlplane
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:58Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: ovn-kubernetes-master
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "629980"
+    uid: 701c8864-ff5a-4b5c-b2f1-feda16f96578
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:58Z"
+  message: node became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:30:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: node
+      operation: Update
+      time: "2023-05-04T16:30:58Z"
+    name: ovn-kubernetes-master.175bfdb95a431741
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "629982"
+    uid: 81169439-58e4-4931-abb9-764b1e1a2450
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: controlplane
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{northd}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:78078017998532005d730896ed4ca6f212ca9ac5713d65ca724eb9468fd8f7fb"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:05Z"
+    name: ovnkube-master-9fm5k.175bfdab93276a7c
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630041"
+    uid: 3b6636a2-c6a3-4e6c-8bc2-1146a5f1dd57
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{northd}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:52Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:78078017998532005d730896ed4ca6f212ca9ac5713d65ca724eb9468fd8f7fb"
+    in 53.224970769s
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:48Z"
+    name: ovnkube-master-9fm5k.175bfdb7f79c39e5
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631118"
+    uid: f4f832de-9de8-4b54-828c-084cf2f91246
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{northd}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:52Z"
+  message: Created container northd
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:49Z"
+    name: ovnkube-master-9fm5k.175bfdb802b6cc10
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631128"
+    uid: f5a6cd21-367d-4db1-9d2b-f4f049ff7b6f
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{northd}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:52Z"
+  message: Started container northd
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:50Z"
+    name: ovnkube-master-9fm5k.175bfdb805209074
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631130"
+    uid: 29305d08-4bd1-4577-b60f-758c5338b0c8
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{nbdb}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:52Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:78078017998532005d730896ed4ca6f212ca9ac5713d65ca724eb9468fd8f7fb"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:50Z"
+    name: ovnkube-master-9fm5k.175bfdb80598deb2
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631133"
+    uid: ddbf47ef-85da-4202-98c8-17dd27eee002
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:53Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{nbdb}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:53Z"
+  message: Created container nbdb
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:51Z"
+    name: ovnkube-master-9fm5k.175bfdb8243c94ac
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631140"
+    uid: be09b612-90ce-46a7-8073-ed6cb5cf03ab
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:53Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{nbdb}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:53Z"
+  message: Started container nbdb
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:52Z"
+    name: ovnkube-master-9fm5k.175bfdb830c3a22f
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631144"
+    uid: ead776d4-fe3c-466e-ba96-413c3b728bbd
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:55Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:55Z"
+    name: ovnkube-master-9fm5k.175bfdb8adaf6f0e
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631167"
+    uid: 7b0b5577-5272-496f-b8c5-978acada5487
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:55Z"
+  message: Created container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:56Z"
+    name: ovnkube-master-9fm5k.175bfdb8b782cbcf
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631171"
+    uid: 86229a66-d9c4-4bfb-bd02-b1fe581fa9eb
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:55Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:56Z"
+    name: ovnkube-master-9fm5k.175bfdb8b8cfe84d
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631173"
+    uid: f75b0fb5-8b1c-48d0-8847-2c8b00a3adae
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{sbdb}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:55Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:78078017998532005d730896ed4ca6f212ca9ac5713d65ca724eb9468fd8f7fb"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:56Z"
+    name: ovnkube-master-9fm5k.175bfdb8b919827c
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631176"
+    uid: 2e6928f4-ee35-445a-b6cc-1420bfadadc3
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{sbdb}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:55Z"
+  message: Created container sbdb
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:56Z"
+    name: ovnkube-master-9fm5k.175bfdb8c0a8cba7
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631177"
+    uid: 2414c07d-a744-4ce2-a9ec-2440f5f32174
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{sbdb}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:55Z"
+  message: Started container sbdb
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:56Z"
+    name: ovnkube-master-9fm5k.175bfdb8c2b15a56
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631179"
+    uid: 1c4fe458-e93f-4a16-aa29-2d3f1a0ef084
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovnkube-master}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:57Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:78078017998532005d730896ed4ca6f212ca9ac5713d65ca724eb9468fd8f7fb"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:00Z"
+    name: ovnkube-master-9fm5k.175bfdb93f74e47c
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631200"
+    uid: f2f9edae-e8b2-438c-b597-23f82bc09adf
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:57Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovnkube-master}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:57Z"
+  message: Created container ovnkube-master
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:01Z"
+    name: ovnkube-master-9fm5k.175bfdb948544fd3
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631202"
+    uid: 177f31c1-2200-4e0b-8811-1380fdca3856
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovnkube-master}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:58Z"
+  message: Started container ovnkube-master
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:01Z"
+    name: ovnkube-master-9fm5k.175bfdb94a79e805
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631203"
+    uid: 728d5a32-d36f-4653-a92c-2bb325dd21de
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovn-dbchecker}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:58Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:78078017998532005d730896ed4ca6f212ca9ac5713d65ca724eb9468fd8f7fb"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:01Z"
+    name: ovnkube-master-9fm5k.175bfdb94a8e2037
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631204"
+    uid: 34ebdd50-90ef-4b64-bfe6-7dc5fbdf23df
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovn-dbchecker}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:58Z"
+  message: Created container ovn-dbchecker
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:01Z"
+    name: ovnkube-master-9fm5k.175bfdb952756244
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631205"
+    uid: 77435817-4dea-45b8-9223-61d37d9979c5
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:58Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovn-dbchecker}
+    kind: Pod
+    name: ovnkube-master-9fm5k
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13436"
+    uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:58Z"
+  message: Started container ovn-dbchecker
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:01Z"
+    name: ovnkube-master-9fm5k.175bfdb955444cd0
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "631208"
+    uid: de95674e-246d-4661-8434-6f402bee8357
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:46Z"
+  message: 'MountVolume.SetUp failed for volume "ovn-node-metrics-cert" : failed to
+    sync secret cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:30:01Z"
+    name: ovnkube-node-9c47r.175bfda84345b1d2
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "629194"
+    uid: fa32bfe1-a49b-4bc7-b731-ef3a6918d0a8
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovn-controller}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:10Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:78078017998532005d730896ed4ca6f212ca9ac5713d65ca724eb9468fd8f7fb"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:09Z"
+    name: ovnkube-node-9c47r.175bfdab959a36ca
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630701"
+    uid: a36ae12f-32b7-4d70-8668-95bfa010853b
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovn-controller}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Failed to pull image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:78078017998532005d730896ed4ca6f212ca9ac5713d65ca724eb9468fd8f7fb":
+    pull QPS exceeded'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:08Z"
+    name: ovnkube-node-9c47r.175bfdab959a7229
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630058"
+    uid: 2e197422-8324-4b7e-89d1-985e8ac70396
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovn-controller}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:08Z"
+    name: ovnkube-node-9c47r.175bfdab959a95a8
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630059"
+    uid: 80eed5b5-2f9a-4c8c-8c2e-603d43fcf758
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovn-acl-logging}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: Back-off pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:78078017998532005d730896ed4ca6f212ca9ac5713d65ca724eb9468fd8f7fb"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:20Z"
+    name: ovnkube-node-9c47r.175bfdab95f12292
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630180"
+    uid: c97923fd-fb17-4a16-b42a-f83d8cc781c8
+  reason: BackOff
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovn-acl-logging}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:21Z"
+    name: ovnkube-node-9c47r.175bfdab95f13a5d
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630183"
+    uid: 99945da2-c774-4c1a-a4b5-39e4a143a9f3
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:09Z"
+    name: ovnkube-node-9c47r.175bfdab960d8947
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630069"
+    uid: 625971c4-c2f4-4fbb-9911-cf26dd19befe
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Failed to pull image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6":
+    pull QPS exceeded'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:09Z"
+    name: ovnkube-node-9c47r.175bfdab960dc958
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630070"
+    uid: ac4c88ec-7f52-4b17-833d-cabc1c5e3f39
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:10Z"
+    name: ovnkube-node-9c47r.175bfdab960dec19
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630072"
+    uid: 925250ac-34ab-4761-b468-1382f30f496c
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy-ovn-metrics}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: Back-off pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:21Z"
+    name: ovnkube-node-9c47r.175bfdab9615ed0f
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630194"
+    uid: 5e9bf644-540d-4b39-ba10-2c48a69e6555
+  reason: BackOff
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy-ovn-metrics}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:21Z"
+    name: ovnkube-node-9c47r.175bfdab96164f04
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630199"
+    uid: d689bcba-3c2b-4d54-9e7f-e5d406fbdcf8
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovnkube-node}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: Back-off pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:78078017998532005d730896ed4ca6f212ca9ac5713d65ca724eb9468fd8f7fb"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:22Z"
+    name: ovnkube-node-9c47r.175bfdab961c27d9
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630201"
+    uid: c1f19f93-6ca4-409e-b102-1e55366bac86
+  reason: BackOff
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovnkube-node}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:22Z"
+    name: ovnkube-node-9c47r.175bfdab961c35bd
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630203"
+    uid: 12adf26f-07d9-4c2b-9d25-b212cb0462b9
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovn-controller}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: Back-off pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:78078017998532005d730896ed4ca6f212ca9ac5713d65ca724eb9468fd8f7fb"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:20Z"
+    name: ovnkube-node-9c47r.175bfdabc4c39325
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630171"
+    uid: 6737df81-a9d9-43e9-9ed7-24109a044379
+  reason: BackOff
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ovn-controller}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:20Z"
+    name: ovnkube-node-9c47r.175bfdabc4c3eb66
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630178"
+    uid: eef99a60-e672-4c4e-bdb4-bf51658e2c11
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: Back-off pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:21Z"
+    name: ovnkube-node-9c47r.175bfdabc4cd23e1
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630186"
+    uid: 1581b40b-d451-4def-9a68-7ec0f3fe15ca
+  reason: BackOff
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ovnkube-node-9c47r
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "13470"
+    uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:21Z"
+    name: ovnkube-node-9c47r.175bfdabc4cd3eba
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "630191"
+    uid: 472c3c46-9272-481a-b463-9bb0fea7b2f8
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+kind: EventList
+metadata:
+  resourceVersion: "684720"

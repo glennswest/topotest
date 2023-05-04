@@ -1,0 +1,141 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    openshift.io/display-name: JBoss EAP 7.4.0 Runtime Image with OpenJDK 11
+    openshift.io/image.dockerRepositoryCheck: "2023-05-02T12:41:46Z"
+    openshift.io/provider-display-name: Red Hat, Inc.
+    samples.operator.openshift.io/version: 4.12.2
+    version: 7.4.0
+  creationTimestamp: "2023-05-02T12:41:45Z"
+  generation: 2
+  labels:
+    samples.operator.openshift.io/managed: "true"
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/display-name: {}
+          f:openshift.io/provider-display-name: {}
+          f:samples.operator.openshift.io/version: {}
+          f:version: {}
+        f:labels:
+          .: {}
+          f:samples.operator.openshift.io/managed: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"7.4.0"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRef: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations:
+              .: {}
+              f:description: {}
+              f:iconClass: {}
+              f:openshift.io/display-name: {}
+              f:sampleContextDir: {}
+              f:sampleRef: {}
+              f:sampleRepo: {}
+              f:supports: {}
+              f:tags: {}
+              f:version: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-samples-operator
+    operation: Update
+    time: "2023-05-02T12:41:45Z"
+  name: jboss-eap74-openjdk11-runtime-openshift
+  namespace: openshift
+  resourceVersion: "14336"
+  uid: 4d4abf72-b409-4148-9e70-e7f91fc73778
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations:
+      description: The latest available build of JBoss EAP 7.4.0 runtime image with
+        OpenJDK 11
+      iconClass: icon-eap
+      openshift.io/display-name: JBoss EAP 7.4.0 with OpenJDK 11 (Runtime Image)
+      sampleContextDir: kitchensink
+      sampleRef: 7.4.x
+      sampleRepo: https://github.com/jbossas/eap-quickstarts
+      supports: eap:7.4.0,javaee:8,java:11
+      tags: builder,eap,javaee,java,jboss,hidden
+      version: latest
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/jboss-eap-7/eap74-openjdk11-runtime-openshift-rhel8:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: 7.4.0
+    referencePolicy:
+      type: Local
+  - annotations:
+      description: The latest available build of JBoss EAP 7.4 runtime image with
+        OpenJDK 11.
+      iconClass: icon-eap
+      openshift.io/display-name: JBoss EAP 7.4 with OpenJDK11
+      sampleContextDir: kitchensink
+      sampleRef: 7.4.x
+      sampleRepo: https://github.com/jbossas/eap-quickstarts/
+      supports: eap:7.4,javaee:8,java:11
+      tags: builder,eap,javaee,java,jboss,hidden
+      version: latest
+    from:
+      kind: DockerImage
+      name: registry.redhat.io/jboss-eap-7/eap74-openjdk11-runtime-openshift-rhel8:latest
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+    name: latest
+    referencePolicy:
+      type: Local
+status:
+  dockerImageRepository: ""
+  tags:
+  - items:
+    - created: "2023-05-02T12:41:46Z"
+      dockerImageReference: registry.redhat.io/jboss-eap-7/eap74-openjdk11-runtime-openshift-rhel8@sha256:6fa3d13be52de6d2b7c54bdb55c68898879da71c01b7137d0519c4a29255eacd
+      generation: 2
+      image: sha256:6fa3d13be52de6d2b7c54bdb55c68898879da71c01b7137d0519c4a29255eacd
+    tag: 7.4.0
+  - items:
+    - created: "2023-05-02T12:41:46Z"
+      dockerImageReference: registry.redhat.io/jboss-eap-7/eap74-openjdk11-runtime-openshift-rhel8@sha256:6fa3d13be52de6d2b7c54bdb55c68898879da71c01b7137d0519c4a29255eacd
+      generation: 2
+      image: sha256:6fa3d13be52de6d2b7c54bdb55c68898879da71c01b7137d0519c4a29255eacd
+    tag: latest

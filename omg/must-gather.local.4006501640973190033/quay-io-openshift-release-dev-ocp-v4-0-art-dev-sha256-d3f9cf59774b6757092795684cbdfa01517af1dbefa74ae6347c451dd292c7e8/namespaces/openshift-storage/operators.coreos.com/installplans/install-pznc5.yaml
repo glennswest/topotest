@@ -1,0 +1,515 @@
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: InstallPlan
+metadata:
+  creationTimestamp: "2023-05-04T14:34:29Z"
+  generateName: install-
+  generation: 1
+  managedFields:
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"16b56b3c-0302-4b2c-9877-cc0e9e19ab5f"}: {}
+      f:spec:
+        .: {}
+        f:approval: {}
+        f:approved: {}
+        f:clusterServiceVersionNames: {}
+        f:generation: {}
+    manager: catalog
+    operation: Update
+    time: "2023-05-04T14:34:29Z"
+  - apiVersion: operators.coreos.com/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:bundleLookups: {}
+        f:catalogSources: {}
+        f:conditions: {}
+        f:phase: {}
+        f:plan: {}
+        f:startTime: {}
+    manager: catalog
+    operation: Update
+    subresource: status
+    time: "2023-05-04T14:35:32Z"
+  name: install-pznc5
+  namespace: openshift-storage
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: false
+    kind: Subscription
+    name: lvms-operator
+    uid: 16b56b3c-0302-4b2c-9877-cc0e9e19ab5f
+  resourceVersion: "599126"
+  uid: 9244b2b9-0165-484a-b5e9-eff2035cbb8e
+spec:
+  approval: Automatic
+  approved: true
+  clusterServiceVersionNames:
+  - lvms-operator.v4.12.1
+  generation: 1
+status:
+  bundleLookups:
+  - catalogSourceRef:
+      name: redhat-operators
+      namespace: openshift-marketplace
+    identifier: lvms-operator.v4.12.1
+    path: registry.redhat.io/lvms4/lvms-operator-bundle@sha256:24c111aa744afdbaab9bc5602d8823ada985f3e02bd4ce9364035f7a894ab52b
+    properties: '{"properties":[{"type":"olm.gvk","value":{"group":"lvm.topolvm.io","kind":"LVMCluster","version":"v1alpha1"}},{"type":"olm.gvk","value":{"group":"lvm.topolvm.io","kind":"LVMVolumeGroup","version":"v1alpha1"}},{"type":"olm.gvk","value":{"group":"lvm.topolvm.io","kind":"LVMVolumeGroupNodeStatus","version":"v1alpha1"}},{"type":"olm.gvk","value":{"group":"topolvm.io","kind":"LogicalVolume","version":"v1"}},{"type":"olm.package","value":{"packageName":"lvms-operator","version":"4.12.1"}}]}'
+    replaces: lvms-operator.v4.12.0
+  catalogSources: []
+  conditions:
+  - lastTransitionTime: "2023-05-04T14:35:31Z"
+    lastUpdateTime: "2023-05-04T14:35:31Z"
+    status: "True"
+    type: Installed
+  phase: Complete
+  plan:
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: operators.coreos.com
+      kind: ClusterServiceVersion
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvms-operator.v4.12.1
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1alpha1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRole
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-csi-snapshotter
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRole
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-controller
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-csi-resizer
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: Role
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: vg-manager-role
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: Role
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvms-metrics
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvmvolumegroups.lvm.topolvm.io
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: monitoring.coreos.com
+      kind: ServiceMonitor
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvms-operator-metrics-monitor
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-controller
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvms-metrics
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: vg-manager-rolebinding
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRole
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-csi-provisioner
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: ""
+      kind: Service
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-node-metrics
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: Role
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-csi-resizer
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvmvolumegroupnodestatuses.lvm.topolvm.io
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRole
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-node
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-csi-provisioner
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRole
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: vg-manager-clusterrole
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: ""
+      kind: ServiceAccount
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-controller
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: ""
+      kind: Service
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvms-operator-metrics-service
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-node
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: logicalvolumes.topolvm.io
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: monitoring.coreos.com
+      kind: PrometheusRule
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: prometheus-lvmo-rules
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-csi-snapshotter
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: apiextensions.k8s.io
+      kind: CustomResourceDefinition
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvmclusters.lvm.topolvm.io
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRole
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: metrics-reader
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-metrics
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: ""
+      kind: Service
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvms-webhook-service
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: ""
+      kind: ServiceAccount
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: vg-manager
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-csi-provisioner
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Created
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: ""
+      kind: Service
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvms-node-metrics
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: Role
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-csi-provisioner
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: vg-manager-clusterrolebinding
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: Role
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-metrics
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: ""
+      kind: ServiceAccount
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-node
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: Role
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-leader-election
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-leader-election
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRole
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-csi-resizer
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: topolvm-csi-resizer
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: ""
+      kind: ServiceAccount
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvms-operator
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: Role
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvms-operator.v4.12.1-lvms-operator-dc8cb6b6b
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: RoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvms-operator.v4.12.1-lvms-operator-dc8cb6b6b
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRole
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvms-operator.v4.12.1-65455c75cb
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  - resolving: lvms-operator.v4.12.1
+    resource:
+      group: rbac.authorization.k8s.io
+      kind: ClusterRoleBinding
+      manifest: '{"kind":"ConfigMap","name":"7ac85c54a6740c629b26a2c502b969b8b4a215e5894ecc69306e7f7ea4400ee","namespace":"openshift-marketplace","catalogSourceName":"redhat-operators","catalogSourceNamespace":"openshift-marketplace","replaces":"lvms-operator.v4.12.0","properties":"{\"properties\":[{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMCluster\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroup\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"lvm.topolvm.io\",\"kind\":\"LVMVolumeGroupNodeStatus\",\"version\":\"v1alpha1\"}},{\"type\":\"olm.gvk\",\"value\":{\"group\":\"topolvm.io\",\"kind\":\"LogicalVolume\",\"version\":\"v1\"}},{\"type\":\"olm.package\",\"value\":{\"packageName\":\"lvms-operator\",\"version\":\"4.12.1\"}}]}"}'
+      name: lvms-operator.v4.12.1-65455c75cb
+      sourceName: redhat-operators
+      sourceNamespace: openshift-marketplace
+      version: v1
+    status: Present
+  startTime: "2023-05-04T14:34:57Z"

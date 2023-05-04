@@ -1,0 +1,13 @@
+2023-05-04T16:31:37.395771204Z I0504 16:31:37.395645       1 server.go:92] "Used default resources"
+2023-05-04T16:31:37.395871672Z I0504 16:31:37.395861       1 types.go:136] "Using all namespaces"
+2023-05-04T16:31:37.396165654Z I0504 16:31:37.396153       1 server.go:121] "Metric allow-denylisting" allowDenyStatus="Excluding the following lists that were on denylist: ^kube_.+_annotations$, ^kube_.+_created$, ^kube_pod_init_container_status_running$, ^kube_pod_container_status_terminated$, ^kube_secret_labels$, ^kube_.+_metadata_resource_version$, ^kube_replicaset_metadata_generation$, ^kube_replicaset_status_observed_generation$, ^kube_pod_container_status_running$, ^kube_pod_completion_time$, ^kube_pod_restart_policy$, ^kube_pod_init_container_status_terminated$, ^kube_pod_status_scheduled$"
+2023-05-04T16:31:37.396233531Z W0504 16:31:37.396213       1 client_config.go:617] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
+2023-05-04T16:31:37.396810213Z I0504 16:31:37.396795       1 server.go:249] "Tested communication with server"
+2023-05-04T16:31:37.404300347Z I0504 16:31:37.404271       1 server.go:254] "Run with Kubernetes cluster version" major="1" minor="25" gitVersion="v1.25.4+a34b9e9" gitTreeState="clean" gitCommit="b6d1f054747e9886f61dd85316deac3415e2726f" platform="linux/amd64"
+2023-05-04T16:31:37.404340903Z I0504 16:31:37.404334       1 server.go:255] "Communication with server successful"
+2023-05-04T16:31:37.404494842Z I0504 16:31:37.404484       1 server.go:201] "Started metrics server" metricsServerAddress="127.0.0.1:8081"
+2023-05-04T16:31:37.404677545Z I0504 16:31:37.404657       1 server.go:65] levelinfomsgTLS is disabled.http2false
+2023-05-04T16:31:37.404722118Z I0504 16:31:37.404714       1 metrics_handler.go:97] "Autosharding disabled"
+2023-05-04T16:31:37.405919816Z I0504 16:31:37.405328       1 server.go:190] "Started kube-state-metrics self metrics server" telemetryAddress="127.0.0.1:8082"
+2023-05-04T16:31:37.405919816Z I0504 16:31:37.405378       1 server.go:65] levelinfomsgTLS is disabled.http2false
+2023-05-04T16:31:37.406542093Z I0504 16:31:37.406519       1 builder.go:233] "Active resources" activeStoreNames="certificatesigningrequests,configmaps,cronjobs,daemonsets,deployments,endpoints,horizontalpodautoscalers,ingresses,jobs,leases,limitranges,mutatingwebhookconfigurations,namespaces,networkpolicies,nodes,persistentvolumeclaims,persistentvolumes,poddisruptionbudgets,pods,replicasets,replicationcontrollers,resourcequotas,secrets,services,statefulsets,storageclasses,validatingwebhookconfigurations,volumeattachments"

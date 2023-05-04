@@ -1,0 +1,317 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:06Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kube-storage-version-migrator-operator-fbcb7858d-5h9xs
+    namespace: openshift-kube-storage-version-migrator-operator
+    resourceVersion: "6175"
+    uid: a013c23e-ea95-4963-8dac-e09bd27b2b12
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:06Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_kube-storage-version-migrator-operator-fbcb7858d-5h9xs_openshift-kube-storage-version-migrator-operator_a013c23e-ea95-4963-8dac-e09bd27b2b12_0(338760562bc6f11a408e34477d6fa461a73f0c269722926398507ca8ad0df43f):
+    error adding pod openshift-kube-storage-version-migrator-operator_kube-storage-version-migrator-operator-fbcb7858d-5h9xs
+    to CNI network "multus-cni-network": plugin type="multus" name="multus-cni-network"
+    failed (add): Multus: [openshift-kube-storage-version-migrator-operator/kube-storage-version-migrator-operator-fbcb7858d-5h9xs/a013c23e-ea95-4963-8dac-e09bd27b2b12]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:27Z"
+    name: kube-storage-version-migrator-operator-fbcb7858d-5h9xs.175bfdbb2afb1ba2
+    namespace: openshift-kube-storage-version-migrator-operator
+    resourceVersion: "631635"
+    uid: 2ca30850-f874-452f-961a-0f9280dd8f67
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:21Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: kube-storage-version-migrator-operator-fbcb7858d-5h9xs
+    namespace: openshift-kube-storage-version-migrator-operator
+    resourceVersion: "629031"
+    uid: a013c23e-ea95-4963-8dac-e09bd27b2b12
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:21Z"
+  message: Add eth0 [10.128.0.16/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:21Z"
+    name: kube-storage-version-migrator-operator-fbcb7858d-5h9xs.175bfdbed4d7832d
+    namespace: openshift-kube-storage-version-migrator-operator
+    resourceVersion: "630196"
+    uid: 4b945409-23f2-43be-b916-7b3acf3c3ea1
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-storage-version-migrator-operator}
+    kind: Pod
+    name: kube-storage-version-migrator-operator-fbcb7858d-5h9xs
+    namespace: openshift-kube-storage-version-migrator-operator
+    resourceVersion: "6175"
+    uid: a013c23e-ea95-4963-8dac-e09bd27b2b12
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:22Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:773fe01f949872eaae7daee9bac53f06ca4d375e3f8d6207a9a3eccaa4ab9f98"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:38Z"
+    name: kube-storage-version-migrator-operator-fbcb7858d-5h9xs.175bfdbefb7124dc
+    namespace: openshift-kube-storage-version-migrator-operator
+    resourceVersion: "631831"
+    uid: 4ddd6272-57a5-4e3b-929b-5ad609aa5055
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:55Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-storage-version-migrator-operator}
+    kind: Pod
+    name: kube-storage-version-migrator-operator-fbcb7858d-5h9xs
+    namespace: openshift-kube-storage-version-migrator-operator
+    resourceVersion: "6175"
+    uid: a013c23e-ea95-4963-8dac-e09bd27b2b12
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:55Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:773fe01f949872eaae7daee9bac53f06ca4d375e3f8d6207a9a3eccaa4ab9f98"
+    in 33.294076098s
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:26Z"
+    name: kube-storage-version-migrator-operator-fbcb7858d-5h9xs.175bfdc6bbeca255
+    namespace: openshift-kube-storage-version-migrator-operator
+    resourceVersion: "632249"
+    uid: 92db45bd-b8e4-4e98-8b96-7489848a4a8e
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:37:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: kube-storage-version-migrator-operator
+    namespace: openshift-kube-storage-version-migrator-operator
+    uid: 0d60d3e2-c95f-4a0e-930a-b962a20bce85
+  kind: Event
+  lastTimestamp: "2023-05-04T16:37:05Z"
+  message: Controller "StaticConditionsController" resync interval is set to 0s which
+    might lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:37:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2023-05-04T16:37:05Z"
+    name: kube-storage-version-migrator-operator.175bfe0eeb503587
+    namespace: openshift-kube-storage-version-migrator-operator
+    resourceVersion: "634037"
+    uid: f9baf4a7-2d0b-4f38-8c5b-42f645694a79
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-kube-storage-version-migrator-operator-static-conditions-controller-staticconditionscontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:37:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: kube-storage-version-migrator-operator
+    namespace: openshift-kube-storage-version-migrator-operator
+    uid: 0d60d3e2-c95f-4a0e-930a-b962a20bce85
+  kind: Event
+  lastTimestamp: "2023-05-04T16:37:05Z"
+  message: Controller "LoggingSyncer" resync interval is set to 0s which might lead
+    to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:37:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2023-05-04T16:37:05Z"
+    name: kube-storage-version-migrator-operator.175bfe0eeb52b7b5
+    namespace: openshift-kube-storage-version-migrator-operator
+    resourceVersion: "634038"
+    uid: 2e3d3cc2-253c-4ca1-b944-eea50bc1c897
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-kube-storage-version-migrator-operator-loggingsyncer
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:37:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: ConfigMap
+    name: openshift-kube-storage-version-migrator-operator-lock
+    namespace: openshift-kube-storage-version-migrator-operator
+    resourceVersion: "634035"
+    uid: 0c287db7-615b-4049-a925-2fd6af2228cf
+  kind: Event
+  lastTimestamp: "2023-05-04T16:37:05Z"
+  message: kube-storage-version-migrator-operator-fbcb7858d-5h9xs_373873b3-6ac9-43c3-9e13-0ef5e49274aa
+    became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:37:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: Go-http-client
+      operation: Update
+      time: "2023-05-04T16:37:05Z"
+    name: openshift-kube-storage-version-migrator-operator-lock.175bfe0eeb207321
+    namespace: openshift-kube-storage-version-migrator-operator
+    resourceVersion: "634036"
+    uid: 15da323c-bd08-41db-b329-8ae9c37b16b2
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-kube-storage-version-migrator-operator
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "684691"

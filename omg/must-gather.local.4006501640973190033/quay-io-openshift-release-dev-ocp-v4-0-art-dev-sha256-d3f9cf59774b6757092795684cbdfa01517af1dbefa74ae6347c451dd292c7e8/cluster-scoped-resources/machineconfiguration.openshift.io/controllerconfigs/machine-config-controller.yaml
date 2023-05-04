@@ -1,0 +1,165 @@
+---
+apiVersion: machineconfiguration.openshift.io/v1
+kind: ControllerConfig
+metadata:
+  annotations:
+    machineconfiguration.openshift.io/generated-by-version: v4.12.0-202301262025.p0.ge3dc943.assembly.stream-dirty
+    machineconfiguration.openshift.io/release-image-version: 4.12.2
+  creationTimestamp: "2023-05-02T12:35:16Z"
+  generation: 1
+  managedFields:
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:machineconfiguration.openshift.io/generated-by-version: {}
+          f:machineconfiguration.openshift.io/release-image-version: {}
+      f:spec:
+        .: {}
+        f:additionalTrustBundle: {}
+        f:baseOSContainerImage: {}
+        f:baseOSExtensionsContainerImage: {}
+        f:cloudProviderCAData: {}
+        f:cloudProviderConfig: {}
+        f:clusterDNSIP: {}
+        f:dns:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:metadata: {}
+          f:spec:
+            .: {}
+            f:baseDomain: {}
+          f:status: {}
+        f:images:
+          .: {}
+          f:apiServerWatcherKey: {}
+          f:baremetalRuntimeCfgImage: {}
+          f:corednsImage: {}
+          f:haproxyImage: {}
+          f:infraImageKey: {}
+          f:keepalivedImage: {}
+          f:machineConfigOperator: {}
+        f:infra:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:metadata: {}
+          f:spec:
+            .: {}
+            f:cloudConfig:
+              .: {}
+              f:name: {}
+            f:platformSpec:
+              .: {}
+              f:type: {}
+          f:status:
+            .: {}
+            f:apiServerInternalURI: {}
+            f:apiServerURL: {}
+            f:controlPlaneTopology: {}
+            f:etcdDiscoveryDomain: {}
+            f:infrastructureName: {}
+            f:infrastructureTopology: {}
+            f:platform: {}
+            f:platformStatus:
+              .: {}
+              f:type: {}
+        f:ipFamilies: {}
+        f:kubeAPIServerServingCAData: {}
+        f:network: {}
+        f:networkType: {}
+        f:osImageURL: {}
+        f:platform: {}
+        f:proxy: {}
+        f:pullSecret:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+        f:releaseImage: {}
+        f:rootCAData: {}
+    manager: machine-config-operator
+    operation: Update
+    time: "2023-05-02T12:35:16Z"
+  - apiVersion: machineconfiguration.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:observedGeneration: {}
+    manager: machine-config-controller
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:35:17Z"
+  name: machine-config-controller
+  resourceVersion: "6880"
+  uid: 19c5798e-4160-448b-aa18-f88313908a89
+spec:
+  additionalTrustBundle: null
+  baseOSContainerImage: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f454144d2c32aa6fd99b8c68082f59554751282865dce6a866916d3c75fb02ee
+  baseOSExtensionsContainerImage: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:0888fb7c1f390b453266d54da23b5d47450ff14eea57eed8ba832857af08f9c6
+  cloudProviderCAData: null
+  cloudProviderConfig: ""
+  clusterDNSIP: 172.30.0.10
+  dns:
+    apiVersion: config.openshift.io/v1
+    kind: DNS
+    metadata: {}
+    spec:
+      baseDomain: sno.gw.lo
+    status: {}
+  images:
+    apiServerWatcherKey: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4fafaae3445cd29a8ba685901a338b8539877d15f149466cc7b4e42fdca60c40
+    baremetalRuntimeCfgImage: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:156a06636a074e36238556f1a7e8c40ef252b168ed8cfdc0bcace37e9b56877a
+    corednsImage: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:dfdf833d03dac36b747951107a25ab6424eb387bb140f344d4be8d8c7f4e895f
+    haproxyImage: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fa1ff52055ededc0386ee6b334ffe0cd9252f5878fcccf1396aee30adf6de046
+    infraImageKey: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:847027714e33fd897a4212811c881ec8c736e068c9a81b968346c3e5c90b3c8b
+    keepalivedImage: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1d05f6f7f9426edfc97bfe275521d1e885883a3ba274f390b013689403727edb
+    machineConfigOperator: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4fafaae3445cd29a8ba685901a338b8539877d15f149466cc7b4e42fdca60c40
+  infra:
+    apiVersion: config.openshift.io/v1
+    kind: Infrastructure
+    metadata: {}
+    spec:
+      cloudConfig:
+        name: ""
+      platformSpec:
+        type: None
+    status:
+      apiServerInternalURI: https://api-int.sno.gw.lo:6443
+      apiServerURL: https://api.sno.gw.lo:6443
+      controlPlaneTopology: SingleReplica
+      etcdDiscoveryDomain: ""
+      infrastructureName: sno-npc68
+      infrastructureTopology: SingleReplica
+      platform: None
+      platformStatus:
+        type: None
+  ipFamilies: IPv4
+  kubeAPIServerServingCAData: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURNRENDQWhpZ0F3SUJBZ0lJRTRKemV0Ykdsck13RFFZSktvWklodmNOQVFFTEJRQXdOakVTTUJBR0ExVUUKQ3hNSmIzQmxibk5vYVdaME1TQXdIZ1lEVlFRREV4ZGhaRzFwYmkxcmRXSmxZMjl1Wm1sbkxYTnBaMjVsY2pBZQpGdzB5TXpBMU1ESXhNakV5TlRSYUZ3MHpNekEwTWpreE1qRXlOVFJhTURZeEVqQVFCZ05WQkFzVENXOXdaVzV6CmFHbG1kREVnTUI0R0ExVUVBeE1YWVdSdGFXNHRhM1ZpWldOdmJtWnBaeTF6YVdkdVpYSXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRREdwamNwN3NoSTZrZFNKQ2NaQXRTWjhWVE9yVjFVWUhuMAprbVB4Ri9RUi96Wk5yMWNhcjVlcHhnRDJzSkd6MU1ZVjArWHA3Rkk1cTZ3SVI2OG1ZSmR6UnpVUkI1TjUrNFhiClczbGFraDlIUVBNakE4eGZnU0JMd1VldktDYXpWN0lBbkxjWEQ5MHMrd2VuaU5hZmc3cHBvd25jVldVV1dpZVIKcys2TUVYUHZ6WFhQYTZRdFA2RTd0eVFGd3NMMkpjQTk5UDdPNVF6UGdGaTRoVmd6MHFBMUtYaFptNkF5alVqOApqUWF1YmdaM3JhUzNNa1JUZlJLRW80Mk1tbkJncFFob2luVUU5RWExQnlKNjVFK1J1VWUvWjU0RXVRd0tJL1JsCkV3U0IwUFpzS2k5eWhGelNwclNZRjZnbUF6T2Z4c0JBaGgyUFNSK3lkREJwV2xQM0NQbzNBZ01CQUFHalFqQkEKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlJxekIyOApOU2NmY3BzWFl3ZGRRTTRKYUhKb1FqQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFZQkFweHNTS2wzcTBrclVTCkZSdTNhSWNrOFVMcWlxM2k0T0tvN1pGaEtRTmV0cXVUS1AxbDk1TnQ3YWpkYWluMlVpSEUvbFNLSlVSeElBZHUKNldTbk1ZczN3aVdNREZ2cXAya2pIa0MyUVpqRlBhQzMwOVc4QU1rSG1NalRtV2RXRFBIUThEcXFyVkhSSlQ4agpSMHc0cTVzMWV0SGFxdzNTOFpqaGYvME5oUVphTzNFbk9FT2tldlBCRWdBODhNN1h5ZUpoNUwzZWo2RG5mdHV3CkZCR3FNazNzZkhsbUN0a1AyTk9aaHlsb3ZuTHd0Vk53WUNYaTh5Yy9VeWEveDBSVGpLMzhmbEpkMTVlRTJTQ0kKME5MS2ZYQUZzRlJTSlU0andYWm15aUNtYkRjTUM3b2R4d0NqNXNSdjVQL1dSOU0reFRVTTdZdm9PdXVrTE5vcgo5b09KeGc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCi0tLS0tQkVHSU4gQ0VSVElGSUNBVEUtLS0tLQpNSUlESGpDQ0FnYWdBd0lCQWdJSWZFY2QxY0NGVEdvd0RRWUpLb1pJaHZjTkFRRUxCUUF3TFRFU01CQUdBMVVFCkN4TUpiM0JsYm5Ob2FXWjBNUmN3RlFZRFZRUURFdzVyZFdKbGJHVjBMWE5wWjI1bGNqQWVGdzB5TXpBMU1ESXgKTWpFeU5UZGFGdzB5TXpBMU1ETXhNakV5TlRkYU1DMHhFakFRQmdOVkJBc1RDVzl3Wlc1emFHbG1kREVYTUJVRwpBMVVFQXhNT2EzVmlaV3hsZEMxemFXZHVaWEl3Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLCkFvSUJBUURhOExncWo5NGJkc0IzMWQxQ2NxazBCaVV6QU5VSGs5L2QvN0k5TWFqR2M2QWFIZ3VvZWF6SWVVKzUKUS96Q0t6ZVBpdWlZTVN0S2RSV2QrVHVVOTVoRHpLeVI4Rk1pK3ZyZVF3NloveVU1TFppb0RaTEZUbUt6VElsMwpoYW1XY3VxTEdPcy8ySnhaaGlVbU5RSXpVODM3RERMOTdrN3kzZ1UvR2gzQ2owMUErWFgzRHU5SGxSRUh1Zm1KCktpanNKejk2RjBuMGt4MXBLUFVYVkorWVY3UFNEcXFyaTArd202clJveHk1UmFmMjhCejd1OGZMRnlTSURtN2YKR2k3YkJ4QTltYW9qREJMWVBZU1d5N1Z6Q0xEaUJNTVFEOHNCY1hRbjhzWWV2Z3VpeVFqNGJiRGlhVXE5ZGNvOApCZ2VQUXNhWE9OSitheGNkT2xScHczSjNuQTFGQWdNQkFBR2pRakJBTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQCkJnTlZIUk1CQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJUd0crUFdtNnVMejZLYXR5cE05VDA5bzNYWERUQU4KQmdrcWhraUc5dzBCQVFzRkFBT0NBUUVBTjBxT3VxZjdvcWo0L1ZKTEcyYWl3S0lXUWtXaW1FRlNFejhiR3pONQpnMEdSV1JJYnVCTit1YmozenFtVVR4WndWd0FLZTNBSHArTUdScEZOekRTM0dJRjBJYjhuS0ZzODFCcjB4VjNLCk9vTzJxVDROek0rMzNwbDZHK1VweGVXWWZpRll5N21oelFuUjQxU1ZYdW9JL2RMcmZIZmp6RWhLa3Budkc2eTQKd1BTV1h4SGZwL3ozUlkwcXU3ancwbEY5UkxpWHRvV1FmK0NmcHdSZmZSWFRKTjA5by80RUg3M0tjemZ6eUFMWApobG5RaGYyN3pSdHBQdmYvOUtSZ3RGRm92MnRoOFlSTVFraVF0NitnRkVGaE1nU0FoQUdvR2ZZakU0b2xpRTZiCnMrN1JVMytQbHVTNWkycjloSFltVDYrL2RIRGhObVk4K1pVaWxRVDVsdHRoYmc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCi0tLS0tQkVHSU4gQ0VSVElGSUNBVEUtLS0tLQpNSUlETkRDQ0FoeWdBd0lCQWdJSVVPVHh0ckVRVnVRd0RRWUpLb1pJaHZjTkFRRUxCUUF3T0RFU01CQUdBMVVFCkN4TUpiM0JsYm5Ob2FXWjBNU0l3SUFZRFZRUURFeGxyZFdKbExXTnZiblJ5YjJ3dGNHeGhibVV0YzJsbmJtVnkKTUI0WERUSXpNRFV3TWpFeU1USTFOMW9YRFRJME1EVXdNVEV5TVRJMU4xb3dPREVTTUJBR0ExVUVDeE1KYjNCbApibk5vYVdaME1TSXdJQVlEVlFRREV4bHJkV0psTFdOdmJuUnliMnd0Y0d4aGJtVXRjMmxuYm1WeU1JSUJJakFOCkJna3Foa2lHOXcwQkFRRUZBQU9DQVE4QU1JSUJDZ0tDQVFFQTdFVndPZ2lnNUt1OHh0WGN4MzRmcE9Tck0xZE4KQyt0T3UvOWlTbVYyM0JkeXYyM2NHVFJpOW5iL1VZNVphNUZiTEFjanFJb3dtZWlHOG9oZ0NRZTJvMjBVR0NzVApCNjVJUS9xdVkzaWJGOHRabkYwQVIyUnd4eEhaT1cwcjFKdHRidDAzQ1V4SWFsWFFPbkMxOEZucnhpUVJ6TkYrCnE4UlAvU3VYTU1SSWtrNFNMVWp6YVhNelFIck94SHhJQzN4UTlPU1VUMWpQRXlNSFI0UDcxUmpmK0dTWG83MlUKV1ZVNlVQRzVFbWU0NkloTkZOSGFPZm1Mb3oxczJzdy9oMzllcjIzYmVMelFOclBieGtNdWNMOHA5RS9VZUExMwpvaVZTZ1BRQWtlVWJJdWpMQUpNYnZNdzdGaWpaKzdvK2NpMjhFNk1ycC90QVFjM3hxRmFmQ3pzeFhRSURBUUFCCm8wSXdRREFPQmdOVkhROEJBZjhFQkFNQ0FxUXdEd1lEVlIwVEFRSC9CQVV3QXdFQi96QWRCZ05WSFE0RUZnUVUKU3l3OVI0SGozd1RkT2ZBc1JSOVNrZXFhMFFJd0RRWUpLb1pJaHZjTkFRRUxCUUFEZ2dFQkFEdFVIbEJaNG8xWgp2TjBROFAyb1RNYXVuenJLVGc5SDhCNm9Rc2hrLytnRTVxT3lVNktQU1lvWW0zYlBTV2tUbmNSd3BWdGxoOTlOCnc1aGY3blVPZjRQdHp5WUlEbVNEaUlVM3g0QVZaRXZPV2h4ZjRPNmVDQ2JPdE5sQUdiZmQ5d3owQ2tSNjVDbkQKQUlueEdQT0xJTVhvcGdYdFBlbjJxWGdQTDJCUFpOV2dqS0YvWjdCUHhOeGlKalhlWXVYOFRwaW5GdW5WOE1iNQozdktzVUxYZ0VaT08xeXBKdkl3Nmd5R3pqbkpkYjJjUnd5WDVVdkNic3ZYcTVteW8xT2dab2NVS0h0YWJFOEVJCnkrNzJYYlVia0dtdDVlRmNmWlVYa1hXcUl0YVROSmlIbURRTlZES3BSQmhUdTU4Ri9CLzNuQ3FFM2o3YVA0cEYKeHBJeXZIbjAvd3c9Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0KLS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURRakNDQWlxZ0F3SUJBZ0lJTE54ZUZBTUF3VzR3RFFZSktvWklodmNOQVFFTEJRQXdQekVTTUJBR0ExVUUKQ3hNSmIzQmxibk5vYVdaME1Ta3dKd1lEVlFRREV5QnJkV0psTFdGd2FYTmxjblpsY2kxMGJ5MXJkV0psYkdWMApMWE5wWjI1bGNqQWVGdzB5TXpBMU1ESXhNakV5TlRkYUZ3MHlOREExTURFeE1qRXlOVGRhTUQ4eEVqQVFCZ05WCkJBc1RDVzl3Wlc1emFHbG1kREVwTUNjR0ExVUVBeE1nYTNWaVpTMWhjR2x6WlhKMlpYSXRkRzh0YTNWaVpXeGwKZEMxemFXZHVaWEl3Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQ3ZpdEN4UU5xNgp6bThITGZRNVdzN2RJbWxCWVBNZWJ0UmtvUXY2Vi8wM0kvdGVTWEFER0MzTzZMZWhKaEJrZVRheUVyRWxYZDRPCllHNWFrZURQSVgxVTdVKzdKa1RydmQ5NUg1N0lMbVZ2OGpBY1VPREo1Q2NyYVM1RnljdlFKeDltWDN3aGJ6cG0Ka3AxWDQvY0pXSEgyczlmQTh2ckU0b2EwL09MenBKSzZkZ2tWeTFqK0FtMjYzNEVoREhVWUlTSWF1dWtJdmdvSAp0UzFyK0c4Qm9ZU0lKRG5DSktIdFIxTEYrRm8yVTIzOERiV3lyWVlFOEl2R0g1bDl0aWlHVjU4a051T1p4NmFVCmh1SWNsWDA3TU16ZE5ldHdOWmxSQjBiem03UlN4NVpoY0lkTC9mMEZvS1JicE50YlJDb1VLbGZ5alRSczgvaUMKa2tWVVg4K0RaeElOQWdNQkFBR2pRakJBTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBRApBUUgvTUIwR0ExVWREZ1FXQkJSOWVwYk05VTROMXEvREVBL2djRFFYVmd5bDV6QU5CZ2txaGtpRzl3MEJBUXNGCkFBT0NBUUVBcC9zbVhNTi9NWkJnVS8xdVRxS1ExUkFzV0JxT3NuQ2dKWUh0a2NYN2R2NnA2RVEwaUI5V08xREIKR0VFSE9mMDgrTXNPOGlaYlVveHBRYnJCdkRlSHJKeU9ZMEVBOUVwWUllcnM0QVVKYXltdzlWUkNocDV1L0Y3cQpqNS9yVVdaVzFMWmp1SlMxV3g5S2hiUTkxRjBzck1XR0hFNkZaMG5RNDFwY3BYaTZkODk3UjdrVkNRVFZiZ2Q1Clhkcm9DVmxvRW9zalQzODI3MkFBakgyVWRDVzUxeTFva1lib2JCZFd3SWU5cU9PMDkrbzZ0NXFSV0Y2VUlYQmwKWGNHcGxob2p4eGlocWJXbnU4TG55ZXQrRU1OOEJ0THNFcUhMQ1R4Q0Y3TWJnWDFIcG5VYkNoZVNjODBITkVBSApwQUlYdTl1d2Q2cW41SzlISzJXa0RnTm9ZQmpKN2c9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCi0tLS0tQkVHSU4gQ0VSVElGSUNBVEUtLS0tLQpNSUlEU0RDQ0FqQ2dBd0lCQWdJSVFaUXJ5RllOTFJvd0RRWUpLb1pJaHZjTkFRRUxCUUF3UWpFU01CQUdBMVVFCkN4TUpiM0JsYm5Ob2FXWjBNU3d3S2dZRFZRUURFeU5yZFdKbGJHVjBMV0p2YjNSemRISmhjQzFyZFdKbFkyOXUKWm1sbkxYTnBaMjVsY2pBZUZ3MHlNekExTURJeE1qRXlOVFZhRncwek16QTBNamt4TWpFeU5UVmFNRUl4RWpBUQpCZ05WQkFzVENXOXdaVzV6YUdsbWRERXNNQ29HQTFVRUF4TWphM1ZpWld4bGRDMWliMjkwYzNSeVlYQXRhM1ZpClpXTnZibVpwWnkxemFXZHVaWEl3Z2dFaU1BMEdDU3FHU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRQzkKSkFRSU1IUlBnYUhreEdnc1NkVTQ5S0pzcE1YejVoWG5qN1JKeFVCaHNiRldQbUFNV0xnRDMrY3FuNXk0bDErRwoxTUVvbDNpeXBGUVB1MHMyZUpIZ2lSQ1VyT2hDTTNLbkh0bys5RTZJQlE1WVZrTlhGeUM3eEJJWFQ5MG9KTXd1CitsVGpqTUpTbmdZZk56cmNQbGZmZ21YU25nU3pydFhDcEozU21aUlBXUlJGK2V5VnlIMncyY25lUzZVNmF2dVAKbUpYTm1CczQydU1IQ0pTdUc0Y0IxSHZUNHJBN0dpSVFHNG9VekIwZmlnVnpuNzBpTVRRZmo4OStSUTcrWkxicgpwYStsbHdaWS9ZWHNneVAwb0RxQksrQTFyMndRKzIzeVRsRWFWYjk4bUZweDg1MGx2ZkQzWFZSMnZwYzVjZG9JCkJFdCtSZXNUNGIreFExU2JyRk1qQWdNQkFBR2pRakJBTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUIKQWY4RUJUQURBUUgvTUIwR0ExVWREZ1FXQkJTZXB2SXdCZG1aWjEzYVprOFZQTkJQdWprWDVUQU5CZ2txaGtpRwo5dzBCQVFzRkFBT0NBUUVBRVhMT0NpK2hsQ01iN1BqTzBVOUVzamhoZDNtOVppR1dLSkl2MXN1eEpmR3ZRcmNmCjIzbVNaZGRwSmwzVnpZWGtuL2VBYituZ3dVcVZGQ3RtRks2RFdvVEdXNFhRaXJWMStNZTU1WmNPQVJtVDN4dmYKcXI0ZGREeW9yWHpZTkROKytnZ1lXeDdIR0g5b1Mybm1PTjlhZ1lkUGNxZmIyci9VdnRYMUZ0d3dWdjd2TnVSbwo3ZnFGYlFlWkVETGVpWWlxYUlTM1VsRVZQUmJMN2xIS1JpRlhSNldZMEU3a1FzRW14QkFxaXliR2V0YkdMcFptCnV6bTF3aThmU0o1T3ZleFRQWjk5c20xRFl6WURSTnFiNERoYlRuRndwUkUwSExtaER4MUtHUFFwdnBJS255VmMKUnlsL3hWeEdRTTNBaG9sVVNPQVp2OENqUk9OeDZTTDllblFwcXc9PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+  network: null
+  networkType: OVNKubernetes
+  osImageURL: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:cb427d372444c5227be7a48dc1fac440d1c35e7ebcc83ca4ac151b9a8f032202
+  platform: none
+  proxy: null
+  pullSecret:
+    name: pull-secret
+    namespace: openshift-config
+  releaseImage: ""
+  rootCAData: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURFRENDQWZpZ0F3SUJBZ0lJSm00d3d5RGlmVGN3RFFZSktvWklodmNOQVFFTEJRQXdKakVTTUJBR0ExVUUKQ3hNSmIzQmxibk5vYVdaME1SQXdEZ1lEVlFRREV3ZHliMjkwTFdOaE1CNFhEVEl6TURVd01qRXlNVEkxTlZvWApEVE16TURReU9URXlNVEkxTlZvd0pqRVNNQkFHQTFVRUN4TUpiM0JsYm5Ob2FXWjBNUkF3RGdZRFZRUURFd2R5CmIyOTBMV05oTUlJQklqQU5CZ2txaGtpRzl3MEJBUUVGQUFPQ0FROEFNSUlCQ2dLQ0FRRUF0Rjg2ZzhpeDI0NUwKL3B4UFpkQWtNc3RlQU8xd3dGVEk3YkVQSUQ2NjcyQ3NSb25pemtuajM1bThrbDhqQ3V6NEFzL1J5Vm5GaUhEZQpRcXR6MUpNSGlOUlAwU3Q0aEFLN3lhYzBuLzdzQVJudnF6Z3FnYzZ1RE1IL3BubHd1c2JxSXlDd0pucStwUUQvCk9qZXZLNVZXaXgzUGFmRWVxSEFZTWdZN3IrMWxZV0dEaGFFbFY5M2ZzaTdNdDdFRGhLb2RkS2h5eFdpakdhQ2IKc2pQN2Z6T2tGRUkyQWlxa2s5VDczUWs5UXBvei91RURHVGp2c3hEV1JqOTBURit4endBdnhpTGR5ckdNOVdmUQp2NWF2S3FPaVhucllyWDNuRkhLRUFDVVAvQzQrMkRmSExBb2FIcVhVZzVFdnBMWmhjcGt1cGFYSUpoNjdDQ1ROCndwREtFUVo1b1FJREFRQUJvMEl3UURBT0JnTlZIUThCQWY4RUJBTUNBcVF3RHdZRFZSMFRBUUgvQkFVd0F3RUIKL3pBZEJnTlZIUTRFRmdRVUljVDVNNFJEdEtJZHV6M0psdDlZTFVZWk5aZ3dEUVlKS29aSWh2Y05BUUVMQlFBRApnZ0VCQUpaUmtxMmtpUldsSDZHWnl6bDRZMXAyNjhpUWdUVkRmUzZOMDBlNVdlZXI5SEtKRFFkaHpUZ3RzK2d3CnptTldrUDlFcVBTT2pRekM4a0NzK0JzNkxVMG5tb3FmKzdCbWlLaFEzeldBVnV2ZER0TEI0Uy9JNExBOC9sQ3QKLzZIL1VpZXoxWGwwcytnOU9hOVQ0RDNiRW0yMEd5VlRKR0RBRHhRbkoxSVlaMGIrTFdGdjRVWWNHOFdLbU9lSAp6NG9YWEhIZkVIa2t2ZXRnUnlOcDJ3Y1czWkowY3hxWllraXIvd3VsYjZsQmVvTkZXcUFjMUhPZlM0aDZmS3hLCi96d3VLQmpRbUg3ZWM1dGFMOFA1TGdqcTRlNHV0TldUaEVMZ2NJb3dINVhCSTI1a1Fzbmp4dnFwL3VQdUpyY1UKczRRYVlLME0vWGdXazlxOHFVZklXQUMybjQ4PQotLS0tLUVORCBDRVJUSUZJQ0FURS0tLS0tCg==
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-02T12:35:16Z"
+    message: sync completed towards (1) generation using controller version v4.12.0-202301262025.p0.ge3dc943.assembly.stream-dirty
+    status: "True"
+    type: TemplateControllerCompleted
+  - lastTransitionTime: "2023-05-02T12:35:16Z"
+    status: "False"
+    type: TemplateControllerRunning
+  - lastTransitionTime: "2023-05-02T12:35:16Z"
+    status: "False"
+    type: TemplateControllerFailing
+  observedGeneration: 1

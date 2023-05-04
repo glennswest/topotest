@@ -1,0 +1,148 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      operator.openshift.io/spec-hash: 9c74227d7f96d723d980c50373a5e91f08c5893365bfd5a5040449b1b6585a23
+      service.alpha.openshift.io/serving-cert-secret-name: serving-cert
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:28:45Z"
+    labels:
+      prometheus: openshift-apiserver
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:operator.openshift.io/spec-hash: {}
+            f:service.alpha.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:prometheus: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: cluster-openshift-apiserver-operator
+      operation: Update
+      time: "2023-05-02T12:28:45Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:31:28Z"
+    name: api
+    namespace: openshift-apiserver
+    resourceVersion: "5683"
+    uid: ca865506-78c7-4888-8e6b-af6cc2551884
+  spec:
+    clusterIP: 172.30.68.201
+    clusterIPs:
+    - 172.30.68.201
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 8443
+    selector:
+      apiserver: "true"
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+    creationTimestamp: "2023-05-02T12:37:28Z"
+    labels:
+      prometheus: openshift-apiserver-check-endpoints
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+          f:labels:
+            .: {}
+            f:prometheus: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":17698,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2023-05-02T12:37:28Z"
+    name: check-endpoints
+    namespace: openshift-apiserver
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+    resourceVersion: "8222"
+    uid: 1fb25509-3a9c-48c6-b45b-1057d1d88a5f
+  spec:
+    clusterIP: 172.30.10.95
+    clusterIPs:
+    - 172.30.10.95
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: check-endpoints
+      port: 17698
+      protocol: TCP
+      targetPort: 17698
+    selector:
+      apiserver: "true"
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "684738"

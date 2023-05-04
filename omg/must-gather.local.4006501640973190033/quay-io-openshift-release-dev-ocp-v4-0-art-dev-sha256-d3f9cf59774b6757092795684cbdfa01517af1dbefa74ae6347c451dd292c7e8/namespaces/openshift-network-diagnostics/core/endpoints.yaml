@@ -1,0 +1,82 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:31:20Z"
+    creationTimestamp: "2023-05-02T12:26:15Z"
+    labels:
+      app: network-check-source
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:31:20Z"
+    name: network-check-source
+    namespace: openshift-network-diagnostics
+    resourceVersion: "630174"
+    uid: ac931afe-3331-4690-8e6c-c3afe23ca404
+  subsets:
+  - addresses:
+    - ip: 10.128.0.37
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: network-check-source-b94cc7564-844f6
+        namespace: openshift-network-diagnostics
+        uid: a33761bc-e9dc-4417-ba03-d891081f012c
+    ports:
+    - name: check-endpoints
+      port: 17698
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:31:48Z"
+    creationTimestamp: "2023-05-02T12:26:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:31:49Z"
+    name: network-check-target
+    namespace: openshift-network-diagnostics
+    resourceVersion: "630537"
+    uid: b375fdde-e928-499d-90bf-31286e136019
+  subsets:
+  - addresses:
+    - ip: 10.128.0.32
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: network-check-target-vlsgh
+        namespace: openshift-network-diagnostics
+        uid: 1fd5617f-326f-4021-ae3b-e2cd291d1c63
+    ports:
+    - port: 8080
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "684726"

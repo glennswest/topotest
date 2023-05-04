@@ -1,0 +1,132 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.93
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: console-5d76b96c44-tnzx7
+      namespace: openshift-console
+      uid: 952f2420-c5dd-471c-9285-0d191d9bc348
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:34:07Z"
+    creationTimestamp: "2023-05-02T12:41:47Z"
+    generateName: console-
+    generation: 14
+    labels:
+      app: console
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: console
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"fde739bb-4674-4309-8b23-5685b1a88112"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:34:07Z"
+    name: console-w4ckj
+    namespace: openshift-console
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: console
+      uid: fde739bb-4674-4309-8b23-5685b1a88112
+    resourceVersion: "632107"
+    uid: 361e4af3-ce07-4146-9cdf-6170513e0607
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.79
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: downloads-797d94d7f9-tb6j4
+      namespace: openshift-console
+      uid: ace47697-183b-412e-96ea-3919b15b29c3
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:33:27Z"
+    creationTimestamp: "2023-05-02T12:41:47Z"
+    generateName: downloads-
+    generation: 6
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: downloads
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"ca0a3d75-7199-4dd2-9b5d-249fe5c4c6bb"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:33:28Z"
+    name: downloads-zhrzt
+    namespace: openshift-console
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: downloads
+      uid: ca0a3d75-7199-4dd2-9b5d-249fe5c4c6bb
+    resourceVersion: "631644"
+    uid: af79a69e-7076-4c44-9e38-a4b8b8f7d62a
+  ports:
+  - name: http
+    port: 8080
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "684623"

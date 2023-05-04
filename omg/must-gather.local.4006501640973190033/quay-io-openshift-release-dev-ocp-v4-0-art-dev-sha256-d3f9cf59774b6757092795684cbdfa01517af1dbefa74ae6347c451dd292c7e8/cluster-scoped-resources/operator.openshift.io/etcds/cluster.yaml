@@ -1,0 +1,231 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: Etcd
+metadata:
+  annotations:
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2023-05-02T12:18:05Z"
+  generation: 2
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:18:05Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:controlPlane:
+            .: {}
+            f:replicas: {}
+          f:servingInfo:
+            .: {}
+            f:cipherSuites: {}
+            f:minTLSVersion: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    time: "2023-05-02T12:28:40Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:latestAvailableRevision: {}
+        f:latestAvailableRevisionReason: {}
+        f:nodeStatuses: {}
+        f:readyReplicas: {}
+    manager: cluster-etcd-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:36:08Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "633238"
+  uid: 95a0cdef-fa24-44e2-8e8d-5d87b7262efd
+spec:
+  logLevel: Normal
+  managementState: Managed
+  observedConfig:
+    controlPlane:
+      replicas: 1
+    servingInfo:
+      cipherSuites:
+      - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      minTLSVersion: VersionTLS12
+  operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-04T16:36:06Z"
+    reason: MembersReported
+    status: "False"
+    type: EtcdMembersControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:28:28Z"
+    reason: NoUnsupportedConfigOverrides
+    status: "True"
+    type: UnsupportedConfigOverridesUpgradeable
+  - lastTransitionTime: "2023-05-02T12:29:30Z"
+    status: "False"
+    type: InstallerControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:31:30Z"
+    message: 1 nodes are active; 1 nodes are at revision 3
+    status: "True"
+    type: StaticPodsAvailable
+  - lastTransitionTime: "2023-05-02T12:38:56Z"
+    message: 1 nodes are at revision 3
+    reason: AllNodesAtLatestRevision
+    status: "False"
+    type: NodeInstallerProgressing
+  - lastTransitionTime: "2023-05-02T12:28:28Z"
+    status: "False"
+    type: NodeInstallerDegraded
+  - lastTransitionTime: "2023-05-02T12:41:08Z"
+    message: All master nodes are ready
+    reason: MasterNodesReady
+    status: "False"
+    type: NodeControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:28:29Z"
+    reason: AsExpected
+    status: "True"
+    type: DefragControllerDisabled
+  - lastTransitionTime: "2023-05-04T16:36:08Z"
+    reason: AsExpected
+    status: "False"
+    type: BackingResourceControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:28:33Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:28:40Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2023-05-02T12:28:44Z"
+    reason: AsExpected
+    status: "False"
+    type: MachineDeletionHooksControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:28:48Z"
+    reason: AsExpected
+    status: "False"
+    type: EnvVarControllerDegraded
+  - lastTransitionTime: "2023-05-03T06:45:09Z"
+    status: "False"
+    type: TargetConfigControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:28:55Z"
+    reason: AsExpected
+    status: "False"
+    type: UpgradeBackupControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:28:57Z"
+    reason: AsExpected
+    status: "False"
+    type: QuorumGuardCleanupControllerDegraded
+  - lastTransitionTime: "2023-05-03T07:30:03Z"
+    reason: EtcdEndpointsUpdated
+    status: "False"
+    type: EtcdEndpointsDegraded
+  - lastTransitionTime: "2023-05-04T16:36:08Z"
+    reason: AsExpected
+    status: "False"
+    type: ScriptControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:29:06Z"
+    reason: AsExpected
+    status: "False"
+    type: ClusterMemberRemovalControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:29:09Z"
+    reason: AsExpected
+    status: "False"
+    type: GuardControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:29:11Z"
+    status: "False"
+    type: InstallerPodPendingDegraded
+  - lastTransitionTime: "2023-05-02T12:29:11Z"
+    status: "False"
+    type: InstallerPodContainerWaitingDegraded
+  - lastTransitionTime: "2023-05-02T12:29:11Z"
+    status: "False"
+    type: InstallerPodNetworkingDegraded
+  - lastTransitionTime: "2023-05-03T07:30:02Z"
+    reason: AsExpected
+    status: "False"
+    type: EtcdStaticResourcesDegraded
+  - lastTransitionTime: "2023-05-02T12:29:14Z"
+    reason: AsExpected
+    status: "False"
+    type: MissingStaticPodControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:29:15Z"
+    reason: AsExpected
+    status: "False"
+    type: EtcdCertSignerControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:31:26Z"
+    status: "False"
+    type: StaticPodsDegraded
+  - lastTransitionTime: "2023-05-04T16:36:06Z"
+    reason: AsExpected
+    status: "False"
+    type: BootstrapTeardownDegraded
+  - lastTransitionTime: "2023-05-02T12:29:34Z"
+    reason: AsExpected
+    status: "False"
+    type: ClusterMemberControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:31:37Z"
+    status: "False"
+    type: RevisionControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:29:34Z"
+    message: No unhealthy members found
+    reason: AsExpected
+    status: "False"
+    type: EtcdMembersDegraded
+  - lastTransitionTime: "2023-05-02T12:29:34Z"
+    message: No unstarted etcd members found
+    reason: AsExpected
+    status: "False"
+    type: EtcdMembersProgressing
+  - lastTransitionTime: "2023-05-02T12:29:34Z"
+    message: 1 members are available
+    reason: EtcdQuorate
+    status: "True"
+    type: EtcdMembersAvailable
+  - lastTransitionTime: "2023-05-02T12:31:24Z"
+    message: etcd-bootstrap member is already removed
+    reason: BootstrapAlreadyRemoved
+    status: "True"
+    type: EtcdRunningInCluster
+  - lastTransitionTime: "2023-05-02T12:48:52Z"
+    reason: AsExpected
+    status: "False"
+    type: FSyncControllerDegraded
+  latestAvailableRevision: 3
+  latestAvailableRevisionReason: ""
+  nodeStatuses:
+  - currentRevision: 3
+    nodeName: node
+  readyReplicas: 0

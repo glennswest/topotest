@@ -1,0 +1,412 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Pod
+  metadata:
+    annotations:
+      k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.7/23"],"mac_address":"0a:58:0a:80:00:07","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.7/23","gateway_ip":"10.128.0.1"}}'
+      k8s.v1.cni.cncf.io/network-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.128.0.7"
+            ],
+            "mac": "0a:58:0a:80:00:07",
+            "default": true,
+            "dns": {}
+        }]
+      k8s.v1.cni.cncf.io/networks-status: |-
+        [{
+            "name": "ovn-kubernetes",
+            "interface": "eth0",
+            "ips": [
+                "10.128.0.7"
+            ],
+            "mac": "0a:58:0a:80:00:07",
+            "default": true,
+            "dns": {}
+        }]
+    creationTimestamp: "2023-05-02T12:25:38Z"
+    generateName: kube-controller-manager-operator-8bb498f8b-
+    labels:
+      app: kube-controller-manager-operator
+      pod-template-hash: 8bb498f8b
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:target.workload.openshift.io/management: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:pod-template-hash: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0893e12a-e927-484d-b1c4-a56464eb6f8d"}: {}
+        f:spec:
+          f:automountServiceAccountToken: {}
+          f:containers:
+            k:{"name":"kube-controller-manager-operator"}:
+              .: {}
+              f:args: {}
+              f:command: {}
+              f:env:
+                .: {}
+                k:{"name":"CLUSTER_POLICY_CONTROLLER_IMAGE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"IMAGE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"OPERAND_IMAGE_VERSION"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"OPERATOR_IMAGE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"OPERATOR_IMAGE_VERSION"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+                k:{"name":"POD_NAME"}:
+                  .: {}
+                  f:name: {}
+                  f:valueFrom:
+                    .: {}
+                    f:fieldRef: {}
+                k:{"name":"TOOLS_IMAGE"}:
+                  .: {}
+                  f:name: {}
+                  f:value: {}
+              f:image: {}
+              f:imagePullPolicy: {}
+              f:name: {}
+              f:ports:
+                .: {}
+                k:{"containerPort":8443,"protocol":"TCP"}:
+                  .: {}
+                  f:containerPort: {}
+                  f:name: {}
+                  f:protocol: {}
+              f:resources:
+                .: {}
+                f:requests:
+                  .: {}
+                  f:cpu: {}
+                  f:memory: {}
+              f:securityContext:
+                .: {}
+                f:allowPrivilegeEscalation: {}
+                f:capabilities:
+                  .: {}
+                  f:drop: {}
+              f:terminationMessagePath: {}
+              f:terminationMessagePolicy: {}
+              f:volumeMounts:
+                .: {}
+                k:{"mountPath":"/var/run/configmaps/config"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                k:{"mountPath":"/var/run/secrets/kubernetes.io/serviceaccount"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+                  f:readOnly: {}
+                k:{"mountPath":"/var/run/secrets/serving-cert"}:
+                  .: {}
+                  f:mountPath: {}
+                  f:name: {}
+          f:dnsPolicy: {}
+          f:enableServiceLinks: {}
+          f:nodeSelector: {}
+          f:priorityClassName: {}
+          f:restartPolicy: {}
+          f:schedulerName: {}
+          f:securityContext:
+            .: {}
+            f:runAsNonRoot: {}
+            f:runAsUser: {}
+            f:seccompProfile:
+              .: {}
+              f:type: {}
+          f:serviceAccount: {}
+          f:serviceAccountName: {}
+          f:terminationGracePeriodSeconds: {}
+          f:tolerations: {}
+          f:volumes:
+            .: {}
+            k:{"name":"config"}:
+              .: {}
+              f:configMap:
+                .: {}
+                f:defaultMode: {}
+                f:name: {}
+              f:name: {}
+            k:{"name":"kube-api-access"}:
+              .: {}
+              f:name: {}
+              f:projected:
+                .: {}
+                f:defaultMode: {}
+                f:sources: {}
+            k:{"name":"serving-cert"}:
+              .: {}
+              f:name: {}
+              f:secret:
+                .: {}
+                f:defaultMode: {}
+                f:optional: {}
+                f:secretName: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-02T12:25:38Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            .: {}
+            k:{"type":"PodScheduled"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:message: {}
+              f:reason: {}
+              f:status: {}
+              f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      subresource: status
+      time: "2023-05-02T12:25:38Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:k8s.ovn.org/pod-networks: {}
+      manager: node
+      operation: Update
+      time: "2023-05-02T12:28:18Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:k8s.v1.cni.cncf.io/network-status: {}
+            f:k8s.v1.cni.cncf.io/networks-status: {}
+      manager: multus
+      operation: Update
+      subresource: status
+      time: "2023-05-02T12:28:19Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:conditions:
+            k:{"type":"ContainersReady"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Initialized"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+            k:{"type":"Ready"}:
+              .: {}
+              f:lastProbeTime: {}
+              f:lastTransitionTime: {}
+              f:status: {}
+              f:type: {}
+          f:containerStatuses: {}
+          f:hostIP: {}
+          f:phase: {}
+          f:podIP: {}
+          f:podIPs:
+            .: {}
+            k:{"ip":"10.128.0.7"}:
+              .: {}
+              f:ip: {}
+          f:startTime: {}
+      manager: kubelet
+      operation: Update
+      subresource: status
+      time: "2023-05-04T16:31:32Z"
+    name: kube-controller-manager-operator-8bb498f8b-629jl
+    namespace: openshift-kube-controller-manager-operator
+    ownerReferences:
+    - apiVersion: apps/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: ReplicaSet
+      name: kube-controller-manager-operator-8bb498f8b
+      uid: 0893e12a-e927-484d-b1c4-a56464eb6f8d
+    resourceVersion: "630384"
+    uid: a3d2c9e9-d114-4450-95d8-a9ddebd47907
+  spec:
+    automountServiceAccountToken: false
+    containers:
+    - args:
+      - --config=/var/run/configmaps/config/config.yaml
+      command:
+      - cluster-kube-controller-manager-operator
+      - operator
+      env:
+      - name: IMAGE
+        value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c8d009a8c5ea6b7739d18d167647f2bd1733af8560b6d7b013a6d0c35e266323
+      - name: OPERATOR_IMAGE
+        value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:81a043e61c07b8e93c6b082aa920d61ffa69762bcc2ef1018360026d62c11b18
+      - name: CLUSTER_POLICY_CONTROLLER_IMAGE
+        value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:09c8eb0283a9eda5b282f04357875966a549651e120e527904a917ec862eb642
+      - name: TOOLS_IMAGE
+        value: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9e5930a75f895b97e39cc1f58f5c5eb014ba14bcc45d8b06fe3ca719ef35b92f
+      - name: OPERATOR_IMAGE_VERSION
+        value: 4.12.2
+      - name: OPERAND_IMAGE_VERSION
+        value: 1.25.4
+      - name: POD_NAME
+        valueFrom:
+          fieldRef:
+            apiVersion: v1
+            fieldPath: metadata.name
+      image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:81a043e61c07b8e93c6b082aa920d61ffa69762bcc2ef1018360026d62c11b18
+      imagePullPolicy: IfNotPresent
+      name: kube-controller-manager-operator
+      ports:
+      - containerPort: 8443
+        name: metrics
+        protocol: TCP
+      resources:
+        requests:
+          cpu: 10m
+          memory: 50Mi
+      securityContext:
+        allowPrivilegeEscalation: false
+        capabilities:
+          drop:
+          - ALL
+      terminationMessagePath: /dev/termination-log
+      terminationMessagePolicy: FallbackToLogsOnError
+      volumeMounts:
+      - mountPath: /var/run/configmaps/config
+        name: config
+      - mountPath: /var/run/secrets/serving-cert
+        name: serving-cert
+      - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+        name: kube-api-access
+        readOnly: true
+    dnsPolicy: ClusterFirst
+    enableServiceLinks: true
+    nodeName: node
+    nodeSelector:
+      node-role.kubernetes.io/master: ""
+    preemptionPolicy: PreemptLowerPriority
+    priority: 2000000000
+    priorityClassName: system-cluster-critical
+    restartPolicy: Always
+    schedulerName: default-scheduler
+    securityContext:
+      runAsNonRoot: true
+      runAsUser: 65534
+      seccompProfile:
+        type: RuntimeDefault
+    serviceAccount: kube-controller-manager-operator
+    serviceAccountName: kube-controller-manager-operator
+    terminationGracePeriodSeconds: 30
+    tolerations:
+    - effect: NoSchedule
+      key: node-role.kubernetes.io/master
+      operator: Exists
+    - effect: NoExecute
+      key: node.kubernetes.io/unreachable
+      operator: Exists
+      tolerationSeconds: 120
+    - effect: NoExecute
+      key: node.kubernetes.io/not-ready
+      operator: Exists
+      tolerationSeconds: 120
+    - effect: NoSchedule
+      key: node.kubernetes.io/memory-pressure
+      operator: Exists
+    volumes:
+    - name: serving-cert
+      secret:
+        defaultMode: 420
+        optional: true
+        secretName: kube-controller-manager-operator-serving-cert
+    - configMap:
+        defaultMode: 420
+        name: kube-controller-manager-operator-config
+      name: config
+    - name: kube-api-access
+      projected:
+        defaultMode: 420
+        sources:
+        - serviceAccountToken:
+            expirationSeconds: 3600
+            path: token
+        - configMap:
+            items:
+            - key: ca.crt
+              path: ca.crt
+            name: kube-root-ca.crt
+        - downwardAPI:
+            items:
+            - fieldRef:
+                apiVersion: v1
+                fieldPath: metadata.namespace
+              path: namespace
+  status:
+    conditions:
+    - lastProbeTime: null
+      lastTransitionTime: "2023-05-02T12:28:18Z"
+      status: "True"
+      type: Initialized
+    - lastProbeTime: null
+      lastTransitionTime: "2023-05-04T16:31:31Z"
+      status: "True"
+      type: Ready
+    - lastProbeTime: null
+      lastTransitionTime: "2023-05-04T16:31:31Z"
+      status: "True"
+      type: ContainersReady
+    - lastProbeTime: null
+      lastTransitionTime: "2023-05-02T12:28:18Z"
+      status: "True"
+      type: PodScheduled
+    containerStatuses:
+    - containerID: cri-o://a50e7f121269e46d11110d91920c738b10cbfb84e0191ce802f4501b992e6373
+      image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:81a043e61c07b8e93c6b082aa920d61ffa69762bcc2ef1018360026d62c11b18
+      imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:81a043e61c07b8e93c6b082aa920d61ffa69762bcc2ef1018360026d62c11b18
+      lastState: {}
+      name: kube-controller-manager-operator
+      ready: true
+      restartCount: 2
+      started: true
+      state:
+        running:
+          startedAt: "2023-05-04T16:31:30Z"
+    hostIP: 192.168.1.126
+    phase: Running
+    podIP: 10.128.0.7
+    podIPs:
+    - ip: 10.128.0.7
+    qosClass: Burstable
+    startTime: "2023-05-02T12:28:18Z"
+kind: PodList
+metadata:
+  resourceVersion: "684686"

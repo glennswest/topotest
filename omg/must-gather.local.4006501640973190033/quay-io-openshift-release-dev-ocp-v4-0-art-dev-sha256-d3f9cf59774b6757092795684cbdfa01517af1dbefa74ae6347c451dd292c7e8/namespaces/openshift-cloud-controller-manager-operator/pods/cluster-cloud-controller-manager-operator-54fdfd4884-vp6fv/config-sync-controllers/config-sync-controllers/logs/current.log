@@ -1,0 +1,859 @@
+2023-05-04T16:30:11.284280255Z I0504 16:30:11.284210       1 main.go:163] CCCMOConfigSyncControllers/setup "msg"="starting manager" 
+2023-05-04T16:30:11.284623639Z I0504 16:30:11.284609       1 internal.go:362] CCCMOConfigSyncControllers "msg"="Starting server" "addr"={"IP":"127.0.0.1","Port":9260,"Zone":""} "kind"="health probe"
+2023-05-04T16:30:11.284664025Z I0504 16:30:11.284617       1 leaderelection.go:248] attempting to acquire leader lease openshift-cloud-controller-manager-operator/cluster-cloud-config-sync-leader...
+2023-05-04T16:32:41.989995921Z I0504 16:32:41.989926       1 leaderelection.go:258] successfully acquired lease openshift-cloud-controller-manager-operator/cluster-cloud-config-sync-leader
+2023-05-04T16:32:41.990459811Z I0504 16:32:41.990165       1 controller.go:185] CCCMOConfigSyncControllers "msg"="Starting EventSource" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "source"="kind source: *v1.ConfigMap"
+2023-05-04T16:32:41.990459811Z I0504 16:32:41.990182       1 controller.go:185] CCCMOConfigSyncControllers "msg"="Starting EventSource" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "source"="kind source: *v1.ConfigMap"
+2023-05-04T16:32:41.990459811Z I0504 16:32:41.990199       1 controller.go:185] CCCMOConfigSyncControllers "msg"="Starting EventSource" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "source"="kind source: *v1.Infrastructure"
+2023-05-04T16:32:41.990459811Z I0504 16:32:41.990213       1 controller.go:185] CCCMOConfigSyncControllers "msg"="Starting EventSource" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "source"="kind source: *v1.Proxy"
+2023-05-04T16:32:41.990459811Z I0504 16:32:41.990220       1 controller.go:185] CCCMOConfigSyncControllers "msg"="Starting EventSource" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "source"="kind source: *v1.Network"
+2023-05-04T16:32:41.990459811Z I0504 16:32:41.990229       1 controller.go:193] CCCMOConfigSyncControllers "msg"="Starting Controller" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap"
+2023-05-04T16:32:41.990459811Z I0504 16:32:41.990233       1 controller.go:193] CCCMOConfigSyncControllers "msg"="Starting Controller" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap"
+2023-05-04T16:32:42.200501997Z I0504 16:32:42.200063       1 controller.go:227] CCCMOConfigSyncControllers "msg"="Starting workers" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "worker count"=1
+2023-05-04T16:32:42.200501997Z I0504 16:32:42.200088       1 controller.go:227] CCCMOConfigSyncControllers "msg"="Starting workers" "controller"="configmap" "controllerGroup"="" "controllerKind"="ConfigMap" "worker count"=1
+2023-05-04T16:32:42.200501997Z I0504 16:32:42.200114       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:32:42.200501997Z I0504 16:32:42.200135       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:32:42.202497120Z I0504 16:32:42.202432       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T16:32:42.300495286Z I0504 16:32:42.300456       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:32:42.507595731Z I0504 16:32:42.507090       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:32:42.518665822Z I0504 16:32:42.518624       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:32:42.518692703Z I0504 16:32:42.518672       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:32:42.519269475Z I0504 16:32:42.518723       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:32:42.555604741Z I0504 16:32:42.555308       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:32:42.555604741Z I0504 16:32:42.555347       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:32:42.555604741Z I0504 16:32:42.555395       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:32:42.557118832Z I0504 16:32:42.555755       1 trusted_ca_bundle_controller.go:54] openshift-cloud-controller-manager/ccm-trusted-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:32:42.560293068Z I0504 16:32:42.560248       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T16:32:42.674358421Z I0504 16:32:42.674320       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:32:42.674852268Z I0504 16:32:42.674829       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:32:42.674894918Z I0504 16:32:42.674885       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:32:42.677175947Z I0504 16:32:42.676907       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:32:42.745863246Z I0504 16:32:42.743370       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:32:42.745863246Z I0504 16:32:42.743418       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:32:42.745863246Z I0504 16:32:42.743697       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:32:42.745863246Z I0504 16:32:42.743713       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:32:42.745863246Z I0504 16:32:42.743741       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:32:42.849301399Z I0504 16:32:42.843448       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:32:42.849301399Z I0504 16:32:42.843493       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:32:42.849301399Z I0504 16:32:42.843541       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:32:42.849301399Z I0504 16:32:42.845337       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T16:32:42.849301399Z I0504 16:32:42.845361       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:32:42.849301399Z I0504 16:32:42.845387       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:32:42.866872217Z I0504 16:32:42.864071       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:32:42.866872217Z I0504 16:32:42.864110       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:32:42.866872217Z I0504 16:32:42.864154       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:32:42.876808321Z I0504 16:32:42.876463       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T16:32:42.876808321Z I0504 16:32:42.876510       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:32:42.876808321Z I0504 16:32:42.876550       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:32:43.061751994Z I0504 16:32:43.060701       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T16:32:43.061751994Z I0504 16:32:43.060744       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:32:43.061751994Z I0504 16:32:43.060786       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:32:43.061751994Z I0504 16:32:43.061119       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:32:43.061751994Z I0504 16:32:43.061134       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:32:43.061751994Z I0504 16:32:43.061164       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:32:43.203763372Z I0504 16:32:43.202507       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T16:32:43.203763372Z I0504 16:32:43.202552       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:32:43.203763372Z I0504 16:32:43.202589       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:32:43.207595262Z I0504 16:32:43.204398       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:32:43.207595262Z I0504 16:32:43.204439       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:32:43.207595262Z I0504 16:32:43.204492       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:32:43.291225659Z I0504 16:32:43.287790       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T16:32:43.291225659Z I0504 16:32:43.287836       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:32:43.291225659Z I0504 16:32:43.287882       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:32:43.291225659Z I0504 16:32:43.288231       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:32:43.291225659Z I0504 16:32:43.288248       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:32:43.291225659Z I0504 16:32:43.288275       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:32:43.344794982Z I0504 16:32:43.344535       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:32:43.344794982Z I0504 16:32:43.344690       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T16:32:43.344794982Z I0504 16:32:43.344717       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:32:43.344794982Z I0504 16:32:43.344755       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:32:43.376366760Z I0504 16:32:43.375915       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T16:32:43.376366760Z I0504 16:32:43.375952       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:32:43.376366760Z I0504 16:32:43.375999       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:32:43.413483052Z I0504 16:32:43.413394       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T16:32:43.413483052Z I0504 16:32:43.413438       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:32:43.413483052Z I0504 16:32:43.413476       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:32:43.422345901Z I0504 16:32:43.422303       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T16:51:50.936171574Z I0504 16:51:50.936120       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:51:50.936290377Z I0504 16:51:50.936280       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:51:50.936592143Z I0504 16:51:50.936577       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:51:50.936653609Z I0504 16:51:50.936645       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:51:50.951019253Z I0504 16:51:50.948251       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T16:51:50.951019253Z I0504 16:51:50.948307       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:51:50.951019253Z I0504 16:51:50.948342       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:51:50.951019253Z I0504 16:51:50.948678       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:51:50.951019253Z I0504 16:51:50.948694       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:51:50.951019253Z I0504 16:51:50.948722       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:51:50.955267474Z I0504 16:51:50.955229       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T16:51:50.955348155Z I0504 16:51:50.955339       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:51:50.955396245Z I0504 16:51:50.955388       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:51:50.956157003Z I0504 16:51:50.956138       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:51:50.956169576Z I0504 16:51:50.956159       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:51:50.956199062Z I0504 16:51:50.956186       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:51:50.960480224Z I0504 16:51:50.960447       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T16:51:50.960557209Z I0504 16:51:50.960547       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:51:50.960606221Z I0504 16:51:50.960489       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:51:50.960624806Z I0504 16:51:50.960617       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:51:50.960653770Z I0504 16:51:50.960639       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:51:50.960708953Z I0504 16:51:50.960695       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:51:50.965473984Z I0504 16:51:50.965440       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:51:50.965540359Z I0504 16:51:50.965532       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:51:50.965603076Z I0504 16:51:50.965593       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:51:50.965644664Z I0504 16:51:50.965437       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T16:51:50.965675542Z I0504 16:51:50.965663       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:51:50.965716509Z I0504 16:51:50.965705       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:51:50.971845870Z I0504 16:51:50.971805       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:51:50.971875375Z I0504 16:51:50.971863       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:51:50.971922453Z I0504 16:51:50.971910       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:51:50.972339676Z I0504 16:51:50.972311       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T16:51:50.972352841Z I0504 16:51:50.972346       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:51:50.972392986Z I0504 16:51:50.972378       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:51:50.976800846Z I0504 16:51:50.976757       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:51:50.976834279Z I0504 16:51:50.976790       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T16:51:50.976834279Z I0504 16:51:50.976798       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:51:50.976834279Z I0504 16:51:50.976824       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:51:50.976854667Z I0504 16:51:50.976842       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:51:50.976862081Z I0504 16:51:50.976855       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:51:50.982286559Z I0504 16:51:50.982247       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:51:50.982314432Z I0504 16:51:50.982286       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:51:50.982314432Z I0504 16:51:50.982296       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T16:51:50.982347814Z I0504 16:51:50.982333       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:51:50.982347814Z I0504 16:51:50.982339       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:51:50.982389583Z I0504 16:51:50.982375       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:51:50.986788346Z I0504 16:51:50.986745       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T16:51:50.986818473Z I0504 16:51:50.986787       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:51:50.986845593Z I0504 16:51:50.986832       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:51:50.987076467Z I0504 16:51:50.987051       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:51:50.987102525Z I0504 16:51:50.987091       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:51:50.987155775Z I0504 16:51:50.987141       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:51:50.992351504Z I0504 16:51:50.991484       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T16:51:50.992567589Z I0504 16:51:50.992549       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:53:12.317462126Z I0504 16:53:12.317199       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:53:12.319799080Z I0504 16:53:12.319772       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T16:53:12.327622327Z I0504 16:53:12.327580       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T16:53:40.852086636Z I0504 16:53:40.852053       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:53:40.852204797Z I0504 16:53:40.852193       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:53:40.857117644Z I0504 16:53:40.857048       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:53:41.185041443Z I0504 16:53:41.185006       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T16:53:41.185085325Z I0504 16:53:41.185073       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T16:53:41.190125220Z I0504 16:53:41.190087       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T16:54:38.529514832Z I0504 16:54:38.529469       1 trusted_ca_bundle_controller.go:54] openshift-cloud-controller-manager/ccm-trusted-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T16:54:38.531528750Z I0504 16:54:38.531511       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T16:54:38.540679086Z I0504 16:54:38.540621       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:01:25.353462422Z I0504 17:01:25.353413       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:01:25.353533004Z I0504 17:01:25.353515       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:01:25.356668908Z I0504 17:01:25.353799       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:01:25.356668908Z I0504 17:01:25.353838       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:01:25.575192534Z I0504 17:01:25.574398       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:01:25.575192534Z I0504 17:01:25.574445       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:01:25.575192534Z I0504 17:01:25.574488       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:01:25.575192534Z I0504 17:01:25.574799       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T17:01:25.575192534Z I0504 17:01:25.574816       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:01:25.575192534Z I0504 17:01:25.574834       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:01:25.880008132Z I0504 17:01:25.875653       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:01:25.880008132Z I0504 17:01:25.875695       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:01:25.880008132Z I0504 17:01:25.875742       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:01:25.880008132Z I0504 17:01:25.876776       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T17:01:25.880008132Z I0504 17:01:25.876804       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:01:25.880008132Z I0504 17:01:25.876831       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:01:25.896043367Z I0504 17:01:25.895609       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:01:25.896043367Z I0504 17:01:25.895654       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:01:25.896043367Z I0504 17:01:25.895691       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:01:25.896085597Z I0504 17:01:25.896073       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:01:25.900006222Z I0504 17:01:25.896093       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:01:25.900006222Z I0504 17:01:25.896128       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:01:25.920853616Z I0504 17:01:25.920750       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:01:25.920853616Z I0504 17:01:25.920792       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:01:25.920853616Z I0504 17:01:25.920841       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:01:25.931064985Z I0504 17:01:25.929623       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T17:01:25.931064985Z I0504 17:01:25.929666       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:01:25.931064985Z I0504 17:01:25.929706       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:01:25.958019387Z I0504 17:01:25.957979       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:01:25.958047550Z I0504 17:01:25.958017       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:01:25.958476405Z I0504 17:01:25.958065       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:01:25.958476405Z I0504 17:01:25.958375       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:01:25.958476405Z I0504 17:01:25.958393       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:01:25.958476405Z I0504 17:01:25.958413       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:01:25.983556019Z I0504 17:01:25.983363       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:01:25.983556019Z I0504 17:01:25.983404       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:01:25.983556019Z I0504 17:01:25.983447       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:01:25.984524747Z I0504 17:01:25.983795       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T17:01:25.984524747Z I0504 17:01:25.983819       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:01:25.984524747Z I0504 17:01:25.983843       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:01:25.999209509Z I0504 17:01:25.995378       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T17:01:25.999209509Z I0504 17:01:25.995426       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:01:25.999209509Z I0504 17:01:25.995463       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:01:26.005045257Z I0504 17:01:26.002541       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:01:26.005045257Z I0504 17:01:26.002580       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:01:26.005045257Z I0504 17:01:26.002624       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:01:26.006643136Z I0504 17:01:26.006604       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:01:26.006774432Z I0504 17:01:26.006763       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:01:26.006827522Z I0504 17:01:26.006819       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:01:26.011081513Z I0504 17:01:26.010243       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:01:26.011081513Z I0504 17:01:26.010285       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:01:26.011081513Z I0504 17:01:26.010345       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:01:26.021322006Z I0504 17:01:26.021017       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:01:26.025244175Z I0504 17:01:26.024904       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:03:27.474106974Z I0504 17:03:27.474064       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:03:27.476144527Z I0504 17:03:27.476125       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T17:03:27.484718924Z I0504 17:03:27.484679       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:04:10.275652035Z I0504 17:04:10.275614       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:04:10.275699554Z I0504 17:04:10.275694       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:04:10.280416755Z I0504 17:04:10.280376       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:04:10.775010205Z I0504 17:04:10.774940       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:04:10.775040291Z I0504 17:04:10.775025       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:04:10.779327395Z I0504 17:04:10.779290       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:05:36.789172340Z I0504 17:05:36.789134       1 trusted_ca_bundle_controller.go:54] openshift-cloud-controller-manager/ccm-trusted-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:05:36.791424305Z I0504 17:05:36.791404       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T17:05:37.083279330Z I0504 17:05:37.078147       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:10:59.770415128Z I0504 17:10:59.770354       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:10:59.770549049Z I0504 17:10:59.770539       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:10:59.770921127Z I0504 17:10:59.770844       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:10:59.771012669Z I0504 17:10:59.771002       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:10:59.780369624Z I0504 17:10:59.780333       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:10:59.780450165Z I0504 17:10:59.780442       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:10:59.780529544Z I0504 17:10:59.780519       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:10:59.801892202Z I0504 17:10:59.801851       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:10:59.802199118Z I0504 17:10:59.802188       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:10:59.802293485Z I0504 17:10:59.802283       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:10:59.802492488Z I0504 17:10:59.802141       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:10:59.802528366Z I0504 17:10:59.802519       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:10:59.802564413Z I0504 17:10:59.802557       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:10:59.812753048Z I0504 17:10:59.810228       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:10:59.812753048Z I0504 17:10:59.810274       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:10:59.812753048Z I0504 17:10:59.810314       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:10:59.812947884Z I0504 17:10:59.812928       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:10:59.813011904Z I0504 17:10:59.813003       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:10:59.813082136Z I0504 17:10:59.813072       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:10:59.825293706Z I0504 17:10:59.825148       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:10:59.825293706Z I0504 17:10:59.825191       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:10:59.825293706Z I0504 17:10:59.825243       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:10:59.825634716Z I0504 17:10:59.825611       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:10:59.825697283Z I0504 17:10:59.825687       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:10:59.825751234Z I0504 17:10:59.825743       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:10:59.833613825Z I0504 17:10:59.833571       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T17:10:59.833648500Z I0504 17:10:59.833612       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:10:59.833648500Z I0504 17:10:59.833645       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:10:59.833792631Z I0504 17:10:59.833776       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:10:59.833861189Z I0504 17:10:59.833852       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:10:59.840232533Z I0504 17:10:59.840196       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:10:59.853164645Z I0504 17:10:59.853124       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T17:10:59.855263172Z I0504 17:10:59.855236       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:10:59.855358280Z I0504 17:10:59.855349       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:10:59.893827242Z I0504 17:10:59.893772       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T17:10:59.893827242Z I0504 17:10:59.893818       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:10:59.893864232Z I0504 17:10:59.893854       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:10:59.897039629Z I0504 17:10:59.894185       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:10:59.897039629Z I0504 17:10:59.894206       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:10:59.897039629Z I0504 17:10:59.894235       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:10:59.911253856Z I0504 17:10:59.910740       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:10:59.911253856Z I0504 17:10:59.910784       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:10:59.911253856Z I0504 17:10:59.910827       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:10:59.913913206Z I0504 17:10:59.913873       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T17:10:59.913932712Z I0504 17:10:59.913915       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:10:59.919847870Z I0504 17:10:59.919810       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:10:59.919916128Z I0504 17:10:59.919908       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:10:59.920588219Z I0504 17:10:59.920569       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:10:59.921340600Z I0504 17:10:59.921035       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:10:59.927203319Z I0504 17:10:59.927165       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:10:59.927394167Z I0504 17:10:59.927380       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T17:10:59.927434834Z I0504 17:10:59.927426       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:10:59.927485869Z I0504 17:10:59.927478       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:10:59.937352440Z I0504 17:10:59.935663       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:13:42.631404403Z I0504 17:13:42.631356       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:13:42.633452585Z I0504 17:13:42.633431       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T17:13:42.640773169Z I0504 17:13:42.640722       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:14:39.703132458Z I0504 17:14:39.703090       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:14:39.703197721Z I0504 17:14:39.703183       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:14:39.708290054Z I0504 17:14:39.708005       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:14:40.364587397Z I0504 17:14:40.364545       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:14:40.364630959Z I0504 17:14:40.364611       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:14:40.369571778Z I0504 17:14:40.369527       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:16:35.049178340Z I0504 17:16:35.049137       1 trusted_ca_bundle_controller.go:54] openshift-cloud-controller-manager/ccm-trusted-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:16:35.051310760Z I0504 17:16:35.051294       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T17:16:35.058498144Z I0504 17:16:35.058457       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:20:34.188112145Z I0504 17:20:34.188060       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:20:34.188164423Z I0504 17:20:34.188144       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:20:34.189608582Z I0504 17:20:34.189570       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:20:34.189666361Z I0504 17:20:34.189653       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:20:34.194314631Z I0504 17:20:34.194255       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:20:34.194423265Z I0504 17:20:34.194414       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:20:34.194511370Z I0504 17:20:34.194501       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:20:34.195782355Z I0504 17:20:34.195711       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T17:20:34.195905065Z I0504 17:20:34.195892       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:20:34.196064945Z I0504 17:20:34.196054       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:20:34.200525564Z I0504 17:20:34.200491       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:20:34.200614601Z I0504 17:20:34.200605       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:20:34.200703167Z I0504 17:20:34.200693       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:20:34.201937793Z I0504 17:20:34.201897       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T17:20:34.201967609Z I0504 17:20:34.201937       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:20:34.201994019Z I0504 17:20:34.201980       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:20:34.208233975Z I0504 17:20:34.208191       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:20:34.208308095Z I0504 17:20:34.208233       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:20:34.208308095Z I0504 17:20:34.208269       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:20:34.210224420Z I0504 17:20:34.208571       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:20:34.210224420Z I0504 17:20:34.208591       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:20:34.210224420Z I0504 17:20:34.208632       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:20:34.218262670Z I0504 17:20:34.218219       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T17:20:34.218292657Z I0504 17:20:34.218262       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:20:34.218317904Z I0504 17:20:34.218307       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:20:34.218351737Z I0504 17:20:34.218341       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:20:34.218382074Z I0504 17:20:34.218374       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:20:34.218433321Z I0504 17:20:34.218425       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:20:34.225371397Z I0504 17:20:34.225330       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:20:34.225418155Z I0504 17:20:34.225374       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:20:34.225447720Z I0504 17:20:34.225429       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:20:34.229244954Z I0504 17:20:34.226478       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:20:34.229244954Z I0504 17:20:34.226518       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:20:34.229244954Z I0504 17:20:34.226561       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:20:34.232480825Z I0504 17:20:34.232443       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:20:34.232567287Z I0504 17:20:34.232558       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:20:34.232638381Z I0504 17:20:34.232629       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:20:34.233038471Z I0504 17:20:34.233025       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T17:20:34.233088555Z I0504 17:20:34.233079       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:20:34.233126757Z I0504 17:20:34.233119       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:20:34.242605550Z I0504 17:20:34.242571       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T17:20:34.242879464Z I0504 17:20:34.242863       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:20:34.242947612Z I0504 17:20:34.242938       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:20:34.243187943Z I0504 17:20:34.242826       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:20:34.243237155Z I0504 17:20:34.243229       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:20:34.243296877Z I0504 17:20:34.243279       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:20:34.258610126Z I0504 17:20:34.258568       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:20:34.258646264Z I0504 17:20:34.258606       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:20:34.258653868Z I0504 17:20:34.258649       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:20:34.258740381Z I0504 17:20:34.258567       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:20:34.258785756Z I0504 17:20:34.258774       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:20:34.258861979Z I0504 17:20:34.258849       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:20:34.266097343Z I0504 17:20:34.265265       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:20:34.268011595Z I0504 17:20:34.267971       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:23:57.788567269Z I0504 17:23:57.788519       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:23:57.790976338Z I0504 17:23:57.790940       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T17:23:57.798237341Z I0504 17:23:57.798195       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:25:09.127095647Z I0504 17:25:09.127053       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:25:09.127163654Z I0504 17:25:09.127151       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:25:09.132315981Z I0504 17:25:09.132280       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:25:09.954090676Z I0504 17:25:09.954049       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:25:09.954128347Z I0504 17:25:09.954121       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:25:09.958775465Z I0504 17:25:09.958727       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:27:33.309107383Z I0504 17:27:33.309066       1 trusted_ca_bundle_controller.go:54] openshift-cloud-controller-manager/ccm-trusted-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:27:33.311172919Z I0504 17:27:33.311144       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T17:27:33.317768162Z I0504 17:27:33.317726       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:30:08.606174748Z I0504 17:30:08.606129       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:30:08.606223719Z I0504 17:30:08.606184       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:30:08.606223719Z I0504 17:30:08.606192       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:30:08.606283121Z I0504 17:30:08.606270       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:30:08.611436650Z I0504 17:30:08.611233       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:30:08.611436650Z I0504 17:30:08.611275       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:30:08.611436650Z I0504 17:30:08.611308       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:30:08.617047107Z I0504 17:30:08.614519       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:30:08.617047107Z I0504 17:30:08.614557       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:30:08.617047107Z I0504 17:30:08.614600       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:30:08.619118303Z I0504 17:30:08.619019       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:30:08.619118303Z I0504 17:30:08.619058       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:30:08.619118303Z I0504 17:30:08.619099       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:30:08.619227508Z I0504 17:30:08.619017       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:30:08.619266541Z I0504 17:30:08.619257       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:30:08.619314311Z I0504 17:30:08.619306       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:30:08.624758426Z I0504 17:30:08.624725       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:30:08.624835971Z I0504 17:30:08.624827       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:30:08.624901244Z I0504 17:30:08.624892       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:30:08.624922994Z I0504 17:30:08.624722       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:30:08.624942902Z I0504 17:30:08.624932       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:30:08.624970974Z I0504 17:30:08.624956       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:30:08.629993618Z I0504 17:30:08.629947       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:30:08.630067557Z I0504 17:30:08.630057       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:30:08.630129734Z I0504 17:30:08.630120       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:30:08.630782208Z I0504 17:30:08.630763       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T17:30:08.630793789Z I0504 17:30:08.630788       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:30:08.630826401Z I0504 17:30:08.630811       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:30:08.643689105Z I0504 17:30:08.639669       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:30:08.643689105Z I0504 17:30:08.639706       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:30:08.643689105Z I0504 17:30:08.639747       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:30:08.643689105Z I0504 17:30:08.639667       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T17:30:08.643689105Z I0504 17:30:08.639919       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:30:08.643689105Z I0504 17:30:08.639940       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:30:08.644998000Z I0504 17:30:08.644957       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:30:08.645060438Z I0504 17:30:08.645052       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:30:08.645124939Z I0504 17:30:08.645116       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:30:08.648194819Z I0504 17:30:08.648157       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T17:30:08.648265772Z I0504 17:30:08.648257       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:30:08.648313101Z I0504 17:30:08.648305       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:30:08.649449152Z I0504 17:30:08.649417       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:30:08.649472165Z I0504 17:30:08.649451       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:30:08.649511930Z I0504 17:30:08.649498       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:30:08.653182286Z I0504 17:30:08.653138       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T17:30:08.653208045Z I0504 17:30:08.653183       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:30:08.654045516Z I0504 17:30:08.654024       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:30:08.654093276Z I0504 17:30:08.654084       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:30:08.654130866Z I0504 17:30:08.654124       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:30:08.654177383Z I0504 17:30:08.654169       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:30:08.658861232Z I0504 17:30:08.658815       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:30:08.658935892Z I0504 17:30:08.658921       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T17:30:08.658989833Z I0504 17:30:08.658979       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:30:08.659044506Z I0504 17:30:08.659036       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:30:08.663690743Z I0504 17:30:08.663653       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:34:12.945195480Z I0504 17:34:12.945157       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:34:12.947435363Z I0504 17:34:12.947253       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T17:34:12.954712938Z I0504 17:34:12.954664       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:35:38.552134077Z I0504 17:35:38.552093       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:35:38.552199199Z I0504 17:35:38.552183       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:35:38.557551161Z I0504 17:35:38.557511       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:35:39.543465700Z I0504 17:35:39.543420       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:35:39.543494904Z I0504 17:35:39.543484       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:35:39.547730191Z I0504 17:35:39.547693       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:38:31.571425134Z I0504 17:38:31.570411       1 trusted_ca_bundle_controller.go:54] openshift-cloud-controller-manager/ccm-trusted-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:38:31.582011276Z I0504 17:38:31.575158       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T17:38:31.655070838Z I0504 17:38:31.655027       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:39:43.022809836Z I0504 17:39:43.022758       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:39:43.022854129Z I0504 17:39:43.022816       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:39:43.023225596Z I0504 17:39:43.023013       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:39:43.023225596Z I0504 17:39:43.023067       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:39:43.028563912Z I0504 17:39:43.028528       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:39:43.028639404Z I0504 17:39:43.028631       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:39:43.028711489Z I0504 17:39:43.028702       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:39:43.028736506Z I0504 17:39:43.028526       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:39:43.028763807Z I0504 17:39:43.028751       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:39:43.028785418Z I0504 17:39:43.028776       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:39:43.033406789Z I0504 17:39:43.033295       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T17:39:43.033406789Z I0504 17:39:43.033337       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:39:43.033406789Z I0504 17:39:43.033371       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:39:43.036060218Z I0504 17:39:43.034166       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:39:43.036060218Z I0504 17:39:43.034189       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:39:43.036060218Z I0504 17:39:43.034219       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:39:43.038024303Z I0504 17:39:43.037948       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T17:39:43.038024303Z I0504 17:39:43.037994       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:39:43.038052466Z I0504 17:39:43.038030       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:39:43.038076240Z I0504 17:39:43.038067       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:39:43.038107028Z I0504 17:39:43.038099       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:39:43.038173944Z I0504 17:39:43.038164       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:39:43.042957138Z I0504 17:39:43.042841       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:39:43.043069659Z I0504 17:39:43.043058       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:39:43.043119934Z I0504 17:39:43.043112       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:39:43.044348178Z I0504 17:39:43.044324       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:39:43.044409453Z I0504 17:39:43.044401       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:39:43.044479595Z I0504 17:39:43.044470       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:39:43.047862011Z I0504 17:39:43.047816       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:39:43.047943885Z I0504 17:39:43.047934       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:39:43.048047299Z I0504 17:39:43.048037       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:39:43.050535417Z I0504 17:39:43.050498       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:39:43.050610308Z I0504 17:39:43.050602       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:39:43.050671122Z I0504 17:39:43.050662       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:39:43.053580661Z I0504 17:39:43.052611       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T17:39:43.053580661Z I0504 17:39:43.052651       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:39:43.053580661Z I0504 17:39:43.052686       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:39:43.055797370Z I0504 17:39:43.055756       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:39:43.055829260Z I0504 17:39:43.055799       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:39:43.055855900Z I0504 17:39:43.055843       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:39:43.056751761Z I0504 17:39:43.056723       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T17:39:43.056768983Z I0504 17:39:43.056754       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:39:43.056790163Z I0504 17:39:43.056779       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:39:43.060799365Z I0504 17:39:43.060763       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:39:43.060872803Z I0504 17:39:43.060865       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:39:43.061867840Z I0504 17:39:43.060925       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:39:43.062256359Z I0504 17:39:43.062080       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:39:43.062304079Z I0504 17:39:43.062295       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:39:43.062347310Z I0504 17:39:43.062339       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:39:43.068578531Z I0504 17:39:43.068270       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:39:43.068578531Z I0504 17:39:43.068347       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:39:43.068578531Z I0504 17:39:43.068412       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:39:43.070303979Z I0504 17:39:43.070275       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T17:39:43.076007610Z I0504 17:39:43.074126       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:44:28.105622359Z I0504 17:44:28.102507       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:44:28.105622359Z I0504 17:44:28.104673       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T17:44:28.116740860Z I0504 17:44:28.116691       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:46:07.975661388Z I0504 17:46:07.975608       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:46:07.975707886Z I0504 17:46:07.975691       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:46:07.981856472Z I0504 17:46:07.981814       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:46:09.133393297Z I0504 17:46:09.133349       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:46:09.133431889Z I0504 17:46:09.133418       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:46:09.138692490Z I0504 17:46:09.138649       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:49:17.440161829Z I0504 17:49:17.440121       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:49:17.440206843Z I0504 17:49:17.440198       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:49:17.440509732Z I0504 17:49:17.440496       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:49:17.440556720Z I0504 17:49:17.440546       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:49:17.448800357Z I0504 17:49:17.448721       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:49:17.448800357Z I0504 17:49:17.448762       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:49:17.448832187Z I0504 17:49:17.448806       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:49:17.449169530Z I0504 17:49:17.449153       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T17:49:17.449180070Z I0504 17:49:17.449175       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:49:17.449212851Z I0504 17:49:17.449193       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:49:17.453632574Z I0504 17:49:17.453581       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:49:17.453632574Z I0504 17:49:17.453620       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:49:17.453686024Z I0504 17:49:17.453669       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:49:17.453965448Z I0504 17:49:17.453940       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T17:49:17.454009261Z I0504 17:49:17.453996       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:49:17.454029038Z I0504 17:49:17.454019       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:49:17.458449802Z I0504 17:49:17.458404       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:49:17.458482634Z I0504 17:49:17.458448       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:49:17.458487954Z I0504 17:49:17.458484       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:49:17.458781224Z I0504 17:49:17.458766       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:49:17.458791293Z I0504 17:49:17.458785       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:49:17.458823704Z I0504 17:49:17.458813       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:49:17.462827617Z I0504 17:49:17.462780       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:49:17.462827617Z I0504 17:49:17.462822       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:49:17.462877550Z I0504 17:49:17.462864       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:49:17.465800976Z I0504 17:49:17.463188       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T17:49:17.465800976Z I0504 17:49:17.463206       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:49:17.465800976Z I0504 17:49:17.463226       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:49:17.467859868Z I0504 17:49:17.467341       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:49:17.467859868Z I0504 17:49:17.467382       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:49:17.467859868Z I0504 17:49:17.467413       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:49:17.470865167Z I0504 17:49:17.470811       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:49:17.470865167Z I0504 17:49:17.470855       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:49:17.470904762Z I0504 17:49:17.470898       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:49:17.473525399Z I0504 17:49:17.471284       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T17:49:17.473525399Z I0504 17:49:17.471304       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:49:17.473525399Z I0504 17:49:17.471326       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:49:17.475345634Z I0504 17:49:17.475305       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:49:17.475376963Z I0504 17:49:17.475348       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:49:17.475403482Z I0504 17:49:17.475390       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:49:17.477307926Z I0504 17:49:17.477280       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T17:49:17.477328244Z I0504 17:49:17.477321       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:49:17.477365985Z I0504 17:49:17.477355       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:49:17.481885034Z I0504 17:49:17.481838       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:49:17.481915501Z I0504 17:49:17.481882       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:49:17.481926221Z I0504 17:49:17.481921       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:49:17.482256481Z I0504 17:49:17.482242       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:49:17.482271960Z I0504 17:49:17.482263       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:49:17.482302607Z I0504 17:49:17.482291       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:49:17.487388850Z I0504 17:49:17.487341       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:49:17.487496773Z I0504 17:49:17.487484       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:49:17.487518153Z I0504 17:49:17.487509       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:49:17.487562957Z I0504 17:49:17.487553       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:49:17.492125889Z I0504 17:49:17.492087       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:49:29.829706307Z I0504 17:49:29.829662       1 trusted_ca_bundle_controller.go:54] openshift-cloud-controller-manager/ccm-trusted-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:49:29.832098656Z I0504 17:49:29.831898       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T17:49:29.843249548Z I0504 17:49:29.843213       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:54:43.259517236Z I0504 17:54:43.259460       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:54:43.261616454Z I0504 17:54:43.261595       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T17:54:43.270240055Z I0504 17:54:43.270204       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:56:37.399103473Z I0504 17:56:37.399060       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:56:37.399157915Z I0504 17:56:37.399145       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:56:37.404445536Z I0504 17:56:37.404404       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:56:38.723292570Z I0504 17:56:38.723063       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:56:38.723292570Z I0504 17:56:38.723141       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:56:38.728764496Z I0504 17:56:38.727915       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:58:51.857548587Z I0504 17:58:51.857501       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:58:51.857591478Z I0504 17:58:51.857586       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:58:51.857892402Z I0504 17:58:51.857875       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:58:51.857921427Z I0504 17:58:51.857910       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:58:51.863114310Z I0504 17:58:51.863046       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T17:58:51.863114310Z I0504 17:58:51.863091       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:58:51.863153414Z I0504 17:58:51.863126       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:58:51.863238293Z I0504 17:58:51.863049       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:58:51.863278669Z I0504 17:58:51.863267       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:58:51.863335555Z I0504 17:58:51.863325       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:58:51.867739158Z I0504 17:58:51.867691       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:58:51.867776157Z I0504 17:58:51.867736       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:58:51.867796666Z I0504 17:58:51.867788       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:58:51.867955163Z I0504 17:58:51.867938       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T17:58:51.868002312Z I0504 17:58:51.867987       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:58:51.868025255Z I0504 17:58:51.868014       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:58:51.872615918Z I0504 17:58:51.872580       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:58:51.872767713Z I0504 17:58:51.872756       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:58:51.872811565Z I0504 17:58:51.872581       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:58:51.872832144Z I0504 17:58:51.872821       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:58:51.872860046Z I0504 17:58:51.872850       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:58:51.872876737Z I0504 17:58:51.872869       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:58:51.877082579Z I0504 17:58:51.877040       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T17:58:51.877110972Z I0504 17:58:51.877080       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:58:51.877115951Z I0504 17:58:51.877111       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:58:51.877172908Z I0504 17:58:51.877163       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:58:51.877202464Z I0504 17:58:51.877195       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:58:51.877254111Z I0504 17:58:51.877246       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:58:51.881805340Z I0504 17:58:51.881766       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:58:51.881834154Z I0504 17:58:51.881807       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:58:51.881865924Z I0504 17:58:51.881853       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:58:51.882487200Z I0504 17:58:51.882468       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T17:58:51.882498250Z I0504 17:58:51.882493       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:58:51.882528106Z I0504 17:58:51.882516       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:58:51.886293722Z I0504 17:58:51.886257       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:58:51.886361809Z I0504 17:58:51.886353       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:58:51.886449534Z I0504 17:58:51.886411       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:58:51.889413235Z I0504 17:58:51.889364       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T17:58:51.889453660Z I0504 17:58:51.889411       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:58:51.889453660Z I0504 17:58:51.889448       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:58:51.891177495Z I0504 17:58:51.891141       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:58:51.891259168Z I0504 17:58:51.891250       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:58:51.891334570Z I0504 17:58:51.891322       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:58:51.893609508Z I0504 17:58:51.893563       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T17:58:51.893674089Z I0504 17:58:51.893664       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:58:51.893722440Z I0504 17:58:51.893714       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:58:51.896847243Z I0504 17:58:51.896310       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:58:51.896847243Z I0504 17:58:51.896351       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T17:58:51.896847243Z I0504 17:58:51.896394       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T17:58:51.898166388Z I0504 17:58:51.898143       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T17:58:51.898225549Z I0504 17:58:51.898216       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T17:58:51.898278208Z I0504 17:58:51.898269       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T17:58:51.901172268Z I0504 17:58:51.901130       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T17:58:51.902801144Z I0504 17:58:51.902777       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T18:00:28.089856152Z I0504 18:00:28.089817       1 trusted_ca_bundle_controller.go:54] openshift-cloud-controller-manager/ccm-trusted-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:00:28.092529257Z I0504 18:00:28.092502       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T18:00:28.101875894Z I0504 18:00:28.101774       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:04:58.417358548Z I0504 18:04:58.417100       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:04:58.419327933Z I0504 18:04:58.419295       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T18:04:58.428935529Z I0504 18:04:58.428892       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:07:06.823625745Z I0504 18:07:06.823065       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:07:06.823625745Z I0504 18:07:06.823150       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:07:06.828992504Z I0504 18:07:06.828946       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:07:08.313114624Z I0504 18:07:08.313072       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:07:08.313153427Z I0504 18:07:08.313141       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:07:08.318047690Z I0504 18:07:08.318006       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:08:26.274298007Z I0504 18:08:26.274257       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:08:26.274339364Z I0504 18:08:26.274333       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:08:26.274628337Z I0504 18:08:26.274615       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:08:26.274659715Z I0504 18:08:26.274649       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:08:26.280163672Z I0504 18:08:26.280118       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T18:08:26.280195171Z I0504 18:08:26.280165       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:08:26.280206994Z I0504 18:08:26.280199       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:08:26.281445497Z I0504 18:08:26.281426       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:08:26.281469041Z I0504 18:08:26.281458       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:08:26.281505209Z I0504 18:08:26.281495       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:08:26.284752222Z I0504 18:08:26.284689       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T18:08:26.284752222Z I0504 18:08:26.284734       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:08:26.284782759Z I0504 18:08:26.284767       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:08:26.286445188Z I0504 18:08:26.286409       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:08:26.286469934Z I0504 18:08:26.286447       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:08:26.286497646Z I0504 18:08:26.286486       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:08:26.289181812Z I0504 18:08:26.289132       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T18:08:26.289209645Z I0504 18:08:26.289179       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:08:26.289219904Z I0504 18:08:26.289214       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:08:26.292108614Z I0504 18:08:26.292066       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:08:26.292144992Z I0504 18:08:26.292109       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:08:26.292229982Z I0504 18:08:26.292154       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:08:26.295189044Z I0504 18:08:26.295148       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T18:08:26.295225783Z I0504 18:08:26.295188       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:08:26.295231103Z I0504 18:08:26.295226       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:08:26.298104293Z I0504 18:08:26.297931       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:08:26.298104293Z I0504 18:08:26.297978       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:08:26.298104293Z I0504 18:08:26.298022       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:08:26.299592936Z I0504 18:08:26.299562       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T18:08:26.299612062Z I0504 18:08:26.299601       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:08:26.299641958Z I0504 18:08:26.299631       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:08:26.303703930Z I0504 18:08:26.303656       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:08:26.303735439Z I0504 18:08:26.303702       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:08:26.303740629Z I0504 18:08:26.303730       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T18:08:26.303761247Z I0504 18:08:26.303751       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:08:26.303761247Z I0504 18:08:26.303752       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:08:26.303790342Z I0504 18:08:26.303778       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:08:26.308377088Z I0504 18:08:26.308335       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:08:26.308412534Z I0504 18:08:26.308382       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:08:26.308439254Z I0504 18:08:26.308425       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:08:26.308446738Z I0504 18:08:26.308337       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T18:08:26.308472266Z I0504 18:08:26.308460       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:08:26.308500940Z I0504 18:08:26.308487       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:08:26.314175287Z I0504 18:08:26.313851       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T18:08:26.314175287Z I0504 18:08:26.313902       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:08:26.314175287Z I0504 18:08:26.313937       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:08:26.316910268Z I0504 18:08:26.316744       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:08:26.316910268Z I0504 18:08:26.316779       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:08:26.316910268Z I0504 18:08:26.316822       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:08:26.318955446Z I0504 18:08:26.318917       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T18:08:26.322976239Z I0504 18:08:26.322929       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:08:26.323052072Z I0504 18:08:26.323043       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:08:26.323122564Z I0504 18:08:26.323112       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:08:26.328025012Z I0504 18:08:26.327986       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:11:26.349810513Z I0504 18:11:26.349767       1 trusted_ca_bundle_controller.go:54] openshift-cloud-controller-manager/ccm-trusted-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:11:26.352011864Z I0504 18:11:26.351991       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T18:11:26.361649867Z I0504 18:11:26.361610       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:15:13.574089565Z I0504 18:15:13.574044       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:15:13.576254477Z I0504 18:15:13.576234       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T18:15:13.583437384Z I0504 18:15:13.583391       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:17:36.246997397Z I0504 18:17:36.246912       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:17:36.247066206Z I0504 18:17:36.247054       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:17:36.253349044Z I0504 18:17:36.253141       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:17:37.903215233Z I0504 18:17:37.903168       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:17:37.903262852Z I0504 18:17:37.903244       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:17:37.908561554Z I0504 18:17:37.908523       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:18:00.691174748Z I0504 18:18:00.691126       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:18:00.691219281Z I0504 18:18:00.691204       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:18:00.691438212Z I0504 18:18:00.691424       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:18:00.691468589Z I0504 18:18:00.691458       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:18:00.698191423Z I0504 18:18:00.698145       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T18:18:00.698229144Z I0504 18:18:00.698193       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:18:00.698241938Z I0504 18:18:00.698235       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:18:00.700344342Z I0504 18:18:00.700310       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:18:00.700414474Z I0504 18:18:00.700406       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:18:00.700478083Z I0504 18:18:00.700468       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:18:00.703483072Z I0504 18:18:00.703439       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T18:18:00.703561539Z I0504 18:18:00.703552       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:18:00.703613627Z I0504 18:18:00.703605       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:18:00.705279131Z I0504 18:18:00.705251       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:18:00.705335237Z I0504 18:18:00.705327       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:18:00.705392614Z I0504 18:18:00.705384       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:18:00.710236723Z I0504 18:18:00.710191       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T18:18:00.710304190Z I0504 18:18:00.710294       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:18:00.710368510Z I0504 18:18:00.710355       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:18:00.710676127Z I0504 18:18:00.710663       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:18:00.710709079Z I0504 18:18:00.710702       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:18:00.710757370Z I0504 18:18:00.710749       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:18:00.715221145Z I0504 18:18:00.715166       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T18:18:00.715250570Z I0504 18:18:00.715216       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:18:00.715257634Z I0504 18:18:00.715252       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:18:00.715745940Z I0504 18:18:00.715656       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:18:00.715745940Z I0504 18:18:00.715674       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:18:00.715745940Z I0504 18:18:00.715705       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:18:00.720401935Z I0504 18:18:00.720358       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T18:18:00.720427834Z I0504 18:18:00.720406       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:18:00.720460065Z I0504 18:18:00.720440       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:18:00.721059018Z I0504 18:18:00.720746       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:18:00.721059018Z I0504 18:18:00.720764       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:18:00.721059018Z I0504 18:18:00.720792       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:18:00.726905258Z I0504 18:18:00.726425       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:18:00.726905258Z I0504 18:18:00.726464       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:18:00.726905258Z I0504 18:18:00.726507       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:18:00.731673634Z I0504 18:18:00.728749       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T18:18:00.731673634Z I0504 18:18:00.728790       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:18:00.731673634Z I0504 18:18:00.728823       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:18:00.732507960Z I0504 18:18:00.732291       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:18:00.732507960Z I0504 18:18:00.732333       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:18:00.732507960Z I0504 18:18:00.732380       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:18:00.735531562Z I0504 18:18:00.734513       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T18:18:00.735531562Z I0504 18:18:00.734585       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:18:00.735531562Z I0504 18:18:00.734622       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:18:00.739481484Z I0504 18:18:00.739156       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:18:00.739481484Z I0504 18:18:00.739206       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:18:00.739481484Z I0504 18:18:00.739277       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:18:00.740024733Z I0504 18:18:00.739628       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T18:18:00.740024733Z I0504 18:18:00.739669       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:18:00.740024733Z I0504 18:18:00.739696       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:18:00.746039478Z I0504 18:18:00.745696       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:18:00.746039478Z I0504 18:18:00.745856       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T18:22:24.609238809Z I0504 18:22:24.609187       1 trusted_ca_bundle_controller.go:54] openshift-cloud-controller-manager/ccm-trusted-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:22:24.611422445Z I0504 18:22:24.611397       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T18:22:24.619333448Z I0504 18:22:24.619298       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:25:28.731032202Z I0504 18:25:28.730991       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:25:28.733098228Z I0504 18:25:28.733077       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T18:25:28.741462871Z I0504 18:25:28.741413       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:27:35.108315113Z I0504 18:27:35.108268       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:27:35.108364446Z I0504 18:27:35.108326       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:27:35.108658147Z I0504 18:27:35.108638       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:27:35.108710375Z I0504 18:27:35.108699       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:27:35.115178610Z I0504 18:27:35.115124       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T18:27:35.115212945Z I0504 18:27:35.115176       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:27:35.115242400Z I0504 18:27:35.115212       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:27:35.120007921Z I0504 18:27:35.115579       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:27:35.120007921Z I0504 18:27:35.115598       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:27:35.120007921Z I0504 18:27:35.115626       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:27:35.122023593Z I0504 18:27:35.121984       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T18:27:35.122094375Z I0504 18:27:35.122085       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:27:35.122150751Z I0504 18:27:35.122142       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:27:35.122519313Z I0504 18:27:35.122507       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:27:35.122566030Z I0504 18:27:35.122546       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:27:35.122615864Z I0504 18:27:35.122607       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:27:35.126656384Z I0504 18:27:35.126611       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:27:35.126685429Z I0504 18:27:35.126651       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:27:35.126706929Z I0504 18:27:35.126695       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:27:35.126729582Z I0504 18:27:35.126610       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T18:27:35.126764056Z I0504 18:27:35.126755       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:27:35.126814772Z I0504 18:27:35.126803       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:27:35.132236384Z I0504 18:27:35.132198       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:27:35.132274565Z I0504 18:27:35.132237       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:27:35.132300734Z I0504 18:27:35.132286       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:27:35.132458089Z I0504 18:27:35.132200       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T18:27:35.132485912Z I0504 18:27:35.132465       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:27:35.132493546Z I0504 18:27:35.132489       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:27:35.137680037Z I0504 18:27:35.137633       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T18:27:35.137716265Z I0504 18:27:35.137678       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:27:35.137716265Z I0504 18:27:35.137713       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:27:35.141629937Z I0504 18:27:35.137642       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:27:35.141629937Z I0504 18:27:35.137901       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:27:35.141629937Z I0504 18:27:35.137928       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:27:35.144213004Z I0504 18:27:35.144166       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T18:27:35.144288726Z I0504 18:27:35.144278       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:27:35.144353037Z I0504 18:27:35.144344       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:27:35.144408901Z I0504 18:27:35.144392       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:27:35.144427316Z I0504 18:27:35.144418       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:27:35.144458825Z I0504 18:27:35.144449       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:27:35.149439930Z I0504 18:27:35.149397       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:27:35.149468073Z I0504 18:27:35.149437       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:27:35.149487059Z I0504 18:27:35.149478       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:27:35.149504161Z I0504 18:27:35.149396       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T18:27:35.149537544Z I0504 18:27:35.149528       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:27:35.149583780Z I0504 18:27:35.149576       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:27:35.154072873Z I0504 18:27:35.154031       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T18:27:35.154150288Z I0504 18:27:35.154140       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:27:35.154208728Z I0504 18:27:35.154200       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:27:35.154591646Z I0504 18:27:35.154575       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:27:35.154629637Z I0504 18:27:35.154622       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:27:35.154685773Z I0504 18:27:35.154672       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:27:35.160015161Z I0504 18:27:35.159975       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:27:35.160074042Z I0504 18:27:35.160061       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T18:28:05.671497057Z I0504 18:28:05.671446       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:28:05.671550367Z I0504 18:28:05.671527       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:28:05.676151760Z I0504 18:28:05.676126       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:28:07.493240706Z I0504 18:28:07.493192       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:28:07.493301420Z I0504 18:28:07.493282       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:28:07.498479645Z I0504 18:28:07.498436       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:33:22.868437700Z I0504 18:33:22.868392       1 trusted_ca_bundle_controller.go:54] openshift-cloud-controller-manager/ccm-trusted-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:33:22.870576713Z I0504 18:33:22.870534       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T18:33:22.877635396Z I0504 18:33:22.877591       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:35:43.888165731Z I0504 18:35:43.888120       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:35:43.890396386Z I0504 18:35:43.890352       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T18:35:43.901116508Z I0504 18:35:43.901063       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:37:09.525662599Z I0504 18:37:09.525616       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:37:09.525662599Z I0504 18:37:09.525644       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:37:09.525712462Z I0504 18:37:09.525681       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:37:09.525747688Z I0504 18:37:09.525735       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:37:09.532345537Z I0504 18:37:09.532292       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:37:09.532378529Z I0504 18:37:09.532342       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:37:09.532399047Z I0504 18:37:09.532388       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:37:09.533014863Z I0504 18:37:09.532740       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T18:37:09.533014863Z I0504 18:37:09.532763       1 trusted_ca_bundle_controller.go:54] openshift-config/initial-kube-apiserver-server-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:37:09.533014863Z I0504 18:37:09.532783       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:37:09.537096280Z I0504 18:37:09.537053       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:37:09.537127078Z I0504 18:37:09.537106       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:37:09.537170018Z I0504 18:37:09.537157       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:37:09.537735108Z I0504 18:37:09.537475       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/initial-kube-apiserver-server-ca is not a proxy trusted ca, skipping
+2023-05-04T18:37:09.537735108Z I0504 18:37:09.537494       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-install-manifests emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:37:09.537735108Z I0504 18:37:09.537512       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:37:09.541821806Z I0504 18:37:09.541780       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:37:09.541859396Z I0504 18:37:09.541822       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:37:09.541888561Z I0504 18:37:09.541877       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:37:09.542331472Z I0504 18:37:09.542311       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-install-manifests is not a proxy trusted ca, skipping
+2023-05-04T18:37:09.542344847Z I0504 18:37:09.542334       1 trusted_ca_bundle_controller.go:54] openshift-config/kube-root-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:37:09.542366728Z I0504 18:37:09.542356       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:37:09.546854308Z I0504 18:37:09.546810       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:37:09.546886528Z I0504 18:37:09.546860       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:37:09.546920442Z I0504 18:37:09.546905       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:37:09.547358794Z I0504 18:37:09.547341       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/kube-root-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T18:37:09.547371167Z I0504 18:37:09.547364       1 trusted_ca_bundle_controller.go:54] openshift-config/openshift-service-ca.crt emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:37:09.549021894Z I0504 18:37:09.547397       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:37:09.551804706Z I0504 18:37:09.551756       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/openshift-service-ca.crt is not a proxy trusted ca, skipping
+2023-05-04T18:37:09.551832948Z I0504 18:37:09.551806       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-kubeconfig-client-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:37:09.551854138Z I0504 18:37:09.551841       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:37:09.552234151Z I0504 18:37:09.552219       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:37:09.552244190Z I0504 18:37:09.552240       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:37:09.552287131Z I0504 18:37:09.552276       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:37:09.556636481Z I0504 18:37:09.556590       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:37:09.556666337Z I0504 18:37:09.556641       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:37:09.556703837Z I0504 18:37:09.556692       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:37:09.559353679Z I0504 18:37:09.557472       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-kubeconfig-client-ca is not a proxy trusted ca, skipping
+2023-05-04T18:37:09.559353679Z I0504 18:37:09.557504       1 trusted_ca_bundle_controller.go:54] openshift-config/admin-acks emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:37:09.559353679Z I0504 18:37:09.557530       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:37:09.563614272Z I0504 18:37:09.563570       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:37:09.563642585Z I0504 18:37:09.563620       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:37:09.563674275Z I0504 18:37:09.563662       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:37:09.564342629Z I0504 18:37:09.564067       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/admin-acks is not a proxy trusted ca, skipping
+2023-05-04T18:37:09.564342629Z I0504 18:37:09.564101       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-metric-serving-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:37:09.564342629Z I0504 18:37:09.564124       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:37:09.568317316Z I0504 18:37:09.568264       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-metric-serving-ca is not a proxy trusted ca, skipping
+2023-05-04T18:37:09.568347292Z I0504 18:37:09.568316       1 trusted_ca_bundle_controller.go:54] openshift-config/etcd-ca-bundle emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:37:09.568374433Z I0504 18:37:09.568362       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:37:09.570016524Z I0504 18:37:09.568714       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:37:09.570016524Z I0504 18:37:09.568745       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:37:09.570016524Z I0504 18:37:09.568772       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:37:09.573240542Z I0504 18:37:09.573203       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:37:09.573293502Z I0504 18:37:09.573204       1 trusted_ca_bundle_controller.go:81] changed config map openshift-config/etcd-ca-bundle is not a proxy trusted ca, skipping
+2023-05-04T18:38:35.096055558Z I0504 18:38:35.095985       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:38:35.096100542Z I0504 18:38:35.096055       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:38:35.101001928Z I0504 18:38:35.100933       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:38:37.083338366Z I0504 18:38:37.083296       1 cloud_config_sync_controller.go:39] Syncing cloud-conf ConfigMap
+2023-05-04T18:38:37.083389101Z I0504 18:38:37.083375       1 cloud_config_sync_controller.go:290] Cloud Config Controller is available
+2023-05-04T18:38:37.088928133Z I0504 18:38:37.088889       1 cloud_config_sync_controller.go:69] cloud-config sync is not needed, returning early
+2023-05-04T18:44:21.128590840Z I0504 18:44:21.128549       1 trusted_ca_bundle_controller.go:54] openshift-cloud-controller-manager/ccm-trusted-ca emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:44:21.131201107Z I0504 18:44:21.131065       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T18:44:21.139509876Z I0504 18:44:21.139458       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available
+2023-05-04T18:45:59.045487604Z I0504 18:45:59.045445       1 trusted_ca_bundle_controller.go:54] /cluster emitted event, syncing ccm-trusted-ca ConfigMap
+2023-05-04T18:45:59.047662334Z I0504 18:45:59.047638       1 trusted_ca_bundle_controller.go:156] cloud-config was not found: ConfigMap "cloud-conf" not found
+2023-05-04T18:45:59.057826233Z I0504 18:45:59.057781       1 trusted_ca_bundle_controller.go:316] Trusted CA Bundle Controller is available

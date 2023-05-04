@@ -1,0 +1,61 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  creationTimestamp: "2023-05-02T12:35:38Z"
+  generation: 1
+  labels:
+    k8s-app: openshift-state-metrics
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:k8s-app: {}
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:jobLabel: {}
+        f:namespaceSelector: {}
+        f:selector: {}
+    manager: operator
+    operation: Update
+    time: "2023-05-02T12:35:38Z"
+  name: openshift-state-metrics
+  namespace: openshift-monitoring
+  resourceVersion: "7275"
+  uid: 7d705c64-2355-4cc6-a491-78bdab59dfab
+spec:
+  endpoints:
+  - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+    bearerTokenSecret:
+      key: ""
+    honorLabels: true
+    interval: 2m0s
+    port: https-main
+    scheme: https
+    scrapeTimeout: 2m
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+      cert: {}
+      serverName: openshift-state-metrics.openshift-monitoring.svc
+  - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+    bearerTokenSecret:
+      key: ""
+    interval: 2m0s
+    port: https-self
+    scheme: https
+    scrapeTimeout: 2m
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+      cert: {}
+      serverName: openshift-state-metrics.openshift-monitoring.svc
+  jobLabel: k8s-app
+  namespaceSelector: {}
+  selector:
+    matchLabels:
+      k8s-app: openshift-state-metrics

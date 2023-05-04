@@ -1,0 +1,85 @@
+---
+apiVersion: admissionregistration.k8s.io/v1
+kind: ValidatingWebhookConfiguration
+metadata:
+  annotations:
+    service.beta.openshift.io/inject-cabundle: "true"
+  creationTimestamp: "2023-05-02T12:26:06Z"
+  generation: 2
+  labels:
+    app: multus-admission-controller
+  managedFields:
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:service.beta.openshift.io/inject-cabundle: {}
+        f:labels:
+          f:app: {}
+        f:ownerReferences:
+          k:{"uid":"a74973fc-c074-41e2-8215-81c3454addea"}: {}
+      f:webhooks:
+        k:{"name":"multus-validating-config.k8s.io"}:
+          .: {}
+          f:admissionReviewVersions: {}
+          f:clientConfig:
+            f:service:
+              f:name: {}
+              f:namespace: {}
+              f:path: {}
+          f:name: {}
+          f:rules: {}
+          f:sideEffects: {}
+          f:timeoutSeconds: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-05-02T12:26:06Z"
+  - apiVersion: admissionregistration.k8s.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:webhooks:
+        k:{"name":"multus-validating-config.k8s.io"}:
+          f:clientConfig:
+            f:caBundle: {}
+    manager: service-ca-operator
+    operation: Update
+    time: "2023-05-02T12:30:00Z"
+  name: multus.openshift.io
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: a74973fc-c074-41e2-8215-81c3454addea
+  resourceVersion: "5347"
+  uid: 941af29c-5a81-48fd-83ce-adb5d22d174b
+webhooks:
+- admissionReviewVersions:
+  - v1
+  clientConfig:
+    caBundle: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSURVVENDQWptZ0F3SUJBZ0lJS05wSmxlWHNqSlF3RFFZSktvWklodmNOQVFFTEJRQXdOakUwTURJR0ExVUUKQXd3cmIzQmxibk5vYVdaMExYTmxjblpwWTJVdGMyVnlkbWx1WnkxemFXZHVaWEpBTVRZNE16QXpNRFV5TURBZQpGdzB5TXpBMU1ESXhNakk0TXpsYUZ3MHlOVEEyTXpBeE1qSTROREJhTURZeE5EQXlCZ05WQkFNTUsyOXdaVzV6CmFHbG1kQzF6WlhKMmFXTmxMWE5sY25acGJtY3RjMmxuYm1WeVFERTJPRE13TXpBMU1qQXdnZ0VpTUEwR0NTcUcKU0liM0RRRUJBUVVBQTRJQkR3QXdnZ0VLQW9JQkFRRDFvcUZKRzAvYlU2NWxXZTVZYS9ydlRoMVdTZ0pscDdESApyM1V6OStsaER6YkRvL0JybExDUmc4RGlGNnhCZVNEd3ptQStDRzJyUldZQm9oOGwwSnYrNmprTjIxQy9RRU9xCkYvY1RqNzBUc3Z6ai9CQkpGY1NQVy9RM0FteVVXSTA0K3VzeUpvMDNrUkVwU3JjeGwvZDNkRkpsanpsMjN6b1QKbndJU1BYOUMzRU52ampBTFRBeFdYMm9JUXZsZXIwZlBNNkh5ZkdON0F3MEpDNUxvS0NMSjdRbjY2V2g2WjJacQpUaFlKN0lXUjNtZmlBWDFiZU1qTTZBbTdoQU1TUDFQalRRK0h6cnlCTTMyeXp4M3ltSUhnVUpRRHoxc1VOUzFjCk14M0pGb3F6d2UwdDhUcERodnlIbGRaSnM2UzFNY3JzaEV4U0lCcXdSSHRqWXBQS201Nk5BZ01CQUFHall6QmgKTUE0R0ExVWREd0VCL3dRRUF3SUNwREFQQmdOVkhSTUJBZjhFQlRBREFRSC9NQjBHQTFVZERnUVdCQlQ3aEltVAo5M09kZU5TWmEzbk4rOFFueExMRDBEQWZCZ05WSFNNRUdEQVdnQlQ3aEltVDkzT2RlTlNaYTNuTis4UW54TExECjBEQU5CZ2txaGtpRzl3MEJBUXNGQUFPQ0FRRUFhNHFwdWZIeityYVFrbTJJd0JEVk1DTnhxZm1Zbnk0dXhpaE4KeGgrMldiUTN6UEdVdjd0M3EvNzBqYWNtamRkL0dsODduQ0NqM2tEbWYxbDNMU1Q3VVRDRXJoNFYwL0VLYXd3WgorV29vVHpnUmw5ekFBOEdreHZHSTB3a3B2N3ZnRm9nZlp3ZFF4WUY2M3dqcldmWGZ0SURwQ21wVWhpK0c0dElICkxJWHA5ZjZ3dzF5TUlGSE5vL2U2U2IzcStRamNjVkVVRWxwT0NoeERwRkZ5VDBsSDJmdGpWanlrSVdnL0xZYXIKZGFvMzBpaEZnVnhEM2RLVHJjOFN6emV2dFR0QjZ3VzV0L2tuVzc1MGloQUt6Njc4bFI3RWowWngxWkpNVkpNMApWTHBJSE5wSXlsVFp1UWVSak9oR0JQUmphbWV4ZVNSN25NbE5vRVZ1bGZwcWZjZC82QT09Ci0tLS0tRU5EIENFUlRJRklDQVRFLS0tLS0K
+    service:
+      name: multus-admission-controller
+      namespace: openshift-multus
+      path: /validate
+      port: 443
+  failurePolicy: Fail
+  matchPolicy: Equivalent
+  name: multus-validating-config.k8s.io
+  namespaceSelector: {}
+  objectSelector: {}
+  rules:
+  - apiGroups:
+    - k8s.cni.cncf.io
+    apiVersions:
+    - v1
+    operations:
+    - CREATE
+    - UPDATE
+    resources:
+    - network-attachment-definitions
+    scope: '*'
+  sideEffects: NoneOnDryRun
+  timeoutSeconds: 30

@@ -1,0 +1,364 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:06Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: controller-manager-cdc84d7f-7qrx6
+    namespace: openshift-controller-manager
+    resourceVersion: "291382"
+    uid: f8814ce7-d2fa-43b2-bee8-733097c368a7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:06Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_controller-manager-cdc84d7f-7qrx6_openshift-controller-manager_f8814ce7-d2fa-43b2-bee8-733097c368a7_0(9b56e61f486e70ae9423ea55ac0404fc2ab886982ddc0d90f5055f8ff89f5995):
+    error adding pod openshift-controller-manager_controller-manager-cdc84d7f-7qrx6
+    to CNI network "multus-cni-network": plugin type="multus" name="multus-cni-network"
+    failed (add): Multus: [openshift-controller-manager/controller-manager-cdc84d7f-7qrx6/f8814ce7-d2fa-43b2-bee8-733097c368a7]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:25Z"
+    name: controller-manager-cdc84d7f-7qrx6.175bfdbb27732bc5
+    namespace: openshift-controller-manager
+    resourceVersion: "631593"
+    uid: 7e30c632-ae17-4936-a397-6be327739b97
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: controller-manager-cdc84d7f-7qrx6
+    namespace: openshift-controller-manager
+    resourceVersion: "629230"
+    uid: f8814ce7-d2fa-43b2-bee8-733097c368a7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:28Z"
+  message: Add eth0 [10.128.0.254/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:28Z"
+    name: controller-manager-cdc84d7f-7qrx6.175bfdc05da84beb
+    namespace: openshift-controller-manager
+    resourceVersion: "630275"
+    uid: a566844a-d84b-4c9f-a762-3b3375981103
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller-manager}
+    kind: Pod
+    name: controller-manager-cdc84d7f-7qrx6
+    namespace: openshift-controller-manager
+    resourceVersion: "291382"
+    uid: f8814ce7-d2fa-43b2-bee8-733097c368a7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:29Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fbeeb31a94b29354971d11e3db852e7a6ec8d2b70b8ec323a01b124281e49261"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:56Z"
+    name: controller-manager-cdc84d7f-7qrx6.175bfdc086daee29
+    namespace: openshift-controller-manager
+    resourceVersion: "632005"
+    uid: d1dbd364-1761-42b4-97dc-01c29b56a35c
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:06Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller-manager}
+    kind: Pod
+    name: controller-manager-cdc84d7f-7qrx6
+    namespace: openshift-controller-manager
+    resourceVersion: "291382"
+    uid: f8814ce7-d2fa-43b2-bee8-733097c368a7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:06Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fbeeb31a94b29354971d11e3db852e7a6ec8d2b70b8ec323a01b124281e49261"
+    in 37.824230807s
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:38Z"
+    name: controller-manager-cdc84d7f-7qrx6.175bfdc9555b2327
+    namespace: openshift-controller-manager
+    resourceVersion: "632366"
+    uid: a79bf325-36e6-4329-911d-4684838f79f5
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:42Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller-manager}
+    kind: Pod
+    name: controller-manager-cdc84d7f-7qrx6
+    namespace: openshift-controller-manager
+    resourceVersion: "291382"
+    uid: f8814ce7-d2fa-43b2-bee8-733097c368a7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:42Z"
+  message: Created container controller-manager
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:55Z"
+    name: controller-manager-cdc84d7f-7qrx6.175bfdd196523716
+    namespace: openshift-controller-manager
+    resourceVersion: "632516"
+    uid: b191651d-53cb-4c44-9026-25b24807b1dc
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:42Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{controller-manager}
+    kind: Pod
+    name: controller-manager-cdc84d7f-7qrx6
+    namespace: openshift-controller-manager
+    resourceVersion: "291382"
+    uid: f8814ce7-d2fa-43b2-bee8-733097c368a7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:42Z"
+  message: Started container controller-manager
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:55Z"
+    name: controller-manager-cdc84d7f-7qrx6.175bfdd1a00c68b2
+    namespace: openshift-controller-manager
+    resourceVersion: "632518"
+    uid: f13c6a92-61cd-46ec-a99f-fdd7041f7c1a
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:42Z"
+  involvedObject:
+    apiVersion: v1
+    kind: ConfigMap
+    name: openshift-master-controllers
+    namespace: openshift-controller-manager
+    resourceVersion: "631023"
+    uid: cf0d8d78-a702-481f-a1d0-6a4ff51ea0cf
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:42Z"
+  message: controller-manager-cdc84d7f-7qrx6 became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: openshift-controller-manager
+      operation: Update
+      time: "2023-05-04T16:32:42Z"
+    name: openshift-master-controllers.175bfdd1b310e6e0
+    namespace: openshift-controller-manager
+    resourceVersion: "631040"
+    uid: aa272c9d-8b24-410c-87de-da4eba65dbfa
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-controller-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:42Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: openshift-master-controllers
+    namespace: openshift-controller-manager
+    resourceVersion: "631033"
+    uid: aab26c3b-1bd7-4df6-b287-fee8876fb799
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:42Z"
+  message: controller-manager-cdc84d7f-7qrx6 became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: openshift-controller-manager
+      operation: Update
+      time: "2023-05-04T16:32:43Z"
+    name: openshift-master-controllers.175bfdd1b31114e6
+    namespace: openshift-controller-manager
+    resourceVersion: "631045"
+    uid: 28ff8bac-9622-495c-a2b8-d8f9edbf9227
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-controller-manager
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "684746"

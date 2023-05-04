@@ -1,0 +1,43 @@
+---
+apiVersion: migration.k8s.io/v1alpha1
+kind: StorageVersionMigration
+metadata:
+  creationTimestamp: "2023-05-02T12:37:52Z"
+  generation: 1
+  managedFields:
+  - apiVersion: migration.k8s.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:resource:
+          .: {}
+          f:group: {}
+          f:resource: {}
+          f:version: {}
+    manager: cluster-kube-apiserver-operator
+    operation: Update
+    time: "2023-05-02T12:37:52Z"
+  - apiVersion: migration.k8s.io/v1alpha1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+    manager: migrator
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:37:56Z"
+  name: flowcontrol-prioritylevel-storage-version-migration
+  resourceVersion: "9388"
+  uid: 9e578813-82b2-489c-99ef-41a9cc6e9c10
+spec:
+  resource:
+    group: flowcontrol.apiserver.k8s.io
+    resource: prioritylevelconfigurations
+    version: v1beta1
+status:
+  conditions:
+  - lastUpdateTime: "2023-05-02T12:37:56Z"
+    status: "True"
+    type: Succeeded

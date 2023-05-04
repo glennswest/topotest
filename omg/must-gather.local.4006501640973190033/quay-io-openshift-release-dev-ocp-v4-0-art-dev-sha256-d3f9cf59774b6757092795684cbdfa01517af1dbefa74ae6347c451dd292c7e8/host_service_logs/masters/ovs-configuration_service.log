@@ -1,0 +1,1377 @@
+-- Logs begin at Tue 2023-05-02 12:21:27 UTC, end at Thu 2023-05-04 18:47:25 UTC. --
+May 02 12:24:30.130731 node systemd[1]: Starting Configures OVS with proper host networking configuration...
+May 02 12:24:30.140162 node configure-ovs.sh[1592]: + touch /var/run/ovs-config-executed
+May 02 12:24:30.140977 node configure-ovs.sh[1592]: + NM_CONN_PATH=/etc/NetworkManager/system-connections
+May 02 12:24:30.140977 node configure-ovs.sh[1592]: + nm_config_changed=0
+May 02 12:24:30.140977 node configure-ovs.sh[1592]: + MANAGED_NM_CONN_SUFFIX=-slave-ovs-clone
+May 02 12:24:30.142091 node configure-ovs.sh[1592]: + BRIDGE_METRIC=48
+May 02 12:24:30.142091 node configure-ovs.sh[1592]: + BRIDGE1_METRIC=49
+May 02 12:24:30.142843 node configure-ovs.sh[1592]: + trap handle_exit EXIT
+May 02 12:24:30.143199 node configure-ovs.sh[1592]: + '[' '!' -f /etc/cno/mtu-migration/config ']'
+May 02 12:24:30.143199 node configure-ovs.sh[1592]: + echo 'Cleaning up left over mtu migration configuration'
+May 02 12:24:30.143199 node configure-ovs.sh[1592]: Cleaning up left over mtu migration configuration
+May 02 12:24:30.143199 node configure-ovs.sh[1592]: + rm -rf /etc/cno/mtu-migration
+May 02 12:24:30.144604 node configure-ovs.sh[1595]: + rpm -qa
+May 02 12:24:30.145089 node configure-ovs.sh[1596]: + grep -q openvswitch
+May 02 12:24:30.400742 node configure-ovs.sh[1592]: + print_state
+May 02 12:24:30.400742 node configure-ovs.sh[1592]: + echo 'Current device, connection, interface and routing state:'
+May 02 12:24:30.400742 node configure-ovs.sh[1592]: Current device, connection, interface and routing state:
+May 02 12:24:30.402327 node configure-ovs.sh[1597]: + nmcli -g all device
+May 02 12:24:30.402849 node configure-ovs.sh[1598]: + grep -v unmanaged
+May 02 12:24:30.410402 node configure-ovs.sh[1598]: ens192:ethernet:connected:full:full:/org/freedesktop/NetworkManager/Devices/2:Wired connection 1:fc22eaa4-5fa5-3dbd-b09e-8219072bd298:/org/freedesktop/NetworkManager/ActiveConnection/1
+May 02 12:24:30.411588 node configure-ovs.sh[1592]: + nmcli -g all connection
+May 02 12:24:30.418464 node configure-ovs.sh[1602]: Wired connection 1:fc22eaa4-5fa5-3dbd-b09e-8219072bd298:802-3-ethernet:1683030268:Tue May  2 12\:24\:28 2023:yes:-999:no:/org/freedesktop/NetworkManager/Settings/1:yes:ens192:activated:/org/freedesktop/NetworkManager/ActiveConnection/1::/run/NetworkManager/system-connections/Wired connection 1.nmconnection
+May 02 12:24:30.420658 node configure-ovs.sh[1592]: + ip -d address show
+May 02 12:24:30.435305 node configure-ovs.sh[1606]: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+May 02 12:24:30.435305 node configure-ovs.sh[1606]:     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 promiscuity 0 minmtu 0 maxmtu 0 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 02 12:24:30.435305 node configure-ovs.sh[1606]:     inet 127.0.0.1/8 scope host lo
+May 02 12:24:30.435305 node configure-ovs.sh[1606]:        valid_lft forever preferred_lft forever
+May 02 12:24:30.435305 node configure-ovs.sh[1606]:     inet6 ::1/128 scope host
+May 02 12:24:30.435305 node configure-ovs.sh[1606]:        valid_lft forever preferred_lft forever
+May 02 12:24:30.435305 node configure-ovs.sh[1606]: 2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+May 02 12:24:30.435305 node configure-ovs.sh[1606]:     link/ether 02:d1:1e:ff:ed:15 brd ff:ff:ff:ff:ff:ff promiscuity 0 minmtu 68 maxmtu 9212 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 02 12:24:30.435305 node configure-ovs.sh[1606]:     inet 192.168.1.126/24 brd 192.168.1.255 scope global dynamic noprefixroute ens192
+May 02 12:24:30.435305 node configure-ovs.sh[1606]:        valid_lft 86398sec preferred_lft 86398sec
+May 02 12:24:30.435305 node configure-ovs.sh[1606]:     inet6 fe80::821d:bc0:d7cb:6ea3/64 scope link noprefixroute
+May 02 12:24:30.435305 node configure-ovs.sh[1606]:        valid_lft forever preferred_lft forever
+May 02 12:24:30.445459 node configure-ovs.sh[1592]: + ip route show
+May 02 12:24:30.446473 node configure-ovs.sh[1607]: default via 192.168.1.1 dev ens192 proto dhcp src 192.168.1.126 metric 100
+May 02 12:24:30.446473 node configure-ovs.sh[1607]: 192.168.1.0/24 dev ens192 proto kernel scope link src 192.168.1.126 metric 100
+May 02 12:24:30.448535 node configure-ovs.sh[1592]: + ip -6 route show
+May 02 12:24:30.449063 node configure-ovs.sh[1608]: ::1 dev lo proto kernel metric 256 pref medium
+May 02 12:24:30.449063 node configure-ovs.sh[1608]: fe80::/64 dev ens192 proto kernel metric 1024 pref medium
+May 02 12:24:30.450119 node configure-ovs.sh[1592]: + '[' OVNKubernetes == OVNKubernetes ']'
+May 02 12:24:30.450119 node configure-ovs.sh[1592]: + ovnk_config_dir=/etc/ovnk
+May 02 12:24:30.450119 node configure-ovs.sh[1592]: + ovnk_var_dir=/var/lib/ovnk
+May 02 12:24:30.450119 node configure-ovs.sh[1592]: + extra_bridge_file=/etc/ovnk/extra_bridge
+May 02 12:24:30.450119 node configure-ovs.sh[1592]: + iface_default_hint_file=/var/lib/ovnk/iface_default_hint
+May 02 12:24:30.450119 node configure-ovs.sh[1592]: + ip_hint_file=/run/nodeip-configuration/primary-ip
+May 02 12:24:30.450119 node configure-ovs.sh[1592]: + mkdir -p /etc/ovnk
+May 02 12:24:30.457271 node configure-ovs.sh[1592]: + mkdir -p /var/lib/ovnk
+May 02 12:24:30.467795 node configure-ovs.sh[1611]: ++ get_iface_default_hint /var/lib/ovnk/iface_default_hint
+May 02 12:24:30.468504 node configure-ovs.sh[1611]: ++ local iface_default_hint_file=/var/lib/ovnk/iface_default_hint
+May 02 12:24:30.468504 node configure-ovs.sh[1611]: ++ '[' -f /var/lib/ovnk/iface_default_hint ']'
+May 02 12:24:30.468504 node configure-ovs.sh[1611]: ++ echo ''
+May 02 12:24:30.470904 node configure-ovs.sh[1592]: + iface_default_hint=
+May 02 12:24:30.470904 node configure-ovs.sh[1592]: + '[' '' == '' ']'
+May 02 12:24:30.471856 node configure-ovs.sh[1612]: ++ get_bridge_physical_interface ovs-if-phys0
+May 02 12:24:30.471856 node configure-ovs.sh[1612]: ++ local bridge_interface=ovs-if-phys0
+May 02 12:24:30.471856 node configure-ovs.sh[1612]: ++ local physical_interface=
+May 02 12:24:30.473415 node configure-ovs.sh[1613]: +++ nmcli -g connection.interface-name conn show ovs-if-phys0
+May 02 12:24:30.478399 node configure-ovs.sh[1613]: +++ echo ''
+May 02 12:24:30.478972 node configure-ovs.sh[1612]: ++ physical_interface=
+May 02 12:24:30.478972 node configure-ovs.sh[1612]: ++ echo ''
+May 02 12:24:30.479817 node configure-ovs.sh[1592]: + current_interface=
+May 02 12:24:30.479817 node configure-ovs.sh[1592]: + '[' '' '!=' '' ']'
+May 02 12:24:30.479817 node configure-ovs.sh[1592]: + '[' -f /var/lib/ovnk/iface_default_hint ']'
+May 02 12:24:30.479817 node configure-ovs.sh[1592]: + '[' '!' -f /run/configure-ovs-boot-done ']'
+May 02 12:24:30.479817 node configure-ovs.sh[1592]: + echo 'Running on boot, restoring previous configuration before proceeding...'
+May 02 12:24:30.479817 node configure-ovs.sh[1592]: Running on boot, restoring previous configuration before proceeding...
+May 02 12:24:30.479817 node configure-ovs.sh[1592]: + rollback_nm
+May 02 12:24:30.483331 node configure-ovs.sh[1618]: ++ get_bridge_physical_interface ovs-if-phys0
+May 02 12:24:30.483331 node configure-ovs.sh[1618]: ++ local bridge_interface=ovs-if-phys0
+May 02 12:24:30.483331 node configure-ovs.sh[1618]: ++ local physical_interface=
+May 02 12:24:30.484616 node configure-ovs.sh[1619]: +++ nmcli -g connection.interface-name conn show ovs-if-phys0
+May 02 12:24:30.488360 node configure-ovs.sh[1619]: +++ echo ''
+May 02 12:24:30.488784 node configure-ovs.sh[1618]: ++ physical_interface=
+May 02 12:24:30.488784 node configure-ovs.sh[1618]: ++ echo ''
+May 02 12:24:30.489525 node configure-ovs.sh[1592]: + phys0=
+May 02 12:24:30.489902 node configure-ovs.sh[1624]: ++ get_bridge_physical_interface ovs-if-phys1
+May 02 12:24:30.489902 node configure-ovs.sh[1624]: ++ local bridge_interface=ovs-if-phys1
+May 02 12:24:30.489902 node configure-ovs.sh[1624]: ++ local physical_interface=
+May 02 12:24:30.491098 node configure-ovs.sh[1625]: +++ nmcli -g connection.interface-name conn show ovs-if-phys1
+May 02 12:24:30.497817 node configure-ovs.sh[1625]: +++ echo ''
+May 02 12:24:30.498320 node configure-ovs.sh[1624]: ++ physical_interface=
+May 02 12:24:30.498320 node configure-ovs.sh[1624]: ++ echo ''
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + phys1=
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + remove_all_ovn_bridges
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + echo 'Reverting any previous OVS configuration'
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: Reverting any previous OVS configuration
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + remove_ovn_bridges br-ex phys0
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + bridge_name=br-ex
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + port_name=phys0
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + update_nm_conn_files br-ex phys0
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + bridge_name=br-ex
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + port_name=phys0
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + ovs_port=ovs-port-br-ex
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + ovs_interface=ovs-if-br-ex
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + default_port_name=ovs-port-phys0
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + bridge_interface_name=ovs-if-phys0
+May 02 12:24:30.499076 node configure-ovs.sh[1592]: + MANAGED_NM_CONN_FILES=($(echo "${NM_CONN_PATH}"/{"$bridge_name","$ovs_interface","$ovs_port","$bridge_interface_name","$default_port_name"}{,.nmconnection}))
+May 02 12:24:30.504306 node configure-ovs.sh[1630]: ++ echo /etc/NetworkManager/system-connections/br-ex /etc/NetworkManager/system-connections/br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-if-br-ex /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-port-br-ex /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-if-phys0 /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection /etc/NetworkManager/system-connections/ovs-port-phys0 /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + shopt -s nullglob
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + MANAGED_NM_CONN_FILES+=(${NM_CONN_PATH}/*${MANAGED_NM_CONN_SUFFIX}.nmconnection ${NM_CONN_PATH}/*${MANAGED_NM_CONN_SUFFIX})
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + shopt -u nullglob
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + rm_nm_conn_files
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/br-ex ']'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/br-ex.nmconnection ']'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-br-ex ']'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection ']'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-br-ex ']'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection ']'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-phys0 ']'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection ']'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-phys0 ']'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection ']'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + ovs-vsctl --timeout=30 --if-exists del-br br-ex
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + '[' -d /sys/class/net/br-ex1 ']'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + echo 'OVS configuration successfully reverted'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: OVS configuration successfully reverted
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + reload_profiles_nm '' ''
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + '[' 0 -eq 0 ']'
+May 02 12:24:30.507035 node configure-ovs.sh[1592]: + return
+May 02 12:24:30.525033 node configure-ovs.sh[1592]: + print_state
+May 02 12:24:30.525033 node configure-ovs.sh[1592]: + echo 'Current device, connection, interface and routing state:'
+May 02 12:24:30.525033 node configure-ovs.sh[1592]: Current device, connection, interface and routing state:
+May 02 12:24:30.526947 node configure-ovs.sh[1632]: + nmcli -g all device
+May 02 12:24:30.527472 node configure-ovs.sh[1633]: + grep -v unmanaged
+May 02 12:24:30.527472 node configure-ovs.sh[1633]: ens192:ethernet:connected:full:full:/org/freedesktop/NetworkManager/Devices/2:Wired connection 1:fc22eaa4-5fa5-3dbd-b09e-8219072bd298:/org/freedesktop/NetworkManager/ActiveConnection/1
+May 02 12:24:30.529310 node configure-ovs.sh[1592]: + nmcli -g all connection
+May 02 12:24:30.529779 node configure-ovs.sh[1637]: Wired connection 1:fc22eaa4-5fa5-3dbd-b09e-8219072bd298:802-3-ethernet:1683030268:Tue May  2 12\:24\:28 2023:yes:-999:no:/org/freedesktop/NetworkManager/Settings/1:yes:ens192:activated:/org/freedesktop/NetworkManager/ActiveConnection/1::/run/NetworkManager/system-connections/Wired connection 1.nmconnection
+May 02 12:24:30.531575 node configure-ovs.sh[1592]: + ip -d address show
+May 02 12:24:30.532063 node configure-ovs.sh[1641]: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+May 02 12:24:30.532063 node configure-ovs.sh[1641]:     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 promiscuity 0 minmtu 0 maxmtu 0 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 02 12:24:30.532063 node configure-ovs.sh[1641]:     inet 127.0.0.1/8 scope host lo
+May 02 12:24:30.532063 node configure-ovs.sh[1641]:        valid_lft forever preferred_lft forever
+May 02 12:24:30.532063 node configure-ovs.sh[1641]:     inet6 ::1/128 scope host
+May 02 12:24:30.532063 node configure-ovs.sh[1641]:        valid_lft forever preferred_lft forever
+May 02 12:24:30.532063 node configure-ovs.sh[1641]: 2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+May 02 12:24:30.532063 node configure-ovs.sh[1641]:     link/ether 02:d1:1e:ff:ed:15 brd ff:ff:ff:ff:ff:ff promiscuity 0 minmtu 68 maxmtu 9212 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 02 12:24:30.532063 node configure-ovs.sh[1641]:     inet 192.168.1.126/24 brd 192.168.1.255 scope global dynamic noprefixroute ens192
+May 02 12:24:30.532063 node configure-ovs.sh[1641]:        valid_lft 86398sec preferred_lft 86398sec
+May 02 12:24:30.532063 node configure-ovs.sh[1641]:     inet6 fe80::821d:bc0:d7cb:6ea3/64 scope link noprefixroute
+May 02 12:24:30.532063 node configure-ovs.sh[1641]:        valid_lft forever preferred_lft forever
+May 02 12:24:30.540639 node configure-ovs.sh[1592]: + ip route show
+May 02 12:24:30.541139 node configure-ovs.sh[1642]: default via 192.168.1.1 dev ens192 proto dhcp src 192.168.1.126 metric 100
+May 02 12:24:30.541139 node configure-ovs.sh[1642]: 192.168.1.0/24 dev ens192 proto kernel scope link src 192.168.1.126 metric 100
+May 02 12:24:30.543130 node configure-ovs.sh[1592]: + ip -6 route show
+May 02 12:24:30.543635 node configure-ovs.sh[1643]: ::1 dev lo proto kernel metric 256 pref medium
+May 02 12:24:30.543635 node configure-ovs.sh[1643]: fe80::/64 dev ens192 proto kernel metric 1024 pref medium
+May 02 12:24:30.544695 node configure-ovs.sh[1592]: + touch /run/configure-ovs-boot-done
+May 02 12:24:30.545228 node configure-ovs.sh[1645]: ++ get_nodeip_interface /var/lib/ovnk/iface_default_hint /etc/ovnk/extra_bridge /run/nodeip-configuration/primary-ip
+May 02 12:24:30.545228 node configure-ovs.sh[1645]: ++ local iface=
+May 02 12:24:30.545228 node configure-ovs.sh[1645]: ++ local counter=0
+May 02 12:24:30.545228 node configure-ovs.sh[1645]: ++ local iface_default_hint_file=/var/lib/ovnk/iface_default_hint
+May 02 12:24:30.545228 node configure-ovs.sh[1645]: ++ local extra_bridge_file=/etc/ovnk/extra_bridge
+May 02 12:24:30.545228 node configure-ovs.sh[1645]: ++ local ip_hint_file=/run/nodeip-configuration/primary-ip
+May 02 12:24:30.545228 node configure-ovs.sh[1645]: ++ local extra_bridge=
+May 02 12:24:30.545228 node configure-ovs.sh[1645]: ++ '[' -f /etc/ovnk/extra_bridge ']'
+May 02 12:24:30.550367 node configure-ovs.sh[1646]: +++ get_nodeip_hint_interface /run/nodeip-configuration/primary-ip ''
+May 02 12:24:30.550367 node configure-ovs.sh[1646]: +++ local ip_hint=
+May 02 12:24:30.550367 node configure-ovs.sh[1646]: +++ local ip_hint_file=/run/nodeip-configuration/primary-ip
+May 02 12:24:30.550367 node configure-ovs.sh[1646]: +++ local extra_bridge=
+May 02 12:24:30.550367 node configure-ovs.sh[1646]: +++ local iface=
+May 02 12:24:30.553515 node configure-ovs.sh[1647]: ++++ get_ip_from_ip_hint_file /run/nodeip-configuration/primary-ip
+May 02 12:24:30.553515 node configure-ovs.sh[1647]: ++++ local ip_hint_file=/run/nodeip-configuration/primary-ip
+May 02 12:24:30.553515 node configure-ovs.sh[1647]: ++++ [[ ! -f /run/nodeip-configuration/primary-ip ]]
+May 02 12:24:30.555427 node configure-ovs.sh[1648]: +++++ cat /run/nodeip-configuration/primary-ip
+May 02 12:24:30.555938 node configure-ovs.sh[1647]: ++++ ip_hint=192.168.1.126
+May 02 12:24:30.555938 node configure-ovs.sh[1647]: ++++ echo 192.168.1.126
+May 02 12:24:30.556834 node configure-ovs.sh[1646]: +++ ip_hint=192.168.1.126
+May 02 12:24:30.556834 node configure-ovs.sh[1646]: +++ [[ -z 192.168.1.126 ]]
+May 02 12:24:30.557727 node configure-ovs.sh[1651]: ++++ ip -j addr
+May 02 12:24:30.558189 node configure-ovs.sh[1652]: ++++ jq -r 'first(.[] | select(any(.addr_info[]; .local=="192.168.1.126") and .ifname!="br-ex1" and .ifname!="")) | .ifname'
+May 02 12:24:30.559049 node configure-ovs.sh[1646]: +++ iface=ens192
+May 02 12:24:30.559049 node configure-ovs.sh[1646]: +++ [[ -n ens192 ]]
+May 02 12:24:30.559049 node configure-ovs.sh[1646]: +++ echo ens192
+May 02 12:24:30.560293 node configure-ovs.sh[1645]: ++ iface=ens192
+May 02 12:24:30.560293 node configure-ovs.sh[1645]: ++ [[ -n ens192 ]]
+May 02 12:24:30.560293 node configure-ovs.sh[1645]: ++ echo ens192
+May 02 12:24:30.560293 node configure-ovs.sh[1645]: ++ return
+May 02 12:24:30.561770 node configure-ovs.sh[1592]: + iface=ens192
+May 02 12:24:30.561770 node configure-ovs.sh[1592]: + '[' ens192 '!=' br-ex ']'
+May 02 12:24:30.561770 node configure-ovs.sh[1592]: + '[' -f /etc/ovnk/extra_bridge ']'
+May 02 12:24:30.562828 node configure-ovs.sh[1653]: ++ nmcli connection show --active br-ex
+May 02 12:24:30.564603 node configure-ovs.sh[1592]: + '[' -z '' ']'
+May 02 12:24:30.564988 node configure-ovs.sh[1592]: + echo 'Bridge br-ex is not active, restoring previous configuration before proceeding...'
+May 02 12:24:30.564988 node configure-ovs.sh[1592]: Bridge br-ex is not active, restoring previous configuration before proceeding...
+May 02 12:24:30.564988 node configure-ovs.sh[1592]: + rollback_nm
+May 02 12:24:30.566690 node configure-ovs.sh[1658]: ++ get_bridge_physical_interface ovs-if-phys0
+May 02 12:24:30.566690 node configure-ovs.sh[1658]: ++ local bridge_interface=ovs-if-phys0
+May 02 12:24:30.566690 node configure-ovs.sh[1658]: ++ local physical_interface=
+May 02 12:24:30.567904 node configure-ovs.sh[1659]: +++ nmcli -g connection.interface-name conn show ovs-if-phys0
+May 02 12:24:30.574010 node configure-ovs.sh[1659]: +++ echo ''
+May 02 12:24:30.574551 node configure-ovs.sh[1658]: ++ physical_interface=
+May 02 12:24:30.574551 node configure-ovs.sh[1658]: ++ echo ''
+May 02 12:24:30.575284 node configure-ovs.sh[1592]: + phys0=
+May 02 12:24:30.575626 node configure-ovs.sh[1664]: ++ get_bridge_physical_interface ovs-if-phys1
+May 02 12:24:30.575626 node configure-ovs.sh[1664]: ++ local bridge_interface=ovs-if-phys1
+May 02 12:24:30.575626 node configure-ovs.sh[1664]: ++ local physical_interface=
+May 02 12:24:30.576813 node configure-ovs.sh[1665]: +++ nmcli -g connection.interface-name conn show ovs-if-phys1
+May 02 12:24:30.584343 node configure-ovs.sh[1665]: +++ echo ''
+May 02 12:24:30.584836 node configure-ovs.sh[1664]: ++ physical_interface=
+May 02 12:24:30.584836 node configure-ovs.sh[1664]: ++ echo ''
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + phys1=
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + remove_all_ovn_bridges
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + echo 'Reverting any previous OVS configuration'
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: Reverting any previous OVS configuration
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + remove_ovn_bridges br-ex phys0
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + bridge_name=br-ex
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + port_name=phys0
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + update_nm_conn_files br-ex phys0
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + bridge_name=br-ex
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + port_name=phys0
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + ovs_port=ovs-port-br-ex
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + ovs_interface=ovs-if-br-ex
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + default_port_name=ovs-port-phys0
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + bridge_interface_name=ovs-if-phys0
+May 02 12:24:30.585522 node configure-ovs.sh[1592]: + MANAGED_NM_CONN_FILES=($(echo "${NM_CONN_PATH}"/{"$bridge_name","$ovs_interface","$ovs_port","$bridge_interface_name","$default_port_name"}{,.nmconnection}))
+May 02 12:24:30.590740 node configure-ovs.sh[1670]: ++ echo /etc/NetworkManager/system-connections/br-ex /etc/NetworkManager/system-connections/br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-if-br-ex /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-port-br-ex /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-if-phys0 /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection /etc/NetworkManager/system-connections/ovs-port-phys0 /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + shopt -s nullglob
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + MANAGED_NM_CONN_FILES+=(${NM_CONN_PATH}/*${MANAGED_NM_CONN_SUFFIX}.nmconnection ${NM_CONN_PATH}/*${MANAGED_NM_CONN_SUFFIX})
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + shopt -u nullglob
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + rm_nm_conn_files
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/br-ex ']'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/br-ex.nmconnection ']'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-br-ex ']'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection ']'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-br-ex ']'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection ']'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-phys0 ']'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection ']'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-phys0 ']'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection ']'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + ovs-vsctl --timeout=30 --if-exists del-br br-ex
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + '[' -d /sys/class/net/br-ex1 ']'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + echo 'OVS configuration successfully reverted'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: OVS configuration successfully reverted
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + reload_profiles_nm '' ''
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + '[' 0 -eq 0 ']'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + return
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + print_state
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: + echo 'Current device, connection, interface and routing state:'
+May 02 12:24:30.593000 node configure-ovs.sh[1592]: Current device, connection, interface and routing state:
+May 02 12:24:30.613114 node configure-ovs.sh[1672]: + nmcli -g all device
+May 02 12:24:30.613629 node configure-ovs.sh[1673]: + grep -v unmanaged
+May 02 12:24:30.613629 node configure-ovs.sh[1673]: ens192:ethernet:connected:full:full:/org/freedesktop/NetworkManager/Devices/2:Wired connection 1:fc22eaa4-5fa5-3dbd-b09e-8219072bd298:/org/freedesktop/NetworkManager/ActiveConnection/1
+May 02 12:24:30.615433 node configure-ovs.sh[1592]: + nmcli -g all connection
+May 02 12:24:30.615914 node configure-ovs.sh[1677]: Wired connection 1:fc22eaa4-5fa5-3dbd-b09e-8219072bd298:802-3-ethernet:1683030268:Tue May  2 12\:24\:28 2023:yes:-999:no:/org/freedesktop/NetworkManager/Settings/1:yes:ens192:activated:/org/freedesktop/NetworkManager/ActiveConnection/1::/run/NetworkManager/system-connections/Wired connection 1.nmconnection
+May 02 12:24:30.617715 node configure-ovs.sh[1592]: + ip -d address show
+May 02 12:24:30.618198 node configure-ovs.sh[1681]: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+May 02 12:24:30.618198 node configure-ovs.sh[1681]:     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 promiscuity 0 minmtu 0 maxmtu 0 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 02 12:24:30.618198 node configure-ovs.sh[1681]:     inet 127.0.0.1/8 scope host lo
+May 02 12:24:30.618198 node configure-ovs.sh[1681]:        valid_lft forever preferred_lft forever
+May 02 12:24:30.618198 node configure-ovs.sh[1681]:     inet6 ::1/128 scope host
+May 02 12:24:30.618198 node configure-ovs.sh[1681]:        valid_lft forever preferred_lft forever
+May 02 12:24:30.618198 node configure-ovs.sh[1681]: 2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+May 02 12:24:30.618198 node configure-ovs.sh[1681]:     link/ether 02:d1:1e:ff:ed:15 brd ff:ff:ff:ff:ff:ff promiscuity 0 minmtu 68 maxmtu 9212 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 02 12:24:30.618198 node configure-ovs.sh[1681]:     inet 192.168.1.126/24 brd 192.168.1.255 scope global dynamic noprefixroute ens192
+May 02 12:24:30.618198 node configure-ovs.sh[1681]:        valid_lft 86398sec preferred_lft 86398sec
+May 02 12:24:30.618198 node configure-ovs.sh[1681]:     inet6 fe80::821d:bc0:d7cb:6ea3/64 scope link noprefixroute
+May 02 12:24:30.618198 node configure-ovs.sh[1681]:        valid_lft forever preferred_lft forever
+May 02 12:24:30.626586 node configure-ovs.sh[1592]: + ip route show
+May 02 12:24:30.627087 node configure-ovs.sh[1682]: default via 192.168.1.1 dev ens192 proto dhcp src 192.168.1.126 metric 100
+May 02 12:24:30.627087 node configure-ovs.sh[1682]: 192.168.1.0/24 dev ens192 proto kernel scope link src 192.168.1.126 metric 100
+May 02 12:24:30.629097 node configure-ovs.sh[1592]: + ip -6 route show
+May 02 12:24:30.629620 node configure-ovs.sh[1683]: ::1 dev lo proto kernel metric 256 pref medium
+May 02 12:24:30.629620 node configure-ovs.sh[1683]: fe80::/64 dev ens192 proto kernel metric 1024 pref medium
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + convert_to_bridge ens192 br-ex phys0 48
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + local iface=ens192
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + local bridge_name=br-ex
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + local port_name=phys0
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + local bridge_metric=48
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + local ovs_port=ovs-port-br-ex
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + local ovs_interface=ovs-if-br-ex
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + local default_port_name=ovs-port-phys0
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + local bridge_interface_name=ovs-if-phys0
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + '[' ens192 = br-ex ']'
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + nm_config_changed=1
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + '[' -z ens192 ']'
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + iface_mac=02:d1:1e:ff:ed:15
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: + echo 'MAC address found for iface: ens192: 02:d1:1e:ff:ed:15'
+May 02 12:24:30.630674 node configure-ovs.sh[1592]: MAC address found for iface: ens192: 02:d1:1e:ff:ed:15
+May 02 12:24:30.638118 node configure-ovs.sh[1686]: ++ ip link show ens192
+May 02 12:24:30.638638 node configure-ovs.sh[1687]: ++ awk '{print $5; exit}'
+May 02 12:24:30.639162 node configure-ovs.sh[1592]: + iface_mtu=1500
+May 02 12:24:30.639162 node configure-ovs.sh[1592]: + [[ -z 1500 ]]
+May 02 12:24:30.639162 node configure-ovs.sh[1592]: + echo 'MTU found for iface: ens192: 1500'
+May 02 12:24:30.639162 node configure-ovs.sh[1592]: MTU found for iface: ens192: 1500
+May 02 12:24:30.640962 node configure-ovs.sh[1689]: ++ nmcli --fields UUID,DEVICE conn show --active
+May 02 12:24:30.641412 node configure-ovs.sh[1690]: ++ awk '/\sens192\s*$/ {print $1}'
+May 02 12:24:30.640974 node ovs-vsctl[1698]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --timeout=30 --if-exists del-br br-ex
+May 02 12:24:30.641987 node configure-ovs.sh[1592]: + old_conn=fc22eaa4-5fa5-3dbd-b09e-8219072bd298
+May 02 12:24:30.641987 node configure-ovs.sh[1592]: + nmcli connection show br-ex
+May 02 12:24:30.641987 node configure-ovs.sh[1592]: + ovs-vsctl --timeout=30 --if-exists del-br br-ex
+May 02 12:24:30.643459 node configure-ovs.sh[1592]: + add_nm_conn type ovs-bridge con-name br-ex conn.interface br-ex 802-3-ethernet.mtu 1500 connection.autoconnect-slaves 1
+May 02 12:24:30.643459 node configure-ovs.sh[1592]: + nmcli c add type ovs-bridge con-name br-ex conn.interface br-ex 802-3-ethernet.mtu 1500 connection.autoconnect-slaves 1 connection.autoconnect no
+May 02 12:24:30.653479 node configure-ovs.sh[1699]: Connection 'br-ex' (24d521ed-6078-40ef-92dc-4a89ce4fdaf9) successfully added.
+May 02 12:24:30.654757 node configure-ovs.sh[1592]: + nmcli connection show ovs-port-phys0
+May 02 12:24:30.664166 node configure-ovs.sh[1592]: + ovs-vsctl --timeout=30 --if-exists del-port br-ex ens192
+May 02 12:24:30.669618 node ovs-vsctl[1707]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --timeout=30 --if-exists del-port br-ex ens192
+May 02 12:24:30.671414 node configure-ovs.sh[1592]: + add_nm_conn type ovs-port conn.interface ens192 master br-ex con-name ovs-port-phys0 connection.autoconnect-slaves 1
+May 02 12:24:30.672312 node configure-ovs.sh[1592]: + nmcli c add type ovs-port conn.interface ens192 master br-ex con-name ovs-port-phys0 connection.autoconnect-slaves 1 connection.autoconnect no
+May 02 12:24:30.683164 node configure-ovs.sh[1708]: Connection 'ovs-port-phys0' (a151b6ed-cab8-43f4-a977-25107d63566a) successfully added.
+May 02 12:24:30.684668 node configure-ovs.sh[1592]: + nmcli connection show ovs-port-br-ex
+May 02 12:24:30.694675 node configure-ovs.sh[1592]: + ovs-vsctl --timeout=30 --if-exists del-port br-ex br-ex
+May 02 12:24:30.700360 node ovs-vsctl[1716]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --timeout=30 --if-exists del-port br-ex br-ex
+May 02 12:24:30.702062 node configure-ovs.sh[1592]: + add_nm_conn type ovs-port conn.interface br-ex master br-ex con-name ovs-port-br-ex
+May 02 12:24:30.703037 node configure-ovs.sh[1592]: + nmcli c add type ovs-port conn.interface br-ex master br-ex con-name ovs-port-br-ex connection.autoconnect no
+May 02 12:24:30.712670 node configure-ovs.sh[1717]: Connection 'ovs-port-br-ex' (11752fb1-906f-49cc-a20d-20f6abfafb80) successfully added.
+May 02 12:24:30.714332 node configure-ovs.sh[1592]: + extra_phys_args=()
+May 02 12:24:30.714843 node configure-ovs.sh[1721]: ++ nmcli --get-values connection.type conn show fc22eaa4-5fa5-3dbd-b09e-8219072bd298
+May 02 12:24:30.724740 node configure-ovs.sh[1592]: + '[' 802-3-ethernet == vlan ']'
+May 02 12:24:30.725421 node configure-ovs.sh[1725]: ++ nmcli --get-values connection.type conn show fc22eaa4-5fa5-3dbd-b09e-8219072bd298
+May 02 12:24:30.734887 node configure-ovs.sh[1592]: + '[' 802-3-ethernet == bond ']'
+May 02 12:24:30.735540 node configure-ovs.sh[1729]: ++ nmcli --get-values connection.type conn show fc22eaa4-5fa5-3dbd-b09e-8219072bd298
+May 02 12:24:30.745194 node configure-ovs.sh[1592]: + '[' 802-3-ethernet == team ']'
+May 02 12:24:30.745781 node configure-ovs.sh[1592]: + iface_type=802-3-ethernet
+May 02 12:24:30.745781 node configure-ovs.sh[1592]: + '[' '!' '' = 0 ']'
+May 02 12:24:30.745781 node configure-ovs.sh[1592]: + extra_phys_args+=(802-3-ethernet.cloned-mac-address "${iface_mac}")
+May 02 12:24:30.745781 node configure-ovs.sh[1592]: + nmcli connection show ovs-if-phys0
+May 02 12:24:30.754882 node configure-ovs.sh[1592]: + ovs-vsctl --timeout=30 --if-exists destroy interface ens192
+May 02 12:24:30.760536 node ovs-vsctl[1737]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --timeout=30 --if-exists destroy interface ens192
+May 02 12:24:30.762223 node configure-ovs.sh[1592]: + add_nm_conn type 802-3-ethernet conn.interface ens192 master ovs-port-phys0 con-name ovs-if-phys0 connection.autoconnect-priority 100 connection.autoconnect-slaves 1 802-3-ethernet.mtu 1500 802-3-ethernet.cloned-mac-address 02:d1:1e:ff:ed:15
+May 02 12:24:30.763830 node configure-ovs.sh[1592]: + nmcli c add type 802-3-ethernet conn.interface ens192 master ovs-port-phys0 con-name ovs-if-phys0 connection.autoconnect-priority 100 connection.autoconnect-slaves 1 802-3-ethernet.mtu 1500 802-3-ethernet.cloned-mac-address 02:d1:1e:ff:ed:15 connection.autoconnect no
+May 02 12:24:30.773300 node configure-ovs.sh[1738]: Connection 'ovs-if-phys0' (e2e300e0-e3e0-4f09-82a0-670838651e5e) successfully added.
+May 02 12:24:30.775368 node configure-ovs.sh[1742]: ++ nmcli -g connection.uuid conn show ovs-if-phys0
+May 02 12:24:30.785809 node configure-ovs.sh[1592]: + new_conn=e2e300e0-e3e0-4f09-82a0-670838651e5e
+May 02 12:24:30.786503 node configure-ovs.sh[1746]: ++ nmcli -g connection.uuid conn show ovs-port-br-ex
+May 02 12:24:30.796155 node configure-ovs.sh[1592]: + ovs_port_conn=11752fb1-906f-49cc-a20d-20f6abfafb80
+May 02 12:24:30.796762 node configure-ovs.sh[1592]: + replace_connection_master fc22eaa4-5fa5-3dbd-b09e-8219072bd298 e2e300e0-e3e0-4f09-82a0-670838651e5e
+May 02 12:24:30.796762 node configure-ovs.sh[1592]: + local old=fc22eaa4-5fa5-3dbd-b09e-8219072bd298
+May 02 12:24:30.796762 node configure-ovs.sh[1592]: + local new=e2e300e0-e3e0-4f09-82a0-670838651e5e
+May 02 12:24:30.799170 node configure-ovs.sh[1750]: ++ nmcli -g UUID connection show
+May 02 12:24:30.806638 node configure-ovs.sh[1592]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 02 12:24:30.807397 node configure-ovs.sh[1754]: ++ nmcli -g connection.master connection show uuid fc22eaa4-5fa5-3dbd-b09e-8219072bd298
+May 02 12:24:30.816977 node configure-ovs.sh[1592]: + '[' '' '!=' fc22eaa4-5fa5-3dbd-b09e-8219072bd298 ']'
+May 02 12:24:30.816977 node configure-ovs.sh[1592]: + continue
+May 02 12:24:30.818097 node configure-ovs.sh[1592]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 02 12:24:30.818616 node configure-ovs.sh[1758]: ++ nmcli -g connection.master connection show uuid 24d521ed-6078-40ef-92dc-4a89ce4fdaf9
+May 02 12:24:30.827026 node configure-ovs.sh[1592]: + '[' '' '!=' fc22eaa4-5fa5-3dbd-b09e-8219072bd298 ']'
+May 02 12:24:30.827026 node configure-ovs.sh[1592]: + continue
+May 02 12:24:30.828151 node configure-ovs.sh[1592]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 02 12:24:30.828652 node configure-ovs.sh[1762]: ++ nmcli -g connection.master connection show uuid e2e300e0-e3e0-4f09-82a0-670838651e5e
+May 02 12:24:30.837420 node configure-ovs.sh[1592]: + '[' a151b6ed-cab8-43f4-a977-25107d63566a '!=' fc22eaa4-5fa5-3dbd-b09e-8219072bd298 ']'
+May 02 12:24:30.837420 node configure-ovs.sh[1592]: + continue
+May 02 12:24:30.839166 node configure-ovs.sh[1592]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 02 12:24:30.839692 node configure-ovs.sh[1766]: ++ nmcli -g connection.master connection show uuid 11752fb1-906f-49cc-a20d-20f6abfafb80
+May 02 12:24:30.847501 node configure-ovs.sh[1592]: + '[' br-ex '!=' fc22eaa4-5fa5-3dbd-b09e-8219072bd298 ']'
+May 02 12:24:30.847501 node configure-ovs.sh[1592]: + continue
+May 02 12:24:30.848691 node configure-ovs.sh[1592]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 02 12:24:30.849202 node configure-ovs.sh[1770]: ++ nmcli -g connection.master connection show uuid a151b6ed-cab8-43f4-a977-25107d63566a
+May 02 12:24:30.858384 node configure-ovs.sh[1592]: + '[' br-ex '!=' fc22eaa4-5fa5-3dbd-b09e-8219072bd298 ']'
+May 02 12:24:30.858384 node configure-ovs.sh[1592]: + continue
+May 02 12:24:30.859537 node configure-ovs.sh[1592]: + replace_connection_master ens192 e2e300e0-e3e0-4f09-82a0-670838651e5e
+May 02 12:24:30.859537 node configure-ovs.sh[1592]: + local old=ens192
+May 02 12:24:30.859537 node configure-ovs.sh[1592]: + local new=e2e300e0-e3e0-4f09-82a0-670838651e5e
+May 02 12:24:30.861442 node configure-ovs.sh[1774]: ++ nmcli -g UUID connection show
+May 02 12:24:30.869139 node configure-ovs.sh[1592]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 02 12:24:30.869748 node configure-ovs.sh[1778]: ++ nmcli -g connection.master connection show uuid fc22eaa4-5fa5-3dbd-b09e-8219072bd298
+May 02 12:24:30.879884 node configure-ovs.sh[1592]: + '[' '' '!=' ens192 ']'
+May 02 12:24:30.879884 node configure-ovs.sh[1592]: + continue
+May 02 12:24:30.879884 node configure-ovs.sh[1592]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 02 12:24:30.881540 node configure-ovs.sh[1782]: ++ nmcli -g connection.master connection show uuid 24d521ed-6078-40ef-92dc-4a89ce4fdaf9
+May 02 12:24:30.889855 node configure-ovs.sh[1592]: + '[' '' '!=' ens192 ']'
+May 02 12:24:30.889855 node configure-ovs.sh[1592]: + continue
+May 02 12:24:30.889855 node configure-ovs.sh[1592]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 02 12:24:30.891413 node configure-ovs.sh[1786]: ++ nmcli -g connection.master connection show uuid e2e300e0-e3e0-4f09-82a0-670838651e5e
+May 02 12:24:30.900087 node configure-ovs.sh[1592]: + '[' a151b6ed-cab8-43f4-a977-25107d63566a '!=' ens192 ']'
+May 02 12:24:30.900087 node configure-ovs.sh[1592]: + continue
+May 02 12:24:30.900087 node configure-ovs.sh[1592]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 02 12:24:30.901674 node configure-ovs.sh[1790]: ++ nmcli -g connection.master connection show uuid 11752fb1-906f-49cc-a20d-20f6abfafb80
+May 02 12:24:30.910190 node configure-ovs.sh[1592]: + '[' br-ex '!=' ens192 ']'
+May 02 12:24:30.910190 node configure-ovs.sh[1592]: + continue
+May 02 12:24:30.910190 node configure-ovs.sh[1592]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 02 12:24:30.911775 node configure-ovs.sh[1794]: ++ nmcli -g connection.master connection show uuid a151b6ed-cab8-43f4-a977-25107d63566a
+May 02 12:24:30.920239 node configure-ovs.sh[1592]: + '[' br-ex '!=' ens192 ']'
+May 02 12:24:30.920239 node configure-ovs.sh[1592]: + continue
+May 02 12:24:30.921282 node configure-ovs.sh[1592]: + nmcli connection show ovs-if-br-ex
+May 02 12:24:30.930724 node configure-ovs.sh[1592]: + ovs-vsctl --timeout=30 --if-exists destroy interface br-ex
+May 02 12:24:30.936312 node ovs-vsctl[1802]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --timeout=30 --if-exists destroy interface br-ex
+May 02 12:24:30.938269 node configure-ovs.sh[1803]: + nmcli --fields ipv4.method,ipv6.method conn show fc22eaa4-5fa5-3dbd-b09e-8219072bd298
+May 02 12:24:30.939384 node configure-ovs.sh[1804]: + grep manual
+May 02 12:24:30.948860 node configure-ovs.sh[1592]: + extra_if_brex_args=
+May 02 12:24:30.949476 node configure-ovs.sh[1809]: ++ ip -j a show dev ens192
+May 02 12:24:30.950064 node configure-ovs.sh[1810]: ++ jq '.[0].addr_info | map(. | select(.family == "inet")) | length'
+May 02 12:24:30.972539 node configure-ovs.sh[1592]: + num_ipv4_addrs=1
+May 02 12:24:30.972539 node configure-ovs.sh[1592]: + '[' 1 -gt 0 ']'
+May 02 12:24:30.972539 node configure-ovs.sh[1592]: + extra_if_brex_args+='ipv4.may-fail no '
+May 02 12:24:30.974062 node configure-ovs.sh[1812]: ++ ip -j a show dev ens192
+May 02 12:24:30.974588 node configure-ovs.sh[1813]: ++ jq '.[0].addr_info | map(. | select(.family == "inet6" and .scope != "link")) | length'
+May 02 12:24:30.996303 node configure-ovs.sh[1592]: + num_ip6_addrs=0
+May 02 12:24:30.996303 node configure-ovs.sh[1592]: + '[' 0 -gt 0 ']'
+May 02 12:24:30.997346 node configure-ovs.sh[1814]: ++ nmcli --get-values ipv4.dhcp-client-id conn show fc22eaa4-5fa5-3dbd-b09e-8219072bd298
+May 02 12:24:31.007012 node configure-ovs.sh[1592]: + dhcp_client_id=
+May 02 12:24:31.007012 node configure-ovs.sh[1592]: + '[' -n '' ']'
+May 02 12:24:31.008053 node configure-ovs.sh[1818]: ++ nmcli --get-values ipv6.dhcp-duid conn show fc22eaa4-5fa5-3dbd-b09e-8219072bd298
+May 02 12:24:31.017639 node configure-ovs.sh[1592]: + dhcp6_client_id=
+May 02 12:24:31.018142 node configure-ovs.sh[1592]: + '[' -n '' ']'
+May 02 12:24:31.018576 node configure-ovs.sh[1822]: ++ nmcli --get-values ipv6.addr-gen-mode conn show fc22eaa4-5fa5-3dbd-b09e-8219072bd298
+May 02 12:24:31.028193 node configure-ovs.sh[1592]: + ipv6_addr_gen_mode=stable-privacy
+May 02 12:24:31.028193 node configure-ovs.sh[1592]: + '[' -n stable-privacy ']'
+May 02 12:24:31.029219 node configure-ovs.sh[1592]: + extra_if_brex_args+='ipv6.addr-gen-mode stable-privacy '
+May 02 12:24:31.029219 node configure-ovs.sh[1592]: + add_nm_conn type ovs-interface slave-type ovs-port conn.interface br-ex master 11752fb1-906f-49cc-a20d-20f6abfafb80 con-name ovs-if-br-ex 802-3-ethernet.mtu 1500 802-3-ethernet.cloned-mac-address 02:d1:1e:ff:ed:15 ipv4.route-metric 48 ipv6.route-metric 48 ipv4.may-fail no ipv6.addr-gen-mode stable-privacy
+May 02 12:24:31.029219 node configure-ovs.sh[1592]: + nmcli c add type ovs-interface slave-type ovs-port conn.interface br-ex master 11752fb1-906f-49cc-a20d-20f6abfafb80 con-name ovs-if-br-ex 802-3-ethernet.mtu 1500 802-3-ethernet.cloned-mac-address 02:d1:1e:ff:ed:15 ipv4.route-metric 48 ipv6.route-metric 48 ipv4.may-fail no ipv6.addr-gen-mode stable-privacy connection.autoconnect no
+May 02 12:24:31.041451 node configure-ovs.sh[1826]: Connection 'ovs-if-br-ex' (5fdea472-80c2-4880-92ae-8a6d0c907adb) successfully added.
+May 02 12:24:31.042587 node configure-ovs.sh[1592]: + configure_driver_options ens192
+May 02 12:24:31.042587 node configure-ovs.sh[1592]: + intf=ens192
+May 02 12:24:31.042587 node configure-ovs.sh[1592]: + '[' '!' -f /sys/class/net/ens192/device/uevent ']'
+May 02 12:24:31.044022 node configure-ovs.sh[1831]: ++ cat /sys/class/net/ens192/device/uevent
+May 02 12:24:31.044539 node configure-ovs.sh[1832]: ++ grep DRIVER
+May 02 12:24:31.045034 node configure-ovs.sh[1833]: ++ awk -F = '{print $2}'
+May 02 12:24:31.045521 node configure-ovs.sh[1592]: + driver=e1000e
+May 02 12:24:31.045521 node configure-ovs.sh[1592]: + echo 'Driver name is' e1000e
+May 02 12:24:31.045521 node configure-ovs.sh[1592]: Driver name is e1000e
+May 02 12:24:31.045521 node configure-ovs.sh[1592]: + '[' e1000e = vmxnet3 ']'
+May 02 12:24:31.045521 node configure-ovs.sh[1592]: + update_nm_conn_files br-ex phys0
+May 02 12:24:31.045521 node configure-ovs.sh[1592]: + bridge_name=br-ex
+May 02 12:24:31.045521 node configure-ovs.sh[1592]: + port_name=phys0
+May 02 12:24:31.045521 node configure-ovs.sh[1592]: + ovs_port=ovs-port-br-ex
+May 02 12:24:31.045521 node configure-ovs.sh[1592]: + ovs_interface=ovs-if-br-ex
+May 02 12:24:31.045521 node configure-ovs.sh[1592]: + default_port_name=ovs-port-phys0
+May 02 12:24:31.045521 node configure-ovs.sh[1592]: + bridge_interface_name=ovs-if-phys0
+May 02 12:24:31.045521 node configure-ovs.sh[1592]: + MANAGED_NM_CONN_FILES=($(echo "${NM_CONN_PATH}"/{"$bridge_name","$ovs_interface","$ovs_port","$bridge_interface_name","$default_port_name"}{,.nmconnection}))
+May 02 12:24:31.051149 node configure-ovs.sh[1834]: ++ echo /etc/NetworkManager/system-connections/br-ex /etc/NetworkManager/system-connections/br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-if-br-ex /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-port-br-ex /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-if-phys0 /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection /etc/NetworkManager/system-connections/ovs-port-phys0 /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection
+May 02 12:24:31.054038 node configure-ovs.sh[1592]: + shopt -s nullglob
+May 02 12:24:31.054038 node configure-ovs.sh[1592]: + MANAGED_NM_CONN_FILES+=(${NM_CONN_PATH}/*${MANAGED_NM_CONN_SUFFIX}.nmconnection ${NM_CONN_PATH}/*${MANAGED_NM_CONN_SUFFIX})
+May 02 12:24:31.054038 node configure-ovs.sh[1592]: + shopt -u nullglob
+May 02 12:24:31.054038 node configure-ovs.sh[1592]: + '[' -f /etc/ovnk/extra_bridge ']'
+May 02 12:24:31.054038 node configure-ovs.sh[1592]: + '[' '!' -f /etc/ovnk/extra_bridge ']'
+May 02 12:24:31.056643 node configure-ovs.sh[1835]: + nmcli connection show br-ex1
+May 02 12:24:31.056643 node configure-ovs.sh[1835]: + nmcli connection show ovs-if-phys1
+May 02 12:24:31.066601 node configure-ovs.sh[1592]: + ovs-vsctl --timeout=30 --if-exists del-br br0
+May 02 12:24:31.072621 node ovs-vsctl[1844]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --timeout=30 --if-exists del-br br0
+May 02 12:24:31.074499 node configure-ovs.sh[1592]: + connections=(br-ex ovs-if-phys0)
+May 02 12:24:31.075295 node configure-ovs.sh[1592]: + '[' -f /etc/ovnk/extra_bridge ']'
+May 02 12:24:31.075789 node configure-ovs.sh[1845]: ++ nmcli -g NAME c
+May 02 12:24:31.076597 node configure-ovs.sh[1592]: + IFS=
+May 02 12:24:31.076597 node configure-ovs.sh[1592]: + read -r connection
+May 02 12:24:31.084854 node configure-ovs.sh[1592]: + [[ Wired connection 1 == *\-\s\l\a\v\e\-\o\v\s\-\c\l\o\n\e ]]
+May 02 12:24:31.084854 node configure-ovs.sh[1592]: + IFS=
+May 02 12:24:31.084854 node configure-ovs.sh[1592]: + read -r connection
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + [[ br-ex == *\-\s\l\a\v\e\-\o\v\s\-\c\l\o\n\e ]]
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + IFS=
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + read -r connection
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + [[ ovs-if-br-ex == *\-\s\l\a\v\e\-\o\v\s\-\c\l\o\n\e ]]
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + IFS=
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + read -r connection
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + [[ ovs-if-phys0 == *\-\s\l\a\v\e\-\o\v\s\-\c\l\o\n\e ]]
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + IFS=
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + read -r connection
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + [[ ovs-port-br-ex == *\-\s\l\a\v\e\-\o\v\s\-\c\l\o\n\e ]]
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + IFS=
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + read -r connection
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + [[ ovs-port-phys0 == *\-\s\l\a\v\e\-\o\v\s\-\c\l\o\n\e ]]
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + IFS=
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + read -r connection
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + connections+=(ovs-if-br-ex)
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + '[' -f /etc/ovnk/extra_bridge ']'
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + activate_nm_connections br-ex ovs-if-phys0 ovs-if-br-ex
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + connections=("$@")
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + local connections
+May 02 12:24:31.086909 node configure-ovs.sh[1592]: + for conn in "${connections[@]}"
+May 02 12:24:31.094880 node configure-ovs.sh[1850]: ++ nmcli -g connection.slave-type connection show br-ex
+May 02 12:24:31.097393 node configure-ovs.sh[1592]: + local slave_type=
+May 02 12:24:31.097760 node configure-ovs.sh[1592]: + '[' '' = team ']'
+May 02 12:24:31.097760 node configure-ovs.sh[1592]: + '[' '' = bond ']'
+May 02 12:24:31.097760 node configure-ovs.sh[1592]: + for conn in "${connections[@]}"
+May 02 12:24:31.098840 node configure-ovs.sh[1854]: ++ nmcli -g connection.slave-type connection show ovs-if-phys0
+May 02 12:24:31.108401 node configure-ovs.sh[1592]: + local slave_type=ovs-port
+May 02 12:24:31.108857 node configure-ovs.sh[1592]: + '[' ovs-port = team ']'
+May 02 12:24:31.108857 node configure-ovs.sh[1592]: + '[' ovs-port = bond ']'
+May 02 12:24:31.108857 node configure-ovs.sh[1592]: + for conn in "${connections[@]}"
+May 02 12:24:31.109925 node configure-ovs.sh[1858]: ++ nmcli -g connection.slave-type connection show ovs-if-br-ex
+May 02 12:24:31.119747 node configure-ovs.sh[1592]: + local slave_type=ovs-port
+May 02 12:24:31.119747 node configure-ovs.sh[1592]: + '[' ovs-port = team ']'
+May 02 12:24:31.119747 node configure-ovs.sh[1592]: + '[' ovs-port = bond ']'
+May 02 12:24:31.120943 node configure-ovs.sh[1592]: + declare -A master_interfaces
+May 02 12:24:31.120943 node configure-ovs.sh[1592]: + for conn in "${connections[@]}"
+May 02 12:24:31.121612 node configure-ovs.sh[1862]: ++ nmcli -g connection.slave-type connection show br-ex
+May 02 12:24:31.130177 node configure-ovs.sh[1592]: + local slave_type=
+May 02 12:24:31.130177 node configure-ovs.sh[1592]: + local is_slave=false
+May 02 12:24:31.131001 node configure-ovs.sh[1592]: + '[' '' = team ']'
+May 02 12:24:31.131001 node configure-ovs.sh[1592]: + '[' '' = bond ']'
+May 02 12:24:31.131001 node configure-ovs.sh[1592]: + local master_interface
+May 02 12:24:31.131001 node configure-ovs.sh[1592]: + false
+May 02 12:24:31.132307 node configure-ovs.sh[1866]: ++ nmcli -g GENERAL.STATE conn show br-ex
+May 02 12:24:31.140723 node configure-ovs.sh[1592]: + local active_state=
+May 02 12:24:31.140723 node configure-ovs.sh[1592]: + '[' '' == activated ']'
+May 02 12:24:31.141686 node configure-ovs.sh[1592]: + for i in {1..10}
+May 02 12:24:31.141686 node configure-ovs.sh[1592]: + echo 'Attempt 1 to bring up connection br-ex'
+May 02 12:24:31.141686 node configure-ovs.sh[1592]: Attempt 1 to bring up connection br-ex
+May 02 12:24:31.141686 node configure-ovs.sh[1592]: + nmcli conn up br-ex
+May 02 12:24:31.329720 node configure-ovs.sh[1870]: Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/2)
+May 02 12:24:31.331101 node configure-ovs.sh[1592]: + s=0
+May 02 12:24:31.331101 node configure-ovs.sh[1592]: + break
+May 02 12:24:31.331101 node configure-ovs.sh[1592]: + '[' 0 -eq 0 ']'
+May 02 12:24:31.331101 node configure-ovs.sh[1592]: + echo 'Brought up connection br-ex successfully'
+May 02 12:24:31.331101 node configure-ovs.sh[1592]: Brought up connection br-ex successfully
+May 02 12:24:31.331101 node configure-ovs.sh[1592]: + false
+May 02 12:24:31.331101 node configure-ovs.sh[1592]: + nmcli c mod br-ex connection.autoconnect yes
+May 02 12:24:31.346072 node configure-ovs.sh[1592]: + for conn in "${connections[@]}"
+May 02 12:24:31.346546 node configure-ovs.sh[1980]: ++ nmcli -g connection.slave-type connection show ovs-if-phys0
+May 02 12:24:31.358749 node configure-ovs.sh[1592]: + local slave_type=ovs-port
+May 02 12:24:31.358749 node configure-ovs.sh[1592]: + local is_slave=false
+May 02 12:24:31.359601 node configure-ovs.sh[1592]: + '[' ovs-port = team ']'
+May 02 12:24:31.359601 node configure-ovs.sh[1592]: + '[' ovs-port = bond ']'
+May 02 12:24:31.359601 node configure-ovs.sh[1592]: + local master_interface
+May 02 12:24:31.359601 node configure-ovs.sh[1592]: + false
+May 02 12:24:31.361015 node configure-ovs.sh[1992]: ++ nmcli -g GENERAL.STATE conn show ovs-if-phys0
+May 02 12:24:31.369628 node configure-ovs.sh[1592]: + local active_state=activating
+May 02 12:24:31.369628 node configure-ovs.sh[1592]: + '[' activating == activated ']'
+May 02 12:24:31.370484 node configure-ovs.sh[1592]: + for i in {1..10}
+May 02 12:24:31.370484 node configure-ovs.sh[1592]: + echo 'Attempt 1 to bring up connection ovs-if-phys0'
+May 02 12:24:31.370484 node configure-ovs.sh[1592]: Attempt 1 to bring up connection ovs-if-phys0
+May 02 12:24:31.370484 node configure-ovs.sh[1592]: + nmcli conn up ovs-if-phys0
+May 02 12:24:31.650888 node configure-ovs.sh[1998]: Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/6)
+May 02 12:24:31.651978 node configure-ovs.sh[1592]: + s=0
+May 02 12:24:31.651978 node configure-ovs.sh[1592]: + break
+May 02 12:24:31.652827 node configure-ovs.sh[1592]: + '[' 0 -eq 0 ']'
+May 02 12:24:31.652827 node configure-ovs.sh[1592]: + echo 'Brought up connection ovs-if-phys0 successfully'
+May 02 12:24:31.652827 node configure-ovs.sh[1592]: Brought up connection ovs-if-phys0 successfully
+May 02 12:24:31.652827 node configure-ovs.sh[1592]: + false
+May 02 12:24:31.652827 node configure-ovs.sh[1592]: + nmcli c mod ovs-if-phys0 connection.autoconnect yes
+May 02 12:24:31.665531 node configure-ovs.sh[1592]: + for conn in "${connections[@]}"
+May 02 12:24:31.666077 node configure-ovs.sh[2179]: ++ nmcli -g connection.slave-type connection show ovs-if-br-ex
+May 02 12:24:31.679744 node configure-ovs.sh[1592]: + local slave_type=ovs-port
+May 02 12:24:31.679744 node configure-ovs.sh[1592]: + local is_slave=false
+May 02 12:24:31.679744 node configure-ovs.sh[1592]: + '[' ovs-port = team ']'
+May 02 12:24:31.679744 node configure-ovs.sh[1592]: + '[' ovs-port = bond ']'
+May 02 12:24:31.682401 node configure-ovs.sh[1592]: + local master_interface
+May 02 12:24:31.682401 node configure-ovs.sh[1592]: + false
+May 02 12:24:31.697795 node configure-ovs.sh[2193]: ++ nmcli -g GENERAL.STATE conn show ovs-if-br-ex
+May 02 12:24:31.698253 node configure-ovs.sh[1592]: + local active_state=
+May 02 12:24:31.698253 node configure-ovs.sh[1592]: + '[' '' == activated ']'
+May 02 12:24:31.698253 node configure-ovs.sh[1592]: + for i in {1..10}
+May 02 12:24:31.698253 node configure-ovs.sh[1592]: + echo 'Attempt 1 to bring up connection ovs-if-br-ex'
+May 02 12:24:31.698253 node configure-ovs.sh[1592]: Attempt 1 to bring up connection ovs-if-br-ex
+May 02 12:24:31.698253 node configure-ovs.sh[1592]: + nmcli conn up ovs-if-br-ex
+May 02 12:24:31.804052 node configure-ovs.sh[2207]: Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/7)
+May 02 12:24:31.805542 node configure-ovs.sh[1592]: + s=0
+May 02 12:24:31.805542 node configure-ovs.sh[1592]: + break
+May 02 12:24:31.806384 node configure-ovs.sh[1592]: + '[' 0 -eq 0 ']'
+May 02 12:24:31.806384 node configure-ovs.sh[1592]: + echo 'Brought up connection ovs-if-br-ex successfully'
+May 02 12:24:31.806384 node configure-ovs.sh[1592]: Brought up connection ovs-if-br-ex successfully
+May 02 12:24:31.806384 node configure-ovs.sh[1592]: + false
+May 02 12:24:31.806384 node configure-ovs.sh[1592]: + nmcli c mod ovs-if-br-ex connection.autoconnect yes
+May 02 12:24:31.823099 node configure-ovs.sh[1592]: + try_to_bind_ipv6_address
+May 02 12:24:31.823099 node configure-ovs.sh[1592]: + retries=60
+May 02 12:24:31.823099 node configure-ovs.sh[1592]: + [[ 60 -eq 0 ]]
+May 02 12:24:31.824376 node configure-ovs.sh[2261]: ++ ip -6 -j addr
+May 02 12:24:31.825189 node configure-ovs.sh[2262]: ++ jq -r 'first(.[] | select(.ifname=="br-ex") | .addr_info[] | select(.scope=="global") | .local)'
+May 02 12:24:31.849761 node configure-ovs.sh[1592]: + ip=
+May 02 12:24:31.849761 node configure-ovs.sh[1592]: + [[ '' == '' ]]
+May 02 12:24:31.849761 node configure-ovs.sh[1592]: + echo 'No ipv6 ip to bind was found'
+May 02 12:24:31.849761 node configure-ovs.sh[1592]: No ipv6 ip to bind was found
+May 02 12:24:31.851383 node configure-ovs.sh[1592]: + break
+May 02 12:24:31.851383 node configure-ovs.sh[1592]: + [[ 60 -eq 0 ]]
+May 02 12:24:31.851383 node configure-ovs.sh[1592]: + handle_exit
+May 02 12:24:31.851383 node configure-ovs.sh[1592]: + e=0
+May 02 12:24:31.851383 node configure-ovs.sh[1592]: + '[' 0 -eq 0 ']'
+May 02 12:24:31.851383 node configure-ovs.sh[1592]: + print_state
+May 02 12:24:31.851383 node configure-ovs.sh[1592]: + echo 'Current device, connection, interface and routing state:'
+May 02 12:24:31.851383 node configure-ovs.sh[1592]: Current device, connection, interface and routing state:
+May 02 12:24:31.854255 node configure-ovs.sh[2280]: + nmcli -g all device
+May 02 12:24:31.854735 node configure-ovs.sh[2281]: + grep -v unmanaged
+May 02 12:24:31.861467 node configure-ovs.sh[2281]: br-ex:ovs-interface:connected:full:full:/org/freedesktop/NetworkManager/Devices/6:ovs-if-br-ex:5fdea472-80c2-4880-92ae-8a6d0c907adb:/org/freedesktop/NetworkManager/ActiveConnection/7
+May 02 12:24:31.861467 node configure-ovs.sh[2281]: ens192:ethernet:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/2:ovs-if-phys0:e2e300e0-e3e0-4f09-82a0-670838651e5e:/org/freedesktop/NetworkManager/ActiveConnection/6
+May 02 12:24:31.861467 node configure-ovs.sh[2281]: br-ex:ovs-bridge:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/3:br-ex:24d521ed-6078-40ef-92dc-4a89ce4fdaf9:/org/freedesktop/NetworkManager/ActiveConnection/2
+May 02 12:24:31.861467 node configure-ovs.sh[2281]: br-ex:ovs-port:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/5:ovs-port-br-ex:11752fb1-906f-49cc-a20d-20f6abfafb80:/org/freedesktop/NetworkManager/ActiveConnection/3
+May 02 12:24:31.861467 node configure-ovs.sh[2281]: ens192:ovs-port:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/4:ovs-port-phys0:a151b6ed-cab8-43f4-a977-25107d63566a:/org/freedesktop/NetworkManager/ActiveConnection/4
+May 02 12:24:31.867498 node configure-ovs.sh[1592]: + nmcli -g all connection
+May 02 12:24:31.876407 node configure-ovs.sh[2288]: ovs-if-br-ex:5fdea472-80c2-4880-92ae-8a6d0c907adb:ovs-interface:1683030271:Tue May  2 12\:24\:31 2023:yes:0:no:/org/freedesktop/NetworkManager/Settings/6:yes:br-ex:activated:/org/freedesktop/NetworkManager/ActiveConnection/7:ovs-port:/etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection
+May 02 12:24:31.876407 node configure-ovs.sh[2288]: br-ex:24d521ed-6078-40ef-92dc-4a89ce4fdaf9:ovs-bridge:1683030271:Tue May  2 12\:24\:31 2023:yes:0:no:/org/freedesktop/NetworkManager/Settings/2:yes:br-ex:activated:/org/freedesktop/NetworkManager/ActiveConnection/2::/etc/NetworkManager/system-connections/br-ex.nmconnection
+May 02 12:24:31.876407 node configure-ovs.sh[2288]: ovs-if-phys0:e2e300e0-e3e0-4f09-82a0-670838651e5e:802-3-ethernet:1683030271:Tue May  2 12\:24\:31 2023:yes:100:no:/org/freedesktop/NetworkManager/Settings/5:yes:ens192:activated:/org/freedesktop/NetworkManager/ActiveConnection/6:ovs-port:/etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection
+May 02 12:24:31.876407 node configure-ovs.sh[2288]: ovs-port-br-ex:11752fb1-906f-49cc-a20d-20f6abfafb80:ovs-port:1683030271:Tue May  2 12\:24\:31 2023:no:0:no:/org/freedesktop/NetworkManager/Settings/4:yes:br-ex:activated:/org/freedesktop/NetworkManager/ActiveConnection/3:ovs-bridge:/etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection
+May 02 12:24:31.876407 node configure-ovs.sh[2288]: ovs-port-phys0:a151b6ed-cab8-43f4-a977-25107d63566a:ovs-port:1683030271:Tue May  2 12\:24\:31 2023:no:0:no:/org/freedesktop/NetworkManager/Settings/3:yes:ens192:activated:/org/freedesktop/NetworkManager/ActiveConnection/4:ovs-bridge:/etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection
+May 02 12:24:31.876407 node configure-ovs.sh[2288]: Wired connection 1:fc22eaa4-5fa5-3dbd-b09e-8219072bd298:802-3-ethernet:1683030271:Tue May  2 12\:24\:31 2023:yes:-999:no:/org/freedesktop/NetworkManager/Settings/1:no:::::/run/NetworkManager/system-connections/Wired connection 1.nmconnection
+May 02 12:24:31.889951 node configure-ovs.sh[1592]: + ip -d address show
+May 02 12:24:31.882670 node systemd[1]: ovs-configuration.service: Succeeded.
+May 02 12:24:31.891061 node configure-ovs.sh[2299]: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 promiscuity 0 minmtu 0 maxmtu 0 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:     inet 127.0.0.1/8 scope host lo
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:        valid_lft forever preferred_lft forever
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:     inet6 ::1/128 scope host
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:        valid_lft forever preferred_lft forever
+May 02 12:24:31.891061 node configure-ovs.sh[2299]: 2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master ovs-system state UP group default qlen 1000
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:     link/ether 02:d1:1e:ff:ed:15 brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 9212
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:     openvswitch_slave numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 02 12:24:31.891061 node configure-ovs.sh[2299]: 4: ovs-system: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:     link/ether 7a:07:78:60:46:70 brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 02 12:24:31.891061 node configure-ovs.sh[2299]: 5: br-ex: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:     link/ether 02:d1:1e:ff:ed:15 brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:     inet 192.168.1.126/24 brd 192.168.1.255 scope global dynamic noprefixroute br-ex
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:        valid_lft 86400sec preferred_lft 86400sec
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:     inet6 fe80::cac6:3fcd:96cf:578e/64 scope link tentative noprefixroute
+May 02 12:24:31.891061 node configure-ovs.sh[2299]:        valid_lft forever preferred_lft forever
+May 02 12:24:31.883090 node systemd[1]: Started Configures OVS with proper host networking configuration.
+May 02 12:24:31.912073 node configure-ovs.sh[1592]: + ip route show
+May 02 12:24:31.885191 node systemd[1]: ovs-configuration.service: Consumed 817ms CPU time
+May 02 12:24:31.912773 node configure-ovs.sh[2301]: default via 192.168.1.1 dev br-ex proto dhcp src 192.168.1.126 metric 48
+May 02 12:24:31.912773 node configure-ovs.sh[2301]: 192.168.1.0/24 dev br-ex proto kernel scope link src 192.168.1.126 metric 48
+May 02 12:24:31.916488 node configure-ovs.sh[1592]: + ip -6 route show
+May 02 12:24:31.918052 node configure-ovs.sh[2302]: ::1 dev lo proto kernel metric 256 pref medium
+May 02 12:24:31.918052 node configure-ovs.sh[2302]: fe80::/64 dev br-ex proto kernel metric 1024 pref medium
+May 02 12:24:31.919361 node configure-ovs.sh[1592]: + exit 0
+-- Logs begin at Tue 2023-05-02 12:21:27 UTC, end at Thu 2023-05-04 18:47:25 UTC. --
+May 04 16:28:37.062621 node systemd[1]: Starting Configures OVS with proper host networking configuration...
+May 04 16:28:37.079334 node configure-ovs.sh[2625]: + touch /var/run/ovs-config-executed
+May 04 16:28:37.079934 node configure-ovs.sh[2625]: + NM_CONN_PATH=/etc/NetworkManager/system-connections
+May 04 16:28:37.079934 node configure-ovs.sh[2625]: + nm_config_changed=0
+May 04 16:28:37.080061 node configure-ovs.sh[2625]: + MANAGED_NM_CONN_SUFFIX=-slave-ovs-clone
+May 04 16:28:37.080262 node configure-ovs.sh[2625]: + BRIDGE_METRIC=48
+May 04 16:28:37.080262 node configure-ovs.sh[2625]: + BRIDGE1_METRIC=49
+May 04 16:28:37.081975 node configure-ovs.sh[2625]: + trap handle_exit EXIT
+May 04 16:28:37.082034 node configure-ovs.sh[2625]: + '[' '!' -f /etc/cno/mtu-migration/config ']'
+May 04 16:28:37.082034 node configure-ovs.sh[2625]: + echo 'Cleaning up left over mtu migration configuration'
+May 04 16:28:37.082034 node configure-ovs.sh[2625]: Cleaning up left over mtu migration configuration
+May 04 16:28:37.082034 node configure-ovs.sh[2625]: + rm -rf /etc/cno/mtu-migration
+May 04 16:28:37.082695 node configure-ovs.sh[2628]: + rpm -qa
+May 04 16:28:37.082897 node configure-ovs.sh[2629]: + grep -q openvswitch
+May 04 16:28:37.388675 node configure-ovs.sh[2625]: + print_state
+May 04 16:28:37.388675 node configure-ovs.sh[2625]: + echo 'Current device, connection, interface and routing state:'
+May 04 16:28:37.388675 node configure-ovs.sh[2625]: Current device, connection, interface and routing state:
+May 04 16:28:37.388940 node configure-ovs.sh[2630]: + nmcli -g all device
+May 04 16:28:37.389258 node configure-ovs.sh[2631]: + grep -v unmanaged
+May 04 16:28:37.401566 node configure-ovs.sh[2631]: br-ex:ovs-interface:connected:full:full:/org/freedesktop/NetworkManager/Devices/2:ovs-if-br-ex:5fdea472-80c2-4880-92ae-8a6d0c907adb:/org/freedesktop/NetworkManager/ActiveConnection/6
+May 04 16:28:37.401566 node configure-ovs.sh[2631]: ens192:ethernet:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/5:ovs-if-phys0:e2e300e0-e3e0-4f09-82a0-670838651e5e:/org/freedesktop/NetworkManager/ActiveConnection/7
+May 04 16:28:37.401566 node configure-ovs.sh[2631]: br-ex:ovs-bridge:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/6:br-ex:24d521ed-6078-40ef-92dc-4a89ce4fdaf9:/org/freedesktop/NetworkManager/ActiveConnection/2
+May 04 16:28:37.401566 node configure-ovs.sh[2631]: br-ex:ovs-port:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/7:ovs-port-br-ex:11752fb1-906f-49cc-a20d-20f6abfafb80:/org/freedesktop/NetworkManager/ActiveConnection/4
+May 04 16:28:37.401566 node configure-ovs.sh[2631]: ens192:ovs-port:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/8:ovs-port-phys0:a151b6ed-cab8-43f4-a977-25107d63566a:/org/freedesktop/NetworkManager/ActiveConnection/5
+May 04 16:28:37.405763 node configure-ovs.sh[2625]: + nmcli -g all connection
+May 04 16:28:37.413075 node configure-ovs.sh[2635]: ovs-if-br-ex:5fdea472-80c2-4880-92ae-8a6d0c907adb:ovs-interface:1683217663:Thu May  4 16\:27\:43 2023:yes:0:no:/org/freedesktop/NetworkManager/Settings/5:yes:br-ex:activated:/org/freedesktop/NetworkManager/ActiveConnection/6:ovs-port:/etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection
+May 04 16:28:37.413075 node configure-ovs.sh[2635]: br-ex:24d521ed-6078-40ef-92dc-4a89ce4fdaf9:ovs-bridge:1683217661:Thu May  4 16\:27\:41 2023:yes:0:no:/org/freedesktop/NetworkManager/Settings/1:yes:br-ex:activated:/org/freedesktop/NetworkManager/ActiveConnection/2::/etc/NetworkManager/system-connections/br-ex.nmconnection
+May 04 16:28:37.413075 node configure-ovs.sh[2635]: ovs-if-phys0:e2e300e0-e3e0-4f09-82a0-670838651e5e:802-3-ethernet:1683217661:Thu May  4 16\:27\:41 2023:yes:100:no:/org/freedesktop/NetworkManager/Settings/4:yes:ens192:activated:/org/freedesktop/NetworkManager/ActiveConnection/7:ovs-port:/etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection
+May 04 16:28:37.419089 node configure-ovs.sh[2635]: ovs-port-br-ex:11752fb1-906f-49cc-a20d-20f6abfafb80:ovs-port:1683217661:Thu May  4 16\:27\:41 2023:no:0:no:/org/freedesktop/NetworkManager/Settings/3:yes:br-ex:activated:/org/freedesktop/NetworkManager/ActiveConnection/4:ovs-bridge:/etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection
+May 04 16:28:37.419089 node configure-ovs.sh[2635]: ovs-port-phys0:a151b6ed-cab8-43f4-a977-25107d63566a:ovs-port:1683217661:Thu May  4 16\:27\:41 2023:no:0:no:/org/freedesktop/NetworkManager/Settings/2:yes:ens192:activated:/org/freedesktop/NetworkManager/ActiveConnection/5:ovs-bridge:/etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection
+May 04 16:28:37.423693 node configure-ovs.sh[2625]: + ip -d address show
+May 04 16:28:37.457453 node configure-ovs.sh[2639]: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+May 04 16:28:37.457453 node configure-ovs.sh[2639]:     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 promiscuity 0 minmtu 0 maxmtu 0 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:37.457453 node configure-ovs.sh[2639]:     inet 127.0.0.1/8 scope host lo
+May 04 16:28:37.457453 node configure-ovs.sh[2639]:        valid_lft forever preferred_lft forever
+May 04 16:28:37.457453 node configure-ovs.sh[2639]:     inet6 ::1/128 scope host
+May 04 16:28:37.457453 node configure-ovs.sh[2639]:        valid_lft forever preferred_lft forever
+May 04 16:28:37.462282 node configure-ovs.sh[2639]: 2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master ovs-system state UP group default qlen 1000
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:     link/ether 02:d1:1e:ff:ed:15 brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 9212
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:     openvswitch_slave numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:37.462282 node configure-ovs.sh[2639]: 3: ovs-system: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:     link/ether ca:a0:82:b7:10:03 brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:37.462282 node configure-ovs.sh[2639]: 4: br-int: <BROADCAST,MULTICAST> mtu 1400 qdisc noop state DOWN group default qlen 1000
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:     link/ether 82:a3:54:4e:b1:7c brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:37.462282 node configure-ovs.sh[2639]: 5: ovn-k8s-mp0: <BROADCAST,MULTICAST> mtu 1400 qdisc noop state DOWN group default qlen 1000
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:     link/ether 9e:a7:eb:23:b1:bf brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:37.462282 node configure-ovs.sh[2639]: 7: br-ex: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:     link/ether 02:d1:1e:ff:ed:15 brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:     inet 192.168.1.126/24 brd 192.168.1.255 scope global dynamic noprefixroute br-ex
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:        valid_lft 86346sec preferred_lft 86346sec
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:     inet6 fe80::cac6:3fcd:96cf:578e/64 scope link noprefixroute
+May 04 16:28:37.462282 node configure-ovs.sh[2639]:        valid_lft forever preferred_lft forever
+May 04 16:28:37.483233 node configure-ovs.sh[2625]: + ip route show
+May 04 16:28:37.483834 node configure-ovs.sh[2640]: default via 192.168.1.1 dev br-ex proto dhcp src 192.168.1.126 metric 48
+May 04 16:28:37.483834 node configure-ovs.sh[2640]: 192.168.1.0/24 dev br-ex proto kernel scope link src 192.168.1.126 metric 48
+May 04 16:28:37.486591 node configure-ovs.sh[2625]: + ip -6 route show
+May 04 16:28:37.487201 node configure-ovs.sh[2641]: ::1 dev lo proto kernel metric 256 pref medium
+May 04 16:28:37.487201 node configure-ovs.sh[2641]: fe80::/64 dev br-ex proto kernel metric 1024 pref medium
+May 04 16:28:37.488420 node configure-ovs.sh[2625]: + '[' OVNKubernetes == OVNKubernetes ']'
+May 04 16:28:37.488420 node configure-ovs.sh[2625]: + ovnk_config_dir=/etc/ovnk
+May 04 16:28:37.488420 node configure-ovs.sh[2625]: + ovnk_var_dir=/var/lib/ovnk
+May 04 16:28:37.488420 node configure-ovs.sh[2625]: + extra_bridge_file=/etc/ovnk/extra_bridge
+May 04 16:28:37.488420 node configure-ovs.sh[2625]: + iface_default_hint_file=/var/lib/ovnk/iface_default_hint
+May 04 16:28:37.488420 node configure-ovs.sh[2625]: + ip_hint_file=/run/nodeip-configuration/primary-ip
+May 04 16:28:37.488420 node configure-ovs.sh[2625]: + mkdir -p /etc/ovnk
+May 04 16:28:37.488420 node configure-ovs.sh[2625]: + mkdir -p /var/lib/ovnk
+May 04 16:28:37.493104 node configure-ovs.sh[2644]: ++ get_iface_default_hint /var/lib/ovnk/iface_default_hint
+May 04 16:28:37.493104 node configure-ovs.sh[2644]: ++ local iface_default_hint_file=/var/lib/ovnk/iface_default_hint
+May 04 16:28:37.493104 node configure-ovs.sh[2644]: ++ '[' -f /var/lib/ovnk/iface_default_hint ']'
+May 04 16:28:37.493104 node configure-ovs.sh[2644]: ++ echo ''
+May 04 16:28:37.495846 node configure-ovs.sh[2625]: + iface_default_hint=
+May 04 16:28:37.495846 node configure-ovs.sh[2625]: + '[' '' == '' ']'
+May 04 16:28:37.496789 node configure-ovs.sh[2645]: ++ get_bridge_physical_interface ovs-if-phys0
+May 04 16:28:37.496789 node configure-ovs.sh[2645]: ++ local bridge_interface=ovs-if-phys0
+May 04 16:28:37.496789 node configure-ovs.sh[2645]: ++ local physical_interface=
+May 04 16:28:37.498187 node configure-ovs.sh[2646]: +++ nmcli -g connection.interface-name conn show ovs-if-phys0
+May 04 16:28:37.499120 node configure-ovs.sh[2645]: ++ physical_interface=ens192
+May 04 16:28:37.499120 node configure-ovs.sh[2645]: ++ echo ens192
+May 04 16:28:37.500005 node configure-ovs.sh[2625]: + current_interface=ens192
+May 04 16:28:37.500005 node configure-ovs.sh[2625]: + '[' ens192 '!=' '' ']'
+May 04 16:28:37.500005 node configure-ovs.sh[2625]: + write_iface_default_hint /var/lib/ovnk/iface_default_hint ens192
+May 04 16:28:37.500005 node configure-ovs.sh[2625]: + local iface_default_hint_file=/var/lib/ovnk/iface_default_hint
+May 04 16:28:37.500005 node configure-ovs.sh[2625]: + local iface=ens192
+May 04 16:28:37.500005 node configure-ovs.sh[2625]: + echo ens192
+May 04 16:28:37.500005 node configure-ovs.sh[2625]: + '[' -f /var/lib/ovnk/iface_default_hint ']'
+May 04 16:28:37.500005 node configure-ovs.sh[2625]: + '[' -f /etc/ovnk/extra_bridge ']'
+May 04 16:28:37.500005 node configure-ovs.sh[2625]: + '[' '!' -f /run/configure-ovs-boot-done ']'
+May 04 16:28:37.500005 node configure-ovs.sh[2625]: + echo 'Running on boot, restoring previous configuration before proceeding...'
+May 04 16:28:37.500005 node configure-ovs.sh[2625]: Running on boot, restoring previous configuration before proceeding...
+May 04 16:28:37.500005 node configure-ovs.sh[2625]: + rollback_nm
+May 04 16:28:37.506126 node configure-ovs.sh[2651]: ++ get_bridge_physical_interface ovs-if-phys0
+May 04 16:28:37.506126 node configure-ovs.sh[2651]: ++ local bridge_interface=ovs-if-phys0
+May 04 16:28:37.506126 node configure-ovs.sh[2651]: ++ local physical_interface=
+May 04 16:28:37.507374 node configure-ovs.sh[2652]: +++ nmcli -g connection.interface-name conn show ovs-if-phys0
+May 04 16:28:37.507927 node configure-ovs.sh[2651]: ++ physical_interface=ens192
+May 04 16:28:37.507927 node configure-ovs.sh[2651]: ++ echo ens192
+May 04 16:28:37.508830 node configure-ovs.sh[2625]: + phys0=ens192
+May 04 16:28:37.509303 node configure-ovs.sh[2657]: ++ get_bridge_physical_interface ovs-if-phys1
+May 04 16:28:37.509303 node configure-ovs.sh[2657]: ++ local bridge_interface=ovs-if-phys1
+May 04 16:28:37.509303 node configure-ovs.sh[2657]: ++ local physical_interface=
+May 04 16:28:37.510518 node configure-ovs.sh[2658]: +++ nmcli -g connection.interface-name conn show ovs-if-phys1
+May 04 16:28:37.510518 node configure-ovs.sh[2658]: +++ echo ''
+May 04 16:28:37.510213 node ovs-vsctl[2669]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --timeout=30 --if-exists del-br br-ex
+May 04 16:28:37.511544 node configure-ovs.sh[2657]: ++ physical_interface=
+May 04 16:28:37.511544 node configure-ovs.sh[2657]: ++ echo ''
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + phys1=
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + remove_all_ovn_bridges
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + echo 'Reverting any previous OVS configuration'
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: Reverting any previous OVS configuration
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + remove_ovn_bridges br-ex phys0
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + bridge_name=br-ex
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + port_name=phys0
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + update_nm_conn_files br-ex phys0
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + bridge_name=br-ex
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + port_name=phys0
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + ovs_port=ovs-port-br-ex
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + ovs_interface=ovs-if-br-ex
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + default_port_name=ovs-port-phys0
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + bridge_interface_name=ovs-if-phys0
+May 04 16:28:37.512304 node configure-ovs.sh[2625]: + MANAGED_NM_CONN_FILES=($(echo "${NM_CONN_PATH}"/{"$bridge_name","$ovs_interface","$ovs_port","$bridge_interface_name","$default_port_name"}{,.nmconnection}))
+May 04 16:28:37.517609 node configure-ovs.sh[2663]: ++ echo /etc/NetworkManager/system-connections/br-ex /etc/NetworkManager/system-connections/br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-if-br-ex /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-port-br-ex /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-if-phys0 /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection /etc/NetworkManager/system-connections/ovs-port-phys0 /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + shopt -s nullglob
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + MANAGED_NM_CONN_FILES+=(${NM_CONN_PATH}/*${MANAGED_NM_CONN_SUFFIX}.nmconnection ${NM_CONN_PATH}/*${MANAGED_NM_CONN_SUFFIX})
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + shopt -u nullglob
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + rm_nm_conn_files
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/br-ex ']'
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/br-ex.nmconnection ']'
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + rm -f /etc/NetworkManager/system-connections/br-ex.nmconnection
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + echo 'Removed nmconnection file /etc/NetworkManager/system-connections/br-ex.nmconnection'
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: Removed nmconnection file /etc/NetworkManager/system-connections/br-ex.nmconnection
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + nm_config_changed=1
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-br-ex ']'
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection ']'
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + rm -f /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + echo 'Removed nmconnection file /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection'
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: Removed nmconnection file /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + nm_config_changed=1
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-br-ex ']'
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection ']'
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + rm -f /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + echo 'Removed nmconnection file /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection'
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: Removed nmconnection file /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + nm_config_changed=1
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-phys0 ']'
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection ']'
+May 04 16:28:37.517867 node configure-ovs.sh[2625]: + rm -f /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + echo 'Removed nmconnection file /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection'
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: Removed nmconnection file /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + nm_config_changed=1
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-phys0 ']'
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection ']'
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + rm -f /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + echo 'Removed nmconnection file /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection'
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: Removed nmconnection file /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + nm_config_changed=1
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + ovs-vsctl --timeout=30 --if-exists del-br br-ex
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + '[' -d /sys/class/net/br-ex1 ']'
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + echo 'OVS configuration successfully reverted'
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: OVS configuration successfully reverted
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + reload_profiles_nm ens192 ''
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + '[' 1 -eq 0 ']'
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + nmcli connection reload
+May 04 16:28:37.554472 node configure-ovs.sh[2625]: + sleep 10
+May 04 16:28:47.551581 localhost.localdomain configure-ovs.sh[2625]: + for dev in $@
+May 04 16:28:47.552115 localhost.localdomain configure-ovs.sh[2831]: ++ nmcli -g GENERAL.STATE device show ens192
+May 04 16:28:47.561777 localhost.localdomain configure-ovs.sh[2625]: + local 'connected_state=30 (disconnected)'
+May 04 16:28:47.561777 localhost.localdomain configure-ovs.sh[2625]: + [[ 30 (disconnected) =~ disconnected ]]
+May 04 16:28:47.562039 localhost.localdomain configure-ovs.sh[2836]: ++ '[' -f /etc/NetworkManager/system-connections/ens192 ']'
+May 04 16:28:47.562039 localhost.localdomain configure-ovs.sh[2836]: ++ '[' -f /etc/NetworkManager/system-connections/ens192.nmconnection ']'
+May 04 16:28:47.562385 localhost.localdomain configure-ovs.sh[2625]: + local named_profile_existed=
+May 04 16:28:47.562385 localhost.localdomain configure-ovs.sh[2625]: + for i in {1..10}
+May 04 16:28:47.562385 localhost.localdomain configure-ovs.sh[2625]: + echo 'Attempt 1 to connect device ens192'
+May 04 16:28:47.562385 localhost.localdomain configure-ovs.sh[2625]: Attempt 1 to connect device ens192
+May 04 16:28:47.562385 localhost.localdomain configure-ovs.sh[2625]: + nmcli device connect ens192
+May 04 16:28:47.734748 node configure-ovs.sh[2837]: [88B blob data]
+May 04 16:28:47.735807 node configure-ovs.sh[2625]: + break
+May 04 16:28:47.735807 node configure-ovs.sh[2625]: + '[' '!' '' = yes ']'
+May 04 16:28:47.735807 node configure-ovs.sh[2625]: + local dst=/run/NetworkManager/system-connections/
+May 04 16:28:47.735807 node configure-ovs.sh[2625]: + MANAGED_NM_CONN_FILES=("${NM_CONN_PATH}/${dev}" "${NM_CONN_PATH}/${dev}.nmconnection")
+May 04 16:28:47.736086 node configure-ovs.sh[2625]: + copy_nm_conn_files /run/NetworkManager/system-connections/
+May 04 16:28:47.736086 node configure-ovs.sh[2625]: + local dst_path=/run/NetworkManager/system-connections/
+May 04 16:28:47.736086 node configure-ovs.sh[2625]: + for src in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.736299 node configure-ovs.sh[2886]: ++ dirname /etc/NetworkManager/system-connections/ens192
+May 04 16:28:47.736838 node configure-ovs.sh[2625]: + src_path=/etc/NetworkManager/system-connections
+May 04 16:28:47.737071 node configure-ovs.sh[2887]: ++ basename /etc/NetworkManager/system-connections/ens192
+May 04 16:28:47.737431 node configure-ovs.sh[2625]: + file=ens192
+May 04 16:28:47.737494 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ens192 ']'
+May 04 16:28:47.737494 node configure-ovs.sh[2625]: + echo 'Skipping ens192 since it does not exist at source'
+May 04 16:28:47.737494 node configure-ovs.sh[2625]: Skipping ens192 since it does not exist at source
+May 04 16:28:47.737655 node configure-ovs.sh[2625]: + for src in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.737726 node configure-ovs.sh[2889]: ++ dirname /etc/NetworkManager/system-connections/ens192.nmconnection
+May 04 16:28:47.738176 node configure-ovs.sh[2625]: + src_path=/etc/NetworkManager/system-connections
+May 04 16:28:47.738358 node configure-ovs.sh[2891]: ++ basename /etc/NetworkManager/system-connections/ens192.nmconnection
+May 04 16:28:47.738714 node configure-ovs.sh[2625]: + file=ens192.nmconnection
+May 04 16:28:47.738778 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ens192.nmconnection ']'
+May 04 16:28:47.738778 node configure-ovs.sh[2625]: + '[' '!' -f /run/NetworkManager/system-connections//ens192.nmconnection ']'
+May 04 16:28:47.738892 node configure-ovs.sh[2625]: + echo 'Copying configuration ens192.nmconnection'
+May 04 16:28:47.738892 node configure-ovs.sh[2625]: Copying configuration ens192.nmconnection
+May 04 16:28:47.738892 node configure-ovs.sh[2625]: + cp /etc/NetworkManager/system-connections/ens192.nmconnection /run/NetworkManager/system-connections//ens192.nmconnection
+May 04 16:28:47.740618 node configure-ovs.sh[2625]: + rm_nm_conn_files
+May 04 16:28:47.741134 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.741134 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ens192 ']'
+May 04 16:28:47.741134 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.741134 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ens192.nmconnection ']'
+May 04 16:28:47.741134 node configure-ovs.sh[2625]: + rm -f /etc/NetworkManager/system-connections/ens192.nmconnection
+May 04 16:28:47.741134 node configure-ovs.sh[2625]: + echo 'Removed nmconnection file /etc/NetworkManager/system-connections/ens192.nmconnection'
+May 04 16:28:47.741134 node configure-ovs.sh[2625]: Removed nmconnection file /etc/NetworkManager/system-connections/ens192.nmconnection
+May 04 16:28:47.741134 node configure-ovs.sh[2625]: + nm_config_changed=1
+May 04 16:28:47.741134 node configure-ovs.sh[2625]: + nmcli connection reload
+May 04 16:28:47.748111 node configure-ovs.sh[2625]: + echo 'Waiting for interface ens192 to activate...'
+May 04 16:28:47.748111 node configure-ovs.sh[2625]: Waiting for interface ens192 to activate...
+May 04 16:28:47.748111 node configure-ovs.sh[2625]: + timeout 60 bash -c 'while ! nmcli -g DEVICE,STATE c | grep "ens192:activated"; do sleep 5; done'
+May 04 16:28:47.804031 node configure-ovs.sh[2930]: ens192:activated
+May 04 16:28:47.804712 node configure-ovs.sh[2625]: + nm_config_changed=0
+May 04 16:28:47.804712 node configure-ovs.sh[2625]: + print_state
+May 04 16:28:47.804712 node configure-ovs.sh[2625]: + echo 'Current device, connection, interface and routing state:'
+May 04 16:28:47.804712 node configure-ovs.sh[2625]: Current device, connection, interface and routing state:
+May 04 16:28:47.807153 node configure-ovs.sh[2941]: + nmcli -g all device
+May 04 16:28:47.807796 node configure-ovs.sh[2942]: + grep -v unmanaged
+May 04 16:28:47.816945 node configure-ovs.sh[2942]: ens192:ethernet:connected:full:full:/org/freedesktop/NetworkManager/Devices/5:ens192:b81d1263-56bd-4fe6-bfd5-b04264a77a03:/org/freedesktop/NetworkManager/ActiveConnection/9
+May 04 16:28:47.816945 node configure-ovs.sh[2942]: patch-br-int-to-br-ex_node:ovs-interface:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/10:::
+May 04 16:28:47.819405 node configure-ovs.sh[2625]: + nmcli -g all connection
+May 04 16:28:47.826548 node configure-ovs.sh[2950]: ens192:b81d1263-56bd-4fe6-bfd5-b04264a77a03:802-3-ethernet:1683217727:Thu May  4 16\:28\:47 2023:yes:0:no:/org/freedesktop/NetworkManager/Settings/6:yes:ens192:activated:/org/freedesktop/NetworkManager/ActiveConnection/9::/run/NetworkManager/system-connections/ens192.nmconnection
+May 04 16:28:47.828687 node configure-ovs.sh[2625]: + ip -d address show
+May 04 16:28:47.829194 node configure-ovs.sh[2954]: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 promiscuity 0 minmtu 0 maxmtu 0 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:     inet 127.0.0.1/8 scope host lo
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:        valid_lft forever preferred_lft forever
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:     inet6 ::1/128 scope host
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:        valid_lft forever preferred_lft forever
+May 04 16:28:47.829194 node configure-ovs.sh[2954]: 2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:     link/ether 02:d1:1e:ff:ed:15 brd ff:ff:ff:ff:ff:ff promiscuity 0 minmtu 68 maxmtu 9212 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:     inet 192.168.1.126/24 brd 192.168.1.255 scope global dynamic noprefixroute ens192
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:        valid_lft 86400sec preferred_lft 86400sec
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:     inet6 fe80::c9d0:889a:94c5:b1e3/64 scope link tentative noprefixroute
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:        valid_lft forever preferred_lft forever
+May 04 16:28:47.829194 node configure-ovs.sh[2954]: 3: ovs-system: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:     link/ether ca:a0:82:b7:10:03 brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:47.829194 node configure-ovs.sh[2954]: 4: br-int: <BROADCAST,MULTICAST> mtu 1400 qdisc noop state DOWN group default qlen 1000
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:     link/ether 82:a3:54:4e:b1:7c brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:47.829194 node configure-ovs.sh[2954]: 5: ovn-k8s-mp0: <BROADCAST,MULTICAST> mtu 1400 qdisc noop state DOWN group default qlen 1000
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:     link/ether 9e:a7:eb:23:b1:bf brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:47.829194 node configure-ovs.sh[2954]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:47.846832 node configure-ovs.sh[2625]: + ip route show
+May 04 16:28:47.847410 node configure-ovs.sh[2955]: default via 192.168.1.1 dev ens192 proto dhcp src 192.168.1.126 metric 100
+May 04 16:28:47.847410 node configure-ovs.sh[2955]: 192.168.1.0/24 dev ens192 proto kernel scope link src 192.168.1.126 metric 100
+May 04 16:28:47.849557 node configure-ovs.sh[2625]: + ip -6 route show
+May 04 16:28:47.850110 node configure-ovs.sh[2956]: ::1 dev lo proto kernel metric 256 pref medium
+May 04 16:28:47.850110 node configure-ovs.sh[2956]: fe80::/64 dev ens192 proto kernel metric 1024 pref medium
+May 04 16:28:47.851544 node configure-ovs.sh[2625]: + touch /run/configure-ovs-boot-done
+May 04 16:28:47.852144 node configure-ovs.sh[2958]: ++ get_nodeip_interface /var/lib/ovnk/iface_default_hint /etc/ovnk/extra_bridge /run/nodeip-configuration/primary-ip
+May 04 16:28:47.852144 node configure-ovs.sh[2958]: ++ local iface=
+May 04 16:28:47.852144 node configure-ovs.sh[2958]: ++ local counter=0
+May 04 16:28:47.852144 node configure-ovs.sh[2958]: ++ local iface_default_hint_file=/var/lib/ovnk/iface_default_hint
+May 04 16:28:47.852144 node configure-ovs.sh[2958]: ++ local extra_bridge_file=/etc/ovnk/extra_bridge
+May 04 16:28:47.852144 node configure-ovs.sh[2958]: ++ local ip_hint_file=/run/nodeip-configuration/primary-ip
+May 04 16:28:47.852144 node configure-ovs.sh[2958]: ++ local extra_bridge=
+May 04 16:28:47.852144 node configure-ovs.sh[2958]: ++ '[' -f /etc/ovnk/extra_bridge ']'
+May 04 16:28:47.857522 node configure-ovs.sh[2959]: +++ get_nodeip_hint_interface /run/nodeip-configuration/primary-ip ''
+May 04 16:28:47.857522 node configure-ovs.sh[2959]: +++ local ip_hint=
+May 04 16:28:47.857522 node configure-ovs.sh[2959]: +++ local ip_hint_file=/run/nodeip-configuration/primary-ip
+May 04 16:28:47.857522 node configure-ovs.sh[2959]: +++ local extra_bridge=
+May 04 16:28:47.857522 node configure-ovs.sh[2959]: +++ local iface=
+May 04 16:28:47.860609 node configure-ovs.sh[2960]: ++++ get_ip_from_ip_hint_file /run/nodeip-configuration/primary-ip
+May 04 16:28:47.860609 node configure-ovs.sh[2960]: ++++ local ip_hint_file=/run/nodeip-configuration/primary-ip
+May 04 16:28:47.860609 node configure-ovs.sh[2960]: ++++ [[ ! -f /run/nodeip-configuration/primary-ip ]]
+May 04 16:28:47.862516 node configure-ovs.sh[2961]: +++++ cat /run/nodeip-configuration/primary-ip
+May 04 16:28:47.863038 node configure-ovs.sh[2960]: ++++ ip_hint=192.168.1.126
+May 04 16:28:47.863038 node configure-ovs.sh[2960]: ++++ echo 192.168.1.126
+May 04 16:28:47.863942 node configure-ovs.sh[2959]: +++ ip_hint=192.168.1.126
+May 04 16:28:47.863942 node configure-ovs.sh[2959]: +++ [[ -z 192.168.1.126 ]]
+May 04 16:28:47.864822 node configure-ovs.sh[2964]: ++++ ip -j addr
+May 04 16:28:47.865302 node configure-ovs.sh[2965]: ++++ jq -r 'first(.[] | select(any(.addr_info[]; .local=="192.168.1.126") and .ifname!="br-ex1" and .ifname!="")) | .ifname'
+May 04 16:28:47.866219 node configure-ovs.sh[2959]: +++ iface=ens192
+May 04 16:28:47.866219 node configure-ovs.sh[2959]: +++ [[ -n ens192 ]]
+May 04 16:28:47.866219 node configure-ovs.sh[2959]: +++ echo ens192
+May 04 16:28:47.867452 node configure-ovs.sh[2958]: ++ iface=ens192
+May 04 16:28:47.867452 node configure-ovs.sh[2958]: ++ [[ -n ens192 ]]
+May 04 16:28:47.867452 node configure-ovs.sh[2958]: ++ echo ens192
+May 04 16:28:47.867452 node configure-ovs.sh[2958]: ++ return
+May 04 16:28:47.868950 node configure-ovs.sh[2625]: + iface=ens192
+May 04 16:28:47.868950 node configure-ovs.sh[2625]: + '[' ens192 '!=' br-ex ']'
+May 04 16:28:47.868950 node configure-ovs.sh[2625]: + '[' -f /etc/ovnk/extra_bridge ']'
+May 04 16:28:47.870035 node configure-ovs.sh[2966]: ++ nmcli connection show --active br-ex
+May 04 16:28:47.870443 node configure-ovs.sh[2625]: + '[' -z '' ']'
+May 04 16:28:47.870443 node configure-ovs.sh[2625]: + echo 'Bridge br-ex is not active, restoring previous configuration before proceeding...'
+May 04 16:28:47.870443 node configure-ovs.sh[2625]: Bridge br-ex is not active, restoring previous configuration before proceeding...
+May 04 16:28:47.870443 node configure-ovs.sh[2625]: + rollback_nm
+May 04 16:28:47.872495 node configure-ovs.sh[2971]: ++ get_bridge_physical_interface ovs-if-phys0
+May 04 16:28:47.872495 node configure-ovs.sh[2971]: ++ local bridge_interface=ovs-if-phys0
+May 04 16:28:47.872495 node configure-ovs.sh[2971]: ++ local physical_interface=
+May 04 16:28:47.873666 node configure-ovs.sh[2972]: +++ nmcli -g connection.interface-name conn show ovs-if-phys0
+May 04 16:28:47.879772 node configure-ovs.sh[2972]: +++ echo ''
+May 04 16:28:47.880153 node configure-ovs.sh[2971]: ++ physical_interface=
+May 04 16:28:47.880153 node configure-ovs.sh[2971]: ++ echo ''
+May 04 16:28:47.880830 node configure-ovs.sh[2625]: + phys0=
+May 04 16:28:47.881193 node configure-ovs.sh[2977]: ++ get_bridge_physical_interface ovs-if-phys1
+May 04 16:28:47.881193 node configure-ovs.sh[2977]: ++ local bridge_interface=ovs-if-phys1
+May 04 16:28:47.881193 node configure-ovs.sh[2977]: ++ local physical_interface=
+May 04 16:28:47.882297 node configure-ovs.sh[2978]: +++ nmcli -g connection.interface-name conn show ovs-if-phys1
+May 04 16:28:47.891284 node configure-ovs.sh[2978]: +++ echo ''
+May 04 16:28:47.891695 node configure-ovs.sh[2977]: ++ physical_interface=
+May 04 16:28:47.891695 node configure-ovs.sh[2977]: ++ echo ''
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + phys1=
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + remove_all_ovn_bridges
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + echo 'Reverting any previous OVS configuration'
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: Reverting any previous OVS configuration
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + remove_ovn_bridges br-ex phys0
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + bridge_name=br-ex
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + port_name=phys0
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + update_nm_conn_files br-ex phys0
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + bridge_name=br-ex
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + port_name=phys0
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + ovs_port=ovs-port-br-ex
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + ovs_interface=ovs-if-br-ex
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + default_port_name=ovs-port-phys0
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + bridge_interface_name=ovs-if-phys0
+May 04 16:28:47.892349 node configure-ovs.sh[2625]: + MANAGED_NM_CONN_FILES=($(echo "${NM_CONN_PATH}"/{"$bridge_name","$ovs_interface","$ovs_port","$bridge_interface_name","$default_port_name"}{,.nmconnection}))
+May 04 16:28:47.897408 node configure-ovs.sh[2983]: ++ echo /etc/NetworkManager/system-connections/br-ex /etc/NetworkManager/system-connections/br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-if-br-ex /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-port-br-ex /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-if-phys0 /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection /etc/NetworkManager/system-connections/ovs-port-phys0 /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + shopt -s nullglob
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + MANAGED_NM_CONN_FILES+=(${NM_CONN_PATH}/*${MANAGED_NM_CONN_SUFFIX}.nmconnection ${NM_CONN_PATH}/*${MANAGED_NM_CONN_SUFFIX})
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + shopt -u nullglob
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + rm_nm_conn_files
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/br-ex ']'
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/br-ex.nmconnection ']'
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-br-ex ']'
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection ']'
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-br-ex ']'
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection ']'
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-phys0 ']'
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection ']'
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-phys0 ']'
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + for file in "${MANAGED_NM_CONN_FILES[@]}"
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + '[' -f /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection ']'
+May 04 16:28:47.899652 node configure-ovs.sh[2625]: + ovs-vsctl --timeout=30 --if-exists del-br br-ex
+May 04 16:28:47.914638 node configure-ovs.sh[2625]: + '[' -d /sys/class/net/br-ex1 ']'
+May 04 16:28:47.914638 node configure-ovs.sh[2625]: + echo 'OVS configuration successfully reverted'
+May 04 16:28:47.914638 node configure-ovs.sh[2625]: OVS configuration successfully reverted
+May 04 16:28:47.914638 node configure-ovs.sh[2625]: + reload_profiles_nm '' ''
+May 04 16:28:47.914638 node configure-ovs.sh[2625]: + '[' 0 -eq 0 ']'
+May 04 16:28:47.914638 node configure-ovs.sh[2625]: + return
+May 04 16:28:47.914638 node configure-ovs.sh[2625]: + print_state
+May 04 16:28:47.914638 node configure-ovs.sh[2625]: + echo 'Current device, connection, interface and routing state:'
+May 04 16:28:47.914638 node configure-ovs.sh[2625]: Current device, connection, interface and routing state:
+May 04 16:28:47.919344 node configure-ovs.sh[2985]: + nmcli -g all device
+May 04 16:28:47.919842 node configure-ovs.sh[2986]: + grep -v unmanaged
+May 04 16:28:47.919842 node configure-ovs.sh[2986]: ens192:ethernet:connected:full:full:/org/freedesktop/NetworkManager/Devices/5:ens192:b81d1263-56bd-4fe6-bfd5-b04264a77a03:/org/freedesktop/NetworkManager/ActiveConnection/9
+May 04 16:28:47.919842 node configure-ovs.sh[2986]: patch-br-int-to-br-ex_node:ovs-interface:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/10:::
+May 04 16:28:47.922522 node configure-ovs.sh[2625]: + nmcli -g all connection
+May 04 16:28:47.922993 node configure-ovs.sh[2990]: ens192:b81d1263-56bd-4fe6-bfd5-b04264a77a03:802-3-ethernet:1683217727:Thu May  4 16\:28\:47 2023:yes:0:no:/org/freedesktop/NetworkManager/Settings/6:yes:ens192:activated:/org/freedesktop/NetworkManager/ActiveConnection/9::/run/NetworkManager/system-connections/ens192.nmconnection
+May 04 16:28:47.924776 node configure-ovs.sh[2625]: + ip -d address show
+May 04 16:28:47.925252 node configure-ovs.sh[2994]: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 promiscuity 0 minmtu 0 maxmtu 0 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:     inet 127.0.0.1/8 scope host lo
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:        valid_lft forever preferred_lft forever
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:     inet6 ::1/128 scope host
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:        valid_lft forever preferred_lft forever
+May 04 16:28:47.925252 node configure-ovs.sh[2994]: 2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel state UP group default qlen 1000
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:     link/ether 02:d1:1e:ff:ed:15 brd ff:ff:ff:ff:ff:ff promiscuity 0 minmtu 68 maxmtu 9212 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:     inet 192.168.1.126/24 brd 192.168.1.255 scope global dynamic noprefixroute ens192
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:        valid_lft 86400sec preferred_lft 86400sec
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:     inet6 fe80::c9d0:889a:94c5:b1e3/64 scope link tentative noprefixroute
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:        valid_lft forever preferred_lft forever
+May 04 16:28:47.925252 node configure-ovs.sh[2994]: 3: ovs-system: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:     link/ether ca:a0:82:b7:10:03 brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:47.925252 node configure-ovs.sh[2994]: 4: br-int: <BROADCAST,MULTICAST> mtu 1400 qdisc noop state DOWN group default qlen 1000
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:     link/ether 82:a3:54:4e:b1:7c brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:47.925252 node configure-ovs.sh[2994]: 5: ovn-k8s-mp0: <BROADCAST,MULTICAST> mtu 1400 qdisc noop state DOWN group default qlen 1000
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:     link/ether 9e:a7:eb:23:b1:bf brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:47.925252 node configure-ovs.sh[2994]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:47.943585 node configure-ovs.sh[2625]: + ip route show
+May 04 16:28:47.944153 node configure-ovs.sh[2995]: default via 192.168.1.1 dev ens192 proto dhcp src 192.168.1.126 metric 100
+May 04 16:28:47.944153 node configure-ovs.sh[2995]: 192.168.1.0/24 dev ens192 proto kernel scope link src 192.168.1.126 metric 100
+May 04 16:28:47.946315 node configure-ovs.sh[2625]: + ip -6 route show
+May 04 16:28:47.946871 node configure-ovs.sh[2996]: ::1 dev lo proto kernel metric 256 pref medium
+May 04 16:28:47.946871 node configure-ovs.sh[2996]: fe80::/64 dev ens192 proto kernel metric 1024 pref medium
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + convert_to_bridge ens192 br-ex phys0 48
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + local iface=ens192
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + local bridge_name=br-ex
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + local port_name=phys0
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + local bridge_metric=48
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + local ovs_port=ovs-port-br-ex
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + local ovs_interface=ovs-if-br-ex
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + local default_port_name=ovs-port-phys0
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + local bridge_interface_name=ovs-if-phys0
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + '[' ens192 = br-ex ']'
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + nm_config_changed=1
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + '[' -z ens192 ']'
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + iface_mac=02:d1:1e:ff:ed:15
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: + echo 'MAC address found for iface: ens192: 02:d1:1e:ff:ed:15'
+May 04 16:28:47.948047 node configure-ovs.sh[2625]: MAC address found for iface: ens192: 02:d1:1e:ff:ed:15
+May 04 16:28:47.955815 node configure-ovs.sh[2999]: ++ ip link show ens192
+May 04 16:28:47.956361 node configure-ovs.sh[3000]: ++ awk '{print $5; exit}'
+May 04 16:28:47.956823 node configure-ovs.sh[2625]: + iface_mtu=1500
+May 04 16:28:47.956823 node configure-ovs.sh[2625]: + [[ -z 1500 ]]
+May 04 16:28:47.956823 node configure-ovs.sh[2625]: + echo 'MTU found for iface: ens192: 1500'
+May 04 16:28:47.956823 node configure-ovs.sh[2625]: MTU found for iface: ens192: 1500
+May 04 16:28:47.958542 node configure-ovs.sh[3002]: ++ nmcli --fields UUID,DEVICE conn show --active
+May 04 16:28:47.958971 node configure-ovs.sh[3003]: ++ awk '/\sens192\s*$/ {print $1}'
+May 04 16:28:47.959396 node configure-ovs.sh[2625]: + old_conn=b81d1263-56bd-4fe6-bfd5-b04264a77a03
+May 04 16:28:47.959396 node configure-ovs.sh[2625]: + nmcli connection show br-ex
+May 04 16:28:47.959396 node configure-ovs.sh[2625]: + ovs-vsctl --timeout=30 --if-exists del-br br-ex
+May 04 16:28:47.959396 node configure-ovs.sh[2625]: + add_nm_conn type ovs-bridge con-name br-ex conn.interface br-ex 802-3-ethernet.mtu 1500 connection.autoconnect-slaves 1
+May 04 16:28:47.959396 node configure-ovs.sh[2625]: + nmcli c add type ovs-bridge con-name br-ex conn.interface br-ex 802-3-ethernet.mtu 1500 connection.autoconnect-slaves 1 connection.autoconnect no
+May 04 16:28:47.968314 node configure-ovs.sh[3012]: Connection 'br-ex' (c946fecb-2d85-4ebf-9bd4-0782a4f89dbf) successfully added.
+May 04 16:28:47.969399 node configure-ovs.sh[2625]: + nmcli connection show ovs-port-phys0
+May 04 16:28:47.980923 node configure-ovs.sh[2625]: + ovs-vsctl --timeout=30 --if-exists del-port br-ex ens192
+May 04 16:28:47.986367 node ovs-vsctl[3020]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --timeout=30 --if-exists del-port br-ex ens192
+May 04 16:28:47.988423 node configure-ovs.sh[2625]: + add_nm_conn type ovs-port conn.interface ens192 master br-ex con-name ovs-port-phys0 connection.autoconnect-slaves 1
+May 04 16:28:47.989183 node configure-ovs.sh[2625]: + nmcli c add type ovs-port conn.interface ens192 master br-ex con-name ovs-port-phys0 connection.autoconnect-slaves 1 connection.autoconnect no
+May 04 16:28:48.000546 node configure-ovs.sh[3021]: Connection 'ovs-port-phys0' (0fc20f4a-756e-41b8-a68e-678ee7c55832) successfully added.
+May 04 16:28:48.001882 node configure-ovs.sh[2625]: + nmcli connection show ovs-port-br-ex
+May 04 16:28:48.013216 node configure-ovs.sh[2625]: + ovs-vsctl --timeout=30 --if-exists del-port br-ex br-ex
+May 04 16:28:48.018826 node ovs-vsctl[3029]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --timeout=30 --if-exists del-port br-ex br-ex
+May 04 16:28:48.020861 node configure-ovs.sh[2625]: + add_nm_conn type ovs-port conn.interface br-ex master br-ex con-name ovs-port-br-ex
+May 04 16:28:48.021754 node configure-ovs.sh[2625]: + nmcli c add type ovs-port conn.interface br-ex master br-ex con-name ovs-port-br-ex connection.autoconnect no
+May 04 16:28:48.033198 node configure-ovs.sh[3030]: Connection 'ovs-port-br-ex' (b61df4d6-93db-4343-98d4-05e5c9b763c3) successfully added.
+May 04 16:28:48.034680 node configure-ovs.sh[2625]: + extra_phys_args=()
+May 04 16:28:48.035233 node configure-ovs.sh[3034]: ++ nmcli --get-values connection.type conn show b81d1263-56bd-4fe6-bfd5-b04264a77a03
+May 04 16:28:48.046101 node configure-ovs.sh[2625]: + '[' 802-3-ethernet == vlan ']'
+May 04 16:28:48.046676 node configure-ovs.sh[3038]: ++ nmcli --get-values connection.type conn show b81d1263-56bd-4fe6-bfd5-b04264a77a03
+May 04 16:28:48.057393 node configure-ovs.sh[2625]: + '[' 802-3-ethernet == bond ']'
+May 04 16:28:48.057957 node configure-ovs.sh[3042]: ++ nmcli --get-values connection.type conn show b81d1263-56bd-4fe6-bfd5-b04264a77a03
+May 04 16:28:48.068677 node configure-ovs.sh[2625]: + '[' 802-3-ethernet == team ']'
+May 04 16:28:48.068677 node configure-ovs.sh[2625]: + iface_type=802-3-ethernet
+May 04 16:28:48.069899 node configure-ovs.sh[2625]: + '[' '!' '' = 0 ']'
+May 04 16:28:48.069899 node configure-ovs.sh[2625]: + extra_phys_args+=(802-3-ethernet.cloned-mac-address "${iface_mac}")
+May 04 16:28:48.069899 node configure-ovs.sh[2625]: + nmcli connection show ovs-if-phys0
+May 04 16:28:48.080198 node configure-ovs.sh[2625]: + ovs-vsctl --timeout=30 --if-exists destroy interface ens192
+May 04 16:28:48.085769 node ovs-vsctl[3050]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --timeout=30 --if-exists destroy interface ens192
+May 04 16:28:48.087502 node configure-ovs.sh[2625]: + add_nm_conn type 802-3-ethernet conn.interface ens192 master ovs-port-phys0 con-name ovs-if-phys0 connection.autoconnect-priority 100 connection.autoconnect-slaves 1 802-3-ethernet.mtu 1500 802-3-ethernet.cloned-mac-address 02:d1:1e:ff:ed:15
+May 04 16:28:48.089052 node configure-ovs.sh[2625]: + nmcli c add type 802-3-ethernet conn.interface ens192 master ovs-port-phys0 con-name ovs-if-phys0 connection.autoconnect-priority 100 connection.autoconnect-slaves 1 802-3-ethernet.mtu 1500 802-3-ethernet.cloned-mac-address 02:d1:1e:ff:ed:15 connection.autoconnect no
+May 04 16:28:48.100043 node configure-ovs.sh[3051]: Connection 'ovs-if-phys0' (336e9274-12e4-4b50-a17b-4fc8d912364c) successfully added.
+May 04 16:28:48.101736 node configure-ovs.sh[3055]: ++ nmcli -g connection.uuid conn show ovs-if-phys0
+May 04 16:28:48.113037 node configure-ovs.sh[2625]: + new_conn=336e9274-12e4-4b50-a17b-4fc8d912364c
+May 04 16:28:48.113667 node configure-ovs.sh[3059]: ++ nmcli -g connection.uuid conn show ovs-port-br-ex
+May 04 16:28:48.125149 node configure-ovs.sh[2625]: + ovs_port_conn=b61df4d6-93db-4343-98d4-05e5c9b763c3
+May 04 16:28:48.125763 node configure-ovs.sh[2625]: + replace_connection_master b81d1263-56bd-4fe6-bfd5-b04264a77a03 336e9274-12e4-4b50-a17b-4fc8d912364c
+May 04 16:28:48.125763 node configure-ovs.sh[2625]: + local old=b81d1263-56bd-4fe6-bfd5-b04264a77a03
+May 04 16:28:48.125763 node configure-ovs.sh[2625]: + local new=336e9274-12e4-4b50-a17b-4fc8d912364c
+May 04 16:28:48.127769 node configure-ovs.sh[3063]: ++ nmcli -g UUID connection show
+May 04 16:28:48.137131 node configure-ovs.sh[2625]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 04 16:28:48.137733 node configure-ovs.sh[3067]: ++ nmcli -g connection.master connection show uuid b81d1263-56bd-4fe6-bfd5-b04264a77a03
+May 04 16:28:48.149265 node configure-ovs.sh[2625]: + '[' '' '!=' b81d1263-56bd-4fe6-bfd5-b04264a77a03 ']'
+May 04 16:28:48.149265 node configure-ovs.sh[2625]: + continue
+May 04 16:28:48.149265 node configure-ovs.sh[2625]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 04 16:28:48.150919 node configure-ovs.sh[3071]: ++ nmcli -g connection.master connection show uuid c946fecb-2d85-4ebf-9bd4-0782a4f89dbf
+May 04 16:28:48.161508 node configure-ovs.sh[2625]: + '[' '' '!=' b81d1263-56bd-4fe6-bfd5-b04264a77a03 ']'
+May 04 16:28:48.161508 node configure-ovs.sh[2625]: + continue
+May 04 16:28:48.162552 node configure-ovs.sh[2625]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 04 16:28:48.163039 node configure-ovs.sh[3075]: ++ nmcli -g connection.master connection show uuid 336e9274-12e4-4b50-a17b-4fc8d912364c
+May 04 16:28:48.173447 node configure-ovs.sh[2625]: + '[' 0fc20f4a-756e-41b8-a68e-678ee7c55832 '!=' b81d1263-56bd-4fe6-bfd5-b04264a77a03 ']'
+May 04 16:28:48.173447 node configure-ovs.sh[2625]: + continue
+May 04 16:28:48.175131 node configure-ovs.sh[2625]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 04 16:28:48.175639 node configure-ovs.sh[3079]: ++ nmcli -g connection.master connection show uuid b61df4d6-93db-4343-98d4-05e5c9b763c3
+May 04 16:28:48.185420 node configure-ovs.sh[2625]: + '[' br-ex '!=' b81d1263-56bd-4fe6-bfd5-b04264a77a03 ']'
+May 04 16:28:48.185420 node configure-ovs.sh[2625]: + continue
+May 04 16:28:48.186597 node configure-ovs.sh[2625]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 04 16:28:48.187113 node configure-ovs.sh[3083]: ++ nmcli -g connection.master connection show uuid 0fc20f4a-756e-41b8-a68e-678ee7c55832
+May 04 16:28:48.197277 node configure-ovs.sh[2625]: + '[' br-ex '!=' b81d1263-56bd-4fe6-bfd5-b04264a77a03 ']'
+May 04 16:28:48.197277 node configure-ovs.sh[2625]: + continue
+May 04 16:28:48.198331 node configure-ovs.sh[2625]: + replace_connection_master ens192 336e9274-12e4-4b50-a17b-4fc8d912364c
+May 04 16:28:48.198331 node configure-ovs.sh[2625]: + local old=ens192
+May 04 16:28:48.198331 node configure-ovs.sh[2625]: + local new=336e9274-12e4-4b50-a17b-4fc8d912364c
+May 04 16:28:48.200215 node configure-ovs.sh[3087]: ++ nmcli -g UUID connection show
+May 04 16:28:48.209290 node configure-ovs.sh[2625]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 04 16:28:48.209822 node configure-ovs.sh[3091]: ++ nmcli -g connection.master connection show uuid b81d1263-56bd-4fe6-bfd5-b04264a77a03
+May 04 16:28:48.221530 node configure-ovs.sh[2625]: + '[' '' '!=' ens192 ']'
+May 04 16:28:48.221530 node configure-ovs.sh[2625]: + continue
+May 04 16:28:48.222648 node configure-ovs.sh[2625]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 04 16:28:48.223128 node configure-ovs.sh[3095]: ++ nmcli -g connection.master connection show uuid c946fecb-2d85-4ebf-9bd4-0782a4f89dbf
+May 04 16:28:48.233876 node configure-ovs.sh[2625]: + '[' '' '!=' ens192 ']'
+May 04 16:28:48.233876 node configure-ovs.sh[2625]: + continue
+May 04 16:28:48.234907 node configure-ovs.sh[2625]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 04 16:28:48.235400 node configure-ovs.sh[3099]: ++ nmcli -g connection.master connection show uuid 336e9274-12e4-4b50-a17b-4fc8d912364c
+May 04 16:28:48.245637 node configure-ovs.sh[2625]: + '[' 0fc20f4a-756e-41b8-a68e-678ee7c55832 '!=' ens192 ']'
+May 04 16:28:48.245637 node configure-ovs.sh[2625]: + continue
+May 04 16:28:48.246694 node configure-ovs.sh[2625]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 04 16:28:48.247180 node configure-ovs.sh[3103]: ++ nmcli -g connection.master connection show uuid b61df4d6-93db-4343-98d4-05e5c9b763c3
+May 04 16:28:48.257353 node configure-ovs.sh[2625]: + '[' br-ex '!=' ens192 ']'
+May 04 16:28:48.257353 node configure-ovs.sh[2625]: + continue
+May 04 16:28:48.258435 node configure-ovs.sh[2625]: + for conn_uuid in $(nmcli -g UUID connection show)
+May 04 16:28:48.258889 node configure-ovs.sh[3107]: ++ nmcli -g connection.master connection show uuid 0fc20f4a-756e-41b8-a68e-678ee7c55832
+May 04 16:28:48.269246 node configure-ovs.sh[2625]: + '[' br-ex '!=' ens192 ']'
+May 04 16:28:48.269246 node configure-ovs.sh[2625]: + continue
+May 04 16:28:48.270287 node configure-ovs.sh[2625]: + nmcli connection show ovs-if-br-ex
+May 04 16:28:48.281061 node configure-ovs.sh[2625]: + ovs-vsctl --timeout=30 --if-exists destroy interface br-ex
+May 04 16:28:48.286417 node ovs-vsctl[3115]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --timeout=30 --if-exists destroy interface br-ex
+May 04 16:28:48.288379 node configure-ovs.sh[3116]: + nmcli --fields ipv4.method,ipv6.method conn show b81d1263-56bd-4fe6-bfd5-b04264a77a03
+May 04 16:28:48.289402 node configure-ovs.sh[3117]: + grep manual
+May 04 16:28:48.300031 node configure-ovs.sh[2625]: + extra_if_brex_args=
+May 04 16:28:48.300613 node configure-ovs.sh[3122]: ++ ip -j a show dev ens192
+May 04 16:28:48.301208 node configure-ovs.sh[3123]: ++ jq '.[0].addr_info | map(. | select(.family == "inet")) | length'
+May 04 16:28:48.323890 node configure-ovs.sh[2625]: + num_ipv4_addrs=1
+May 04 16:28:48.323890 node configure-ovs.sh[2625]: + '[' 1 -gt 0 ']'
+May 04 16:28:48.323890 node configure-ovs.sh[2625]: + extra_if_brex_args+='ipv4.may-fail no '
+May 04 16:28:48.325266 node configure-ovs.sh[3125]: ++ ip -j a show dev ens192
+May 04 16:28:48.325819 node configure-ovs.sh[3126]: ++ jq '.[0].addr_info | map(. | select(.family == "inet6" and .scope != "link")) | length'
+May 04 16:28:48.347542 node configure-ovs.sh[2625]: + num_ip6_addrs=0
+May 04 16:28:48.348117 node configure-ovs.sh[2625]: + '[' 0 -gt 0 ']'
+May 04 16:28:48.348543 node configure-ovs.sh[3127]: ++ nmcli --get-values ipv4.dhcp-client-id conn show b81d1263-56bd-4fe6-bfd5-b04264a77a03
+May 04 16:28:48.359562 node configure-ovs.sh[2625]: + dhcp_client_id=
+May 04 16:28:48.360055 node configure-ovs.sh[2625]: + '[' -n '' ']'
+May 04 16:28:48.360476 node configure-ovs.sh[3131]: ++ nmcli --get-values ipv6.dhcp-duid conn show b81d1263-56bd-4fe6-bfd5-b04264a77a03
+May 04 16:28:48.371652 node configure-ovs.sh[2625]: + dhcp6_client_id=
+May 04 16:28:48.372233 node configure-ovs.sh[2625]: + '[' -n '' ']'
+May 04 16:28:48.372646 node configure-ovs.sh[3135]: ++ nmcli --get-values ipv6.addr-gen-mode conn show b81d1263-56bd-4fe6-bfd5-b04264a77a03
+May 04 16:28:48.383738 node configure-ovs.sh[2625]: + ipv6_addr_gen_mode=stable-privacy
+May 04 16:28:48.384326 node configure-ovs.sh[2625]: + '[' -n stable-privacy ']'
+May 04 16:28:48.384326 node configure-ovs.sh[2625]: + extra_if_brex_args+='ipv6.addr-gen-mode stable-privacy '
+May 04 16:28:48.384326 node configure-ovs.sh[2625]: + add_nm_conn type ovs-interface slave-type ovs-port conn.interface br-ex master b61df4d6-93db-4343-98d4-05e5c9b763c3 con-name ovs-if-br-ex 802-3-ethernet.mtu 1500 802-3-ethernet.cloned-mac-address 02:d1:1e:ff:ed:15 ipv4.route-metric 48 ipv6.route-metric 48 ipv4.may-fail no ipv6.addr-gen-mode stable-privacy
+May 04 16:28:48.384326 node configure-ovs.sh[2625]: + nmcli c add type ovs-interface slave-type ovs-port conn.interface br-ex master b61df4d6-93db-4343-98d4-05e5c9b763c3 con-name ovs-if-br-ex 802-3-ethernet.mtu 1500 802-3-ethernet.cloned-mac-address 02:d1:1e:ff:ed:15 ipv4.route-metric 48 ipv6.route-metric 48 ipv4.may-fail no ipv6.addr-gen-mode stable-privacy connection.autoconnect no
+May 04 16:28:48.397469 node configure-ovs.sh[3139]: Connection 'ovs-if-br-ex' (1f88b3a4-9405-44ff-a83f-82b39d1470d2) successfully added.
+May 04 16:28:48.398533 node configure-ovs.sh[2625]: + configure_driver_options ens192
+May 04 16:28:48.398533 node configure-ovs.sh[2625]: + intf=ens192
+May 04 16:28:48.398533 node configure-ovs.sh[2625]: + '[' '!' -f /sys/class/net/ens192/device/uevent ']'
+May 04 16:28:48.399954 node configure-ovs.sh[3144]: ++ cat /sys/class/net/ens192/device/uevent
+May 04 16:28:48.400473 node configure-ovs.sh[3145]: ++ grep DRIVER
+May 04 16:28:48.400954 node configure-ovs.sh[3146]: ++ awk -F = '{print $2}'
+May 04 16:28:48.401442 node configure-ovs.sh[2625]: + driver=e1000e
+May 04 16:28:48.401442 node configure-ovs.sh[2625]: + echo 'Driver name is' e1000e
+May 04 16:28:48.401442 node configure-ovs.sh[2625]: Driver name is e1000e
+May 04 16:28:48.401442 node configure-ovs.sh[2625]: + '[' e1000e = vmxnet3 ']'
+May 04 16:28:48.401442 node configure-ovs.sh[2625]: + update_nm_conn_files br-ex phys0
+May 04 16:28:48.401442 node configure-ovs.sh[2625]: + bridge_name=br-ex
+May 04 16:28:48.401442 node configure-ovs.sh[2625]: + port_name=phys0
+May 04 16:28:48.401442 node configure-ovs.sh[2625]: + ovs_port=ovs-port-br-ex
+May 04 16:28:48.401442 node configure-ovs.sh[2625]: + ovs_interface=ovs-if-br-ex
+May 04 16:28:48.401442 node configure-ovs.sh[2625]: + default_port_name=ovs-port-phys0
+May 04 16:28:48.401442 node configure-ovs.sh[2625]: + bridge_interface_name=ovs-if-phys0
+May 04 16:28:48.401442 node configure-ovs.sh[2625]: + MANAGED_NM_CONN_FILES=($(echo "${NM_CONN_PATH}"/{"$bridge_name","$ovs_interface","$ovs_port","$bridge_interface_name","$default_port_name"}{,.nmconnection}))
+May 04 16:28:48.407000 node configure-ovs.sh[3147]: ++ echo /etc/NetworkManager/system-connections/br-ex /etc/NetworkManager/system-connections/br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-if-br-ex /etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-port-br-ex /etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection /etc/NetworkManager/system-connections/ovs-if-phys0 /etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection /etc/NetworkManager/system-connections/ovs-port-phys0 /etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection
+May 04 16:28:48.410356 node configure-ovs.sh[2625]: + shopt -s nullglob
+May 04 16:28:48.410356 node configure-ovs.sh[2625]: + MANAGED_NM_CONN_FILES+=(${NM_CONN_PATH}/*${MANAGED_NM_CONN_SUFFIX}.nmconnection ${NM_CONN_PATH}/*${MANAGED_NM_CONN_SUFFIX})
+May 04 16:28:48.410356 node configure-ovs.sh[2625]: + shopt -u nullglob
+May 04 16:28:48.410356 node configure-ovs.sh[2625]: + '[' -f /etc/ovnk/extra_bridge ']'
+May 04 16:28:48.410356 node configure-ovs.sh[2625]: + '[' '!' -f /etc/ovnk/extra_bridge ']'
+May 04 16:28:48.413485 node configure-ovs.sh[3148]: + nmcli connection show br-ex1
+May 04 16:28:48.414045 node configure-ovs.sh[3148]: + nmcli connection show ovs-if-phys1
+May 04 16:28:48.425599 node configure-ovs.sh[2625]: + ovs-vsctl --timeout=30 --if-exists del-br br0
+May 04 16:28:48.431292 node ovs-vsctl[3157]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --timeout=30 --if-exists del-br br0
+May 04 16:28:48.433274 node configure-ovs.sh[2625]: + connections=(br-ex ovs-if-phys0)
+May 04 16:28:48.433701 node configure-ovs.sh[2625]: + '[' -f /etc/ovnk/extra_bridge ']'
+May 04 16:28:48.434096 node configure-ovs.sh[3158]: ++ nmcli -g NAME c
+May 04 16:28:48.434575 node configure-ovs.sh[2625]: + IFS=
+May 04 16:28:48.434575 node configure-ovs.sh[2625]: + read -r connection
+May 04 16:28:48.444703 node configure-ovs.sh[2625]: + [[ ens192 == *\-\s\l\a\v\e\-\o\v\s\-\c\l\o\n\e ]]
+May 04 16:28:48.444703 node configure-ovs.sh[2625]: + IFS=
+May 04 16:28:48.444703 node configure-ovs.sh[2625]: + read -r connection
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + [[ br-ex == *\-\s\l\a\v\e\-\o\v\s\-\c\l\o\n\e ]]
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + IFS=
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + read -r connection
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + [[ ovs-if-br-ex == *\-\s\l\a\v\e\-\o\v\s\-\c\l\o\n\e ]]
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + IFS=
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + read -r connection
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + [[ ovs-if-phys0 == *\-\s\l\a\v\e\-\o\v\s\-\c\l\o\n\e ]]
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + IFS=
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + read -r connection
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + [[ ovs-port-br-ex == *\-\s\l\a\v\e\-\o\v\s\-\c\l\o\n\e ]]
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + IFS=
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + read -r connection
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + [[ ovs-port-phys0 == *\-\s\l\a\v\e\-\o\v\s\-\c\l\o\n\e ]]
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + IFS=
+May 04 16:28:48.445906 node configure-ovs.sh[2625]: + read -r connection
+May 04 16:28:48.452054 node configure-ovs.sh[2625]: + connections+=(ovs-if-br-ex)
+May 04 16:28:48.452054 node configure-ovs.sh[2625]: + '[' -f /etc/ovnk/extra_bridge ']'
+May 04 16:28:48.452054 node configure-ovs.sh[2625]: + activate_nm_connections br-ex ovs-if-phys0 ovs-if-br-ex
+May 04 16:28:48.452054 node configure-ovs.sh[2625]: + connections=("$@")
+May 04 16:28:48.452054 node configure-ovs.sh[2625]: + local connections
+May 04 16:28:48.452054 node configure-ovs.sh[2625]: + for conn in "${connections[@]}"
+May 04 16:28:48.454055 node configure-ovs.sh[3163]: ++ nmcli -g connection.slave-type connection show br-ex
+May 04 16:28:48.459225 node configure-ovs.sh[2625]: + local slave_type=
+May 04 16:28:48.459572 node configure-ovs.sh[2625]: + '[' '' = team ']'
+May 04 16:28:48.459572 node configure-ovs.sh[2625]: + '[' '' = bond ']'
+May 04 16:28:48.459572 node configure-ovs.sh[2625]: + for conn in "${connections[@]}"
+May 04 16:28:48.460845 node configure-ovs.sh[3167]: ++ nmcli -g connection.slave-type connection show ovs-if-phys0
+May 04 16:28:48.472382 node configure-ovs.sh[2625]: + local slave_type=ovs-port
+May 04 16:28:48.472853 node configure-ovs.sh[2625]: + '[' ovs-port = team ']'
+May 04 16:28:48.472853 node configure-ovs.sh[2625]: + '[' ovs-port = bond ']'
+May 04 16:28:48.472853 node configure-ovs.sh[2625]: + for conn in "${connections[@]}"
+May 04 16:28:48.473824 node configure-ovs.sh[3171]: ++ nmcli -g connection.slave-type connection show ovs-if-br-ex
+May 04 16:28:48.485284 node configure-ovs.sh[2625]: + local slave_type=ovs-port
+May 04 16:28:48.485668 node configure-ovs.sh[2625]: + '[' ovs-port = team ']'
+May 04 16:28:48.485668 node configure-ovs.sh[2625]: + '[' ovs-port = bond ']'
+May 04 16:28:48.485668 node configure-ovs.sh[2625]: + declare -A master_interfaces
+May 04 16:28:48.485668 node configure-ovs.sh[2625]: + for conn in "${connections[@]}"
+May 04 16:28:48.487007 node configure-ovs.sh[3175]: ++ nmcli -g connection.slave-type connection show br-ex
+May 04 16:28:48.497362 node configure-ovs.sh[2625]: + local slave_type=
+May 04 16:28:48.497362 node configure-ovs.sh[2625]: + local is_slave=false
+May 04 16:28:48.498214 node configure-ovs.sh[2625]: + '[' '' = team ']'
+May 04 16:28:48.498214 node configure-ovs.sh[2625]: + '[' '' = bond ']'
+May 04 16:28:48.498214 node configure-ovs.sh[2625]: + local master_interface
+May 04 16:28:48.498214 node configure-ovs.sh[2625]: + false
+May 04 16:28:48.499475 node configure-ovs.sh[3179]: ++ nmcli -g GENERAL.STATE conn show br-ex
+May 04 16:28:48.510373 node configure-ovs.sh[2625]: + local active_state=
+May 04 16:28:48.510753 node configure-ovs.sh[2625]: + '[' '' == activated ']'
+May 04 16:28:48.510753 node configure-ovs.sh[2625]: + for i in {1..10}
+May 04 16:28:48.510753 node configure-ovs.sh[2625]: + echo 'Attempt 1 to bring up connection br-ex'
+May 04 16:28:48.510753 node configure-ovs.sh[2625]: Attempt 1 to bring up connection br-ex
+May 04 16:28:48.510753 node configure-ovs.sh[2625]: + nmcli conn up br-ex
+May 04 16:28:48.712419 node configure-ovs.sh[3183]: Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/10)
+May 04 16:28:48.714053 node configure-ovs.sh[2625]: + s=0
+May 04 16:28:48.714053 node configure-ovs.sh[2625]: + break
+May 04 16:28:48.714053 node configure-ovs.sh[2625]: + '[' 0 -eq 0 ']'
+May 04 16:28:48.714053 node configure-ovs.sh[2625]: + echo 'Brought up connection br-ex successfully'
+May 04 16:28:48.714053 node configure-ovs.sh[2625]: Brought up connection br-ex successfully
+May 04 16:28:48.714053 node configure-ovs.sh[2625]: + false
+May 04 16:28:48.714053 node configure-ovs.sh[2625]: + nmcli c mod br-ex connection.autoconnect yes
+May 04 16:28:48.733276 node configure-ovs.sh[2625]: + for conn in "${connections[@]}"
+May 04 16:28:48.733575 node configure-ovs.sh[3282]: ++ nmcli -g connection.slave-type connection show ovs-if-phys0
+May 04 16:28:48.748663 node configure-ovs.sh[2625]: + local slave_type=ovs-port
+May 04 16:28:48.748663 node configure-ovs.sh[2625]: + local is_slave=false
+May 04 16:28:48.748849 node configure-ovs.sh[2625]: + '[' ovs-port = team ']'
+May 04 16:28:48.748849 node configure-ovs.sh[2625]: + '[' ovs-port = bond ']'
+May 04 16:28:48.748849 node configure-ovs.sh[2625]: + local master_interface
+May 04 16:28:48.748849 node configure-ovs.sh[2625]: + false
+May 04 16:28:48.749094 node configure-ovs.sh[3290]: ++ nmcli -g GENERAL.STATE conn show ovs-if-phys0
+May 04 16:28:48.761780 node configure-ovs.sh[2625]: + local active_state=activating
+May 04 16:28:48.761780 node configure-ovs.sh[2625]: + '[' activating == activated ']'
+May 04 16:28:48.761967 node configure-ovs.sh[2625]: + for i in {1..10}
+May 04 16:28:48.761967 node configure-ovs.sh[2625]: + echo 'Attempt 1 to bring up connection ovs-if-phys0'
+May 04 16:28:48.761967 node configure-ovs.sh[2625]: Attempt 1 to bring up connection ovs-if-phys0
+May 04 16:28:48.761967 node configure-ovs.sh[2625]: + nmcli conn up ovs-if-phys0
+May 04 16:28:49.096793 node configure-ovs.sh[3301]: Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/14)
+May 04 16:28:49.098102 node configure-ovs.sh[2625]: + s=0
+May 04 16:28:49.098102 node configure-ovs.sh[2625]: + break
+May 04 16:28:49.098102 node configure-ovs.sh[2625]: + '[' 0 -eq 0 ']'
+May 04 16:28:49.098102 node configure-ovs.sh[2625]: + echo 'Brought up connection ovs-if-phys0 successfully'
+May 04 16:28:49.098102 node configure-ovs.sh[2625]: Brought up connection ovs-if-phys0 successfully
+May 04 16:28:49.098102 node configure-ovs.sh[2625]: + false
+May 04 16:28:49.098102 node configure-ovs.sh[2625]: + nmcli c mod ovs-if-phys0 connection.autoconnect yes
+May 04 16:28:49.113636 node configure-ovs.sh[2625]: + for conn in "${connections[@]}"
+May 04 16:28:49.114015 node configure-ovs.sh[3494]: ++ nmcli -g connection.slave-type connection show ovs-if-br-ex
+May 04 16:28:49.126576 node configure-ovs.sh[2625]: + local slave_type=ovs-port
+May 04 16:28:49.126742 node configure-ovs.sh[2625]: + local is_slave=false
+May 04 16:28:49.126823 node configure-ovs.sh[2625]: + '[' ovs-port = team ']'
+May 04 16:28:49.126897 node configure-ovs.sh[2625]: + '[' ovs-port = bond ']'
+May 04 16:28:49.126975 node configure-ovs.sh[2625]: + local master_interface
+May 04 16:28:49.127047 node configure-ovs.sh[2625]: + false
+May 04 16:28:49.127397 node configure-ovs.sh[3510]: ++ nmcli -g GENERAL.STATE conn show ovs-if-br-ex
+May 04 16:28:49.139630 node configure-ovs.sh[2625]: + local active_state=
+May 04 16:28:49.139773 node configure-ovs.sh[2625]: + '[' '' == activated ']'
+May 04 16:28:49.139850 node configure-ovs.sh[2625]: + for i in {1..10}
+May 04 16:28:49.139920 node configure-ovs.sh[2625]: + echo 'Attempt 1 to bring up connection ovs-if-br-ex'
+May 04 16:28:49.139998 node configure-ovs.sh[2625]: Attempt 1 to bring up connection ovs-if-br-ex
+May 04 16:28:49.140072 node configure-ovs.sh[2625]: + nmcli conn up ovs-if-br-ex
+May 04 16:28:49.250724 node configure-ovs.sh[3522]: Connection successfully activated (D-Bus active path: /org/freedesktop/NetworkManager/ActiveConnection/15)
+May 04 16:28:49.251669 node configure-ovs.sh[2625]: + s=0
+May 04 16:28:49.251669 node configure-ovs.sh[2625]: + break
+May 04 16:28:49.251669 node configure-ovs.sh[2625]: + '[' 0 -eq 0 ']'
+May 04 16:28:49.251669 node configure-ovs.sh[2625]: + echo 'Brought up connection ovs-if-br-ex successfully'
+May 04 16:28:49.251669 node configure-ovs.sh[2625]: Brought up connection ovs-if-br-ex successfully
+May 04 16:28:49.251669 node configure-ovs.sh[2625]: + false
+May 04 16:28:49.251669 node configure-ovs.sh[2625]: + nmcli c mod ovs-if-br-ex connection.autoconnect yes
+May 04 16:28:49.269116 node configure-ovs.sh[2625]: + try_to_bind_ipv6_address
+May 04 16:28:49.269116 node configure-ovs.sh[2625]: + retries=60
+May 04 16:28:49.269116 node configure-ovs.sh[2625]: + [[ 60 -eq 0 ]]
+May 04 16:28:49.269590 node configure-ovs.sh[3577]: ++ ip -6 -j addr
+May 04 16:28:49.269785 node configure-ovs.sh[3578]: ++ jq -r 'first(.[] | select(.ifname=="br-ex") | .addr_info[] | select(.scope=="global") | .local)'
+May 04 16:28:49.293927 node configure-ovs.sh[2625]: + ip=
+May 04 16:28:49.293927 node configure-ovs.sh[2625]: + [[ '' == '' ]]
+May 04 16:28:49.293927 node configure-ovs.sh[2625]: + echo 'No ipv6 ip to bind was found'
+May 04 16:28:49.293927 node configure-ovs.sh[2625]: No ipv6 ip to bind was found
+May 04 16:28:49.293927 node configure-ovs.sh[2625]: + break
+May 04 16:28:49.293927 node configure-ovs.sh[2625]: + [[ 60 -eq 0 ]]
+May 04 16:28:49.293927 node configure-ovs.sh[2625]: + handle_exit
+May 04 16:28:49.293927 node configure-ovs.sh[2625]: + e=0
+May 04 16:28:49.293927 node configure-ovs.sh[2625]: + '[' 0 -eq 0 ']'
+May 04 16:28:49.293927 node configure-ovs.sh[2625]: + print_state
+May 04 16:28:49.293927 node configure-ovs.sh[2625]: + echo 'Current device, connection, interface and routing state:'
+May 04 16:28:49.293927 node configure-ovs.sh[2625]: Current device, connection, interface and routing state:
+May 04 16:28:49.294549 node configure-ovs.sh[3595]: + nmcli -g all device
+May 04 16:28:49.294734 node configure-ovs.sh[3596]: + grep -v unmanaged
+May 04 16:28:49.307233 node configure-ovs.sh[3596]: br-ex:ovs-interface:connected:full:full:/org/freedesktop/NetworkManager/Devices/19:ovs-if-br-ex:1f88b3a4-9405-44ff-a83f-82b39d1470d2:/org/freedesktop/NetworkManager/ActiveConnection/15
+May 04 16:28:49.307233 node configure-ovs.sh[3596]: ens192:ethernet:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/5:ovs-if-phys0:336e9274-12e4-4b50-a17b-4fc8d912364c:/org/freedesktop/NetworkManager/ActiveConnection/14
+May 04 16:28:49.307233 node configure-ovs.sh[3596]: br-ex:ovs-bridge:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/16:br-ex:c946fecb-2d85-4ebf-9bd4-0782a4f89dbf:/org/freedesktop/NetworkManager/ActiveConnection/10
+May 04 16:28:49.307233 node configure-ovs.sh[3596]: br-ex:ovs-port:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/18:ovs-port-br-ex:b61df4d6-93db-4343-98d4-05e5c9b763c3:/org/freedesktop/NetworkManager/ActiveConnection/11
+May 04 16:28:49.307233 node configure-ovs.sh[3596]: ens192:ovs-port:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/17:ovs-port-phys0:0fc20f4a-756e-41b8-a68e-678ee7c55832:/org/freedesktop/NetworkManager/ActiveConnection/12
+May 04 16:28:49.307233 node configure-ovs.sh[3596]: patch-br-int-to-br-ex_node:ovs-interface:connected:limited:limited:/org/freedesktop/NetworkManager/Devices/10:::
+May 04 16:28:49.315595 node configure-ovs.sh[2625]: + nmcli -g all connection
+May 04 16:28:49.320186 node configure-ovs.sh[3605]: ovs-if-br-ex:1f88b3a4-9405-44ff-a83f-82b39d1470d2:ovs-interface:1683217729:Thu May  4 16\:28\:49 2023:yes:0:no:/org/freedesktop/NetworkManager/Settings/11:yes:br-ex:activated:/org/freedesktop/NetworkManager/ActiveConnection/15:ovs-port:/etc/NetworkManager/system-connections/ovs-if-br-ex.nmconnection
+May 04 16:28:49.320186 node configure-ovs.sh[3605]: br-ex:c946fecb-2d85-4ebf-9bd4-0782a4f89dbf:ovs-bridge:1683217728:Thu May  4 16\:28\:48 2023:yes:0:no:/org/freedesktop/NetworkManager/Settings/7:yes:br-ex:activated:/org/freedesktop/NetworkManager/ActiveConnection/10::/etc/NetworkManager/system-connections/br-ex.nmconnection
+May 04 16:28:49.320186 node configure-ovs.sh[3605]: ovs-if-phys0:336e9274-12e4-4b50-a17b-4fc8d912364c:802-3-ethernet:1683217729:Thu May  4 16\:28\:49 2023:yes:100:no:/org/freedesktop/NetworkManager/Settings/10:yes:ens192:activated:/org/freedesktop/NetworkManager/ActiveConnection/14:ovs-port:/etc/NetworkManager/system-connections/ovs-if-phys0.nmconnection
+May 04 16:28:49.320186 node configure-ovs.sh[3605]: ovs-port-br-ex:b61df4d6-93db-4343-98d4-05e5c9b763c3:ovs-port:1683217728:Thu May  4 16\:28\:48 2023:no:0:no:/org/freedesktop/NetworkManager/Settings/9:yes:br-ex:activated:/org/freedesktop/NetworkManager/ActiveConnection/11:ovs-bridge:/etc/NetworkManager/system-connections/ovs-port-br-ex.nmconnection
+May 04 16:28:49.320186 node configure-ovs.sh[3605]: ovs-port-phys0:0fc20f4a-756e-41b8-a68e-678ee7c55832:ovs-port:1683217728:Thu May  4 16\:28\:48 2023:no:0:no:/org/freedesktop/NetworkManager/Settings/8:yes:ens192:activated:/org/freedesktop/NetworkManager/ActiveConnection/12:ovs-bridge:/etc/NetworkManager/system-connections/ovs-port-phys0.nmconnection
+May 04 16:28:49.320186 node configure-ovs.sh[3605]: ens192:b81d1263-56bd-4fe6-bfd5-b04264a77a03:802-3-ethernet:1683217728:Thu May  4 16\:28\:48 2023:yes:0:no:/org/freedesktop/NetworkManager/Settings/6:no:::::/run/NetworkManager/system-connections/ens192.nmconnection
+May 04 16:28:49.336229 node configure-ovs.sh[2625]: + ip -d address show
+May 04 16:28:49.324788 node systemd[1]: ovs-configuration.service: Succeeded.
+May 04 16:28:49.337651 node configure-ovs.sh[3615]: 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00 promiscuity 0 minmtu 0 maxmtu 0 numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     inet 127.0.0.1/8 scope host lo
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:        valid_lft forever preferred_lft forever
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     inet6 ::1/128 scope host
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:        valid_lft forever preferred_lft forever
+May 04 16:28:49.337651 node configure-ovs.sh[3615]: 2: ens192: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc fq_codel master ovs-system state UP group default qlen 1000
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     link/ether 02:d1:1e:ff:ed:15 brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 9212
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     openvswitch_slave numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:49.337651 node configure-ovs.sh[3615]: 3: ovs-system: <BROADCAST,MULTICAST> mtu 1500 qdisc noop state DOWN group default qlen 1000
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     link/ether ca:a0:82:b7:10:03 brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:49.337651 node configure-ovs.sh[3615]: 4: br-int: <BROADCAST,MULTICAST> mtu 1400 qdisc noop state DOWN group default qlen 1000
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     link/ether 82:a3:54:4e:b1:7c brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:49.337651 node configure-ovs.sh[3615]: 5: ovn-k8s-mp0: <BROADCAST,MULTICAST> mtu 1400 qdisc noop state DOWN group default qlen 1000
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     link/ether 9e:a7:eb:23:b1:bf brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:49.337651 node configure-ovs.sh[3615]: 9: br-ex: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UNKNOWN group default qlen 1000
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     link/ether 02:d1:1e:ff:ed:15 brd ff:ff:ff:ff:ff:ff promiscuity 1 minmtu 68 maxmtu 65535
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     openvswitch numtxqueues 1 numrxqueues 1 gso_max_size 65536 gso_max_segs 65535
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     inet 192.168.1.126/24 brd 192.168.1.255 scope global dynamic noprefixroute br-ex
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:        valid_lft 86400sec preferred_lft 86400sec
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:     inet6 fe80::c33d:ad53:e8cb:7493/64 scope link tentative noprefixroute
+May 04 16:28:49.337651 node configure-ovs.sh[3615]:        valid_lft forever preferred_lft forever
+May 04 16:28:49.325253 node systemd[1]: Started Configures OVS with proper host networking configuration.
+May 04 16:28:49.363468 node configure-ovs.sh[2625]: + ip route show
+May 04 16:28:49.328091 node systemd[1]: ovs-configuration.service: Consumed 927ms CPU time
+May 04 16:28:49.365172 node configure-ovs.sh[3616]: default via 192.168.1.1 dev br-ex proto dhcp src 192.168.1.126 metric 48
+May 04 16:28:49.365172 node configure-ovs.sh[3616]: 192.168.1.0/24 dev br-ex proto kernel scope link src 192.168.1.126 metric 48
+May 04 16:28:49.367656 node configure-ovs.sh[2625]: + ip -6 route show
+May 04 16:28:49.368338 node configure-ovs.sh[3617]: ::1 dev lo proto kernel metric 256 pref medium
+May 04 16:28:49.368338 node configure-ovs.sh[3617]: fe80::/64 dev br-ex proto kernel metric 1024 pref medium
+May 04 16:28:49.369547 node configure-ovs.sh[2625]: + exit 0

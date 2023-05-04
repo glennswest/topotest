@@ -1,0 +1,410 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.1.218/23"],"mac_address":"0a:58:0a:80:01:da","gateway_ips":["10.128.0.1"],"ip_address":"10.128.1.218/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.1.218"
+          ],
+          "mac": "0a:58:0a:80:01:da",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.1.218"
+          ],
+          "mac": "0a:58:0a:80:01:da",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: lvms-vgmanager
+  creationTimestamp: "2023-05-04T14:46:25Z"
+  generateName: vg-manager-
+  labels:
+    app.kubernetes.io/component: vg-manager
+    app.kubernetes.io/managed-by: lvms-operator
+    app.kubernetes.io/name: vg-manager
+    app.kubernetes.io/part-of: lvms-provisioner
+    controller-revision-hash: 6c7cbf4894
+    pod-template-generation: "1"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:controller-revision-hash: {}
+          f:pod-template-generation: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"7e92038e-bf1a-4788-83b9-eb2d3bcaa2be"}: {}
+      f:spec:
+        f:affinity:
+          .: {}
+          f:nodeAffinity:
+            .: {}
+            f:requiredDuringSchedulingIgnoredDuringExecution: {}
+        f:containers:
+          k:{"name":"vg-manager"}:
+            .: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"NODE_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"POD_NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:privileged: {}
+              f:runAsUser: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/dev"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/etc/topolvm"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/run/udev"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+              k:{"mountPath":"/sys"}:
+                .: {}
+                f:mountPath: {}
+                f:mountPropagation: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostPID: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:tolerations: {}
+        f:volumes:
+          .: {}
+          k:{"name":"device-dir"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"lvmd-conf"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"run-udev"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+          k:{"name":"sys"}:
+            .: {}
+            f:hostPath:
+              .: {}
+              f:path: {}
+              f:type: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-05-04T14:46:25Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: node
+    operation: Update
+    time: "2023-05-04T14:46:25Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-05-04T14:46:27Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.1.218"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:33:11Z"
+  name: vg-manager-dq9h6
+  namespace: openshift-storage
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: DaemonSet
+    name: vg-manager
+    uid: 7e92038e-bf1a-4788-83b9-eb2d3bcaa2be
+  resourceVersion: "631313"
+  uid: 53ca4841-3ccb-4136-9027-a6def72931f4
+spec:
+  affinity:
+    nodeAffinity:
+      requiredDuringSchedulingIgnoredDuringExecution:
+        nodeSelectorTerms:
+        - matchFields:
+          - key: metadata.name
+            operator: In
+            values:
+            - node
+  containers:
+  - command:
+    - /vgmanager
+    env:
+    - name: NODE_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: spec.nodeName
+    - name: POD_NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    image: registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f
+    imagePullPolicy: IfNotPresent
+    name: vg-manager
+    resources:
+      limits:
+        cpu: 50m
+        memory: 100Mi
+      requests:
+        cpu: 30m
+        memory: 50Mi
+    securityContext:
+      privileged: true
+      runAsUser: 0
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /etc/topolvm
+      mountPropagation: HostToContainer
+      name: lvmd-conf
+    - mountPath: /dev
+      mountPropagation: HostToContainer
+      name: device-dir
+    - mountPath: /run/udev
+      mountPropagation: HostToContainer
+      name: run-udev
+    - mountPath: /sys
+      mountPropagation: HostToContainer
+      name: sys
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-vxsw9
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostPID: true
+  imagePullSecrets:
+  - name: vg-manager-dockercfg-58mf8
+  nodeName: node
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000670000
+    seLinuxOptions:
+      level: s0:c26,c10
+  serviceAccount: vg-manager
+  serviceAccountName: vg-manager
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/disk-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/pid-pressure
+    operator: Exists
+  - effect: NoSchedule
+    key: node.kubernetes.io/unschedulable
+    operator: Exists
+  volumes:
+  - hostPath:
+      path: /etc/topolvm
+      type: DirectoryOrCreate
+    name: lvmd-conf
+  - hostPath:
+      path: /dev
+      type: Directory
+    name: device-dir
+  - hostPath:
+      path: /run/udev
+      type: ""
+    name: run-udev
+  - hostPath:
+      path: /sys
+      type: ""
+    name: sys
+  - name: kube-api-access-vxsw9
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T14:46:25Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T16:33:10Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T16:33:10Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T14:46:25Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://f0a3bb0627830dffe87ed6211ad747508fcee883fa1fb44383388f0000553571
+    image: registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f
+    imageID: registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f
+    lastState: {}
+    name: vg-manager
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:10Z"
+  hostIP: 192.168.1.126
+  phase: Running
+  podIP: 10.128.1.218
+  podIPs:
+  - ip: 10.128.1.218
+  qosClass: Burstable
+  startTime: "2023-05-04T14:46:25Z"

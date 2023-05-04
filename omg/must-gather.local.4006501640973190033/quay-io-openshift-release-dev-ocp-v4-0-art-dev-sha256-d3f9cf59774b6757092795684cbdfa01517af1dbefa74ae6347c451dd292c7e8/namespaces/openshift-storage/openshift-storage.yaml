@@ -1,0 +1,67 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  annotations:
+    openshift.io/sa.scc.mcs: s0:c26,c10
+    openshift.io/sa.scc.supplemental-groups: 1000670000/10000
+    openshift.io/sa.scc.uid-range: 1000670000/10000
+  creationTimestamp: "2023-05-04T14:34:22Z"
+  labels:
+    kubernetes.io/metadata.name: openshift-storage
+    olm.operatorgroup.uid/2be20301-defd-436c-a36a-997f9082f588: ""
+    olm.operatorgroup.uid/5a30032d-7a62-4eff-843e-654f945a863e: ""
+    openshift.io/cluster-monitoring: "true"
+    pod-security.kubernetes.io/audit: privileged
+    pod-security.kubernetes.io/audit-version: v1.24
+    pod-security.kubernetes.io/warn: privileged
+    pod-security.kubernetes.io/warn-version: v1.24
+    security.openshift.io/scc.podSecurityLabelSync: "true"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:kubernetes.io/metadata.name: {}
+          f:openshift.io/cluster-monitoring: {}
+    manager: Mozilla
+    operation: Update
+    time: "2023-05-04T14:34:22Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          f:olm.operatorgroup.uid/2be20301-defd-436c-a36a-997f9082f588: {}
+          f:olm.operatorgroup.uid/5a30032d-7a62-4eff-843e-654f945a863e: {}
+          f:security.openshift.io/scc.podSecurityLabelSync: {}
+    manager: olm
+    operation: Update
+    time: "2023-05-04T14:35:40Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:openshift.io/sa.scc.mcs: {}
+          f:openshift.io/sa.scc.supplemental-groups: {}
+          f:openshift.io/sa.scc.uid-range: {}
+        f:labels:
+          f:pod-security.kubernetes.io/audit: {}
+          f:pod-security.kubernetes.io/audit-version: {}
+          f:pod-security.kubernetes.io/warn: {}
+          f:pod-security.kubernetes.io/warn-version: {}
+    manager: cluster-policy-controller
+    operation: Update
+    time: "2023-05-04T14:46:24Z"
+  name: openshift-storage
+  resourceVersion: "601682"
+  uid: 5f9c3fb7-28c1-42a4-96a8-0432c367988a
+spec:
+  finalizers:
+  - kubernetes
+status:
+  phase: Active

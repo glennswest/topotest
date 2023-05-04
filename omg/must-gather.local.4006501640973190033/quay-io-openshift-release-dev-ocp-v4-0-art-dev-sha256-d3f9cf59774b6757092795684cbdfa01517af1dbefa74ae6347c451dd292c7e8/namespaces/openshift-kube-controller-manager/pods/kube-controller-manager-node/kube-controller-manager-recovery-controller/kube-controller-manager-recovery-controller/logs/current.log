@@ -1,0 +1,22 @@
+2023-05-04T16:29:18.029062589Z + timeout 3m /bin/bash -exuo pipefail -c 'while [ -n "$(ss -Htanop \( sport = 9443 \))" ]; do sleep 1; done'
+2023-05-04T16:29:18.031422920Z ++ ss -Htanop '(' sport = 9443 ')'
+2023-05-04T16:29:18.034253063Z + '[' -n '' ']'
+2023-05-04T16:29:18.034571070Z + exec cluster-kube-controller-manager-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-controller-cert-syncer-kubeconfig/kubeconfig --namespace=openshift-kube-controller-manager --listen=0.0.0.0:9443 -v=2
+2023-05-04T16:29:18.068502863Z W0504 16:29:18.068423       1 cmd.go:213] Using insecure, self-signed certificates
+2023-05-04T16:29:18.068679034Z I0504 16:29:18.068667       1 crypto.go:600] Generating new CA for cert-recovery-controller-signer@1683217758 cert, and key in /tmp/serving-cert-1004346655/serving-signer.crt, /tmp/serving-cert-1004346655/serving-signer.key
+2023-05-04T16:29:18.455004522Z I0504 16:29:18.454716       1 observer_polling.go:159] Starting file observer
+2023-05-04T16:29:22.441912931Z I0504 16:29:22.441757       1 builder.go:262] cert-recovery-controller version 4.12.0-202301042354.p0.g9243e02.assembly.stream-9243e02-9243e022c42c6d55e1d97a15ed51831f6080984a
+2023-05-04T16:29:22.554637588Z I0504 16:29:22.553532       1 builder.go:403] detected SingleReplicaTopologyMode, the original leader election has been altered for the default SingleReplicaToplogy
+2023-05-04T16:29:22.554637588Z I0504 16:29:22.553836       1 leaderelection.go:248] attempting to acquire leader lease openshift-kube-controller-manager/cert-recovery-controller-lock...
+2023-05-04T16:34:05.498565960Z I0504 16:34:05.498520       1 leaderelection.go:258] successfully acquired lease openshift-kube-controller-manager/cert-recovery-controller-lock
+2023-05-04T16:34:05.499100302Z I0504 16:34:05.499077       1 event.go:285] Event(v1.ObjectReference{Kind:"ConfigMap", Namespace:"openshift-kube-controller-manager", Name:"cert-recovery-controller-lock", UID:"d963ead8-f3fc-490f-b50a-492356d1e2a0", APIVersion:"v1", ResourceVersion:"632081", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' node_05a6abc5-7e61-4d51-ae98-ca53e247ee0f became leader
+2023-05-04T16:34:05.499110331Z I0504 16:34:05.499095       1 event.go:285] Event(v1.ObjectReference{Kind:"Lease", Namespace:"openshift-kube-controller-manager", Name:"cert-recovery-controller-lock", UID:"77759ed5-437a-4a72-87c6-4a8c7881729d", APIVersion:"coordination.k8s.io/v1", ResourceVersion:"632082", FieldPath:""}): type: 'Normal' reason: 'LeaderElection' node_05a6abc5-7e61-4d51-ae98-ca53e247ee0f became leader
+2023-05-04T16:34:05.501753746Z I0504 16:34:05.501719       1 csrcontroller.go:102] Starting CSR controller
+2023-05-04T16:34:05.501753746Z I0504 16:34:05.501742       1 shared_informer.go:255] Waiting for caches to sync for CSRController
+2023-05-04T16:34:05.502098131Z I0504 16:34:05.502085       1 base_controller.go:67] Waiting for caches to sync for CertRotationController
+2023-05-04T16:34:05.602378822Z I0504 16:34:05.602341       1 shared_informer.go:262] Caches are synced for CSRController
+2023-05-04T16:34:05.602410031Z I0504 16:34:05.602385       1 base_controller.go:67] Waiting for caches to sync for ResourceSyncController
+2023-05-04T16:34:05.602410031Z I0504 16:34:05.602395       1 base_controller.go:73] Caches are synced for ResourceSyncController 
+2023-05-04T16:34:05.602410031Z I0504 16:34:05.602399       1 base_controller.go:110] Starting #1 worker of ResourceSyncController controller ...
+2023-05-04T16:34:05.602446449Z I0504 16:34:05.602342       1 base_controller.go:73] Caches are synced for CertRotationController 
+2023-05-04T16:34:05.602453101Z I0504 16:34:05.602446       1 base_controller.go:110] Starting #1 worker of CertRotationController controller ...

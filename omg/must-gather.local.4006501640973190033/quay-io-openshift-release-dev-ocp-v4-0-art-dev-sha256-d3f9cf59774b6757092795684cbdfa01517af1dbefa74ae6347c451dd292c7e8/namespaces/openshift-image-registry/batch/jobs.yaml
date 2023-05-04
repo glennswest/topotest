@@ -1,0 +1,358 @@
+---
+apiVersion: batch/v1
+items:
+- apiVersion: batch/v1
+  kind: Job
+  metadata:
+    annotations:
+      batch.kubernetes.io/job-tracking: ""
+    creationTimestamp: "2023-05-03T00:00:00Z"
+    generation: 1
+    labels:
+      created-by: image-pruner
+    managedFields:
+    - apiVersion: batch/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:created-by: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a7842e2d-3e84-4be5-bb54-ce4ccbd55ee6"}: {}
+        f:spec:
+          f:backoffLimit: {}
+          f:completionMode: {}
+          f:completions: {}
+          f:parallelism: {}
+          f:suspend: {}
+          f:template:
+            f:spec:
+              f:affinity: {}
+              f:containers:
+                k:{"name":"image-pruner"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/var/run/configmaps/serviceca"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+              f:dnsPolicy: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"serviceca"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-03T00:00:00Z"
+    - apiVersion: batch/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:completionTime: {}
+          f:conditions: {}
+          f:ready: {}
+          f:startTime: {}
+          f:succeeded: {}
+          f:uncountedTerminatedPods: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2023-05-03T00:00:07Z"
+    name: image-pruner-28051200
+    namespace: openshift-image-registry
+    ownerReferences:
+    - apiVersion: batch/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: CronJob
+      name: image-pruner
+      uid: a7842e2d-3e84-4be5-bb54-ce4ccbd55ee6
+    resourceVersion: "147396"
+    uid: a79435f7-b3d0-4df5-9e1d-75eaaab514fe
+  spec:
+    backoffLimit: 0
+    completionMode: NonIndexed
+    completions: 1
+    parallelism: 1
+    selector:
+      matchLabels:
+        controller-uid: a79435f7-b3d0-4df5-9e1d-75eaaab514fe
+    suspend: false
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          controller-uid: a79435f7-b3d0-4df5-9e1d-75eaaab514fe
+          job-name: image-pruner-28051200
+      spec:
+        affinity: {}
+        containers:
+        - args:
+          - -c
+          - |
+            set -eu
+            "$@" && exit
+            for i in 1 2 3 4 5; do
+              echo "attempt #$i has failed (exit code $?), going to make another attempt..." >&2
+              sleep $(($i * 30))
+              "$@" && break  # this is the last command of the script, so its last failure will be exit code of the script
+            done
+          - arg0
+          - oc
+          - adm
+          - prune
+          - images
+          - --confirm=true
+          - --certificate-authority=/var/run/configmaps/serviceca/service-ca.crt
+          - --keep-tag-revisions=3
+          - --keep-younger-than=60m
+          - --ignore-invalid-refs=true
+          - --loglevel=1
+          - --prune-registry=false
+          command:
+          - /bin/sh
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9f0cdc00b1b1a3c17411e50653253b9f6bb5329ea4fb82ad983790a6dbf2d9ad
+          imagePullPolicy: IfNotPresent
+          name: image-pruner
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: FallbackToLogsOnError
+          volumeMounts:
+          - mountPath: /var/run/configmaps/serviceca
+            name: serviceca
+            readOnly: true
+        dnsPolicy: ClusterFirst
+        priorityClassName: system-cluster-critical
+        restartPolicy: Never
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: pruner
+        serviceAccountName: pruner
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: serviceca
+          name: serviceca
+  status:
+    completionTime: "2023-05-03T00:00:07Z"
+    conditions:
+    - lastProbeTime: "2023-05-03T00:00:07Z"
+      lastTransitionTime: "2023-05-03T00:00:07Z"
+      status: "True"
+      type: Complete
+    ready: 0
+    startTime: "2023-05-03T00:00:00Z"
+    succeeded: 1
+    uncountedTerminatedPods: {}
+- apiVersion: batch/v1
+  kind: Job
+  metadata:
+    annotations:
+      batch.kubernetes.io/job-tracking: ""
+    creationTimestamp: "2023-05-04T00:00:00Z"
+    generation: 1
+    labels:
+      created-by: image-pruner
+    managedFields:
+    - apiVersion: batch/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:created-by: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a7842e2d-3e84-4be5-bb54-ce4ccbd55ee6"}: {}
+        f:spec:
+          f:backoffLimit: {}
+          f:completionMode: {}
+          f:completions: {}
+          f:parallelism: {}
+          f:suspend: {}
+          f:template:
+            f:spec:
+              f:affinity: {}
+              f:containers:
+                k:{"name":"image-pruner"}:
+                  .: {}
+                  f:args: {}
+                  f:command: {}
+                  f:image: {}
+                  f:imagePullPolicy: {}
+                  f:name: {}
+                  f:resources:
+                    .: {}
+                    f:requests:
+                      .: {}
+                      f:cpu: {}
+                      f:memory: {}
+                  f:terminationMessagePath: {}
+                  f:terminationMessagePolicy: {}
+                  f:volumeMounts:
+                    .: {}
+                    k:{"mountPath":"/var/run/configmaps/serviceca"}:
+                      .: {}
+                      f:mountPath: {}
+                      f:name: {}
+                      f:readOnly: {}
+              f:dnsPolicy: {}
+              f:priorityClassName: {}
+              f:restartPolicy: {}
+              f:schedulerName: {}
+              f:securityContext: {}
+              f:serviceAccount: {}
+              f:serviceAccountName: {}
+              f:terminationGracePeriodSeconds: {}
+              f:volumes:
+                .: {}
+                k:{"name":"serviceca"}:
+                  .: {}
+                  f:configMap:
+                    .: {}
+                    f:defaultMode: {}
+                    f:name: {}
+                  f:name: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T00:00:00Z"
+    - apiVersion: batch/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:completionTime: {}
+          f:conditions: {}
+          f:ready: {}
+          f:startTime: {}
+          f:succeeded: {}
+          f:uncountedTerminatedPods: {}
+      manager: kube-controller-manager
+      operation: Update
+      subresource: status
+      time: "2023-05-04T00:00:07Z"
+    name: image-pruner-28052640
+    namespace: openshift-image-registry
+    ownerReferences:
+    - apiVersion: batch/v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: CronJob
+      name: image-pruner
+      uid: a7842e2d-3e84-4be5-bb54-ce4ccbd55ee6
+    resourceVersion: "428799"
+    uid: f8ea31ea-e56c-4e26-8d9d-aae317900382
+  spec:
+    backoffLimit: 0
+    completionMode: NonIndexed
+    completions: 1
+    parallelism: 1
+    selector:
+      matchLabels:
+        controller-uid: f8ea31ea-e56c-4e26-8d9d-aae317900382
+    suspend: false
+    template:
+      metadata:
+        creationTimestamp: null
+        labels:
+          controller-uid: f8ea31ea-e56c-4e26-8d9d-aae317900382
+          job-name: image-pruner-28052640
+      spec:
+        affinity: {}
+        containers:
+        - args:
+          - -c
+          - |
+            set -eu
+            "$@" && exit
+            for i in 1 2 3 4 5; do
+              echo "attempt #$i has failed (exit code $?), going to make another attempt..." >&2
+              sleep $(($i * 30))
+              "$@" && break  # this is the last command of the script, so its last failure will be exit code of the script
+            done
+          - arg0
+          - oc
+          - adm
+          - prune
+          - images
+          - --confirm=true
+          - --certificate-authority=/var/run/configmaps/serviceca/service-ca.crt
+          - --keep-tag-revisions=3
+          - --keep-younger-than=60m
+          - --ignore-invalid-refs=true
+          - --loglevel=1
+          - --prune-registry=false
+          command:
+          - /bin/sh
+          image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9f0cdc00b1b1a3c17411e50653253b9f6bb5329ea4fb82ad983790a6dbf2d9ad
+          imagePullPolicy: IfNotPresent
+          name: image-pruner
+          resources:
+            requests:
+              cpu: 100m
+              memory: 256Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: FallbackToLogsOnError
+          volumeMounts:
+          - mountPath: /var/run/configmaps/serviceca
+            name: serviceca
+            readOnly: true
+        dnsPolicy: ClusterFirst
+        priorityClassName: system-cluster-critical
+        restartPolicy: Never
+        schedulerName: default-scheduler
+        securityContext: {}
+        serviceAccount: pruner
+        serviceAccountName: pruner
+        terminationGracePeriodSeconds: 30
+        volumes:
+        - configMap:
+            defaultMode: 420
+            name: serviceca
+          name: serviceca
+  status:
+    completionTime: "2023-05-04T00:00:07Z"
+    conditions:
+    - lastProbeTime: "2023-05-04T00:00:07Z"
+      lastTransitionTime: "2023-05-04T00:00:07Z"
+      status: "True"
+      type: Complete
+    ready: 0
+    startTime: "2023-05-04T00:00:00Z"
+    succeeded: 1
+    uncountedTerminatedPods: {}
+kind: JobList
+metadata:
+  resourceVersion: "684629"

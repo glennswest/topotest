@@ -1,0 +1,336 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.1.212
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: lvms-operator-65cb4bdf95-8qw5z
+      namespace: openshift-storage
+      uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:33:34Z"
+    creationTimestamp: "2023-05-04T14:35:01Z"
+    generateName: lvms-node-metrics-
+    generation: 6
+    labels:
+      app.kubernetes.io/compose: metrics
+      app.kubernetes.io/part-of: lvms-provisioner
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: lvms-node-metrics
+      operators.coreos.com/lvms-operator.openshift-storage: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/compose: {}
+            f:app.kubernetes.io/part-of: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:operators.coreos.com/lvms-operator.openshift-storage: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"dcdc84f6-0f54-425f-a384-38822e3a34ff"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:33:34Z"
+    name: lvms-node-metrics-gvdwk
+    namespace: openshift-storage
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: lvms-node-metrics
+      uid: dcdc84f6-0f54-425f-a384-38822e3a34ff
+    resourceVersion: "631780"
+    uid: 2e07caaa-180e-4153-a15b-894a160fc45a
+  ports:
+  - name: lvms-metrics
+    port: 23532
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.1.212
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: lvms-operator-65cb4bdf95-8qw5z
+      namespace: openshift-storage
+      uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:33:34Z"
+    creationTimestamp: "2023-05-04T14:35:03Z"
+    generateName: lvms-operator-metrics-service-
+    generation: 6
+    labels:
+      app.kubernetes.io/name: lvms-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: lvms-operator-metrics-service
+      operators.coreos.com/lvms-operator.openshift-storage: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/name: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:operators.coreos.com/lvms-operator.openshift-storage: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"4d5840f3-92a2-41c7-a2db-ea4dc83476ce"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:33:34Z"
+    name: lvms-operator-metrics-service-w4j6x
+    namespace: openshift-storage
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: lvms-operator-metrics-service
+      uid: 4d5840f3-92a2-41c7-a2db-ea4dc83476ce
+    resourceVersion: "631787"
+    uid: 190d1488-24aa-47a8-8319-f0e97da9e013
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.1.212
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: lvms-operator-65cb4bdf95-8qw5z
+      namespace: openshift-storage
+      uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:33:34Z"
+    creationTimestamp: "2023-05-04T16:33:26Z"
+    generateName: lvms-operator-service-
+    generation: 3
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: lvms-operator-service
+      operators.coreos.com/lvms-operator.openshift-storage: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:operators.coreos.com/lvms-operator.openshift-storage: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"4e422863-8d48-4555-bdd5-727374081a12"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:33:34Z"
+    name: lvms-operator-service-w8hs9
+    namespace: openshift-storage
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: lvms-operator-service
+      uid: 4e422863-8d48-4555-bdd5-727374081a12
+    resourceVersion: "631785"
+    uid: 2ad3c90c-9daa-4bb8-ba14-44cc86053772
+  ports:
+  - name: "443"
+    port: 9443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.1.212
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: lvms-operator-65cb4bdf95-8qw5z
+      namespace: openshift-storage
+      uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:33:34Z"
+    creationTimestamp: "2023-05-04T14:35:07Z"
+    generateName: lvms-webhook-service-
+    generation: 6
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: lvms-webhook-service
+      operators.coreos.com/lvms-operator.openshift-storage: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:operators.coreos.com/lvms-operator.openshift-storage: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"ea3f4a34-086c-4b43-b8f2-53ee20c6aeaa"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:33:34Z"
+    name: lvms-webhook-service-fgqtk
+    namespace: openshift-storage
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: lvms-webhook-service
+      uid: ea3f4a34-086c-4b43-b8f2-53ee20c6aeaa
+    resourceVersion: "631781"
+    uid: 897799be-5329-4e16-9726-00625c21cfd4
+  ports:
+  - name: ""
+    port: 9443
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.1.217
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: topolvm-node-7fjkf
+      namespace: openshift-storage
+      uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:33:53Z"
+    creationTimestamp: "2023-05-04T14:35:01Z"
+    generateName: topolvm-node-metrics-
+    generation: 6
+    labels:
+      app.kubernetes.io/compose: metrics
+      app.kubernetes.io/part-of: lvms-provisioner
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: topolvm-node-metrics
+      operators.coreos.com/lvms-operator.openshift-storage: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/compose: {}
+            f:app.kubernetes.io/part-of: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:operators.coreos.com/lvms-operator.openshift-storage: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"95da0a00-4daa-468e-b2dd-b6bcf7d7ae7f"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:33:53Z"
+    name: topolvm-node-metrics-jllxt
+    namespace: openshift-storage
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: topolvm-node-metrics
+      uid: 95da0a00-4daa-468e-b2dd-b6bcf7d7ae7f
+    resourceVersion: "631966"
+    uid: b6424e3e-f33e-4b9f-adf1-9b1d1f317640
+  ports:
+  - name: topolvm-metrics
+    port: 8080
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "684671"

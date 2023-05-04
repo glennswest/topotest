@@ -1,0 +1,76 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 192.168.1.126
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: router-default-757b9d4d79-snzvp
+      namespace: openshift-ingress
+      uid: ab5d2f9c-8bfa-4bc6-82b7-d44d9239778e
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:33:54Z"
+    creationTimestamp: "2023-05-02T12:35:13Z"
+    generateName: router-internal-default-
+    generation: 7
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      ingresscontroller.operator.openshift.io/owning-ingresscontroller: default
+      kubernetes.io/service-name: router-internal-default
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:ingresscontroller.operator.openshift.io/owning-ingresscontroller: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"71e8204b-a7be-41cd-8a92-61df26f23da5"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:33:54Z"
+    name: router-internal-default-4m9dz
+    namespace: openshift-ingress
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: router-internal-default
+      uid: 71e8204b-a7be-41cd-8a92-61df26f23da5
+    resourceVersion: "631982"
+    uid: 937172a4-1a9a-48aa-a144-f584370c1139
+  ports:
+  - name: http
+    port: 80
+    protocol: TCP
+  - name: metrics
+    port: 1936
+    protocol: TCP
+  - name: https
+    port: 443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "684589"

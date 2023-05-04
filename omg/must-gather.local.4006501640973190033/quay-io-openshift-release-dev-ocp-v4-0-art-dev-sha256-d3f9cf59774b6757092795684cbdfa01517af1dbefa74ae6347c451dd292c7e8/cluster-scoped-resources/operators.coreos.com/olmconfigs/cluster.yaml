@@ -1,0 +1,51 @@
+---
+apiVersion: operators.coreos.com/v1
+kind: OLMConfig
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2023-05-02T12:18:37Z"
+  generation: 1
+  managedFields:
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:18:37Z"
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:37:41Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "8744"
+  uid: adaaf69b-fc48-47a0-9d3f-7b018f330671
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-02T12:37:41Z"
+    message: Copied CSVs are enabled and present across the cluster
+    reason: CopiedCSVsEnabled
+    status: "False"
+    type: DisabledCopiedCSVs

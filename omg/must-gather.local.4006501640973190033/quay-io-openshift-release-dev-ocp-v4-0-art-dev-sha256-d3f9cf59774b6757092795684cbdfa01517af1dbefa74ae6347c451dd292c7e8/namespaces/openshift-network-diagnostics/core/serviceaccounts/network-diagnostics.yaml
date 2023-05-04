@@ -1,0 +1,40 @@
+---
+apiVersion: v1
+imagePullSecrets:
+- name: network-diagnostics-dockercfg-fj7dm
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-05-02T12:26:14Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"a74973fc-c074-41e2-8215-81c3454addea"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-05-02T12:26:14Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:imagePullSecrets: {}
+      f:secrets:
+        .: {}
+        k:{"name":"network-diagnostics-dockercfg-fj7dm"}: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2023-05-02T12:40:04Z"
+  name: network-diagnostics
+  namespace: openshift-network-diagnostics
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: a74973fc-c074-41e2-8215-81c3454addea
+  resourceVersion: "12289"
+  uid: e7d26d83-1997-4574-925b-f2f58eda36d8
+secrets:
+- name: network-diagnostics-dockercfg-fj7dm

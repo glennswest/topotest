@@ -1,0 +1,70 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.18
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz
+      namespace: openshift-kube-scheduler-operator
+      uid: f6bc7d17-4a3c-48be-bd0e-1c18dfa4edb3
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:31:29Z"
+    creationTimestamp: "2023-05-02T12:18:12Z"
+    generateName: metrics-
+    generation: 4
+    labels:
+      app: openshift-kube-scheduler-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"056e346b-c673-44c8-94c1-9d3ac5ed9e26"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:31:29Z"
+    name: metrics-w2pr9
+    namespace: openshift-kube-scheduler-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: metrics
+      uid: 056e346b-c673-44c8-94c1-9d3ac5ed9e26
+    resourceVersion: "630317"
+    uid: c2ea950a-ff37-49b5-8bb6-fc38a41a05f6
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "684686"

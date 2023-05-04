@@ -1,0 +1,40 @@
+---
+apiVersion: v1
+imagePullSecrets:
+- name: multus-dockercfg-r77vx
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-05-02T12:26:02Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"a74973fc-c074-41e2-8215-81c3454addea"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-05-02T12:26:02Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:imagePullSecrets: {}
+      f:secrets:
+        .: {}
+        k:{"name":"multus-dockercfg-r77vx"}: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2023-05-02T12:40:03Z"
+  name: multus
+  namespace: openshift-multus
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: a74973fc-c074-41e2-8215-81c3454addea
+  resourceVersion: "12081"
+  uid: 196525b1-db99-402f-909c-bbe8e15a454c
+secrets:
+- name: multus-dockercfg-r77vx

@@ -1,0 +1,137 @@
+2023-05-04T16:30:52.468138220Z I0504 16:30:52.468028    7794 controller.go:1274] starting openshift-tuned v4.12.0-202301312135.p0.ga1740c3.assembly.stream-0-g251f4ef-dirty
+2023-05-04T16:31:08.044671975Z I0504 16:31:08.043944    7794 trace.go:205] Trace[921226290]: "Reflector ListAndWatch" name:github.com/openshift/cluster-node-tuning-operator/pkg/generated/informers/externalversions/factory.go:101 (04-May-2023 16:30:52.469) (total time: 15574ms):
+2023-05-04T16:31:08.044671975Z Trace[921226290]: ---"Objects listed" error:<nil> 15574ms (16:31:08.043)
+2023-05-04T16:31:08.044671975Z Trace[921226290]: [15.574908315s] [15.574908315s] END
+2023-05-04T16:31:08.044671975Z I0504 16:31:08.044020    7794 controller.go:348] disabling system tuned...
+2023-05-04T16:31:08.044671975Z I0504 16:31:08.044352    7794 trace.go:205] Trace[1844468137]: "Reflector ListAndWatch" name:github.com/openshift/cluster-node-tuning-operator/pkg/generated/informers/externalversions/factory.go:101 (04-May-2023 16:30:52.469) (total time: 15575ms):
+2023-05-04T16:31:08.044671975Z Trace[1844468137]: ---"Objects listed" error:<nil> 15574ms (16:31:08.044)
+2023-05-04T16:31:08.044671975Z Trace[1844468137]: [15.575015165s] [15.575015165s] END
+2023-05-04T16:31:08.069726134Z I0504 16:31:08.069017    7794 controller.go:1068] started events processors
+2023-05-04T16:31:08.069726134Z I0504 16:31:08.069340    7794 controller.go:378] extracting TuneD profiles
+2023-05-04T16:31:08.069726134Z I0504 16:31:08.069410    7794 controller.go:1106] started controller
+2023-05-04T16:31:08.069815532Z I0504 16:31:08.069795    7794 controller.go:467] extracting cloud provider name to /var/lib/tuned/provider
+2023-05-04T16:31:08.070052897Z I0504 16:31:08.070026    7794 controller.go:509] written "/etc/tuned/recommend.d/50-openshift.conf" to set TuneD profile openshift-control-plane
+2023-05-04T16:31:08.070857517Z I0504 16:31:08.070081    7794 controller.go:522] starting tuned...
+2023-05-04T16:31:08.183021282Z 2023-05-04 16:31:08,182 INFO     tuned.daemon.application: TuneD: 2.19.0, kernel: 4.18.0-372.43.1.el8_6.x86_64
+2023-05-04T16:31:08.183080733Z 2023-05-04 16:31:08,183 INFO     tuned.daemon.application: dynamic tuning is globally disabled
+2023-05-04T16:31:08.187409065Z 2023-05-04 16:31:08,187 INFO     tuned.daemon.daemon: using sleep interval of 1 second(s)
+2023-05-04T16:31:08.187662400Z 2023-05-04 16:31:08,187 INFO     tuned.daemon.daemon: Running in automatic mode, checking what profile is recommended for your configuration.
+2023-05-04T16:31:08.188293123Z 2023-05-04 16:31:08,188 INFO     tuned.daemon.daemon: Using 'openshift-control-plane' profile
+2023-05-04T16:31:08.188930349Z 2023-05-04 16:31:08,188 INFO     tuned.profiles.loader: loading profile: openshift-control-plane
+2023-05-04T16:31:08.230851456Z 2023-05-04 16:31:08,230 INFO     tuned.daemon.controller: starting controller
+2023-05-04T16:31:08.230851456Z 2023-05-04 16:31:08,230 INFO     tuned.daemon.daemon: starting tuning
+2023-05-04T16:31:08.237306518Z 2023-05-04 16:31:08,237 INFO     tuned.plugins.base: instance cpu: assigning devices cpu3, cpu0, cpu1, cpu2
+2023-05-04T16:31:08.241284562Z 2023-05-04 16:31:08,241 INFO     tuned.plugins.plugin_cpu: We are running on an x86 AuthenticAMD platform
+2023-05-04T16:31:08.265602050Z 2023-05-04 16:31:08,265 INFO     tuned.plugins.plugin_disk: Device 'dm-1' not supported by hdparm
+2023-05-04T16:31:08.268022401Z 2023-05-04 16:31:08,267 INFO     tuned.plugins.plugin_disk: Device 'dm-10' not supported by hdparm
+2023-05-04T16:31:08.272514559Z 2023-05-04 16:31:08,272 INFO     tuned.plugins.plugin_disk: Device 'dm-100' not supported by hdparm
+2023-05-04T16:31:08.278828837Z 2023-05-04 16:31:08,278 INFO     tuned.plugins.plugin_disk: Device 'dm-101' not supported by hdparm
+2023-05-04T16:31:08.281790604Z 2023-05-04 16:31:08,281 INFO     tuned.plugins.plugin_disk: Device 'dm-102' not supported by hdparm
+2023-05-04T16:31:08.287316653Z 2023-05-04 16:31:08,287 INFO     tuned.plugins.plugin_disk: Device 'dm-103' not supported by hdparm
+2023-05-04T16:31:08.292230533Z 2023-05-04 16:31:08,292 INFO     tuned.plugins.plugin_disk: Device 'dm-11' not supported by hdparm
+2023-05-04T16:31:08.300741101Z 2023-05-04 16:31:08,300 INFO     tuned.plugins.plugin_disk: Device 'dm-12' not supported by hdparm
+2023-05-04T16:31:08.305965223Z 2023-05-04 16:31:08,305 INFO     tuned.plugins.plugin_disk: Device 'dm-13' not supported by hdparm
+2023-05-04T16:31:08.313500923Z 2023-05-04 16:31:08,313 INFO     tuned.plugins.plugin_disk: Device 'dm-14' not supported by hdparm
+2023-05-04T16:31:08.317791934Z 2023-05-04 16:31:08,317 INFO     tuned.plugins.plugin_disk: Device 'dm-15' not supported by hdparm
+2023-05-04T16:31:08.325497011Z 2023-05-04 16:31:08,325 INFO     tuned.plugins.plugin_disk: Device 'dm-16' not supported by hdparm
+2023-05-04T16:31:08.329439058Z 2023-05-04 16:31:08,329 INFO     tuned.plugins.plugin_disk: Device 'dm-17' not supported by hdparm
+2023-05-04T16:31:08.335232859Z 2023-05-04 16:31:08,335 INFO     tuned.plugins.plugin_disk: Device 'dm-18' not supported by hdparm
+2023-05-04T16:31:08.338308480Z 2023-05-04 16:31:08,338 INFO     tuned.plugins.plugin_disk: Device 'dm-19' not supported by hdparm
+2023-05-04T16:31:08.343285278Z 2023-05-04 16:31:08,343 INFO     tuned.plugins.plugin_disk: Device 'dm-2' not supported by hdparm
+2023-05-04T16:31:08.345206432Z 2023-05-04 16:31:08,345 INFO     tuned.plugins.plugin_disk: Device 'dm-20' not supported by hdparm
+2023-05-04T16:31:08.350170206Z 2023-05-04 16:31:08,350 INFO     tuned.plugins.plugin_disk: Device 'dm-21' not supported by hdparm
+2023-05-04T16:31:08.358931485Z 2023-05-04 16:31:08,358 INFO     tuned.plugins.plugin_disk: Device 'dm-22' not supported by hdparm
+2023-05-04T16:31:08.363574457Z 2023-05-04 16:31:08,363 INFO     tuned.plugins.plugin_disk: Device 'dm-23' not supported by hdparm
+2023-05-04T16:31:08.371623479Z 2023-05-04 16:31:08,371 INFO     tuned.plugins.plugin_disk: Device 'dm-24' not supported by hdparm
+2023-05-04T16:31:08.375823760Z 2023-05-04 16:31:08,375 INFO     tuned.plugins.plugin_disk: Device 'dm-25' not supported by hdparm
+2023-05-04T16:31:08.382461465Z 2023-05-04 16:31:08,382 INFO     tuned.plugins.plugin_disk: Device 'dm-26' not supported by hdparm
+2023-05-04T16:31:08.385669965Z 2023-05-04 16:31:08,385 INFO     tuned.plugins.plugin_disk: Device 'dm-27' not supported by hdparm
+2023-05-04T16:31:08.391262508Z 2023-05-04 16:31:08,391 INFO     tuned.plugins.plugin_disk: Device 'dm-28' not supported by hdparm
+2023-05-04T16:31:08.393853760Z 2023-05-04 16:31:08,393 INFO     tuned.plugins.plugin_disk: Device 'dm-29' not supported by hdparm
+2023-05-04T16:31:08.401606587Z 2023-05-04 16:31:08,401 INFO     tuned.plugins.plugin_disk: Device 'dm-3' not supported by hdparm
+2023-05-04T16:31:08.410186385Z 2023-05-04 16:31:08,410 INFO     tuned.plugins.plugin_disk: Device 'dm-30' not supported by hdparm
+2023-05-04T16:31:08.414980491Z 2023-05-04 16:31:08,414 INFO     tuned.plugins.plugin_disk: Device 'dm-31' not supported by hdparm
+2023-05-04T16:31:08.422758885Z 2023-05-04 16:31:08,422 INFO     tuned.plugins.plugin_disk: Device 'dm-32' not supported by hdparm
+2023-05-04T16:31:08.427174360Z 2023-05-04 16:31:08,426 INFO     tuned.plugins.plugin_disk: Device 'dm-33' not supported by hdparm
+2023-05-04T16:31:08.434802122Z 2023-05-04 16:31:08,434 INFO     tuned.plugins.plugin_disk: Device 'dm-34' not supported by hdparm
+2023-05-04T16:31:08.438652306Z 2023-05-04 16:31:08,438 INFO     tuned.plugins.plugin_disk: Device 'dm-35' not supported by hdparm
+2023-05-04T16:31:08.447246812Z 2023-05-04 16:31:08,446 INFO     tuned.plugins.plugin_disk: Device 'dm-36' not supported by hdparm
+2023-05-04T16:31:08.450889086Z 2023-05-04 16:31:08,449 INFO     tuned.plugins.plugin_disk: Device 'dm-37' not supported by hdparm
+2023-05-04T16:31:08.456598209Z 2023-05-04 16:31:08,456 INFO     tuned.plugins.plugin_disk: Device 'dm-38' not supported by hdparm
+2023-05-04T16:31:08.459142983Z 2023-05-04 16:31:08,459 INFO     tuned.plugins.plugin_disk: Device 'dm-39' not supported by hdparm
+2023-05-04T16:31:08.464053848Z 2023-05-04 16:31:08,463 INFO     tuned.plugins.plugin_disk: Device 'dm-4' not supported by hdparm
+2023-05-04T16:31:08.472647292Z 2023-05-04 16:31:08,472 INFO     tuned.plugins.plugin_disk: Device 'dm-40' not supported by hdparm
+2023-05-04T16:31:08.479729941Z 2023-05-04 16:31:08,479 INFO     tuned.plugins.plugin_disk: Device 'dm-41' not supported by hdparm
+2023-05-04T16:31:08.488648004Z 2023-05-04 16:31:08,488 INFO     tuned.plugins.plugin_disk: Device 'dm-42' not supported by hdparm
+2023-05-04T16:31:08.493147506Z 2023-05-04 16:31:08,492 INFO     tuned.plugins.plugin_disk: Device 'dm-43' not supported by hdparm
+2023-05-04T16:31:08.499611144Z 2023-05-04 16:31:08,499 INFO     tuned.plugins.plugin_disk: Device 'dm-44' not supported by hdparm
+2023-05-04T16:31:08.503372442Z 2023-05-04 16:31:08,503 INFO     tuned.plugins.plugin_disk: Device 'dm-45' not supported by hdparm
+2023-05-04T16:31:08.509526679Z 2023-05-04 16:31:08,509 INFO     tuned.plugins.plugin_disk: Device 'dm-46' not supported by hdparm
+2023-05-04T16:31:08.512821932Z 2023-05-04 16:31:08,512 INFO     tuned.plugins.plugin_disk: Device 'dm-47' not supported by hdparm
+2023-05-04T16:31:08.518328424Z 2023-05-04 16:31:08,518 INFO     tuned.plugins.plugin_disk: Device 'dm-48' not supported by hdparm
+2023-05-04T16:31:08.520495730Z 2023-05-04 16:31:08,520 INFO     tuned.plugins.plugin_disk: Device 'dm-49' not supported by hdparm
+2023-05-04T16:31:08.527273187Z 2023-05-04 16:31:08,527 INFO     tuned.plugins.plugin_disk: Device 'dm-5' not supported by hdparm
+2023-05-04T16:31:08.535285481Z 2023-05-04 16:31:08,535 INFO     tuned.plugins.plugin_disk: Device 'dm-50' not supported by hdparm
+2023-05-04T16:31:08.539715944Z 2023-05-04 16:31:08,539 INFO     tuned.plugins.plugin_disk: Device 'dm-51' not supported by hdparm
+2023-05-04T16:31:08.547123042Z 2023-05-04 16:31:08,546 INFO     tuned.plugins.plugin_disk: Device 'dm-52' not supported by hdparm
+2023-05-04T16:31:08.551392643Z 2023-05-04 16:31:08,551 INFO     tuned.plugins.plugin_disk: Device 'dm-53' not supported by hdparm
+2023-05-04T16:31:08.558094418Z 2023-05-04 16:31:08,557 INFO     tuned.plugins.plugin_disk: Device 'dm-54' not supported by hdparm
+2023-05-04T16:31:08.561309310Z 2023-05-04 16:31:08,561 INFO     tuned.plugins.plugin_disk: Device 'dm-55' not supported by hdparm
+2023-05-04T16:31:08.567846766Z 2023-05-04 16:31:08,567 INFO     tuned.plugins.plugin_disk: Device 'dm-56' not supported by hdparm
+2023-05-04T16:31:08.570357577Z 2023-05-04 16:31:08,570 INFO     tuned.plugins.plugin_disk: Device 'dm-57' not supported by hdparm
+2023-05-04T16:31:08.575801872Z 2023-05-04 16:31:08,575 INFO     tuned.plugins.plugin_disk: Device 'dm-58' not supported by hdparm
+2023-05-04T16:31:08.584055529Z 2023-05-04 16:31:08,583 INFO     tuned.plugins.plugin_disk: Device 'dm-59' not supported by hdparm
+2023-05-04T16:31:08.587972769Z 2023-05-04 16:31:08,587 INFO     tuned.plugins.plugin_disk: Device 'dm-6' not supported by hdparm
+2023-05-04T16:31:08.595470276Z 2023-05-04 16:31:08,595 INFO     tuned.plugins.plugin_disk: Device 'dm-60' not supported by hdparm
+2023-05-04T16:31:08.599998593Z 2023-05-04 16:31:08,599 INFO     tuned.plugins.plugin_disk: Device 'dm-61' not supported by hdparm
+2023-05-04T16:31:08.607257132Z 2023-05-04 16:31:08,607 INFO     tuned.plugins.plugin_disk: Device 'dm-62' not supported by hdparm
+2023-05-04T16:31:08.611015815Z 2023-05-04 16:31:08,610 INFO     tuned.plugins.plugin_disk: Device 'dm-63' not supported by hdparm
+2023-05-04T16:31:08.617146127Z 2023-05-04 16:31:08,617 INFO     tuned.plugins.plugin_disk: Device 'dm-64' not supported by hdparm
+2023-05-04T16:31:08.620385665Z 2023-05-04 16:31:08,620 INFO     tuned.plugins.plugin_disk: Device 'dm-65' not supported by hdparm
+2023-05-04T16:31:08.626143148Z 2023-05-04 16:31:08,626 INFO     tuned.plugins.plugin_disk: Device 'dm-66' not supported by hdparm
+2023-05-04T16:31:08.628649431Z 2023-05-04 16:31:08,628 INFO     tuned.plugins.plugin_disk: Device 'dm-67' not supported by hdparm
+2023-05-04T16:31:08.633992737Z 2023-05-04 16:31:08,633 INFO     tuned.plugins.plugin_disk: Device 'dm-68' not supported by hdparm
+2023-05-04T16:31:08.642163467Z 2023-05-04 16:31:08,642 INFO     tuned.plugins.plugin_disk: Device 'dm-69' not supported by hdparm
+2023-05-04T16:31:08.649236679Z 2023-05-04 16:31:08,649 INFO     tuned.plugins.plugin_disk: Device 'dm-7' not supported by hdparm
+2023-05-04T16:31:08.657091447Z 2023-05-04 16:31:08,656 INFO     tuned.plugins.plugin_disk: Device 'dm-70' not supported by hdparm
+2023-05-04T16:31:08.661470123Z 2023-05-04 16:31:08,661 INFO     tuned.plugins.plugin_disk: Device 'dm-71' not supported by hdparm
+2023-05-04T16:31:08.669473219Z 2023-05-04 16:31:08,668 INFO     tuned.plugins.plugin_disk: Device 'dm-72' not supported by hdparm
+2023-05-04T16:31:08.674433486Z 2023-05-04 16:31:08,674 INFO     tuned.plugins.plugin_disk: Device 'dm-73' not supported by hdparm
+2023-05-04T16:31:08.680847171Z 2023-05-04 16:31:08,680 INFO     tuned.plugins.plugin_disk: Device 'dm-74' not supported by hdparm
+2023-05-04T16:31:08.685376399Z 2023-05-04 16:31:08,684 INFO     tuned.plugins.plugin_disk: Device 'dm-75' not supported by hdparm
+2023-05-04T16:31:08.693098908Z 2023-05-04 16:31:08,692 INFO     tuned.plugins.plugin_disk: Device 'dm-76' not supported by hdparm
+2023-05-04T16:31:08.696106401Z 2023-05-04 16:31:08,695 INFO     tuned.plugins.plugin_disk: Device 'dm-77' not supported by hdparm
+2023-05-04T16:31:08.701927253Z 2023-05-04 16:31:08,701 INFO     tuned.plugins.plugin_disk: Device 'dm-78' not supported by hdparm
+2023-05-04T16:31:08.713008205Z 2023-05-04 16:31:08,712 INFO     tuned.plugins.plugin_disk: Device 'dm-79' not supported by hdparm
+2023-05-04T16:31:08.717817989Z 2023-05-04 16:31:08,717 INFO     tuned.plugins.plugin_disk: Device 'dm-8' not supported by hdparm
+2023-05-04T16:31:08.726068570Z 2023-05-04 16:31:08,725 INFO     tuned.plugins.plugin_disk: Device 'dm-80' not supported by hdparm
+2023-05-04T16:31:08.730287095Z 2023-05-04 16:31:08,730 INFO     tuned.plugins.plugin_disk: Device 'dm-81' not supported by hdparm
+2023-05-04T16:31:08.736824902Z 2023-05-04 16:31:08,736 INFO     tuned.plugins.plugin_disk: Device 'dm-82' not supported by hdparm
+2023-05-04T16:31:08.740581951Z 2023-05-04 16:31:08,740 INFO     tuned.plugins.plugin_disk: Device 'dm-83' not supported by hdparm
+2023-05-04T16:31:08.746894295Z 2023-05-04 16:31:08,746 INFO     tuned.plugins.plugin_disk: Device 'dm-84' not supported by hdparm
+2023-05-04T16:31:08.749662920Z 2023-05-04 16:31:08,749 INFO     tuned.plugins.plugin_disk: Device 'dm-85' not supported by hdparm
+2023-05-04T16:31:08.755123045Z 2023-05-04 16:31:08,755 INFO     tuned.plugins.plugin_disk: Device 'dm-86' not supported by hdparm
+2023-05-04T16:31:08.764348766Z 2023-05-04 16:31:08,764 INFO     tuned.plugins.plugin_disk: Device 'dm-87' not supported by hdparm
+2023-05-04T16:31:08.770608421Z 2023-05-04 16:31:08,770 INFO     tuned.plugins.plugin_disk: Device 'dm-88' not supported by hdparm
+2023-05-04T16:31:08.779155738Z 2023-05-04 16:31:08,779 INFO     tuned.plugins.plugin_disk: Device 'dm-89' not supported by hdparm
+2023-05-04T16:31:08.785057211Z 2023-05-04 16:31:08,784 INFO     tuned.plugins.plugin_disk: Device 'dm-9' not supported by hdparm
+2023-05-04T16:31:08.792678732Z 2023-05-04 16:31:08,792 INFO     tuned.plugins.plugin_disk: Device 'dm-90' not supported by hdparm
+2023-05-04T16:31:08.796809763Z 2023-05-04 16:31:08,796 INFO     tuned.plugins.plugin_disk: Device 'dm-91' not supported by hdparm
+2023-05-04T16:31:08.803325007Z 2023-05-04 16:31:08,802 INFO     tuned.plugins.plugin_disk: Device 'dm-92' not supported by hdparm
+2023-05-04T16:31:08.806916085Z 2023-05-04 16:31:08,806 INFO     tuned.plugins.plugin_disk: Device 'dm-93' not supported by hdparm
+2023-05-04T16:31:08.812879615Z 2023-05-04 16:31:08,812 INFO     tuned.plugins.plugin_disk: Device 'dm-94' not supported by hdparm
+2023-05-04T16:31:08.815439759Z 2023-05-04 16:31:08,815 INFO     tuned.plugins.plugin_disk: Device 'dm-95' not supported by hdparm
+2023-05-04T16:31:08.820891307Z 2023-05-04 16:31:08,820 INFO     tuned.plugins.plugin_disk: Device 'dm-96' not supported by hdparm
+2023-05-04T16:31:08.829014399Z 2023-05-04 16:31:08,828 INFO     tuned.plugins.plugin_disk: Device 'dm-97' not supported by hdparm
+2023-05-04T16:31:08.835804128Z 2023-05-04 16:31:08,834 INFO     tuned.plugins.plugin_disk: Device 'dm-98' not supported by hdparm
+2023-05-04T16:31:08.843191400Z 2023-05-04 16:31:08,843 INFO     tuned.plugins.plugin_disk: Device 'dm-99' not supported by hdparm
+2023-05-04T16:31:08.843726043Z 2023-05-04 16:31:08,843 INFO     tuned.plugins.base: instance disk: assigning devices dm-45, dm-58, dm-19, dm-28, dm-96, dm-33, dm-46, dm-0, sdc, dm-44, dm-15, dm-14, dm-59, dm-22, dm-80, dm-12, sda, dm-20, dm-91, dm-100, dm-49, dm-83, dm-42, dm-74, dm-68, dm-18, dm-52, dm-41, dm-87, dm-94, dm-10, dm-6, dm-85, dm-40, dm-78, dm-64, dm-25, dm-35, dm-11, dm-34, dm-47, dm-23, dm-84, dm-21, dm-103, dm-65, dm-50, dm-69, dm-31, dm-30, dm-39, dm-3, dm-29, dm-67, dm-81, dm-26, dm-43, dm-73, dm-51, dm-9, dm-66, dm-4, dm-92, dm-1, dm-2, dm-99, dm-55, dm-86, dm-8, dm-71, dm-5, sdb, dm-13, dm-82, dm-48, dm-57, dm-32, dm-36, dm-93, dm-27, dm-72, dm-77, dm-98, dm-61, dm-62, dm-70, dm-88, dm-63, dm-16, dm-54, dm-79, dm-97, dm-7, dm-102, dm-76, dm-38, dm-75, dm-95, dm-53, dm-90, dm-24, dm-101, dm-60, dm-56, dm-89, dm-37, dm-17
+2023-05-04T16:31:08.846893145Z 2023-05-04 16:31:08,846 INFO     tuned.plugins.base: instance net: assigning devices ens192
+2023-05-04T16:31:08.982442188Z 2023-05-04 16:31:08,982 INFO     tuned.plugins.plugin_sysctl: reapplying system sysctl
+2023-05-04T16:31:09.093387466Z 2023-05-04 16:31:09,093 INFO     tuned.daemon.daemon: static tuning from profile 'openshift-control-plane' applied
+2023-05-04T16:37:01.233990503Z I0504 16:37:01.233699    7794 controller.go:467] extracting cloud provider name to /var/lib/tuned/provider
+2023-05-04T16:37:01.233990503Z I0504 16:37:01.233844    7794 controller.go:509] written "/etc/tuned/recommend.d/50-openshift.conf" to set TuneD profile openshift-control-plane
+2023-05-04T16:37:01.234133632Z I0504 16:37:01.234007    7794 controller.go:795] active and recommended profile (openshift-control-plane) match; profile change will not trigger profile reload
+2023-05-04T16:37:01.239355783Z I0504 16:37:01.239309    7794 controller.go:467] extracting cloud provider name to /var/lib/tuned/provider
+2023-05-04T16:37:01.239527775Z I0504 16:37:01.239516    7794 controller.go:509] written "/etc/tuned/recommend.d/50-openshift.conf" to set TuneD profile openshift-control-plane
+2023-05-04T16:37:01.239795627Z I0504 16:37:01.239777    7794 controller.go:949] updated Profile node bootcmdline: 

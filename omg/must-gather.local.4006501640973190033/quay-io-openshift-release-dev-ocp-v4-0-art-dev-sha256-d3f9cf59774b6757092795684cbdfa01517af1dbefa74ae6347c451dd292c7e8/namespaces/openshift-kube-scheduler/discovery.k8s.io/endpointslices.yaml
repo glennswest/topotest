@@ -1,0 +1,70 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 192.168.1.126
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: openshift-kube-scheduler-node
+      namespace: openshift-kube-scheduler
+      uid: b7cd9323-65eb-4964-af23-a857a2f1a88e
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-02T12:42:45Z"
+    creationTimestamp: "2023-05-02T12:28:42Z"
+    generateName: scheduler-
+    generation: 3
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: scheduler
+      prometheus: kube-scheduler
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:prometheus: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a64fa57c-76d2-4330-a6ff-472178ba7a47"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-02T12:42:45Z"
+    name: scheduler-dvztw
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: scheduler
+      uid: a64fa57c-76d2-4330-a6ff-472178ba7a47
+    resourceVersion: "15222"
+    uid: a63e1007-870b-4fff-8e92-4e0755920ece
+  ports:
+  - name: https
+    port: 10259
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "684686"

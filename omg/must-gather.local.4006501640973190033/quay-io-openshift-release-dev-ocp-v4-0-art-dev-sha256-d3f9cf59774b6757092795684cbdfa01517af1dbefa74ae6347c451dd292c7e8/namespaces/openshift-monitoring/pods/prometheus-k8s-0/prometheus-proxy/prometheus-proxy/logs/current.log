@@ -1,0 +1,8 @@
+2023-05-04T16:33:26.601016981Z 2023/05/04 16:33:26 provider.go:129: Defaulting client-id to system:serviceaccount:openshift-monitoring:prometheus-k8s
+2023-05-04T16:33:26.601016981Z 2023/05/04 16:33:26 provider.go:134: Defaulting client-secret to service account token /var/run/secrets/kubernetes.io/serviceaccount/token
+2023-05-04T16:33:26.602281251Z 2023/05/04 16:33:26 provider.go:358: Delegation of authentication and authorization to OpenShift is enabled for bearer tokens and client certificates.
+2023-05-04T16:33:26.710041382Z 2023/05/04 16:33:26 oauthproxy.go:203: mapping path "/" => upstream "http://localhost:9090/"
+2023-05-04T16:33:26.710041382Z 2023/05/04 16:33:26 oauthproxy.go:230: OAuthProxy configured for  Client ID: system:serviceaccount:openshift-monitoring:prometheus-k8s
+2023-05-04T16:33:26.710041382Z 2023/05/04 16:33:26 oauthproxy.go:240: Cookie settings: name:_oauth_proxy secure(https):true httponly:true expiry:168h0m0s domain:<default> samesite: refresh:disabled
+2023-05-04T16:33:26.710357073Z I0504 16:33:26.710336       1 dynamic_serving_content.go:130] Starting serving::/etc/tls/private/tls.crt::/etc/tls/private/tls.key
+2023-05-04T16:33:26.710576124Z 2023/05/04 16:33:26 http.go:107: HTTPS: listening on [::]:9091

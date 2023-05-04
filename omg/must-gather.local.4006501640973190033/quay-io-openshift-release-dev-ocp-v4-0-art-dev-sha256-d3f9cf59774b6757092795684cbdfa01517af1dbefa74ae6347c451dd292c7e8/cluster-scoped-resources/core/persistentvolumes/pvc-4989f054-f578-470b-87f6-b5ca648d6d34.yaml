@@ -1,0 +1,94 @@
+---
+apiVersion: v1
+kind: PersistentVolume
+metadata:
+  annotations:
+    pv.kubernetes.io/provisioned-by: topolvm.io
+    volume.kubernetes.io/provisioner-deletion-secret-name: ""
+    volume.kubernetes.io/provisioner-deletion-secret-namespace: ""
+  creationTimestamp: "2023-05-04T17:20:17Z"
+  finalizers:
+  - kubernetes.io/pv-protection
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:pv.kubernetes.io/provisioned-by: {}
+          f:volume.kubernetes.io/provisioner-deletion-secret-name: {}
+          f:volume.kubernetes.io/provisioner-deletion-secret-namespace: {}
+      f:spec:
+        f:accessModes: {}
+        f:capacity:
+          .: {}
+          f:storage: {}
+        f:claimRef:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:name: {}
+          f:namespace: {}
+          f:resourceVersion: {}
+          f:uid: {}
+        f:csi:
+          .: {}
+          f:driver: {}
+          f:fsType: {}
+          f:volumeAttributes:
+            .: {}
+            f:storage.kubernetes.io/csiProvisionerIdentity: {}
+          f:volumeHandle: {}
+        f:nodeAffinity:
+          .: {}
+          f:required: {}
+        f:persistentVolumeReclaimPolicy: {}
+        f:storageClassName: {}
+        f:volumeMode: {}
+    manager: csi-provisioner
+    operation: Update
+    time: "2023-05-04T17:20:17Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:phase: {}
+    manager: kube-controller-manager
+    operation: Update
+    subresource: status
+    time: "2023-05-04T17:20:18Z"
+  name: pvc-4989f054-f578-470b-87f6-b5ca648d6d34
+  resourceVersion: "660223"
+  uid: 999e454d-aa1f-4c69-ad3e-b87fa12a909e
+spec:
+  accessModes:
+  - ReadWriteOnce
+  capacity:
+    storage: 1Gi
+  claimRef:
+    apiVersion: v1
+    kind: PersistentVolumeClaim
+    name: topopvc-73
+    namespace: topotest
+    resourceVersion: "657794"
+    uid: 4989f054-f578-470b-87f6-b5ca648d6d34
+  csi:
+    driver: topolvm.io
+    fsType: xfs
+    volumeAttributes:
+      storage.kubernetes.io/csiProvisionerIdentity: 1683218028566-8081-topolvm.io
+    volumeHandle: fae56e6b-a463-42ba-81bb-14a8b24cb7ea
+  nodeAffinity:
+    required:
+      nodeSelectorTerms:
+      - matchExpressions:
+        - key: topology.topolvm.io/node
+          operator: In
+          values:
+          - node
+  persistentVolumeReclaimPolicy: Delete
+  storageClassName: lvms-vg1
+  volumeMode: Filesystem
+status:
+  phase: Bound

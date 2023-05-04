@@ -1,0 +1,79 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: ServiceMonitor
+metadata:
+  creationTimestamp: "2023-05-02T12:35:38Z"
+  generation: 1
+  labels:
+    app.kubernetes.io/component: exporter
+    app.kubernetes.io/name: kube-state-metrics
+    app.kubernetes.io/part-of: openshift-monitoring
+    app.kubernetes.io/version: 2.6.0
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+      f:spec:
+        .: {}
+        f:endpoints: {}
+        f:jobLabel: {}
+        f:namespaceSelector: {}
+        f:selector: {}
+    manager: operator
+    operation: Update
+    time: "2023-05-02T12:35:38Z"
+  name: kube-state-metrics
+  namespace: openshift-monitoring
+  resourceVersion: "7274"
+  uid: bbfa4d70-1211-43d8-b513-62227fc37704
+spec:
+  endpoints:
+  - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+    bearerTokenSecret:
+      key: ""
+    honorLabels: true
+    interval: 2m0s
+    metricRelabelings:
+    - action: labeldrop
+      regex: instance
+    port: https-main
+    relabelings:
+    - action: labeldrop
+      regex: pod
+    scheme: https
+    scrapeTimeout: 1m
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+      cert: {}
+      certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+      keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+      serverName: kube-state-metrics.openshift-monitoring.svc
+  - bearerTokenFile: /var/run/secrets/kubernetes.io/serviceaccount/token
+    bearerTokenSecret:
+      key: ""
+    interval: 2m0s
+    port: https-self
+    scheme: https
+    scrapeTimeout: 1m
+    tlsConfig:
+      ca: {}
+      caFile: /etc/prometheus/configmaps/serving-certs-ca-bundle/service-ca.crt
+      cert: {}
+      certFile: /etc/prometheus/secrets/metrics-client-certs/tls.crt
+      keyFile: /etc/prometheus/secrets/metrics-client-certs/tls.key
+      serverName: kube-state-metrics.openshift-monitoring.svc
+  jobLabel: app.kubernetes.io/name
+  namespaceSelector: {}
+  selector:
+    matchLabels:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/name: kube-state-metrics
+      app.kubernetes.io/part-of: openshift-monitoring

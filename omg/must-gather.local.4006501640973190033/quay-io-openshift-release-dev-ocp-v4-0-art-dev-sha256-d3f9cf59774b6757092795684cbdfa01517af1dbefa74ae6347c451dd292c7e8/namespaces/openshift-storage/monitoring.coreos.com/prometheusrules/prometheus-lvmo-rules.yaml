@@ -1,0 +1,108 @@
+---
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  creationTimestamp: "2023-05-04T14:35:04Z"
+  generation: 1
+  managedFields:
+  - apiVersion: monitoring.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"a6933306-959a-4f9b-ade5-3a728a3e4be8"}: {}
+      f:spec:
+        .: {}
+        f:groups: {}
+    manager: catalog
+    operation: Update
+    time: "2023-05-04T14:35:04Z"
+  name: prometheus-lvmo-rules
+  namespace: openshift-storage
+  ownerReferences:
+  - apiVersion: operators.coreos.com/v1alpha1
+    blockOwnerDeletion: false
+    controller: false
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  resourceVersion: "598707"
+  uid: 2b7973aa-d8c1-4849-989c-c14210a94be0
+spec:
+  groups:
+  - name: vg-alert.rules
+    rules:
+    - alert: VolumeGroupUsageAtThresholdNearFull
+      annotations:
+        description: VolumeGroup is nearing full. Data deletion or VolumeGroup expansion
+          is required.
+        message: VolumeGroup {{ $labels.device_class }} utilization has crossed 75
+          % on node {{ $labels.node }}. Free up some space or expand the VolumeGroup.
+      expr: |
+        (topolvm_volumegroup_size_bytes - topolvm_volumegroup_available_bytes)/topolvm_volumegroup_size_bytes > 0.75 and (topolvm_volumegroup_size_bytes - topolvm_volumegroup_available_bytes)/topolvm_volumegroup_size_bytes <= 0.85 and topolvm_thinpool_data_percent > 75.00  and topolvm_thinpool_data_percent < 85.00
+      for: 5m
+      labels:
+        severity: warning
+    - alert: VolumeGroupUsageAtThresholdCritical
+      annotations:
+        description: VolumeGroup is critically full. Data deletion or VolumeGroup
+          expansion is required.
+        message: VolumeGroup {{ $labels.device_class }} utilization has crossed 85
+          % on node {{ $labels.node }}. Free up some space or expand the VolumeGroup
+          immediately.
+      expr: |
+        (topolvm_volumegroup_size_bytes - topolvm_volumegroup_available_bytes)/topolvm_volumegroup_size_bytes > 0.85 and topolvm_thinpool_data_percent > 85.00
+      for: 5m
+      labels:
+        severity: critical
+  - name: thin-pool-alert.rules
+    rules:
+    - alert: ThinPoolDataUsageAtThresholdNearFull
+      annotations:
+        description: Thin pool in the VolumeGroup is nearing full. Data deletion or
+          thin pool expansion is required.
+        message: Thin Pool data utilization in the VolumeGroup {{ $labels.device_class
+          }} has crossed 75 % on node {{ $labels.node }}. Free up some space or expand
+          the thin pool.
+      expr: |
+        topolvm_thinpool_data_percent > 75.00  and topolvm_thinpool_data_percent < 85.00
+      for: 5m
+      labels:
+        severity: warning
+    - alert: ThinPoolDataUsageAtThresholdCritical
+      annotations:
+        description: Thin pool in the VolumeGroup is critically full. Data deletion
+          or thin pool expansion is required.
+        message: Thin Pool data utilization in the VolumeGroup {{ $labels.device_class
+          }} has crossed 85 % on node {{ $labels.node }}. Free up some space or expand
+          the thin pool immediately.
+      expr: |
+        topolvm_thinpool_data_percent > 85.00
+      for: 5m
+      labels:
+        severity: critical
+    - alert: ThinPoolMetaDataUsageAtThresholdNearFull
+      annotations:
+        description: Thin pool metadata utitlization in the VolumeGroup is nearing
+          full. Data deletion or thin pool expansion is required.
+        message: Thin Pool metadata utilization in the VolumeGroup {{ $labels.device_class
+          }} has crossed 75 % on node {{ $labels.node }}. Free up some space or expand
+          the thin pool.
+      expr: |
+        topolvm_thinpool_metadata_percent > 75.00  and topolvm_thinpool_data_percent < 85.00
+      for: 5m
+      labels:
+        severity: warning
+    - alert: ThinPoolMetaDataUsageAtThresholdCritical
+      annotations:
+        description: Thin pool metadata ultilization in the VolumeGroup is critically
+          full. Data deletion or thin pool expansion is required.
+        message: Thin Pool metadata utilization in the VolumeGroup {{ $labels.device_class
+          }} has crossed 85 % on node {{ $labels.node }}. Free up some space or expand
+          the thin pool immediately.
+      expr: |
+        topolvm_thinpool_metadata_percent > 85.00
+      for: 5m
+      labels:
+        severity: critical

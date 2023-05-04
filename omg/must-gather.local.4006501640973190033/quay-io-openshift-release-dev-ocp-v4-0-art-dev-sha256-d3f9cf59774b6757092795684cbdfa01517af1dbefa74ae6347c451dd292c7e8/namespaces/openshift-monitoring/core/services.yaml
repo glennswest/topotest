@@ -1,0 +1,1200 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-secret-name: alertmanager-main-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:45:38Z"
+    labels:
+      app.kubernetes.io/component: alert-router
+      app.kubernetes.io/instance: main
+      app.kubernetes.io/name: alertmanager
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.24.0
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":9092,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9094,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9097,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:sessionAffinityConfig:
+            .: {}
+            f:clientIP:
+              .: {}
+              f:timeoutSeconds: {}
+          f:type: {}
+      manager: operator
+      operation: Update
+      time: "2023-05-02T12:45:38Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:45:39Z"
+    name: alertmanager-main
+    namespace: openshift-monitoring
+    resourceVersion: "15937"
+    uid: 7403e2d7-bb52-446b-b787-7d1b36057a8b
+  spec:
+    clusterIP: 172.30.254.25
+    clusterIPs:
+    - 172.30.254.25
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: web
+      port: 9094
+      protocol: TCP
+      targetPort: web
+    - name: tenancy
+      port: 9092
+      protocol: TCP
+      targetPort: tenancy
+    - name: metrics
+      port: 9097
+      protocol: TCP
+      targetPort: metrics
+    selector:
+      app.kubernetes.io/component: alert-router
+      app.kubernetes.io/instance: main
+      app.kubernetes.io/name: alertmanager
+      app.kubernetes.io/part-of: openshift-monitoring
+    sessionAffinity: ClientIP
+    sessionAffinityConfig:
+      clientIP:
+        timeoutSeconds: 10800
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-05-02T12:45:43Z"
+    labels:
+      operated-alertmanager: "true"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:operated-alertmanager: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"227d57d4-3820-473b-b85d-7f471aa96e24"}: {}
+        f:spec:
+          f:clusterIP: {}
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":9093,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9094,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9094,"protocol":"UDP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: PrometheusOperator
+      operation: Update
+      time: "2023-05-02T12:45:43Z"
+    name: alertmanager-operated
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: monitoring.coreos.com/v1
+      kind: Alertmanager
+      name: main
+      uid: 227d57d4-3820-473b-b85d-7f471aa96e24
+    resourceVersion: "16009"
+    uid: b5bd18cb-f11f-4baf-9285-58bc652541d4
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: web
+      port: 9093
+      protocol: TCP
+      targetPort: web
+    - name: tcp-mesh
+      port: 9094
+      protocol: TCP
+      targetPort: 9094
+    - name: udp-mesh
+      port: 9094
+      protocol: UDP
+      targetPort: 9094
+    selector:
+      app.kubernetes.io/name: alertmanager
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      include.release.openshift.io/ibm-cloud-managed: "true"
+      include.release.openshift.io/self-managed-high-availability: "true"
+      include.release.openshift.io/single-node-developer: "true"
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-secret-name: cluster-monitoring-operator-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:18:33Z"
+    labels:
+      app.kubernetes.io/name: cluster-monitoring-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:include.release.openshift.io/ibm-cloud-managed: {}
+            f:include.release.openshift.io/self-managed-high-availability: {}
+            f:include.release.openshift.io/single-node-developer: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+        f:spec:
+          f:clusterIP: {}
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: cluster-version-operator
+      operation: Update
+      time: "2023-05-02T12:18:33Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:30:01Z"
+    name: cluster-monitoring-operator
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: config.openshift.io/v1
+      kind: ClusterVersion
+      name: version
+      uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+    resourceVersion: "5384"
+    uid: 874c82c6-c52f-4cb1-be3f-f5f6ccb79f3b
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+      targetPort: https
+    selector:
+      app.kubernetes.io/name: cluster-monitoring-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-secret-name: kube-state-metrics-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:35:31Z"
+    labels:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/name: kube-state-metrics
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 2.6.0
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:clusterIP: {}
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: operator
+      operation: Update
+      time: "2023-05-02T12:35:31Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:35:31Z"
+    name: kube-state-metrics
+    namespace: openshift-monitoring
+    resourceVersion: "7193"
+    uid: 8895be1d-aa95-4e84-9c25-a8d3a7263179
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https-main
+      port: 8443
+      protocol: TCP
+      targetPort: https-main
+    - name: https-self
+      port: 9443
+      protocol: TCP
+      targetPort: https-self
+    selector:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/name: kube-state-metrics
+      app.kubernetes.io/part-of: openshift-monitoring
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-secret-name: node-exporter-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:35:31Z"
+    labels:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/name: node-exporter
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 1.4.0
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:clusterIP: {}
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":9100,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: operator
+      operation: Update
+      time: "2023-05-02T12:35:31Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:35:31Z"
+    name: node-exporter
+    namespace: openshift-monitoring
+    resourceVersion: "7191"
+    uid: 9ecb7b80-1c77-4151-82dd-e6131422f4f6
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 9100
+      protocol: TCP
+      targetPort: https
+    selector:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/name: node-exporter
+      app.kubernetes.io/part-of: openshift-monitoring
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-secret-name: openshift-state-metrics-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:35:31Z"
+    labels:
+      k8s-app: openshift-state-metrics
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+        f:spec:
+          f:clusterIP: {}
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: operator
+      operation: Update
+      time: "2023-05-02T12:35:31Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:35:32Z"
+    name: openshift-state-metrics
+    namespace: openshift-monitoring
+    resourceVersion: "7196"
+    uid: 32c9eee1-ded7-43a9-a162-1bb3f4bb85bf
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https-main
+      port: 8443
+      protocol: TCP
+      targetPort: https-main
+    - name: https-self
+      port: 9443
+      protocol: TCP
+      targetPort: https-self
+    selector:
+      app.kubernetes.io/component: exporter
+      app.kubernetes.io/name: openshift-state-metrics
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-secret-name: prometheus-adapter-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:35:31Z"
+    labels:
+      app.kubernetes.io/component: metrics-adapter
+      app.kubernetes.io/name: prometheus-adapter
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.10.0
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: operator
+      operation: Update
+      time: "2023-05-02T12:35:31Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:35:31Z"
+    name: prometheus-adapter
+    namespace: openshift-monitoring
+    resourceVersion: "7189"
+    uid: e99d9db4-3d87-48ae-986f-d9850e48335a
+  spec:
+    clusterIP: 172.30.247.47
+    clusterIPs:
+    - 172.30.247.47
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 443
+      protocol: TCP
+      targetPort: 6443
+    selector:
+      app.kubernetes.io/component: metrics-adapter
+      app.kubernetes.io/name: prometheus-adapter
+      app.kubernetes.io/part-of: openshift-monitoring
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-secret-name: prometheus-k8s-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:45:40Z"
+    labels:
+      app.kubernetes.io/component: prometheus
+      app.kubernetes.io/instance: k8s
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 2.39.1
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":9091,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9092,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:sessionAffinityConfig:
+            .: {}
+            f:clientIP:
+              .: {}
+              f:timeoutSeconds: {}
+          f:type: {}
+      manager: operator
+      operation: Update
+      time: "2023-05-02T12:45:40Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:45:40Z"
+    name: prometheus-k8s
+    namespace: openshift-monitoring
+    resourceVersion: "15989"
+    uid: 144c34f5-048a-4502-b6a4-4d1adb642d74
+  spec:
+    clusterIP: 172.30.65.195
+    clusterIPs:
+    - 172.30.65.195
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: web
+      port: 9091
+      protocol: TCP
+      targetPort: web
+    - name: metrics
+      port: 9092
+      protocol: TCP
+      targetPort: metrics
+    selector:
+      app.kubernetes.io/component: prometheus
+      app.kubernetes.io/instance: k8s
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/part-of: openshift-monitoring
+    sessionAffinity: ClientIP
+    sessionAffinityConfig:
+      clientIP:
+        timeoutSeconds: 10800
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-secret-name: prometheus-k8s-thanos-sidecar-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:45:40Z"
+    labels:
+      app.kubernetes.io/component: thanos-sidecar
+      app.kubernetes.io/instance: k8s
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 2.39.1
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:clusterIP: {}
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":10902,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: operator
+      operation: Update
+      time: "2023-05-02T12:45:40Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:45:40Z"
+    name: prometheus-k8s-thanos-sidecar
+    namespace: openshift-monitoring
+    resourceVersion: "15982"
+    uid: 156f7d8b-17aa-41f7-8c63-a278f8b1aaae
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: thanos-proxy
+      port: 10902
+      protocol: TCP
+      targetPort: thanos-proxy
+    selector:
+      app.kubernetes.io/component: prometheus
+      app.kubernetes.io/instance: k8s
+      app.kubernetes.io/name: prometheus
+      app.kubernetes.io/part-of: openshift-monitoring
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-05-02T12:45:47Z"
+    labels:
+      operated-prometheus: "true"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:operated-prometheus: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"c9833c50-a55f-4783-8fa2-c1607fe46161"}: {}
+        f:spec:
+          f:clusterIP: {}
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":9090,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":10901,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: PrometheusOperator
+      operation: Update
+      time: "2023-05-02T12:45:47Z"
+    name: prometheus-operated
+    namespace: openshift-monitoring
+    ownerReferences:
+    - apiVersion: monitoring.coreos.com/v1
+      kind: Prometheus
+      name: k8s
+      uid: c9833c50-a55f-4783-8fa2-c1607fe46161
+    resourceVersion: "16067"
+    uid: 447ccdfe-1b1e-493d-a4b4-ecaeeb1692c7
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: web
+      port: 9090
+      protocol: TCP
+      targetPort: web
+    - name: grpc
+      port: 10901
+      protocol: TCP
+      targetPort: grpc
+    selector:
+      app.kubernetes.io/name: prometheus
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-secret-name: prometheus-operator-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:35:24Z"
+    labels:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: prometheus-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.60.1
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:clusterIP: {}
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: operator
+      operation: Update
+      time: "2023-05-02T12:35:24Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:35:24Z"
+    name: prometheus-operator
+    namespace: openshift-monitoring
+    resourceVersion: "7009"
+    uid: 0c5c3bd7-e0de-41dc-ab18-fb63f7d74b60
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+      targetPort: https
+    selector:
+      app.kubernetes.io/component: controller
+      app.kubernetes.io/name: prometheus-operator
+      app.kubernetes.io/part-of: openshift-monitoring
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-secret-name: prometheus-operator-admission-webhook-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:31:43Z"
+    labels:
+      app.kubernetes.io/name: prometheus-operator-admission-webhook
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.60.1
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: operator
+      operation: Update
+      time: "2023-05-02T12:31:43Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:31:44Z"
+    name: prometheus-operator-admission-webhook
+    namespace: openshift-monitoring
+    resourceVersion: "5931"
+    uid: 9653bc55-41be-4d36-b99f-99be2a09b58a
+  spec:
+    clusterIP: 172.30.70.9
+    clusterIPs:
+    - 172.30.70.9
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+      targetPort: https
+    selector:
+      app.kubernetes.io/name: prometheus-operator-admission-webhook
+      app.kubernetes.io/part-of: openshift-monitoring
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-secret-name: telemeter-client-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:40:34Z"
+    labels:
+      k8s-app: telemeter-client
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:k8s-app: {}
+        f:spec:
+          f:clusterIP: {}
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: operator
+      operation: Update
+      time: "2023-05-02T12:40:34Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:40:34Z"
+    name: telemeter-client
+    namespace: openshift-monitoring
+    resourceVersion: "13159"
+    uid: a41d6534-f071-4cce-a87e-438bd728ad44
+  spec:
+    clusterIP: None
+    clusterIPs:
+    - None
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+      targetPort: https
+    selector:
+      app.kubernetes.io/component: telemetry-metrics-collector
+      app.kubernetes.io/name: telemeter-client
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.alpha.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+      service.beta.openshift.io/serving-cert-secret-name: thanos-querier-tls
+      service.beta.openshift.io/serving-cert-signed-by: openshift-service-serving-signer@1683030520
+    creationTimestamp: "2023-05-02T12:35:31Z"
+    labels:
+      app.kubernetes.io/component: query-layer
+      app.kubernetes.io/instance: thanos-querier
+      app.kubernetes.io/name: thanos-query
+      app.kubernetes.io/part-of: openshift-monitoring
+      app.kubernetes.io/version: 0.28.1
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/component: {}
+            f:app.kubernetes.io/instance: {}
+            f:app.kubernetes.io/name: {}
+            f:app.kubernetes.io/part-of: {}
+            f:app.kubernetes.io/version: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":9091,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9092,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9093,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+            k:{"port":9094,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: operator
+      operation: Update
+      time: "2023-05-02T12:35:31Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            f:service.alpha.openshift.io/serving-cert-signed-by: {}
+            f:service.beta.openshift.io/serving-cert-signed-by: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:35:31Z"
+    name: thanos-querier
+    namespace: openshift-monitoring
+    resourceVersion: "7187"
+    uid: c3967ec8-279a-4bd2-ada8-05748ddecc9c
+  spec:
+    clusterIP: 172.30.157.73
+    clusterIPs:
+    - 172.30.157.73
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: web
+      port: 9091
+      protocol: TCP
+      targetPort: web
+    - name: tenancy
+      port: 9092
+      protocol: TCP
+      targetPort: tenancy
+    - name: tenancy-rules
+      port: 9093
+      protocol: TCP
+      targetPort: tenancy-rules
+    - name: metrics
+      port: 9094
+      protocol: TCP
+      targetPort: metrics
+    selector:
+      app.kubernetes.io/component: query-layer
+      app.kubernetes.io/instance: thanos-querier
+      app.kubernetes.io/name: thanos-query
+      app.kubernetes.io/part-of: openshift-monitoring
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "684657"

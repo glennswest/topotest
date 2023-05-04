@@ -1,0 +1,6839 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:35Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: 1136b8a6.topolvm.io
+    namespace: openshift-storage
+    resourceVersion: "599144"
+    uid: 47870e1f-cc28-43f8-ab37-3c53f3f42349
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:35Z"
+  message: lvms-operator-65cb4bdf95-8qw5z_aafff7e9-210e-4ea8-a102-a75f5d472359 became
+    leader
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: manager
+      operation: Update
+      time: "2023-05-04T14:35:35Z"
+    name: 1136b8a6.topolvm.io.175bf76d841e23c9
+    namespace: openshift-storage
+    resourceVersion: "599145"
+    uid: 64ec1b29-8709-43ba-a68b-08fb9e8840b7
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: lvms-operator-65cb4bdf95-8qw5z_aafff7e9-210e-4ea8-a102-a75f5d472359
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:33Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: 1136b8a6.topolvm.io
+    namespace: openshift-storage
+    resourceVersion: "631732"
+    uid: 47870e1f-cc28-43f8-ab37-3c53f3f42349
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:33Z"
+  message: lvms-operator-65cb4bdf95-8qw5z_f7804fef-be0c-4bca-ae28-9c7c74c85318 became
+    leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: manager
+      operation: Update
+      time: "2023-05-04T16:33:33Z"
+    name: 1136b8a6.topolvm.io.175bfddd6adb1507
+    namespace: openshift-storage
+    resourceVersion: "631733"
+    uid: b043afcd-7e3e-4d4d-9182-7aebdd3cd3b3
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: lvms-operator-65cb4bdf95-8qw5z_f7804fef-be0c-4bca-ae28-9c7c74c85318
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:42Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Endpoints
+    name: lvms-node-metrics
+    namespace: openshift-storage
+    resourceVersion: "599046"
+    uid: 6a5a53d5-a8d3-493b-85fc-93c01f3e64c0
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:42Z"
+  message: 'Failed to update endpoint openshift-storage/lvms-node-metrics: Operation
+    cannot be fulfilled on endpoints "lvms-node-metrics": the object has been modified;
+    please apply your changes to the latest version and try again'
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T14:35:43Z"
+    name: lvms-node-metrics.175bf76f25363104
+    namespace: openshift-storage
+    resourceVersion: "599203"
+    uid: 0e3053d1-6b9c-4598-8c43-201bd7bdced5
+  reason: FailedToUpdateEndpoint
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: endpoint-controller
+  type: Warning
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-05-04T14:35:15.853043Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598936"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-storage/lvms-operator-65cb4bdf95-8qw5z
+    to node
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:15Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-05-04T14:35:15Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf768f17b1735
+    namespace: openshift-storage
+    resourceVersion: "598943"
+    uid: e53a10ad-c4d4-4929-9947-c500217cc896
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-node
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:16Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598948"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:16Z"
+  message: Add eth0 [10.128.1.212/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T14:35:16Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf7693066a958
+    namespace: openshift-storage
+    resourceVersion: "598962"
+    uid: f5518ad5-970a-4fdf-a336-5a89ab7830b5
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:17Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{manager}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598940"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:17Z"
+  message: Pulling image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:35:17Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf7693950e477
+    namespace: openshift-storage
+    resourceVersion: "598969"
+    uid: 41234960-2a37-44e4-bd13-0b92c1176c5e
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{manager}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598940"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:32Z"
+  message: Successfully pulled image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+    in 15.426231491s
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:35:32Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf76cd0cb833f
+    namespace: openshift-storage
+    resourceVersion: "599125"
+    uid: a754fcc4-3cff-4855-a034-cc2fe2fb62df
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{manager}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598940"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:32Z"
+  message: Created container manager
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:35:32Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf76ceda6ed43
+    namespace: openshift-storage
+    resourceVersion: "599130"
+    uid: 10d04d9a-d39b-4e12-af21-1af32f8dfa3e
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{manager}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598940"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:33Z"
+  message: Started container manager
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:35:33Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf76cf121ae5d
+    namespace: openshift-storage
+    resourceVersion: "599131"
+    uid: e29220a9-7bfa-47c9-aa12-50999799b982
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598940"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:33Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:422e4fbe1ed81c79084f43a826dc0674510a7ff578e62b4ddda119ed3266d0b6"
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:35:33Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf76cf161b4e2
+    namespace: openshift-storage
+    resourceVersion: "599132"
+    uid: 20ff8660-62a8-4b58-b49e-41de976a6b61
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:40Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598940"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:40Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:422e4fbe1ed81c79084f43a826dc0674510a7ff578e62b4ddda119ed3266d0b6"
+    in 7.709942639s
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:35:40Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf76ebcee6e56
+    namespace: openshift-storage
+    resourceVersion: "599164"
+    uid: 5a20de96-12b6-452a-b207-c4a69b8a6977
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:41Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598940"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:41Z"
+  message: Created container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:35:41Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf76ed2801876
+    namespace: openshift-storage
+    resourceVersion: "599167"
+    uid: 74e8f248-83c7-42fe-9873-226e8b4a1337
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:41Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598940"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:41Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:35:41Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf76ed5913389
+    namespace: openshift-storage
+    resourceVersion: "599168"
+    uid: 3d60577c-a22b-48fe-9ebe-5ab274113b06
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:41Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{metricsexporter}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598940"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:41Z"
+  message: Container image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:35:41Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf76ed59dbc34
+    namespace: openshift-storage
+    resourceVersion: "599169"
+    uid: 96b3f347-dfd9-44a7-b257-2be5b15ab959
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:41Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{metricsexporter}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598940"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:41Z"
+  message: Created container metricsexporter
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:35:41Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf76eed06d3e1
+    namespace: openshift-storage
+    resourceVersion: "599173"
+    uid: 84451e88-4097-4557-9f96-8b0c421075b0
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:41Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{metricsexporter}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "598940"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:41Z"
+  message: Started container metricsexporter
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:35:41Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bf76eef78141a
+    namespace: openshift-storage
+    resourceVersion: "599175"
+    uid: e6311ab3-f2c7-416c-b0aa-d3a1ab0542b6
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:06Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "599178"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:06Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_lvms-operator-65cb4bdf95-8qw5z_openshift-storage_ac278bc0-a66d-4940-8429-a0023293be29_0(5fec86ef2deddbe719e2673407f4a417535efd163a0d0c8f58c10cf1e33ab3f4):
+    error adding pod openshift-storage_lvms-operator-65cb4bdf95-8qw5z to CNI network
+    "multus-cni-network": plugin type="multus" name="multus-cni-network" failed (add):
+    Multus: [openshift-storage/lvms-operator-65cb4bdf95-8qw5z/ac278bc0-a66d-4940-8429-a0023293be29]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:25Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfdbb26bb11ee
+    namespace: openshift-storage
+    resourceVersion: "631586"
+    uid: 67f7c41e-a002-4eac-9ea5-1bc9a21ee1d4
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:21Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "629141"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:21Z"
+  message: Add eth0 [10.128.1.212/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:21Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfdbed04a1fde
+    namespace: openshift-storage
+    resourceVersion: "630193"
+    uid: 842f4bc4-83f7-496b-83e2-ec8e73d1de51
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:22Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{manager}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "599178"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:22Z"
+  message: Pulling image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:38Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfdbefb6f908c
+    namespace: openshift-storage
+    resourceVersion: "631830"
+    uid: e77ffefb-1ec1-4d98-88e0-a3c6ff0292b7
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:43Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{manager}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "599178"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:43Z"
+  message: Successfully pulled image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+    in 1m20.641327568s
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:56Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfdd1c208c1c0
+    namespace: openshift-storage
+    resourceVersion: "632528"
+    uid: b4d571d1-d2d0-4b6f-992e-8e494ab5229e
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{manager}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "599178"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:10Z"
+  message: Created container manager
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:05Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfdd824acc30f
+    namespace: openshift-storage
+    resourceVersion: "632605"
+    uid: 3ae5eea1-d290-4193-a802-ac595354f1bf
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{manager}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "599178"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:10Z"
+  message: Started container manager
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:07Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfdd8274b2aea
+    namespace: openshift-storage
+    resourceVersion: "632612"
+    uid: 511f7878-79bc-4797-bc16-27dad5cbcfa9
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "599178"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:10Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:422e4fbe1ed81c79084f43a826dc0674510a7ff578e62b4ddda119ed3266d0b6"
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:07Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfdd831a61471
+    namespace: openshift-storage
+    resourceVersion: "632617"
+    uid: 72c5f2a1-59ae-4b3d-88a3-3d9996ed219f
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "599178"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:27Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-kube-rbac-proxy@sha256:422e4fbe1ed81c79084f43a826dc0674510a7ff578e62b4ddda119ed3266d0b6"
+    in 17.057738213s
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:23Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfddc2a5ec270
+    namespace: openshift-storage
+    resourceVersion: "632754"
+    uid: dcaf9db3-4161-4e63-a75a-5f73b54b108d
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "599178"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:32Z"
+  message: Created container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:28Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfddd260a9c2f
+    namespace: openshift-storage
+    resourceVersion: "632787"
+    uid: d8012250-8ee6-4475-81ec-848337789db6
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "599178"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:32Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:28Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfddd3805d46e
+    namespace: openshift-storage
+    resourceVersion: "632789"
+    uid: 324d0421-215f-47a4-9d4b-5a2337c57280
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{metricsexporter}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "599178"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:32Z"
+  message: Container image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:28Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfddd38105cd9
+    namespace: openshift-storage
+    resourceVersion: "632790"
+    uid: da4d53f1-31ff-4e5b-81d7-0e293aeb15d4
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{metricsexporter}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "599178"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:32Z"
+  message: Created container metricsexporter
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:29Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfddd5cb7acc8
+    namespace: openshift-storage
+    resourceVersion: "632796"
+    uid: d6021d0e-b230-46a0-a6f7-74fc0fb56dbc
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{metricsexporter}
+    kind: Pod
+    name: lvms-operator-65cb4bdf95-8qw5z
+    namespace: openshift-storage
+    resourceVersion: "599178"
+    uid: ac278bc0-a66d-4940-8429-a0023293be29
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:33Z"
+  message: Started container metricsexporter
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:29Z"
+    name: lvms-operator-65cb4bdf95-8qw5z.175bfddd650f58b6
+    namespace: openshift-storage
+    resourceVersion: "632799"
+    uid: db4b5359-076b-4edf-acdf-28f4aaf5d9dd
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:15Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: lvms-operator-65cb4bdf95
+    namespace: openshift-storage
+    resourceVersion: "598934"
+    uid: d1805ee9-8dae-4fc8-a270-dbc8cab82626
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:15Z"
+  message: 'Created pod: lvms-operator-65cb4bdf95-8qw5z'
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T14:35:15Z"
+    name: lvms-operator-65cb4bdf95.175bf768ef92bd66
+    namespace: openshift-storage
+    resourceVersion: "598938"
+    uid: 130c4919-c256-4cf1-aeba-5a75a0807e72
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:42Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Endpoints
+    name: lvms-operator-metrics-service
+    namespace: openshift-storage
+    resourceVersion: "599011"
+    uid: d5d83b16-eb97-47cf-be32-6475f8fd5c07
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:42Z"
+  message: 'Failed to update endpoint openshift-storage/lvms-operator-metrics-service:
+    Operation cannot be fulfilled on endpoints "lvms-operator-metrics-service": the
+    object has been modified; please apply your changes to the latest version and
+    try again'
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T14:35:43Z"
+    name: lvms-operator-metrics-service.175bf76f253cc833
+    namespace: openshift-storage
+    resourceVersion: "599204"
+    uid: 2f19f929-6ee5-4357-b3db-363840b01408
+  reason: FailedToUpdateEndpoint
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: endpoint-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:42Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Endpoints
+    name: lvms-operator-service
+    namespace: openshift-storage
+    resourceVersion: "598900"
+    uid: 1f975f6b-0382-4fbb-9610-c846a8f0372e
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:42Z"
+  message: 'Failed to update endpoint openshift-storage/lvms-operator-service: Operation
+    cannot be fulfilled on endpoints "lvms-operator-service": the object has been
+    modified; please apply your changes to the latest version and try again'
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T14:35:42Z"
+    name: lvms-operator-service.175bf76f253511c2
+    namespace: openshift-storage
+    resourceVersion: "599201"
+    uid: 5dd6d1f5-8329-4032-a0a0-8ac4297b0394
+  reason: FailedToUpdateEndpoint
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: endpoint-controller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:15Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: lvms-operator
+    namespace: openshift-storage
+    resourceVersion: "598912"
+    uid: 866416c3-387b-4327-8f6f-b99f3bc375b6
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:15Z"
+  message: Scaled up replica set lvms-operator-65cb4bdf95 to 1
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T14:35:15Z"
+    name: lvms-operator.175bf768ec4dcf3d
+    namespace: openshift-storage
+    resourceVersion: "598937"
+    uid: ba67ba65-1220-4bb2-a857-29574c865cc9
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:34:58Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "598596"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T14:34:58Z"
+  message: requirements not yet checked
+  metadata:
+    creationTimestamp: "2023-05-04T14:34:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T14:34:58Z"
+    name: lvms-operator.v4.12.1.175bf765015da115
+    namespace: openshift-storage
+    resourceVersion: "598619"
+    uid: 8aa020fc-3c39-4905-b7f2-d6e560345906
+  reason: RequirementsUnknown
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:34:59Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "598612"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T14:34:59Z"
+  message: one or more requirements couldn't be found
+  metadata:
+    creationTimestamp: "2023-05-04T14:34:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T14:34:59Z"
+    name: lvms-operator.v4.12.1.175bf7650659b4b0
+    namespace: openshift-storage
+    resourceVersion: "598626"
+    uid: 3cc81f5d-bda6-4ea3-8ca4-c96fc5617944
+  reason: RequirementsNotMet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:11Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "598627"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:11Z"
+  message: all requirements found, attempting install
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T14:35:11Z"
+    name: lvms-operator.v4.12.1.175bf767fe7a75dc
+    namespace: openshift-storage
+    resourceVersion: "598871"
+    uid: 573c71f0-35d0-4ded-91d2-40934624fa22
+  reason: AllRequirementsMet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:14Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "598864"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:14Z"
+  message: waiting for install components to report healthy
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:14Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T14:35:14Z"
+    name: lvms-operator.v4.12.1.175bf768b29606f7
+    namespace: openshift-storage
+    resourceVersion: "598917"
+    uid: 070d6306-aaaa-4a5f-8439-13bccb5f9a5a
+  reason: InstallSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:15Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "598918"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:15Z"
+  message: 'installing: waiting for deployment lvms-operator to become ready: waiting
+    for spec update of deployment "lvms-operator" to be observed...'
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T14:35:15Z"
+    name: lvms-operator.v4.12.1.175bf768dc0b7d68
+    namespace: openshift-storage
+    resourceVersion: "598941"
+    uid: cd769dc3-6438-4baa-b99f-a1e0ec849547
+  reason: InstallWaiting
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:16Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "598933"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:16Z"
+  message: 'installing: waiting for deployment lvms-operator to become ready: deployment
+    "lvms-operator" not available: Deployment does not have minimum availability.'
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T14:35:16Z"
+    name: lvms-operator.v4.12.1.175bf7690268e0ec
+    namespace: openshift-storage
+    resourceVersion: "598958"
+    uid: 2edc70a4-7dd8-46e3-834d-cb91d550110c
+  reason: InstallWaiting
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:35:44Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "598955"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T14:35:44Z"
+  message: install strategy completed with no errors
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T14:35:44Z"
+    name: lvms-operator.v4.12.1.175bf76f95e0aaef
+    namespace: openshift-storage
+    resourceVersion: "599208"
+    uid: 990d8a00-5d0c-45a2-a7a6-e973267e8b10
+  reason: InstallSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:23Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "599209"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:24Z"
+  message: 'installing: waiting for deployment lvms-operator to become ready: deployment
+    "lvms-operator" not available: Deployment does not have minimum availability.'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T16:33:24Z"
+    name: lvms-operator.v4.12.1.175bfddb3a6140d7
+    namespace: openshift-storage
+    resourceVersion: "631572"
+    uid: 6ddb9f6a-6a90-4ad1-9833-7f06bd439f82
+  reason: ComponentUnhealthy
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:25Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "631552"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:25Z"
+  message: 'installing: waiting for deployment lvms-operator to become ready: deployment
+    "lvms-operator" not available: Deployment does not have minimum availability.'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T16:33:25Z"
+    name: lvms-operator.v4.12.1.175bfddb90e043c6
+    namespace: openshift-storage
+    resourceVersion: "631582"
+    uid: 5fcb0759-5fa1-4b86-a028-1bcb1c39ee76
+  reason: NeedsReinstall
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:25Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "631584"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:25Z"
+  message: all requirements found, attempting install
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T16:33:25Z"
+    name: lvms-operator.v4.12.1.175bfddba7a8a73a
+    namespace: openshift-storage
+    resourceVersion: "631588"
+    uid: 6c988eab-7290-47ec-97f8-284128cabd50
+  reason: AllRequirementsMet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:30Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "631589"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:30Z"
+  message: waiting for install components to report healthy
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T16:33:30Z"
+    name: lvms-operator.v4.12.1.175bfddcd69baaf4
+    namespace: openshift-storage
+    resourceVersion: "631676"
+    uid: 5ee227c5-a825-4ad2-85b7-8a1793ce3c1a
+  reason: InstallSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:31Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "631677"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:31Z"
+  message: 'installing: waiting for deployment lvms-operator to become ready: deployment
+    "lvms-operator" not available: Deployment does not have minimum availability.'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T16:33:31Z"
+    name: lvms-operator.v4.12.1.175bfddd0c2c2053
+    namespace: openshift-storage
+    resourceVersion: "631691"
+    uid: 1e89e601-585c-4ba2-98d1-da78ce06e6c4
+  reason: InstallWaiting
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:35Z"
+  involvedObject:
+    apiVersion: operators.coreos.com/v1alpha1
+    kind: ClusterServiceVersion
+    name: lvms-operator.v4.12.1
+    namespace: openshift-storage
+    resourceVersion: "631693"
+    uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:35Z"
+  message: install strategy completed with no errors
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T16:33:35Z"
+    name: lvms-operator.v4.12.1.175bfddde500ec60
+    namespace: openshift-storage
+    resourceVersion: "631799"
+    uid: cca80208-d41e-4f1d-85cc-4b1c8d2e58f3
+  reason: InstallSucceeded
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: operator-lifecycle-manager
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-05-04T14:46:24.992486Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601686"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-storage/topolvm-controller-5496f5d4f4-ll8f6
+    to node
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:24Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-05-04T14:46:24Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf804bd4cb496
+    namespace: openshift-storage
+    resourceVersion: "601693"
+    uid: d2d8bebc-c4b3-472a-95eb-6849b1ae1ae2
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-node
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:26Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601697"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:26Z"
+  message: Add eth0 [10.128.1.216/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T14:46:26Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf804fddec5fe
+    namespace: openshift-storage
+    resourceVersion: "601719"
+    uid: db85e795-2e59-4ea8-a491-e1925b5f40b7
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:26Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{self-signed-cert-generator}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:26Z"
+  message: Container image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:26Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80502739c17
+    namespace: openshift-storage
+    resourceVersion: "601721"
+    uid: 097fe59d-1388-4788-bb5c-2dfd8370cefd
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:26Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{self-signed-cert-generator}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:26Z"
+  message: Created container self-signed-cert-generator
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:26Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf805309f0ce6
+    namespace: openshift-storage
+    resourceVersion: "601725"
+    uid: 4a4f9f34-1fbf-4870-9c6c-33ba9543a6d7
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{self-signed-cert-generator}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:27Z"
+  message: Started container self-signed-cert-generator
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:27Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf8053a12e5fc
+    namespace: openshift-storage
+    resourceVersion: "601726"
+    uid: 11b9321f-0ace-420d-9d43-c6bb46725ff2
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-controller}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:29Z"
+  message: Pulling image "registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59"
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:29Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf805cac474ef
+    namespace: openshift-storage
+    resourceVersion: "601746"
+    uid: 82403d3b-fd69-4491-94a1-4e33b1ec1ca9
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:49Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-controller}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:49Z"
+  message: Successfully pulled image "registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59"
+    in 20.140637017s
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:49Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80a7b3e604e
+    namespace: openshift-storage
+    resourceVersion: "601818"
+    uid: 6a9cfdb5-4506-4109-91da-9cd58df8e4cc
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:50Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-controller}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:50Z"
+  message: Created container topolvm-controller
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:50Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80abc2fd0ae
+    namespace: openshift-storage
+    resourceVersion: "601821"
+    uid: 5f6615f1-ee6f-4029-853f-ef9826b9b753
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:50Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-controller}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:50Z"
+  message: Started container topolvm-controller
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:50Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80abdfcbabe
+    namespace: openshift-storage
+    resourceVersion: "601822"
+    uid: b26f004d-767f-470b-9f32-21362013a6fd
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:50Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-provisioner}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:50Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-csi-external-provisioner@sha256:33617f49d30c6752e078e76bebcbf3f4384fb03286f2ef4d6ca9d2e6464ada43"
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:50Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:50Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80abe065c94
+    namespace: openshift-storage
+    resourceVersion: "601823"
+    uid: 6d1c122a-7555-43d8-b1a9-edfec1a85e72
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-provisioner}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:01Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-csi-external-provisioner@sha256:33617f49d30c6752e078e76bebcbf3f4384fb03286f2ef4d6ca9d2e6464ada43"
+    in 10.569604442s
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:01Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80d3405fd02
+    namespace: openshift-storage
+    resourceVersion: "601870"
+    uid: fed263bc-d40b-4f4e-abcb-4006ce6b71fc
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-provisioner}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:02Z"
+  message: Created container csi-provisioner
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:02Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80d69ce9e01
+    namespace: openshift-storage
+    resourceVersion: "601875"
+    uid: 31279c6c-191a-4718-93ee-980570bda081
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-provisioner}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:02Z"
+  message: Started container csi-provisioner
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:02Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80d6b5f4bca
+    namespace: openshift-storage
+    resourceVersion: "601876"
+    uid: 35a04af7-c0d1-409e-9b3a-e5556c0ba79d
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-resizer}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:02Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-csi-external-resizer@sha256:b1f2103c4ddf702b2a135e68420af3e434c8b135735dbd33bf66afada0036976"
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:02Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80d6b69bc1a
+    namespace: openshift-storage
+    resourceVersion: "601877"
+    uid: df59eb28-1d2b-4b22-9ccb-1785bf5238a0
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:11Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-resizer}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:11Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-csi-external-resizer@sha256:b1f2103c4ddf702b2a135e68420af3e434c8b135735dbd33bf66afada0036976"
+    in 9.377562501s
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:11Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80f9a5c2c09
+    namespace: openshift-storage
+    resourceVersion: "601935"
+    uid: 564b909b-baea-4320-bbbd-4f3e83f5bee2
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:12Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-resizer}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:12Z"
+  message: Created container csi-resizer
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:12Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80fc4a7e671
+    namespace: openshift-storage
+    resourceVersion: "601941"
+    uid: 9c94cdc3-5ed9-4198-bbdc-2db5ce675662
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:12Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-resizer}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:12Z"
+  message: Started container csi-resizer
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:12Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80fc88a1705
+    namespace: openshift-storage
+    resourceVersion: "601943"
+    uid: fec65a34-f1f5-43d5-9f47-77e121333344
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:12Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:12Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-csi-livenessprobe@sha256:d4228c6e797ec6b2d37e599c19c715b02f6cb955b2a7fb493c56844f4c75e687"
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:12Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:12Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf80fc894ebe0
+    namespace: openshift-storage
+    resourceVersion: "601944"
+    uid: a25035c5-277f-4350-be57-5db7cd3afc73
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:20Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:20Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-csi-livenessprobe@sha256:d4228c6e797ec6b2d37e599c19c715b02f6cb955b2a7fb493c56844f4c75e687"
+    in 7.833223237s
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:20Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:20Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf8119b7a99e5
+    namespace: openshift-storage
+    resourceVersion: "601986"
+    uid: b37c8d21-a7a7-4a29-a5d0-b1f879191b0c
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:21Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:21Z"
+  message: Created container liveness-probe
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:21Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf811ca646c9d
+    namespace: openshift-storage
+    resourceVersion: "601989"
+    uid: 7cb2898c-99d6-4219-a665-f79241ab22fc
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:21Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:21Z"
+  message: Started container liveness-probe
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:21Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf811cd271ecd
+    namespace: openshift-storage
+    resourceVersion: "601990"
+    uid: 61c70d85-e36d-4358-ba42-dab60b71cf00
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:21Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-snapshotter}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:21Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel8@sha256:f1955371a5f88d8984af4445f43864dad8cc315e714f40984ebdf973185ade92"
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:21Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf811cd32fcd8
+    namespace: openshift-storage
+    resourceVersion: "601991"
+    uid: 703dcf06-b625-4e0b-9da7-8b3cf9b3942f
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-snapshotter}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:29Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel8@sha256:f1955371a5f88d8984af4445f43864dad8cc315e714f40984ebdf973185ade92"
+    in 8.676980122s
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:29Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf813d2636408
+    namespace: openshift-storage
+    resourceVersion: "602032"
+    uid: c37f02f8-3b7f-4835-b368-68e8b82bba79
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-snapshotter}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:30Z"
+  message: Created container csi-snapshotter
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:30Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf814184f7c04
+    namespace: openshift-storage
+    resourceVersion: "602042"
+    uid: fc577c69-6315-440e-ac0c-8c8f82de3b42
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-snapshotter}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "601691"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:30Z"
+  message: Started container csi-snapshotter
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:30Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bf8141b1e80df
+    namespace: openshift-storage
+    resourceVersion: "602043"
+    uid: c9c734b8-bcc7-4d4d-b931-4249756ef98d
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:05Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_topolvm-controller-5496f5d4f4-ll8f6_openshift-storage_5513840e-b1cc-49be-a732-bdae9d465109_0(8cd4370bdfc1f9e0c3c7b1b891a0ab2446db998b6f899b51d2114a2cbfb62bc4):
+    error adding pod openshift-storage_topolvm-controller-5496f5d4f4-ll8f6 to CNI
+    network "multus-cni-network": plugin type="multus" name="multus-cni-network" failed
+    (add): Multus: [openshift-storage/topolvm-controller-5496f5d4f4-ll8f6/5513840e-b1cc-49be-a732-bdae9d465109]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:25Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfdbb2651487e
+    namespace: openshift-storage
+    resourceVersion: "631581"
+    uid: 133bb418-cd5b-4890-839d-4399102e999e
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:28Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "629190"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:28Z"
+  message: Add eth0 [10.128.1.216/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:28Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfdc06e6ad725
+    namespace: openshift-storage
+    resourceVersion: "630277"
+    uid: 47d3c09e-95f8-41c3-a7ac-31032c556606
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:29Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{self-signed-cert-generator}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:29Z"
+  message: Pulling image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:56Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfdc088d4c8d8
+    namespace: openshift-storage
+    resourceVersion: "632006"
+    uid: 479f5d31-ed55-49fd-b5f1-3ddba9b806d4
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:43Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{self-signed-cert-generator}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:43Z"
+  message: Successfully pulled image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+    in 1m13.941139891s
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:56Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfdd1c0114535
+    namespace: openshift-storage
+    resourceVersion: "632527"
+    uid: 49e2cc1f-eeea-4308-80db-0c553abff445
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{self-signed-cert-generator}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:10Z"
+  message: Created container self-signed-cert-generator
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:05Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfdd8190523c6
+    namespace: openshift-storage
+    resourceVersion: "632600"
+    uid: a4c540d6-6570-4184-b4b1-aaa436ba100d
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{self-signed-cert-generator}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:10Z"
+  message: Started container self-signed-cert-generator
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:06Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfdd824e0caef
+    namespace: openshift-storage
+    resourceVersion: "632611"
+    uid: 309c8555-5bb6-4590-98f4-c2311c958ffe
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:12Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-controller}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:12Z"
+  message: Pulling image "registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59"
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:10Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:10Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfdd8b759149e
+    namespace: openshift-storage
+    resourceVersion: "632643"
+    uid: 0137f540-e577-41d1-8209-cec6bb237fc0
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:26Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-controller}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:26Z"
+  message: Successfully pulled image "registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59"
+    in 13.741527268s
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:23Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfddbea685a62
+    namespace: openshift-storage
+    resourceVersion: "632751"
+    uid: 76b434ee-d963-4481-a81a-14728372de87
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-controller}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:31Z"
+  message: Created container topolvm-controller
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:26Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfddd0c504cd8
+    namespace: openshift-storage
+    resourceVersion: "632778"
+    uid: a839bf6b-be0f-49af-8ce3-e2920142e361
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-controller}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:31Z"
+  message: Started container topolvm-controller
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:27Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfddd11d8fb47
+    namespace: openshift-storage
+    resourceVersion: "632779"
+    uid: 1075da07-01ef-4e2b-b0e9-5173b120fb67
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-provisioner}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:31Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-csi-external-provisioner@sha256:33617f49d30c6752e078e76bebcbf3f4384fb03286f2ef4d6ca9d2e6464ada43"
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:27Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfddd120a1e21
+    namespace: openshift-storage
+    resourceVersion: "632780"
+    uid: 0f3bb39a-c1f1-40e3-97f3-3d34fdd19a69
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:47Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-provisioner}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:47Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-csi-external-provisioner@sha256:33617f49d30c6752e078e76bebcbf3f4384fb03286f2ef4d6ca9d2e6464ada43"
+    in 16.1133218s
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:32Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde0d278185d
+    namespace: openshift-storage
+    resourceVersion: "632822"
+    uid: d820c88e-a415-4317-9faf-d727cb77d10c
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-provisioner}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:48Z"
+  message: Created container csi-provisioner
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:32Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde0f8cc7aa2
+    namespace: openshift-storage
+    resourceVersion: "632824"
+    uid: bd4bf6cb-279e-4171-b03e-a002bcfad938
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-provisioner}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:48Z"
+  message: Started container csi-provisioner
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:32Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde0fcaeb957
+    namespace: openshift-storage
+    resourceVersion: "632827"
+    uid: 90faa9ee-f38e-4bfd-9ed4-e2b3530b4be3
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:48Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-resizer}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:48Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-csi-external-resizer@sha256:b1f2103c4ddf702b2a135e68420af3e434c8b135735dbd33bf66afada0036976"
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:33Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde0fcc25c11
+    namespace: openshift-storage
+    resourceVersion: "632828"
+    uid: 9be5268c-0d4b-4f3d-9c6f-30cd625f006d
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-resizer}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:59Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-csi-external-resizer@sha256:b1f2103c4ddf702b2a135e68420af3e434c8b135735dbd33bf66afada0036976"
+    in 10.867373213s
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:34Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde38481935e
+    namespace: openshift-storage
+    resourceVersion: "632844"
+    uid: ee790445-6bae-48f8-82cd-c2c5199ab2c5
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:34:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-resizer}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:34:00Z"
+  message: Created container csi-resizer
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:36Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde3cce22833
+    namespace: openshift-storage
+    resourceVersion: "632855"
+    uid: 330badbb-592d-4044-b440-58f23fd81fcc
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:34:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-resizer}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:34:00Z"
+  message: Started container csi-resizer
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:36Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde3d1b26017
+    namespace: openshift-storage
+    resourceVersion: "632859"
+    uid: 15af07ac-c14f-4e67-8283-09842f653fb2
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:34:00Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:34:00Z"
+  message: Container image "registry.redhat.io/openshift4/ose-csi-livenessprobe@sha256:d4228c6e797ec6b2d37e599c19c715b02f6cb955b2a7fb493c56844f4c75e687"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:36Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde3d1baa086
+    namespace: openshift-storage
+    resourceVersion: "632860"
+    uid: 3c947b17-c9c1-4e70-a128-992cb260827c
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:34:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:34:01Z"
+  message: Created container liveness-probe
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:38Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:38Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde3fec5dc44
+    namespace: openshift-storage
+    resourceVersion: "632876"
+    uid: 9252df59-c218-4f19-a609-8306fe23cfa7
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:34:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:34:01Z"
+  message: Started container liveness-probe
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:39Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde404da41b3
+    namespace: openshift-storage
+    resourceVersion: "632877"
+    uid: c288c99d-2672-450c-99bc-d86cf6bfd7b5
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:34:01Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-snapshotter}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:34:01Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel8@sha256:f1955371a5f88d8984af4445f43864dad8cc315e714f40984ebdf973185ade92"
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:39Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde404e5ea1f
+    namespace: openshift-storage
+    resourceVersion: "632878"
+    uid: dd7cd9ec-d331-4e42-83f3-7a8c2936a37f
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:34:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-snapshotter}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:34:13Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel8@sha256:f1955371a5f88d8984af4445f43864dad8cc315e714f40984ebdf973185ade92"
+    in 11.644624978s
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:36:15Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde6baf8f5a6
+    namespace: openshift-storage
+    resourceVersion: "633318"
+    uid: 3795afea-d8f2-45f7-8f3e-9a136713ba81
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:34:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-snapshotter}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:34:14Z"
+  message: Created container csi-snapshotter
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:36:15Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde6f157ac10
+    namespace: openshift-storage
+    resourceVersion: "633322"
+    uid: 1e6f7e15-f95d-4ac6-93e7-a53b34777684
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:34:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-snapshotter}
+    kind: Pod
+    name: topolvm-controller-5496f5d4f4-ll8f6
+    namespace: openshift-storage
+    resourceVersion: "602046"
+    uid: 5513840e-b1cc-49be-a732-bdae9d465109
+  kind: Event
+  lastTimestamp: "2023-05-04T16:34:14Z"
+  message: Started container csi-snapshotter
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:36:15Z"
+    name: topolvm-controller-5496f5d4f4-ll8f6.175bfde6fc71faa6
+    namespace: openshift-storage
+    resourceVersion: "633328"
+    uid: 14c7db42-ce1d-48ad-bd50-4f877a0d26a7
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:24Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: ReplicaSet
+    name: topolvm-controller-5496f5d4f4
+    namespace: openshift-storage
+    resourceVersion: "601681"
+    uid: e18692a4-5db2-459d-a9ce-22b7e6d0c778
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:24Z"
+  message: 'Created pod: topolvm-controller-5496f5d4f4-ll8f6'
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T14:46:24Z"
+    name: topolvm-controller-5496f5d4f4.175bf804b2099b8e
+    namespace: openshift-storage
+    resourceVersion: "601690"
+    uid: 1a96ea28-3b6c-476e-b0c8-61e4dc7ae0ea
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: replicaset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:24Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: topolvm-controller
+    namespace: openshift-storage
+    resourceVersion: "601679"
+    uid: 5757d3ba-d6dd-4b15-87d8-901cc5771b44
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:24Z"
+  message: Scaled up replica set topolvm-controller-5496f5d4f4 to 1
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T14:46:24Z"
+    name: topolvm-controller.175bf804a78ef6ce
+    namespace: openshift-storage
+    resourceVersion: "601685"
+    uid: be4b2f4d-9eb6-41bc-94f9-d58c978a34fa
+  reason: ScalingReplicaSet
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: deployment-controller
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-05-04T14:46:25.403618Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601702"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-storage/topolvm-node-7fjkf to node
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:25Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-05-04T14:46:25Z"
+    name: topolvm-node-7fjkf.175bf804d5ce1363
+    namespace: openshift-storage
+    resourceVersion: "601710"
+    uid: 81b78ee4-e180-467a-a056-237bf6c9277a
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-node
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:25Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:25Z"
+  message: 'MountVolume.SetUp failed for volume "lvmd-config-dir" : hostPath type
+    check failed: /etc/topolvm is not a directory'
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:25Z"
+    name: topolvm-node-7fjkf.175bf804eb2e3597
+    namespace: openshift-storage
+    resourceVersion: "601718"
+    uid: d3afed2e-5fbd-4faf-bdf6-2ce23021ff18
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:27Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601715"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:27Z"
+  message: Add eth0 [10.128.1.217/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T14:46:27Z"
+    name: topolvm-node-7fjkf.175bf8054b2f220c
+    namespace: openshift-storage
+    resourceVersion: "601730"
+    uid: feb88fd7-53bb-4871-a6c2-0d221b76a58b
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{file-checker}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:27Z"
+  message: Container image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:27Z"
+    name: topolvm-node-7fjkf.175bf80556a0e51d
+    namespace: openshift-storage
+    resourceVersion: "601735"
+    uid: 2fd135e0-dce1-4c29-98ae-257592257f37
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{file-checker}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:28Z"
+  message: Created container file-checker
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:28Z"
+    name: topolvm-node-7fjkf.175bf8057455b197
+    namespace: openshift-storage
+    resourceVersion: "601736"
+    uid: 25f9913f-bdad-4698-838d-51c13a6e4b9f
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{file-checker}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:28Z"
+  message: Started container file-checker
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:28Z"
+    name: topolvm-node-7fjkf.175bf80575be0eff
+    namespace: openshift-storage
+    resourceVersion: "601737"
+    uid: 1a345e20-5207-4513-aa59-ded218da4050
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:23Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{lvmd}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:23Z"
+  message: Container image "registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:23Z"
+    name: topolvm-node-7fjkf.175bf8127978d0a0
+    namespace: openshift-storage
+    resourceVersion: "602006"
+    uid: f9915401-70e7-4032-8d3e-4729dcf4982b
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{lvmd}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:24Z"
+  message: Created container lvmd
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:24Z"
+    name: topolvm-node-7fjkf.175bf812892274c9
+    namespace: openshift-storage
+    resourceVersion: "602009"
+    uid: 9d0eba71-e77b-49a0-b2d6-f7864e6e43e1
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{lvmd}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:24Z"
+  message: Started container lvmd
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:24Z"
+    name: topolvm-node-7fjkf.175bf8128f13eea2
+    namespace: openshift-storage
+    resourceVersion: "602010"
+    uid: ef59b991-fc83-4cd1-99e4-c3ed7d7fb8fa
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-node}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:24Z"
+  message: Container image "registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:24Z"
+    name: topolvm-node-7fjkf.175bf8128f1d6023
+    namespace: openshift-storage
+    resourceVersion: "602011"
+    uid: 7d1a44b6-d247-4e6a-acc9-b51b9fa60bfe
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-node}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:24Z"
+  message: Created container topolvm-node
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:24Z"
+    name: topolvm-node-7fjkf.175bf8129e9d5055
+    namespace: openshift-storage
+    resourceVersion: "602012"
+    uid: daceee20-9fe5-4bf6-84ba-0a8b82da421c
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-node}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:24Z"
+  message: Started container topolvm-node
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:24Z"
+    name: topolvm-node-7fjkf.175bf812a04683ca
+    namespace: openshift-storage
+    resourceVersion: "602013"
+    uid: e59ea688-cca0-409f-ae56-9bae28d8354e
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-registrar}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:24Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-csi-node-driver-registrar@sha256:eeed76c41bf3d2262a4d177241a315bc476421b8471cbba1555991aac8ef83b0"
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:24Z"
+    name: topolvm-node-7fjkf.175bf812a0527932
+    namespace: openshift-storage
+    resourceVersion: "602014"
+    uid: 11628035-fd48-4a4d-9553-ae46e88ef644
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-registrar}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:30Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-csi-node-driver-registrar@sha256:eeed76c41bf3d2262a4d177241a315bc476421b8471cbba1555991aac8ef83b0"
+    in 6.132593423s
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:30Z"
+    name: topolvm-node-7fjkf.175bf8140dda9907
+    namespace: openshift-storage
+    resourceVersion: "602038"
+    uid: 79a5dd85-e3a7-44cc-a9f9-b2c99b38a5dc
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-registrar}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:30Z"
+  message: Created container csi-registrar
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:30Z"
+    name: topolvm-node-7fjkf.175bf814168661ea
+    namespace: openshift-storage
+    resourceVersion: "602039"
+    uid: 053b545b-4f53-4970-8336-4e3c0bedf4e4
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-registrar}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:30Z"
+  message: Started container csi-registrar
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:30Z"
+    name: topolvm-node-7fjkf.175bf8141829a8ef
+    namespace: openshift-storage
+    resourceVersion: "602040"
+    uid: 2bfc6f23-463b-4335-8037-e4823ea40f79
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:30Z"
+  message: Container image "registry.redhat.io/openshift4/ose-csi-livenessprobe@sha256:d4228c6e797ec6b2d37e599c19c715b02f6cb955b2a7fb493c56844f4c75e687"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:30Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:30Z"
+    name: topolvm-node-7fjkf.175bf81418450a2c
+    namespace: openshift-storage
+    resourceVersion: "602041"
+    uid: 0c1b20c8-37d4-4705-89ac-70e1ed1d5c30
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:31Z"
+  message: Created container liveness-probe
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:31Z"
+    name: topolvm-node-7fjkf.175bf814241517bc
+    namespace: openshift-storage
+    resourceVersion: "602045"
+    uid: 55181ee7-07fd-4066-98cd-a13ba0c009fd
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:47:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "601707"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T14:47:31Z"
+  message: Started container liveness-probe
+  metadata:
+    creationTimestamp: "2023-05-04T14:47:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:47:31Z"
+    name: topolvm-node-7fjkf.175bf81430b9aa08
+    namespace: openshift-storage
+    resourceVersion: "602047"
+    uid: a2a52414-240c-4582-b269-d0e90c9b2d24
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:05Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_topolvm-node-7fjkf_openshift-storage_36d2b06d-73d9-44e2-a11a-e6d2f94f4d52_0(2a62585af6b4866748feda49001a19cb66eaa86b417698e97408ea0e2bd35c14):
+    error adding pod openshift-storage_topolvm-node-7fjkf to CNI network "multus-cni-network":
+    plugin type="multus" name="multus-cni-network" failed (add): Multus: [openshift-storage/topolvm-node-7fjkf/36d2b06d-73d9-44e2-a11a-e6d2f94f4d52]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:24Z"
+    name: topolvm-node-7fjkf.175bfdbb2365e99d
+    namespace: openshift-storage
+    resourceVersion: "631554"
+    uid: 69594473-7700-414f-9568-441d6e67a88e
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:24Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "629100"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:24Z"
+  message: Add eth0 [10.128.1.217/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:24Z"
+    name: topolvm-node-7fjkf.175bfdbf7ef67a8d
+    namespace: openshift-storage
+    resourceVersion: "630233"
+    uid: 42a8d3ac-e025-4525-b9c0-e3f3924a852c
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{file-checker}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:27Z"
+  message: Pulling image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:41Z"
+    name: topolvm-node-7fjkf.175bfdc04271702f
+    namespace: openshift-storage
+    resourceVersion: "631865"
+    uid: 8959c212-0356-4d30-85b5-932c529e4d23
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{file-checker}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:33Z"
+  message: Successfully pulled image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+    in 1m5.079838651s
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:51Z"
+    name: topolvm-node-7fjkf.175bfdcf69813a55
+    namespace: openshift-storage
+    resourceVersion: "632474"
+    uid: 8cd0c458-4edb-4807-bbf3-3fc87b5b0896
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{file-checker}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:02Z"
+  message: Created container file-checker
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:01Z"
+    name: topolvm-node-7fjkf.175bfdd63615d2cb
+    namespace: openshift-storage
+    resourceVersion: "632560"
+    uid: f78075d2-7591-4b68-b5de-86700622f6e2
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:02Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{file-checker}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:02Z"
+  message: Started container file-checker
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:01Z"
+    name: topolvm-node-7fjkf.175bfdd639699c24
+    namespace: openshift-storage
+    resourceVersion: "632564"
+    uid: fd21815c-66e6-470e-acee-1f87cc1cee4e
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:03Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{lvmd}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:03Z"
+  message: Pulling image "registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59"
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:01Z"
+    name: topolvm-node-7fjkf.175bfdd66ecdaa40
+    namespace: openshift-storage
+    resourceVersion: "632565"
+    uid: 0ca174c0-f740-4ef9-8e53-98c958e2fcea
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:26Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{lvmd}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:26Z"
+  message: Successfully pulled image "registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59"
+    in 23.543621895s
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:23Z"
+    name: topolvm-node-7fjkf.175bfddbea1d22a4
+    namespace: openshift-storage
+    resourceVersion: "632750"
+    uid: b408b260-5e87-4169-97c3-685d4fff5509
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{lvmd}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:31Z"
+  message: Created container lvmd
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:26Z"
+    name: topolvm-node-7fjkf.175bfddd0383248a
+    namespace: openshift-storage
+    resourceVersion: "632770"
+    uid: 5c7d5111-a3e5-4ef2-b011-f67c38d3375c
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{lvmd}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:31Z"
+  message: Started container lvmd
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:26Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:26Z"
+    name: topolvm-node-7fjkf.175bfddd0b9613f8
+    namespace: openshift-storage
+    resourceVersion: "632775"
+    uid: 36c544ee-714b-4b50-a04c-a5da87aecc35
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-node}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:31Z"
+  message: Container image "registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:27Z"
+    name: topolvm-node-7fjkf.175bfddd1238c8dc
+    namespace: openshift-storage
+    resourceVersion: "632783"
+    uid: b6876457-078b-4078-a5fb-4cb12579ba20
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-node}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:32Z"
+  message: Created container topolvm-node
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:28Z"
+    name: topolvm-node-7fjkf.175bfddd26f10dc6
+    namespace: openshift-storage
+    resourceVersion: "632788"
+    uid: 55202725-b6f6-4e7f-a385-ce0613c6c360
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{topolvm-node}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:32Z"
+  message: Started container topolvm-node
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:29Z"
+    name: topolvm-node-7fjkf.175bfddd38311659
+    namespace: openshift-storage
+    resourceVersion: "632791"
+    uid: 76b2b140-d545-41c8-8948-1e8b37fb0b24
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-registrar}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:32Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-csi-node-driver-registrar@sha256:eeed76c41bf3d2262a4d177241a315bc476421b8471cbba1555991aac8ef83b0"
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:29Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:29Z"
+    name: topolvm-node-7fjkf.175bfddd383b1b46
+    namespace: openshift-storage
+    resourceVersion: "632792"
+    uid: d8404039-427c-41a2-8477-c554a00f24f2
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:42Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-registrar}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:42Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-csi-node-driver-registrar@sha256:eeed76c41bf3d2262a4d177241a315bc476421b8471cbba1555991aac8ef83b0"
+    in 10.41755376s
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:31Z"
+    name: topolvm-node-7fjkf.175bfddfa52a93df
+    namespace: openshift-storage
+    resourceVersion: "632812"
+    uid: aa947555-0be3-4247-8ead-c8d8d901f733
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:43Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-registrar}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:43Z"
+  message: Created container csi-registrar
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:31Z"
+    name: topolvm-node-7fjkf.175bfddfb764787c
+    namespace: openshift-storage
+    resourceVersion: "632816"
+    uid: 80f31c5f-9c7b-4ac7-978b-7794b1f08339
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:43Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{csi-registrar}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:43Z"
+  message: Started container csi-registrar
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:31Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:31Z"
+    name: topolvm-node-7fjkf.175bfddfb982a83b
+    namespace: openshift-storage
+    resourceVersion: "632817"
+    uid: 3373b600-5681-44d0-b4ee-6dab75bfb99c
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:43Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:43Z"
+  message: Pulling image "registry.redhat.io/openshift4/ose-csi-livenessprobe@sha256:d4228c6e797ec6b2d37e599c19c715b02f6cb955b2a7fb493c56844f4c75e687"
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:32Z"
+    name: topolvm-node-7fjkf.175bfddfb98d02e7
+    namespace: openshift-storage
+    resourceVersion: "632818"
+    uid: 0d96b336-bd9e-4c3b-b441-584e53c27fe1
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:52Z"
+  message: Successfully pulled image "registry.redhat.io/openshift4/ose-csi-livenessprobe@sha256:d4228c6e797ec6b2d37e599c19c715b02f6cb955b2a7fb493c56844f4c75e687"
+    in 9.000987243s
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:33Z"
+    name: topolvm-node-7fjkf.175bfde1d20d67de
+    namespace: openshift-storage
+    resourceVersion: "632832"
+    uid: 7c8e47dc-41a9-450e-82fd-5eec18e5332e
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:52Z"
+  message: Created container liveness-probe
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:33Z"
+    name: topolvm-node-7fjkf.175bfde1f7e62b15
+    namespace: openshift-storage
+    resourceVersion: "632833"
+    uid: 58d0aab5-e0d0-4891-8195-a753a7a9f711
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{liveness-probe}
+    kind: Pod
+    name: topolvm-node-7fjkf
+    namespace: openshift-storage
+    resourceVersion: "602056"
+    uid: 36d2b06d-73d9-44e2-a11a-e6d2f94f4d52
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:52Z"
+  message: Started container liveness-probe
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:33Z"
+    name: topolvm-node-7fjkf.175bfde1f9eb542b
+    namespace: openshift-storage
+    resourceVersion: "632836"
+    uid: 8c8bdfb1-ff15-4fec-a7f0-0fc9a3bb37f7
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:25Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: topolvm-node
+    namespace: openshift-storage
+    resourceVersion: "601696"
+    uid: 911fce66-767c-40c3-8bed-1f853cca3056
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:25Z"
+  message: 'Created pod: topolvm-node-7fjkf'
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T14:46:25Z"
+    name: topolvm-node.175bf804d06a5226
+    namespace: openshift-storage
+    resourceVersion: "601703"
+    uid: 6ee9c51f-7a9a-4034-a9e2-eced4c0a6dfd
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:53Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: topolvm
+    namespace: openshift-storage
+    resourceVersion: "601833"
+    uid: 4671ca98-cc7d-4ddf-bd46-0bd05d04e5d0
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:53Z"
+  message: topolvm-controller-5496f5d4f4-ll8f6_e584fbf7-3e59-476e-8171-9341e2cc6649
+    became leader
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:53Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: topolvm-controller
+      operation: Update
+      time: "2023-05-04T14:46:53Z"
+    name: topolvm.175bf80b5a15c8d2
+    namespace: openshift-storage
+    resourceVersion: "601834"
+    uid: 0d1ab403-e20d-4f7c-a425-b5ea2e704d3a
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: topolvm-controller-5496f5d4f4-ll8f6_e584fbf7-3e59-476e-8171-9341e2cc6649
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:55Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: topolvm
+    namespace: openshift-storage
+    resourceVersion: "631996"
+    uid: 4671ca98-cc7d-4ddf-bd46-0bd05d04e5d0
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:55Z"
+  message: topolvm-controller-5496f5d4f4-ll8f6_4ebc9431-8210-46cd-b8a0-c21714b575a4
+    became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: topolvm-controller
+      operation: Update
+      time: "2023-05-04T16:33:55Z"
+    name: topolvm.175bfde2b10dba88
+    namespace: openshift-storage
+    resourceVersion: "631997"
+    uid: 6fc4a6e4-bc23-4939-abc1-532b8d341c68
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: topolvm-controller-5496f5d4f4-ll8f6_4ebc9431-8210-46cd-b8a0-c21714b575a4
+  type: Normal
+- action: Binding
+  apiVersion: v1
+  eventTime: "2023-05-04T14:46:25.541087Z"
+  firstTimestamp: null
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: vg-manager-dq9h6
+    namespace: openshift-storage
+    resourceVersion: "601705"
+    uid: 53ca4841-3ccb-4136-9027-a6def72931f4
+  kind: Event
+  lastTimestamp: null
+  message: Successfully assigned openshift-storage/vg-manager-dq9h6 to node
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:25Z"
+    managedFields:
+    - apiVersion: events.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:action: {}
+        f:eventTime: {}
+        f:note: {}
+        f:reason: {}
+        f:regarding: {}
+        f:reportingController: {}
+        f:reportingInstance: {}
+        f:type: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-05-04T14:46:25Z"
+    name: vg-manager-dq9h6.175bf804ddffb691
+    namespace: openshift-storage
+    resourceVersion: "601712"
+    uid: 8b242bfb-9569-4b0a-a613-5afa749b33f6
+  reason: Scheduled
+  reportingComponent: default-scheduler
+  reportingInstance: default-scheduler-node
+  source: {}
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:27Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: vg-manager-dq9h6
+    namespace: openshift-storage
+    resourceVersion: "601717"
+    uid: 53ca4841-3ccb-4136-9027-a6def72931f4
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:27Z"
+  message: Add eth0 [10.128.1.218/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T14:46:27Z"
+    name: vg-manager-dq9h6.175bf8053cc193fb
+    namespace: openshift-storage
+    resourceVersion: "601727"
+    uid: 0ae10d9a-95ed-483a-8ef6-ea72119465e5
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{vg-manager}
+    kind: Pod
+    name: vg-manager-dq9h6
+    namespace: openshift-storage
+    resourceVersion: "601711"
+    uid: 53ca4841-3ccb-4136-9027-a6def72931f4
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:27Z"
+  message: Container image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:27Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:27Z"
+    name: vg-manager-dq9h6.175bf8054260a4c5
+    namespace: openshift-storage
+    resourceVersion: "601729"
+    uid: 2e5f5765-26fa-4122-9ee3-ac2faec28645
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{vg-manager}
+    kind: Pod
+    name: vg-manager-dq9h6
+    namespace: openshift-storage
+    resourceVersion: "601711"
+    uid: 53ca4841-3ccb-4136-9027-a6def72931f4
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:28Z"
+  message: Created container vg-manager
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:28Z"
+    name: vg-manager-dq9h6.175bf80597f8f47a
+    namespace: openshift-storage
+    resourceVersion: "601743"
+    uid: 9c2f58b4-23f8-4076-bee7-21d4fd1464cf
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:28Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{vg-manager}
+    kind: Pod
+    name: vg-manager-dq9h6
+    namespace: openshift-storage
+    resourceVersion: "601711"
+    uid: 53ca4841-3ccb-4136-9027-a6def72931f4
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:28Z"
+  message: Started container vg-manager
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:28Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T14:46:28Z"
+    name: vg-manager-dq9h6.175bf8059cc01a47
+    namespace: openshift-storage
+    resourceVersion: "601744"
+    uid: d130c61e-c237-45a0-85e5-a22f6c4ef96a
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: vg-manager-dq9h6
+    namespace: openshift-storage
+    resourceVersion: "601748"
+    uid: 53ca4841-3ccb-4136-9027-a6def72931f4
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:05Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_vg-manager-dq9h6_openshift-storage_53ca4841-3ccb-4136-9027-a6def72931f4_0(a6837012868bda0764ed49b0870a14b4cef32a9a290a3b1b96f79cbc8344cc2d):
+    error adding pod openshift-storage_vg-manager-dq9h6 to CNI network "multus-cni-network":
+    plugin type="multus" name="multus-cni-network" failed (add): Multus: [openshift-storage/vg-manager-dq9h6/53ca4841-3ccb-4136-9027-a6def72931f4]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:15Z"
+    name: vg-manager-dq9h6.175bfdbaf69804af
+    namespace: openshift-storage
+    resourceVersion: "631413"
+    uid: ee7832e4-90bb-41c2-a9bf-042f001ee718
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:24Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: vg-manager-dq9h6
+    namespace: openshift-storage
+    resourceVersion: "629119"
+    uid: 53ca4841-3ccb-4136-9027-a6def72931f4
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:24Z"
+  message: Add eth0 [10.128.1.218/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:24Z"
+    name: vg-manager-dq9h6.175bfdbf59f75350
+    namespace: openshift-storage
+    resourceVersion: "630221"
+    uid: 4636ca67-bcc0-4b15-af0f-b6bd087cf822
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{vg-manager}
+    kind: Pod
+    name: vg-manager-dq9h6
+    namespace: openshift-storage
+    resourceVersion: "601748"
+    uid: 53ca4841-3ccb-4136-9027-a6def72931f4
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:27Z"
+  message: Pulling image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:40Z"
+    name: vg-manager-dq9h6.175bfdc03f95439c
+    namespace: openshift-storage
+    resourceVersion: "631854"
+    uid: b6697712-dc03-4e01-abaa-a80a39c7c2cf
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:33Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{vg-manager}
+    kind: Pod
+    name: vg-manager-dq9h6
+    namespace: openshift-storage
+    resourceVersion: "601748"
+    uid: 53ca4841-3ccb-4136-9027-a6def72931f4
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:33Z"
+  message: Successfully pulled image "registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f"
+    in 1m5.486740188s
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:52Z"
+    name: vg-manager-dq9h6.175bfdcf7ee5f15c
+    namespace: openshift-storage
+    resourceVersion: "632481"
+    uid: 69421f71-6e2c-4c25-b7eb-cd283574c50f
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{vg-manager}
+    kind: Pod
+    name: vg-manager-dq9h6
+    namespace: openshift-storage
+    resourceVersion: "601748"
+    uid: 53ca4841-3ccb-4136-9027-a6def72931f4
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:10Z"
+  message: Created container vg-manager
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:06Z"
+    name: vg-manager-dq9h6.175bfdd824b1fb79
+    namespace: openshift-storage
+    resourceVersion: "632609"
+    uid: 87aac7e9-e788-4cbc-84d8-21ecf94332ce
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:10Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{vg-manager}
+    kind: Pod
+    name: vg-manager-dq9h6
+    namespace: openshift-storage
+    resourceVersion: "601748"
+    uid: 53ca4841-3ccb-4136-9027-a6def72931f4
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:10Z"
+  message: Started container vg-manager
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:07Z"
+    name: vg-manager-dq9h6.175bfdd82a4bc006
+    namespace: openshift-storage
+    resourceVersion: "632614"
+    uid: 9ef2ecca-4fe6-40a0-8fbe-1feaa1796337
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T14:46:25Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: DaemonSet
+    name: vg-manager
+    namespace: openshift-storage
+    resourceVersion: "601698"
+    uid: 7e92038e-bf1a-4788-83b9-eb2d3bcaa2be
+  kind: Event
+  lastTimestamp: "2023-05-04T14:46:25Z"
+  message: 'Created pod: vg-manager-dq9h6'
+  metadata:
+    creationTimestamp: "2023-05-04T14:46:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T14:46:25Z"
+    name: vg-manager.175bf804d5a4f3b6
+    namespace: openshift-storage
+    resourceVersion: "601708"
+    uid: 57b0a5be-63e2-444e-9880-bedaf8f515f4
+  reason: SuccessfulCreate
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: daemonset-controller
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "684671"

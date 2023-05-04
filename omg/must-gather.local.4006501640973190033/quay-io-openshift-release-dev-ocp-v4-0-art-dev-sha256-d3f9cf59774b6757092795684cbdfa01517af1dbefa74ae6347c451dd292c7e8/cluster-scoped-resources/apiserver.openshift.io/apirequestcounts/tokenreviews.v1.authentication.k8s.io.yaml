@@ -1,0 +1,1835 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-05-02T12:39:14Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-05-02T12:39:14Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-05-04T18:41:11Z"
+  name: tokenreviews.v1.authentication.k8s.io
+  resourceVersion: "683116"
+  uid: 457cf90a-f6f4-4202-8785-0d791fff9f5e
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 79
+          verb: create
+        requestCount: 79
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 79
+          verb: create
+        requestCount: 79
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 42
+          verb: create
+        requestCount: 42
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 39
+          verb: create
+        requestCount: 39
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 39
+          verb: create
+        requestCount: 39
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 39
+          verb: create
+        requestCount: 39
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 39
+          verb: create
+        requestCount: 39
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 38
+          verb: create
+        requestCount: 38
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:alertmanager-main
+      - byVerb:
+        - requestCount: 32
+          verb: create
+        requestCount: 32
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 20
+          verb: create
+        requestCount: 20
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      - byVerb:
+        - requestCount: 18
+          verb: create
+        requestCount: 18
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 16
+          verb: create
+        requestCount: 16
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-cloud-credential-operator:cloud-credential-operator
+      - byVerb:
+        - requestCount: 16
+          verb: create
+        requestCount: 16
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ingress-operator:ingress-operator
+      - byVerb:
+        - requestCount: 16
+          verb: create
+        requestCount: 16
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      - byVerb:
+        - requestCount: 16
+          verb: create
+        requestCount: 16
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-multus:metrics-daemon-sa
+      - byVerb:
+        - requestCount: 16
+          verb: create
+        requestCount: 16
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-machine-config-operator:machine-config-daemon
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-dns:dns
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus-ac
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-machine-config-operator:machine-config-controller
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-dns-operator:dns-operator
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-cluster-machine-approver:machine-approver-sa
+      - byVerb:
+        - requestCount: 7
+          verb: create
+        requestCount: 7
+        userAgent: route-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-route-controller-manager:route-controller-manager-sa
+      - byVerb:
+        - requestCount: 6
+          verb: create
+        requestCount: 6
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 3
+          verb: create
+        requestCount: 3
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        requestCount: 1
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      nodeName: 192.168.1.126
+      requestCount: 670
+    requestCount: 670
+  last24h:
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 48
+          verb: create
+        requestCount: 48
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 31
+          verb: create
+        requestCount: 31
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 653
+    requestCount: 653
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 49
+          verb: create
+        requestCount: 49
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        requestCount: 30
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 653
+    requestCount: 653
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 51
+          verb: create
+        requestCount: 51
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 32
+          verb: create
+        requestCount: 32
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 660
+    requestCount: 660
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 48
+          verb: create
+        requestCount: 48
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        requestCount: 30
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 653
+    requestCount: 653
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 35
+          verb: create
+        requestCount: 35
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 31
+          verb: create
+        requestCount: 31
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 656
+    requestCount: 656
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 48
+          verb: create
+        requestCount: 48
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        requestCount: 30
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 652
+    requestCount: 652
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 31
+          verb: create
+        requestCount: 31
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 659
+    requestCount: 659
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 35
+          verb: create
+        requestCount: 35
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 31
+          verb: create
+        requestCount: 31
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 657
+    requestCount: 657
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        requestCount: 30
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 655
+    requestCount: 655
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 48
+          verb: create
+        requestCount: 48
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        requestCount: 30
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 652
+    requestCount: 652
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 35
+          verb: create
+        requestCount: 35
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        requestCount: 30
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 657
+    requestCount: 657
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 48
+          verb: create
+        requestCount: 48
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 32
+          verb: create
+        requestCount: 32
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 657
+    requestCount: 657
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 35
+          verb: create
+        requestCount: 35
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        requestCount: 30
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 655
+    requestCount: 655
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 48
+          verb: create
+        requestCount: 48
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        requestCount: 30
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 653
+    requestCount: 653
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 116
+          verb: create
+        requestCount: 116
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 115
+          verb: create
+        requestCount: 115
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 58
+          verb: create
+        requestCount: 58
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 58
+          verb: create
+        requestCount: 58
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 58
+          verb: create
+        requestCount: 58
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 58
+          verb: create
+        requestCount: 58
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 58
+          verb: create
+        requestCount: 58
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 48
+          verb: create
+        requestCount: 48
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 47
+          verb: create
+        requestCount: 47
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 37
+          verb: create
+        requestCount: 37
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:alertmanager-main
+      nodeName: 192.168.1.126
+      requestCount: 653
+    requestCount: 653
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 64
+          verb: create
+        requestCount: 64
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:alertmanager-main
+      nodeName: 192.168.1.126
+      requestCount: 705
+    requestCount: 705
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 88
+          verb: create
+        requestCount: 88
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 87
+          verb: create
+        requestCount: 87
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 44
+          verb: create
+        requestCount: 44
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 44
+          verb: create
+        requestCount: 44
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 44
+          verb: create
+        requestCount: 44
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 43
+          verb: create
+        requestCount: 43
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 38
+          verb: create
+        requestCount: 38
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:alertmanager-main
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 22
+          verb: create
+        requestCount: 22
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      - byVerb:
+        - requestCount: 21
+          verb: create
+        requestCount: 21
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-multus:metrics-daemon-sa
+      - byVerb:
+        - requestCount: 19
+          verb: create
+        requestCount: 19
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 19
+          verb: create
+        requestCount: 19
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-machine-config-operator:machine-config-controller
+      nodeName: 192.168.1.126
+      requestCount: 537
+    requestCount: 537
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 65
+          verb: create
+        requestCount: 65
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 55
+          verb: create
+        requestCount: 55
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:alertmanager-main
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        requestCount: 30
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 738
+    requestCount: 738
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 79
+          verb: create
+        requestCount: 79
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 79
+          verb: create
+        requestCount: 79
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 42
+          verb: create
+        requestCount: 42
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 39
+          verb: create
+        requestCount: 39
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 39
+          verb: create
+        requestCount: 39
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 39
+          verb: create
+        requestCount: 39
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 39
+          verb: create
+        requestCount: 39
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 38
+          verb: create
+        requestCount: 38
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:alertmanager-main
+      - byVerb:
+        - requestCount: 32
+          verb: create
+        requestCount: 32
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 20
+          verb: create
+        requestCount: 20
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      - byVerb:
+        - requestCount: 18
+          verb: create
+        requestCount: 18
+        userAgent: kubelet/v1.25.4+a34b9e9
+        username: system:node:node
+      - byVerb:
+        - requestCount: 16
+          verb: create
+        requestCount: 16
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-cloud-credential-operator:cloud-credential-operator
+      - byVerb:
+        - requestCount: 16
+          verb: create
+        requestCount: 16
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ingress-operator:ingress-operator
+      - byVerb:
+        - requestCount: 16
+          verb: create
+        requestCount: 16
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:cluster-autoscaler-operator
+      - byVerb:
+        - requestCount: 16
+          verb: create
+        requestCount: 16
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-multus:metrics-daemon-sa
+      - byVerb:
+        - requestCount: 16
+          verb: create
+        requestCount: 16
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-machine-config-operator:machine-config-daemon
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:cluster-monitoring-operator
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-controller
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-dns:dns
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-machine-api:machine-api-operator
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-multus:multus-ac
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-machine-config-operator:machine-config-controller
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-dns-operator:dns-operator
+      - byVerb:
+        - requestCount: 14
+          verb: create
+        requestCount: 14
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-cluster-machine-approver:machine-approver-sa
+      - byVerb:
+        - requestCount: 7
+          verb: create
+        requestCount: 7
+        userAgent: route-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-route-controller-manager:route-controller-manager-sa
+      - byVerb:
+        - requestCount: 6
+          verb: create
+        requestCount: 6
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-controller-manager:openshift-controller-manager-sa
+      - byVerb:
+        - requestCount: 3
+          verb: create
+        requestCount: 3
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:prometheus-k8s
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        requestCount: 1
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      nodeName: 192.168.1.126
+      requestCount: 670
+    requestCount: 670
+  - requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        requestCount: 30
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 654
+    requestCount: 654
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 35
+          verb: create
+        requestCount: 35
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 31
+          verb: create
+        requestCount: 31
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 656
+    requestCount: 656
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        requestCount: 30
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 654
+    requestCount: 654
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: openshift-router/v0.0.0
+        username: system:serviceaccount:openshift-ingress:router
+      - byVerb:
+        - requestCount: 120
+          verb: create
+        requestCount: 120
+        userAgent: kube-scheduler/v1.25.4+a34b9e9
+        username: system:kube-scheduler
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-config-operator/v0.0.0
+        username: system:serviceaccount:openshift-config-operator:openshift-config-operator
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-kube-apiserver-operator/v0.0.0
+        username: system:serviceaccount:openshift-apiserver:openshift-apiserver-sa
+      - byVerb:
+        - requestCount: 61
+          verb: create
+        requestCount: 61
+        userAgent: cluster-network-check-endpoints/v0.0.0
+        username: system:serviceaccount:openshift-network-diagnostics:network-diagnostics
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: console/v0.0.0
+        username: system:serviceaccount:openshift-console-operator:console-operator
+      - byVerb:
+        - requestCount: 60
+          verb: create
+        requestCount: 60
+        userAgent: cluster-network-operator/v0.0.0
+        username: system:serviceaccount:openshift-network-operator:default
+      - byVerb:
+        - requestCount: 50
+          verb: create
+        requestCount: 50
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-ovn-kubernetes:ovn-kubernetes-node
+      - byVerb:
+        - requestCount: 34
+          verb: create
+        requestCount: 34
+        userAgent: oauth-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:thanos-querier
+      - byVerb:
+        - requestCount: 30
+          verb: create
+        requestCount: 30
+        userAgent: kube-rbac-proxy/v0.0.0
+        username: system:serviceaccount:openshift-monitoring:openshift-state-metrics
+      nodeName: 192.168.1.126
+      requestCount: 657
+    requestCount: 657
+  requestCount: 15096

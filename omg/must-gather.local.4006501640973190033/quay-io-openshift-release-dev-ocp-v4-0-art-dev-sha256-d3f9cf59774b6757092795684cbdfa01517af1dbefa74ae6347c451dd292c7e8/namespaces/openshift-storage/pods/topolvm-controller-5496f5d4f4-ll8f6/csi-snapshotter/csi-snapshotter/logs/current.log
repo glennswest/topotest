@@ -1,0 +1,3 @@
+2023-05-04T16:34:14.359766140Z I0504 16:34:14.359645       1 main.go:104] Version: v4.12.0-202304070941.p0.g7e23256.assembly.stream-0-g3593b86-dirty
+2023-05-04T16:34:14.458148272Z I0504 16:34:14.458086       1 common.go:111] Probing CSI driver for readiness
+2023-05-04T16:34:14.555577478Z I0504 16:34:14.555537       1 snapshot_controller_base.go:133] Starting CSI snapshotter

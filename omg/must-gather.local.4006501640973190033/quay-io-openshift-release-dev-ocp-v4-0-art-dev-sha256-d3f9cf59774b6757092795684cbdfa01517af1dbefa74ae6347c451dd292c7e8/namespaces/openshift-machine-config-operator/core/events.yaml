@@ -1,0 +1,1550 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: machine-config-controller-59786d68b6-z67fx
+    namespace: openshift-machine-config-operator
+    resourceVersion: "6831"
+    uid: 83f98e4e-1ddd-4e80-940a-8ab98e854030
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:05Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_machine-config-controller-59786d68b6-z67fx_openshift-machine-config-operator_83f98e4e-1ddd-4e80-940a-8ab98e854030_0(95a9a78ca4169583929c766cbd47c33b1dd24acc8fca71e68650faf32e7d80cd):
+    error adding pod openshift-machine-config-operator_machine-config-controller-59786d68b6-z67fx
+    to CNI network "multus-cni-network": plugin type="multus" name="multus-cni-network"
+    failed (add): Multus: [openshift-machine-config-operator/machine-config-controller-59786d68b6-z67fx/83f98e4e-1ddd-4e80-940a-8ab98e854030]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:18Z"
+    name: machine-config-controller-59786d68b6-z67fx.175bfdbb12d55f84
+    namespace: openshift-machine-config-operator
+    resourceVersion: "631451"
+    uid: daf55d7c-6051-4698-bf46-cfa616eab06f
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:24Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: machine-config-controller-59786d68b6-z67fx
+    namespace: openshift-machine-config-operator
+    resourceVersion: "629070"
+    uid: 83f98e4e-1ddd-4e80-940a-8ab98e854030
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:24Z"
+  message: Add eth0 [10.128.0.35/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:24Z"
+    name: machine-config-controller-59786d68b6-z67fx.175bfdbf5c89d74b
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630222"
+    uid: 1de88f57-75e9-4695-b5e2-969b31617be6
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-controller}
+    kind: Pod
+    name: machine-config-controller-59786d68b6-z67fx
+    namespace: openshift-machine-config-operator
+    resourceVersion: "6831"
+    uid: 83f98e4e-1ddd-4e80-940a-8ab98e854030
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:27Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4fafaae3445cd29a8ba685901a338b8539877d15f149466cc7b4e42fdca60c40"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:40Z"
+    name: machine-config-controller-59786d68b6-z67fx.175bfdc04179bae7
+    namespace: openshift-machine-config-operator
+    resourceVersion: "631857"
+    uid: 9213db90-20a0-4d2a-aa1e-59a99d0a028f
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-controller}
+    kind: Pod
+    name: machine-config-controller-59786d68b6-z67fx
+    namespace: openshift-machine-config-operator
+    resourceVersion: "6831"
+    uid: 83f98e4e-1ddd-4e80-940a-8ab98e854030
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:30Z"
+  message: Created container machine-config-controller
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:59Z"
+    name: machine-config-controller-59786d68b6-z67fx.175bfdc0c25ed986
+    namespace: openshift-machine-config-operator
+    resourceVersion: "632024"
+    uid: 658ee6c4-6819-4b9e-8e02-2ffd2b7fa8ec
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-controller}
+    kind: Pod
+    name: machine-config-controller-59786d68b6-z67fx
+    namespace: openshift-machine-config-operator
+    resourceVersion: "6831"
+    uid: 83f98e4e-1ddd-4e80-940a-8ab98e854030
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:30Z"
+  message: Started container machine-config-controller
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:00Z"
+    name: machine-config-controller-59786d68b6-z67fx.175bfdc0d13f9387
+    namespace: openshift-machine-config-operator
+    resourceVersion: "632039"
+    uid: a6ad9fc9-3a19-40fa-9431-bdb75fec38ef
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: machine-config-controller-59786d68b6-z67fx
+    namespace: openshift-machine-config-operator
+    resourceVersion: "6831"
+    uid: 83f98e4e-1ddd-4e80-940a-8ab98e854030
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:30Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f968922564c3eea1c69d6bbe529d8970784d6cae8935afaf674d9fa7c0f72ea3"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:00Z"
+    name: machine-config-controller-59786d68b6-z67fx.175bfdc0d1626baa
+    namespace: openshift-machine-config-operator
+    resourceVersion: "632040"
+    uid: c696d016-3147-489b-ac1a-e98ae4fe7f47
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: machine-config-controller-59786d68b6-z67fx
+    namespace: openshift-machine-config-operator
+    resourceVersion: "6831"
+    uid: 83f98e4e-1ddd-4e80-940a-8ab98e854030
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:30Z"
+  message: Created container oauth-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:03Z"
+    name: machine-config-controller-59786d68b6-z67fx.175bfdc0f449c769
+    namespace: openshift-machine-config-operator
+    resourceVersion: "632063"
+    uid: fa153c47-2cec-42f6-9bfa-aad0946f5eba
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:31Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: machine-config-controller-59786d68b6-z67fx
+    namespace: openshift-machine-config-operator
+    resourceVersion: "6831"
+    uid: 83f98e4e-1ddd-4e80-940a-8ab98e854030
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:31Z"
+  message: Started container oauth-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:03Z"
+    name: machine-config-controller-59786d68b6-z67fx.175bfdc0fb9567e4
+    namespace: openshift-machine-config-operator
+    resourceVersion: "632064"
+    uid: 3c39bcf3-433a-457e-a3ef-0a562c79ae1d
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "proxy-tls" : failed to sync secret
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:53Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:52Z"
+    name: machine-config-daemon-6gh52.175bfda84301044c
+    namespace: openshift-machine-config-operator
+    resourceVersion: "629058"
+    uid: 1e3d5b25-b78d-427b-bd7f-c12d6a64e48d
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-daemon}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:13Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4fafaae3445cd29a8ba685901a338b8539877d15f149466cc7b4e42fdca60c40"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:16Z"
+    name: machine-config-daemon-6gh52.175bfdab952d8473
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630772"
+    uid: c2d310af-4549-4683-a73c-8f1abda65b4e
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-daemon}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Failed to pull image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4fafaae3445cd29a8ba685901a338b8539877d15f149466cc7b4e42fdca60c40":
+    pull QPS exceeded'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:06Z"
+    name: machine-config-daemon-6gh52.175bfdab952dc09a
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630048"
+    uid: 8504adbf-b863-4634-995d-7f4ab0463c3f
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-daemon}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:06Z"
+    name: machine-config-daemon-6gh52.175bfdab952def18
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630049"
+    uid: e4441ddb-e5f8-4e46-938b-45945e43cc45
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:14Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f968922564c3eea1c69d6bbe529d8970784d6cae8935afaf674d9fa7c0f72ea3"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:26Z"
+    name: machine-config-daemon-6gh52.175bfdab95e8ad2e
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630880"
+    uid: b187896b-fb7d-4b2c-a05a-78bb8de9e654
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Failed to pull image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f968922564c3eea1c69d6bbe529d8970784d6cae8935afaf674d9fa7c0f72ea3":
+    pull QPS exceeded'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:08Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:08Z"
+    name: machine-config-daemon-6gh52.175bfdab95e8dfbe
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630062"
+    uid: 44bcc0b4-ed10-4259-a204-00f35049c888
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Error: ErrImagePull'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:09Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:09Z"
+    name: machine-config-daemon-6gh52.175bfdab95e90474
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630063"
+    uid: e25a6942-61d5-4dfd-9226-167f4a03f7ee
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-daemon}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: Back-off pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4fafaae3445cd29a8ba685901a338b8539877d15f149466cc7b4e42fdca60c40"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:19Z"
+    name: machine-config-daemon-6gh52.175bfdabc4af8d52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630156"
+    uid: 453ceb12-13c9-48ca-8329-68218e9e4ff2
+  reason: BackOff
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-daemon}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:19Z"
+    name: machine-config-daemon-6gh52.175bfdabc4afa21a
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630160"
+    uid: e55979d1-f5c2-49c2-ae9a-e097bb169185
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: Back-off pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f968922564c3eea1c69d6bbe529d8970784d6cae8935afaf674d9fa7c0f72ea3"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:19Z"
+    name: machine-config-daemon-6gh52.175bfdabc4b649ba
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630164"
+    uid: 2de668c4-72a4-4640-b946-3e1d19ba1d38
+  reason: BackOff
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: 'Error: ImagePullBackOff'
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:19Z"
+    name: machine-config-daemon-6gh52.175bfdabc4b65c97
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630165"
+    uid: efdde42e-b9a1-44a5-be44-70a4931357ef
+  reason: Failed
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-daemon}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:14Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4fafaae3445cd29a8ba685901a338b8539877d15f149466cc7b4e42fdca60c40"
+    in 1.266995288s
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:25Z"
+    name: machine-config-daemon-6gh52.175bfdaf3e760754
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630874"
+    uid: 6092fb1a-446c-4d15-98c8-03afbfd9fc72
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-daemon}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:14Z"
+  message: Created container machine-config-daemon
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:25Z"
+    name: machine-config-daemon-6gh52.175bfdaf4413bef5
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630877"
+    uid: 128e2c32-e61d-4468-b27f-717a01784f76
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-daemon}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:14Z"
+  message: Started container machine-config-daemon
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:25Z"
+    name: machine-config-daemon-6gh52.175bfdaf46651b74
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630879"
+    uid: 8c1fd633-7739-447a-bc8c-a8733da885bd
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:24Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f968922564c3eea1c69d6bbe529d8970784d6cae8935afaf674d9fa7c0f72ea3"
+    in 9.723964179s
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:34Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:34Z"
+    name: machine-config-daemon-6gh52.175bfdb18a0e34db
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630947"
+    uid: 066e7fde-4c02-480b-826e-52038ab80e06
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:52Z"
+  message: Created container oauth-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:47Z"
+    name: machine-config-daemon-6gh52.175bfdb7f0f4dcb0
+    namespace: openshift-machine-config-operator
+    resourceVersion: "631114"
+    uid: ba8f9267-4184-45b3-82a8-8c1a73acf9f7
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{oauth-proxy}
+    kind: Pod
+    name: machine-config-daemon-6gh52
+    namespace: openshift-machine-config-operator
+    resourceVersion: "5567"
+    uid: 182b64e9-6e12-437c-958a-3a6aa81ddac1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:52Z"
+  message: Started container oauth-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:48Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:48Z"
+    name: machine-config-daemon-6gh52.175bfdb7f389547a
+    namespace: openshift-machine-config-operator
+    resourceVersion: "631115"
+    uid: 81eb4c41-b833-48f3-9f2e-642b9df0570e
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: machine-config-operator-7bc6cdd784-lffkg
+    namespace: openshift-machine-config-operator
+    resourceVersion: "3374"
+    uid: 90bba385-f73f-45f0-94cd-38af19b79466
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:05Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_machine-config-operator-7bc6cdd784-lffkg_openshift-machine-config-operator_90bba385-f73f-45f0-94cd-38af19b79466_0(47146e599e353ef1ec4b04995c2c28adec3b5913553eb2eaa69f9479f3c6964b):
+    error adding pod openshift-machine-config-operator_machine-config-operator-7bc6cdd784-lffkg
+    to CNI network "multus-cni-network": plugin type="multus" name="multus-cni-network"
+    failed (add): Multus: [openshift-machine-config-operator/machine-config-operator-7bc6cdd784-lffkg/90bba385-f73f-45f0-94cd-38af19b79466]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:15Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:15Z"
+    name: machine-config-operator-7bc6cdd784-lffkg.175bfdbaf28857ca
+    namespace: openshift-machine-config-operator
+    resourceVersion: "631394"
+    uid: 4ca1335b-721b-437f-902d-0473a64230e4
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:24Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: machine-config-operator-7bc6cdd784-lffkg
+    namespace: openshift-machine-config-operator
+    resourceVersion: "628989"
+    uid: 90bba385-f73f-45f0-94cd-38af19b79466
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:24Z"
+  message: Add eth0 [10.128.0.13/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:24Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:24Z"
+    name: machine-config-operator-7bc6cdd784-lffkg.175bfdbf5e5686ad
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630223"
+    uid: f176b82b-c93b-449c-97fa-dcc5c7f5725c
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:27Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-operator}
+    kind: Pod
+    name: machine-config-operator-7bc6cdd784-lffkg
+    namespace: openshift-machine-config-operator
+    resourceVersion: "3374"
+    uid: 90bba385-f73f-45f0-94cd-38af19b79466
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:27Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4fafaae3445cd29a8ba685901a338b8539877d15f149466cc7b4e42fdca60c40"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:41Z"
+    name: machine-config-operator-7bc6cdd784-lffkg.175bfdc0426113b3
+    namespace: openshift-machine-config-operator
+    resourceVersion: "631861"
+    uid: 420a17e3-e45f-4a9c-a493-5c03dd6f7d8e
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-operator}
+    kind: Pod
+    name: machine-config-operator-7bc6cdd784-lffkg
+    namespace: openshift-machine-config-operator
+    resourceVersion: "3374"
+    uid: 90bba385-f73f-45f0-94cd-38af19b79466
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:30Z"
+  message: Created container machine-config-operator
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:00Z"
+    name: machine-config-operator-7bc6cdd784-lffkg.175bfdc0c955887a
+    namespace: openshift-machine-config-operator
+    resourceVersion: "632033"
+    uid: 2f6e2e8f-8ae8-4b9e-8128-ebb6d932514b
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:30Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-operator}
+    kind: Pod
+    name: machine-config-operator-7bc6cdd784-lffkg
+    namespace: openshift-machine-config-operator
+    resourceVersion: "3374"
+    uid: 90bba385-f73f-45f0-94cd-38af19b79466
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:30Z"
+  message: Started container machine-config-operator
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:01Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:01Z"
+    name: machine-config-operator-7bc6cdd784-lffkg.175bfdc0deaf31e6
+    namespace: openshift-machine-config-operator
+    resourceVersion: "632049"
+    uid: 7256c817-66ba-4ef8-b3c0-ecdb98d3ee13
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-server}
+    kind: Pod
+    name: machine-config-server-wqcqw
+    namespace: openshift-machine-config-operator
+    resourceVersion: "6919"
+    uid: 8abccb97-7d4d-4928-b31f-a878c7335d40
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4fafaae3445cd29a8ba685901a338b8539877d15f149466cc7b4e42fdca60c40"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:03Z"
+    name: machine-config-server-wqcqw.175bfdab8d0d21db
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630028"
+    uid: 0bc69ce3-758b-4f8f-93b8-85de6aac6997
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-server}
+    kind: Pod
+    name: machine-config-server-wqcqw
+    namespace: openshift-machine-config-operator
+    resourceVersion: "6919"
+    uid: 8abccb97-7d4d-4928-b31f-a878c7335d40
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:13Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:4fafaae3445cd29a8ba685901a338b8539877d15f149466cc7b4e42fdca60c40"
+    in 14.910423584s
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:17Z"
+    name: machine-config-server-wqcqw.175bfdaf05c863ef
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630777"
+    uid: 20831aa6-3441-4225-b635-e191578b3501
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-server}
+    kind: Pod
+    name: machine-config-server-wqcqw
+    namespace: openshift-machine-config-operator
+    resourceVersion: "6919"
+    uid: 8abccb97-7d4d-4928-b31f-a878c7335d40
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:14Z"
+  message: Created container machine-config-server
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:19Z"
+    name: machine-config-server-wqcqw.175bfdaf14875ae7
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630795"
+    uid: fa9cd4dc-a515-4a2a-ad97-11d581655ec4
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-config-server}
+    kind: Pod
+    name: machine-config-server-wqcqw
+    namespace: openshift-machine-config-operator
+    resourceVersion: "6919"
+    uid: 8abccb97-7d4d-4928-b31f-a878c7335d40
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:14Z"
+  message: Started container machine-config-server
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:21Z"
+    name: machine-config-server-wqcqw.175bfdaf197a169e
+    namespace: openshift-machine-config-operator
+    resourceVersion: "630838"
+    uid: d158892f-e494-4c67-89b8-78ce4898511a
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "684696"

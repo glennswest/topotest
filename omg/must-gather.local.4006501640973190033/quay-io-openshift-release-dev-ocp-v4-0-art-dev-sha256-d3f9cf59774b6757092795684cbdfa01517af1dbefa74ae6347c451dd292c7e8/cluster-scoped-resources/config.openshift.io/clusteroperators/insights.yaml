@@ -1,0 +1,143 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    capability.openshift.io/name: Insights
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-05-02T12:17:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:capability.openshift.io/name: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:extension:
+          f:lastReportTime: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: insights-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:33:35Z"
+  name: insights
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "631800"
+  uid: 5f45c704-f982-4877-b4af-1492cf45586e
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-02T12:37:52Z"
+    message: Insights works as expected
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-05-02T12:38:22Z"
+    message: no available cluster transfer
+    reason: NoClusterTransfer
+    status: "False"
+    type: ClusterTransferAvailable
+  - lastTransitionTime: "2023-05-02T12:37:52Z"
+    message: Insights works as expected
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-05-02T12:37:52Z"
+    reason: AsExpected
+    status: "False"
+    type: Disabled
+  - lastTransitionTime: "2023-05-02T12:37:52Z"
+    message: Monitoring the cluster
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-05-02T12:38:22Z"
+    message: 'Failed to pull SCA certs from https://api.openshift.com/api/accounts_mgmt/v1/certificates:
+      OCM API https://api.openshift.com/api/accounts_mgmt/v1/certificates returned
+      HTTP 404: {"code":"ACCT-MGMT-7","href":"/api/accounts_mgmt/v1/errors/7","id":"7","kind":"Error","operation_id":"f82ad084-743d-4543-b1ab-0efd330d202f","reason":"The
+      organization (id= 1Mt47AoBiztIJKs0V9zRyQSeUGh) does not have any certificate
+      of type sca. Enable SCA at https://access.redhat.com/management."}'
+    reason: NotFound
+    status: "False"
+    type: SCAAvailable
+  - lastTransitionTime: "2023-05-02T12:37:52Z"
+    message: Insights operator can be upgraded
+    reason: InsightsUpgradeable
+    status: "True"
+    type: Upgradeable
+  extension:
+    lastReportTime: "2023-05-04T16:33:34Z"
+  relatedObjects:
+  - group: ""
+    name: openshift-insights
+    resource: namespaces
+  - group: apps
+    name: insights-operator
+    namespace: openshift-insights
+    resource: deployments
+  - group: ""
+    name: pull-secret
+    namespace: openshift-config
+    resource: secrets
+  - group: ""
+    name: support
+    namespace: openshift-config
+    resource: secrets
+  - group: ""
+    name: gather
+    namespace: openshift-insights
+    resource: serviceaccounts
+  - group: ""
+    name: operator
+    namespace: openshift-insights
+    resource: serviceaccounts
+  - group: ""
+    name: metrics
+    namespace: openshift-insights
+    resource: services
+  - group: ""
+    name: service-ca-bundle
+    namespace: openshift-insights
+    resource: configmaps
+  - group: operator.openshift.io
+    name: cluster
+    resource: insightsoperators
+  versions:
+  - name: operator
+    version: 4.12.2

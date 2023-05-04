@@ -1,0 +1,591 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:53Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: cluster-machine-approver-leader
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "631969"
+    uid: 97dff75d-e022-43f6-9418-f9c3af08ede1
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:53Z"
+  message: node_85df3288-aaa3-4bea-a921-e7dd95483b5b became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:53Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: machine-approver
+      operation: Update
+      time: "2023-05-04T16:33:53Z"
+    name: cluster-machine-approver-leader.175bfde21bceeb1d
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "631971"
+    uid: 54bc08ba-eb32-4048-a7ae-e1ca7908891f
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: node_85df3288-aaa3-4bea-a921-e7dd95483b5b
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: machine-approver-879c4799-h65jk
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "8213"
+    uid: 21a4d683-dc20-4a83-b885-3470d9d27c45
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "config" : failed to sync configmap
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:56Z"
+    name: machine-approver-879c4799-h65jk.175bfda8430824db
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "629087"
+    uid: 3ea65cc3-537b-4ae6-b8ca-04d8f86a8589
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: machine-approver-879c4799-h65jk
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "8213"
+    uid: 21a4d683-dc20-4a83-b885-3470d9d27c45
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "auth-proxy-config" : failed to sync
+    configmap cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:56Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:56Z"
+    name: machine-approver-879c4799-h65jk.175bfda8430aadf6
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "629094"
+    uid: 91f4e3d8-27cc-40bd-b0fd-3454b9162ea4
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: machine-approver-879c4799-h65jk
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "8213"
+    uid: 21a4d683-dc20-4a83-b885-3470d9d27c45
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "machine-approver-tls" : failed to
+    sync secret cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:30:00Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:30:00Z"
+    name: machine-approver-879c4799-h65jk.175bfda8435da23d
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "629152"
+    uid: ab7a75bb-ecac-4f45-8e7a-02213662cb93
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:59Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: machine-approver-879c4799-h65jk
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "8213"
+    uid: 21a4d683-dc20-4a83-b885-3470d9d27c45
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:59Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6"
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:04Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:31:04Z"
+    name: machine-approver-879c4799-h65jk.175bfdab8f5f4a04
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "630035"
+    uid: 5936e2fd-5ca2-4ec2-b6c0-bf0def4b1d75
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: machine-approver-879c4799-h65jk
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "8213"
+    uid: 21a4d683-dc20-4a83-b885-3470d9d27c45
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:08Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6"
+    in 9.268056756s
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:03Z"
+    name: machine-approver-879c4799-h65jk.175bfdadb7caced1
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "630655"
+    uid: 9dfb25a1-43b8-4a8a-88c3-19b2c69256f9
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: machine-approver-879c4799-h65jk
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "8213"
+    uid: 21a4d683-dc20-4a83-b885-3470d9d27c45
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:08Z"
+  message: Created container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:04Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:04Z"
+    name: machine-approver-879c4799-h65jk.175bfdadc520bd0a
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "630665"
+    uid: fc1ff5ff-594d-40bd-81cc-2e63603ea64a
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: machine-approver-879c4799-h65jk
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "8213"
+    uid: 21a4d683-dc20-4a83-b885-3470d9d27c45
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:08Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:05Z"
+    name: machine-approver-879c4799-h65jk.175bfdadc6d82fd9
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "630667"
+    uid: bd4a3c1a-815b-43c3-94fb-eccb6126c44a
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:08Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-approver-controller}
+    kind: Pod
+    name: machine-approver-879c4799-h65jk
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "8213"
+    uid: 21a4d683-dc20-4a83-b885-3470d9d27c45
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:08Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ec53f44c080dc784adb01a4e3b8257adffaf79a6e38f683d26bf1b384d6b7156"
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:05Z"
+    name: machine-approver-879c4799-h65jk.175bfdadc6e0da6d
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "630671"
+    uid: 5b4ea8ef-539e-4533-b98a-8e4d97f5eee0
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-approver-controller}
+    kind: Pod
+    name: machine-approver-879c4799-h65jk
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "8213"
+    uid: 21a4d683-dc20-4a83-b885-3470d9d27c45
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:13Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ec53f44c080dc784adb01a4e3b8257adffaf79a6e38f683d26bf1b384d6b7156"
+    in 5.35928672s
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:18Z"
+    name: machine-approver-879c4799-h65jk.175bfdaf06517686
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "630786"
+    uid: 22449648-faed-4d8c-8c38-f7930761e68f
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-approver-controller}
+    kind: Pod
+    name: machine-approver-879c4799-h65jk
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "8213"
+    uid: 21a4d683-dc20-4a83-b885-3470d9d27c45
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:52Z"
+  message: Created container machine-approver-controller
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:49Z"
+    name: machine-approver-879c4799-h65jk.175bfdaf1b735b65
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "631126"
+    uid: 58b043a3-f0d0-427e-b9c8-dc52a4305627
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 2
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-approver-controller}
+    kind: Pod
+    name: machine-approver-879c4799-h65jk
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "8213"
+    uid: 21a4d683-dc20-4a83-b885-3470d9d27c45
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:52Z"
+  message: Started container machine-approver-controller
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:49Z"
+    name: machine-approver-879c4799-h65jk.175bfdaf1f5b0caf
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "631129"
+    uid: 7a1fe2c1-4d6a-4d26-839a-139fdfa0ddab
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:30:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{machine-approver-controller}
+    kind: Pod
+    name: machine-approver-879c4799-h65jk
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "8213"
+    uid: 21a4d683-dc20-4a83-b885-3470d9d27c45
+  kind: Event
+  lastTimestamp: "2023-05-04T16:30:46Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:ec53f44c080dc784adb01a4e3b8257adffaf79a6e38f683d26bf1b384d6b7156"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:32:47Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:32:47Z"
+    name: machine-approver-879c4799-h65jk.175bfdb6a4d9109a
+    namespace: openshift-cluster-machine-approver
+    resourceVersion: "631112"
+    uid: 420cff53-8c81-4bf2-8afd-4f17f0b23093
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "684696"

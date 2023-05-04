@@ -1,0 +1,106 @@
+---
+apiVersion: image.openshift.io/v1
+kind: ImageStream
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    openshift.io/image.dockerRepositoryCheck: "2023-05-02T12:41:23Z"
+  creationTimestamp: "2023-05-02T12:41:04Z"
+  generation: 2
+  managedFields:
+  - apiVersion: image.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec:
+        f:tags:
+          .: {}
+          k:{"name":"412.86.202301311551-0"}:
+            .: {}
+            f:annotations: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+              f:scheduled: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+          k:{"name":"latest"}:
+            .: {}
+            f:annotations: {}
+            f:from: {}
+            f:generation: {}
+            f:importPolicy:
+              .: {}
+              f:importMode: {}
+              f:scheduled: {}
+            f:name: {}
+            f:referencePolicy:
+              .: {}
+              f:type: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:41:04Z"
+  name: driver-toolkit
+  namespace: openshift
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "13669"
+  uid: 7f76b533-83cc-4a00-a142-785109e520b9
+spec:
+  lookupPolicy:
+    local: false
+  tags:
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1328c4e7944b6d8eda40a8f789471a1aec63abda75ac1199ce098b965ec16709
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+      scheduled: true
+    name: 412.86.202301311551-0
+    referencePolicy:
+      type: Source
+  - annotations: null
+    from:
+      kind: DockerImage
+      name: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1328c4e7944b6d8eda40a8f789471a1aec63abda75ac1199ce098b965ec16709
+    generation: 2
+    importPolicy:
+      importMode: Legacy
+      scheduled: true
+    name: latest
+    referencePolicy:
+      type: Source
+status:
+  dockerImageRepository: ""
+  tags:
+  - items:
+    - created: "2023-05-02T12:41:23Z"
+      dockerImageReference: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1328c4e7944b6d8eda40a8f789471a1aec63abda75ac1199ce098b965ec16709
+      generation: 2
+      image: sha256:1328c4e7944b6d8eda40a8f789471a1aec63abda75ac1199ce098b965ec16709
+    tag: 412.86.202301311551-0
+  - items:
+    - created: "2023-05-02T12:41:23Z"
+      dockerImageReference: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:1328c4e7944b6d8eda40a8f789471a1aec63abda75ac1199ce098b965ec16709
+      generation: 2
+      image: sha256:1328c4e7944b6d8eda40a8f789471a1aec63abda75ac1199ce098b965ec16709
+    tag: latest

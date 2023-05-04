@@ -1,0 +1,190 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-05-04T14:39:43Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-05-04T14:39:43Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-05-04T18:37:42Z"
+  name: selfsubjectaccessreviews.v1.authorization.k8s.io
+  resourceVersion: "682206"
+  uid: dacb6f2d-f68c-47af-a09a-752b88493a65
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 25
+          verb: create
+        requestCount: 25
+        userAgent: Mozilla/5.0
+        username: kube:admin
+      nodeName: 192.168.1.126
+      requestCount: 25
+    requestCount: 25
+  last24h:
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 26
+          verb: create
+        requestCount: 26
+        userAgent: Mozilla/5.0
+        username: kube:admin
+      - byVerb:
+        - requestCount: 10
+          verb: create
+        requestCount: 10
+        userAgent: ""
+        username: kube:admin
+      nodeName: 192.168.1.126
+      requestCount: 36
+    requestCount: 36
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 19
+          verb: create
+        requestCount: 19
+        userAgent: Mozilla/5.0
+        username: kube:admin
+      - byVerb:
+        - requestCount: 10
+          verb: create
+        requestCount: 10
+        userAgent: ""
+        username: kube:admin
+      nodeName: 192.168.1.126
+      requestCount: 29
+    requestCount: 29
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 38
+          verb: create
+        requestCount: 38
+        userAgent: Mozilla/5.0
+        username: kube:admin
+      - byVerb:
+        - requestCount: 10
+          verb: create
+        requestCount: 10
+        userAgent: ""
+        username: kube:admin
+      nodeName: 192.168.1.126
+      requestCount: 48
+    requestCount: 48
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 25
+          verb: create
+        requestCount: 25
+        userAgent: Mozilla/5.0
+        username: kube:admin
+      nodeName: 192.168.1.126
+      requestCount: 25
+    requestCount: 25
+  - requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  requestCount: 138

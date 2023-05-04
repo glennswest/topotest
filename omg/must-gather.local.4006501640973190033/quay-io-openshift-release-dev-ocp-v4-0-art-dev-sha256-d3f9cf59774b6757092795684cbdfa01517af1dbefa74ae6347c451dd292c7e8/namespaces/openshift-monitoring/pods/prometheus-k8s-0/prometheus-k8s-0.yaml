@@ -1,0 +1,1313 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.0.90/23"],"mac_address":"0a:58:0a:80:00:5a","gateway_ips":["10.128.0.1"],"ip_address":"10.128.0.90/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.90"
+          ],
+          "mac": "0a:58:0a:80:00:5a",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.0.90"
+          ],
+          "mac": "0a:58:0a:80:00:5a",
+          "default": true,
+          "dns": {}
+      }]
+    kubectl.kubernetes.io/default-container: prometheus
+    openshift.io/scc: nonroot
+  creationTimestamp: "2023-05-02T12:45:47Z"
+  generateName: prometheus-k8s-
+  labels:
+    app.kubernetes.io/component: prometheus
+    app.kubernetes.io/instance: k8s
+    app.kubernetes.io/managed-by: prometheus-operator
+    app.kubernetes.io/name: prometheus
+    app.kubernetes.io/part-of: openshift-monitoring
+    app.kubernetes.io/version: 2.39.1
+    controller-revision-hash: prometheus-k8s-7669476fbb
+    operator.prometheus.io/name: k8s
+    operator.prometheus.io/shard: "0"
+    prometheus: k8s
+    statefulset.kubernetes.io/pod-name: prometheus-k8s-0
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:kubectl.kubernetes.io/default-container: {}
+          f:target.workload.openshift.io/management: {}
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/instance: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:app.kubernetes.io/version: {}
+          f:controller-revision-hash: {}
+          f:operator.prometheus.io/name: {}
+          f:operator.prometheus.io/shard: {}
+          f:prometheus: {}
+          f:statefulset.kubernetes.io/pod-name: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"9b09ef07-d756-40d3-8a37-3c530666fc87"}: {}
+      f:spec:
+        f:automountServiceAccountToken: {}
+        f:containers:
+          k:{"name":"config-reloader"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"SHARD"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/prometheus/config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/prometheus/config_out"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/prometheus/rules/prometheus-k8s-rulefiles-0"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"kube-rbac-proxy"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9092,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/tls/client"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"kube-rbac-proxy-thanos"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_IP"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":10902,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/kube-rbac-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/tls/client"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"prometheus"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:readinessProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+            f:startupProbe:
+              .: {}
+              f:exec:
+                .: {}
+                f:command: {}
+              f:failureThreshold: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/config_out"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/configmaps/kubelet-serving-ca-bundle"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/configmaps/metrics-client-ca"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/configmaps/serving-certs-ca-bundle"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/rules/prometheus-k8s-rulefiles-0"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/prometheus/secrets/kube-etcd-client-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/secrets/kube-rbac-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/secrets/metrics-client-certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/secrets/prometheus-k8s-proxy"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/secrets/prometheus-k8s-thanos-sidecar-tls"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/secrets/prometheus-k8s-tls"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/prometheus/web_config/web-config.yaml"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+                f:subPath: {}
+              k:{"mountPath":"/prometheus"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"prometheus-proxy"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"HTTP_PROXY"}:
+                .: {}
+                f:name: {}
+              k:{"name":"HTTPS_PROXY"}:
+                .: {}
+                f:name: {}
+              k:{"name":"NO_PROXY"}:
+                .: {}
+                f:name: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9091,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/pki/ca-trust/extracted/pem/"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+                f:readOnly: {}
+              k:{"mountPath":"/etc/proxy/secrets"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/tls/private"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"thanos-sidecar"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":10901,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+              k:{"containerPort":10902,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/tls/grpc"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:hostname: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"init-config-reloader"}:
+            .: {}
+            f:args: {}
+            f:command: {}
+            f:env:
+              .: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"SHARD"}:
+                .: {}
+                f:name: {}
+                f:value: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":8080,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:resources:
+              .: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:securityContext:
+              .: {}
+              f:allowPrivilegeEscalation: {}
+              f:capabilities:
+                .: {}
+                f:drop: {}
+              f:readOnlyRootFilesystem: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/etc/prometheus/config"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/prometheus/config_out"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/etc/prometheus/rules/prometheus-k8s-rulefiles-0"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:nodeSelector: {}
+        f:priorityClassName: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext:
+          .: {}
+          f:fsGroup: {}
+          f:runAsNonRoot: {}
+          f:runAsUser: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:subdomain: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"config"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"config-out"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"configmap-kubelet-serving-ca-bundle"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"configmap-metrics-client-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"configmap-serving-certs-ca-bundle"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"metrics-client-ca"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"prometheus-k8s-db"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"prometheus-k8s-rulefiles-0"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:name: {}
+            f:name: {}
+          k:{"name":"prometheus-trusted-ca-bundle"}:
+            .: {}
+            f:configMap:
+              .: {}
+              f:defaultMode: {}
+              f:items: {}
+              f:name: {}
+              f:optional: {}
+            f:name: {}
+          k:{"name":"secret-grpc-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"secret-kube-etcd-client-certs"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"secret-kube-rbac-proxy"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"secret-metrics-client-certs"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"secret-prometheus-k8s-proxy"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"secret-prometheus-k8s-thanos-sidecar-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"secret-prometheus-k8s-tls"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+          k:{"name":"tls-assets"}:
+            .: {}
+            f:name: {}
+            f:projected:
+              .: {}
+              f:defaultMode: {}
+              f:sources: {}
+          k:{"name":"web-config"}:
+            .: {}
+            f:name: {}
+            f:secret:
+              .: {}
+              f:defaultMode: {}
+              f:secretName: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-05-02T12:45:47Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: node
+    operation: Update
+    time: "2023-05-02T12:45:47Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:45:49Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.0.90"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:33:34Z"
+  name: prometheus-k8s-0
+  namespace: openshift-monitoring
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: StatefulSet
+    name: prometheus-k8s
+    uid: 9b09ef07-d756-40d3-8a37-3c530666fc87
+  resourceVersion: "631758"
+  uid: 6fc9ea05-f854-40c4-b7aa-1ce27f08f8ca
+spec:
+  automountServiceAccountToken: true
+  containers:
+  - args:
+    - --web.console.templates=/etc/prometheus/consoles
+    - --web.console.libraries=/etc/prometheus/console_libraries
+    - --storage.tsdb.retention.time=15d
+    - --config.file=/etc/prometheus/config_out/prometheus.env.yaml
+    - --storage.tsdb.path=/prometheus
+    - --web.enable-lifecycle
+    - --web.external-url=https://console-openshift-console.apps.sno.gw.lo/monitoring
+    - --web.route-prefix=/
+    - --web.listen-address=127.0.0.1:9090
+    - --web.config.file=/etc/prometheus/web_config/web-config.yaml
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:917b84445c725430f74f2041baa697d86d2a0bc971f6b9101591524daf8053f6
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      exec:
+        command:
+        - sh
+        - -c
+        - if [ -x "$(command -v curl)" ]; then exec curl --fail http://localhost:9090/-/healthy;
+          elif [ -x "$(command -v wget)" ]; then exec wget -q -O /dev/null http://localhost:9090/-/healthy;
+          else exit 1; fi
+      failureThreshold: 6
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 3
+    name: prometheus
+    readinessProbe:
+      exec:
+        command:
+        - sh
+        - -c
+        - if [ -x "$(command -v curl)" ]; then exec curl --fail http://localhost:9090/-/ready;
+          elif [ -x "$(command -v wget)" ]; then exec wget -q -O /dev/null http://localhost:9090/-/ready;
+          else exit 1; fi
+      failureThreshold: 3
+      periodSeconds: 5
+      successThreshold: 1
+      timeoutSeconds: 3
+    resources:
+      requests:
+        cpu: 70m
+        memory: 1Gi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+      readOnlyRootFilesystem: true
+    startupProbe:
+      exec:
+        command:
+        - sh
+        - -c
+        - if [ -x "$(command -v curl)" ]; then exec curl --fail http://localhost:9090/-/ready;
+          elif [ -x "$(command -v wget)" ]; then exec wget -q -O /dev/null http://localhost:9090/-/ready;
+          else exit 1; fi
+      failureThreshold: 240
+      periodSeconds: 15
+      successThreshold: 1
+      timeoutSeconds: 3
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/pki/ca-trust/extracted/pem/
+      name: prometheus-trusted-ca-bundle
+      readOnly: true
+    - mountPath: /etc/prometheus/config_out
+      name: config-out
+      readOnly: true
+    - mountPath: /etc/prometheus/certs
+      name: tls-assets
+      readOnly: true
+    - mountPath: /prometheus
+      name: prometheus-k8s-db
+    - mountPath: /etc/prometheus/rules/prometheus-k8s-rulefiles-0
+      name: prometheus-k8s-rulefiles-0
+    - mountPath: /etc/prometheus/web_config/web-config.yaml
+      name: web-config
+      readOnly: true
+      subPath: web-config.yaml
+    - mountPath: /etc/prometheus/secrets/kube-etcd-client-certs
+      name: secret-kube-etcd-client-certs
+      readOnly: true
+    - mountPath: /etc/prometheus/secrets/prometheus-k8s-tls
+      name: secret-prometheus-k8s-tls
+      readOnly: true
+    - mountPath: /etc/prometheus/secrets/prometheus-k8s-proxy
+      name: secret-prometheus-k8s-proxy
+      readOnly: true
+    - mountPath: /etc/prometheus/secrets/prometheus-k8s-thanos-sidecar-tls
+      name: secret-prometheus-k8s-thanos-sidecar-tls
+      readOnly: true
+    - mountPath: /etc/prometheus/secrets/kube-rbac-proxy
+      name: secret-kube-rbac-proxy
+      readOnly: true
+    - mountPath: /etc/prometheus/secrets/metrics-client-certs
+      name: secret-metrics-client-certs
+      readOnly: true
+    - mountPath: /etc/prometheus/configmaps/serving-certs-ca-bundle
+      name: configmap-serving-certs-ca-bundle
+      readOnly: true
+    - mountPath: /etc/prometheus/configmaps/kubelet-serving-ca-bundle
+      name: configmap-kubelet-serving-ca-bundle
+      readOnly: true
+    - mountPath: /etc/prometheus/configmaps/metrics-client-ca
+      name: configmap-metrics-client-ca
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-62szb
+      readOnly: true
+  - args:
+    - --listen-address=localhost:8080
+    - --reload-url=http://localhost:9090/-/reload
+    - --config-file=/etc/prometheus/config/prometheus.yaml.gz
+    - --config-envsubst-file=/etc/prometheus/config_out/prometheus.env.yaml
+    - --watched-dir=/etc/prometheus/rules/prometheus-k8s-rulefiles-0
+    command:
+    - /bin/prometheus-config-reloader
+    env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: SHARD
+      value: "0"
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d1705c63614eeb3feebc11b29e6a977c28bac2401092efae1d42b655259e2629
+    imagePullPolicy: IfNotPresent
+    name: config-reloader
+    resources:
+      requests:
+        cpu: 1m
+        memory: 10Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+      readOnlyRootFilesystem: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/prometheus/config
+      name: config
+    - mountPath: /etc/prometheus/config_out
+      name: config-out
+    - mountPath: /etc/prometheus/rules/prometheus-k8s-rulefiles-0
+      name: prometheus-k8s-rulefiles-0
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-62szb
+      readOnly: true
+  - args:
+    - sidecar
+    - --prometheus.url=http://localhost:9090/
+    - --tsdb.path=/prometheus
+    - --http-address=127.0.0.1:10902
+    - --grpc-server-tls-cert=/etc/tls/grpc/server.crt
+    - --grpc-server-tls-key=/etc/tls/grpc/server.key
+    - --grpc-server-tls-client-ca=/etc/tls/grpc/ca.crt
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:00d1be95201020c5cb1d3fae3435ee9e7dc22d8360481ec8609fa368c6ad306e
+    imagePullPolicy: IfNotPresent
+    name: thanos-sidecar
+    ports:
+    - containerPort: 10902
+      name: http
+      protocol: TCP
+    - containerPort: 10901
+      name: grpc
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 1m
+        memory: 25Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+      readOnlyRootFilesystem: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/tls/grpc
+      name: secret-grpc-tls
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-62szb
+      readOnly: true
+  - args:
+    - -provider=openshift
+    - -https-address=:9091
+    - -http-address=
+    - -email-domain=*
+    - -upstream=http://localhost:9090
+    - -openshift-service-account=prometheus-k8s
+    - '-openshift-sar={"resource": "namespaces", "verb": "get"}'
+    - '-openshift-delegate-urls={"/": {"resource": "namespaces", "verb": "get"}}'
+    - -tls-cert=/etc/tls/private/tls.crt
+    - -tls-key=/etc/tls/private/tls.key
+    - -client-secret-file=/var/run/secrets/kubernetes.io/serviceaccount/token
+    - -cookie-secret-file=/etc/proxy/secrets/session_secret
+    - -openshift-ca=/etc/pki/tls/cert.pem
+    - -openshift-ca=/var/run/secrets/kubernetes.io/serviceaccount/ca.crt
+    env:
+    - name: HTTP_PROXY
+    - name: HTTPS_PROXY
+    - name: NO_PROXY
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f968922564c3eea1c69d6bbe529d8970784d6cae8935afaf674d9fa7c0f72ea3
+    imagePullPolicy: IfNotPresent
+    name: prometheus-proxy
+    ports:
+    - containerPort: 9091
+      name: web
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 1m
+        memory: 20Mi
+    securityContext:
+      capabilities:
+        drop:
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: secret-prometheus-k8s-tls
+    - mountPath: /etc/proxy/secrets
+      name: secret-prometheus-k8s-proxy
+    - mountPath: /etc/pki/ca-trust/extracted/pem/
+      name: prometheus-trusted-ca-bundle
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-62szb
+      readOnly: true
+  - args:
+    - --secure-listen-address=0.0.0.0:9092
+    - --upstream=http://127.0.0.1:9090
+    - --allow-paths=/metrics
+    - --config-file=/etc/kube-rbac-proxy/config.yaml
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --client-ca-file=/etc/tls/client/client-ca.crt
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --logtostderr=true
+    - --tls-min-version=VersionTLS12
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy
+    ports:
+    - containerPort: 9092
+      name: metrics
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 1m
+        memory: 15Mi
+    securityContext:
+      capabilities:
+        drop:
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: secret-prometheus-k8s-tls
+    - mountPath: /etc/tls/client
+      name: configmap-metrics-client-ca
+      readOnly: true
+    - mountPath: /etc/kube-rbac-proxy
+      name: secret-kube-rbac-proxy
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-62szb
+      readOnly: true
+  - args:
+    - --secure-listen-address=[$(POD_IP)]:10902
+    - --upstream=http://127.0.0.1:10902
+    - --tls-cert-file=/etc/tls/private/tls.crt
+    - --tls-private-key-file=/etc/tls/private/tls.key
+    - --client-ca-file=/etc/tls/client/client-ca.crt
+    - --config-file=/etc/kube-rbac-proxy/config.yaml
+    - --tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+    - --allow-paths=/metrics
+    - --logtostderr=true
+    - --tls-min-version=VersionTLS12
+    - --client-ca-file=/etc/tls/client/client-ca.crt
+    env:
+    - name: POD_IP
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: status.podIP
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    imagePullPolicy: IfNotPresent
+    name: kube-rbac-proxy-thanos
+    ports:
+    - containerPort: 10902
+      name: thanos-proxy
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 1m
+        memory: 10Mi
+    securityContext:
+      capabilities:
+        drop:
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/tls/private
+      name: secret-prometheus-k8s-thanos-sidecar-tls
+    - mountPath: /etc/kube-rbac-proxy
+      name: secret-kube-rbac-proxy
+    - mountPath: /etc/tls/client
+      name: metrics-client-ca
+      readOnly: true
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-62szb
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  hostname: prometheus-k8s-0
+  imagePullSecrets:
+  - name: prometheus-k8s-dockercfg-2tz7f
+  initContainers:
+  - args:
+    - --watch-interval=0
+    - --listen-address=:8080
+    - --config-file=/etc/prometheus/config/prometheus.yaml.gz
+    - --config-envsubst-file=/etc/prometheus/config_out/prometheus.env.yaml
+    - --watched-dir=/etc/prometheus/rules/prometheus-k8s-rulefiles-0
+    command:
+    - /bin/prometheus-config-reloader
+    env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: SHARD
+      value: "0"
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d1705c63614eeb3feebc11b29e6a977c28bac2401092efae1d42b655259e2629
+    imagePullPolicy: IfNotPresent
+    name: init-config-reloader
+    ports:
+    - containerPort: 8080
+      name: reloader-web
+      protocol: TCP
+    resources:
+      requests:
+        cpu: 1m
+        memory: 10Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+        - KILL
+        - MKNOD
+        - SETGID
+        - SETUID
+      readOnlyRootFilesystem: true
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: FallbackToLogsOnError
+    volumeMounts:
+    - mountPath: /etc/prometheus/config
+      name: config
+    - mountPath: /etc/prometheus/config_out
+      name: config-out
+    - mountPath: /etc/prometheus/rules/prometheus-k8s-rulefiles-0
+      name: prometheus-k8s-rulefiles-0
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-62szb
+      readOnly: true
+  nodeName: node
+  nodeSelector:
+    kubernetes.io/os: linux
+  preemptionPolicy: PreemptLowerPriority
+  priority: 2000000000
+  priorityClassName: system-cluster-critical
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 65534
+    runAsNonRoot: true
+    runAsUser: 65534
+    seLinuxOptions:
+      level: s0:c21,c5
+  serviceAccount: prometheus-k8s
+  serviceAccountName: prometheus-k8s
+  subdomain: prometheus-operated
+  terminationGracePeriodSeconds: 600
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - name: config
+    secret:
+      defaultMode: 420
+      secretName: prometheus-k8s
+  - name: tls-assets
+    projected:
+      defaultMode: 420
+      sources:
+      - secret:
+          name: prometheus-k8s-tls-assets-0
+  - emptyDir: {}
+    name: config-out
+  - configMap:
+      defaultMode: 420
+      name: prometheus-k8s-rulefiles-0
+    name: prometheus-k8s-rulefiles-0
+  - name: web-config
+    secret:
+      defaultMode: 420
+      secretName: prometheus-k8s-web-config
+  - name: secret-kube-etcd-client-certs
+    secret:
+      defaultMode: 420
+      secretName: kube-etcd-client-certs
+  - name: secret-prometheus-k8s-tls
+    secret:
+      defaultMode: 420
+      secretName: prometheus-k8s-tls
+  - name: secret-prometheus-k8s-proxy
+    secret:
+      defaultMode: 420
+      secretName: prometheus-k8s-proxy
+  - name: secret-prometheus-k8s-thanos-sidecar-tls
+    secret:
+      defaultMode: 420
+      secretName: prometheus-k8s-thanos-sidecar-tls
+  - name: secret-kube-rbac-proxy
+    secret:
+      defaultMode: 420
+      secretName: kube-rbac-proxy
+  - name: secret-metrics-client-certs
+    secret:
+      defaultMode: 420
+      secretName: metrics-client-certs
+  - configMap:
+      defaultMode: 420
+      name: serving-certs-ca-bundle
+    name: configmap-serving-certs-ca-bundle
+  - configMap:
+      defaultMode: 420
+      name: kubelet-serving-ca-bundle
+    name: configmap-kubelet-serving-ca-bundle
+  - configMap:
+      defaultMode: 420
+      name: metrics-client-ca
+    name: configmap-metrics-client-ca
+  - emptyDir: {}
+    name: prometheus-k8s-db
+  - configMap:
+      defaultMode: 420
+      name: metrics-client-ca
+    name: metrics-client-ca
+  - name: secret-grpc-tls
+    secret:
+      defaultMode: 420
+      secretName: prometheus-k8s-grpc-tls-4brm9jglbl0pb
+  - configMap:
+      defaultMode: 420
+      items:
+      - key: ca-bundle.crt
+        path: tls-ca-bundle.pem
+      name: prometheus-trusted-ca-bundle-c7nmestil7q08
+      optional: true
+    name: prometheus-trusted-ca-bundle
+  - name: kube-api-access-62szb
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-02T12:45:50Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T16:33:34Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T16:33:34Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-02T12:45:47Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://6807d4ffd30412db943c12f283463178871db63ce48980375f328992dd95b37a
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d1705c63614eeb3feebc11b29e6a977c28bac2401092efae1d42b655259e2629
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d1705c63614eeb3feebc11b29e6a977c28bac2401092efae1d42b655259e2629
+    lastState: {}
+    name: config-reloader
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:04Z"
+  - containerID: cri-o://6a65392cf5faa238d238872cb1056533fd2dc7644498c2e4b5157cb2dc3c8270
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    lastState: {}
+    name: kube-rbac-proxy
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:28Z"
+  - containerID: cri-o://74d832a10ad107496758cc0688e18e2183ac3d31d1e558c6c2439f4410ca0234
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c28f27a3a10df13e5e8c074e8734683a6603ebaccd9d67e2095070fb6859b1d6
+    lastState: {}
+    name: kube-rbac-proxy-thanos
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:31Z"
+  - containerID: cri-o://3c43acecf0faa928945d067df43b0f9fdcbfe6ade85ebf15f58fb75daf737cc1
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:917b84445c725430f74f2041baa697d86d2a0bc971f6b9101591524daf8053f6
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:917b84445c725430f74f2041baa697d86d2a0bc971f6b9101591524daf8053f6
+    lastState: {}
+    name: prometheus
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:32:44Z"
+  - containerID: cri-o://e53f0c941fff930737a57662ded54d927c48260cd1658d19d727bbdbc44b9139
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f968922564c3eea1c69d6bbe529d8970784d6cae8935afaf674d9fa7c0f72ea3
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:f968922564c3eea1c69d6bbe529d8970784d6cae8935afaf674d9fa7c0f72ea3
+    lastState: {}
+    name: prometheus-proxy
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:26Z"
+  - containerID: cri-o://ddee3d7c118759d286c725421a54b48abea7000bb06af09121a40927930ad3bb
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:00d1be95201020c5cb1d3fae3435ee9e7dc22d8360481ec8609fa368c6ad306e
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:00d1be95201020c5cb1d3fae3435ee9e7dc22d8360481ec8609fa368c6ad306e
+    lastState: {}
+    name: thanos-sidecar
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:19Z"
+  hostIP: 192.168.1.126
+  initContainerStatuses:
+  - containerID: cri-o://8b92c1cc729dbab60f373be8360bf2c4511a2d35b1ae290d2b0f0691670366c3
+    image: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d1705c63614eeb3feebc11b29e6a977c28bac2401092efae1d42b655259e2629
+    imageID: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:d1705c63614eeb3feebc11b29e6a977c28bac2401092efae1d42b655259e2629
+    lastState: {}
+    name: init-config-reloader
+    ready: true
+    restartCount: 1
+    state:
+      terminated:
+        containerID: cri-o://8b92c1cc729dbab60f373be8360bf2c4511a2d35b1ae290d2b0f0691670366c3
+        exitCode: 0
+        finishedAt: "2023-05-04T16:31:30Z"
+        reason: Completed
+        startedAt: "2023-05-04T16:31:30Z"
+  phase: Running
+  podIP: 10.128.0.90
+  podIPs:
+  - ip: 10.128.0.90
+  qosClass: Burstable
+  startTime: "2023-05-02T12:45:47Z"

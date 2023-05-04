@@ -1,0 +1,126 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-05-02T12:17:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: authentication-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-04T14:39:38Z"
+  name: authentication
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "600154"
+  uid: b72ad20c-3aa8-46b1-ba48-bf3f2c335d37
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-02T12:42:28Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-05-02T12:43:35Z"
+    message: 'AuthenticatorCertKeyProgressing: All is well'
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-05-04T14:39:38Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-05-02T12:28:30Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: authentications
+  - group: config.openshift.io
+    name: cluster
+    resource: authentications
+  - group: config.openshift.io
+    name: cluster
+    resource: infrastructures
+  - group: config.openshift.io
+    name: cluster
+    resource: oauths
+  - group: route.openshift.io
+    name: oauth-openshift
+    namespace: openshift-authentication
+    resource: routes
+  - group: ""
+    name: oauth-openshift
+    namespace: openshift-authentication
+    resource: services
+  - group: ""
+    name: openshift-config
+    resource: namespaces
+  - group: ""
+    name: openshift-config-managed
+    resource: namespaces
+  - group: ""
+    name: openshift-authentication
+    resource: namespaces
+  - group: ""
+    name: openshift-authentication-operator
+    resource: namespaces
+  - group: ""
+    name: openshift-ingress
+    resource: namespaces
+  - group: ""
+    name: openshift-oauth-apiserver
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.12.2
+  - name: oauth-apiserver
+    version: 4.12.2
+  - name: oauth-openshift
+    version: 4.12.2_openshift

@@ -1,0 +1,545 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-05-02T12:39:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-05-02T12:39:58Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-05-04T18:45:54Z"
+  name: performanceprofiles.v2.performance.openshift.io
+  resourceVersion: "684338"
+  uid: 27b77003-35b7-46aa-8932-aa1cbbfd093a
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 15
+          verb: list
+        - requestCount: 30
+          verb: watch
+        requestCount: 45
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 15
+          verb: list
+        - requestCount: 30
+          verb: watch
+        requestCount: 45
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      nodeName: 192.168.1.126
+      requestCount: 90
+    requestCount: 90
+  last24h:
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 33
+          verb: watch
+        requestCount: 49
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 33
+          verb: watch
+        requestCount: 49
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 98
+    requestCount: 98
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 17
+          verb: list
+        - requestCount: 33
+          verb: watch
+        requestCount: 50
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 17
+          verb: list
+        - requestCount: 33
+          verb: watch
+        requestCount: 50
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 100
+    requestCount: 100
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 17
+          verb: list
+        - requestCount: 34
+          verb: watch
+        requestCount: 51
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 17
+          verb: list
+        - requestCount: 34
+          verb: watch
+        requestCount: 51
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 102
+    requestCount: 102
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 15
+          verb: list
+        - requestCount: 30
+          verb: watch
+        requestCount: 45
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 15
+          verb: list
+        - requestCount: 30
+          verb: watch
+        requestCount: 45
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      nodeName: 192.168.1.126
+      requestCount: 90
+    requestCount: 90
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 15
+          verb: list
+        - requestCount: 29
+          verb: watch
+        requestCount: 44
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 15
+          verb: list
+        - requestCount: 29
+          verb: watch
+        requestCount: 44
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      nodeName: 192.168.1.126
+      requestCount: 88
+    requestCount: 88
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 20
+          verb: list
+        - requestCount: 40
+          verb: watch
+        requestCount: 60
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 20
+          verb: list
+        - requestCount: 40
+          verb: watch
+        requestCount: 60
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 120
+    requestCount: 120
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 15
+          verb: list
+        - requestCount: 30
+          verb: watch
+        requestCount: 45
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 15
+          verb: list
+        - requestCount: 30
+          verb: watch
+        requestCount: 45
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      nodeName: 192.168.1.126
+      requestCount: 90
+    requestCount: 90
+  - requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 16
+          verb: list
+        - requestCount: 32
+          verb: watch
+        requestCount: 48
+        userAgent: cluster-node-tuning-operator/v0.0.0
+        username: system:serviceaccount:openshift-cluster-node-tuning-operator:cluster-node-tuning-operator
+      nodeName: 192.168.1.126
+      requestCount: 96
+    requestCount: 96
+  requestCount: 2224

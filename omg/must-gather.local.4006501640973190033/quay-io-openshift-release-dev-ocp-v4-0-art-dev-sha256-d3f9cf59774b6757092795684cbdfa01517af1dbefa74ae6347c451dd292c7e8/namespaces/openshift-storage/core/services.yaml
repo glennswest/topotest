@@ -1,0 +1,365 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-05-04T14:34:59Z"
+    labels:
+      app.kubernetes.io/compose: metrics
+      app.kubernetes.io/part-of: lvms-provisioner
+      operators.coreos.com/lvms-operator.openshift-storage: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/compose: {}
+            f:app.kubernetes.io/part-of: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a6933306-959a-4f9b-ade5-3a728a3e4be8"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":23532,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2023-05-04T14:34:59Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/lvms-operator.openshift-storage: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T14:35:24Z"
+    name: lvms-node-metrics
+    namespace: openshift-storage
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: lvms-operator.v4.12.1
+      uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+    resourceVersion: "599045"
+    uid: dcdc84f6-0f54-425f-a384-38822e3a34ff
+  spec:
+    clusterIP: 172.30.120.31
+    clusterIPs:
+    - 172.30.120.31
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: lvms-metrics
+      port: 23532
+      protocol: TCP
+      targetPort: 23532
+    selector:
+      exporter: lvms-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:03Z"
+    labels:
+      app.kubernetes.io/name: lvms-operator
+      operators.coreos.com/lvms-operator.openshift-storage: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a6933306-959a-4f9b-ade5-3a728a3e4be8"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2023-05-04T14:35:03Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/lvms-operator.openshift-storage: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T14:35:22Z"
+    name: lvms-operator-metrics-service
+    namespace: openshift-storage
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: lvms-operator.v4.12.1
+      uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+    resourceVersion: "599010"
+    uid: 4d5840f3-92a2-41c7-a2db-ea4dc83476ce
+  spec:
+    clusterIP: 172.30.249.250
+    clusterIPs:
+    - 172.30.249.250
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+      targetPort: https
+    selector:
+      app.kubernetes.io/name: lvms-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:26Z"
+    labels:
+      operators.coreos.com/lvms-operator.openshift-storage: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:operators.coreos.com/lvms-operator.openshift-storage: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a6933306-959a-4f9b-ade5-3a728a3e4be8"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T16:33:26Z"
+    name: lvms-operator-service
+    namespace: openshift-storage
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: lvms-operator.v4.12.1
+      uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+    resourceVersion: "631624"
+    uid: 4e422863-8d48-4555-bdd5-727374081a12
+  spec:
+    clusterIP: 172.30.91.48
+    clusterIPs:
+    - 172.30.91.48
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: "443"
+      port: 443
+      protocol: TCP
+      targetPort: 9443
+    selector:
+      app.kubernetes.io/name: lvms-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    annotations:
+      service.beta.openshift.io/serving-cert-secret-name: lvms-operator-webhook-server-cert
+    creationTimestamp: "2023-05-04T14:35:07Z"
+    labels:
+      operators.coreos.com/lvms-operator.openshift-storage: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/serving-cert-secret-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a6933306-959a-4f9b-ade5-3a728a3e4be8"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":443,"protocol":"TCP"}:
+              .: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2023-05-04T14:35:07Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:operators.coreos.com/lvms-operator.openshift-storage: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T14:35:25Z"
+    name: lvms-webhook-service
+    namespace: openshift-storage
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: lvms-operator.v4.12.1
+      uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+    resourceVersion: "599056"
+    uid: ea3f4a34-086c-4b43-b8f2-53ee20c6aeaa
+  spec:
+    clusterIP: 172.30.203.38
+    clusterIPs:
+    - 172.30.203.38
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - port: 443
+      protocol: TCP
+      targetPort: 9443
+    selector:
+      app.kubernetes.io/name: lvms-operator
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+- apiVersion: v1
+  kind: Service
+  metadata:
+    creationTimestamp: "2023-05-04T14:35:00Z"
+    labels:
+      app.kubernetes.io/compose: metrics
+      app.kubernetes.io/part-of: lvms-provisioner
+      operators.coreos.com/lvms-operator.openshift-storage: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            .: {}
+            f:app.kubernetes.io/compose: {}
+            f:app.kubernetes.io/part-of: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"a6933306-959a-4f9b-ade5-3a728a3e4be8"}: {}
+        f:spec:
+          f:internalTrafficPolicy: {}
+          f:ports:
+            .: {}
+            k:{"port":8080,"protocol":"TCP"}:
+              .: {}
+              f:name: {}
+              f:port: {}
+              f:protocol: {}
+              f:targetPort: {}
+          f:selector: {}
+          f:sessionAffinity: {}
+          f:type: {}
+      manager: catalog
+      operation: Update
+      time: "2023-05-04T14:35:00Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:labels:
+            f:operators.coreos.com/lvms-operator.openshift-storage: {}
+      manager: olm
+      operation: Update
+      time: "2023-05-04T14:35:26Z"
+    name: topolvm-node-metrics
+    namespace: openshift-storage
+    ownerReferences:
+    - apiVersion: operators.coreos.com/v1alpha1
+      blockOwnerDeletion: false
+      controller: false
+      kind: ClusterServiceVersion
+      name: lvms-operator.v4.12.1
+      uid: a6933306-959a-4f9b-ade5-3a728a3e4be8
+    resourceVersion: "599066"
+    uid: 95da0a00-4daa-468e-b2dd-b6bcf7d7ae7f
+  spec:
+    clusterIP: 172.30.38.52
+    clusterIPs:
+    - 172.30.38.52
+    internalTrafficPolicy: Cluster
+    ipFamilies:
+    - IPv4
+    ipFamilyPolicy: SingleStack
+    ports:
+    - name: topolvm-metrics
+      port: 8080
+      protocol: TCP
+      targetPort: 8080
+    selector:
+      app.kubernetes.io/component: topolvm-node
+    sessionAffinity: None
+    type: ClusterIP
+  status:
+    loadBalancer: {}
+kind: ServiceList
+metadata:
+  resourceVersion: "684671"

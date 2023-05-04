@@ -1,0 +1,6 @@
+2023-05-04T16:32:21.912425570Z I0504 16:32:21.912321       1 main.go:151] Reading config file: /etc/baremetal-kube-rbac-proxy/config-file.yaml
+2023-05-04T16:32:21.912819720Z I0504 16:32:21.912806       1 main.go:187] Valid token audiences: 
+2023-05-04T16:32:21.912862891Z I0504 16:32:21.912854       1 main.go:337] Reading certificate files
+2023-05-04T16:32:21.912894350Z I0504 16:32:21.912885       1 reloader.go:98] reloading key /etc/tls/private/tls.key certificate /etc/tls/private/tls.crt
+2023-05-04T16:32:21.912998375Z I0504 16:32:21.912986       1 main.go:371] Starting TCP socket on 0.0.0.0:8443
+2023-05-04T16:32:21.913280164Z I0504 16:32:21.913263       1 main.go:378] Listening securely on 0.0.0.0:8443

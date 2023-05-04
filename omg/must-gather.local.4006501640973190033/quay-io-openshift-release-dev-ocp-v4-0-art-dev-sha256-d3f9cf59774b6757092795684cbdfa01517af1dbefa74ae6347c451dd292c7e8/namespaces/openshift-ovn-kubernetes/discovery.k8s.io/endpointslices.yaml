@@ -1,0 +1,208 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 192.168.1.126
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: ovnkube-master-9fm5k
+      namespace: openshift-ovn-kubernetes
+      uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:30:59Z"
+    creationTimestamp: "2023-05-02T12:26:12Z"
+    generateName: ovn-kubernetes-master-
+    generation: 5
+    labels:
+      app: ovnkube-master
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: ovn-kubernetes-master
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"e41af743-754f-4b2f-a516-8b98bd6036de"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:30:59Z"
+    name: ovn-kubernetes-master-nfq29
+    namespace: openshift-ovn-kubernetes
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: ovn-kubernetes-master
+      uid: e41af743-754f-4b2f-a516-8b98bd6036de
+    resourceVersion: "629993"
+    uid: f34cc03a-347d-4193-ac07-c27f5ee4b085
+  ports:
+  - name: metrics
+    port: 9102
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 192.168.1.126
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: ovnkube-node-9c47r
+      namespace: openshift-ovn-kubernetes
+      uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:31:04Z"
+    creationTimestamp: "2023-05-02T12:26:12Z"
+    generateName: ovn-kubernetes-node-
+    generation: 7
+    labels:
+      app: ovnkube-node
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: ovn-kubernetes-node
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"1cc5c58c-b8bd-4c13-9eca-bdd369626647"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:31:04Z"
+    name: ovn-kubernetes-node-n2q4c
+    namespace: openshift-ovn-kubernetes
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: ovn-kubernetes-node
+      uid: 1cc5c58c-b8bd-4c13-9eca-bdd369626647
+    resourceVersion: "630033"
+    uid: 86ab5cdb-41f2-4a87-aac8-cc39994dece7
+  ports:
+  - name: ovn-metrics
+    port: 9105
+    protocol: TCP
+  - name: metrics
+    port: 9103
+    protocol: TCP
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 192.168.1.126
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: ovnkube-master-9fm5k
+      namespace: openshift-ovn-kubernetes
+      uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:30:59Z"
+    creationTimestamp: "2023-05-02T12:26:10Z"
+    generateName: ovnkube-db-
+    generation: 5
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: ovnkube-db
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"8d66dcf6-a9b0-496f-b3aa-43d941d0e44c"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:30:59Z"
+    name: ovnkube-db-46sph
+    namespace: openshift-ovn-kubernetes
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: ovnkube-db
+      uid: 8d66dcf6-a9b0-496f-b3aa-43d941d0e44c
+    resourceVersion: "629992"
+    uid: a5291062-a639-448e-8882-b2cec8bb09e5
+  ports:
+  - name: south
+    port: 9642
+    protocol: TCP
+  - name: north
+    port: 9641
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "684720"

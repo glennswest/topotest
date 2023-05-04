@@ -1,0 +1,2 @@
+2023-05-04T16:31:30.237321563Z level=info ts=2023-05-04T16:31:30.237247003Z caller=main.go:111 msg="Starting prometheus-config-reloader" version="(version=0.60.1, branch=rhaos-4.12-rhel-8, revision=0b07c0f)"
+2023-05-04T16:31:30.237426089Z level=info ts=2023-05-04T16:31:30.237407965Z caller=main.go:112 build_context="(go=go1.19.4, user=root, date=20230105-01:21:51)"

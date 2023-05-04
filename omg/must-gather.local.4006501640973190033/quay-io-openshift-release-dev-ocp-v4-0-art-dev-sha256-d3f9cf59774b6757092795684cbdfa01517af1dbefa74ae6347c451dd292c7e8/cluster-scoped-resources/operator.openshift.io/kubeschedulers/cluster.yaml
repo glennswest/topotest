@@ -1,0 +1,199 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: KubeScheduler
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2023-05-02T12:18:09Z"
+  generation: 2
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:18:09Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:servingInfo:
+            .: {}
+            f:cipherSuites: {}
+            f:minTLSVersion: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    time: "2023-05-02T12:28:41Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:latestAvailableRevision: {}
+        f:latestAvailableRevisionReason: {}
+        f:nodeStatuses: {}
+        f:readyReplicas: {}
+    manager: cluster-kube-scheduler-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:36:07Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "633226"
+  uid: 4553e01a-cf09-489b-8892-440160ff1e20
+spec:
+  logLevel: Normal
+  managementState: Managed
+  observedConfig:
+    servingInfo:
+      cipherSuites:
+      - TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+      - TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+      - TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256
+      - TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256
+      minTLSVersion: VersionTLS12
+  operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-02T12:28:38Z"
+    reason: AsExpected
+    status: "False"
+    type: MissingStaticPodControllerDegraded
+  - lastTransitionTime: "2023-05-04T16:36:07Z"
+    status: "False"
+    type: StaticPodsDegraded
+  - lastTransitionTime: "2023-05-02T12:41:08Z"
+    message: All master nodes are ready
+    reason: MasterNodesReady
+    status: "False"
+    type: NodeControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:28:39Z"
+    status: "False"
+    type: InstallerPodPendingDegraded
+  - lastTransitionTime: "2023-05-02T12:28:39Z"
+    status: "False"
+    type: InstallerPodContainerWaitingDegraded
+  - lastTransitionTime: "2023-05-02T12:28:39Z"
+    status: "False"
+    type: InstallerPodNetworkingDegraded
+  - lastTransitionTime: "2023-05-02T12:39:09Z"
+    status: "False"
+    type: RevisionControllerDegraded
+  - lastTransitionTime: "2023-05-03T06:45:14Z"
+    reason: AsExpected
+    status: "False"
+    type: KubeControllerManagerStaticResourcesDegraded
+  - lastTransitionTime: "2023-05-02T12:28:45Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2023-05-03T06:45:18Z"
+    status: "False"
+    type: TargetConfigControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:28:48Z"
+    reason: AsExpected
+    status: "False"
+    type: GuardControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:28:50Z"
+    reason: NoUnsupportedConfigOverrides
+    status: "True"
+    type: UnsupportedConfigOverridesUpgradeable
+  - lastTransitionTime: "2023-05-02T12:28:51Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2023-05-02T12:39:00Z"
+    status: "False"
+    type: InstallerControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:42:45Z"
+    message: 1 nodes are active; 1 nodes are at revision 5
+    status: "True"
+    type: StaticPodsAvailable
+  - lastTransitionTime: "2023-05-02T12:42:45Z"
+    message: 1 nodes are at revision 5
+    reason: AllNodesAtLatestRevision
+    status: "False"
+    type: NodeInstallerProgressing
+  - lastTransitionTime: "2023-05-02T12:42:45Z"
+    status: "False"
+    type: NodeInstallerDegraded
+  - lastTransitionTime: "2023-05-02T12:28:53Z"
+    reason: AsExpected
+    status: "False"
+    type: BackingResourceControllerDegraded
+  latestAvailableRevision: 5
+  latestAvailableRevisionReason: ""
+  nodeStatuses:
+  - currentRevision: 5
+    lastFailedCount: 1
+    lastFailedReason: InstallerFailed
+    lastFailedRevision: 5
+    lastFailedRevisionErrors:
+    - |
+      installer: ry-client-token"
+       },
+       OptionalSecretNamePrefixes: ([]string) (len=1 cap=1) {
+        (string) (len=12) "serving-cert"
+       },
+       ConfigMapNamePrefixes: ([]string) (len=5 cap=8) {
+        (string) (len=18) "kube-scheduler-pod",
+        (string) (len=6) "config",
+        (string) (len=17) "serviceaccount-ca",
+        (string) (len=20) "scheduler-kubeconfig",
+        (string) (len=37) "kube-scheduler-cert-syncer-kubeconfig"
+       },
+       OptionalConfigMapNamePrefixes: ([]string) (len=1 cap=1) {
+        (string) (len=16) "policy-configmap"
+       },
+       CertSecretNames: ([]string) (len=1 cap=1) {
+        (string) (len=30) "kube-scheduler-client-cert-key"
+       },
+       OptionalCertSecretNamePrefixes: ([]string) <nil>,
+       CertConfigMapNamePrefixes: ([]string) <nil>,
+       OptionalCertConfigMapNamePrefixes: ([]string) <nil>,
+       CertDir: (string) (len=57) "/etc/kubernetes/static-pod-resources/kube-scheduler-certs",
+       ResourceDir: (string) (len=36) "/etc/kubernetes/static-pod-resources",
+       PodManifestDir: (string) (len=25) "/etc/kubernetes/manifests",
+       Timeout: (time.Duration) 2m0s,
+       StaticPodManifestsLockFile: (string) "",
+       PodMutationFns: ([]installerpod.PodMutationFunc) <nil>,
+       KubeletVersion: (string) ""
+      })
+      I0502 12:39:53.966228       1 cmd.go:410] Getting controller reference for node node
+      I0502 12:39:54.042020       1 cmd.go:423] Waiting for installer revisions to settle for node node
+      I0502 12:39:54.044113       1 cmd.go:503] Pod container: installer state for node node is not terminated, waiting
+      I0502 12:40:04.053024       1 cmd.go:503] Pod container: installer state for node node is not terminated, waiting
+      I0502 12:40:14.047265       1 cmd.go:503] Pod container: installer state for node node is not terminated, waiting
+      I0502 12:40:24.047809       1 cmd.go:515] Waiting additional period after revisions have settled for node node
+      I0502 12:40:54.048511       1 cmd.go:521] Getting installer pods for node node
+      F0502 12:40:54.049408       1 cmd.go:106] Get "https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/pods?labelSelector=app%3Dinstaller": dial tcp 172.30.0.1:443: connect: connection refused
+    lastFailedTime: "2023-05-02T12:41:08Z"
+    nodeName: node
+  readyReplicas: 0

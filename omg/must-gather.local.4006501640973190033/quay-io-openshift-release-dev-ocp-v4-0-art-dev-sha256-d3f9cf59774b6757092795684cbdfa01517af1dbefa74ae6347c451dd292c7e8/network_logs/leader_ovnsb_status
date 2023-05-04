@@ -1,0 +1,21 @@
+6751
+Name: OVN_Southbound
+Cluster ID: f8d9 (f8d92393-4420-49d1-8d0a-21b72a18082b)
+Server ID: 6751 (6751a12f-5e07-42f6-902b-7c926169f561)
+Address: ssl:192.168.1.126:9644
+Status: cluster member
+Role: leader
+Term: 3
+Leader: self
+Vote: self
+
+Last Election started 8205830 ms ago, reason: timeout
+Last Election won: 8205830 ms ago
+Election timer: 16000
+Log: [13793, 18211]
+Entries not yet committed: 0
+Entries not yet applied: 0
+Connections:
+Disconnections: 0
+Servers:
+    6751 (6751 at ssl:192.168.1.126:9644) (self) next_index=15171 match_index=18210

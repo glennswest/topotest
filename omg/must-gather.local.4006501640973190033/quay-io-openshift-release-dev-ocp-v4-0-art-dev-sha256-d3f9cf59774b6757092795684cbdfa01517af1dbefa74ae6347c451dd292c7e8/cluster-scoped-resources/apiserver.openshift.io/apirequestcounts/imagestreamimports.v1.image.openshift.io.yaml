@@ -1,0 +1,305 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-05-02T13:01:43Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-05-02T13:01:43Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-05-04T18:45:28Z"
+  name: imagestreamimports.v1.image.openshift.io
+  resourceVersion: "684229"
+  uid: 0f45c85b-6822-4d6c-aed5-66ddbbaba1ae
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 5
+          verb: create
+        requestCount: 5
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 5
+    requestCount: 5
+  last24h:
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 6
+          verb: create
+        requestCount: 6
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 6
+    requestCount: 6
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 5
+          verb: create
+        requestCount: 5
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 5
+    requestCount: 5
+  - requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: create
+        requestCount: 8
+        userAgent: openshift-controller-manager/v0.0.0
+        username: system:serviceaccount:openshift-infra:image-import-controller
+      nodeName: 192.168.1.126
+      requestCount: 8
+    requestCount: 8
+  requestCount: 179

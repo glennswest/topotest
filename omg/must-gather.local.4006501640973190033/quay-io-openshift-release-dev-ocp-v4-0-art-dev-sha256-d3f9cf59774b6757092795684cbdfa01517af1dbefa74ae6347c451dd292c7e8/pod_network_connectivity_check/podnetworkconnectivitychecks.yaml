@@ -1,0 +1,1150 @@
+apiVersion: v1
+items:
+- apiVersion: controlplane.operator.openshift.io/v1alpha1
+  kind: PodNetworkConnectivityCheck
+  metadata:
+    creationTimestamp: "2023-05-02T12:50:28Z"
+    generation: 1
+    name: network-check-source-node-to-kubernetes-apiserver-endpoint-node
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: v1
+      kind: Node
+      name: node
+      uid: 2c5f7466-57f6-4492-b9a5-ad2d06f92709
+    resourceVersion: "683901"
+    uid: ea5cc294-0424-471a-973e-10df40188869
+  spec:
+    sourcePod: network-check-source-b94cc7564-844f6
+    targetEndpoint: 192.168.1.126:6443
+    tlsClientCert:
+      name: ""
+  status:
+    conditions:
+    - lastTransitionTime: "2023-05-03T07:30:28Z"
+      message: 'kubernetes-apiserver-endpoint-node: tcp connection to 192.168.1.126:6443
+        succeeded'
+      reason: TCPConnectSuccess
+      status: "True"
+      type: Reachable
+    failures:
+    - latency: 933.482µs
+      message: 'kubernetes-apiserver-endpoint-node: failed to establish a TCP connection
+        to 192.168.1.126:6443: dial tcp 192.168.1.126:6443: connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2023-05-03T07:26:28Z"
+    outages:
+    - end: "2023-05-03T07:27:28Z"
+      endLogs:
+      - latency: 650.039µs
+        message: 'kubernetes-apiserver-endpoint-node: tcp connection to 192.168.1.126:6443
+          succeeded'
+        reason: TCPConnect
+        success: true
+        time: "2023-05-03T07:27:28Z"
+      - latency: 933.482µs
+        message: 'kubernetes-apiserver-endpoint-node: failed to establish a TCP connection
+          to 192.168.1.126:6443: dial tcp 192.168.1.126:6443: connect: connection
+          refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-03T07:26:28Z"
+      message: Connectivity restored after 59.999983396s
+      start: "2023-05-03T07:26:28Z"
+      startLogs:
+      - latency: 933.482µs
+        message: 'kubernetes-apiserver-endpoint-node: failed to establish a TCP connection
+          to 192.168.1.126:6443: dial tcp 192.168.1.126:6443: connect: connection
+          refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-03T07:26:28Z"
+    successes:
+    - latency: 1.188039ms
+      message: 'kubernetes-apiserver-endpoint-node: tcp connection to 192.168.1.126:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:44:20Z"
+    - latency: 7.808861ms
+      message: 'kubernetes-apiserver-endpoint-node: tcp connection to 192.168.1.126:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:43:20Z"
+    - latency: 1.100976ms
+      message: 'kubernetes-apiserver-endpoint-node: tcp connection to 192.168.1.126:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:42:20Z"
+    - latency: 24.500647ms
+      message: 'kubernetes-apiserver-endpoint-node: tcp connection to 192.168.1.126:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:41:20Z"
+    - latency: 1.153263ms
+      message: 'kubernetes-apiserver-endpoint-node: tcp connection to 192.168.1.126:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:40:20Z"
+    - latency: 959.81µs
+      message: 'kubernetes-apiserver-endpoint-node: tcp connection to 192.168.1.126:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:39:20Z"
+    - latency: 1.896809ms
+      message: 'kubernetes-apiserver-endpoint-node: tcp connection to 192.168.1.126:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:38:20Z"
+    - latency: 1.469396ms
+      message: 'kubernetes-apiserver-endpoint-node: tcp connection to 192.168.1.126:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:37:20Z"
+    - latency: 3.025567ms
+      message: 'kubernetes-apiserver-endpoint-node: tcp connection to 192.168.1.126:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:36:20Z"
+    - latency: 2.794233ms
+      message: 'kubernetes-apiserver-endpoint-node: tcp connection to 192.168.1.126:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:35:20Z"
+- apiVersion: controlplane.operator.openshift.io/v1alpha1
+  kind: PodNetworkConnectivityCheck
+  metadata:
+    creationTimestamp: "2023-05-02T12:50:28Z"
+    generation: 1
+    name: network-check-source-node-to-kubernetes-apiserver-service-cluster
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: v1
+      kind: Node
+      name: node
+      uid: 2c5f7466-57f6-4492-b9a5-ad2d06f92709
+    resourceVersion: "683904"
+    uid: 3127637f-bd57-42a2-b8e9-ec99dccfa316
+  spec:
+    sourcePod: network-check-source-b94cc7564-844f6
+    targetEndpoint: 172.30.153.1:443
+    tlsClientCert:
+      name: ""
+  status:
+    conditions:
+    - lastTransitionTime: "2023-05-03T07:30:28Z"
+      message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+        succeeded'
+      reason: TCPConnectSuccess
+      status: "True"
+      type: Reachable
+    failures:
+    - latency: 852.039µs
+      message: 'kubernetes-apiserver-service-cluster: failed to establish a TCP connection
+        to 172.30.153.1:443: dial tcp 172.30.153.1:443: connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2023-05-03T07:26:28Z"
+    - latency: 745.549µs
+      message: 'kubernetes-apiserver-service-cluster: failed to establish a TCP connection
+        to 172.30.153.1:443: dial tcp 172.30.153.1:443: connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2023-05-03T06:45:28Z"
+    - latency: 0s
+      message: 'kubernetes-apiserver-service-cluster: failed to establish a TCP connection
+        to 172.30.153.1:443: dial tcp 172.30.153.1:443: i/o timeout'
+      reason: TCPConnectError
+      success: false
+      time: null
+    outages:
+    - end: "2023-05-03T07:27:28Z"
+      endLogs:
+      - latency: 702.047µs
+        message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+          succeeded'
+        reason: TCPConnect
+        success: true
+        time: "2023-05-03T07:27:28Z"
+      - latency: 852.039µs
+        message: 'kubernetes-apiserver-service-cluster: failed to establish a TCP
+          connection to 172.30.153.1:443: dial tcp 172.30.153.1:443: connect: connection
+          refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-03T07:26:28Z"
+      message: Connectivity restored after 1m0.004621722s
+      start: "2023-05-03T07:26:28Z"
+      startLogs:
+      - latency: 852.039µs
+        message: 'kubernetes-apiserver-service-cluster: failed to establish a TCP
+          connection to 172.30.153.1:443: dial tcp 172.30.153.1:443: connect: connection
+          refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-03T07:26:28Z"
+    - end: "2023-05-03T06:46:28Z"
+      endLogs:
+      - latency: 900.741µs
+        message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+          succeeded'
+        reason: TCPConnect
+        success: true
+        time: "2023-05-03T06:46:28Z"
+      - latency: 745.549µs
+        message: 'kubernetes-apiserver-service-cluster: failed to establish a TCP
+          connection to 172.30.153.1:443: dial tcp 172.30.153.1:443: connect: connection
+          refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-03T06:45:28Z"
+      message: Connectivity restored after 59.999421295s
+      start: "2023-05-03T06:45:28Z"
+      startLogs:
+      - latency: 745.549µs
+        message: 'kubernetes-apiserver-service-cluster: failed to establish a TCP
+          connection to 172.30.153.1:443: dial tcp 172.30.153.1:443: connect: connection
+          refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-03T06:45:28Z"
+    successes:
+    - latency: 4.764609ms
+      message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:44:20Z"
+    - latency: 1.085817ms
+      message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:43:20Z"
+    - latency: 3.269685ms
+      message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:42:20Z"
+    - latency: 24.863448ms
+      message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:41:20Z"
+    - latency: 4.35472ms
+      message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:40:20Z"
+    - latency: 4.777794ms
+      message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:39:20Z"
+    - latency: 2.350911ms
+      message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:38:20Z"
+    - latency: 2.112944ms
+      message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:37:20Z"
+    - latency: 3.434113ms
+      message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:36:20Z"
+    - latency: 3.396012ms
+      message: 'kubernetes-apiserver-service-cluster: tcp connection to 172.30.153.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:35:20Z"
+- apiVersion: controlplane.operator.openshift.io/v1alpha1
+  kind: PodNetworkConnectivityCheck
+  metadata:
+    creationTimestamp: "2023-05-02T12:50:28Z"
+    generation: 1
+    name: network-check-source-node-to-kubernetes-default-service-cluster-0
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: v1
+      kind: Node
+      name: node
+      uid: 2c5f7466-57f6-4492-b9a5-ad2d06f92709
+    resourceVersion: "683900"
+    uid: 9f50abd3-42ce-4d38-892a-4fccdb86f988
+  spec:
+    sourcePod: network-check-source-b94cc7564-844f6
+    targetEndpoint: 172.30.0.1:443
+    tlsClientCert:
+      name: ""
+  status:
+    conditions:
+    - lastTransitionTime: "2023-05-03T07:30:28Z"
+      message: 'kubernetes-default-service-cluster-0: tcp connection to 172.30.0.1:443
+        succeeded'
+      reason: TCPConnectSuccess
+      status: "True"
+      type: Reachable
+    failures:
+    - latency: 119.724µs
+      message: 'kubernetes-default-service-cluster-0: failed to establish a TCP connection
+        to 172.30.0.1:443: dial tcp 172.30.0.1:443: connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2023-05-03T07:26:28Z"
+    - latency: 0s
+      message: 'kubernetes-default-service-cluster-0: failed to establish a TCP connection
+        to 172.30.0.1:443: dial tcp 172.30.0.1:443: i/o timeout'
+      reason: TCPConnectError
+      success: false
+      time: null
+    outages:
+    - end: "2023-05-03T07:27:28Z"
+      endLogs:
+      - latency: 1.226282ms
+        message: 'kubernetes-default-service-cluster-0: tcp connection to 172.30.0.1:443
+          succeeded'
+        reason: TCPConnect
+        success: true
+        time: "2023-05-03T07:27:28Z"
+      - latency: 119.724µs
+        message: 'kubernetes-default-service-cluster-0: failed to establish a TCP
+          connection to 172.30.0.1:443: dial tcp 172.30.0.1:443: connect: connection
+          refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-03T07:26:28Z"
+      message: Connectivity restored after 1m0.000183292s
+      start: "2023-05-03T07:26:28Z"
+      startLogs:
+      - latency: 119.724µs
+        message: 'kubernetes-default-service-cluster-0: failed to establish a TCP
+          connection to 172.30.0.1:443: dial tcp 172.30.0.1:443: connect: connection
+          refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-03T07:26:28Z"
+    successes:
+    - latency: 1.037807ms
+      message: 'kubernetes-default-service-cluster-0: tcp connection to 172.30.0.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:44:20Z"
+    - latency: 757.632µs
+      message: 'kubernetes-default-service-cluster-0: tcp connection to 172.30.0.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:43:20Z"
+    - latency: 1.58838ms
+      message: 'kubernetes-default-service-cluster-0: tcp connection to 172.30.0.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:42:20Z"
+    - latency: 24.583763ms
+      message: 'kubernetes-default-service-cluster-0: tcp connection to 172.30.0.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:41:20Z"
+    - latency: 4.1415ms
+      message: 'kubernetes-default-service-cluster-0: tcp connection to 172.30.0.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:40:20Z"
+    - latency: 2.16434ms
+      message: 'kubernetes-default-service-cluster-0: tcp connection to 172.30.0.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:39:20Z"
+    - latency: 2.377882ms
+      message: 'kubernetes-default-service-cluster-0: tcp connection to 172.30.0.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:38:20Z"
+    - latency: 2.023497ms
+      message: 'kubernetes-default-service-cluster-0: tcp connection to 172.30.0.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:37:20Z"
+    - latency: 3.27227ms
+      message: 'kubernetes-default-service-cluster-0: tcp connection to 172.30.0.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:36:20Z"
+    - latency: 679.314µs
+      message: 'kubernetes-default-service-cluster-0: tcp connection to 172.30.0.1:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:35:20Z"
+- apiVersion: controlplane.operator.openshift.io/v1alpha1
+  kind: PodNetworkConnectivityCheck
+  metadata:
+    creationTimestamp: "2023-05-02T12:50:28Z"
+    generation: 1
+    name: network-check-source-node-to-load-balancer-api-external
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: v1
+      kind: Node
+      name: node
+      uid: 2c5f7466-57f6-4492-b9a5-ad2d06f92709
+    resourceVersion: "683669"
+    uid: 2afbc502-aff3-4bb8-a4f8-ca95d1bc7894
+  spec:
+    sourcePod: network-check-source-b94cc7564-844f6
+    targetEndpoint: api.sno.gw.lo:6443
+    tlsClientCert:
+      name: ""
+  status:
+    conditions:
+    - lastTransitionTime: "2023-05-04T16:37:20Z"
+      message: 'load-balancer-api-external: tcp connection to api.sno.gw.lo:6443 succeeded'
+      reason: TCPConnectSuccess
+      status: "True"
+      type: Reachable
+    failures:
+    - latency: 15.095905ms
+      message: 'load-balancer-api-external: failure looking up host api.sno.gw.lo:
+        dial tcp: lookup api.sno.gw.lo on 172.30.0.10:53: read udp 10.128.0.37:48590->172.30.0.10:53:
+        read: connection refused'
+      reason: DNSError
+      success: false
+      time: "2023-05-04T16:32:20Z"
+    - latency: 348.885µs
+      message: 'load-balancer-api-external: failed to establish a TCP connection to
+        api.sno.gw.lo:6443: dial tcp 192.168.1.126:6443: connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2023-05-03T07:26:28Z"
+    outages:
+    - end: "2023-05-04T16:33:20Z"
+      endLogs:
+      - latency: 224.14µs
+        message: 'load-balancer-api-external: tcp connection to api.sno.gw.lo:6443
+          succeeded'
+        reason: TCPConnect
+        success: true
+        time: "2023-05-04T16:33:20Z"
+      - latency: 15.095905ms
+        message: 'load-balancer-api-external: failure looking up host api.sno.gw.lo:
+          dial tcp: lookup api.sno.gw.lo on 172.30.0.10:53: read udp 10.128.0.37:48590->172.30.0.10:53:
+          read: connection refused'
+        reason: DNSError
+        success: false
+        time: "2023-05-04T16:32:20Z"
+      message: Connectivity restored after 1m0.047390021s
+      start: "2023-05-04T16:32:20Z"
+      startLogs:
+      - latency: 15.095905ms
+        message: 'load-balancer-api-external: failure looking up host api.sno.gw.lo:
+          dial tcp: lookup api.sno.gw.lo on 172.30.0.10:53: read udp 10.128.0.37:48590->172.30.0.10:53:
+          read: connection refused'
+        reason: DNSError
+        success: false
+        time: "2023-05-04T16:32:20Z"
+    - end: "2023-05-03T07:27:28Z"
+      endLogs:
+      - latency: 155.723µs
+        message: 'load-balancer-api-external: tcp connection to api.sno.gw.lo:6443
+          succeeded'
+        reason: TCPConnect
+        success: true
+        time: "2023-05-03T07:27:28Z"
+      - latency: 348.885µs
+        message: 'load-balancer-api-external: failed to establish a TCP connection
+          to api.sno.gw.lo:6443: dial tcp 192.168.1.126:6443: connect: connection
+          refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-03T07:26:28Z"
+      message: Connectivity restored after 1m0.003321557s
+      start: "2023-05-03T07:26:28Z"
+      startLogs:
+      - latency: 348.885µs
+        message: 'load-balancer-api-external: failed to establish a TCP connection
+          to api.sno.gw.lo:6443: dial tcp 192.168.1.126:6443: connect: connection
+          refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-03T07:26:28Z"
+    successes:
+    - latency: 192.732µs
+      message: 'load-balancer-api-external: tcp connection to api.sno.gw.lo:6443 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:43:20Z"
+    - latency: 18.51077ms
+      message: 'load-balancer-api-external: resolved host name api.sno.gw.lo successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:43:20Z"
+    - latency: 200.747µs
+      message: 'load-balancer-api-external: tcp connection to api.sno.gw.lo:6443 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:42:20Z"
+    - latency: 11.700893ms
+      message: 'load-balancer-api-external: resolved host name api.sno.gw.lo successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:42:20Z"
+    - latency: 149.2µs
+      message: 'load-balancer-api-external: tcp connection to api.sno.gw.lo:6443 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:41:20Z"
+    - latency: 37.1074ms
+      message: 'load-balancer-api-external: resolved host name api.sno.gw.lo successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:41:20Z"
+    - latency: 144.661µs
+      message: 'load-balancer-api-external: tcp connection to api.sno.gw.lo:6443 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:40:20Z"
+    - latency: 12.674649ms
+      message: 'load-balancer-api-external: resolved host name api.sno.gw.lo successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:40:20Z"
+    - latency: 130.054µs
+      message: 'load-balancer-api-external: tcp connection to api.sno.gw.lo:6443 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:39:20Z"
+    - latency: 14.4177ms
+      message: 'load-balancer-api-external: resolved host name api.sno.gw.lo successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:39:20Z"
+- apiVersion: controlplane.operator.openshift.io/v1alpha1
+  kind: PodNetworkConnectivityCheck
+  metadata:
+    creationTimestamp: "2023-05-02T12:50:28Z"
+    generation: 1
+    name: network-check-source-node-to-load-balancer-api-internal
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: v1
+      kind: Node
+      name: node
+      uid: 2c5f7466-57f6-4492-b9a5-ad2d06f92709
+    resourceVersion: "683670"
+    uid: 9bf804f4-c75f-4b57-9bbb-c01a8d5fc6d2
+  spec:
+    sourcePod: network-check-source-b94cc7564-844f6
+    targetEndpoint: api-int.sno.gw.lo:6443
+    tlsClientCert:
+      name: ""
+  status:
+    conditions:
+    - lastTransitionTime: "2023-05-04T16:37:20Z"
+      message: 'load-balancer-api-internal: tcp connection to api-int.sno.gw.lo:6443
+        succeeded'
+      reason: TCPConnectSuccess
+      status: "True"
+      type: Reachable
+    failures:
+    - latency: 15.285329ms
+      message: 'load-balancer-api-internal: failure looking up host api-int.sno.gw.lo:
+        dial tcp: lookup api-int.sno.gw.lo on 172.30.0.10:53: read udp 10.128.0.37:55433->172.30.0.10:53:
+        read: connection refused'
+      reason: DNSError
+      success: false
+      time: "2023-05-04T16:32:20Z"
+    - latency: 99.266µs
+      message: 'load-balancer-api-internal: failed to establish a TCP connection to
+        api-int.sno.gw.lo:6443: dial tcp 192.168.1.126:6443: connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2023-05-03T07:26:28Z"
+    outages:
+    - end: "2023-05-04T16:33:20Z"
+      endLogs:
+      - latency: 141.816µs
+        message: 'load-balancer-api-internal: tcp connection to api-int.sno.gw.lo:6443
+          succeeded'
+        reason: TCPConnect
+        success: true
+        time: "2023-05-04T16:33:20Z"
+      - latency: 15.285329ms
+        message: 'load-balancer-api-internal: failure looking up host api-int.sno.gw.lo:
+          dial tcp: lookup api-int.sno.gw.lo on 172.30.0.10:53: read udp 10.128.0.37:55433->172.30.0.10:53:
+          read: connection refused'
+        reason: DNSError
+        success: false
+        time: "2023-05-04T16:32:20Z"
+      message: Connectivity restored after 1m0.077160623s
+      start: "2023-05-04T16:32:20Z"
+      startLogs:
+      - latency: 15.285329ms
+        message: 'load-balancer-api-internal: failure looking up host api-int.sno.gw.lo:
+          dial tcp: lookup api-int.sno.gw.lo on 172.30.0.10:53: read udp 10.128.0.37:55433->172.30.0.10:53:
+          read: connection refused'
+        reason: DNSError
+        success: false
+        time: "2023-05-04T16:32:20Z"
+    - end: "2023-05-03T07:27:28Z"
+      endLogs:
+      - latency: 249.307µs
+        message: 'load-balancer-api-internal: tcp connection to api-int.sno.gw.lo:6443
+          succeeded'
+        reason: TCPConnect
+        success: true
+        time: "2023-05-03T07:27:28Z"
+      - latency: 99.266µs
+        message: 'load-balancer-api-internal: failed to establish a TCP connection
+          to api-int.sno.gw.lo:6443: dial tcp 192.168.1.126:6443: connect: connection
+          refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-03T07:26:28Z"
+      message: Connectivity restored after 1m0.00210643s
+      start: "2023-05-03T07:26:28Z"
+      startLogs:
+      - latency: 99.266µs
+        message: 'load-balancer-api-internal: failed to establish a TCP connection
+          to api-int.sno.gw.lo:6443: dial tcp 192.168.1.126:6443: connect: connection
+          refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-03T07:26:28Z"
+    successes:
+    - latency: 225.934µs
+      message: 'load-balancer-api-internal: tcp connection to api-int.sno.gw.lo:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:43:20Z"
+    - latency: 29.134061ms
+      message: 'load-balancer-api-internal: resolved host name api-int.sno.gw.lo successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:43:20Z"
+    - latency: 187.883µs
+      message: 'load-balancer-api-internal: tcp connection to api-int.sno.gw.lo:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:42:20Z"
+    - latency: 11.382867ms
+      message: 'load-balancer-api-internal: resolved host name api-int.sno.gw.lo successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:42:20Z"
+    - latency: 149.17µs
+      message: 'load-balancer-api-internal: tcp connection to api-int.sno.gw.lo:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:41:20Z"
+    - latency: 36.980291ms
+      message: 'load-balancer-api-internal: resolved host name api-int.sno.gw.lo successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:41:20Z"
+    - latency: 203.271µs
+      message: 'load-balancer-api-internal: tcp connection to api-int.sno.gw.lo:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:40:20Z"
+    - latency: 12.370038ms
+      message: 'load-balancer-api-internal: resolved host name api-int.sno.gw.lo successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:40:20Z"
+    - latency: 252.173µs
+      message: 'load-balancer-api-internal: tcp connection to api-int.sno.gw.lo:6443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:39:20Z"
+    - latency: 12.000474ms
+      message: 'load-balancer-api-internal: resolved host name api-int.sno.gw.lo successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:39:20Z"
+- apiVersion: controlplane.operator.openshift.io/v1alpha1
+  kind: PodNetworkConnectivityCheck
+  metadata:
+    creationTimestamp: "2023-05-02T12:50:29Z"
+    generation: 1
+    name: network-check-source-node-to-network-check-target-node
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: v1
+      kind: Node
+      name: node
+      uid: 2c5f7466-57f6-4492-b9a5-ad2d06f92709
+    resourceVersion: "683902"
+    uid: c61c3a1c-6e9e-4fac-ac5f-129feeedfc68
+  spec:
+    sourcePod: network-check-source-b94cc7564-844f6
+    targetEndpoint: 10.128.0.32:8080
+    tlsClientCert:
+      name: ""
+  status:
+    conditions:
+    - lastTransitionTime: "2023-05-02T12:57:29Z"
+      message: 'network-check-target-node: tcp connection to 10.128.0.32:8080 succeeded'
+      reason: TCPConnectSuccess
+      status: "True"
+      type: Reachable
+    successes:
+    - latency: 1.591626ms
+      message: 'network-check-target-node: tcp connection to 10.128.0.32:8080 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:44:20Z"
+    - latency: 9.829913ms
+      message: 'network-check-target-node: tcp connection to 10.128.0.32:8080 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:43:20Z"
+    - latency: 4.836384ms
+      message: 'network-check-target-node: tcp connection to 10.128.0.32:8080 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:42:20Z"
+    - latency: 24.392525ms
+      message: 'network-check-target-node: tcp connection to 10.128.0.32:8080 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:41:20Z"
+    - latency: 1.026997ms
+      message: 'network-check-target-node: tcp connection to 10.128.0.32:8080 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:40:20Z"
+    - latency: 4.244663ms
+      message: 'network-check-target-node: tcp connection to 10.128.0.32:8080 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:39:20Z"
+    - latency: 12.049617ms
+      message: 'network-check-target-node: tcp connection to 10.128.0.32:8080 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:38:20Z"
+    - latency: 2.831472ms
+      message: 'network-check-target-node: tcp connection to 10.128.0.32:8080 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:37:20Z"
+    - latency: 3.371275ms
+      message: 'network-check-target-node: tcp connection to 10.128.0.32:8080 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:36:20Z"
+    - latency: 1.533758ms
+      message: 'network-check-target-node: tcp connection to 10.128.0.32:8080 succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:35:20Z"
+- apiVersion: controlplane.operator.openshift.io/v1alpha1
+  kind: PodNetworkConnectivityCheck
+  metadata:
+    creationTimestamp: "2023-05-02T12:50:29Z"
+    generation: 1
+    name: network-check-source-node-to-network-check-target-service-cluster
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: v1
+      kind: Node
+      name: node
+      uid: 2c5f7466-57f6-4492-b9a5-ad2d06f92709
+    resourceVersion: "683668"
+    uid: 84c5f109-d686-4f5b-a852-dae9a6c848cd
+  spec:
+    sourcePod: network-check-source-b94cc7564-844f6
+    targetEndpoint: network-check-target:80
+    tlsClientCert:
+      name: ""
+  status:
+    conditions:
+    - lastTransitionTime: "2023-05-04T16:37:20Z"
+      message: 'network-check-target-service-cluster: tcp connection to network-check-target:80
+        succeeded'
+      reason: TCPConnectSuccess
+      status: "True"
+      type: Reachable
+    failures:
+    - latency: 15.401959ms
+      message: 'network-check-target-service-cluster: failure looking up host network-check-target:
+        dial tcp: lookup network-check-target on 172.30.0.10:53: read udp 10.128.0.37:47093->172.30.0.10:53:
+        read: connection refused'
+      reason: DNSError
+      success: false
+      time: "2023-05-04T16:32:20Z"
+    outages:
+    - end: "2023-05-04T16:33:20Z"
+      endLogs:
+      - latency: 9.786965ms
+        message: 'network-check-target-service-cluster: tcp connection to network-check-target:80
+          succeeded'
+        reason: TCPConnect
+        success: true
+        time: "2023-05-04T16:33:20Z"
+      - latency: 15.401959ms
+        message: 'network-check-target-service-cluster: failure looking up host network-check-target:
+          dial tcp: lookup network-check-target on 172.30.0.10:53: read udp 10.128.0.37:47093->172.30.0.10:53:
+          read: connection refused'
+        reason: DNSError
+        success: false
+        time: "2023-05-04T16:32:20Z"
+      message: Connectivity restored after 1m0.02607132s
+      start: "2023-05-04T16:32:20Z"
+      startLogs:
+      - latency: 15.401959ms
+        message: 'network-check-target-service-cluster: failure looking up host network-check-target:
+          dial tcp: lookup network-check-target on 172.30.0.10:53: read udp 10.128.0.37:47093->172.30.0.10:53:
+          read: connection refused'
+        reason: DNSError
+        success: false
+        time: "2023-05-04T16:32:20Z"
+    successes:
+    - latency: 1.209228ms
+      message: 'network-check-target-service-cluster: tcp connection to network-check-target:80
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:43:20Z"
+    - latency: 7.026513ms
+      message: 'network-check-target-service-cluster: resolved host name network-check-target
+        successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:43:20Z"
+    - latency: 830.368µs
+      message: 'network-check-target-service-cluster: tcp connection to network-check-target:80
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:42:20Z"
+    - latency: 4.255364ms
+      message: 'network-check-target-service-cluster: resolved host name network-check-target
+        successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:42:20Z"
+    - latency: 669.546µs
+      message: 'network-check-target-service-cluster: tcp connection to network-check-target:80
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:41:20Z"
+    - latency: 24.552014ms
+      message: 'network-check-target-service-cluster: resolved host name network-check-target
+        successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:41:20Z"
+    - latency: 1.354341ms
+      message: 'network-check-target-service-cluster: tcp connection to network-check-target:80
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:40:20Z"
+    - latency: 7.263367ms
+      message: 'network-check-target-service-cluster: resolved host name network-check-target
+        successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:40:20Z"
+    - latency: 998.313µs
+      message: 'network-check-target-service-cluster: tcp connection to network-check-target:80
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:39:20Z"
+    - latency: 4.059055ms
+      message: 'network-check-target-service-cluster: resolved host name network-check-target
+        successfully'
+      reason: DNSResolve
+      success: true
+      time: "2023-05-04T18:39:20Z"
+- apiVersion: controlplane.operator.openshift.io/v1alpha1
+  kind: PodNetworkConnectivityCheck
+  metadata:
+    creationTimestamp: "2023-05-02T12:50:28Z"
+    generation: 1
+    name: network-check-source-node-to-openshift-apiserver-endpoint-node
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: v1
+      kind: Node
+      name: node
+      uid: 2c5f7466-57f6-4492-b9a5-ad2d06f92709
+    resourceVersion: "683903"
+    uid: 88ac1ce2-3ab5-4e11-88e8-1e91bc30da8a
+  spec:
+    sourcePod: network-check-source-b94cc7564-844f6
+    targetEndpoint: 10.128.0.29:8443
+    tlsClientCert:
+      name: ""
+  status:
+    conditions:
+    - lastTransitionTime: "2023-05-04T16:38:20Z"
+      message: 'openshift-apiserver-endpoint-node: tcp connection to 10.128.0.29:8443
+        succeeded'
+      reason: TCPConnectSuccess
+      status: "True"
+      type: Reachable
+    failures:
+    - latency: 4.915804ms
+      message: 'openshift-apiserver-endpoint-node: failed to establish a TCP connection
+        to 10.128.0.29:8443: dial tcp 10.128.0.29:8443: connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2023-05-04T16:32:20Z"
+    outages:
+    - end: "2023-05-04T16:33:20Z"
+      endLogs:
+      - latency: 8.209287ms
+        message: 'openshift-apiserver-endpoint-node: tcp connection to 10.128.0.29:8443
+          succeeded'
+        reason: TCPConnect
+        success: true
+        time: "2023-05-04T16:33:20Z"
+      - latency: 4.915804ms
+        message: 'openshift-apiserver-endpoint-node: failed to establish a TCP connection
+          to 10.128.0.29:8443: dial tcp 10.128.0.29:8443: connect: connection refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-04T16:32:20Z"
+      message: Connectivity restored after 1m0.016848483s
+      start: "2023-05-04T16:32:20Z"
+      startLogs:
+      - latency: 4.915804ms
+        message: 'openshift-apiserver-endpoint-node: failed to establish a TCP connection
+          to 10.128.0.29:8443: dial tcp 10.128.0.29:8443: connect: connection refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-04T16:32:20Z"
+    successes:
+    - latency: 1.563173ms
+      message: 'openshift-apiserver-endpoint-node: tcp connection to 10.128.0.29:8443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:44:20Z"
+    - latency: 7.938033ms
+      message: 'openshift-apiserver-endpoint-node: tcp connection to 10.128.0.29:8443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:43:20Z"
+    - latency: 4.246347ms
+      message: 'openshift-apiserver-endpoint-node: tcp connection to 10.128.0.29:8443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:42:20Z"
+    - latency: 24.063407ms
+      message: 'openshift-apiserver-endpoint-node: tcp connection to 10.128.0.29:8443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:41:20Z"
+    - latency: 4.111364ms
+      message: 'openshift-apiserver-endpoint-node: tcp connection to 10.128.0.29:8443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:40:20Z"
+    - latency: 4.623835ms
+      message: 'openshift-apiserver-endpoint-node: tcp connection to 10.128.0.29:8443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:39:20Z"
+    - latency: 1.907889ms
+      message: 'openshift-apiserver-endpoint-node: tcp connection to 10.128.0.29:8443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:38:20Z"
+    - latency: 1.637793ms
+      message: 'openshift-apiserver-endpoint-node: tcp connection to 10.128.0.29:8443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:37:20Z"
+    - latency: 3.257302ms
+      message: 'openshift-apiserver-endpoint-node: tcp connection to 10.128.0.29:8443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:36:20Z"
+    - latency: 4.900464ms
+      message: 'openshift-apiserver-endpoint-node: tcp connection to 10.128.0.29:8443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:35:20Z"
+- apiVersion: controlplane.operator.openshift.io/v1alpha1
+  kind: PodNetworkConnectivityCheck
+  metadata:
+    creationTimestamp: "2023-05-02T12:50:28Z"
+    generation: 1
+    name: network-check-source-node-to-openshift-apiserver-service-cluster
+    namespace: openshift-network-diagnostics
+    ownerReferences:
+    - apiVersion: v1
+      kind: Node
+      name: node
+      uid: 2c5f7466-57f6-4492-b9a5-ad2d06f92709
+    resourceVersion: "683905"
+    uid: 2f71d220-bd03-4d00-8d84-6ee7b020b80c
+  spec:
+    sourcePod: network-check-source-b94cc7564-844f6
+    targetEndpoint: 172.30.68.201:443
+    tlsClientCert:
+      name: ""
+  status:
+    conditions:
+    - lastTransitionTime: "2023-05-04T16:38:20Z"
+      message: 'openshift-apiserver-service-cluster: tcp connection to 172.30.68.201:443
+        succeeded'
+      reason: TCPConnectSuccess
+      status: "True"
+      type: Reachable
+    failures:
+    - latency: 11.10227ms
+      message: 'openshift-apiserver-service-cluster: failed to establish a TCP connection
+        to 172.30.68.201:443: dial tcp 172.30.68.201:443: connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2023-05-04T16:33:20Z"
+    - latency: 8.122129ms
+      message: 'openshift-apiserver-service-cluster: failed to establish a TCP connection
+        to 172.30.68.201:443: dial tcp 172.30.68.201:443: connect: connection refused'
+      reason: TCPConnectError
+      success: false
+      time: "2023-05-04T16:32:20Z"
+    outages:
+    - end: "2023-05-04T16:34:20Z"
+      endLogs:
+      - latency: 4.398716ms
+        message: 'openshift-apiserver-service-cluster: tcp connection to 172.30.68.201:443
+          succeeded'
+        reason: TCPConnect
+        success: true
+        time: "2023-05-04T16:34:20Z"
+      - latency: 11.10227ms
+        message: 'openshift-apiserver-service-cluster: failed to establish a TCP connection
+          to 172.30.68.201:443: dial tcp 172.30.68.201:443: connect: connection refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-04T16:33:20Z"
+      - latency: 8.122129ms
+        message: 'openshift-apiserver-service-cluster: failed to establish a TCP connection
+          to 172.30.68.201:443: dial tcp 172.30.68.201:443: connect: connection refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-04T16:32:20Z"
+      message: Connectivity restored after 2m0.0010043s
+      start: "2023-05-04T16:32:20Z"
+      startLogs:
+      - latency: 8.122129ms
+        message: 'openshift-apiserver-service-cluster: failed to establish a TCP connection
+          to 172.30.68.201:443: dial tcp 172.30.68.201:443: connect: connection refused'
+        reason: TCPConnectError
+        success: false
+        time: "2023-05-04T16:32:20Z"
+    successes:
+    - latency: 4.93039ms
+      message: 'openshift-apiserver-service-cluster: tcp connection to 172.30.68.201:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:44:20Z"
+    - latency: 7.428457ms
+      message: 'openshift-apiserver-service-cluster: tcp connection to 172.30.68.201:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:43:20Z"
+    - latency: 3.559909ms
+      message: 'openshift-apiserver-service-cluster: tcp connection to 172.30.68.201:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:42:20Z"
+    - latency: 23.559311ms
+      message: 'openshift-apiserver-service-cluster: tcp connection to 172.30.68.201:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:41:20Z"
+    - latency: 3.840435ms
+      message: 'openshift-apiserver-service-cluster: tcp connection to 172.30.68.201:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:40:20Z"
+    - latency: 3.425627ms
+      message: 'openshift-apiserver-service-cluster: tcp connection to 172.30.68.201:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:39:20Z"
+    - latency: 1.371043ms
+      message: 'openshift-apiserver-service-cluster: tcp connection to 172.30.68.201:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:38:20Z"
+    - latency: 792.597µs
+      message: 'openshift-apiserver-service-cluster: tcp connection to 172.30.68.201:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:37:20Z"
+    - latency: 2.608203ms
+      message: 'openshift-apiserver-service-cluster: tcp connection to 172.30.68.201:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:36:20Z"
+    - latency: 4.910253ms
+      message: 'openshift-apiserver-service-cluster: tcp connection to 172.30.68.201:443
+        succeeded'
+      reason: TCPConnect
+      success: true
+      time: "2023-05-04T18:35:20Z"
+kind: List
+metadata:
+  resourceVersion: ""

@@ -1,0 +1,80 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-05-02T12:18:19Z"
+  generation: 1
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:roleBindings: {}
+        f:secretRef:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+        f:serviceAccountNames: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:18:19Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:lastSyncGeneration: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:33:59Z"
+  name: openshift-cloud-network-config-controller-azure
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "6254"
+  uid: 5f7f9994-5ebb-4582-93cb-3138331f5ade
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: AzureProviderSpec
+    roleBindings:
+    - role: Contributor
+  secretRef:
+    name: cloud-credentials
+    namespace: openshift-cloud-network-config-controller
+  serviceAccountNames:
+  - cloud-network-config-controller
+status:
+  conditions:
+  - lastProbeTime: "2023-05-02T12:33:59Z"
+    lastTransitionTime: "2023-05-02T12:33:59Z"
+    message: CredentialsRequest is not for platform None
+    reason: InfrastructureMismatch
+    status: "True"
+    type: Ignored
+  lastSyncGeneration: 0
+  provisioned: false

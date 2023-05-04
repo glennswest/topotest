@@ -1,0 +1,506 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-operator-6dbf96bf9c-mchcp
+    namespace: openshift-ingress-operator
+    resourceVersion: "13465"
+    uid: 7633da13-f5c1-4200-b037-2102b8609a54
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "metrics-tls" : failed to sync secret
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:49Z"
+    name: ingress-operator-6dbf96bf9c-mchcp.175bfda842fcbc19
+    namespace: openshift-ingress-operator
+    resourceVersion: "629026"
+    uid: a99be924-9f59-4e65-aca8-a7b7cd946de1
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-operator-6dbf96bf9c-mchcp
+    namespace: openshift-ingress-operator
+    resourceVersion: "13465"
+    uid: 7633da13-f5c1-4200-b037-2102b8609a54
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "trusted-ca" : failed to sync configmap
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:51Z"
+    name: ingress-operator-6dbf96bf9c-mchcp.175bfda842ff6b49
+    namespace: openshift-ingress-operator
+    resourceVersion: "629046"
+    uid: 0765853e-5251-4262-a0e9-afcac1b1c9a8
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-operator-6dbf96bf9c-mchcp
+    namespace: openshift-ingress-operator
+    resourceVersion: "13465"
+    uid: 7633da13-f5c1-4200-b037-2102b8609a54
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:05Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_ingress-operator-6dbf96bf9c-mchcp_openshift-ingress-operator_7633da13-f5c1-4200-b037-2102b8609a54_0(9acba0fc2cff059a89b215013a17ddc6df793ff0640a8db036a5f33570fc3228):
+    error adding pod openshift-ingress-operator_ingress-operator-6dbf96bf9c-mchcp
+    to CNI network "multus-cni-network": plugin type="multus" name="multus-cni-network"
+    failed (add): Multus: [openshift-ingress-operator/ingress-operator-6dbf96bf9c-mchcp/7633da13-f5c1-4200-b037-2102b8609a54]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:19Z"
+    name: ingress-operator-6dbf96bf9c-mchcp.175bfdbb180edbab
+    namespace: openshift-ingress-operator
+    resourceVersion: "631485"
+    uid: b887be80-7ded-4124-9f73-90a8d089cce4
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:19Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: ingress-operator-6dbf96bf9c-mchcp
+    namespace: openshift-ingress-operator
+    resourceVersion: "629118"
+    uid: 7633da13-f5c1-4200-b037-2102b8609a54
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:19Z"
+  message: Add eth0 [10.128.0.5/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:19Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:19Z"
+    name: ingress-operator-6dbf96bf9c-mchcp.175bfdbe46aeb4ea
+    namespace: openshift-ingress-operator
+    resourceVersion: "630157"
+    uid: a1a126ea-c545-49b2-aa43-cafe4cb67c98
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:19Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ingress-operator}
+    kind: Pod
+    name: ingress-operator-6dbf96bf9c-mchcp
+    namespace: openshift-ingress-operator
+    resourceVersion: "13465"
+    uid: 7633da13-f5c1-4200-b037-2102b8609a54
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:19Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6275a171f6d5a523627963860415ed0e43f1728f2dd897c49412600bf64bc9c3"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:35Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:35Z"
+    name: ingress-operator-6dbf96bf9c-mchcp.175bfdbe4d325163
+    namespace: openshift-ingress-operator
+    resourceVersion: "631802"
+    uid: d597e231-bf26-4a73-8476-f528fb3622ab
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:52Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ingress-operator}
+    kind: Pod
+    name: ingress-operator-6dbf96bf9c-mchcp
+    namespace: openshift-ingress-operator
+    resourceVersion: "13465"
+    uid: 7633da13-f5c1-4200-b037-2102b8609a54
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:52Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6275a171f6d5a523627963860415ed0e43f1728f2dd897c49412600bf64bc9c3"
+    in 32.897359s
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:25Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:25Z"
+    name: ingress-operator-6dbf96bf9c-mchcp.175bfdc5f608f96a
+    namespace: openshift-ingress-operator
+    resourceVersion: "632247"
+    uid: 64138b8c-5543-4726-9427-4764446628c5
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ingress-operator-6dbf96bf9c-mchcp
+    namespace: openshift-ingress-operator
+    resourceVersion: "13465"
+    uid: 7633da13-f5c1-4200-b037-2102b8609a54
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:18Z"
+  message: Created container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:44Z"
+    name: ingress-operator-6dbf96bf9c-mchcp.175bfdcc1ae592ff
+    namespace: openshift-ingress-operator
+    resourceVersion: "632422"
+    uid: ebdad105-d208-4a6b-8960-95f3982b24ff
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:19Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-rbac-proxy}
+    kind: Pod
+    name: ingress-operator-6dbf96bf9c-mchcp
+    namespace: openshift-ingress-operator
+    resourceVersion: "13465"
+    uid: 7633da13-f5c1-4200-b037-2102b8609a54
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:19Z"
+  message: Started container kube-rbac-proxy
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:45Z"
+    name: ingress-operator-6dbf96bf9c-mchcp.175bfdcc2cf1eb07
+    namespace: openshift-ingress-operator
+    resourceVersion: "632429"
+    uid: 10ca295f-899e-40de-9cda-1e75c00a3ad9
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:34:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ingress-operator}
+    kind: Pod
+    name: ingress-operator-6dbf96bf9c-mchcp
+    namespace: openshift-ingress-operator
+    resourceVersion: "13465"
+    uid: 7633da13-f5c1-4200-b037-2102b8609a54
+  kind: Event
+  lastTimestamp: "2023-05-04T16:34:32Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6275a171f6d5a523627963860415ed0e43f1728f2dd897c49412600bf64bc9c3"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:36:16Z"
+    name: ingress-operator-6dbf96bf9c-mchcp.175bfdeb2c6657cc
+    namespace: openshift-ingress-operator
+    resourceVersion: "633329"
+    uid: da40d928-bad8-4986-a00a-f5b7aacf3473
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:34:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ingress-operator}
+    kind: Pod
+    name: ingress-operator-6dbf96bf9c-mchcp
+    namespace: openshift-ingress-operator
+    resourceVersion: "13465"
+    uid: 7633da13-f5c1-4200-b037-2102b8609a54
+  kind: Event
+  lastTimestamp: "2023-05-04T16:34:32Z"
+  message: Created container ingress-operator
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:36:16Z"
+    name: ingress-operator-6dbf96bf9c-mchcp.175bfdeb53e6e9b8
+    namespace: openshift-ingress-operator
+    resourceVersion: "633330"
+    uid: 691b8bf2-4fca-48b5-a40f-2ea6ab8aac2a
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:34:32Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{ingress-operator}
+    kind: Pod
+    name: ingress-operator-6dbf96bf9c-mchcp
+    namespace: openshift-ingress-operator
+    resourceVersion: "13465"
+    uid: 7633da13-f5c1-4200-b037-2102b8609a54
+  kind: Event
+  lastTimestamp: "2023-05-04T16:34:32Z"
+  message: Started container ingress-operator
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:16Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:36:16Z"
+    name: ingress-operator-6dbf96bf9c-mchcp.175bfdeb57d376d7
+    namespace: openshift-ingress-operator
+    resourceVersion: "633331"
+    uid: b3e5e737-6278-4704-8cad-155ec2b0a2d1
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "684630"

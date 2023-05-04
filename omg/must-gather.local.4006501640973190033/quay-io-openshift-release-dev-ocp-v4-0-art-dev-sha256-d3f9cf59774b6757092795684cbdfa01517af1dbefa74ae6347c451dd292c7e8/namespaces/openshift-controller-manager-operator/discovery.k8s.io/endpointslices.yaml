@@ -1,0 +1,70 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.6
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: openshift-controller-manager-operator-967d9d7c4-xvgmx
+      namespace: openshift-controller-manager-operator
+      uid: a08d55a8-f531-4bdf-a673-4a51df19560a
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:33:14Z"
+    creationTimestamp: "2023-05-02T12:18:14Z"
+    generateName: metrics-
+    generation: 5
+    labels:
+      app: openshift-controller-manager-operator
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: metrics
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"0aa60ff5-ab21-4d72-8ee4-d78b8fe928f7"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:33:14Z"
+    name: metrics-t8h9f
+    namespace: openshift-controller-manager-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: metrics
+      uid: 0aa60ff5-ab21-4d72-8ee4-d78b8fe928f7
+    resourceVersion: "631383"
+    uid: d99951b8-51af-40f9-a06a-378ee658977c
+  ports:
+  - name: https
+    port: 8443
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "684744"

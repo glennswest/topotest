@@ -1,0 +1,72 @@
+---
+apiVersion: discovery.k8s.io/v1
+items:
+- addressType: IPv4
+  apiVersion: discovery.k8s.io/v1
+  endpoints:
+  - addresses:
+    - 10.128.0.48
+    conditions:
+      ready: true
+      serving: true
+      terminating: false
+    nodeName: node
+    targetRef:
+      kind: Pod
+      name: cluster-samples-operator-c868985c6-xg47d
+      namespace: openshift-cluster-samples-operator
+      uid: 8f051769-e8c7-4548-8996-052f8349d04b
+  kind: EndpointSlice
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:32:42Z"
+    creationTimestamp: "2023-05-02T12:37:30Z"
+    generateName: metrics-
+    generation: 4
+    labels:
+      endpointslice.kubernetes.io/managed-by: endpointslice-controller.k8s.io
+      kubernetes.io/service-name: metrics
+      name: cluster-samples-operator
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: discovery.k8s.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:addressType: {}
+        f:endpoints: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:generateName: {}
+          f:labels:
+            .: {}
+            f:endpointslice.kubernetes.io/managed-by: {}
+            f:kubernetes.io/service-name: {}
+            f:name: {}
+            f:service.kubernetes.io/headless: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"11ed3bd8-eb33-4641-b510-146a1c24d683"}: {}
+        f:ports: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:32:43Z"
+    name: metrics-gkwcd
+    namespace: openshift-cluster-samples-operator
+    ownerReferences:
+    - apiVersion: v1
+      blockOwnerDeletion: true
+      controller: true
+      kind: Service
+      name: metrics
+      uid: 11ed3bd8-eb33-4641-b510-146a1c24d683
+    resourceVersion: "631044"
+    uid: f3001718-19e7-49bc-8db5-e105d0648388
+  ports:
+  - name: ""
+    port: 60000
+    protocol: TCP
+kind: EndpointSliceList
+metadata:
+  resourceVersion: "684750"

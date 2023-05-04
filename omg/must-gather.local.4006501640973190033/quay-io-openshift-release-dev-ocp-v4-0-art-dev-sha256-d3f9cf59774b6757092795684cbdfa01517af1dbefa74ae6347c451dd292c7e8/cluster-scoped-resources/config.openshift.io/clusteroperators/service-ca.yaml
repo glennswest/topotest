@@ -1,0 +1,99 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-05-02T12:17:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: Go-http-client
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:30:00Z"
+  name: service-ca
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "5370"
+  uid: b3b7be5f-c20f-470d-9e08-be526676c19a
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-02T12:28:39Z"
+    message: All is well
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-05-02T12:30:00Z"
+    message: 'Progressing: All service-ca-operator deployments updated'
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-05-02T12:28:41Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-05-02T12:28:41Z"
+    message: All is well
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: operator.openshift.io
+    name: cluster
+    resource: servicecas
+  - group: ""
+    name: openshift-config
+    resource: namespaces
+  - group: ""
+    name: openshift-config-managed
+    resource: namespaces
+  - group: ""
+    name: openshift-service-ca-operator
+    resource: namespaces
+  - group: ""
+    name: openshift-service-ca
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.12.2

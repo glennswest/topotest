@@ -1,0 +1,240 @@
+2023-05-04T16:32:40.066834373Z I0504 16:32:40.066716       1 template.go:437] router "msg"="starting router" "version"="majorFromGit: \nminorFromGit: \ncommitFromGit: 3065f6583f3925328fbdbfe95e3bc7bb7a084d33\nversionFromGit: 4.0.0-404-g3065f658\ngitTreeState: clean\nbuildDate: 2023-01-05T00:42:45Z\n"
+2023-05-04T16:32:40.068408546Z I0504 16:32:40.068387       1 metrics.go:156] metrics "msg"="router health and metrics port listening on HTTP and HTTPS" "address"="0.0.0.0:1936"
+2023-05-04T16:32:40.074549168Z I0504 16:32:40.072107       1 router.go:191] template "msg"="creating a new template router" "writeDir"="/var/lib/haproxy"
+2023-05-04T16:32:40.074706183Z I0504 16:32:40.074690       1 router.go:273] template "msg"="router will coalesce reloads within an interval of each other" "interval"="5s"
+2023-05-04T16:32:40.075077630Z I0504 16:32:40.075066       1 router.go:343] template "msg"="watching for changes" "path"="/etc/pki/tls/private"
+2023-05-04T16:32:40.075149034Z I0504 16:32:40.075139       1 router.go:269] router "msg"="router is including routes in all namespaces" 
+2023-05-04T16:32:40.084094849Z W0504 16:32:40.084043       1 reflector.go:424] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2023-05-04T16:32:40.084153198Z E0504 16:32:40.084145       1 reflector.go:140] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2023-05-04T16:32:40.932843599Z W0504 16:32:40.930986       1 reflector.go:424] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2023-05-04T16:32:40.932843599Z E0504 16:32:40.931012       1 reflector.go:140] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2023-05-04T16:32:42.060714000Z I0504 16:32:42.060686       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:42.060714000Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:42.060714000Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:43.068142494Z I0504 16:32:43.068100       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:43.068142494Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:43.068142494Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:43.895568777Z W0504 16:32:43.895532       1 reflector.go:424] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2023-05-04T16:32:43.895568777Z E0504 16:32:43.895555       1 reflector.go:140] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2023-05-04T16:32:44.060178116Z I0504 16:32:44.060140       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:44.060178116Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:44.060178116Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:45.061312781Z I0504 16:32:45.060722       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:45.061312781Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:45.061312781Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:46.059759993Z I0504 16:32:46.059726       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:46.059759993Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:46.059759993Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:47.060635822Z I0504 16:32:47.060581       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:47.060635822Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:47.060635822Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:47.702148221Z W0504 16:32:47.702094       1 reflector.go:424] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2023-05-04T16:32:47.702148221Z E0504 16:32:47.702121       1 reflector.go:140] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2023-05-04T16:32:48.062761295Z I0504 16:32:48.062707       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:48.062761295Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:48.062761295Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:49.059970885Z I0504 16:32:49.059916       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:49.059970885Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:49.059970885Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:50.059789942Z I0504 16:32:50.059745       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:50.059789942Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:50.059789942Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:51.059762686Z I0504 16:32:51.059723       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:51.059762686Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:51.059762686Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:52.060040203Z I0504 16:32:52.059968       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:52.060040203Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:52.060040203Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:53.061906811Z I0504 16:32:53.060186       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:53.061906811Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:53.061906811Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:54.060114714Z I0504 16:32:54.060077       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:54.060114714Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:54.060114714Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:55.072988835Z I0504 16:32:55.072939       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:55.072988835Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:55.072988835Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:56.060310763Z I0504 16:32:56.060272       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:56.060310763Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:56.060310763Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:57.065948086Z I0504 16:32:57.065073       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:57.065948086Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:57.065948086Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:57.811032530Z W0504 16:32:57.810998       1 reflector.go:424] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2023-05-04T16:32:57.811032530Z E0504 16:32:57.811022       1 reflector.go:140] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2023-05-04T16:32:58.059336997Z I0504 16:32:58.059292       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:58.059336997Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:58.059336997Z [-]has-synced failed: Router not synced
+2023-05-04T16:32:59.065451265Z I0504 16:32:59.064645       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:32:59.065451265Z [-]backend-http failed: backend reported failure
+2023-05-04T16:32:59.065451265Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:00.060041481Z I0504 16:33:00.060009       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:00.060041481Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:00.060041481Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:01.060445174Z I0504 16:33:01.060417       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:01.060445174Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:01.060445174Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:02.059849092Z I0504 16:33:02.059821       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:02.059849092Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:02.059849092Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:03.060725533Z I0504 16:33:03.060697       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:03.060725533Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:03.060725533Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:04.059885403Z I0504 16:33:04.059858       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:04.059885403Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:04.059885403Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:05.060234383Z I0504 16:33:05.060205       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:05.060234383Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:05.060234383Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:06.060578655Z I0504 16:33:06.060227       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:06.060578655Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:06.060578655Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:07.060479634Z I0504 16:33:07.060442       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:07.060479634Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:07.060479634Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:08.059788543Z I0504 16:33:08.059754       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:08.059788543Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:08.059788543Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:09.063017237Z I0504 16:33:09.062523       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:09.063017237Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:09.063017237Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:10.063192562Z I0504 16:33:10.063161       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:10.063192562Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:10.063192562Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:11.062657363Z I0504 16:33:11.062631       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:11.062657363Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:11.062657363Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:12.060490023Z I0504 16:33:12.060404       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:12.060490023Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:12.060490023Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:12.511564160Z W0504 16:33:12.511522       1 reflector.go:424] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: failed to list *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2023-05-04T16:33:12.511564160Z E0504 16:33:12.511547       1 reflector.go:140] github.com/openshift/router/pkg/router/controller/factory/factory.go:124: Failed to watch *v1.Route: failed to list *v1.Route: the server is currently unable to handle the request (get routes.route.openshift.io)
+2023-05-04T16:33:13.061650202Z I0504 16:33:13.061604       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:13.061650202Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:13.061650202Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:14.060219446Z I0504 16:33:14.060182       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:14.060219446Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:14.060219446Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:15.060418965Z I0504 16:33:15.060383       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:15.060418965Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:15.060418965Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:16.059588224Z I0504 16:33:16.059557       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:16.059588224Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:16.059588224Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:16.368124709Z E0504 16:33:16.368093       1 haproxy.go:418] can't scrape HAProxy: dial unix /var/lib/haproxy/run/haproxy.sock: connect: no such file or directory
+2023-05-04T16:33:17.064339286Z I0504 16:33:17.064306       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:17.064339286Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:17.064339286Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:18.061037693Z I0504 16:33:18.060182       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:18.061037693Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:18.061037693Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:19.060880103Z I0504 16:33:19.060842       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:19.060880103Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:19.060880103Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:20.064936472Z I0504 16:33:20.063898       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:20.064936472Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:20.064936472Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:21.060007970Z I0504 16:33:21.059978       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:21.060007970Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:21.060007970Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:22.059855600Z I0504 16:33:22.059826       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:22.059855600Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:22.059855600Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:23.061732294Z I0504 16:33:23.061696       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:23.061732294Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:23.061732294Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:24.073066295Z I0504 16:33:24.071160       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:24.073066295Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:24.073066295Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:25.060337982Z I0504 16:33:25.060308       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:25.060337982Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:25.060337982Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:26.060010775Z I0504 16:33:26.059371       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:26.060010775Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:26.060010775Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:27.063187976Z I0504 16:33:27.063157       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:27.063187976Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:27.063187976Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:28.061510598Z I0504 16:33:28.061480       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:28.061510598Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:28.061510598Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:29.059704368Z I0504 16:33:29.059668       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:29.059704368Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:29.059704368Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:30.059380997Z I0504 16:33:30.059349       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:30.059380997Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:30.059380997Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:31.060020061Z I0504 16:33:31.059990       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:31.060020061Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:31.060020061Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:32.059754479Z I0504 16:33:32.059716       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:32.059754479Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:32.059754479Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:33.064688033Z I0504 16:33:33.062674       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:33.064688033Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:33.064688033Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:34.085590138Z I0504 16:33:34.085551       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:34.085590138Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:34.085590138Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:35.060476019Z I0504 16:33:35.060444       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:35.060476019Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:35.060476019Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:36.060499419Z I0504 16:33:36.060460       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:36.060499419Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:36.060499419Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:37.067072075Z I0504 16:33:37.067039       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:37.067072075Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:37.067072075Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:38.060631498Z I0504 16:33:38.060596       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:38.060631498Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:38.060631498Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:39.060305072Z I0504 16:33:39.060269       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:39.060305072Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:39.060305072Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:40.070472726Z I0504 16:33:40.070434       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:40.070472726Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:40.070472726Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:41.060173206Z I0504 16:33:41.060140       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:41.060173206Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:41.060173206Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:42.061146337Z I0504 16:33:42.060148       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:42.061146337Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:42.061146337Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:43.064721103Z I0504 16:33:43.064195       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:43.064721103Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:43.064721103Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:44.060047108Z I0504 16:33:44.060011       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:44.060047108Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:44.060047108Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:45.059924835Z I0504 16:33:45.059897       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:45.059924835Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:45.059924835Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:46.059720778Z I0504 16:33:46.059682       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:46.059720778Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:46.059720778Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:46.353281532Z E0504 16:33:46.353251       1 haproxy.go:418] can't scrape HAProxy: dial unix /var/lib/haproxy/run/haproxy.sock: connect: no such file or directory
+2023-05-04T16:33:47.059335862Z I0504 16:33:47.059300       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:47.059335862Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:47.059335862Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:48.061161070Z I0504 16:33:48.060024       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:48.061161070Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:48.061161070Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:49.075727690Z I0504 16:33:49.075687       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:49.075727690Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:49.075727690Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:50.059773480Z I0504 16:33:50.059382       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:50.059773480Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:50.059773480Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:51.059671515Z I0504 16:33:51.059641       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:51.059671515Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:51.059671515Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:52.061950803Z I0504 16:33:52.061803       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:52.061950803Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:52.061950803Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:53.060726143Z I0504 16:33:53.060273       1 healthz.go:257] backend-http,has-synced check failed: healthz
+2023-05-04T16:33:53.060726143Z [-]backend-http failed: backend reported failure
+2023-05-04T16:33:53.060726143Z [-]has-synced failed: Router not synced
+2023-05-04T16:33:53.081801769Z E0504 16:33:53.081762       1 haproxy.go:418] can't scrape HAProxy: dial unix /var/lib/haproxy/run/haproxy.sock: connect: no such file or directory
+2023-05-04T16:33:53.105938862Z I0504 16:33:53.105898       1 router.go:618] template "msg"="router reloaded" "output"=" - Checking http://localhost:80 ...\n - Health check ok : 0 retry attempt(s).\n"
+2023-05-04T16:33:58.713535468Z I0504 16:33:58.713351       1 router.go:618] template "msg"="router reloaded" "output"=" - Checking http://localhost:80 ...\n - Health check ok : 0 retry attempt(s).\n"
+2023-05-04T16:34:08.170774601Z I0504 16:34:08.170737       1 router.go:618] template "msg"="router reloaded" "output"=" - Checking http://localhost:80 ...\n - Health check ok : 0 retry attempt(s).\n"

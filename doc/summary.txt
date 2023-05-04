@@ -1,0 +1,15 @@
+When I ran the fully async delete of 100 pods/pvc, where pod and pvc is deleted in parallel of each other,
+I saw the api become unavialbled, and had left over pods, and pvc, which is included in notes.
+This is demonstrated in the cleanup100xx.sh
+
+Ive also included the logs/etcd-node-etcd.log 
+
+Reprinting Cluster State:
+When opening a support case, bugzilla, or issue please include the following summary data along with any other requested information:
+ClusterID: 91e347a3-3761-416f-abcc-9282fb097dea
+ClusterVersion: Stable at "4.12.2"
+ClusterOperators:
+	All healthy and stable
+
+must gather is provided in omg folder.
+

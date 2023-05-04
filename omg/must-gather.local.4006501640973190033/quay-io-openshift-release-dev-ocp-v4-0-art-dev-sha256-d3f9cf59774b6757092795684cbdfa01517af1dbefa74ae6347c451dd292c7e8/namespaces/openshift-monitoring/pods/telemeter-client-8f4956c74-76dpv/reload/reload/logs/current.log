@@ -1,0 +1,4 @@
+2023-05-04T16:32:14.008805143Z level=info ts=2023-05-04T16:32:14.00872885Z caller=main.go:111 msg="Starting prometheus-config-reloader" version="(version=0.60.1, branch=rhaos-4.12-rhel-8, revision=0b07c0f)"
+2023-05-04T16:32:14.008929577Z level=info ts=2023-05-04T16:32:14.008910892Z caller=main.go:112 build_context="(go=go1.19.4, user=root, date=20230105-01:21:51)"
+2023-05-04T16:32:14.009150622Z level=info ts=2023-05-04T16:32:14.009132738Z caller=reloader.go:235 msg="started watching config file and directories for changes" cfg= out= dirs=/etc/serving-certs-ca-bundle
+2023-05-04T16:32:43.273751591Z level=info ts=2023-05-04T16:32:43.273673876Z caller=reloader.go:374 msg="Reload triggered" cfg_in= cfg_out= watched_dirs=/etc/serving-certs-ca-bundle

@@ -1,0 +1,59 @@
+---
+apiVersion: operators.coreos.com/v1
+kind: OperatorGroup
+metadata:
+  annotations:
+    olm.providedAPIs: LVMCluster.v1alpha1.lvm.topolvm.io,LVMVolumeGroup.v1alpha1.lvm.topolvm.io,LVMVolumeGroupNodeStatus.v1alpha1.lvm.topolvm.io,LogicalVolume.v1.topolvm.io
+  creationTimestamp: "2023-05-04T14:34:23Z"
+  generateName: openshift-storage-
+  generation: 1
+  managedFields:
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+      f:spec:
+        .: {}
+        f:targetNamespaces:
+          .: {}
+          v:"openshift-storage": {}
+        f:upgradeStrategy: {}
+    manager: Mozilla
+    operation: Update
+    time: "2023-05-04T14:34:23Z"
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:lastUpdated: {}
+        f:namespaces:
+          .: {}
+          v:"openshift-storage": {}
+    manager: olm
+    operation: Update
+    subresource: status
+    time: "2023-05-04T14:34:23Z"
+  - apiVersion: operators.coreos.com/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:olm.providedAPIs: {}
+    manager: olm
+    operation: Update
+    time: "2023-05-04T14:34:58Z"
+  name: openshift-storage-n7cjq
+  namespace: openshift-storage
+  resourceVersion: "598599"
+  uid: 5a30032d-7a62-4eff-843e-654f945a863e
+spec:
+  targetNamespaces:
+  - openshift-storage
+  upgradeStrategy: Default
+status:
+  lastUpdated: "2023-05-04T14:34:23Z"
+  namespaces:
+  - openshift-storage

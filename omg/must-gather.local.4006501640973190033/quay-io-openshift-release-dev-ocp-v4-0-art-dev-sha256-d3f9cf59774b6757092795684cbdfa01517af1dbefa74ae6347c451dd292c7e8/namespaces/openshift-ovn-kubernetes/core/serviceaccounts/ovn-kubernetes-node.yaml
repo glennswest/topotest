@@ -1,0 +1,40 @@
+---
+apiVersion: v1
+imagePullSecrets:
+- name: ovn-kubernetes-node-dockercfg-qqchm
+kind: ServiceAccount
+metadata:
+  creationTimestamp: "2023-05-02T12:26:08Z"
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:ownerReferences:
+          k:{"uid":"a74973fc-c074-41e2-8215-81c3454addea"}: {}
+    manager: cluster-network-operator/operconfig
+    operation: Apply
+    time: "2023-05-02T12:26:08Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:imagePullSecrets: {}
+      f:secrets:
+        .: {}
+        k:{"name":"ovn-kubernetes-node-dockercfg-qqchm"}: {}
+    manager: openshift-controller-manager
+    operation: Update
+    time: "2023-05-02T12:40:01Z"
+  name: ovn-kubernetes-node
+  namespace: openshift-ovn-kubernetes
+  ownerReferences:
+  - apiVersion: operator.openshift.io/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: Network
+    name: cluster
+    uid: a74973fc-c074-41e2-8215-81c3454addea
+  resourceVersion: "11751"
+  uid: 4147373f-a9e9-42a3-9974-90c768a065b4
+secrets:
+- name: ovn-kubernetes-node-dockercfg-qqchm

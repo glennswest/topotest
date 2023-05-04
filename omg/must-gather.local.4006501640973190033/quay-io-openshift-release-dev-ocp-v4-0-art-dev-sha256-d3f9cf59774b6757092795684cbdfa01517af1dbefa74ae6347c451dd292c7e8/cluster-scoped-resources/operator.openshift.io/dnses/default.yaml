@@ -1,0 +1,87 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: DNS
+metadata:
+  creationTimestamp: "2023-05-02T12:34:07Z"
+  finalizers:
+  - dns.operator.openshift.io/dns-controller
+  generation: 1
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:finalizers:
+          .: {}
+          v:"dns.operator.openshift.io/dns-controller": {}
+      f:spec:
+        .: {}
+        f:cache:
+          .: {}
+          f:negativeTTL: {}
+          f:positiveTTL: {}
+        f:logLevel: {}
+        f:nodePlacement: {}
+        f:operatorLogLevel: {}
+        f:upstreamResolvers:
+          .: {}
+          f:policy: {}
+          f:transportConfig: {}
+          f:upstreams: {}
+    manager: dns-operator
+    operation: Update
+    time: "2023-05-02T12:34:07Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:clusterDomain: {}
+        f:clusterIP: {}
+        f:conditions: {}
+    manager: dns-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:32:43Z"
+  name: default
+  resourceVersion: "631073"
+  uid: 9c1076b3-5b4d-421d-9a0d-ea62bd957393
+spec:
+  cache:
+    negativeTTL: 0s
+    positiveTTL: 0s
+  logLevel: Normal
+  nodePlacement: {}
+  operatorLogLevel: Normal
+  upstreamResolvers:
+    policy: Sequential
+    transportConfig: {}
+    upstreams:
+    - port: 53
+      type: SystemResolvConf
+status:
+  clusterDomain: cluster.local
+  clusterIP: 172.30.0.10
+  conditions:
+  - lastTransitionTime: "2023-05-04T16:32:43Z"
+    message: Enough DNS pods are available, and the DNS service has a cluster IP address.
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-05-04T16:32:43Z"
+    message: All DNS and node-resolver pods are available, and the DNS service has
+      a cluster IP address.
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-05-04T16:32:43Z"
+    message: The DNS daemonset has available pods, and the DNS service has a cluster
+      IP address.
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-05-02T12:34:07Z"
+    message: DNS Operator can be upgraded
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable

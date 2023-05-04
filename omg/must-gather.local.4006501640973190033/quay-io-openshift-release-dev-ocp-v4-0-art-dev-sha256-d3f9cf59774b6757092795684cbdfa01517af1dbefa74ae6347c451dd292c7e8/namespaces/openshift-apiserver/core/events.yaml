@@ -1,0 +1,994 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "trusted-ca-bundle" : failed to sync
+    configmap cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:49Z"
+    name: apiserver-65d8786fff-b42ll.175bfda842fbf7ac
+    namespace: openshift-apiserver
+    resourceVersion: "629020"
+    uid: df360520-89e5-4501-b94b-f573edbfa5df
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "config" : failed to sync configmap
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:49Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:49Z"
+    name: apiserver-65d8786fff-b42ll.175bfda842fc8cd2
+    namespace: openshift-apiserver
+    resourceVersion: "629024"
+    uid: 5bdbb882-4db4-4fc3-8e20-9a3656329e9b
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "encryption-config" : failed to sync
+    secret cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:52Z"
+    name: apiserver-65d8786fff-b42ll.175bfda842fffd6b
+    namespace: openshift-apiserver
+    resourceVersion: "629052"
+    uid: 1d5a109f-b012-4fd6-aa38-e65fe725aac0
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "etcd-client" : failed to sync secret
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:52Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:52Z"
+    name: apiserver-65d8786fff-b42ll.175bfda84300417a
+    namespace: openshift-apiserver
+    resourceVersion: "629054"
+    uid: fa85a732-4dd5-45ac-adb9-62f911c81e0e
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "image-import-ca" : failed to sync
+    configmap cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:53Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:53Z"
+    name: apiserver-65d8786fff-b42ll.175bfda84301b33c
+    namespace: openshift-apiserver
+    resourceVersion: "629064"
+    uid: 785caab4-f0de-4af6-bb01-5aa99518de22
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "serving-cert" : failed to sync secret
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:58Z"
+    name: apiserver-65d8786fff-b42ll.175bfda8431a4494
+    namespace: openshift-apiserver
+    resourceVersion: "629112"
+    uid: 52c0f81c-f83f-43a8-8bac-5cf63cfa1c6c
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "audit" : failed to sync configmap
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:58Z"
+    name: apiserver-65d8786fff-b42ll.175bfda8431edb03
+    namespace: openshift-apiserver
+    resourceVersion: "629126"
+    uid: 808513a5-12c1-42b3-8730-60e3276e8d37
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "etcd-serving-ca" : failed to sync
+    configmap cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:59Z"
+    name: apiserver-65d8786fff-b42ll.175bfda843242b7f
+    namespace: openshift-apiserver
+    resourceVersion: "629130"
+    uid: a84f86d1-465f-44a8-9a3d-b436442952bb
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:05Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_apiserver-65d8786fff-b42ll_openshift-apiserver_439aadfe-0628-4be3-9ede-8dddcee2a6d7_0(407a589aaa17b94c574daa1dd7ae60ed9658a8d4e6726cd0e80f0cab7e168753):
+    error adding pod openshift-apiserver_apiserver-65d8786fff-b42ll to CNI network
+    "multus-cni-network": plugin type="multus" name="multus-cni-network" failed (add):
+    Multus: [openshift-apiserver/apiserver-65d8786fff-b42ll/439aadfe-0628-4be3-9ede-8dddcee2a6d7]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:17Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:17Z"
+    name: apiserver-65d8786fff-b42ll.175bfdbb0f3c56c4
+    namespace: openshift-apiserver
+    resourceVersion: "631441"
+    uid: 61cd8ef8-c3e4-404e-962f-810295654449
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:18Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "629179"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:18Z"
+  message: Add eth0 [10.128.0.29/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:18Z"
+    name: apiserver-65d8786fff-b42ll.175bfdbdfffbe7b4
+    namespace: openshift-apiserver
+    resourceVersion: "630131"
+    uid: e4861a2d-0e7b-462d-8bf2-4220d1f19636
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{fix-audit-permissions}
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:18Z"
+  message: Pulling image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:47bc752254f826905ac36cc2eb1819373a3045603e5dfa03c7f9e6d73c3fd9f9"
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:32Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:32Z"
+    name: apiserver-65d8786fff-b42ll.175bfdbe0fb78398
+    namespace: openshift-apiserver
+    resourceVersion: "631729"
+    uid: 0154c76b-4bd5-4fd8-994e-e1a1b2a364c7
+  reason: Pulling
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:11Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{fix-audit-permissions}
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:11Z"
+  message: Successfully pulled image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:47bc752254f826905ac36cc2eb1819373a3045603e5dfa03c7f9e6d73c3fd9f9"
+    in 52.909598069s
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:40Z"
+    name: apiserver-65d8786fff-b42ll.175bfdca616018d5
+    namespace: openshift-apiserver
+    resourceVersion: "632385"
+    uid: c3964efe-1517-426b-8062-d794f1a2ffe8
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:41Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{fix-audit-permissions}
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:41Z"
+  message: Created container fix-audit-permissions
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:55Z"
+    name: apiserver-65d8786fff-b42ll.175bfdd1682409d3
+    namespace: openshift-apiserver
+    resourceVersion: "632511"
+    uid: 6c90ccb1-06ce-4c3f-be78-186737a0de11
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:41Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.initContainers{fix-audit-permissions}
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:41Z"
+  message: Started container fix-audit-permissions
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:55Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:55Z"
+    name: apiserver-65d8786fff-b42ll.175bfdd17546d903
+    namespace: openshift-apiserver
+    resourceVersion: "632514"
+    uid: 59d5e6e1-7890-4f9e-bb3c-960b2ff50e0e
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:32:46Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver}
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:32:46Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:47bc752254f826905ac36cc2eb1819373a3045603e5dfa03c7f9e6d73c3fd9f9"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:34:59Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:34:59Z"
+    name: apiserver-65d8786fff-b42ll.175bfdd293630070
+    namespace: openshift-apiserver
+    resourceVersion: "632542"
+    uid: bae69ed8-ac56-4bcc-90cc-6cc69a3580de
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:13Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver}
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:13Z"
+  message: Created container openshift-apiserver
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:11Z"
+    name: apiserver-65d8786fff-b42ll.175bfdd8f050a364
+    namespace: openshift-apiserver
+    resourceVersion: "632652"
+    uid: 120eef82-ec91-4c23-9fbe-6ce95480e255
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver}
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:14Z"
+  message: Started container openshift-apiserver
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:11Z"
+    name: apiserver-65d8786fff-b42ll.175bfdd8f7fb3bc6
+    namespace: openshift-apiserver
+    resourceVersion: "632653"
+    uid: 471a0213-1a46-4bb4-bfdd-1e2f5f89515d
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:14Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver-check-endpoints}
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:14Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:9ed61d19216d71cc5692c22402961b0f865ed8629f5d64f1687aa47af601c018"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:11Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:11Z"
+    name: apiserver-65d8786fff-b42ll.175bfdd8f81f3525
+    namespace: openshift-apiserver
+    resourceVersion: "632656"
+    uid: 6721ec35-6d8b-4e28-8d9d-d4cb287d0a4d
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:19Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver-check-endpoints}
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:19Z"
+  message: Created container openshift-apiserver-check-endpoints
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:18Z"
+    name: apiserver-65d8786fff-b42ll.175bfdda402d9065
+    namespace: openshift-apiserver
+    resourceVersion: "632705"
+    uid: aafc0fec-5762-4226-b695-c89ad996f6bf
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:19Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{openshift-apiserver-check-endpoints}
+    kind: Pod
+    name: apiserver-65d8786fff-b42ll
+    namespace: openshift-apiserver
+    resourceVersion: "13488"
+    uid: 439aadfe-0628-4be3-9ede-8dddcee2a6d7
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:19Z"
+  message: Started container openshift-apiserver-check-endpoints
+  metadata:
+    creationTimestamp: "2023-05-04T16:35:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:35:18Z"
+    name: apiserver-65d8786fff-b42ll.175bfdda4db8f103
+    namespace: openshift-apiserver
+    resourceVersion: "632709"
+    uid: a2961f8a-f581-4f66-9f00-c090b1430641
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:21Z"
+  involvedObject:
+    kind: Node
+    name: node
+    namespace: openshift-apiserver
+    uid: 2c5f7466-57f6-4492-b9a5-ad2d06f92709
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:21Z"
+  message: Controller "CheckEndpointsTimeToStart" resync interval is set to 0s which
+    might lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-apiserver-operator
+      operation: Update
+      time: "2023-05-04T16:33:21Z"
+    name: node.175bfddaa79400ec
+    namespace: openshift-apiserver
+    resourceVersion: "631500"
+    uid: 6f0ffa92-9ed3-4856-add1-83509ad4261f
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: check-endpoint-checkendpointstimetostart
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:33:21Z"
+  involvedObject:
+    kind: Node
+    name: node
+    namespace: openshift-apiserver
+    uid: 2c5f7466-57f6-4492-b9a5-ad2d06f92709
+  kind: Event
+  lastTimestamp: "2023-05-04T16:33:21Z"
+  message: Controller "CheckEndpointsStop" resync interval is set to 0s which might
+    lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:21Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-apiserver-operator
+      operation: Update
+      time: "2023-05-04T16:33:21Z"
+    name: node.175bfddaacb49f2f
+    namespace: openshift-apiserver
+    resourceVersion: "631503"
+    uid: 57fb65ac-a2ee-4a72-b3fa-5d7685c5e290
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: check-endpoint-checkendpointsstop
+  type: Warning
+kind: EventList
+metadata:
+  resourceVersion: "684739"

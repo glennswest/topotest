@@ -1,0 +1,29 @@
+2023-05-04T16:31:18.493716312Z W0504 16:31:18.493545       1 cmd.go:213] Using insecure, self-signed certificates
+2023-05-04T16:31:19.281551009Z I0504 16:31:19.280037       1 observer_polling.go:159] Starting file observer
+2023-05-04T16:31:19.350912132Z I0504 16:31:19.350280       1 builder.go:262] check-endpoints version 4.12.0-202301311742.p0.g23536c0.assembly.stream-23536c0-23536c020d3bddea96c955ecf5e379dded8a8327
+2023-05-04T16:31:19.728106337Z W0504 16:31:19.728039       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_ECDSA_WITH_AES_128_CBC_SHA256' detected.
+2023-05-04T16:31:19.728106337Z W0504 16:31:19.728051       1 secure_serving.go:69] Use of insecure cipher 'TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256' detected.
+2023-05-04T16:31:19.730070964Z I0504 16:31:19.730022       1 secure_serving.go:210] Serving securely on [::]:17698
+2023-05-04T16:31:19.730070964Z I0504 16:31:19.730063       1 requestheader_controller.go:169] Starting RequestHeaderAuthRequestController
+2023-05-04T16:31:19.730107322Z I0504 16:31:19.730077       1 shared_informer.go:255] Waiting for caches to sync for RequestHeaderAuthRequestController
+2023-05-04T16:31:19.730112832Z I0504 16:31:19.730103       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/tmp/serving-cert-606910632/tls.crt::/tmp/serving-cert-606910632/tls.key"
+2023-05-04T16:31:19.735245733Z I0504 16:31:19.735084       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"
+2023-05-04T16:31:19.735359817Z I0504 16:31:19.735288       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file"
+2023-05-04T16:31:19.735359817Z I0504 16:31:19.735300       1 shared_informer.go:255] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2023-05-04T16:31:19.735359817Z I0504 16:31:19.735320       1 configmap_cafile_content.go:202] "Starting controller" name="client-ca::kube-system::extension-apiserver-authentication::client-ca-file"
+2023-05-04T16:31:19.735359817Z I0504 16:31:19.735326       1 shared_informer.go:255] Waiting for caches to sync for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2023-05-04T16:31:19.750420406Z I0504 16:31:19.750388       1 base_controller.go:67] Waiting for caches to sync for CheckEndpointsTimeToStart
+2023-05-04T16:31:19.831803857Z I0504 16:31:19.831648       1 shared_informer.go:262] Caches are synced for RequestHeaderAuthRequestController
+2023-05-04T16:31:19.846166245Z I0504 16:31:19.846131       1 shared_informer.go:262] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::requestheader-client-ca-file
+2023-05-04T16:31:19.851884254Z I0504 16:31:19.849776       1 shared_informer.go:262] Caches are synced for client-ca::kube-system::extension-apiserver-authentication::client-ca-file
+2023-05-04T16:31:20.051533499Z I0504 16:31:20.051462       1 base_controller.go:73] Caches are synced for CheckEndpointsTimeToStart 
+2023-05-04T16:31:20.051533499Z I0504 16:31:20.051503       1 base_controller.go:110] Starting #1 worker of CheckEndpointsTimeToStart controller ...
+2023-05-04T16:31:20.051619751Z I0504 16:31:20.051610       1 base_controller.go:67] Waiting for caches to sync for CheckEndpointsStop
+2023-05-04T16:31:20.051628667Z I0504 16:31:20.051618       1 base_controller.go:73] Caches are synced for CheckEndpointsStop 
+2023-05-04T16:31:20.051628667Z I0504 16:31:20.051621       1 base_controller.go:110] Starting #1 worker of CheckEndpointsStop controller ...
+2023-05-04T16:31:20.051644998Z I0504 16:31:20.051636       1 base_controller.go:167] Shutting down CheckEndpointsTimeToStart ...
+2023-05-04T16:31:20.052223594Z I0504 16:31:20.052209       1 base_controller.go:67] Waiting for caches to sync for check-endpoints
+2023-05-04T16:31:20.052250314Z I0504 16:31:20.052226       1 base_controller.go:114] Shutting down worker of CheckEndpointsTimeToStart controller ...
+2023-05-04T16:31:20.052250314Z I0504 16:31:20.052232       1 base_controller.go:104] All CheckEndpointsTimeToStart workers have been terminated
+2023-05-04T16:31:20.152433790Z I0504 16:31:20.152376       1 base_controller.go:73] Caches are synced for check-endpoints 
+2023-05-04T16:31:20.152433790Z I0504 16:31:20.152407       1 base_controller.go:110] Starting #1 worker of check-endpoints controller ...

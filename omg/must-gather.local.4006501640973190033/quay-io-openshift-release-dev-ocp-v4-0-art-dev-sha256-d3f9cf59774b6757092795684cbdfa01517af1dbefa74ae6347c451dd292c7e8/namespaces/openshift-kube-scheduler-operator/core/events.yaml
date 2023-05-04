@@ -1,0 +1,790 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:36:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: ConfigMap
+    name: openshift-cluster-kube-scheduler-operator-lock
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633182"
+    uid: ce0df196-52ad-487a-bb27-633d3c9684ed
+  kind: Event
+  lastTimestamp: "2023-05-04T16:36:05Z"
+  message: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz_237ce4b9-791a-4d50-963a-cf75b94d7d8c
+    became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-04T16:36:05Z"
+    name: openshift-cluster-kube-scheduler-operator-lock.175bfe00fe09c16f
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633185"
+    uid: e25f5a4f-c18d-4125-a3ee-005ac941f97c
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-kube-scheduler-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:36:05Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: openshift-cluster-kube-scheduler-operator-lock
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633183"
+    uid: 4f9e5500-0092-4639-8bcc-67f8d928cebf
+  kind: Event
+  lastTimestamp: "2023-05-04T16:36:05Z"
+  message: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz_237ce4b9-791a-4d50-963a-cf75b94d7d8c
+    became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-04T16:36:05Z"
+    name: openshift-cluster-kube-scheduler-operator-lock.175bfe00fe09ee53
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633186"
+    uid: e413dc59-72cb-4454-bd25-91da28dac70f
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-kube-scheduler-operator
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "6176"
+    uid: f6bc7d17-4a3c-48be-bd0e-1c18dfa4edb3
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "config" : failed to sync configmap
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:51Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:51Z"
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz.175bfda842ff34f7
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "629045"
+    uid: fc590353-7d7f-4d5e-abf8-fb2869cbb9c2
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:44Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "6176"
+    uid: f6bc7d17-4a3c-48be-bd0e-1c18dfa4edb3
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:44Z"
+  message: 'MountVolume.SetUp failed for volume "serving-cert" : failed to sync secret
+    cache: timed out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:54Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:29:54Z"
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz.175bfda84303dbcb
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "629075"
+    uid: c3de8759-6cac-4f99-b607-dda51b47ccd5
+  reason: FailedMount
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:05Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "6176"
+    uid: f6bc7d17-4a3c-48be-bd0e-1c18dfa4edb3
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:05Z"
+  message: 'Failed to create pod sandbox: rpc error: code = Unknown desc = failed
+    to create pod network sandbox k8s_openshift-kube-scheduler-operator-6f7cd4b84d-55pgz_openshift-kube-scheduler-operator_f6bc7d17-4a3c-48be-bd0e-1c18dfa4edb3_0(6507163e66e00b773938bd9b7cdaeb69baa68c811304d7c47df31ccd337924f7):
+    error adding pod openshift-kube-scheduler-operator_openshift-kube-scheduler-operator-6f7cd4b84d-55pgz
+    to CNI network "multus-cni-network": plugin type="multus" name="multus-cni-network"
+    failed (add): Multus: [openshift-kube-scheduler-operator/openshift-kube-scheduler-operator-6f7cd4b84d-55pgz/f6bc7d17-4a3c-48be-bd0e-1c18dfa4edb3]:
+    have you checked that your default network is ready? still waiting for readinessindicatorfile
+    @ /var/run/multus/cni/net.d/10-ovn-kubernetes.conf. pollimmediate error: timed
+    out waiting for the condition'
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:18Z"
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz.175bfdbb1405def9
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "631458"
+    uid: fc096aba-0324-4393-a285-e28f9af013c5
+  reason: FailedCreatePodSandBox
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:18Z"
+  involvedObject:
+    apiVersion: v1
+    kind: Pod
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "629171"
+    uid: f6bc7d17-4a3c-48be-bd0e-1c18dfa4edb3
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:18Z"
+  message: Add eth0 [10.128.0.18/23] from ovn-kubernetes
+  metadata:
+    creationTimestamp: "2023-05-04T16:31:18Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: multus
+      operation: Update
+      time: "2023-05-04T16:31:18Z"
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz.175bfdbdff9dbe65
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "630132"
+    uid: df16bd7c-da4c-4f89-901f-beaa53e7eaf5
+  reason: AddedInterface
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: multus
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:18Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler-operator-container}
+    kind: Pod
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "6176"
+    uid: f6bc7d17-4a3c-48be-bd0e-1c18dfa4edb3
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:18Z"
+  message: Container image "quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651"
+    already present on machine
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:33Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:33Z"
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz.175bfdbe107a0eba
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "631731"
+    uid: a55706fe-4ae5-4d5f-b6a8-873ad21df0b6
+  reason: Pulled
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:20Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler-operator-container}
+    kind: Pod
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "6176"
+    uid: f6bc7d17-4a3c-48be-bd0e-1c18dfa4edb3
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:20Z"
+  message: Created container kube-scheduler-operator-container
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:36Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:36Z"
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz.175bfdbe944dcada
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "631814"
+    uid: 1fea9ec2-9aa7-4000-bf7f-6165d77f4af4
+  reason: Created
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:31:24Z"
+  involvedObject:
+    apiVersion: v1
+    fieldPath: spec.containers{kube-scheduler-operator-container}
+    kind: Pod
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "6176"
+    uid: f6bc7d17-4a3c-48be-bd0e-1c18dfa4edb3
+  kind: Event
+  lastTimestamp: "2023-05-04T16:31:24Z"
+  message: Started container kube-scheduler-operator-container
+  metadata:
+    creationTimestamp: "2023-05-04T16:33:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+          f:host: {}
+        f:type: {}
+      manager: kubelet
+      operation: Update
+      time: "2023-05-04T16:33:39Z"
+    name: openshift-kube-scheduler-operator-6f7cd4b84d-55pgz.175bfdbf6aff79f3
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "631841"
+    uid: f88e4ed4-79d0-42e0-89ee-eaf0dd9ddf12
+  reason: Started
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kubelet
+    host: node
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:36:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-kube-scheduler-operator
+    namespace: openshift-kube-scheduler-operator
+    uid: 89fc3b10-7aab-4b45-951a-9cb0fe2d9a49
+  kind: Event
+  lastTimestamp: "2023-05-04T16:36:05Z"
+  message: Controller "RevisionController" resync interval is set to 0s which might
+    lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-04T16:36:05Z"
+    name: openshift-kube-scheduler-operator.175bfe00ff16e018
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633187"
+    uid: c820e2e0-bcb1-4aac-b51e-1ab7e85ca8cf
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-kube-scheduler-operator-revisioncontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:36:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-kube-scheduler-operator
+    namespace: openshift-kube-scheduler-operator
+    uid: 89fc3b10-7aab-4b45-951a-9cb0fe2d9a49
+  kind: Event
+  lastTimestamp: "2023-05-04T16:36:05Z"
+  message: Controller "PruneController" resync interval is set to 0s which might lead
+    to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-04T16:36:05Z"
+    name: openshift-kube-scheduler-operator.175bfe00ff203232
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633188"
+    uid: f51d9204-3984-4118-a3dc-875422ff7ae1
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-kube-scheduler-operator-prunecontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:36:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-kube-scheduler-operator
+    namespace: openshift-kube-scheduler-operator
+    uid: 89fc3b10-7aab-4b45-951a-9cb0fe2d9a49
+  kind: Event
+  lastTimestamp: "2023-05-04T16:36:05Z"
+  message: Controller "NodeController" resync interval is set to 0s which might lead
+    to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-04T16:36:05Z"
+    name: openshift-kube-scheduler-operator.175bfe00ff219152
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633189"
+    uid: 966dcfe4-58b5-4f78-b401-548b51384aaa
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-kube-scheduler-operator-nodecontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:36:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-kube-scheduler-operator
+    namespace: openshift-kube-scheduler-operator
+    uid: 89fc3b10-7aab-4b45-951a-9cb0fe2d9a49
+  kind: Event
+  lastTimestamp: "2023-05-04T16:36:05Z"
+  message: Controller "UnsupportedConfigOverridesController" resync interval is set
+    to 0s which might lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-04T16:36:05Z"
+    name: openshift-kube-scheduler-operator.175bfe00ff7a93ff
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633191"
+    uid: 468a2410-19a4-422b-bf5e-c149c2813ad3
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-kube-scheduler-operator-unsupportedconfigoverridescontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:36:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-kube-scheduler-operator
+    namespace: openshift-kube-scheduler-operator
+    uid: 89fc3b10-7aab-4b45-951a-9cb0fe2d9a49
+  kind: Event
+  lastTimestamp: "2023-05-04T16:36:05Z"
+  message: Controller "LoggingSyncer" resync interval is set to 0s which might lead
+    to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-04T16:36:06Z"
+    name: openshift-kube-scheduler-operator.175bfe00ff7beec7
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633196"
+    uid: dadf397c-bc12-4f3f-adc0-37439edce84a
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-kube-scheduler-operator-loggingsyncer
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:36:05Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-kube-scheduler-operator
+    namespace: openshift-kube-scheduler-operator
+    uid: 89fc3b10-7aab-4b45-951a-9cb0fe2d9a49
+  kind: Event
+  lastTimestamp: "2023-05-04T16:36:05Z"
+  message: Controller "GuardController" resync interval is set to 0s which might lead
+    to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-04T16:36:06Z"
+    name: openshift-kube-scheduler-operator.175bfe00ff7d270a
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633193"
+    uid: 2730f3cf-b29e-4e83-8c4e-2b189c5ce172
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-kube-scheduler-operator-guardcontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:36:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-kube-scheduler-operator
+    namespace: openshift-kube-scheduler-operator
+    uid: 89fc3b10-7aab-4b45-951a-9cb0fe2d9a49
+  kind: Event
+  lastTimestamp: "2023-05-04T16:36:06Z"
+  message: Controller "InstallerController" resync interval is set to 0s which might
+    lead to client request throttling
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-04T16:36:06Z"
+    name: openshift-kube-scheduler-operator.175bfe010057b03f
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633194"
+    uid: d32aac96-8d0c-4e0f-b424-db384f3a90a9
+  reason: FastControllerResync
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-kube-scheduler-operator-installer-controller-installercontroller
+  type: Warning
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:36:06Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-kube-scheduler-operator
+    namespace: openshift-kube-scheduler-operator
+    uid: 89fc3b10-7aab-4b45-951a-9cb0fe2d9a49
+  kind: Event
+  lastTimestamp: "2023-05-04T16:36:06Z"
+  message: 'Status for clusteroperator/kube-scheduler changed: Degraded changed from
+    False to True ("StaticPodsDegraded: Get \"https://172.30.0.1:443/api/v1/namespaces/openshift-kube-scheduler/pods/openshift-kube-scheduler-node\":
+    dial tcp 172.30.0.1:443: i/o timeout")'
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-04T16:36:06Z"
+    name: openshift-kube-scheduler-operator.175bfe01071d41cc
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633201"
+    uid: 4eb05cc3-9261-4d8d-86bd-4e3c103e864e
+  reason: OperatorStatusChanged
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:36:07Z"
+  involvedObject:
+    apiVersion: apps/v1
+    kind: Deployment
+    name: openshift-kube-scheduler-operator
+    namespace: openshift-kube-scheduler-operator
+    uid: 89fc3b10-7aab-4b45-951a-9cb0fe2d9a49
+  kind: Event
+  lastTimestamp: "2023-05-04T16:36:07Z"
+  message: 'Status for clusteroperator/kube-scheduler changed: Degraded changed from
+    True to False ("NodeControllerDegraded: All master nodes are ready")'
+  metadata:
+    creationTimestamp: "2023-05-04T16:36:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-04T16:36:07Z"
+    name: openshift-kube-scheduler-operator.175bfe01644c09c7
+    namespace: openshift-kube-scheduler-operator
+    resourceVersion: "633230"
+    uid: 9f5c90fc-efeb-4b67-9a2a-e8f1258dc71a
+  reason: OperatorStatusChanged
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: openshift-cluster-kube-scheduler-operator-status-controller-statussyncer_kube-scheduler
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "684686"

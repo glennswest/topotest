@@ -1,0 +1,86 @@
+---
+apiVersion: route.openshift.io/v1
+items:
+- apiVersion: route.openshift.io/v1
+  kind: Route
+  metadata:
+    annotations:
+      haproxy.router.openshift.io/balance: roundrobin
+      openshift.io/host.generated: "true"
+    creationTimestamp: "2023-05-02T12:41:13Z"
+    labels:
+      ingress.openshift.io/canary: canary_controller
+    managedFields:
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:haproxy.router.openshift.io/balance: {}
+          f:labels:
+            .: {}
+            f:ingress.openshift.io/canary: {}
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"854992f7-db07-4d39-a5b4-fe939e792cb5"}: {}
+        f:spec:
+          f:port:
+            .: {}
+            f:targetPort: {}
+          f:tls:
+            .: {}
+            f:insecureEdgeTerminationPolicy: {}
+            f:termination: {}
+          f:to:
+            f:kind: {}
+            f:name: {}
+            f:weight: {}
+          f:wildcardPolicy: {}
+      manager: ingress-operator
+      operation: Update
+      time: "2023-05-02T12:41:13Z"
+    - apiVersion: route.openshift.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:status:
+          f:ingress: {}
+      manager: openshift-router
+      operation: Update
+      subresource: status
+      time: "2023-05-02T12:41:30Z"
+    name: canary
+    namespace: openshift-ingress-canary
+    ownerReferences:
+    - apiVersion: apps/v1
+      controller: true
+      kind: daemonset
+      name: ingress-canary
+      uid: 854992f7-db07-4d39-a5b4-fe939e792cb5
+    resourceVersion: "13758"
+    uid: 3cb2c723-5c2b-44e1-b02f-0b01c7af3ad9
+  spec:
+    host: canary-openshift-ingress-canary.apps.sno.gw.lo
+    port:
+      targetPort: 8080
+    tls:
+      insecureEdgeTerminationPolicy: Redirect
+      termination: edge
+    to:
+      kind: Service
+      name: ingress-canary
+      weight: 100
+    wildcardPolicy: None
+  status:
+    ingress:
+    - conditions:
+      - lastTransitionTime: "2023-05-02T12:41:30Z"
+        status: "True"
+        type: Admitted
+      host: canary-openshift-ingress-canary.apps.sno.gw.lo
+      routerCanonicalHostname: router-default.apps.sno.gw.lo
+      routerName: default
+      wildcardPolicy: None
+kind: RouteList
+metadata:
+  resourceVersion: "684635"

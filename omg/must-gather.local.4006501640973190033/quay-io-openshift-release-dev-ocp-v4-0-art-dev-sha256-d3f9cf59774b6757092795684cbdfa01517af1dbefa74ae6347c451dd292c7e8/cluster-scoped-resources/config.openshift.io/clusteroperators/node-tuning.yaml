@@ -1,0 +1,94 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-05-02T12:17:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-node-tuning-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:37:01Z"
+  name: node-tuning
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "633962"
+  uid: b32f4f7e-8681-4f20-a20e-c1df8f622156
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-02T12:35:14Z"
+    message: Cluster has deployed "4.12.2"
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-05-04T16:37:01Z"
+    message: Cluster version is "4.12.2"
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-05-02T12:34:13Z"
+    message: DaemonSet "tuned" available
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-cluster-node-tuning-operator
+    resource: namespaces
+  - group: tuned.openshift.io
+    name: ""
+    namespace: openshift-cluster-node-tuning-operator
+    resource: profiles
+  - group: tuned.openshift.io
+    name: ""
+    namespace: openshift-cluster-node-tuning-operator
+    resource: tuneds
+  - group: apps
+    name: tuned
+    namespace: openshift-cluster-node-tuning-operator
+    resource: daemonsets
+  versions:
+  - name: operator
+    version: 4.12.2

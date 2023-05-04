@@ -1,0 +1,3 @@
+2023-05-04T16:33:52.740471944Z I0504 16:33:52.739655   23711 main.go:149] calling CSI driver to discover driver name
+2023-05-04T16:33:52.742225812Z I0504 16:33:52.742175   23711 main.go:155] CSI driver name: "topolvm.io"
+2023-05-04T16:33:52.742225812Z I0504 16:33:52.742193   23711 main.go:183] ServeMux listening at "0.0.0.0:9808"

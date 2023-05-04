@@ -1,0 +1,688 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    k8s.ovn.org/pod-networks: '{"default":{"ip_addresses":["10.128.1.216/23"],"mac_address":"0a:58:0a:80:01:d8","gateway_ips":["10.128.0.1"],"ip_address":"10.128.1.216/23","gateway_ip":"10.128.0.1"}}'
+    k8s.v1.cni.cncf.io/network-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.1.216"
+          ],
+          "mac": "0a:58:0a:80:01:d8",
+          "default": true,
+          "dns": {}
+      }]
+    k8s.v1.cni.cncf.io/networks-status: |-
+      [{
+          "name": "ovn-kubernetes",
+          "interface": "eth0",
+          "ips": [
+              "10.128.1.216"
+          ],
+          "mac": "0a:58:0a:80:01:d8",
+          "default": true,
+          "dns": {}
+      }]
+    openshift.io/scc: restricted-v2
+    seccomp.security.alpha.kubernetes.io/pod: runtime/default
+  creationTimestamp: "2023-05-04T14:46:24Z"
+  generateName: topolvm-controller-5496f5d4f4-
+  labels:
+    app.kubernetes.io/component: topolvm-controller
+    app.kubernetes.io/managed-by: lvms-operator
+    app.kubernetes.io/name: topolvm-csi-driver
+    app.kubernetes.io/part-of: lvms-provisioner
+    pod-template-hash: 5496f5d4f4
+  managedFields:
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:generateName: {}
+        f:labels:
+          .: {}
+          f:app.kubernetes.io/component: {}
+          f:app.kubernetes.io/managed-by: {}
+          f:app.kubernetes.io/name: {}
+          f:app.kubernetes.io/part-of: {}
+          f:pod-template-hash: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"e18692a4-5db2-459d-a9ce-22b7e6d0c778"}: {}
+      f:spec:
+        f:containers:
+          k:{"name":"csi-provisioner"}:
+            .: {}
+            f:args: {}
+            f:env:
+              .: {}
+              k:{"name":"NAMESPACE"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+              k:{"name":"POD_NAME"}:
+                .: {}
+                f:name: {}
+                f:valueFrom:
+                  .: {}
+                  f:fieldRef: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/run/topolvm"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"csi-resizer"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/run/topolvm"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"csi-snapshotter"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/run/topolvm"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"liveness-probe"}:
+            .: {}
+            f:args: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/run/topolvm"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+          k:{"name":"topolvm-controller"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:livenessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:initialDelaySeconds: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:name: {}
+            f:ports:
+              .: {}
+              k:{"containerPort":9808,"protocol":"TCP"}:
+                .: {}
+                f:containerPort: {}
+                f:name: {}
+                f:protocol: {}
+            f:readinessProbe:
+              .: {}
+              f:failureThreshold: {}
+              f:httpGet:
+                .: {}
+                f:path: {}
+                f:port: {}
+                f:scheme: {}
+              f:periodSeconds: {}
+              f:successThreshold: {}
+              f:timeoutSeconds: {}
+            f:resources:
+              .: {}
+              f:limits:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+              f:requests:
+                .: {}
+                f:cpu: {}
+                f:memory: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+              k:{"mountPath":"/run/topolvm"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:dnsPolicy: {}
+        f:enableServiceLinks: {}
+        f:initContainers:
+          .: {}
+          k:{"name":"self-signed-cert-generator"}:
+            .: {}
+            f:command: {}
+            f:image: {}
+            f:imagePullPolicy: {}
+            f:name: {}
+            f:resources: {}
+            f:terminationMessagePath: {}
+            f:terminationMessagePolicy: {}
+            f:volumeMounts:
+              .: {}
+              k:{"mountPath":"/certs"}:
+                .: {}
+                f:mountPath: {}
+                f:name: {}
+        f:restartPolicy: {}
+        f:schedulerName: {}
+        f:securityContext: {}
+        f:serviceAccount: {}
+        f:serviceAccountName: {}
+        f:terminationGracePeriodSeconds: {}
+        f:volumes:
+          .: {}
+          k:{"name":"certs"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+          k:{"name":"socket-dir"}:
+            .: {}
+            f:emptyDir: {}
+            f:name: {}
+    manager: kube-controller-manager
+    operation: Update
+    time: "2023-05-04T14:46:24Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.ovn.org/pod-networks: {}
+    manager: node
+    operation: Update
+    time: "2023-05-04T14:46:25Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:k8s.v1.cni.cncf.io/network-status: {}
+          f:k8s.v1.cni.cncf.io/networks-status: {}
+    manager: multus
+    operation: Update
+    subresource: status
+    time: "2023-05-04T14:46:26Z"
+  - apiVersion: v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions:
+          k:{"type":"ContainersReady"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Initialized"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+          k:{"type":"Ready"}:
+            .: {}
+            f:lastProbeTime: {}
+            f:lastTransitionTime: {}
+            f:status: {}
+            f:type: {}
+        f:containerStatuses: {}
+        f:hostIP: {}
+        f:initContainerStatuses: {}
+        f:phase: {}
+        f:podIP: {}
+        f:podIPs:
+          .: {}
+          k:{"ip":"10.128.1.216"}:
+            .: {}
+            f:ip: {}
+        f:startTime: {}
+    manager: kubelet
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:34:16Z"
+  name: topolvm-controller-5496f5d4f4-ll8f6
+  namespace: openshift-storage
+  ownerReferences:
+  - apiVersion: apps/v1
+    blockOwnerDeletion: true
+    controller: true
+    kind: ReplicaSet
+    name: topolvm-controller-5496f5d4f4
+    uid: e18692a4-5db2-459d-a9ce-22b7e6d0c778
+  resourceVersion: "632170"
+  uid: 5513840e-b1cc-49be-a732-bdae9d465109
+spec:
+  containers:
+  - command:
+    - /topolvm-controller
+    - --cert-dir=/certs
+    image: registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59
+    imagePullPolicy: IfNotPresent
+    livenessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /healthz
+        port: healthz
+        scheme: HTTP
+      initialDelaySeconds: 10
+      periodSeconds: 60
+      successThreshold: 1
+      timeoutSeconds: 3
+    name: topolvm-controller
+    ports:
+    - containerPort: 9808
+      name: healthz
+      protocol: TCP
+    readinessProbe:
+      failureThreshold: 3
+      httpGet:
+        path: /metrics
+        port: 8080
+        scheme: HTTP
+      periodSeconds: 10
+      successThreshold: 1
+      timeoutSeconds: 1
+    resources:
+      limits:
+        cpu: 100m
+        memory: 150Mi
+      requests:
+        cpu: 100m
+        memory: 100Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000670000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /run/topolvm
+      name: socket-dir
+    - mountPath: /certs
+      name: certs
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nkgsm
+      readOnly: true
+  - args:
+    - --csi-address=/run/topolvm/csi-topolvm.sock
+    - --enable-capacity
+    - --capacity-ownerref-level=2
+    - --capacity-poll-interval=30s
+    - --feature-gates=Topology=true
+    env:
+    - name: POD_NAME
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.name
+    - name: NAMESPACE
+      valueFrom:
+        fieldRef:
+          apiVersion: v1
+          fieldPath: metadata.namespace
+    image: registry.redhat.io/openshift4/ose-csi-external-provisioner@sha256:33617f49d30c6752e078e76bebcbf3f4384fb03286f2ef4d6ca9d2e6464ada43
+    imagePullPolicy: IfNotPresent
+    name: csi-provisioner
+    resources:
+      limits:
+        cpu: 100m
+        memory: 100Mi
+      requests:
+        cpu: 50m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000670000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /run/topolvm
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nkgsm
+      readOnly: true
+  - args:
+    - --csi-address=/run/topolvm/csi-topolvm.sock
+    image: registry.redhat.io/openshift4/ose-csi-external-resizer@sha256:b1f2103c4ddf702b2a135e68420af3e434c8b135735dbd33bf66afada0036976
+    imagePullPolicy: IfNotPresent
+    name: csi-resizer
+    resources:
+      limits:
+        cpu: 50m
+        memory: 100Mi
+      requests:
+        cpu: 20m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000670000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /run/topolvm
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nkgsm
+      readOnly: true
+  - args:
+    - --csi-address=/run/topolvm/csi-topolvm.sock
+    image: registry.redhat.io/openshift4/ose-csi-livenessprobe@sha256:d4228c6e797ec6b2d37e599c19c715b02f6cb955b2a7fb493c56844f4c75e687
+    imagePullPolicy: IfNotPresent
+    name: liveness-probe
+    resources:
+      limits:
+        cpu: 50m
+        memory: 50Mi
+      requests:
+        cpu: 30m
+        memory: 30Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000670000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /run/topolvm
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nkgsm
+      readOnly: true
+  - args:
+    - --csi-address=/run/topolvm/csi-topolvm.sock
+    image: registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel8@sha256:f1955371a5f88d8984af4445f43864dad8cc315e714f40984ebdf973185ade92
+    imagePullPolicy: IfNotPresent
+    name: csi-snapshotter
+    resources:
+      limits:
+        cpu: 50m
+        memory: 100Mi
+      requests:
+        cpu: 20m
+        memory: 50Mi
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000670000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /run/topolvm
+      name: socket-dir
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nkgsm
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  imagePullSecrets:
+  - name: topolvm-controller-dockercfg-sxl7f
+  initContainers:
+  - command:
+    - /usr/bin/bash
+    - -c
+    - openssl req -nodes -x509 -newkey rsa:4096 -subj '/DC=self_signed_certificate'
+      -keyout /certs/tls.key -out /certs/tls.crt -days 3650
+    image: registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f
+    imagePullPolicy: IfNotPresent
+    name: self-signed-cert-generator
+    resources: {}
+    securityContext:
+      allowPrivilegeEscalation: false
+      capabilities:
+        drop:
+        - ALL
+      runAsNonRoot: true
+      runAsUser: 1000670000
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /certs
+      name: certs
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-nkgsm
+      readOnly: true
+  nodeName: node
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Always
+  schedulerName: default-scheduler
+  securityContext:
+    fsGroup: 1000670000
+    seLinuxOptions:
+      level: s0:c26,c10
+    seccompProfile:
+      type: RuntimeDefault
+  serviceAccount: topolvm-controller
+  serviceAccountName: topolvm-controller
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoSchedule
+    key: node.kubernetes.io/memory-pressure
+    operator: Exists
+  volumes:
+  - emptyDir: {}
+    name: socket-dir
+  - emptyDir: {}
+    name: certs
+  - name: kube-api-access-nkgsm
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+      - configMap:
+          items:
+          - key: service-ca.crt
+            path: service-ca.crt
+          name: openshift-service-ca.crt
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T16:33:12Z"
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T16:34:16Z"
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T16:34:16Z"
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2023-05-04T14:46:24Z"
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: cri-o://9897ba0e32a81decd5837ed7ee42accda9cb94e982007a264de93518957ba519
+    image: registry.redhat.io/openshift4/ose-csi-external-provisioner@sha256:33617f49d30c6752e078e76bebcbf3f4384fb03286f2ef4d6ca9d2e6464ada43
+    imageID: registry.redhat.io/openshift4/ose-csi-external-provisioner@sha256:33617f49d30c6752e078e76bebcbf3f4384fb03286f2ef4d6ca9d2e6464ada43
+    lastState: {}
+    name: csi-provisioner
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:48Z"
+  - containerID: cri-o://0cd4655154b2e0c6e4c6bd635f0d99f5a2c268b367a18092501c5dbccffd95b2
+    image: registry.redhat.io/openshift4/ose-csi-external-resizer@sha256:b1f2103c4ddf702b2a135e68420af3e434c8b135735dbd33bf66afada0036976
+    imageID: registry.redhat.io/openshift4/ose-csi-external-resizer@sha256:3e25cd6c4997ef7c71db31ef9f400e4442d99e42e43d784d6f798c658f15e25c
+    lastState: {}
+    name: csi-resizer
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:34:00Z"
+  - containerID: cri-o://93da348e70dbbdd7e55e531d3abe9c0dc04e650e6384d0b3590d5283e2347727
+    image: registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel8@sha256:f1955371a5f88d8984af4445f43864dad8cc315e714f40984ebdf973185ade92
+    imageID: registry.redhat.io/openshift4/ose-csi-external-snapshotter-rhel8@sha256:48ba05c2d88ce8dbc2f0a08757cc7bc26d4045e7695e4d0a0ba9828160891acf
+    lastState: {}
+    name: csi-snapshotter
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:34:14Z"
+  - containerID: cri-o://ef1e981f6af85c352715eca83112de6f01d3b59ec8f0abdb77629dea5e2e48c9
+    image: registry.redhat.io/openshift4/ose-csi-livenessprobe@sha256:d4228c6e797ec6b2d37e599c19c715b02f6cb955b2a7fb493c56844f4c75e687
+    imageID: registry.redhat.io/openshift4/ose-csi-livenessprobe@sha256:20fb28ec66f85711821ebfff9ed883b27b866541a1c4eb12aa864f29cbf28047
+    lastState: {}
+    name: liveness-probe
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:34:01Z"
+  - containerID: cri-o://7b2f298afe91b7f306dc691d622e4616737c3e7bba5ff7728e478843c44ec846
+    image: registry.redhat.io/lvms4/topolvm-rhel8@sha256:751044f29417b1a8db051c813e95316e489a73ccb4a8c7d18ab46a0f4d1c1a59
+    imageID: registry.redhat.io/lvms4/topolvm-rhel8@sha256:282aa91d125481977972d34d733c11a61830172847b7bf081c78d400c751c0e1
+    lastState: {}
+    name: topolvm-controller
+    ready: true
+    restartCount: 1
+    started: true
+    state:
+      running:
+        startedAt: "2023-05-04T16:33:31Z"
+  hostIP: 192.168.1.126
+  initContainerStatuses:
+  - containerID: cri-o://901aa43b95280b42100afff93826d2515b1f4099511ac9cadb620f790c95dcf4
+    image: registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f
+    imageID: registry.redhat.io/lvms4/lvms-rhel8-operator@sha256:80342a9216008b642e15bf8d79532c440b5e6e6e56b2576d8c24b473b0a81e6f
+    lastState: {}
+    name: self-signed-cert-generator
+    ready: true
+    restartCount: 1
+    state:
+      terminated:
+        containerID: cri-o://901aa43b95280b42100afff93826d2515b1f4099511ac9cadb620f790c95dcf4
+        exitCode: 0
+        finishedAt: "2023-05-04T16:33:12Z"
+        reason: Completed
+        startedAt: "2023-05-04T16:33:10Z"
+  phase: Running
+  podIP: 10.128.1.216
+  podIPs:
+  - ip: 10.128.1.216
+  qosClass: Burstable
+  startTime: "2023-05-04T14:46:25Z"

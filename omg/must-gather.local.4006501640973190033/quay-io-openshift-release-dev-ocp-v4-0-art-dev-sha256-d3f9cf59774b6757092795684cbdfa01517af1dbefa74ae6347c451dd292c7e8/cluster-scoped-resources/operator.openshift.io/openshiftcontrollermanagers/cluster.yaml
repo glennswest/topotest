@@ -1,0 +1,139 @@
+---
+apiVersion: operator.openshift.io/v1
+kind: OpenShiftControllerManager
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    release.openshift.io/create-only: "true"
+  creationTimestamp: "2023-05-02T12:18:09Z"
+  generation: 2
+  managedFields:
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+          f:release.openshift.io/create-only: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec:
+        .: {}
+        f:logLevel: {}
+        f:managementState: {}
+        f:operatorLogLevel: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:18:09Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        f:observedConfig:
+          .: {}
+          f:build:
+            .: {}
+            f:buildDefaults:
+              .: {}
+              f:resources: {}
+            f:imageTemplateFormat:
+              .: {}
+              f:format: {}
+          f:deployer:
+            .: {}
+            f:imageTemplateFormat:
+              .: {}
+              f:format: {}
+          f:featureGates: {}
+          f:ingress:
+            .: {}
+            f:ingressIPNetworkCIDR: {}
+        f:unsupportedConfigOverrides: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    time: "2023-05-02T12:28:38Z"
+  - apiVersion: operator.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:generations: {}
+        f:observedGeneration: {}
+        f:readyReplicas: {}
+        f:version: {}
+    manager: cluster-openshift-controller-manager-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-03T12:13:50Z"
+  name: cluster
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "291458"
+  uid: 84fae8e7-2f78-4792-b19c-13122a476676
+spec:
+  logLevel: Normal
+  managementState: Managed
+  observedConfig:
+    build:
+      buildDefaults:
+        resources: {}
+      imageTemplateFormat:
+        format: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:caf948d824e592d33884789b9c38c625924072094b6b6e2de563bfd6250bf9c0
+    deployer:
+      imageTemplateFormat:
+        format: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:a230169514c021826e7a65a2bf15116903a984e850a2653ecef0a0f0a014c908
+    featureGates: []
+    ingress:
+      ingressIPNetworkCIDR: ""
+  operatorLogLevel: Normal
+  unsupportedConfigOverrides: null
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-02T12:28:38Z"
+    status: "False"
+    type: ResourceSyncControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:28:38Z"
+    status: "False"
+    type: ConfigObservationDegraded
+  - lastTransitionTime: "2023-05-02T12:31:26Z"
+    reason: AsExpected
+    status: "False"
+    type: OpenshiftControllerManagerStaticResourcesDegraded
+  - lastTransitionTime: "2023-05-02T12:40:26Z"
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-05-03T12:13:50Z"
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-05-02T12:28:42Z"
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2023-05-02T12:28:42Z"
+    status: "False"
+    type: WorkloadDegraded
+  generations:
+  - group: apps
+    hash: ""
+    lastGeneration: 11
+    name: controller-manager
+    namespace: openshift-controller-manager
+    resource: deployments
+  - group: apps
+    hash: ""
+    lastGeneration: 10
+    name: route-controller-manager
+    namespace: openshift-route-controller-manager
+    resource: deployments
+  observedGeneration: 2
+  readyReplicas: 0
+  version: 4.12.2

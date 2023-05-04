@@ -1,0 +1,75 @@
+---
+apiVersion: cloudcredential.openshift.io/v1
+kind: CredentialsRequest
+metadata:
+  annotations:
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-05-02T12:38:00Z"
+  generation: 1
+  managedFields:
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:conditions: {}
+        f:lastSyncGeneration: {}
+        f:provisioned: {}
+    manager: cloud-credential-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:38:00Z"
+  - apiVersion: cloudcredential.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec:
+        .: {}
+        f:providerSpec:
+          .: {}
+          f:apiVersion: {}
+          f:kind: {}
+          f:roleBindings: {}
+        f:secretRef:
+          .: {}
+          f:name: {}
+          f:namespace: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:38:00Z"
+  name: openshift-azure-cloud-controller-manager
+  namespace: openshift-cloud-credential-operator
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "9543"
+  uid: 8e643f24-ef62-4e5c-82d3-eb4a85c4ad95
+spec:
+  providerSpec:
+    apiVersion: cloudcredential.openshift.io/v1
+    kind: AzureProviderSpec
+    roleBindings:
+    - role: Contributor
+  secretRef:
+    name: azure-cloud-credentials
+    namespace: openshift-cloud-controller-manager
+status:
+  conditions:
+  - lastProbeTime: "2023-05-02T12:38:00Z"
+    lastTransitionTime: "2023-05-02T12:38:00Z"
+    message: CredentialsRequest is not for platform None
+    reason: InfrastructureMismatch
+    status: "True"
+    type: Ignored
+  lastSyncGeneration: 0
+  provisioned: false

@@ -1,0 +1,3 @@
+2023-05-04T16:31:10.853733772Z 2023-05-04T16:31:10+00:00 [cnibincopy] Source directory unavailable for OS version: 8
+2023-05-04T16:31:10.861569334Z 2023-05-04T16:31:10+00:00 [cnibincopy] Successfully copied files in /usr/src/route-override/bin/ to /host/opt/cni/bin/upgrade_a3c596a9-c207-4cac-8fe1-6a34bcd622ac
+2023-05-04T16:31:10.864220649Z 2023-05-04T16:31:10+00:00 [cnibincopy] Successfully moved files in /host/opt/cni/bin/upgrade_a3c596a9-c207-4cac-8fe1-6a34bcd622ac to /host/opt/cni/bin/

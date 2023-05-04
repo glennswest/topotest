@@ -1,0 +1,118 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    exclude.release.openshift.io/internal-openshift-hosted: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-05-02T12:17:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:exclude.release.openshift.io/internal-openshift-hosted: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+    manager: cluster-controller-manager-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:37:55Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: config-sync-controllers
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:37:55Z"
+  name: cloud-controller-manager
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "9321"
+  uid: efd3be68-92dc-4574-9630-f6609af1c30b
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-02T12:37:55Z"
+    message: Cloud Config Controller works as expected
+    reason: AsExpected
+    status: "True"
+    type: CloudConfigControllerAvailable
+  - lastTransitionTime: "2023-05-02T12:37:55Z"
+    message: Cloud Config Controller works as expected
+    reason: AsExpected
+    status: "False"
+    type: CloudConfigControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:37:55Z"
+    message: Trusted CA Bundle Controller works as expected
+    reason: AsExpected
+    status: "True"
+    type: TrustedCABundleControllerControllerAvailable
+  - lastTransitionTime: "2023-05-02T12:37:55Z"
+    message: Trusted CA Bundle Controller works as expected
+    reason: AsExpected
+    status: "False"
+    type: TrustedCABundleControllerControllerDegraded
+  - lastTransitionTime: "2023-05-02T12:37:55Z"
+    message: Cluster Cloud Controller Manager Operator is available at 4.12.2
+    reason: AsExpected
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-05-02T12:37:55Z"
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-05-02T12:37:55Z"
+    reason: AsExpected
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-05-02T12:37:55Z"
+    reason: AsExpected
+    status: "True"
+    type: Upgradeable
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-cloud-controller-manager-operator
+    resource: namespaces
+  - group: config.openshift.io
+    name: cloud-controller-manager
+    resource: clusteroperators
+  - group: ""
+    name: openshift-cloud-controller-manager
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.12.2

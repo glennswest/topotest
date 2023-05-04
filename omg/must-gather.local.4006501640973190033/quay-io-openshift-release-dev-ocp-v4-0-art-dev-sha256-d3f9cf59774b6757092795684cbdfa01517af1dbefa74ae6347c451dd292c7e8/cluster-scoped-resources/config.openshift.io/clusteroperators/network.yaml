@@ -1,0 +1,405 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+    network.operator.openshift.io/last-seen-state: '{"DaemonsetStates":[],"DeploymentStates":[],"StatefulsetStates":[]}'
+    network.operator.openshift.io/relatedClusterObjects: ""
+  creationTimestamp: "2023-05-02T12:17:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:17:59Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          f:network.operator.openshift.io/last-seen-state: {}
+          f:network.operator.openshift.io/relatedClusterObjects: {}
+    manager: cluster-network-operator
+    operation: Update
+    time: "2023-05-02T12:37:56Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: cluster-network-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:36:02Z"
+  name: network
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "633125"
+  uid: 9023239a-3700-4e0c-bf65-b680dc586fea
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-03T07:26:57Z"
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-05-02T12:25:56Z"
+    status: "False"
+    type: ManagementStateDegraded
+  - lastTransitionTime: "2023-05-02T12:25:56Z"
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2023-05-04T16:36:02Z"
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-05-02T12:28:09Z"
+    status: "True"
+    type: Available
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: applied-cluster
+    namespace: openshift-network-operator
+    resource: configmaps
+  - group: apiextensions.k8s.io
+    name: network-attachment-definitions.k8s.cni.cncf.io
+    resource: customresourcedefinitions
+  - group: apiextensions.k8s.io
+    name: ippools.whereabouts.cni.cncf.io
+    resource: customresourcedefinitions
+  - group: apiextensions.k8s.io
+    name: overlappingrangeipreservations.whereabouts.cni.cncf.io
+    resource: customresourcedefinitions
+  - group: ""
+    name: openshift-multus
+    resource: namespaces
+  - group: rbac.authorization.k8s.io
+    name: multus
+    resource: clusterroles
+  - group: ""
+    name: multus
+    namespace: openshift-multus
+    resource: serviceaccounts
+  - group: rbac.authorization.k8s.io
+    name: multus
+    resource: clusterrolebindings
+  - group: rbac.authorization.k8s.io
+    name: multus-whereabouts
+    resource: clusterrolebindings
+  - group: rbac.authorization.k8s.io
+    name: multus-whereabouts
+    namespace: openshift-multus
+    resource: rolebindings
+  - group: rbac.authorization.k8s.io
+    name: whereabouts-cni
+    resource: clusterroles
+  - group: rbac.authorization.k8s.io
+    name: whereabouts-cni
+    namespace: openshift-multus
+    resource: roles
+  - group: rbac.authorization.k8s.io
+    name: net-attach-def-project
+    resource: clusterroles
+  - group: ""
+    name: default-cni-sysctl-allowlist
+    namespace: openshift-multus
+    resource: configmaps
+  - group: ""
+    name: cni-copy-resources
+    namespace: openshift-multus
+    resource: configmaps
+  - group: apps
+    name: multus
+    namespace: openshift-multus
+    resource: daemonsets
+  - group: apps
+    name: multus-additional-cni-plugins
+    namespace: openshift-multus
+    resource: daemonsets
+  - group: ""
+    name: metrics-daemon-sa
+    namespace: openshift-multus
+    resource: serviceaccounts
+  - group: rbac.authorization.k8s.io
+    name: metrics-daemon-role
+    resource: clusterroles
+  - group: rbac.authorization.k8s.io
+    name: metrics-daemon-sa-rolebinding
+    resource: clusterrolebindings
+  - group: apps
+    name: network-metrics-daemon
+    namespace: openshift-multus
+    resource: daemonsets
+  - group: monitoring.coreos.com
+    name: monitor-network
+    namespace: openshift-multus
+    resource: servicemonitors
+  - group: ""
+    name: network-metrics-service
+    namespace: openshift-multus
+    resource: services
+  - group: rbac.authorization.k8s.io
+    name: prometheus-k8s
+    namespace: openshift-multus
+    resource: roles
+  - group: rbac.authorization.k8s.io
+    name: prometheus-k8s
+    namespace: openshift-multus
+    resource: rolebindings
+  - group: ""
+    name: multus-admission-controller
+    namespace: openshift-multus
+    resource: services
+  - group: ""
+    name: multus-ac
+    namespace: openshift-multus
+    resource: serviceaccounts
+  - group: rbac.authorization.k8s.io
+    name: multus-admission-controller-webhook
+    resource: clusterroles
+  - group: rbac.authorization.k8s.io
+    name: multus-admission-controller-webhook
+    resource: clusterrolebindings
+  - group: admissionregistration.k8s.io
+    name: multus.openshift.io
+    resource: validatingwebhookconfigurations
+  - group: apps
+    name: multus-admission-controller
+    namespace: openshift-multus
+    resource: deployments
+  - group: monitoring.coreos.com
+    name: monitor-multus-admission-controller
+    namespace: openshift-multus
+    resource: servicemonitors
+  - group: rbac.authorization.k8s.io
+    name: prometheus-k8s
+    namespace: openshift-multus
+    resource: roles
+  - group: rbac.authorization.k8s.io
+    name: prometheus-k8s
+    namespace: openshift-multus
+    resource: rolebindings
+  - group: monitoring.coreos.com
+    name: prometheus-k8s-rules
+    namespace: openshift-multus
+    resource: prometheusrules
+  - group: ""
+    name: openshift-ovn-kubernetes
+    resource: namespaces
+  - group: apiextensions.k8s.io
+    name: egressfirewalls.k8s.ovn.org
+    resource: customresourcedefinitions
+  - group: apiextensions.k8s.io
+    name: egressips.k8s.ovn.org
+    resource: customresourcedefinitions
+  - group: apiextensions.k8s.io
+    name: egressqoses.k8s.ovn.org
+    resource: customresourcedefinitions
+  - group: ""
+    name: ovn-kubernetes-node
+    namespace: openshift-ovn-kubernetes
+    resource: serviceaccounts
+  - group: rbac.authorization.k8s.io
+    name: openshift-ovn-kubernetes-node
+    namespace: openshift-ovn-kubernetes
+    resource: roles
+  - group: rbac.authorization.k8s.io
+    name: openshift-ovn-kubernetes-node
+    namespace: openshift-ovn-kubernetes
+    resource: rolebindings
+  - group: rbac.authorization.k8s.io
+    name: openshift-ovn-kubernetes-node
+    resource: clusterroles
+  - group: rbac.authorization.k8s.io
+    name: openshift-ovn-kubernetes-node
+    resource: clusterrolebindings
+  - group: ""
+    name: ovn-kubernetes-controller
+    namespace: openshift-ovn-kubernetes
+    resource: serviceaccounts
+  - group: rbac.authorization.k8s.io
+    name: openshift-ovn-kubernetes-controller
+    resource: clusterroles
+  - group: rbac.authorization.k8s.io
+    name: openshift-ovn-kubernetes-controller
+    resource: clusterrolebindings
+  - group: rbac.authorization.k8s.io
+    name: openshift-ovn-kubernetes-sbdb
+    namespace: openshift-ovn-kubernetes
+    resource: roles
+  - group: rbac.authorization.k8s.io
+    name: openshift-ovn-kubernetes-sbdb
+    namespace: openshift-ovn-kubernetes
+    resource: rolebindings
+  - group: ""
+    name: ovnkube-config
+    namespace: openshift-ovn-kubernetes
+    resource: configmaps
+  - group: ""
+    name: ovnkube-db
+    namespace: openshift-ovn-kubernetes
+    resource: services
+  - group: network.operator.openshift.io
+    name: ovn
+    namespace: openshift-ovn-kubernetes
+    resource: operatorpkis
+  - group: network.operator.openshift.io
+    name: signer
+    namespace: openshift-ovn-kubernetes
+    resource: operatorpkis
+  - group: flowcontrol.apiserver.k8s.io
+    name: openshift-ovn-kubernetes
+    resource: flowschemas
+  - group: monitoring.coreos.com
+    name: master-rules
+    namespace: openshift-ovn-kubernetes
+    resource: prometheusrules
+  - group: monitoring.coreos.com
+    name: networking-rules
+    namespace: openshift-ovn-kubernetes
+    resource: prometheusrules
+  - group: ""
+    name: openshift-network-features
+    namespace: openshift-config-managed
+    resource: configmaps
+  - group: monitoring.coreos.com
+    name: monitor-ovn-master-metrics
+    namespace: openshift-ovn-kubernetes
+    resource: servicemonitors
+  - group: ""
+    name: ovn-kubernetes-master
+    namespace: openshift-ovn-kubernetes
+    resource: services
+  - group: monitoring.coreos.com
+    name: monitor-ovn-node
+    namespace: openshift-ovn-kubernetes
+    resource: servicemonitors
+  - group: ""
+    name: ovn-kubernetes-node
+    namespace: openshift-ovn-kubernetes
+    resource: services
+  - group: rbac.authorization.k8s.io
+    name: prometheus-k8s
+    namespace: openshift-ovn-kubernetes
+    resource: roles
+  - group: rbac.authorization.k8s.io
+    name: prometheus-k8s
+    namespace: openshift-ovn-kubernetes
+    resource: rolebindings
+  - group: ""
+    name: openshift-host-network
+    resource: namespaces
+  - group: ""
+    name: host-network-namespace-quotas
+    namespace: openshift-host-network
+    resource: resourcequotas
+  - group: apps
+    name: ovnkube-master
+    namespace: openshift-ovn-kubernetes
+    resource: daemonsets
+  - group: apps
+    name: ovnkube-node
+    namespace: openshift-ovn-kubernetes
+    resource: daemonsets
+  - group: ""
+    name: openshift-network-diagnostics
+    resource: namespaces
+  - group: ""
+    name: network-diagnostics
+    namespace: openshift-network-diagnostics
+    resource: serviceaccounts
+  - group: rbac.authorization.k8s.io
+    name: network-diagnostics
+    namespace: openshift-network-diagnostics
+    resource: roles
+  - group: rbac.authorization.k8s.io
+    name: network-diagnostics
+    namespace: openshift-network-diagnostics
+    resource: rolebindings
+  - group: rbac.authorization.k8s.io
+    name: network-diagnostics
+    resource: clusterroles
+  - group: rbac.authorization.k8s.io
+    name: network-diagnostics
+    resource: clusterrolebindings
+  - group: rbac.authorization.k8s.io
+    name: network-diagnostics
+    namespace: kube-system
+    resource: rolebindings
+  - group: apps
+    name: network-check-source
+    namespace: openshift-network-diagnostics
+    resource: deployments
+  - group: ""
+    name: network-check-source
+    namespace: openshift-network-diagnostics
+    resource: services
+  - group: monitoring.coreos.com
+    name: network-check-source
+    namespace: openshift-network-diagnostics
+    resource: servicemonitors
+  - group: rbac.authorization.k8s.io
+    name: prometheus-k8s
+    namespace: openshift-network-diagnostics
+    resource: roles
+  - group: rbac.authorization.k8s.io
+    name: prometheus-k8s
+    namespace: openshift-network-diagnostics
+    resource: rolebindings
+  - group: apps
+    name: network-check-target
+    namespace: openshift-network-diagnostics
+    resource: daemonsets
+  - group: ""
+    name: network-check-target
+    namespace: openshift-network-diagnostics
+    resource: services
+  - group: rbac.authorization.k8s.io
+    name: openshift-network-public-role
+    namespace: openshift-config-managed
+    resource: roles
+  - group: rbac.authorization.k8s.io
+    name: openshift-network-public-role-binding
+    namespace: openshift-config-managed
+    resource: rolebindings
+  - group: ""
+    name: openshift-network-operator
+    resource: namespaces
+  - group: operator.openshift.io
+    name: cluster
+    resource: networks
+  - group: ""
+    name: openshift-cloud-network-config-controller
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.12.2

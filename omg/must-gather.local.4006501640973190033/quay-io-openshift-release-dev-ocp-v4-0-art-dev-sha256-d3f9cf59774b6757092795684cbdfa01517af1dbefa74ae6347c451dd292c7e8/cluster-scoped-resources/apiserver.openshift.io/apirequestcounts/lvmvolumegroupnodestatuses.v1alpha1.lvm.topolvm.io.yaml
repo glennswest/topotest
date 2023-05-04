@@ -1,0 +1,267 @@
+---
+apiVersion: apiserver.openshift.io/v1
+kind: APIRequestCount
+metadata:
+  creationTimestamp: "2023-05-04T14:36:57Z"
+  generation: 1
+  managedFields:
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:spec:
+        .: {}
+        f:numberOfUsersToReport: {}
+    manager: kube-apiserver
+    operation: Update
+    time: "2023-05-04T14:36:57Z"
+  - apiVersion: apiserver.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:currentHour:
+          .: {}
+          f:byNode: {}
+          f:requestCount: {}
+        f:last24h: {}
+        f:requestCount: {}
+    manager: kube-apiserver
+    operation: Update
+    subresource: status
+    time: "2023-05-04T18:40:51Z"
+  name: lvmvolumegroupnodestatuses.v1alpha1.lvm.topolvm.io
+  resourceVersion: "683009"
+  uid: 714f5511-d5da-4120-8dfe-06aca84e9999
+spec:
+  numberOfUsersToReport: 10
+status:
+  currentHour:
+    byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: vgmanager/v0.0.0
+        username: system:serviceaccount:openshift-storage:vg-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-storage:lvms-operator
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 14
+    requestCount: 14
+  last24h:
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: create
+        - requestCount: 1
+          verb: list
+        - requestCount: 1
+          verb: update
+        - requestCount: 2
+          verb: watch
+        requestCount: 5
+        userAgent: vgmanager/v0.0.0
+        username: system:serviceaccount:openshift-storage:vg-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 4
+          verb: watch
+        requestCount: 5
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 3
+          verb: watch
+        requestCount: 4
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-storage:lvms-operator
+      nodeName: 192.168.1.126
+      requestCount: 14
+    requestCount: 14
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: vgmanager/v0.0.0
+        username: system:serviceaccount:openshift-storage:vg-manager
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-storage:lvms-operator
+      nodeName: 192.168.1.126
+      requestCount: 24
+    requestCount: 24
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 6
+          verb: watch
+        requestCount: 7
+        userAgent: vgmanager/v0.0.0
+        username: system:serviceaccount:openshift-storage:vg-manager
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 6
+          verb: watch
+        requestCount: 7
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-storage:lvms-operator
+      - byVerb:
+        - requestCount: 1
+          verb: list
+        - requestCount: 6
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 21
+    requestCount: 21
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 8
+          verb: watch
+        requestCount: 8
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-storage:lvms-operator
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      - byVerb:
+        - requestCount: 7
+          verb: watch
+        requestCount: 7
+        userAgent: vgmanager/v0.0.0
+        username: system:serviceaccount:openshift-storage:vg-manager
+      nodeName: 192.168.1.126
+      requestCount: 22
+    requestCount: 22
+  - byNode:
+    - byUser:
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: vgmanager/v0.0.0
+        username: system:serviceaccount:openshift-storage:vg-manager
+      - byVerb:
+        - requestCount: 5
+          verb: watch
+        requestCount: 5
+        userAgent: manager/v0.0.0
+        username: system:serviceaccount:openshift-storage:lvms-operator
+      - byVerb:
+        - requestCount: 4
+          verb: watch
+        requestCount: 4
+        userAgent: kube-controller-manager/v1.25.4+a34b9e9
+        username: system:kube-controller-manager
+      nodeName: 192.168.1.126
+      requestCount: 14
+    requestCount: 14
+  - requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  - byNode:
+    - nodeName: 192.168.1.126
+      requestCount: 0
+    requestCount: 0
+  requestCount: 95

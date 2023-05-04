@@ -1,0 +1,1623 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    annotations:
+      control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"node_2b73b996-e02c-4cab-8bc2-9e461f749f57","leaseDurationSeconds":270,"acquireTime":"2023-05-04T16:33:57Z","renewTime":"2023-05-04T18:46:02Z","leaderTransitions":1}'
+    creationTimestamp: "2023-05-02T12:41:58Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:control-plane.alpha.kubernetes.io/leader: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-04T18:46:02Z"
+    name: cert-recovery-controller-lock
+    namespace: openshift-kube-scheduler
+    resourceVersion: "684371"
+    uid: b03c46a3-a55f-4719-8360-90b6a6c9cb3d
+- apiVersion: v1
+  data:
+    config.yaml: |
+      {"apiVersion":"kubescheduler.config.k8s.io/v1beta3","clientConnection":{"kubeconfig":"/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig"},"kind":"KubeSchedulerConfiguration","leaderElection":{"leaderElect":true,"leaseDuration":"137s","renewDeadline":"107s","resourceLock":"configmapsleases","resourceNamespace":"openshift-kube-scheduler","retryPeriod":"26s"}}
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:28:40Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:config.yaml: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:28:40Z"
+    name: config
+    namespace: openshift-kube-scheduler
+    resourceVersion: "4160"
+    uid: 8878ff00-200a-448e-b869-fc8b310b9163
+- apiVersion: v1
+  data:
+    config.yaml: |
+      {"apiVersion":"kubescheduler.config.k8s.io/v1beta3","clientConnection":{"kubeconfig":"/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig"},"kind":"KubeSchedulerConfiguration","leaderElection":{"leaderElect":true,"leaseDuration":"137s","renewDeadline":"107s","resourceLock":"configmapsleases","resourceNamespace":"openshift-kube-scheduler","retryPeriod":"26s"}}
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:28:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:config.yaml: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f710392a-7dcc-449e-8af8-e6af7fd570e3"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:28:45Z"
+    name: config-2
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-2
+      uid: f710392a-7dcc-449e-8af8-e6af7fd570e3
+    resourceVersion: "4392"
+    uid: 8ed52f13-f314-4f8e-b233-dfaed5ebe6c6
+- apiVersion: v1
+  data:
+    config.yaml: |
+      {"apiVersion":"kubescheduler.config.k8s.io/v1beta3","clientConnection":{"kubeconfig":"/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig"},"kind":"KubeSchedulerConfiguration","leaderElection":{"leaderElect":true,"leaseDuration":"137s","renewDeadline":"107s","resourceLock":"configmapsleases","resourceNamespace":"openshift-kube-scheduler","retryPeriod":"26s"}}
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:31:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:config.yaml: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"3bae0668-4bf0-492c-af5a-710405455c19"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:31:22Z"
+    name: config-3
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-3
+      uid: 3bae0668-4bf0-492c-af5a-710405455c19
+    resourceVersion: "5485"
+    uid: b6156988-bb42-4698-bcaf-a47c105cab59
+- apiVersion: v1
+  data:
+    config.yaml: |
+      {"apiVersion":"kubescheduler.config.k8s.io/v1beta3","clientConnection":{"kubeconfig":"/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig"},"kind":"KubeSchedulerConfiguration","leaderElection":{"leaderElect":true,"leaseDuration":"137s","renewDeadline":"107s","resourceLock":"configmapsleases","resourceNamespace":"openshift-kube-scheduler","retryPeriod":"26s"}}
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:39:04Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:config.yaml: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"c29232b2-8d24-4a26-9ef0-fa9b3eca361b"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:04Z"
+    name: config-4
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-4
+      uid: c29232b2-8d24-4a26-9ef0-fa9b3eca361b
+    resourceVersion: "10195"
+    uid: cc877302-cd2f-42ae-9d80-a509e8d36e7b
+- apiVersion: v1
+  data:
+    config.yaml: |
+      {"apiVersion":"kubescheduler.config.k8s.io/v1beta3","clientConnection":{"kubeconfig":"/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig"},"kind":"KubeSchedulerConfiguration","leaderElection":{"leaderElect":true,"leaseDuration":"137s","renewDeadline":"107s","resourceLock":"configmapsleases","resourceNamespace":"openshift-kube-scheduler","retryPeriod":"26s"}}
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:39:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:config.yaml: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"bdd364a2-39b8-4ce6-bd09-6822e921eff7"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:45Z"
+    name: config-5
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-5
+      uid: bdd364a2-39b8-4ce6-bd09-6822e921eff7
+    resourceVersion: "10701"
+    uid: 3f57e05c-f377-4555-9a9d-705d36d7b813
+- apiVersion: v1
+  data:
+    ca.crt: |
+      -----BEGIN CERTIFICATE-----
+      MIIDMjCCAhqgAwIBAgIIIHE9NKTALZwwDQYJKoZIhvcNAQELBQAwNzESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSEwHwYDVQQDExhrdWJlLWFwaXNlcnZlci1sYi1zaWduZXIw
+      HhcNMjMwNTAyMTIxMjU1WhcNMzMwNDI5MTIxMjU1WjA3MRIwEAYDVQQLEwlvcGVu
+      c2hpZnQxITAfBgNVBAMTGGt1YmUtYXBpc2VydmVyLWxiLXNpZ25lcjCCASIwDQYJ
+      KoZIhvcNAQEBBQADggEPADCCAQoCggEBAPTjQeAKPF3HkIhqRtmm5wEq/qWyQcFr
+      KHn9g5RM7vzHWXfWLvVJll9QHp0H9Ji7yKLNcCxFzxYD0G3wvo2OG7I1tbPhIHHX
+      hHgeAoAJ8+/H/WvpkcynZfnzNu7Jv+8drBkMY5TgSfqwqoLdMX4cB04QpqDEGOs5
+      ruRFMIpXvTA0jNzMwP86q+YeTSmLgxNfE+9Ztsvt9HaUqVK1p1mimRILPw6T5FUS
+      lMd2ZGrGAj3rjTVQtrdIN9jtSB5wzUhmQVcn6qGJLLtW8eC+vixNQIprJBPJ/J2w
+      SsJqwR25Sg3HLx4Kl+jysESUFtdXW5rZLHDyBrtYB8lnqdKowndK4e0CAwEAAaNC
+      MEAwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFP2d
+      QyvCe5uqajpXRRZ2rFWxL68SMA0GCSqGSIb3DQEBCwUAA4IBAQCKsx0PEXpPPqA1
+      IloyebDyzehzT5aW36HN/6B8hZwX3ZZA8GnIfaJb1CHu7KyXNPO92OshRuxjZqaM
+      UiEjqZNluk+XX4iCUbkfDV+C20C4Yzn1tMkJ7nT+k6OP6HQ6WViiUElIdcp5hsBS
+      robdzksHmMSvp9OM5ryIfbCmR41T7vgQO6iwTOU4d338ydTioDPUTCdkeJnQ0WSp
+      8cmtwKYhCnr+y7vpPQ2XmURPJEnLtQEjhV8leUglcpSd23BBwtCs9mXnR2z1Dfi/
+      hBgVZLUL5p1kPTM4SV4yL2sXqQpFBKqH//LRR22OYne/IZ4DKeflfi+DElu5bTcO
+      vgyl9baw
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDQDCCAiigAwIBAgIIVM/MY8VEK0kwDQYJKoZIhvcNAQELBQAwPjESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+      c2lnbmVyMB4XDTIzMDUwMjEyMTI1NFoXDTMzMDQyOTEyMTI1NFowPjESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+      c2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxR+6bXTQkM/f
+      5Bq892df5+lvSlBle5Dym/i6ZIGtB8ji4OigXRmCj4lojBcPThQ5gJpPXiUFX0kg
+      Nt18LsmCm56qx3g/2mbFFFm4ADKEZZYP+qjpelv6LM1F+oLpqByxoDnV3dAdMX9t
+      MtFCUazK5L+njYyt57tLaJlfHvwbQhNq+bvha/krPWrduZwxUB0uIok4kGZtAanz
+      d7OpfbPihH0uo9f8mEcQZHupA2dsGZxpsRB74jpjc+7kUw9jqcidlUTtUU94U2Uw
+      SWdUOVHoy1UlLqRqS4Z8D4tr/cqymR7TbHB64WX/qs4itGO97qX5wpRunBdPCOU9
+      P5mcCLTtwwIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB
+      /zAdBgNVHQ4EFgQUxOZvSCA4C4ZFwx9z7+8OQJtpBv8wDQYJKoZIhvcNAQELBQAD
+      ggEBAGln/iQfsX8grjEMzRUqS/q/9EW22L9B7sJLcwT5SsPERLZX+EdmIniy13JU
+      e5sOLtZrwf+luugwbFYBiHlkAVhW5q1Dr/6qpdCdIJ7aIVpS1JP4WcR83rwiXkav
+      M0H6wTcA9ZtvA7+OmBg/MhLE9LDvAMqj1KXX88iwlJHA8P28x+CC+Yry91p9UH2J
+      thbbv/u783kSVlILi2mtnHJnImNrVsxELmX1md7cwpoFpQn2+1zxBOUmFBU+8wQz
+      uq43bQtiforpuF2Frg3gnLv/bWW7hIsSq71+pSoZNUACh/Q2HGfAJFuKo1PIJUf/
+      PSE8iMxsugwYesHuZA9XgnI/vl0=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDTDCCAjSgAwIBAgIIPBIgISKbedYwDQYJKoZIhvcNAQELBQAwRDESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2aWNlLW5l
+      dHdvcmstc2lnbmVyMB4XDTIzMDUwMjEyMTI1NVoXDTMzMDQyOTEyMTI1NVowRDES
+      MBAGA1UECxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2
+      aWNlLW5ldHdvcmstc2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+      AQEA7NmmTx7xr3jUV/RG0P/3VnKEitGpbvAMOFXIjxkTeN0kfRB56TpY1rGtykDT
+      aMC7J0qe1q/HsF/n1LhURd5jeJX4ikrdaGEauSKW1ARcb6K/1fm5DqPmlYEyBkRg
+      N505N1lRKebN22PfA3AdwsT8jGmXnXpqpttwg/pCkuduTAXpqWl+xZrdjL1J1WxF
+      /srWChh89+zIAotonIOoBzJzClI9T9y5/gWyBAZ4R2VALeMviURiWtEAoZ9+WOTk
+      vfPeCFvKfg+nh2uJPbzOQDHd1VHI6dzShjbNU0zCsQ4g9HxagWVmS/vYqvHd05oU
+      EjjL/+m4CHuVhYB1UZdmCZOx7QIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYD
+      VR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU8q39hyt4ZUNJsoC0Lzc7ydL/ecswDQYJ
+      KoZIhvcNAQELBQADggEBABVh0WmAK2p2ZVn5g160zmnrGuoBOQLebbPam8niUvti
+      j0ugiA6ofi/IsbkX8/w2GaXVAy7F4UMAx19tMwqyv3m7VDHwrPOqDEe1HmK2dBEt
+      0mH9Zahqd/hxjOmJynQfKmb6A4itHHMbn+8IEyOUICMMazxt+mA0MS8aZtS29grL
+      OBnzbaazct6/NQGu8YS9URruvC3za1JR6A3Wz/DYyZHmLomaiDUuzFMuelp627Lv
+      /TxGKz3DHEOS1rv31asDVVFc+5TbHK4MG+G0CBMTtG1gNL/1vWFsXpKRinRwcTZi
+      P3H6KaUEugfBsqLjZeEXnR9RBr/8RNRJIjjjllX5ZQI=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDlzCCAn+gAwIBAgIIeYo2/62ErHEwDQYJKoZIhvcNAQELBQAwWTFXMFUGA1UE
+      AwxOb3BlbnNoaWZ0LWt1YmUtYXBpc2VydmVyLW9wZXJhdG9yX2xvY2FsaG9zdC1y
+      ZWNvdmVyeS1zZXJ2aW5nLXNpZ25lckAxNjgzMDMxMDU1MB4XDTIzMDUwMjEyMzcz
+      NFoXDTMzMDQyOTEyMzczNVowWTFXMFUGA1UEAwxOb3BlbnNoaWZ0LWt1YmUtYXBp
+      c2VydmVyLW9wZXJhdG9yX2xvY2FsaG9zdC1yZWNvdmVyeS1zZXJ2aW5nLXNpZ25l
+      ckAxNjgzMDMxMDU1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7ZrG
+      YNCDmAupXarVm7zq1r36MQYUVI/LwQNmMDqflSK7U1QinsZmj0E2gQdR6y27GhKT
+      JXXPzUKTBqWWnckaOHQvdqAI3sdXO3ez5ebIPFFKEbHHygCTqQe79oCMdIv89rdo
+      qQwMjw+GFb1sPoUw1iLP+dfH72GbBtNnFwbCeL7LEyYBq+cXsYOgx0hv42UgLgnN
+      Ym6Dzp9Y0a5bALLyVeyxfjb2NzLOZZ1uJY7/6T/ZH2ZsswYte4LnP+epGSZR5nj9
+      PuGVwTnRBYDyOYVGxjmvWCP6uVBTJDz/JToZ9mb1osMqwNaK7/x9WjS4gr5wy3cL
+      tPz0lmLvRR/jYQlotwIDAQABo2MwYTAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/
+      BAUwAwEB/zAdBgNVHQ4EFgQUXJ/OjMzszejtF1QuGPZpv8VCmn0wHwYDVR0jBBgw
+      FoAUXJ/OjMzszejtF1QuGPZpv8VCmn0wDQYJKoZIhvcNAQELBQADggEBAM6dGPH/
+      ZYCTM/uOgIhnRqhUQ5gUcJeujtxewdtmpzikqYogtWzZkkadW79YBE0DD65xobg/
+      v7ZRYWqJC6wsA12mlB5odiIksHFPP3rElBVmxK3VacU0IjNlah2xPgiYsHs4FrYJ
+      m+dJzkJT1M/z8QBKONfbkDJ8LYtONxDnX8Ony1tvjtLg1reLo8my+WMKB65OVNt8
+      qd9NCMlTL/Kj8Pz17I9D0oB7s/lKOajSbzKFTDk2EORj18ktIzFxCGsIozFFo7WH
+      mCWzaj+NLjTsOMw/dahfDF3n8LLCdWL93QJG7eWLnOpnzCaKjBSxwrVrbc5qkZXP
+      vXv/v5AFnEnzT9s=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDVzCCAj+gAwIBAgIIJ/0BJ3qW3FIwDQYJKoZIhvcNAQELBQAwJjEkMCIGA1UE
+      AwwbaW5ncmVzcy1vcGVyYXRvckAxNjgzMDMwODQ3MB4XDTIzMDUwMjEyMzQwN1oX
+      DTI1MDUwMTEyMzQwOFowGzEZMBcGA1UEAwwQKi5hcHBzLnNuby5ndy5sbzCCASIw
+      DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOFhpGW39khdbh5cjsHMQIiXgHzQ
+      xo8c1jmn3ASatwNGd3H32iLD9xpts+iX2HXXxt5ID3u+VEDECgooRk9ajhbt6dMM
+      Bj/YH2NGJ9BhSobac10IvOfF06y8+LRrIaID+cDzX5Bm7hmGTGKXYBK4hABWIaxV
+      rBlS9t96hfAeC/oempzLL1A3+OzOublplmVhZicUvtMO8NKgbJnRRL9H0ITfZKpW
+      XVu7k7hnDgKSUjmzH3E/G/saZU6832pGrVm168MVTulT1p/N73VYiSU05c9IJM+4
+      04HvzfNzhvQUdq056cP5tY/us3AtJ6wZWi9ZYGKoKDWZEDeUUGXDqdFkZNECAwEA
+      AaOBkzCBkDAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUHAwEwDAYD
+      VR0TAQH/BAIwADAdBgNVHQ4EFgQUnkiyZkF8+YgYhZ6br7+4m6+RGx0wHwYDVR0j
+      BBgwFoAUcp6rJzVEWPsSyoX2+cZ4aSSU3SwwGwYDVR0RBBQwEoIQKi5hcHBzLnNu
+      by5ndy5sbzANBgkqhkiG9w0BAQsFAAOCAQEAcY9wNX2vG+Ah1rtaEXH2sofHm+vT
+      NxonAnxl8C5IotOL1oWSsMRQ2L4yn/TOO+mXGKC8+Yll4B1ZDXf+ow5fhupmAyfo
+      Y2lyecIxOGM5GZ7ihDQqHVCirzNIAzOa6Jecy4oqY0OumX1hSsblGGnUmCL21qUl
+      uqeSQAK8VaSmO+rhuyHPJFzjZuIcV4IufCMP3pLus12fCw9KXyGinYp3aYqWXx1i
+      r0bwpf1RYtF9cQMeNwBs/W+XnZsmMy73elFAeVIA+IZqH9OsU+utVbjKaKdMW6bh
+      EujL2t3T+OrF0HQz8C0zQjmZHtfbtxSAOz+XlrTFA+dAyiuscL367Jspvg==
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDDDCCAfSgAwIBAgIBATANBgkqhkiG9w0BAQsFADAmMSQwIgYDVQQDDBtpbmdy
+      ZXNzLW9wZXJhdG9yQDE2ODMwMzA4NDcwHhcNMjMwNTAyMTIzNDA3WhcNMjUwNTAx
+      MTIzNDA4WjAmMSQwIgYDVQQDDBtpbmdyZXNzLW9wZXJhdG9yQDE2ODMwMzA4NDcw
+      ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCeNsr/9MAYaQutGrmwg2s9
+      SvAN4kOPr5NWbJvDH7f7GOAN9r1NMs5AGbs4EN9Y+15N4AN53Kpa/act6z+VdJ34
+      PV/Z5xfUfqcw6IqHFI4u+xSaOvNFDQUh05Pk7Q0EBfvvEwnzRleJ0+nDxR4Uj11k
+      lhljzob+pJDek0Z//IU2YSuWxhTJMS1t0JMjuw6i20XNnK3m0Agv1/oEOQwapIfe
+      A+XUKjQe2hbghOTj7yce8Z7/3WHbRKFLO9ej79kYl0Dgw0bsJHXS86W+vJkQ0lY7
+      rymR0iQZj8I0zLscczGOWAXcOCFDj27SZ1lHcO5yqQIfpVcJjfKuW8bYAJ7U8iUR
+      AgMBAAGjRTBDMA4GA1UdDwEB/wQEAwICpDASBgNVHRMBAf8ECDAGAQH/AgEAMB0G
+      A1UdDgQWBBRynqsnNURY+xLKhfb5xnhpJJTdLDANBgkqhkiG9w0BAQsFAAOCAQEA
+      XItw+iARA1/Gna7c5sVYybwUzLhRRH84UX4a2cv+dCfzKHarS3qoFnWLBKETfa/G
+      WnNcIMUITur9aFSylm2CtjdpvqQYyawdldx06pJ+HpE4un1CsTxb8K7Ks77Msrc/
+      ifDlPHaaLP3SQiudaXf7G+JMtWHVyhDjG6114D0+2i9zBJadA2OF7Lry8nTkfLrL
+      5ysZYZkVPksHUNWGlCBhfGnX/GtZNEQ8nWDxQzmZRqSsM20CdyTsZN+v8u8DZKlI
+      lUXr+9zgv0fgUj6mUKkbEvS18/jg9/A/201mcsoQIzGfic5pd1VnqfRsQU1ZnDdN
+      kXcVPUBsS2kkd4zKGOC9MQ==
+      -----END CERTIFICATE-----
+  kind: ConfigMap
+  metadata:
+    annotations:
+      kubernetes.io/description: Contains a CA bundle that can be used to verify the
+        kube-apiserver when using internal endpoints such as the internal service
+        IP or kubernetes.default.svc. No other usage is guaranteed across distributions
+        of Kubernetes clusters.
+    creationTimestamp: "2023-05-02T12:17:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:ca.crt: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:kubernetes.io/description: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-02T12:39:46Z"
+    name: kube-root-ca.crt
+    namespace: openshift-kube-scheduler
+    resourceVersion: "10724"
+    uid: cf128143-8e8f-4833-b4b5-a5f928c850a5
+- apiVersion: v1
+  kind: ConfigMap
+  metadata:
+    annotations:
+      control-plane.alpha.kubernetes.io/leader: '{"holderIdentity":"node_6514150e-859f-411b-b521-92e255cf6418","leaseDurationSeconds":137,"acquireTime":"2023-05-04T16:32:00Z","renewTime":"2023-05-04T18:46:55Z","leaderTransitions":1}'
+    creationTimestamp: "2023-05-02T12:41:57Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:control-plane.alpha.kubernetes.io/leader: {}
+      manager: kube-scheduler
+      operation: Update
+      time: "2023-05-04T18:46:55Z"
+    name: kube-scheduler
+    namespace: openshift-kube-scheduler
+    resourceVersion: "684658"
+    uid: ecc63130-441f-4a6c-b988-f0b84e1c9beb
+- apiVersion: v1
+  data:
+    kubeconfig: |
+      apiVersion: v1
+      clusters:
+        - cluster:
+            certificate-authority: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-client-token/ca.crt
+            server: https://localhost:6443
+            tls-server-name: localhost-recovery
+          name: loopback
+      contexts:
+        - context:
+            cluster: loopback
+            user: kube-scheduler
+          name: kube-scheduler
+      current-context: kube-scheduler
+      kind: Config
+      preferences: {}
+      users:
+        - name: kube-scheduler
+          user:
+            tokenFile: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-client-token/token
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:28:41Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:kubeconfig: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:28:41Z"
+    name: kube-scheduler-cert-syncer-kubeconfig
+    namespace: openshift-kube-scheduler
+    resourceVersion: "4189"
+    uid: c0de17b1-c892-4c0e-a2af-92a1d2601652
+- apiVersion: v1
+  data:
+    kubeconfig: |
+      apiVersion: v1
+      clusters:
+        - cluster:
+            certificate-authority: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-client-token/ca.crt
+            server: https://localhost:6443
+            tls-server-name: localhost-recovery
+          name: loopback
+      contexts:
+        - context:
+            cluster: loopback
+            user: kube-scheduler
+          name: kube-scheduler
+      current-context: kube-scheduler
+      kind: Config
+      preferences: {}
+      users:
+        - name: kube-scheduler
+          user:
+            tokenFile: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-client-token/token
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:28:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:kubeconfig: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f710392a-7dcc-449e-8af8-e6af7fd570e3"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:28:46Z"
+    name: kube-scheduler-cert-syncer-kubeconfig-2
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-2
+      uid: f710392a-7dcc-449e-8af8-e6af7fd570e3
+    resourceVersion: "4421"
+    uid: ba54c1b8-064a-4892-8936-2d05dad08dc7
+- apiVersion: v1
+  data:
+    kubeconfig: |
+      apiVersion: v1
+      clusters:
+        - cluster:
+            certificate-authority: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-client-token/ca.crt
+            server: https://localhost:6443
+            tls-server-name: localhost-recovery
+          name: loopback
+      contexts:
+        - context:
+            cluster: loopback
+            user: kube-scheduler
+          name: kube-scheduler
+      current-context: kube-scheduler
+      kind: Config
+      preferences: {}
+      users:
+        - name: kube-scheduler
+          user:
+            tokenFile: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-client-token/token
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:31:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:kubeconfig: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"3bae0668-4bf0-492c-af5a-710405455c19"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:31:23Z"
+    name: kube-scheduler-cert-syncer-kubeconfig-3
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-3
+      uid: 3bae0668-4bf0-492c-af5a-710405455c19
+    resourceVersion: "5541"
+    uid: 6f62d176-2f5a-4d73-8a41-cc78d92eb4c8
+- apiVersion: v1
+  data:
+    kubeconfig: |
+      apiVersion: v1
+      clusters:
+        - cluster:
+            certificate-authority: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-client-token/ca.crt
+            server: https://localhost:6443
+            tls-server-name: localhost-recovery
+          name: loopback
+      contexts:
+        - context:
+            cluster: loopback
+            user: kube-scheduler
+          name: kube-scheduler
+      current-context: kube-scheduler
+      kind: Config
+      preferences: {}
+      users:
+        - name: kube-scheduler
+          user:
+            tokenFile: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-client-token/token
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:39:07Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:kubeconfig: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"c29232b2-8d24-4a26-9ef0-fa9b3eca361b"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:07Z"
+    name: kube-scheduler-cert-syncer-kubeconfig-4
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-4
+      uid: c29232b2-8d24-4a26-9ef0-fa9b3eca361b
+    resourceVersion: "10333"
+    uid: 8c04bcba-9294-40b2-b03d-250c0435c1ec
+- apiVersion: v1
+  data:
+    kubeconfig: |
+      apiVersion: v1
+      clusters:
+        - cluster:
+            certificate-authority: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-client-token/ca.crt
+            server: https://localhost:6443
+            tls-server-name: localhost-recovery
+          name: loopback
+      contexts:
+        - context:
+            cluster: loopback
+            user: kube-scheduler
+          name: kube-scheduler
+      current-context: kube-scheduler
+      kind: Config
+      preferences: {}
+      users:
+        - name: kube-scheduler
+          user:
+            tokenFile: /etc/kubernetes/static-pod-resources/secrets/localhost-recovery-client-token/token
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:39:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:kubeconfig: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"bdd364a2-39b8-4ce6-bd09-6822e921eff7"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:46Z"
+    name: kube-scheduler-cert-syncer-kubeconfig-5
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-5
+      uid: bdd364a2-39b8-4ce6-bd09-6822e921eff7
+    resourceVersion: "10738"
+    uid: 1dcba35b-e325-4d5c-b43a-20b11a03555b
+- apiVersion: v1
+  data:
+    forceRedeploymentReason: ""
+    pod.yaml: |
+      {"kind":"Pod","apiVersion":"v1","metadata":{"name":"openshift-kube-scheduler","namespace":"openshift-kube-scheduler","creationTimestamp":null,"labels":{"app":"openshift-kube-scheduler","revision":"REVISION","scheduler":"true"},"annotations":{"kubectl.kubernetes.io/default-container":"kube-scheduler","target.workload.openshift.io/management":"{\"effect\": \"PreferredDuringScheduling\"}"}},"spec":{"volumes":[{"name":"resource-dir","hostPath":{"path":"/etc/kubernetes/static-pod-resources/kube-scheduler-pod-REVISION"}},{"name":"cert-dir","hostPath":{"path":"/etc/kubernetes/static-pod-resources/kube-scheduler-certs"}}],"initContainers":[{"name":"wait-for-host-port","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c8d009a8c5ea6b7739d18d167647f2bd1733af8560b6d7b013a6d0c35e266323","command":["/usr/bin/timeout","30","/bin/bash","-c"],"args":["echo -n \"Waiting for port :10259 to be released.\"\nwhile [ -n \"$(ss -Htan '( sport = 10259 )')\" ]; do\n  echo -n \".\"\n  sleep 1\ndone\n"],"resources":{"requests":{"cpu":"15m","memory":"50Mi"}},"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"}],"containers":[{"name":"kube-scheduler","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c8d009a8c5ea6b7739d18d167647f2bd1733af8560b6d7b013a6d0c35e266323","command":["hyperkube","kube-scheduler"],"args":["--config=/etc/kubernetes/static-pod-resources/configmaps/config/config.yaml","--cert-dir=/var/run/kubernetes","--authentication-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig","--authorization-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig","--feature-gates=APIPriorityAndFairness=true,CSIMigrationAzureFile=false,CSIMigrationvSphere=false,DownwardAPIHugePages=true,RotateKubeletServerCertificate=true","-v=2","--tls-cert-file=/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.crt","--tls-private-key-file=/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.key","--tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256","--tls-min-version=VersionTLS12"],"ports":[{"containerPort":10259}],"resources":{"requests":{"cpu":"15m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"livenessProbe":{"httpGet":{"path":"healthz","port":10259,"scheme":"HTTPS"},"initialDelaySeconds":45},"readinessProbe":{"httpGet":{"path":"healthz","port":10259,"scheme":"HTTPS"},"initialDelaySeconds":45},"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"},{"name":"kube-scheduler-cert-syncer","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651","command":["cluster-kube-scheduler-operator","cert-syncer"],"args":["--kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig","--namespace=$(POD_NAMESPACE)","--destination-dir=/etc/kubernetes/static-pod-certs"],"env":[{"name":"POD_NAME","valueFrom":{"fieldRef":{"fieldPath":"metadata.name"}}},{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}}],"resources":{"requests":{"cpu":"5m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"},{"name":"kube-scheduler-recovery-controller","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651","command":["/bin/bash","-euxo","pipefail","-c"],"args":["timeout 3m /bin/bash -exuo pipefail -c 'while [ -n \"$(ss -Htanop \\( sport = 11443 \\))\" ]; do sleep 1; done'\n\nexec cluster-kube-scheduler-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig  --namespace=${POD_NAMESPACE} --listen=0.0.0.0:11443 -v=2\n"],"env":[{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}}],"resources":{"requests":{"cpu":"5m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"}],"hostNetwork":true,"tolerations":[{"operator":"Exists"}],"priorityClassName":"system-node-critical"},"status":{}}
+    version: 4.12.0-202301042354.p0.ge0b6bf9.assembly.stream-e0b6bf9
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:28:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:forceRedeploymentReason: {}
+          f:pod.yaml: {}
+          f:version: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:31:23Z"
+    name: kube-scheduler-pod
+    namespace: openshift-kube-scheduler
+    resourceVersion: "5518"
+    uid: cb7dbd3c-98d1-4db5-b2ef-0eeb03d0eec2
+- apiVersion: v1
+  data:
+    forceRedeploymentReason: ""
+    pod.yaml: |
+      {"kind":"Pod","apiVersion":"v1","metadata":{"name":"openshift-kube-scheduler","namespace":"openshift-kube-scheduler","creationTimestamp":null,"labels":{"app":"openshift-kube-scheduler","revision":"REVISION","scheduler":"true"},"annotations":{"kubectl.kubernetes.io/default-container":"kube-scheduler","target.workload.openshift.io/management":"{\"effect\": \"PreferredDuringScheduling\"}"}},"spec":{"volumes":[{"name":"resource-dir","hostPath":{"path":"/etc/kubernetes/static-pod-resources/kube-scheduler-pod-REVISION"}},{"name":"cert-dir","hostPath":{"path":"/etc/kubernetes/static-pod-resources/kube-scheduler-certs"}}],"initContainers":[{"name":"wait-for-host-port","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c8d009a8c5ea6b7739d18d167647f2bd1733af8560b6d7b013a6d0c35e266323","command":["/usr/bin/timeout","30","/bin/bash","-c"],"args":["echo -n \"Waiting for port :10259 to be released.\"\nwhile [ -n \"$(ss -Htan '( sport = 10259 )')\" ]; do\n  echo -n \".\"\n  sleep 1\ndone\n"],"resources":{"requests":{"cpu":"15m","memory":"50Mi"}},"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"}],"containers":[{"name":"kube-scheduler","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c8d009a8c5ea6b7739d18d167647f2bd1733af8560b6d7b013a6d0c35e266323","command":["hyperkube","kube-scheduler"],"args":["--config=/etc/kubernetes/static-pod-resources/configmaps/config/config.yaml","--cert-dir=/var/run/kubernetes","--authentication-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig","--authorization-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig","--feature-gates=APIPriorityAndFairness=true,CSIMigrationAzureFile=false,CSIMigrationvSphere=false,DownwardAPIHugePages=true,RotateKubeletServerCertificate=true","-v=2","--tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256","--tls-min-version=VersionTLS12"],"ports":[{"containerPort":10259}],"resources":{"requests":{"cpu":"15m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"livenessProbe":{"httpGet":{"path":"healthz","port":10259,"scheme":"HTTPS"},"initialDelaySeconds":45},"readinessProbe":{"httpGet":{"path":"healthz","port":10259,"scheme":"HTTPS"},"initialDelaySeconds":45},"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"},{"name":"kube-scheduler-cert-syncer","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651","command":["cluster-kube-scheduler-operator","cert-syncer"],"args":["--kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig","--namespace=$(POD_NAMESPACE)","--destination-dir=/etc/kubernetes/static-pod-certs"],"env":[{"name":"POD_NAME","valueFrom":{"fieldRef":{"fieldPath":"metadata.name"}}},{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}}],"resources":{"requests":{"cpu":"5m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"},{"name":"kube-scheduler-recovery-controller","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651","command":["/bin/bash","-euxo","pipefail","-c"],"args":["timeout 3m /bin/bash -exuo pipefail -c 'while [ -n \"$(ss -Htanop \\( sport = 11443 \\))\" ]; do sleep 1; done'\n\nexec cluster-kube-scheduler-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig  --namespace=${POD_NAMESPACE} --listen=0.0.0.0:11443 -v=2\n"],"env":[{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}}],"resources":{"requests":{"cpu":"5m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"}],"hostNetwork":true,"tolerations":[{"operator":"Exists"}],"priorityClassName":"system-node-critical"},"status":{}}
+    version: 4.12.0-202301042354.p0.ge0b6bf9.assembly.stream-e0b6bf9
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:28:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:forceRedeploymentReason: {}
+          f:pod.yaml: {}
+          f:version: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f710392a-7dcc-449e-8af8-e6af7fd570e3"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:28:55Z"
+    name: kube-scheduler-pod-2
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-2
+      uid: f710392a-7dcc-449e-8af8-e6af7fd570e3
+    resourceVersion: "4645"
+    uid: 545fb498-f816-4115-aec7-76fcfae0cfb7
+- apiVersion: v1
+  data:
+    forceRedeploymentReason: ""
+    pod.yaml: |
+      {"kind":"Pod","apiVersion":"v1","metadata":{"name":"openshift-kube-scheduler","namespace":"openshift-kube-scheduler","creationTimestamp":null,"labels":{"app":"openshift-kube-scheduler","revision":"REVISION","scheduler":"true"},"annotations":{"kubectl.kubernetes.io/default-container":"kube-scheduler","target.workload.openshift.io/management":"{\"effect\": \"PreferredDuringScheduling\"}"}},"spec":{"volumes":[{"name":"resource-dir","hostPath":{"path":"/etc/kubernetes/static-pod-resources/kube-scheduler-pod-REVISION"}},{"name":"cert-dir","hostPath":{"path":"/etc/kubernetes/static-pod-resources/kube-scheduler-certs"}}],"initContainers":[{"name":"wait-for-host-port","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c8d009a8c5ea6b7739d18d167647f2bd1733af8560b6d7b013a6d0c35e266323","command":["/usr/bin/timeout","30","/bin/bash","-c"],"args":["echo -n \"Waiting for port :10259 to be released.\"\nwhile [ -n \"$(ss -Htan '( sport = 10259 )')\" ]; do\n  echo -n \".\"\n  sleep 1\ndone\n"],"resources":{"requests":{"cpu":"15m","memory":"50Mi"}},"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"}],"containers":[{"name":"kube-scheduler","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c8d009a8c5ea6b7739d18d167647f2bd1733af8560b6d7b013a6d0c35e266323","command":["hyperkube","kube-scheduler"],"args":["--config=/etc/kubernetes/static-pod-resources/configmaps/config/config.yaml","--cert-dir=/var/run/kubernetes","--authentication-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig","--authorization-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig","--feature-gates=APIPriorityAndFairness=true,CSIMigrationAzureFile=false,CSIMigrationvSphere=false,DownwardAPIHugePages=true,RotateKubeletServerCertificate=true","-v=2","--tls-cert-file=/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.crt","--tls-private-key-file=/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.key","--tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256","--tls-min-version=VersionTLS12"],"ports":[{"containerPort":10259}],"resources":{"requests":{"cpu":"15m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"livenessProbe":{"httpGet":{"path":"healthz","port":10259,"scheme":"HTTPS"},"initialDelaySeconds":45},"readinessProbe":{"httpGet":{"path":"healthz","port":10259,"scheme":"HTTPS"},"initialDelaySeconds":45},"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"},{"name":"kube-scheduler-cert-syncer","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651","command":["cluster-kube-scheduler-operator","cert-syncer"],"args":["--kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig","--namespace=$(POD_NAMESPACE)","--destination-dir=/etc/kubernetes/static-pod-certs"],"env":[{"name":"POD_NAME","valueFrom":{"fieldRef":{"fieldPath":"metadata.name"}}},{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}}],"resources":{"requests":{"cpu":"5m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"},{"name":"kube-scheduler-recovery-controller","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651","command":["/bin/bash","-euxo","pipefail","-c"],"args":["timeout 3m /bin/bash -exuo pipefail -c 'while [ -n \"$(ss -Htanop \\( sport = 11443 \\))\" ]; do sleep 1; done'\n\nexec cluster-kube-scheduler-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig  --namespace=${POD_NAMESPACE} --listen=0.0.0.0:11443 -v=2\n"],"env":[{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}}],"resources":{"requests":{"cpu":"5m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"}],"hostNetwork":true,"tolerations":[{"operator":"Exists"}],"priorityClassName":"system-node-critical"},"status":{}}
+    version: 4.12.0-202301042354.p0.ge0b6bf9.assembly.stream-e0b6bf9
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:31:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:forceRedeploymentReason: {}
+          f:pod.yaml: {}
+          f:version: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"3bae0668-4bf0-492c-af5a-710405455c19"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:31:29Z"
+    name: kube-scheduler-pod-3
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-3
+      uid: 3bae0668-4bf0-492c-af5a-710405455c19
+    resourceVersion: "5711"
+    uid: 95fdac51-936f-41e1-8f0e-0dc180776a5c
+- apiVersion: v1
+  data:
+    forceRedeploymentReason: ""
+    pod.yaml: |
+      {"kind":"Pod","apiVersion":"v1","metadata":{"name":"openshift-kube-scheduler","namespace":"openshift-kube-scheduler","creationTimestamp":null,"labels":{"app":"openshift-kube-scheduler","revision":"REVISION","scheduler":"true"},"annotations":{"kubectl.kubernetes.io/default-container":"kube-scheduler","target.workload.openshift.io/management":"{\"effect\": \"PreferredDuringScheduling\"}"}},"spec":{"volumes":[{"name":"resource-dir","hostPath":{"path":"/etc/kubernetes/static-pod-resources/kube-scheduler-pod-REVISION"}},{"name":"cert-dir","hostPath":{"path":"/etc/kubernetes/static-pod-resources/kube-scheduler-certs"}}],"initContainers":[{"name":"wait-for-host-port","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c8d009a8c5ea6b7739d18d167647f2bd1733af8560b6d7b013a6d0c35e266323","command":["/usr/bin/timeout","30","/bin/bash","-c"],"args":["echo -n \"Waiting for port :10259 to be released.\"\nwhile [ -n \"$(ss -Htan '( sport = 10259 )')\" ]; do\n  echo -n \".\"\n  sleep 1\ndone\n"],"resources":{"requests":{"cpu":"15m","memory":"50Mi"}},"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"}],"containers":[{"name":"kube-scheduler","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c8d009a8c5ea6b7739d18d167647f2bd1733af8560b6d7b013a6d0c35e266323","command":["hyperkube","kube-scheduler"],"args":["--config=/etc/kubernetes/static-pod-resources/configmaps/config/config.yaml","--cert-dir=/var/run/kubernetes","--authentication-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig","--authorization-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig","--feature-gates=APIPriorityAndFairness=true,CSIMigrationAzureFile=false,CSIMigrationvSphere=false,DownwardAPIHugePages=true,RotateKubeletServerCertificate=true","-v=2","--tls-cert-file=/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.crt","--tls-private-key-file=/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.key","--tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256","--tls-min-version=VersionTLS12"],"ports":[{"containerPort":10259}],"resources":{"requests":{"cpu":"15m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"livenessProbe":{"httpGet":{"path":"healthz","port":10259,"scheme":"HTTPS"},"initialDelaySeconds":45},"readinessProbe":{"httpGet":{"path":"healthz","port":10259,"scheme":"HTTPS"},"initialDelaySeconds":45},"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"},{"name":"kube-scheduler-cert-syncer","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651","command":["cluster-kube-scheduler-operator","cert-syncer"],"args":["--kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig","--namespace=$(POD_NAMESPACE)","--destination-dir=/etc/kubernetes/static-pod-certs"],"env":[{"name":"POD_NAME","valueFrom":{"fieldRef":{"fieldPath":"metadata.name"}}},{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}}],"resources":{"requests":{"cpu":"5m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"},{"name":"kube-scheduler-recovery-controller","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651","command":["/bin/bash","-euxo","pipefail","-c"],"args":["timeout 3m /bin/bash -exuo pipefail -c 'while [ -n \"$(ss -Htanop \\( sport = 11443 \\))\" ]; do sleep 1; done'\n\nexec cluster-kube-scheduler-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig  --namespace=${POD_NAMESPACE} --listen=0.0.0.0:11443 -v=2\n"],"env":[{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}}],"resources":{"requests":{"cpu":"5m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"}],"hostNetwork":true,"tolerations":[{"operator":"Exists"}],"priorityClassName":"system-node-critical"},"status":{}}
+    version: 4.12.0-202301042354.p0.ge0b6bf9.assembly.stream-e0b6bf9
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:39:03Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:forceRedeploymentReason: {}
+          f:pod.yaml: {}
+          f:version: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"c29232b2-8d24-4a26-9ef0-fa9b3eca361b"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:03Z"
+    name: kube-scheduler-pod-4
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-4
+      uid: c29232b2-8d24-4a26-9ef0-fa9b3eca361b
+    resourceVersion: "10185"
+    uid: 7c7754c4-e452-42b0-821b-7cff43fba202
+- apiVersion: v1
+  data:
+    forceRedeploymentReason: ""
+    pod.yaml: |
+      {"kind":"Pod","apiVersion":"v1","metadata":{"name":"openshift-kube-scheduler","namespace":"openshift-kube-scheduler","creationTimestamp":null,"labels":{"app":"openshift-kube-scheduler","revision":"REVISION","scheduler":"true"},"annotations":{"kubectl.kubernetes.io/default-container":"kube-scheduler","target.workload.openshift.io/management":"{\"effect\": \"PreferredDuringScheduling\"}"}},"spec":{"volumes":[{"name":"resource-dir","hostPath":{"path":"/etc/kubernetes/static-pod-resources/kube-scheduler-pod-REVISION"}},{"name":"cert-dir","hostPath":{"path":"/etc/kubernetes/static-pod-resources/kube-scheduler-certs"}}],"initContainers":[{"name":"wait-for-host-port","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c8d009a8c5ea6b7739d18d167647f2bd1733af8560b6d7b013a6d0c35e266323","command":["/usr/bin/timeout","30","/bin/bash","-c"],"args":["echo -n \"Waiting for port :10259 to be released.\"\nwhile [ -n \"$(ss -Htan '( sport = 10259 )')\" ]; do\n  echo -n \".\"\n  sleep 1\ndone\n"],"resources":{"requests":{"cpu":"15m","memory":"50Mi"}},"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"}],"containers":[{"name":"kube-scheduler","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:c8d009a8c5ea6b7739d18d167647f2bd1733af8560b6d7b013a6d0c35e266323","command":["hyperkube","kube-scheduler"],"args":["--config=/etc/kubernetes/static-pod-resources/configmaps/config/config.yaml","--cert-dir=/var/run/kubernetes","--authentication-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig","--authorization-kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/scheduler-kubeconfig/kubeconfig","--feature-gates=APIPriorityAndFairness=true,CSIMigrationAzureFile=false,CSIMigrationvSphere=false,DownwardAPIHugePages=true,RotateKubeletServerCertificate=true","-v=2","--tls-cert-file=/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.crt","--tls-private-key-file=/etc/kubernetes/static-pod-resources/secrets/serving-cert/tls.key","--tls-cipher-suites=TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256,TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384,TLS_ECDHE_ECDSA_WITH_CHACHA20_POLY1305_SHA256,TLS_ECDHE_RSA_WITH_CHACHA20_POLY1305_SHA256","--tls-min-version=VersionTLS12"],"ports":[{"containerPort":10259}],"resources":{"requests":{"cpu":"15m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"livenessProbe":{"httpGet":{"path":"healthz","port":10259,"scheme":"HTTPS"},"initialDelaySeconds":45},"readinessProbe":{"httpGet":{"path":"healthz","port":10259,"scheme":"HTTPS"},"initialDelaySeconds":45},"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"},{"name":"kube-scheduler-cert-syncer","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651","command":["cluster-kube-scheduler-operator","cert-syncer"],"args":["--kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig","--namespace=$(POD_NAMESPACE)","--destination-dir=/etc/kubernetes/static-pod-certs"],"env":[{"name":"POD_NAME","valueFrom":{"fieldRef":{"fieldPath":"metadata.name"}}},{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}}],"resources":{"requests":{"cpu":"5m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"},{"name":"kube-scheduler-recovery-controller","image":"quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:e045fad043f28570b754619999ffb356bedee81ff842c56a32b1b13588fc1651","command":["/bin/bash","-euxo","pipefail","-c"],"args":["timeout 3m /bin/bash -exuo pipefail -c 'while [ -n \"$(ss -Htanop \\( sport = 11443 \\))\" ]; do sleep 1; done'\n\nexec cluster-kube-scheduler-operator cert-recovery-controller --kubeconfig=/etc/kubernetes/static-pod-resources/configmaps/kube-scheduler-cert-syncer-kubeconfig/kubeconfig  --namespace=${POD_NAMESPACE} --listen=0.0.0.0:11443 -v=2\n"],"env":[{"name":"POD_NAMESPACE","valueFrom":{"fieldRef":{"fieldPath":"metadata.namespace"}}}],"resources":{"requests":{"cpu":"5m","memory":"50Mi"}},"volumeMounts":[{"name":"resource-dir","mountPath":"/etc/kubernetes/static-pod-resources"},{"name":"cert-dir","mountPath":"/etc/kubernetes/static-pod-certs"}],"terminationMessagePolicy":"FallbackToLogsOnError","imagePullPolicy":"IfNotPresent"}],"hostNetwork":true,"tolerations":[{"operator":"Exists"}],"priorityClassName":"system-node-critical"},"status":{}}
+    version: 4.12.0-202301042354.p0.ge0b6bf9.assembly.stream-e0b6bf9
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:39:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:forceRedeploymentReason: {}
+          f:pod.yaml: {}
+          f:version: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"bdd364a2-39b8-4ce6-bd09-6822e921eff7"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:45Z"
+    name: kube-scheduler-pod-5
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-5
+      uid: bdd364a2-39b8-4ce6-bd09-6822e921eff7
+    resourceVersion: "10699"
+    uid: b32f1a18-b298-4dc0-a0ba-7f51eb13e688
+- apiVersion: v1
+  data:
+    service-ca.crt: |
+      -----BEGIN CERTIFICATE-----
+      MIIDUTCCAjmgAwIBAgIIKNpJleXsjJQwDQYJKoZIhvcNAQELBQAwNjE0MDIGA1UE
+      Awwrb3BlbnNoaWZ0LXNlcnZpY2Utc2VydmluZy1zaWduZXJAMTY4MzAzMDUyMDAe
+      Fw0yMzA1MDIxMjI4MzlaFw0yNTA2MzAxMjI4NDBaMDYxNDAyBgNVBAMMK29wZW5z
+      aGlmdC1zZXJ2aWNlLXNlcnZpbmctc2lnbmVyQDE2ODMwMzA1MjAwggEiMA0GCSqG
+      SIb3DQEBAQUAA4IBDwAwggEKAoIBAQD1oqFJG0/bU65lWe5Ya/rvTh1WSgJlp7DH
+      r3Uz9+lhDzbDo/BrlLCRg8DiF6xBeSDwzmA+CG2rRWYBoh8l0Jv+6jkN21C/QEOq
+      F/cTj70Tsvzj/BBJFcSPW/Q3AmyUWI04+usyJo03kREpSrcxl/d3dFJljzl23zoT
+      nwISPX9C3ENvjjALTAxWX2oIQvler0fPM6HyfGN7Aw0JC5LoKCLJ7Qn66Wh6Z2Zq
+      ThYJ7IWR3mfiAX1beMjM6Am7hAMSP1PjTQ+HzryBM32yzx3ymIHgUJQDz1sUNS1c
+      Mx3JFoqzwe0t8TpDhvyHldZJs6S1McrshExSIBqwRHtjYpPKm56NAgMBAAGjYzBh
+      MA4GA1UdDwEB/wQEAwICpDAPBgNVHRMBAf8EBTADAQH/MB0GA1UdDgQWBBT7hImT
+      93OdeNSZa3nN+8QnxLLD0DAfBgNVHSMEGDAWgBT7hImT93OdeNSZa3nN+8QnxLLD
+      0DANBgkqhkiG9w0BAQsFAAOCAQEAa4qpufHz+raQkm2IwBDVMCNxqfmYny4uxihN
+      xh+2WbQ3zPGUv7t3q/70jacmjdd/Gl87nCCj3kDmf1l3LST7UTCErh4V0/EKawwZ
+      +WooTzgRl9zAA8GkxvGI0wkpv7vgFogfZwdQxYF63wjrWfXftIDpCmpUhi+G4tIH
+      LIXp9f6ww1yMIFHNo/e6Sb3q+QjccVEUElpOChxDpFFyT0lH2ftjVjykIWg/LYar
+      dao30ihFgVxD3dKTrc8SzzevtTtB6wW5t/knW750ihAKz678lR7Ej0Zx1ZJMVJM0
+      VLpIHNpIylTZuQeRjOhGBPRjamexeSR7nMlNoEVulfpqfcd/6A==
+      -----END CERTIFICATE-----
+  kind: ConfigMap
+  metadata:
+    annotations:
+      service.beta.openshift.io/inject-cabundle: "true"
+    creationTimestamp: "2023-05-02T12:17:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data: {}
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:service.beta.openshift.io/inject-cabundle: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-02T12:17:42Z"
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          f:service-ca.crt: {}
+      manager: service-ca-operator
+      operation: Update
+      time: "2023-05-02T12:31:27Z"
+    name: openshift-service-ca.crt
+    namespace: openshift-kube-scheduler
+    resourceVersion: "5675"
+    uid: aaf2dcc2-edec-4b7e-be10-208f8757fff8
+- apiVersion: v1
+  data:
+    reason: configmap "kube-scheduler-pod" not found
+    revision: "1"
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:28:39Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:reason: {}
+          f:revision: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:28:39Z"
+    name: revision-status-1
+    namespace: openshift-kube-scheduler
+    resourceVersion: "3996"
+    uid: 7a883e4c-5b8e-458c-b159-8ebd7c685353
+- apiVersion: v1
+  data:
+    reason: configmap "kube-scheduler-pod-1" not found
+    revision: "2"
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:28:44Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:reason: {}
+          f:revision: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:28:54Z"
+    name: revision-status-2
+    namespace: openshift-kube-scheduler
+    resourceVersion: "4629"
+    uid: f710392a-7dcc-449e-8af8-e6af7fd570e3
+- apiVersion: v1
+  data:
+    reason: secret/serving-cert has changed,configmap/kube-scheduler-pod has changed
+    revision: "3"
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:30:04Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:reason: {}
+          f:revision: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:31:27Z"
+    name: revision-status-3
+    namespace: openshift-kube-scheduler
+    resourceVersion: "5676"
+    uid: 3bae0668-4bf0-492c-af5a-710405455c19
+- apiVersion: v1
+  data:
+    reason: configmap/serviceaccount-ca has changed
+    revision: "4"
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:39:02Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:reason: {}
+          f:revision: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:02Z"
+    name: revision-status-4
+    namespace: openshift-kube-scheduler
+    resourceVersion: "10176"
+    uid: c29232b2-8d24-4a26-9ef0-fa9b3eca361b
+- apiVersion: v1
+  data:
+    reason: secret/localhost-recovery-client-token has changed
+    revision: "5"
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:39:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:reason: {}
+          f:revision: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:45Z"
+    name: revision-status-5
+    namespace: openshift-kube-scheduler
+    resourceVersion: "10698"
+    uid: bdd364a2-39b8-4ce6-bd09-6822e921eff7
+- apiVersion: v1
+  data:
+    kubeconfig: |
+      apiVersion: v1
+      clusters:
+        - cluster:
+            certificate-authority: /etc/kubernetes/static-pod-resources/configmaps/serviceaccount-ca/ca-bundle.crt
+            server: https://api-int.sno.gw.lo:6443
+          name: lb-int
+      contexts:
+        - context:
+            cluster: lb-int
+            user: kube-scheduler
+          name: kube-scheduler
+      current-context: kube-scheduler
+      kind: Config
+      preferences: {}
+      users:
+        - name: kube-scheduler
+          user:
+            client-certificate: /etc/kubernetes/static-pod-certs/secrets/kube-scheduler-client-cert-key/tls.crt
+            client-key: /etc/kubernetes/static-pod-certs/secrets/kube-scheduler-client-cert-key/tls.key
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:28:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:kubeconfig: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:28:43Z"
+    name: scheduler-kubeconfig
+    namespace: openshift-kube-scheduler
+    resourceVersion: "4294"
+    uid: 0193c3e2-711e-4e41-8518-30785690b7b4
+- apiVersion: v1
+  data:
+    kubeconfig: |
+      apiVersion: v1
+      clusters:
+        - cluster:
+            certificate-authority: /etc/kubernetes/static-pod-resources/configmaps/serviceaccount-ca/ca-bundle.crt
+            server: https://api-int.sno.gw.lo:6443
+          name: lb-int
+      contexts:
+        - context:
+            cluster: lb-int
+            user: kube-scheduler
+          name: kube-scheduler
+      current-context: kube-scheduler
+      kind: Config
+      preferences: {}
+      users:
+        - name: kube-scheduler
+          user:
+            client-certificate: /etc/kubernetes/static-pod-certs/secrets/kube-scheduler-client-cert-key/tls.crt
+            client-key: /etc/kubernetes/static-pod-certs/secrets/kube-scheduler-client-cert-key/tls.key
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:28:46Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:kubeconfig: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f710392a-7dcc-449e-8af8-e6af7fd570e3"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:28:46Z"
+    name: scheduler-kubeconfig-2
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-2
+      uid: f710392a-7dcc-449e-8af8-e6af7fd570e3
+    resourceVersion: "4408"
+    uid: 166b0869-c948-4d11-84ec-6a87a5f53696
+- apiVersion: v1
+  data:
+    kubeconfig: |
+      apiVersion: v1
+      clusters:
+        - cluster:
+            certificate-authority: /etc/kubernetes/static-pod-resources/configmaps/serviceaccount-ca/ca-bundle.crt
+            server: https://api-int.sno.gw.lo:6443
+          name: lb-int
+      contexts:
+        - context:
+            cluster: lb-int
+            user: kube-scheduler
+          name: kube-scheduler
+      current-context: kube-scheduler
+      kind: Config
+      preferences: {}
+      users:
+        - name: kube-scheduler
+          user:
+            client-certificate: /etc/kubernetes/static-pod-certs/secrets/kube-scheduler-client-cert-key/tls.crt
+            client-key: /etc/kubernetes/static-pod-certs/secrets/kube-scheduler-client-cert-key/tls.key
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:31:23Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:kubeconfig: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"3bae0668-4bf0-492c-af5a-710405455c19"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:31:23Z"
+    name: scheduler-kubeconfig-3
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-3
+      uid: 3bae0668-4bf0-492c-af5a-710405455c19
+    resourceVersion: "5528"
+    uid: 8ed4b178-36a1-44e8-8bdd-c9ea2724a0de
+- apiVersion: v1
+  data:
+    kubeconfig: |
+      apiVersion: v1
+      clusters:
+        - cluster:
+            certificate-authority: /etc/kubernetes/static-pod-resources/configmaps/serviceaccount-ca/ca-bundle.crt
+            server: https://api-int.sno.gw.lo:6443
+          name: lb-int
+      contexts:
+        - context:
+            cluster: lb-int
+            user: kube-scheduler
+          name: kube-scheduler
+      current-context: kube-scheduler
+      kind: Config
+      preferences: {}
+      users:
+        - name: kube-scheduler
+          user:
+            client-certificate: /etc/kubernetes/static-pod-certs/secrets/kube-scheduler-client-cert-key/tls.crt
+            client-key: /etc/kubernetes/static-pod-certs/secrets/kube-scheduler-client-cert-key/tls.key
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:39:06Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:kubeconfig: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"c29232b2-8d24-4a26-9ef0-fa9b3eca361b"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:06Z"
+    name: scheduler-kubeconfig-4
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-4
+      uid: c29232b2-8d24-4a26-9ef0-fa9b3eca361b
+    resourceVersion: "10324"
+    uid: 6f59d01a-cfbd-4739-9ba0-24c34023db00
+- apiVersion: v1
+  data:
+    kubeconfig: |
+      apiVersion: v1
+      clusters:
+        - cluster:
+            certificate-authority: /etc/kubernetes/static-pod-resources/configmaps/serviceaccount-ca/ca-bundle.crt
+            server: https://api-int.sno.gw.lo:6443
+          name: lb-int
+      contexts:
+        - context:
+            cluster: lb-int
+            user: kube-scheduler
+          name: kube-scheduler
+      current-context: kube-scheduler
+      kind: Config
+      preferences: {}
+      users:
+        - name: kube-scheduler
+          user:
+            client-certificate: /etc/kubernetes/static-pod-certs/secrets/kube-scheduler-client-cert-key/tls.crt
+            client-key: /etc/kubernetes/static-pod-certs/secrets/kube-scheduler-client-cert-key/tls.key
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:39:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:kubeconfig: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"bdd364a2-39b8-4ce6-bd09-6822e921eff7"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:45Z"
+    name: scheduler-kubeconfig-5
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-5
+      uid: bdd364a2-39b8-4ce6-bd09-6822e921eff7
+    resourceVersion: "10708"
+    uid: bf119617-b62a-43c2-aa9e-583a357b78ce
+- apiVersion: v1
+  data:
+    ca-bundle.crt: |
+      -----BEGIN CERTIFICATE-----
+      MIIDMjCCAhqgAwIBAgIIIHE9NKTALZwwDQYJKoZIhvcNAQELBQAwNzESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSEwHwYDVQQDExhrdWJlLWFwaXNlcnZlci1sYi1zaWduZXIw
+      HhcNMjMwNTAyMTIxMjU1WhcNMzMwNDI5MTIxMjU1WjA3MRIwEAYDVQQLEwlvcGVu
+      c2hpZnQxITAfBgNVBAMTGGt1YmUtYXBpc2VydmVyLWxiLXNpZ25lcjCCASIwDQYJ
+      KoZIhvcNAQEBBQADggEPADCCAQoCggEBAPTjQeAKPF3HkIhqRtmm5wEq/qWyQcFr
+      KHn9g5RM7vzHWXfWLvVJll9QHp0H9Ji7yKLNcCxFzxYD0G3wvo2OG7I1tbPhIHHX
+      hHgeAoAJ8+/H/WvpkcynZfnzNu7Jv+8drBkMY5TgSfqwqoLdMX4cB04QpqDEGOs5
+      ruRFMIpXvTA0jNzMwP86q+YeTSmLgxNfE+9Ztsvt9HaUqVK1p1mimRILPw6T5FUS
+      lMd2ZGrGAj3rjTVQtrdIN9jtSB5wzUhmQVcn6qGJLLtW8eC+vixNQIprJBPJ/J2w
+      SsJqwR25Sg3HLx4Kl+jysESUFtdXW5rZLHDyBrtYB8lnqdKowndK4e0CAwEAAaNC
+      MEAwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFP2d
+      QyvCe5uqajpXRRZ2rFWxL68SMA0GCSqGSIb3DQEBCwUAA4IBAQCKsx0PEXpPPqA1
+      IloyebDyzehzT5aW36HN/6B8hZwX3ZZA8GnIfaJb1CHu7KyXNPO92OshRuxjZqaM
+      UiEjqZNluk+XX4iCUbkfDV+C20C4Yzn1tMkJ7nT+k6OP6HQ6WViiUElIdcp5hsBS
+      robdzksHmMSvp9OM5ryIfbCmR41T7vgQO6iwTOU4d338ydTioDPUTCdkeJnQ0WSp
+      8cmtwKYhCnr+y7vpPQ2XmURPJEnLtQEjhV8leUglcpSd23BBwtCs9mXnR2z1Dfi/
+      hBgVZLUL5p1kPTM4SV4yL2sXqQpFBKqH//LRR22OYne/IZ4DKeflfi+DElu5bTcO
+      vgyl9baw
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDQDCCAiigAwIBAgIIVM/MY8VEK0kwDQYJKoZIhvcNAQELBQAwPjESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+      c2lnbmVyMB4XDTIzMDUwMjEyMTI1NFoXDTMzMDQyOTEyMTI1NFowPjESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+      c2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxR+6bXTQkM/f
+      5Bq892df5+lvSlBle5Dym/i6ZIGtB8ji4OigXRmCj4lojBcPThQ5gJpPXiUFX0kg
+      Nt18LsmCm56qx3g/2mbFFFm4ADKEZZYP+qjpelv6LM1F+oLpqByxoDnV3dAdMX9t
+      MtFCUazK5L+njYyt57tLaJlfHvwbQhNq+bvha/krPWrduZwxUB0uIok4kGZtAanz
+      d7OpfbPihH0uo9f8mEcQZHupA2dsGZxpsRB74jpjc+7kUw9jqcidlUTtUU94U2Uw
+      SWdUOVHoy1UlLqRqS4Z8D4tr/cqymR7TbHB64WX/qs4itGO97qX5wpRunBdPCOU9
+      P5mcCLTtwwIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB
+      /zAdBgNVHQ4EFgQUxOZvSCA4C4ZFwx9z7+8OQJtpBv8wDQYJKoZIhvcNAQELBQAD
+      ggEBAGln/iQfsX8grjEMzRUqS/q/9EW22L9B7sJLcwT5SsPERLZX+EdmIniy13JU
+      e5sOLtZrwf+luugwbFYBiHlkAVhW5q1Dr/6qpdCdIJ7aIVpS1JP4WcR83rwiXkav
+      M0H6wTcA9ZtvA7+OmBg/MhLE9LDvAMqj1KXX88iwlJHA8P28x+CC+Yry91p9UH2J
+      thbbv/u783kSVlILi2mtnHJnImNrVsxELmX1md7cwpoFpQn2+1zxBOUmFBU+8wQz
+      uq43bQtiforpuF2Frg3gnLv/bWW7hIsSq71+pSoZNUACh/Q2HGfAJFuKo1PIJUf/
+      PSE8iMxsugwYesHuZA9XgnI/vl0=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDTDCCAjSgAwIBAgIIPBIgISKbedYwDQYJKoZIhvcNAQELBQAwRDESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2aWNlLW5l
+      dHdvcmstc2lnbmVyMB4XDTIzMDUwMjEyMTI1NVoXDTMzMDQyOTEyMTI1NVowRDES
+      MBAGA1UECxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2
+      aWNlLW5ldHdvcmstc2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+      AQEA7NmmTx7xr3jUV/RG0P/3VnKEitGpbvAMOFXIjxkTeN0kfRB56TpY1rGtykDT
+      aMC7J0qe1q/HsF/n1LhURd5jeJX4ikrdaGEauSKW1ARcb6K/1fm5DqPmlYEyBkRg
+      N505N1lRKebN22PfA3AdwsT8jGmXnXpqpttwg/pCkuduTAXpqWl+xZrdjL1J1WxF
+      /srWChh89+zIAotonIOoBzJzClI9T9y5/gWyBAZ4R2VALeMviURiWtEAoZ9+WOTk
+      vfPeCFvKfg+nh2uJPbzOQDHd1VHI6dzShjbNU0zCsQ4g9HxagWVmS/vYqvHd05oU
+      EjjL/+m4CHuVhYB1UZdmCZOx7QIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYD
+      VR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU8q39hyt4ZUNJsoC0Lzc7ydL/ecswDQYJ
+      KoZIhvcNAQELBQADggEBABVh0WmAK2p2ZVn5g160zmnrGuoBOQLebbPam8niUvti
+      j0ugiA6ofi/IsbkX8/w2GaXVAy7F4UMAx19tMwqyv3m7VDHwrPOqDEe1HmK2dBEt
+      0mH9Zahqd/hxjOmJynQfKmb6A4itHHMbn+8IEyOUICMMazxt+mA0MS8aZtS29grL
+      OBnzbaazct6/NQGu8YS9URruvC3za1JR6A3Wz/DYyZHmLomaiDUuzFMuelp627Lv
+      /TxGKz3DHEOS1rv31asDVVFc+5TbHK4MG+G0CBMTtG1gNL/1vWFsXpKRinRwcTZi
+      P3H6KaUEugfBsqLjZeEXnR9RBr/8RNRJIjjjllX5ZQI=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDlzCCAn+gAwIBAgIIeYo2/62ErHEwDQYJKoZIhvcNAQELBQAwWTFXMFUGA1UE
+      AwxOb3BlbnNoaWZ0LWt1YmUtYXBpc2VydmVyLW9wZXJhdG9yX2xvY2FsaG9zdC1y
+      ZWNvdmVyeS1zZXJ2aW5nLXNpZ25lckAxNjgzMDMxMDU1MB4XDTIzMDUwMjEyMzcz
+      NFoXDTMzMDQyOTEyMzczNVowWTFXMFUGA1UEAwxOb3BlbnNoaWZ0LWt1YmUtYXBp
+      c2VydmVyLW9wZXJhdG9yX2xvY2FsaG9zdC1yZWNvdmVyeS1zZXJ2aW5nLXNpZ25l
+      ckAxNjgzMDMxMDU1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7ZrG
+      YNCDmAupXarVm7zq1r36MQYUVI/LwQNmMDqflSK7U1QinsZmj0E2gQdR6y27GhKT
+      JXXPzUKTBqWWnckaOHQvdqAI3sdXO3ez5ebIPFFKEbHHygCTqQe79oCMdIv89rdo
+      qQwMjw+GFb1sPoUw1iLP+dfH72GbBtNnFwbCeL7LEyYBq+cXsYOgx0hv42UgLgnN
+      Ym6Dzp9Y0a5bALLyVeyxfjb2NzLOZZ1uJY7/6T/ZH2ZsswYte4LnP+epGSZR5nj9
+      PuGVwTnRBYDyOYVGxjmvWCP6uVBTJDz/JToZ9mb1osMqwNaK7/x9WjS4gr5wy3cL
+      tPz0lmLvRR/jYQlotwIDAQABo2MwYTAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/
+      BAUwAwEB/zAdBgNVHQ4EFgQUXJ/OjMzszejtF1QuGPZpv8VCmn0wHwYDVR0jBBgw
+      FoAUXJ/OjMzszejtF1QuGPZpv8VCmn0wDQYJKoZIhvcNAQELBQADggEBAM6dGPH/
+      ZYCTM/uOgIhnRqhUQ5gUcJeujtxewdtmpzikqYogtWzZkkadW79YBE0DD65xobg/
+      v7ZRYWqJC6wsA12mlB5odiIksHFPP3rElBVmxK3VacU0IjNlah2xPgiYsHs4FrYJ
+      m+dJzkJT1M/z8QBKONfbkDJ8LYtONxDnX8Ony1tvjtLg1reLo8my+WMKB65OVNt8
+      qd9NCMlTL/Kj8Pz17I9D0oB7s/lKOajSbzKFTDk2EORj18ktIzFxCGsIozFFo7WH
+      mCWzaj+NLjTsOMw/dahfDF3n8LLCdWL93QJG7eWLnOpnzCaKjBSxwrVrbc5qkZXP
+      vXv/v5AFnEnzT9s=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDVzCCAj+gAwIBAgIIJ/0BJ3qW3FIwDQYJKoZIhvcNAQELBQAwJjEkMCIGA1UE
+      AwwbaW5ncmVzcy1vcGVyYXRvckAxNjgzMDMwODQ3MB4XDTIzMDUwMjEyMzQwN1oX
+      DTI1MDUwMTEyMzQwOFowGzEZMBcGA1UEAwwQKi5hcHBzLnNuby5ndy5sbzCCASIw
+      DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOFhpGW39khdbh5cjsHMQIiXgHzQ
+      xo8c1jmn3ASatwNGd3H32iLD9xpts+iX2HXXxt5ID3u+VEDECgooRk9ajhbt6dMM
+      Bj/YH2NGJ9BhSobac10IvOfF06y8+LRrIaID+cDzX5Bm7hmGTGKXYBK4hABWIaxV
+      rBlS9t96hfAeC/oempzLL1A3+OzOublplmVhZicUvtMO8NKgbJnRRL9H0ITfZKpW
+      XVu7k7hnDgKSUjmzH3E/G/saZU6832pGrVm168MVTulT1p/N73VYiSU05c9IJM+4
+      04HvzfNzhvQUdq056cP5tY/us3AtJ6wZWi9ZYGKoKDWZEDeUUGXDqdFkZNECAwEA
+      AaOBkzCBkDAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUHAwEwDAYD
+      VR0TAQH/BAIwADAdBgNVHQ4EFgQUnkiyZkF8+YgYhZ6br7+4m6+RGx0wHwYDVR0j
+      BBgwFoAUcp6rJzVEWPsSyoX2+cZ4aSSU3SwwGwYDVR0RBBQwEoIQKi5hcHBzLnNu
+      by5ndy5sbzANBgkqhkiG9w0BAQsFAAOCAQEAcY9wNX2vG+Ah1rtaEXH2sofHm+vT
+      NxonAnxl8C5IotOL1oWSsMRQ2L4yn/TOO+mXGKC8+Yll4B1ZDXf+ow5fhupmAyfo
+      Y2lyecIxOGM5GZ7ihDQqHVCirzNIAzOa6Jecy4oqY0OumX1hSsblGGnUmCL21qUl
+      uqeSQAK8VaSmO+rhuyHPJFzjZuIcV4IufCMP3pLus12fCw9KXyGinYp3aYqWXx1i
+      r0bwpf1RYtF9cQMeNwBs/W+XnZsmMy73elFAeVIA+IZqH9OsU+utVbjKaKdMW6bh
+      EujL2t3T+OrF0HQz8C0zQjmZHtfbtxSAOz+XlrTFA+dAyiuscL367Jspvg==
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDDDCCAfSgAwIBAgIBATANBgkqhkiG9w0BAQsFADAmMSQwIgYDVQQDDBtpbmdy
+      ZXNzLW9wZXJhdG9yQDE2ODMwMzA4NDcwHhcNMjMwNTAyMTIzNDA3WhcNMjUwNTAx
+      MTIzNDA4WjAmMSQwIgYDVQQDDBtpbmdyZXNzLW9wZXJhdG9yQDE2ODMwMzA4NDcw
+      ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCeNsr/9MAYaQutGrmwg2s9
+      SvAN4kOPr5NWbJvDH7f7GOAN9r1NMs5AGbs4EN9Y+15N4AN53Kpa/act6z+VdJ34
+      PV/Z5xfUfqcw6IqHFI4u+xSaOvNFDQUh05Pk7Q0EBfvvEwnzRleJ0+nDxR4Uj11k
+      lhljzob+pJDek0Z//IU2YSuWxhTJMS1t0JMjuw6i20XNnK3m0Agv1/oEOQwapIfe
+      A+XUKjQe2hbghOTj7yce8Z7/3WHbRKFLO9ej79kYl0Dgw0bsJHXS86W+vJkQ0lY7
+      rymR0iQZj8I0zLscczGOWAXcOCFDj27SZ1lHcO5yqQIfpVcJjfKuW8bYAJ7U8iUR
+      AgMBAAGjRTBDMA4GA1UdDwEB/wQEAwICpDASBgNVHRMBAf8ECDAGAQH/AgEAMB0G
+      A1UdDgQWBBRynqsnNURY+xLKhfb5xnhpJJTdLDANBgkqhkiG9w0BAQsFAAOCAQEA
+      XItw+iARA1/Gna7c5sVYybwUzLhRRH84UX4a2cv+dCfzKHarS3qoFnWLBKETfa/G
+      WnNcIMUITur9aFSylm2CtjdpvqQYyawdldx06pJ+HpE4un1CsTxb8K7Ks77Msrc/
+      ifDlPHaaLP3SQiudaXf7G+JMtWHVyhDjG6114D0+2i9zBJadA2OF7Lry8nTkfLrL
+      5ysZYZkVPksHUNWGlCBhfGnX/GtZNEQ8nWDxQzmZRqSsM20CdyTsZN+v8u8DZKlI
+      lUXr+9zgv0fgUj6mUKkbEvS18/jg9/A/201mcsoQIzGfic5pd1VnqfRsQU1ZnDdN
+      kXcVPUBsS2kkd4zKGOC9MQ==
+      -----END CERTIFICATE-----
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:28:42Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:ca-bundle.crt: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:01Z"
+    name: serviceaccount-ca
+    namespace: openshift-kube-scheduler
+    resourceVersion: "10167"
+    uid: 88322832-0521-48ea-bee2-5387609b96da
+- apiVersion: v1
+  data:
+    ca-bundle.crt: ""
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:28:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:ca-bundle.crt: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"f710392a-7dcc-449e-8af8-e6af7fd570e3"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:28:45Z"
+    name: serviceaccount-ca-2
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-2
+      uid: f710392a-7dcc-449e-8af8-e6af7fd570e3
+    resourceVersion: "4397"
+    uid: b025ea16-a6b5-4234-8ddb-24d487beedab
+- apiVersion: v1
+  data:
+    ca-bundle.crt: ""
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:31:22Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:ca-bundle.crt: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"3bae0668-4bf0-492c-af5a-710405455c19"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:31:22Z"
+    name: serviceaccount-ca-3
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-3
+      uid: 3bae0668-4bf0-492c-af5a-710405455c19
+    resourceVersion: "5490"
+    uid: f1c0d940-9a15-49df-90ea-2ef05b96c860
+- apiVersion: v1
+  data:
+    ca-bundle.crt: |
+      -----BEGIN CERTIFICATE-----
+      MIIDMjCCAhqgAwIBAgIIIHE9NKTALZwwDQYJKoZIhvcNAQELBQAwNzESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSEwHwYDVQQDExhrdWJlLWFwaXNlcnZlci1sYi1zaWduZXIw
+      HhcNMjMwNTAyMTIxMjU1WhcNMzMwNDI5MTIxMjU1WjA3MRIwEAYDVQQLEwlvcGVu
+      c2hpZnQxITAfBgNVBAMTGGt1YmUtYXBpc2VydmVyLWxiLXNpZ25lcjCCASIwDQYJ
+      KoZIhvcNAQEBBQADggEPADCCAQoCggEBAPTjQeAKPF3HkIhqRtmm5wEq/qWyQcFr
+      KHn9g5RM7vzHWXfWLvVJll9QHp0H9Ji7yKLNcCxFzxYD0G3wvo2OG7I1tbPhIHHX
+      hHgeAoAJ8+/H/WvpkcynZfnzNu7Jv+8drBkMY5TgSfqwqoLdMX4cB04QpqDEGOs5
+      ruRFMIpXvTA0jNzMwP86q+YeTSmLgxNfE+9Ztsvt9HaUqVK1p1mimRILPw6T5FUS
+      lMd2ZGrGAj3rjTVQtrdIN9jtSB5wzUhmQVcn6qGJLLtW8eC+vixNQIprJBPJ/J2w
+      SsJqwR25Sg3HLx4Kl+jysESUFtdXW5rZLHDyBrtYB8lnqdKowndK4e0CAwEAAaNC
+      MEAwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFP2d
+      QyvCe5uqajpXRRZ2rFWxL68SMA0GCSqGSIb3DQEBCwUAA4IBAQCKsx0PEXpPPqA1
+      IloyebDyzehzT5aW36HN/6B8hZwX3ZZA8GnIfaJb1CHu7KyXNPO92OshRuxjZqaM
+      UiEjqZNluk+XX4iCUbkfDV+C20C4Yzn1tMkJ7nT+k6OP6HQ6WViiUElIdcp5hsBS
+      robdzksHmMSvp9OM5ryIfbCmR41T7vgQO6iwTOU4d338ydTioDPUTCdkeJnQ0WSp
+      8cmtwKYhCnr+y7vpPQ2XmURPJEnLtQEjhV8leUglcpSd23BBwtCs9mXnR2z1Dfi/
+      hBgVZLUL5p1kPTM4SV4yL2sXqQpFBKqH//LRR22OYne/IZ4DKeflfi+DElu5bTcO
+      vgyl9baw
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDQDCCAiigAwIBAgIIVM/MY8VEK0kwDQYJKoZIhvcNAQELBQAwPjESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+      c2lnbmVyMB4XDTIzMDUwMjEyMTI1NFoXDTMzMDQyOTEyMTI1NFowPjESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+      c2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxR+6bXTQkM/f
+      5Bq892df5+lvSlBle5Dym/i6ZIGtB8ji4OigXRmCj4lojBcPThQ5gJpPXiUFX0kg
+      Nt18LsmCm56qx3g/2mbFFFm4ADKEZZYP+qjpelv6LM1F+oLpqByxoDnV3dAdMX9t
+      MtFCUazK5L+njYyt57tLaJlfHvwbQhNq+bvha/krPWrduZwxUB0uIok4kGZtAanz
+      d7OpfbPihH0uo9f8mEcQZHupA2dsGZxpsRB74jpjc+7kUw9jqcidlUTtUU94U2Uw
+      SWdUOVHoy1UlLqRqS4Z8D4tr/cqymR7TbHB64WX/qs4itGO97qX5wpRunBdPCOU9
+      P5mcCLTtwwIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB
+      /zAdBgNVHQ4EFgQUxOZvSCA4C4ZFwx9z7+8OQJtpBv8wDQYJKoZIhvcNAQELBQAD
+      ggEBAGln/iQfsX8grjEMzRUqS/q/9EW22L9B7sJLcwT5SsPERLZX+EdmIniy13JU
+      e5sOLtZrwf+luugwbFYBiHlkAVhW5q1Dr/6qpdCdIJ7aIVpS1JP4WcR83rwiXkav
+      M0H6wTcA9ZtvA7+OmBg/MhLE9LDvAMqj1KXX88iwlJHA8P28x+CC+Yry91p9UH2J
+      thbbv/u783kSVlILi2mtnHJnImNrVsxELmX1md7cwpoFpQn2+1zxBOUmFBU+8wQz
+      uq43bQtiforpuF2Frg3gnLv/bWW7hIsSq71+pSoZNUACh/Q2HGfAJFuKo1PIJUf/
+      PSE8iMxsugwYesHuZA9XgnI/vl0=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDTDCCAjSgAwIBAgIIPBIgISKbedYwDQYJKoZIhvcNAQELBQAwRDESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2aWNlLW5l
+      dHdvcmstc2lnbmVyMB4XDTIzMDUwMjEyMTI1NVoXDTMzMDQyOTEyMTI1NVowRDES
+      MBAGA1UECxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2
+      aWNlLW5ldHdvcmstc2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+      AQEA7NmmTx7xr3jUV/RG0P/3VnKEitGpbvAMOFXIjxkTeN0kfRB56TpY1rGtykDT
+      aMC7J0qe1q/HsF/n1LhURd5jeJX4ikrdaGEauSKW1ARcb6K/1fm5DqPmlYEyBkRg
+      N505N1lRKebN22PfA3AdwsT8jGmXnXpqpttwg/pCkuduTAXpqWl+xZrdjL1J1WxF
+      /srWChh89+zIAotonIOoBzJzClI9T9y5/gWyBAZ4R2VALeMviURiWtEAoZ9+WOTk
+      vfPeCFvKfg+nh2uJPbzOQDHd1VHI6dzShjbNU0zCsQ4g9HxagWVmS/vYqvHd05oU
+      EjjL/+m4CHuVhYB1UZdmCZOx7QIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYD
+      VR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU8q39hyt4ZUNJsoC0Lzc7ydL/ecswDQYJ
+      KoZIhvcNAQELBQADggEBABVh0WmAK2p2ZVn5g160zmnrGuoBOQLebbPam8niUvti
+      j0ugiA6ofi/IsbkX8/w2GaXVAy7F4UMAx19tMwqyv3m7VDHwrPOqDEe1HmK2dBEt
+      0mH9Zahqd/hxjOmJynQfKmb6A4itHHMbn+8IEyOUICMMazxt+mA0MS8aZtS29grL
+      OBnzbaazct6/NQGu8YS9URruvC3za1JR6A3Wz/DYyZHmLomaiDUuzFMuelp627Lv
+      /TxGKz3DHEOS1rv31asDVVFc+5TbHK4MG+G0CBMTtG1gNL/1vWFsXpKRinRwcTZi
+      P3H6KaUEugfBsqLjZeEXnR9RBr/8RNRJIjjjllX5ZQI=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDlzCCAn+gAwIBAgIIeYo2/62ErHEwDQYJKoZIhvcNAQELBQAwWTFXMFUGA1UE
+      AwxOb3BlbnNoaWZ0LWt1YmUtYXBpc2VydmVyLW9wZXJhdG9yX2xvY2FsaG9zdC1y
+      ZWNvdmVyeS1zZXJ2aW5nLXNpZ25lckAxNjgzMDMxMDU1MB4XDTIzMDUwMjEyMzcz
+      NFoXDTMzMDQyOTEyMzczNVowWTFXMFUGA1UEAwxOb3BlbnNoaWZ0LWt1YmUtYXBp
+      c2VydmVyLW9wZXJhdG9yX2xvY2FsaG9zdC1yZWNvdmVyeS1zZXJ2aW5nLXNpZ25l
+      ckAxNjgzMDMxMDU1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7ZrG
+      YNCDmAupXarVm7zq1r36MQYUVI/LwQNmMDqflSK7U1QinsZmj0E2gQdR6y27GhKT
+      JXXPzUKTBqWWnckaOHQvdqAI3sdXO3ez5ebIPFFKEbHHygCTqQe79oCMdIv89rdo
+      qQwMjw+GFb1sPoUw1iLP+dfH72GbBtNnFwbCeL7LEyYBq+cXsYOgx0hv42UgLgnN
+      Ym6Dzp9Y0a5bALLyVeyxfjb2NzLOZZ1uJY7/6T/ZH2ZsswYte4LnP+epGSZR5nj9
+      PuGVwTnRBYDyOYVGxjmvWCP6uVBTJDz/JToZ9mb1osMqwNaK7/x9WjS4gr5wy3cL
+      tPz0lmLvRR/jYQlotwIDAQABo2MwYTAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/
+      BAUwAwEB/zAdBgNVHQ4EFgQUXJ/OjMzszejtF1QuGPZpv8VCmn0wHwYDVR0jBBgw
+      FoAUXJ/OjMzszejtF1QuGPZpv8VCmn0wDQYJKoZIhvcNAQELBQADggEBAM6dGPH/
+      ZYCTM/uOgIhnRqhUQ5gUcJeujtxewdtmpzikqYogtWzZkkadW79YBE0DD65xobg/
+      v7ZRYWqJC6wsA12mlB5odiIksHFPP3rElBVmxK3VacU0IjNlah2xPgiYsHs4FrYJ
+      m+dJzkJT1M/z8QBKONfbkDJ8LYtONxDnX8Ony1tvjtLg1reLo8my+WMKB65OVNt8
+      qd9NCMlTL/Kj8Pz17I9D0oB7s/lKOajSbzKFTDk2EORj18ktIzFxCGsIozFFo7WH
+      mCWzaj+NLjTsOMw/dahfDF3n8LLCdWL93QJG7eWLnOpnzCaKjBSxwrVrbc5qkZXP
+      vXv/v5AFnEnzT9s=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDVzCCAj+gAwIBAgIIJ/0BJ3qW3FIwDQYJKoZIhvcNAQELBQAwJjEkMCIGA1UE
+      AwwbaW5ncmVzcy1vcGVyYXRvckAxNjgzMDMwODQ3MB4XDTIzMDUwMjEyMzQwN1oX
+      DTI1MDUwMTEyMzQwOFowGzEZMBcGA1UEAwwQKi5hcHBzLnNuby5ndy5sbzCCASIw
+      DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOFhpGW39khdbh5cjsHMQIiXgHzQ
+      xo8c1jmn3ASatwNGd3H32iLD9xpts+iX2HXXxt5ID3u+VEDECgooRk9ajhbt6dMM
+      Bj/YH2NGJ9BhSobac10IvOfF06y8+LRrIaID+cDzX5Bm7hmGTGKXYBK4hABWIaxV
+      rBlS9t96hfAeC/oempzLL1A3+OzOublplmVhZicUvtMO8NKgbJnRRL9H0ITfZKpW
+      XVu7k7hnDgKSUjmzH3E/G/saZU6832pGrVm168MVTulT1p/N73VYiSU05c9IJM+4
+      04HvzfNzhvQUdq056cP5tY/us3AtJ6wZWi9ZYGKoKDWZEDeUUGXDqdFkZNECAwEA
+      AaOBkzCBkDAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUHAwEwDAYD
+      VR0TAQH/BAIwADAdBgNVHQ4EFgQUnkiyZkF8+YgYhZ6br7+4m6+RGx0wHwYDVR0j
+      BBgwFoAUcp6rJzVEWPsSyoX2+cZ4aSSU3SwwGwYDVR0RBBQwEoIQKi5hcHBzLnNu
+      by5ndy5sbzANBgkqhkiG9w0BAQsFAAOCAQEAcY9wNX2vG+Ah1rtaEXH2sofHm+vT
+      NxonAnxl8C5IotOL1oWSsMRQ2L4yn/TOO+mXGKC8+Yll4B1ZDXf+ow5fhupmAyfo
+      Y2lyecIxOGM5GZ7ihDQqHVCirzNIAzOa6Jecy4oqY0OumX1hSsblGGnUmCL21qUl
+      uqeSQAK8VaSmO+rhuyHPJFzjZuIcV4IufCMP3pLus12fCw9KXyGinYp3aYqWXx1i
+      r0bwpf1RYtF9cQMeNwBs/W+XnZsmMy73elFAeVIA+IZqH9OsU+utVbjKaKdMW6bh
+      EujL2t3T+OrF0HQz8C0zQjmZHtfbtxSAOz+XlrTFA+dAyiuscL367Jspvg==
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDDDCCAfSgAwIBAgIBATANBgkqhkiG9w0BAQsFADAmMSQwIgYDVQQDDBtpbmdy
+      ZXNzLW9wZXJhdG9yQDE2ODMwMzA4NDcwHhcNMjMwNTAyMTIzNDA3WhcNMjUwNTAx
+      MTIzNDA4WjAmMSQwIgYDVQQDDBtpbmdyZXNzLW9wZXJhdG9yQDE2ODMwMzA4NDcw
+      ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCeNsr/9MAYaQutGrmwg2s9
+      SvAN4kOPr5NWbJvDH7f7GOAN9r1NMs5AGbs4EN9Y+15N4AN53Kpa/act6z+VdJ34
+      PV/Z5xfUfqcw6IqHFI4u+xSaOvNFDQUh05Pk7Q0EBfvvEwnzRleJ0+nDxR4Uj11k
+      lhljzob+pJDek0Z//IU2YSuWxhTJMS1t0JMjuw6i20XNnK3m0Agv1/oEOQwapIfe
+      A+XUKjQe2hbghOTj7yce8Z7/3WHbRKFLO9ej79kYl0Dgw0bsJHXS86W+vJkQ0lY7
+      rymR0iQZj8I0zLscczGOWAXcOCFDj27SZ1lHcO5yqQIfpVcJjfKuW8bYAJ7U8iUR
+      AgMBAAGjRTBDMA4GA1UdDwEB/wQEAwICpDASBgNVHRMBAf8ECDAGAQH/AgEAMB0G
+      A1UdDgQWBBRynqsnNURY+xLKhfb5xnhpJJTdLDANBgkqhkiG9w0BAQsFAAOCAQEA
+      XItw+iARA1/Gna7c5sVYybwUzLhRRH84UX4a2cv+dCfzKHarS3qoFnWLBKETfa/G
+      WnNcIMUITur9aFSylm2CtjdpvqQYyawdldx06pJ+HpE4un1CsTxb8K7Ks77Msrc/
+      ifDlPHaaLP3SQiudaXf7G+JMtWHVyhDjG6114D0+2i9zBJadA2OF7Lry8nTkfLrL
+      5ysZYZkVPksHUNWGlCBhfGnX/GtZNEQ8nWDxQzmZRqSsM20CdyTsZN+v8u8DZKlI
+      lUXr+9zgv0fgUj6mUKkbEvS18/jg9/A/201mcsoQIzGfic5pd1VnqfRsQU1ZnDdN
+      kXcVPUBsS2kkd4zKGOC9MQ==
+      -----END CERTIFICATE-----
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:39:05Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:ca-bundle.crt: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"c29232b2-8d24-4a26-9ef0-fa9b3eca361b"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:05Z"
+    name: serviceaccount-ca-4
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-4
+      uid: c29232b2-8d24-4a26-9ef0-fa9b3eca361b
+    resourceVersion: "10210"
+    uid: 97ea2ee3-37cc-4b02-92be-377b7c887554
+- apiVersion: v1
+  data:
+    ca-bundle.crt: |
+      -----BEGIN CERTIFICATE-----
+      MIIDMjCCAhqgAwIBAgIIIHE9NKTALZwwDQYJKoZIhvcNAQELBQAwNzESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSEwHwYDVQQDExhrdWJlLWFwaXNlcnZlci1sYi1zaWduZXIw
+      HhcNMjMwNTAyMTIxMjU1WhcNMzMwNDI5MTIxMjU1WjA3MRIwEAYDVQQLEwlvcGVu
+      c2hpZnQxITAfBgNVBAMTGGt1YmUtYXBpc2VydmVyLWxiLXNpZ25lcjCCASIwDQYJ
+      KoZIhvcNAQEBBQADggEPADCCAQoCggEBAPTjQeAKPF3HkIhqRtmm5wEq/qWyQcFr
+      KHn9g5RM7vzHWXfWLvVJll9QHp0H9Ji7yKLNcCxFzxYD0G3wvo2OG7I1tbPhIHHX
+      hHgeAoAJ8+/H/WvpkcynZfnzNu7Jv+8drBkMY5TgSfqwqoLdMX4cB04QpqDEGOs5
+      ruRFMIpXvTA0jNzMwP86q+YeTSmLgxNfE+9Ztsvt9HaUqVK1p1mimRILPw6T5FUS
+      lMd2ZGrGAj3rjTVQtrdIN9jtSB5wzUhmQVcn6qGJLLtW8eC+vixNQIprJBPJ/J2w
+      SsJqwR25Sg3HLx4Kl+jysESUFtdXW5rZLHDyBrtYB8lnqdKowndK4e0CAwEAAaNC
+      MEAwDgYDVR0PAQH/BAQDAgKkMA8GA1UdEwEB/wQFMAMBAf8wHQYDVR0OBBYEFP2d
+      QyvCe5uqajpXRRZ2rFWxL68SMA0GCSqGSIb3DQEBCwUAA4IBAQCKsx0PEXpPPqA1
+      IloyebDyzehzT5aW36HN/6B8hZwX3ZZA8GnIfaJb1CHu7KyXNPO92OshRuxjZqaM
+      UiEjqZNluk+XX4iCUbkfDV+C20C4Yzn1tMkJ7nT+k6OP6HQ6WViiUElIdcp5hsBS
+      robdzksHmMSvp9OM5ryIfbCmR41T7vgQO6iwTOU4d338ydTioDPUTCdkeJnQ0WSp
+      8cmtwKYhCnr+y7vpPQ2XmURPJEnLtQEjhV8leUglcpSd23BBwtCs9mXnR2z1Dfi/
+      hBgVZLUL5p1kPTM4SV4yL2sXqQpFBKqH//LRR22OYne/IZ4DKeflfi+DElu5bTcO
+      vgyl9baw
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDQDCCAiigAwIBAgIIVM/MY8VEK0kwDQYJKoZIhvcNAQELBQAwPjESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+      c2lnbmVyMB4XDTIzMDUwMjEyMTI1NFoXDTMzMDQyOTEyMTI1NFowPjESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MSgwJgYDVQQDEx9rdWJlLWFwaXNlcnZlci1sb2NhbGhvc3Qt
+      c2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAxR+6bXTQkM/f
+      5Bq892df5+lvSlBle5Dym/i6ZIGtB8ji4OigXRmCj4lojBcPThQ5gJpPXiUFX0kg
+      Nt18LsmCm56qx3g/2mbFFFm4ADKEZZYP+qjpelv6LM1F+oLpqByxoDnV3dAdMX9t
+      MtFCUazK5L+njYyt57tLaJlfHvwbQhNq+bvha/krPWrduZwxUB0uIok4kGZtAanz
+      d7OpfbPihH0uo9f8mEcQZHupA2dsGZxpsRB74jpjc+7kUw9jqcidlUTtUU94U2Uw
+      SWdUOVHoy1UlLqRqS4Z8D4tr/cqymR7TbHB64WX/qs4itGO97qX5wpRunBdPCOU9
+      P5mcCLTtwwIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/BAUwAwEB
+      /zAdBgNVHQ4EFgQUxOZvSCA4C4ZFwx9z7+8OQJtpBv8wDQYJKoZIhvcNAQELBQAD
+      ggEBAGln/iQfsX8grjEMzRUqS/q/9EW22L9B7sJLcwT5SsPERLZX+EdmIniy13JU
+      e5sOLtZrwf+luugwbFYBiHlkAVhW5q1Dr/6qpdCdIJ7aIVpS1JP4WcR83rwiXkav
+      M0H6wTcA9ZtvA7+OmBg/MhLE9LDvAMqj1KXX88iwlJHA8P28x+CC+Yry91p9UH2J
+      thbbv/u783kSVlILi2mtnHJnImNrVsxELmX1md7cwpoFpQn2+1zxBOUmFBU+8wQz
+      uq43bQtiforpuF2Frg3gnLv/bWW7hIsSq71+pSoZNUACh/Q2HGfAJFuKo1PIJUf/
+      PSE8iMxsugwYesHuZA9XgnI/vl0=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDTDCCAjSgAwIBAgIIPBIgISKbedYwDQYJKoZIhvcNAQELBQAwRDESMBAGA1UE
+      CxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2aWNlLW5l
+      dHdvcmstc2lnbmVyMB4XDTIzMDUwMjEyMTI1NVoXDTMzMDQyOTEyMTI1NVowRDES
+      MBAGA1UECxMJb3BlbnNoaWZ0MS4wLAYDVQQDEyVrdWJlLWFwaXNlcnZlci1zZXJ2
+      aWNlLW5ldHdvcmstc2lnbmVyMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKC
+      AQEA7NmmTx7xr3jUV/RG0P/3VnKEitGpbvAMOFXIjxkTeN0kfRB56TpY1rGtykDT
+      aMC7J0qe1q/HsF/n1LhURd5jeJX4ikrdaGEauSKW1ARcb6K/1fm5DqPmlYEyBkRg
+      N505N1lRKebN22PfA3AdwsT8jGmXnXpqpttwg/pCkuduTAXpqWl+xZrdjL1J1WxF
+      /srWChh89+zIAotonIOoBzJzClI9T9y5/gWyBAZ4R2VALeMviURiWtEAoZ9+WOTk
+      vfPeCFvKfg+nh2uJPbzOQDHd1VHI6dzShjbNU0zCsQ4g9HxagWVmS/vYqvHd05oU
+      EjjL/+m4CHuVhYB1UZdmCZOx7QIDAQABo0IwQDAOBgNVHQ8BAf8EBAMCAqQwDwYD
+      VR0TAQH/BAUwAwEB/zAdBgNVHQ4EFgQU8q39hyt4ZUNJsoC0Lzc7ydL/ecswDQYJ
+      KoZIhvcNAQELBQADggEBABVh0WmAK2p2ZVn5g160zmnrGuoBOQLebbPam8niUvti
+      j0ugiA6ofi/IsbkX8/w2GaXVAy7F4UMAx19tMwqyv3m7VDHwrPOqDEe1HmK2dBEt
+      0mH9Zahqd/hxjOmJynQfKmb6A4itHHMbn+8IEyOUICMMazxt+mA0MS8aZtS29grL
+      OBnzbaazct6/NQGu8YS9URruvC3za1JR6A3Wz/DYyZHmLomaiDUuzFMuelp627Lv
+      /TxGKz3DHEOS1rv31asDVVFc+5TbHK4MG+G0CBMTtG1gNL/1vWFsXpKRinRwcTZi
+      P3H6KaUEugfBsqLjZeEXnR9RBr/8RNRJIjjjllX5ZQI=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDlzCCAn+gAwIBAgIIeYo2/62ErHEwDQYJKoZIhvcNAQELBQAwWTFXMFUGA1UE
+      AwxOb3BlbnNoaWZ0LWt1YmUtYXBpc2VydmVyLW9wZXJhdG9yX2xvY2FsaG9zdC1y
+      ZWNvdmVyeS1zZXJ2aW5nLXNpZ25lckAxNjgzMDMxMDU1MB4XDTIzMDUwMjEyMzcz
+      NFoXDTMzMDQyOTEyMzczNVowWTFXMFUGA1UEAwxOb3BlbnNoaWZ0LWt1YmUtYXBp
+      c2VydmVyLW9wZXJhdG9yX2xvY2FsaG9zdC1yZWNvdmVyeS1zZXJ2aW5nLXNpZ25l
+      ckAxNjgzMDMxMDU1MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA7ZrG
+      YNCDmAupXarVm7zq1r36MQYUVI/LwQNmMDqflSK7U1QinsZmj0E2gQdR6y27GhKT
+      JXXPzUKTBqWWnckaOHQvdqAI3sdXO3ez5ebIPFFKEbHHygCTqQe79oCMdIv89rdo
+      qQwMjw+GFb1sPoUw1iLP+dfH72GbBtNnFwbCeL7LEyYBq+cXsYOgx0hv42UgLgnN
+      Ym6Dzp9Y0a5bALLyVeyxfjb2NzLOZZ1uJY7/6T/ZH2ZsswYte4LnP+epGSZR5nj9
+      PuGVwTnRBYDyOYVGxjmvWCP6uVBTJDz/JToZ9mb1osMqwNaK7/x9WjS4gr5wy3cL
+      tPz0lmLvRR/jYQlotwIDAQABo2MwYTAOBgNVHQ8BAf8EBAMCAqQwDwYDVR0TAQH/
+      BAUwAwEB/zAdBgNVHQ4EFgQUXJ/OjMzszejtF1QuGPZpv8VCmn0wHwYDVR0jBBgw
+      FoAUXJ/OjMzszejtF1QuGPZpv8VCmn0wDQYJKoZIhvcNAQELBQADggEBAM6dGPH/
+      ZYCTM/uOgIhnRqhUQ5gUcJeujtxewdtmpzikqYogtWzZkkadW79YBE0DD65xobg/
+      v7ZRYWqJC6wsA12mlB5odiIksHFPP3rElBVmxK3VacU0IjNlah2xPgiYsHs4FrYJ
+      m+dJzkJT1M/z8QBKONfbkDJ8LYtONxDnX8Ony1tvjtLg1reLo8my+WMKB65OVNt8
+      qd9NCMlTL/Kj8Pz17I9D0oB7s/lKOajSbzKFTDk2EORj18ktIzFxCGsIozFFo7WH
+      mCWzaj+NLjTsOMw/dahfDF3n8LLCdWL93QJG7eWLnOpnzCaKjBSxwrVrbc5qkZXP
+      vXv/v5AFnEnzT9s=
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDVzCCAj+gAwIBAgIIJ/0BJ3qW3FIwDQYJKoZIhvcNAQELBQAwJjEkMCIGA1UE
+      AwwbaW5ncmVzcy1vcGVyYXRvckAxNjgzMDMwODQ3MB4XDTIzMDUwMjEyMzQwN1oX
+      DTI1MDUwMTEyMzQwOFowGzEZMBcGA1UEAwwQKi5hcHBzLnNuby5ndy5sbzCCASIw
+      DQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOFhpGW39khdbh5cjsHMQIiXgHzQ
+      xo8c1jmn3ASatwNGd3H32iLD9xpts+iX2HXXxt5ID3u+VEDECgooRk9ajhbt6dMM
+      Bj/YH2NGJ9BhSobac10IvOfF06y8+LRrIaID+cDzX5Bm7hmGTGKXYBK4hABWIaxV
+      rBlS9t96hfAeC/oempzLL1A3+OzOublplmVhZicUvtMO8NKgbJnRRL9H0ITfZKpW
+      XVu7k7hnDgKSUjmzH3E/G/saZU6832pGrVm168MVTulT1p/N73VYiSU05c9IJM+4
+      04HvzfNzhvQUdq056cP5tY/us3AtJ6wZWi9ZYGKoKDWZEDeUUGXDqdFkZNECAwEA
+      AaOBkzCBkDAOBgNVHQ8BAf8EBAMCBaAwEwYDVR0lBAwwCgYIKwYBBQUHAwEwDAYD
+      VR0TAQH/BAIwADAdBgNVHQ4EFgQUnkiyZkF8+YgYhZ6br7+4m6+RGx0wHwYDVR0j
+      BBgwFoAUcp6rJzVEWPsSyoX2+cZ4aSSU3SwwGwYDVR0RBBQwEoIQKi5hcHBzLnNu
+      by5ndy5sbzANBgkqhkiG9w0BAQsFAAOCAQEAcY9wNX2vG+Ah1rtaEXH2sofHm+vT
+      NxonAnxl8C5IotOL1oWSsMRQ2L4yn/TOO+mXGKC8+Yll4B1ZDXf+ow5fhupmAyfo
+      Y2lyecIxOGM5GZ7ihDQqHVCirzNIAzOa6Jecy4oqY0OumX1hSsblGGnUmCL21qUl
+      uqeSQAK8VaSmO+rhuyHPJFzjZuIcV4IufCMP3pLus12fCw9KXyGinYp3aYqWXx1i
+      r0bwpf1RYtF9cQMeNwBs/W+XnZsmMy73elFAeVIA+IZqH9OsU+utVbjKaKdMW6bh
+      EujL2t3T+OrF0HQz8C0zQjmZHtfbtxSAOz+XlrTFA+dAyiuscL367Jspvg==
+      -----END CERTIFICATE-----
+      -----BEGIN CERTIFICATE-----
+      MIIDDDCCAfSgAwIBAgIBATANBgkqhkiG9w0BAQsFADAmMSQwIgYDVQQDDBtpbmdy
+      ZXNzLW9wZXJhdG9yQDE2ODMwMzA4NDcwHhcNMjMwNTAyMTIzNDA3WhcNMjUwNTAx
+      MTIzNDA4WjAmMSQwIgYDVQQDDBtpbmdyZXNzLW9wZXJhdG9yQDE2ODMwMzA4NDcw
+      ggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCeNsr/9MAYaQutGrmwg2s9
+      SvAN4kOPr5NWbJvDH7f7GOAN9r1NMs5AGbs4EN9Y+15N4AN53Kpa/act6z+VdJ34
+      PV/Z5xfUfqcw6IqHFI4u+xSaOvNFDQUh05Pk7Q0EBfvvEwnzRleJ0+nDxR4Uj11k
+      lhljzob+pJDek0Z//IU2YSuWxhTJMS1t0JMjuw6i20XNnK3m0Agv1/oEOQwapIfe
+      A+XUKjQe2hbghOTj7yce8Z7/3WHbRKFLO9ej79kYl0Dgw0bsJHXS86W+vJkQ0lY7
+      rymR0iQZj8I0zLscczGOWAXcOCFDj27SZ1lHcO5yqQIfpVcJjfKuW8bYAJ7U8iUR
+      AgMBAAGjRTBDMA4GA1UdDwEB/wQEAwICpDASBgNVHRMBAf8ECDAGAQH/AgEAMB0G
+      A1UdDgQWBBRynqsnNURY+xLKhfb5xnhpJJTdLDANBgkqhkiG9w0BAQsFAAOCAQEA
+      XItw+iARA1/Gna7c5sVYybwUzLhRRH84UX4a2cv+dCfzKHarS3qoFnWLBKETfa/G
+      WnNcIMUITur9aFSylm2CtjdpvqQYyawdldx06pJ+HpE4un1CsTxb8K7Ks77Msrc/
+      ifDlPHaaLP3SQiudaXf7G+JMtWHVyhDjG6114D0+2i9zBJadA2OF7Lry8nTkfLrL
+      5ysZYZkVPksHUNWGlCBhfGnX/GtZNEQ8nWDxQzmZRqSsM20CdyTsZN+v8u8DZKlI
+      lUXr+9zgv0fgUj6mUKkbEvS18/jg9/A/201mcsoQIzGfic5pd1VnqfRsQU1ZnDdN
+      kXcVPUBsS2kkd4zKGOC9MQ==
+      -----END CERTIFICATE-----
+  kind: ConfigMap
+  metadata:
+    creationTimestamp: "2023-05-02T12:39:45Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:data:
+          .: {}
+          f:ca-bundle.crt: {}
+        f:metadata:
+          f:ownerReferences:
+            .: {}
+            k:{"uid":"bdd364a2-39b8-4ce6-bd09-6822e921eff7"}: {}
+      manager: cluster-kube-scheduler-operator
+      operation: Update
+      time: "2023-05-02T12:39:45Z"
+    name: serviceaccount-ca-5
+    namespace: openshift-kube-scheduler
+    ownerReferences:
+    - apiVersion: v1
+      kind: ConfigMap
+      name: revision-status-5
+      uid: bdd364a2-39b8-4ce6-bd09-6822e921eff7
+    resourceVersion: "10702"
+    uid: 243960a4-e0bb-4949-9404-e1d71466e4be
+kind: ConfigMapList
+metadata:
+  resourceVersion: "684686"

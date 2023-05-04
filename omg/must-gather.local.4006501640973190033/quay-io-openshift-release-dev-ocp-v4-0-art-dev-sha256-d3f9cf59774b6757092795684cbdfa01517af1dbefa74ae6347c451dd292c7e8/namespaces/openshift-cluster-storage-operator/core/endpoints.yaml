@@ -1,0 +1,126 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:33:10Z"
+    creationTimestamp: "2023-05-02T12:37:37Z"
+    labels:
+      app: cluster-storage-operator-metrics
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:33:13Z"
+    name: cluster-storage-operator-metrics
+    namespace: openshift-cluster-storage-operator
+    resourceVersion: "631354"
+    uid: 63e9dcf8-1045-477c-af09-0e3beefbb42a
+  subsets:
+  - addresses:
+    - ip: 10.128.0.59
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: cluster-storage-operator-578bfd8476-tj45n
+        namespace: openshift-cluster-storage-operator
+        uid: 2268b355-9d36-484b-bb6a-440c44141c86
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:31:32Z"
+    creationTimestamp: "2023-05-02T12:18:10Z"
+    labels:
+      app: csi-snapshot-controller-operator
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:31:32Z"
+    name: csi-snapshot-controller-operator-metrics
+    namespace: openshift-cluster-storage-operator
+    resourceVersion: "630404"
+    uid: 50202e2a-f37f-4dfe-86e8-3fc17de4ae80
+  subsets:
+  - addresses:
+    - ip: 10.128.0.9
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: csi-snapshot-controller-operator-66559c5fb7-5nbwd
+        namespace: openshift-cluster-storage-operator
+        uid: 5bce31e0-c248-4bc7-9d25-8e8fa47c6996
+    ports:
+    - name: https
+      port: 8443
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:32:44Z"
+    creationTimestamp: "2023-05-02T12:28:39Z"
+    labels:
+      app: csi-snapshot-webhook
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:32:44Z"
+    name: csi-snapshot-webhook
+    namespace: openshift-cluster-storage-operator
+    resourceVersion: "631084"
+    uid: 33c5a05f-f187-4d67-8b78-a4b677be00d4
+  subsets:
+  - addresses:
+    - ip: 10.128.0.23
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: csi-snapshot-webhook-8688766d4c-4ggqd
+        namespace: openshift-cluster-storage-operator
+        uid: 6571696b-d764-40e5-9583-1a05fd14bec6
+    ports:
+    - name: webhook
+      port: 8443
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "684627"

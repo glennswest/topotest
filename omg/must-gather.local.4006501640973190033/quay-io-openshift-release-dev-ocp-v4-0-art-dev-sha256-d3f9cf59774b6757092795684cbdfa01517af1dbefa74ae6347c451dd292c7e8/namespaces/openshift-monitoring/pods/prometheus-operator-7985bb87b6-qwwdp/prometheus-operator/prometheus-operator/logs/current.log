@@ -1,0 +1,24 @@
+2023-05-04T16:32:14.544030125Z level=info ts=2023-05-04T16:32:14.542895526Z caller=main.go:220 msg="Starting Prometheus Operator" version="(version=0.60.1, branch=rhaos-4.12-rhel-8, revision=a59cc50)"
+2023-05-04T16:32:14.544030125Z level=info ts=2023-05-04T16:32:14.542925863Z caller=main.go:221 build_context="(go=go1.19.4, user=root, date=20230105-00:50:47)"
+2023-05-04T16:32:14.560508062Z level=warn ts=2023-05-04T16:32:14.560452708Z caller=operator.go:328 component=prometheusoperator msg="failed to check if the API supports the endpointslice resources" err="converting (v1.APIGroup) to (v1.APIResourceList): unknown conversion"
+2023-05-04T16:32:14.560508062Z level=info ts=2023-05-04T16:32:14.560485149Z caller=operator.go:330 component=prometheusoperator msg="Kubernetes API capabilities" endpointslices=false
+2023-05-04T16:32:14.562333387Z level=info ts=2023-05-04T16:32:14.562295015Z caller=main.go:103 msg="Starting insecure server on 127.0.0.1:8080"
+2023-05-04T16:32:14.563046525Z level=info ts=2023-05-04T16:32:14.563019465Z caller=operator.go:311 component=thanosoperator msg="connection established" cluster-version=v1.25.4+a34b9e9
+2023-05-04T16:32:14.563046525Z level=info ts=2023-05-04T16:32:14.563037729Z caller=operator.go:320 component=thanosoperator msg="CRD API endpoints ready"
+2023-05-04T16:32:14.563103462Z level=info ts=2023-05-04T16:32:14.563088003Z caller=operator.go:440 component=prometheusoperator msg="connection established" cluster-version=v1.25.4+a34b9e9
+2023-05-04T16:32:14.563111507Z level=info ts=2023-05-04T16:32:14.563098593Z caller=operator.go:449 component=prometheusoperator msg="CRD API endpoints ready"
+2023-05-04T16:32:14.573004830Z level=info ts=2023-05-04T16:32:14.565632918Z caller=operator.go:457 component=alertmanageroperator msg="connection established" cluster-version=v1.25.4+a34b9e9
+2023-05-04T16:32:14.573004830Z level=info ts=2023-05-04T16:32:14.565669928Z caller=operator.go:466 component=alertmanageroperator msg="CRD API endpoints ready"
+2023-05-04T16:32:14.667048436Z level=info ts=2023-05-04T16:32:14.663168926Z caller=operator.go:263 component=thanosoperator msg="successfully synced all caches"
+2023-05-04T16:32:14.667048436Z level=info ts=2023-05-04T16:32:14.663363111Z caller=operator.go:369 component=prometheusoperator msg="successfully synced all caches"
+2023-05-04T16:32:14.667048436Z level=info ts=2023-05-04T16:32:14.663673854Z caller=operator.go:1559 component=prometheusoperator key=openshift-monitoring/k8s msg="update prometheus status"
+2023-05-04T16:32:14.667048436Z level=info ts=2023-05-04T16:32:14.663906881Z caller=operator.go:1390 component=prometheusoperator key=openshift-monitoring/k8s msg="sync prometheus"
+2023-05-04T16:32:14.966142932Z level=info ts=2023-05-04T16:32:14.966044086Z caller=operator.go:289 component=alertmanageroperator msg="successfully synced all caches"
+2023-05-04T16:32:14.966744540Z level=info ts=2023-05-04T16:32:14.966713332Z caller=operator.go:754 component=alertmanageroperator key=openshift-monitoring/main msg="sync alertmanager"
+2023-05-04T16:32:15.692301314Z level=info ts=2023-05-04T16:32:15.692259756Z caller=operator.go:754 component=alertmanageroperator key=openshift-monitoring/main msg="sync alertmanager"
+2023-05-04T16:32:15.707830742Z level=info ts=2023-05-04T16:32:15.707789645Z caller=operator.go:1390 component=prometheusoperator key=openshift-monitoring/k8s msg="sync prometheus"
+2023-05-04T16:32:15.709172730Z level=info ts=2023-05-04T16:32:15.709129268Z caller=operator.go:1559 component=prometheusoperator key=openshift-monitoring/k8s msg="update prometheus status"
+2023-05-04T16:32:16.143573994Z level=info ts=2023-05-04T16:32:16.143530713Z caller=operator.go:1559 component=prometheusoperator key=openshift-monitoring/k8s msg="update prometheus status"
+2023-05-04T16:32:42.792773104Z level=info ts=2023-05-04T16:32:42.791795971Z caller=operator.go:754 component=alertmanageroperator key=openshift-monitoring/main msg="sync alertmanager"
+2023-05-04T16:33:14.670490816Z level=info ts=2023-05-04T16:33:14.67042886Z caller=operator.go:1559 component=prometheusoperator key=openshift-monitoring/k8s msg="update prometheus status"
+2023-05-04T16:33:34.341622327Z level=info ts=2023-05-04T16:33:34.318611034Z caller=operator.go:1559 component=prometheusoperator key=openshift-monitoring/k8s msg="update prometheus status"

@@ -1,0 +1,90 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:43Z"
+  involvedObject:
+    apiVersion: v1
+    kind: ConfigMap
+    name: kube-controller-manager
+    namespace: kube-system
+    resourceVersion: "628978"
+    uid: 15f47db8-5377-473f-b360-4d46c30fa81e
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:43Z"
+  message: node_9ad8e54e-b553-496c-8fd2-d90b257ed18d became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:29:43Z"
+    name: kube-controller-manager.175bfda7ee56f6b6
+    namespace: kube-system
+    resourceVersion: "628980"
+    uid: 20a2d9f9-6127-48cb-8c80-1e89c2952fd1
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kube-controller-manager
+  type: Normal
+- apiVersion: v1
+  count: 1
+  eventTime: null
+  firstTimestamp: "2023-05-04T16:29:43Z"
+  involvedObject:
+    apiVersion: coordination.k8s.io/v1
+    kind: Lease
+    name: kube-controller-manager
+    namespace: kube-system
+    resourceVersion: "628979"
+    uid: 8ad9a654-2ed6-49d9-9303-fa3d98a35072
+  kind: Event
+  lastTimestamp: "2023-05-04T16:29:43Z"
+  message: node_9ad8e54e-b553-496c-8fd2-d90b257ed18d became leader
+  metadata:
+    creationTimestamp: "2023-05-04T16:29:43Z"
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:count: {}
+        f:firstTimestamp: {}
+        f:involvedObject: {}
+        f:lastTimestamp: {}
+        f:message: {}
+        f:reason: {}
+        f:source:
+          f:component: {}
+        f:type: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:29:43Z"
+    name: kube-controller-manager.175bfda7ee5729c9
+    namespace: kube-system
+    resourceVersion: "628981"
+    uid: 99391780-706b-44a7-89b9-5808355e37a6
+  reason: LeaderElection
+  reportingComponent: ""
+  reportingInstance: ""
+  source:
+    component: kube-controller-manager
+  type: Normal
+kind: EventList
+metadata:
+  resourceVersion: "684686"

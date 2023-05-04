@@ -1,0 +1,108 @@
+---
+apiVersion: config.openshift.io/v1
+kind: ClusterOperator
+metadata:
+  annotations:
+    include.release.openshift.io/ibm-cloud-managed: "true"
+    include.release.openshift.io/self-managed-high-availability: "true"
+    include.release.openshift.io/single-node-developer: "true"
+  creationTimestamp: "2023-05-02T12:17:58Z"
+  generation: 1
+  managedFields:
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:metadata:
+        f:annotations:
+          .: {}
+          f:include.release.openshift.io/ibm-cloud-managed: {}
+          f:include.release.openshift.io/self-managed-high-availability: {}
+          f:include.release.openshift.io/single-node-developer: {}
+        f:ownerReferences:
+          .: {}
+          k:{"uid":"77d6ad13-e1ab-45f9-a3c3-540f5d841b6f"}: {}
+      f:spec: {}
+    manager: cluster-version-operator
+    operation: Update
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        .: {}
+        f:extension: {}
+    manager: cluster-version-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-02T12:17:58Z"
+  - apiVersion: config.openshift.io/v1
+    fieldsType: FieldsV1
+    fieldsV1:
+      f:status:
+        f:conditions: {}
+        f:relatedObjects: {}
+        f:versions: {}
+    manager: ingress-operator
+    operation: Update
+    subresource: status
+    time: "2023-05-04T16:34:24Z"
+  name: ingress
+  ownerReferences:
+  - apiVersion: config.openshift.io/v1
+    kind: ClusterVersion
+    name: version
+    uid: 77d6ad13-e1ab-45f9-a3c3-540f5d841b6f
+  resourceVersion: "632237"
+  uid: 6c6cc153-aba1-4a5e-a5eb-0e923b374921
+spec: {}
+status:
+  conditions:
+  - lastTransitionTime: "2023-05-02T12:35:13Z"
+    message: The "default" ingress controller reports Available=True.
+    reason: IngressAvailable
+    status: "True"
+    type: Available
+  - lastTransitionTime: "2023-05-04T16:34:24Z"
+    message: desired and current number of IngressControllers are equal
+    reason: AsExpected
+    status: "False"
+    type: Progressing
+  - lastTransitionTime: "2023-05-02T12:35:13Z"
+    message: The "default" ingress controller reports Degraded=False.
+    reason: IngressNotDegraded
+    status: "False"
+    type: Degraded
+  - lastTransitionTime: "2023-05-02T12:34:07Z"
+    reason: IngressControllersUpgradeable
+    status: "True"
+    type: Upgradeable
+  - lastTransitionTime: "2023-05-02T12:34:07Z"
+    reason: AsExpected
+    status: "False"
+    type: EvaluationConditionsDetected
+  extension: null
+  relatedObjects:
+  - group: ""
+    name: openshift-ingress-operator
+    resource: namespaces
+  - group: operator.openshift.io
+    name: ""
+    namespace: openshift-ingress-operator
+    resource: ingresscontrollers
+  - group: ingress.operator.openshift.io
+    name: ""
+    namespace: openshift-ingress-operator
+    resource: dnsrecords
+  - group: ""
+    name: openshift-ingress
+    resource: namespaces
+  - group: ""
+    name: openshift-ingress-canary
+    resource: namespaces
+  versions:
+  - name: operator
+    version: 4.12.2
+  - name: ingress-controller
+    version: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:fa1ff52055ededc0386ee6b334ffe0cd9252f5878fcccf1396aee30adf6de046
+  - name: canary-server
+    version: quay.io/openshift-release-dev/ocp-v4.0-art-dev@sha256:6275a171f6d5a523627963860415ed0e43f1728f2dd897c49412600bf64bc9c3

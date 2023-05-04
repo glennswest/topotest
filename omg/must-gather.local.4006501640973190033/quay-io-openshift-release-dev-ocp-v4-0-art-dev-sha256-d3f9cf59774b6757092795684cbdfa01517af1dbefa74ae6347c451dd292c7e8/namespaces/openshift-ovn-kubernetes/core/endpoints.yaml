@@ -1,0 +1,136 @@
+---
+apiVersion: v1
+items:
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-02T12:26:13Z"
+    creationTimestamp: "2023-05-02T12:26:12Z"
+    labels:
+      app: ovnkube-master
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-02T12:26:13Z"
+    name: ovn-kubernetes-master
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "2838"
+    uid: c623ea55-8082-4d7c-9526-6fd12b24b7a0
+  subsets:
+  - addresses:
+    - ip: 192.168.1.126
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: ovnkube-master-9fm5k
+        namespace: openshift-ovn-kubernetes
+        uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+    ports:
+    - name: metrics
+      port: 9102
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-02T12:26:14Z"
+    creationTimestamp: "2023-05-02T12:26:12Z"
+    labels:
+      app: ovnkube-node
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:app: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-02T12:26:14Z"
+    name: ovn-kubernetes-node
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "2854"
+    uid: 291980c8-7ad1-4292-be0e-31b94d634f6d
+  subsets:
+  - addresses:
+    - ip: 192.168.1.126
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: ovnkube-node-9c47r
+        namespace: openshift-ovn-kubernetes
+        uid: 77ae5a40-e713-4c5d-8506-459f74c0f1b5
+    ports:
+    - name: ovn-metrics
+      port: 9105
+      protocol: TCP
+    - name: metrics
+      port: 9103
+      protocol: TCP
+- apiVersion: v1
+  kind: Endpoints
+  metadata:
+    annotations:
+      endpoints.kubernetes.io/last-change-trigger-time: "2023-05-04T16:30:59Z"
+    creationTimestamp: "2023-05-02T12:26:10Z"
+    labels:
+      service.kubernetes.io/headless: ""
+    managedFields:
+    - apiVersion: v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        f:metadata:
+          f:annotations:
+            .: {}
+            f:endpoints.kubernetes.io/last-change-trigger-time: {}
+          f:labels:
+            .: {}
+            f:service.kubernetes.io/headless: {}
+        f:subsets: {}
+      manager: kube-controller-manager
+      operation: Update
+      time: "2023-05-04T16:30:59Z"
+    name: ovnkube-db
+    namespace: openshift-ovn-kubernetes
+    resourceVersion: "629994"
+    uid: e6711ef2-d7de-4930-bd3b-049a1ed608d8
+  subsets:
+  - addresses:
+    - ip: 192.168.1.126
+      nodeName: node
+      targetRef:
+        kind: Pod
+        name: ovnkube-master-9fm5k
+        namespace: openshift-ovn-kubernetes
+        uid: 1a4f5992-d40c-4b9e-984f-f3654a803081
+    ports:
+    - name: south
+      port: 9642
+      protocol: TCP
+    - name: north
+      port: 9641
+      protocol: TCP
+kind: EndpointsList
+metadata:
+  resourceVersion: "684720"
