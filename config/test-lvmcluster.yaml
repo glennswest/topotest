@@ -1,0 +1,69 @@
+piVersion: lvm.topolvm.io/v1alpha1
+kind: LVMCluster
+metadata:
+  creationTimestamp: '2023-05-04T14:46:24Z'
+  finalizers:
+    - lvmcluster.topolvm.io
+  generation: 1
+  managedFields:
+    - apiVersion: lvm.topolvm.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          .: {}
+          'f:storage':
+            .: {}
+            'f:deviceClasses': {}
+      manager: Mozilla
+      operation: Update
+      time: '2023-05-04T14:46:24Z'
+    - apiVersion: lvm.topolvm.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:finalizers':
+            .: {}
+            'v:"lvmcluster.topolvm.io"': {}
+      manager: manager
+      operation: Update
+      time: '2023-05-04T14:46:24Z'
+    - apiVersion: lvm.topolvm.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          .: {}
+          'f:deviceClassStatuses': {}
+          'f:ready': {}
+          'f:state': {}
+      manager: manager
+      operation: Update
+      subresource: status
+      time: '2023-05-04T14:47:21Z'
+  name: test-lvmcluster
+  namespace: openshift-storage
+  resourceVersion: '601994'
+  uid: 5b96a7d3-0ab2-48a7-a5cf-bb3d117ee1bf
+spec:
+  storage:
+    deviceClasses:
+      - deviceSelector:
+          paths:
+            - '/dev/disk/by-path/pci-0000:03:00.0-sas-phy1-lun-0'
+            - '/dev/disk/by-path/pci-0000:03:00.0-sas-phy2-lun-0'
+        name: vg1
+        thinPoolConfig:
+          name: thin-pool-1
+          overprovisionRatio: 10
+          sizePercent: 90
+status:
+  deviceClassStatuses:
+    - name: vg1
+      nodeStatus:
+        - devices:
+            - /dev/sdb
+            - /dev/sdc
+          node: node
+          status: Ready
+  ready: true
+  state: Ready
+
