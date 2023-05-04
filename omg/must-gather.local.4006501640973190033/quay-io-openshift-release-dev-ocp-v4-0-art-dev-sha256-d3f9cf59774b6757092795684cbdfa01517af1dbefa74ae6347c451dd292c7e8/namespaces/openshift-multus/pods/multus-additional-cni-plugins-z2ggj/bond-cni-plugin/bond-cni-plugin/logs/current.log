@@ -1,3 +1,0 @@
-2023-05-04T16:31:06.344554847Z 2023-05-04T16:31:06+00:00 [cnibincopy] Source directory unavailable for OS version: 8
-2023-05-04T16:31:06.351815701Z 2023-05-04T16:31:06+00:00 [cnibincopy] Successfully copied files in /bondcni/ to /host/opt/cni/bin/upgrade_3d1bd386-3b23-4242-a1bd-ac19d119063f
-2023-05-04T16:31:06.353958772Z 2023-05-04T16:31:06+00:00 [cnibincopy] Successfully moved files in /host/opt/cni/bin/upgrade_3d1bd386-3b23-4242-a1bd-ac19d119063f to /host/opt/cni/bin/

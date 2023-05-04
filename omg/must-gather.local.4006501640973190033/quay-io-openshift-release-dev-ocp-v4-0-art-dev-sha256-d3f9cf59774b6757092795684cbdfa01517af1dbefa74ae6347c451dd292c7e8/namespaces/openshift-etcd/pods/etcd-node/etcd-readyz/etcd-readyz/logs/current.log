@@ -1,2 +1,0 @@
-2023-05-04T16:29:15.661951524Z I0504 16:29:15.661865       1 readyz.go:155] Listening on 0.0.0.0:9980
-2023-05-04T16:29:21.962794366Z I0504 16:29:21.962763       1 etcdcli_pool.go:70] creating a new cached client

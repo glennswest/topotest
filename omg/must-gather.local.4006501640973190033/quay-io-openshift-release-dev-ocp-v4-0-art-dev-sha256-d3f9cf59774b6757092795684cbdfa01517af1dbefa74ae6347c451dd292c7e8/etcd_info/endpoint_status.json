@@ -1,1 +1,0 @@
-[{"Endpoint":"https://192.168.1.126:2379","Status":{"header":{"cluster_id":16086775898648142090,"member_id":7984227909810743090,"revision":684789,"raft_term":6},"version":"3.5.6","dbSize":95940608,"leader":7984227909810743090,"raftIndex":783135,"raftTerm":6,"raftAppliedIndex":783135,"dbSizeInUse":59363328}}]

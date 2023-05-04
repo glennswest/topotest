@@ -1,7 +1,0 @@
----
-apiVersion: config.openshift.io/v1
-items: []
-kind: ImageContentPolicyList
-metadata:
-  continue: ""
-  resourceVersion: "684578"

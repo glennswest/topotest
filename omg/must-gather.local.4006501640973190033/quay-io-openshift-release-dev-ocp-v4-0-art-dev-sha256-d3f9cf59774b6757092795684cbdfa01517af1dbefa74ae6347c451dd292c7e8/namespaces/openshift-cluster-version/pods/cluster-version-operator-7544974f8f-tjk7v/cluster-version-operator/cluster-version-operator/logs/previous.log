@@ -1,3 +1,0 @@
-2023-05-04T16:31:32.430165630Z I0504 16:31:32.430069       1 start.go:23] ClusterVersionOperator 4.12.0-202301200255.p0.gb24d60e.assembly.stream-b24d60e
-2023-05-04T16:31:57.435118516Z W0504 16:31:57.435055       1 start.go:157] Failed to get FeatureGate from cluster: Get "https://api-int.sno.gw.lo:6443/apis/config.openshift.io/v1/featuregates/cluster": context deadline exceeded
-2023-05-04T16:31:57.435118516Z F0504 16:31:57.435094       1 start.go:29] error: Get "https://api-int.sno.gw.lo:6443/apis/config.openshift.io/v1/featuregates/cluster": context deadline exceeded

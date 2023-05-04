@@ -1,3 +1,0 @@
-2023-05-04T16:30:14.322049896Z W0504 16:30:14.321903       1 client_config.go:617] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
-2023-05-04T16:30:14.322381639Z W0504 16:30:14.322226       1 client_config.go:617] Neither --kubeconfig nor --master was specified.  Using the inClusterConfig.  This might not work.
-2023-05-04T16:30:44.333055163Z F0504 16:30:44.332562       1 main.go:144] Can't create clients: failed to create client: Get "https://172.30.0.1:443/api?timeout=32s": dial tcp 172.30.0.1:443: i/o timeout

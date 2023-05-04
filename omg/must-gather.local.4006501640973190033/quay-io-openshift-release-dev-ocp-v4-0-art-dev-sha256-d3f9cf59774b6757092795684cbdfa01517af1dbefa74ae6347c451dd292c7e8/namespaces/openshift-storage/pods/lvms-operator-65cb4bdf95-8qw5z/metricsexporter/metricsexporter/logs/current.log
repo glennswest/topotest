@@ -1,3 +1,0 @@
-2023-05-04T16:33:33.034422341Z {"level":"info","ts":1683218013.0321987,"logger":"lvm-metric-exporter","msg":"Commandline: ","args":[]}
-2023-05-04T16:33:33.034422341Z {"level":"info","ts":1683218013.0322223,"logger":"lvm-metric-exporter","msg":"Exporter set values: ","namespace":"lvm-exporter","address":":23532"}
-2023-05-04T16:33:33.034422341Z {"level":"info","ts":1683218013.0322726,"logger":"lvm-metric-exporter","msg":"Starting lvm metric exporter at ","address":":23532"}

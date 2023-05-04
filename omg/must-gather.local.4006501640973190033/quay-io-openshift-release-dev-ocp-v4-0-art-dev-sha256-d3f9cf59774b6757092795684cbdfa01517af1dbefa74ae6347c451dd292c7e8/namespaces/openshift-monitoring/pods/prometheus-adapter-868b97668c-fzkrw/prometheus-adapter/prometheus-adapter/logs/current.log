@@ -1,7 +1,0 @@
-2023-05-04T16:33:16.824173017Z I0504 16:33:16.820277       1 adapter.go:114] successfully using in-cluster auth
-2023-05-04T16:33:18.021285830Z I0504 16:33:18.021244       1 request.go:601] Waited for 1.126864105s due to client-side throttling, not priority and fairness, request: GET:https://172.30.0.1:443/apis/authorization.k8s.io/v1?timeout=32s
-2023-05-04T16:33:28.915054820Z I0504 16:33:28.913541       1 secure_serving.go:210] Serving securely on [::]:6443
-2023-05-04T16:33:28.923086765Z I0504 16:33:28.922188       1 dynamic_cafile_content.go:157] "Starting controller" name="request-header::/etc/tls/private/requestheader-client-ca-file"
-2023-05-04T16:33:28.923164832Z I0504 16:33:28.923151       1 dynamic_cafile_content.go:157] "Starting controller" name="client-ca-bundle::/etc/tls/private/client-ca-file"
-2023-05-04T16:33:28.933013873Z I0504 16:33:28.926044       1 dynamic_serving_content.go:132] "Starting controller" name="serving-cert::/etc/tls/private/tls.crt::/etc/tls/private/tls.key"
-2023-05-04T16:33:28.933013873Z I0504 16:33:28.930216       1 tlsconfig.go:240] "Starting DynamicServingCertificateController"

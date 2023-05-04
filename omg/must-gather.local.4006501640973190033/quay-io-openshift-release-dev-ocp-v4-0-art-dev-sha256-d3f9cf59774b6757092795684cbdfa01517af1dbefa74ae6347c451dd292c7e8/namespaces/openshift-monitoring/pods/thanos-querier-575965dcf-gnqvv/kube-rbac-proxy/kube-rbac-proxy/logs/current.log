@@ -1,7 +1,0 @@
-2023-05-04T16:33:19.713939989Z I0504 16:33:19.713784       1 main.go:151] Reading config file: /etc/kube-rbac-proxy/config.yaml
-2023-05-04T16:33:19.714448141Z I0504 16:33:19.714428       1 main.go:187] Valid token audiences: 
-2023-05-04T16:33:19.714483748Z I0504 16:33:19.714472       1 main.go:337] Reading certificate files
-2023-05-04T16:33:19.714614784Z I0504 16:33:19.714602       1 main.go:371] Starting TCP socket on 0.0.0.0:9092
-2023-05-04T16:33:19.714967394Z I0504 16:33:19.714938       1 main.go:378] Listening securely on 0.0.0.0:9092
-2023-05-04T18:28:37.063059957Z 2023/05/04 18:28:37 http: TLS handshake error from 10.128.0.93:39128: EOF
-2023-05-04T18:32:31.173282494Z 2023/05/04 18:32:31 http: TLS handshake error from 10.128.0.93:40726: EOF

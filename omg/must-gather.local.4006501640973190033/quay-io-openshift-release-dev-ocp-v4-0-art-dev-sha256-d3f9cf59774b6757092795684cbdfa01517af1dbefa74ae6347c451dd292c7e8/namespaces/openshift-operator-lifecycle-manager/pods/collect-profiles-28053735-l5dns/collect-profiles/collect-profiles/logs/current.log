@@ -1,4 +1,0 @@
-2023-05-04T18:15:01.177242658Z time="2023-05-04T18:15:01Z" level=info msg="Successfully created configMap openshift-operator-lifecycle-manager/olm-operator-heap-p82vg"
-2023-05-04T18:15:01.210186369Z time="2023-05-04T18:15:01Z" level=info msg="Successfully created configMap openshift-operator-lifecycle-manager/catalog-operator-heap-xqh65"
-2023-05-04T18:15:01.213586078Z time="2023-05-04T18:15:01Z" level=info msg="Successfully deleted configMap openshift-operator-lifecycle-manager/catalog-operator-heap-n25v9"
-2023-05-04T18:15:01.220348696Z time="2023-05-04T18:15:01Z" level=info msg="Successfully deleted configMap openshift-operator-lifecycle-manager/olm-operator-heap-ksq65"

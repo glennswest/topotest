@@ -1,6 +1,0 @@
-2023-05-04T16:33:10.394266040Z I0504 16:33:10.393802       1 main.go:125] Version: v4.12.0-202301042354.p0.g7e23256.assembly.stream-0-g3eeaa09-dirty
-2023-05-04T16:33:10.402063561Z I0504 16:33:10.401582       1 main.go:174] Start NewCSISnapshotController with kubeconfig [] resyncPeriod [15m0s]
-2023-05-04T16:33:10.763538963Z I0504 16:33:10.762617       1 leaderelection.go:248] attempting to acquire leader lease openshift-cluster-storage-operator/snapshot-controller-leader...
-2023-05-04T16:33:10.926332094Z I0504 16:33:10.926200       1 leaderelection.go:258] successfully acquired lease openshift-cluster-storage-operator/snapshot-controller-leader
-2023-05-04T16:33:10.927490648Z I0504 16:33:10.926570       1 leader_election.go:178] became leader, starting
-2023-05-04T16:33:10.927924462Z I0504 16:33:10.927899       1 snapshot_controller_base.go:152] Starting snapshot controller

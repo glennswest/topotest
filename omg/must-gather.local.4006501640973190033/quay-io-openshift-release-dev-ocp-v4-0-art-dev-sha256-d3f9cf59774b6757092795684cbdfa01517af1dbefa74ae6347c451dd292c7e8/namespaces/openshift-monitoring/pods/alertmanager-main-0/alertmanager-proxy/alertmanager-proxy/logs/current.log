@@ -1,8 +1,0 @@
-2023-05-04T16:31:38.626665771Z 2023/05/04 16:31:38 provider.go:129: Defaulting client-id to system:serviceaccount:openshift-monitoring:alertmanager-main
-2023-05-04T16:31:38.626736844Z 2023/05/04 16:31:38 provider.go:134: Defaulting client-secret to service account token /var/run/secrets/kubernetes.io/serviceaccount/token
-2023-05-04T16:31:38.628802540Z 2023/05/04 16:31:38 provider.go:358: Delegation of authentication and authorization to OpenShift is enabled for bearer tokens and client certificates.
-2023-05-04T16:32:08.653164842Z 2023/05/04 16:32:08 oauthproxy.go:203: mapping path "/" => upstream "http://localhost:9093/"
-2023-05-04T16:32:08.653164842Z 2023/05/04 16:32:08 oauthproxy.go:230: OAuthProxy configured for  Client ID: system:serviceaccount:openshift-monitoring:alertmanager-main
-2023-05-04T16:32:08.653164842Z 2023/05/04 16:32:08 oauthproxy.go:240: Cookie settings: name:_oauth_proxy secure(https):true httponly:true expiry:168h0m0s domain:<default> samesite: refresh:disabled
-2023-05-04T16:32:08.653623492Z 2023/05/04 16:32:08 http.go:107: HTTPS: listening on [::]:9095
-2023-05-04T16:32:08.654827161Z I0504 16:32:08.653638       1 dynamic_serving_content.go:130] Starting serving::/etc/tls/private/tls.crt::/etc/tls/private/tls.key

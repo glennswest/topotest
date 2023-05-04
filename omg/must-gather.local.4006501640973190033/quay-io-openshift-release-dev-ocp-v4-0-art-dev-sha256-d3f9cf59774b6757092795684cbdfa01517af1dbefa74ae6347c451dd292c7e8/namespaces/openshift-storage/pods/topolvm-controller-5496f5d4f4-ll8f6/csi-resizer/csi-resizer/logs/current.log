@@ -1,4 +1,0 @@
-2023-05-04T16:34:00.961435145Z I0504 16:34:00.961325       1 main.go:93] Version : v4.12.0-202304070941.p0.g239d751.assembly.stream-0-g17af306-dirty
-2023-05-04T16:34:01.155259298Z I0504 16:34:01.155228       1 common.go:111] Probing CSI driver for readiness
-2023-05-04T16:34:01.255578040Z I0504 16:34:01.255542       1 controller.go:120] Register Pod informer for resizer topolvm.io
-2023-05-04T16:34:01.255578040Z I0504 16:34:01.255570       1 controller.go:255] Starting external resizer topolvm.io

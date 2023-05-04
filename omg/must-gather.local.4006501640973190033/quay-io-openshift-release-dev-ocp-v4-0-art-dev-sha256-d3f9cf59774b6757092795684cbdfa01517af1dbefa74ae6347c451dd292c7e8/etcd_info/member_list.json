@@ -1,1 +1,0 @@
-{"header":{"cluster_id":16086775898648142090,"member_id":7984227909810743090,"raft_term":6},"members":[{"ID":7984227909810743090,"name":"node","peerURLs":["https://192.168.1.126:2380"],"clientURLs":["https://192.168.1.126:2379"]}]}
